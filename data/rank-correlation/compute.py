@@ -104,7 +104,9 @@ def main() -> None:
 
     for p in projects:
         ids.append(p["id"])
-        our_grade = p["our_v04"]["grade"]
+        # Prefer v0.4.1 adjusted grade if present (e.g. Guanare's
+        # commercial_plantation_arr adjustment), fall back to base v0.4.
+        our_grade = p["our_v04"].get("v0_4_1_grade") or p["our_v04"]["grade"]
         series["ours_v04"].append(mapping["ours_v04"][our_grade])
         grades["ours_v04"].append(our_grade)
         for rater in ("bezero", "calyx_nzm", "sylvera_nzm"):

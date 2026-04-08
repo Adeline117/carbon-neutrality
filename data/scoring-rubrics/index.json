@@ -1,7 +1,7 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.2.1",
   "framework": "on-chain-carbon-credit-quality-rating",
-  "paper_version": "0.4",
+  "paper_version": "0.4.1",
   "score_range": [0, 100],
   "dimensions": [
     {"id": "removal_type",       "file": "01_removal_type.json",       "weight": 0.250},

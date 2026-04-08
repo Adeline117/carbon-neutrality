@@ -30,6 +30,36 @@ HERE = Path(__file__).parent
 RUBRICS = HERE.parent / "scoring-rubrics"
 
 
+def load_dimension_adjustments() -> dict[str, list[dict]]:
+    """Walk the per-dimension rubric files and collect any 'adjustments' blocks.
+    Returns {dimension_id: [adjustment, ...]}.
+    Adjustments are applied by apply_dimension_adjustments() before composite calc."""
+    out: dict[str, list[dict]] = {}
+    for f in sorted(RUBRICS.glob("[0-9][0-9]_*.json")):
+        rubric = json.loads(f.read_text())
+        if "adjustments" in rubric:
+            out[rubric["id"]] = rubric["adjustments"]
+    return out
+
+
+def apply_dimension_adjustments(
+    base_scores: dict[str, int],
+    credit_adjustments: list[str],
+    all_adjustments: dict[str, list[dict]],
+) -> dict[str, int]:
+    """Apply any v0.4.1+ dimension-level adjustments flagged by the credit.
+    Returns a new score dict; does not mutate input. Scores are clamped to [0, 100]."""
+    adjusted = dict(base_scores)
+    for dim_id, adjs in all_adjustments.items():
+        for adj in adjs:
+            if adj["id"] in credit_adjustments:
+                if adj.get("effect") == "delta":
+                    adjusted[dim_id] = max(0, min(100, adjusted[dim_id] + adj["delta"]))
+                elif adj.get("effect") == "score_cap":
+                    adjusted[dim_id] = min(adjusted[dim_id], adj["cap"])
+    return adjusted
+
+
 def credits_path() -> Path:
     """Default to ./credits.json unless --credits PATH is given."""
     if "--credits" in sys.argv:
@@ -98,14 +128,21 @@ def main() -> None:
     dimensions = list(weights.keys())
     grade_bands = rubrics["grades"]
     dq_spec = rubrics["disqualifiers"]
+    dim_adjustments = load_dimension_adjustments()
 
     rows = []
     for credit in credits["credits"]:
-        scores = credit["scores"]
+        base_scores = credit["scores"]
         # sanity: all dimensions present
-        missing = [d for d in dimensions if d not in scores]
+        missing = [d for d in dimensions if d not in base_scores]
         if missing:
             raise SystemExit(f"Credit {credit['id']} missing dimensions: {missing}")
+
+        # v0.4.1: apply dimension-level adjustments (e.g. commercial_plantation_arr)
+        # before composite. Credit flags live in the "adjustments" list (parallel to
+        # "disqualifiers"). Falls back to base_scores if no adjustments apply.
+        credit_adjustments = credit.get("adjustments", [])
+        scores = apply_dimension_adjustments(base_scores, credit_adjustments, dim_adjustments)
 
         comp = composite(scores, weights)
         nominal = grade_from_score(comp, grade_bands)
@@ -123,6 +160,7 @@ def main() -> None:
                 "grade_nominal": nominal,
                 "grade_final": final,
                 "disqualifiers": ",".join(credit.get("disqualifiers", [])),
+                "adjustments": ",".join(credit_adjustments),
                 "caps_applied": ",".join(applied),
             }
         )

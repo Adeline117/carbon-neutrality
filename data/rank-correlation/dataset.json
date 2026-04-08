@@ -173,14 +173,18 @@
         },
         "composite": 48.375,
         "grade": "BBB",
-        "disqualifiers": []
+        "disqualifiers": [],
+        "v0_4_1_adjustments": ["commercial_plantation_arr"],
+        "v0_4_1_grade": "BB",
+        "v0_4_1_composite": 43.375,
+        "v0_4_1_note": "Applying the commercial_plantation_arr adjustment (delta -20 on removal_type) brings Guanare into BB territory, matching commercial consensus. See docs/v0.4.1-changelog.md."
       },
       "agency_ratings": {
         "bezero": "B",
         "calyx_nzm": "E",
         "sylvera_nzm": "Tier 3"
       },
-      "notes": "Commercial eucalyptus plantation classified as ARR. Our BBB is the outlier here; all 3 agencies rate it low. Likely driven by: (a) commercial plantation additionality concerns the v0.4 rubric may be too generous on, (b) biodiversity/community co-benefit concerns that v0.4's safeguards-gate doesn't catch because co_benefits is only a gate for documented harm, not moderate weakness."
+      "notes": "Commercial eucalyptus plantation classified as ARR. v0.4 gave BBB (outlier vs all 3 agencies); v0.4.1 commercial_plantation_arr adjustment drops it to BB, matching commercial consensus."
     }
   ],
   "anchor_projects": [

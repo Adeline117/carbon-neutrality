@@ -55,8 +55,20 @@
       "examples": ["Wind power crediting in liberalized markets", "Large hydro with grid displacement"]
     }
   ],
+  "adjustments": [
+    {
+      "id": "commercial_plantation_arr",
+      "condition": "Project is classified as ARR but is primarily a commercial timber/pulp/biomass plantation where carbon revenue is <15% of project income. The primary commercial output is not carbon.",
+      "effect": "delta",
+      "delta": -20,
+      "rationale": "The 60-74 'Nature-based removal + moderate storage' band rewards biogenic carbon storage in standard reforestation with buffer pools. Commercial plantation ARR produces the same biogenic carbon but as a byproduct of commercial timber/pulp/biomass operations. The additionality dimension already captures the weak economic additionality of such projects, but the removal_type score under the 60-74 band overstates the project's *conservation* value. This delta realigns removal_type with the commercial reality that these projects' primary purpose is not carbon removal.",
+      "introduced_in": "v0.4.1",
+      "motivating_case": "Guanaré Forest Restoration (VCS 959) in Uruguay. All three commercial rating agencies (BeZero, Calyx, Sylvera) rate it at the bottom of their scales. Our v0.4 framework gave it BBB because removal_type=65 (commercial eucalyptus is still biogenic removal) pushed the composite above the A/BBB boundary. Applying this adjustment brings Guanaré's composite to BB, matching commercial consensus. See data/rank-correlation/analysis.md §4.3."
+    }
+  ],
   "notes": [
     "Hybrid projects score based on the primary intervention type.",
-    "Mapping from registry methodology ID to category is maintained in data/mappings/methodology-to-category.json."
+    "Mapping from registry methodology ID to category is maintained in data/mappings/methodology-to-category.json.",
+    "Adjustments are applied to the base band score before the composite calculation. See data/pilot-scoring/score.py apply_dimension_adjustments()."
   ]
 }
