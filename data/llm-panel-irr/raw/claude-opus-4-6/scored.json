@@ -1,0 +1,428 @@
+{
+  "rater_model": "claude-opus-4-6",
+  "scored_at": "2026-04-08T00:00:00Z",
+  "credits": [
+    {
+      "id": "C001",
+      "scores": {
+        "removal_type": 97,
+        "additionality": 94,
+        "permanence": 98,
+        "mrv_grade": 92,
+        "vintage_year": 76,
+        "co_benefits": 35,
+        "registry_methodology": 72
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C002",
+      "scores": {
+        "removal_type": 90,
+        "additionality": 92,
+        "permanence": 96,
+        "mrv_grade": 93,
+        "vintage_year": 76,
+        "co_benefits": 35,
+        "registry_methodology": 70
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C003",
+      "scores": {
+        "removal_type": 88,
+        "additionality": 78,
+        "permanence": 95,
+        "mrv_grade": 85,
+        "vintage_year": 76,
+        "co_benefits": 25,
+        "registry_methodology": 85
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C004",
+      "scores": {
+        "removal_type": 92,
+        "additionality": 90,
+        "permanence": 96,
+        "mrv_grade": 85,
+        "vintage_year": 76,
+        "co_benefits": 30,
+        "registry_methodology": 72
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C005",
+      "scores": {
+        "removal_type": 80,
+        "additionality": 78,
+        "permanence": 85,
+        "mrv_grade": 82,
+        "vintage_year": 76,
+        "co_benefits": 40,
+        "registry_methodology": 72
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C006",
+      "scores": {
+        "removal_type": 78,
+        "additionality": 80,
+        "permanence": 82,
+        "mrv_grade": 78,
+        "vintage_year": 64,
+        "co_benefits": 72,
+        "registry_methodology": 85
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C007",
+      "scores": {
+        "removal_type": 68,
+        "additionality": 65,
+        "permanence": 55,
+        "mrv_grade": 78,
+        "vintage_year": 76,
+        "co_benefits": 78,
+        "registry_methodology": 82
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C008",
+      "scores": {
+        "removal_type": 65,
+        "additionality": 55,
+        "permanence": 58,
+        "mrv_grade": 68,
+        "vintage_year": 64,
+        "co_benefits": 35,
+        "registry_methodology": 80
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C009",
+      "scores": {
+        "removal_type": 62,
+        "additionality": 50,
+        "permanence": 52,
+        "mrv_grade": 58,
+        "vintage_year": 76,
+        "co_benefits": 30,
+        "registry_methodology": 72
+      },
+      "disqualifiers": [],
+      "adjustments": [
+        "commercial_plantation_arr"
+      ]
+    },
+    {
+      "id": "C010",
+      "scores": {
+        "removal_type": 35,
+        "additionality": 50,
+        "permanence": 8,
+        "mrv_grade": 60,
+        "vintage_year": 64,
+        "co_benefits": 78,
+        "registry_methodology": 80
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C011",
+      "scores": {
+        "removal_type": 55,
+        "additionality": 62,
+        "permanence": 8,
+        "mrv_grade": 72,
+        "vintage_year": 64,
+        "co_benefits": 18,
+        "registry_methodology": 78
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C012",
+      "scores": {
+        "removal_type": 52,
+        "additionality": 50,
+        "permanence": 8,
+        "mrv_grade": 68,
+        "vintage_year": 64,
+        "co_benefits": 25,
+        "registry_methodology": 78
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C013",
+      "scores": {
+        "removal_type": 72,
+        "additionality": 70,
+        "permanence": 55,
+        "mrv_grade": 70,
+        "vintage_year": 76,
+        "co_benefits": 80,
+        "registry_methodology": 80
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C014",
+      "scores": {
+        "removal_type": 66,
+        "additionality": 72,
+        "permanence": 45,
+        "mrv_grade": 60,
+        "vintage_year": 64,
+        "co_benefits": 82,
+        "registry_methodology": 55
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C015",
+      "scores": {
+        "removal_type": 62,
+        "additionality": 45,
+        "permanence": 50,
+        "mrv_grade": 55,
+        "vintage_year": 4,
+        "co_benefits": 25,
+        "registry_methodology": 72
+      },
+      "disqualifiers": [],
+      "adjustments": [
+        "commercial_plantation_arr"
+      ]
+    },
+    {
+      "id": "C016",
+      "scores": {
+        "removal_type": 33,
+        "additionality": 38,
+        "permanence": 8,
+        "mrv_grade": 50,
+        "vintage_year": 16,
+        "co_benefits": 70,
+        "registry_methodology": 75
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C017",
+      "scores": {
+        "removal_type": 10,
+        "additionality": 20,
+        "permanence": 5,
+        "mrv_grade": 55,
+        "vintage_year": 52,
+        "co_benefits": 20,
+        "registry_methodology": 55
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C018",
+      "scores": {
+        "removal_type": 20,
+        "additionality": 25,
+        "permanence": 35,
+        "mrv_grade": 38,
+        "vintage_year": 16,
+        "co_benefits": 60,
+        "registry_methodology": 40
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C019",
+      "scores": {
+        "removal_type": 18,
+        "additionality": 18,
+        "permanence": 30,
+        "mrv_grade": 25,
+        "vintage_year": 4,
+        "co_benefits": 40,
+        "registry_methodology": 38
+      },
+      "disqualifiers": [
+        "failed_verification"
+      ],
+      "adjustments": []
+    },
+    {
+      "id": "C020",
+      "scores": {
+        "removal_type": 8,
+        "additionality": 15,
+        "permanence": 5,
+        "mrv_grade": 42,
+        "vintage_year": 20,
+        "co_benefits": 15,
+        "registry_methodology": 45
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C021",
+      "scores": {
+        "removal_type": 8,
+        "additionality": 18,
+        "permanence": 5,
+        "mrv_grade": 45,
+        "vintage_year": 20,
+        "co_benefits": 12,
+        "registry_methodology": 48
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C022",
+      "scores": {
+        "removal_type": 15,
+        "additionality": 10,
+        "permanence": 25,
+        "mrv_grade": 18,
+        "vintage_year": 20,
+        "co_benefits": 30,
+        "registry_methodology": 35
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C023",
+      "scores": {
+        "removal_type": 50,
+        "additionality": 15,
+        "permanence": 8,
+        "mrv_grade": 50,
+        "vintage_year": 20,
+        "co_benefits": 10,
+        "registry_methodology": 30
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C024",
+      "scores": {
+        "removal_type": 8,
+        "additionality": 12,
+        "permanence": 5,
+        "mrv_grade": 40,
+        "vintage_year": 20,
+        "co_benefits": 15,
+        "registry_methodology": 30
+      },
+      "disqualifiers": [],
+      "adjustments": []
+    },
+    {
+      "id": "C025",
+      "scores": {
+        "removal_type": 18,
+        "additionality": 15,
+        "permanence": 22,
+        "mrv_grade": 15,
+        "vintage_year": 20,
+        "co_benefits": 10,
+        "registry_methodology": 5
+      },
+      "disqualifiers": [
+        "no_third_party"
+      ],
+      "adjustments": []
+    },
+    {
+      "id": "C026",
+      "scores": {
+        "removal_type": 95,
+        "additionality": 92,
+        "permanence": 96,
+        "mrv_grade": 92,
+        "vintage_year": 76,
+        "co_benefits": 60,
+        "registry_methodology": 90
+      },
+      "disqualifiers": [
+        "double_counting"
+      ],
+      "adjustments": []
+    },
+    {
+      "id": "C027",
+      "scores": {
+        "removal_type": 85,
+        "additionality": 82,
+        "permanence": 85,
+        "mrv_grade": 82,
+        "vintage_year": 76,
+        "co_benefits": 55,
+        "registry_methodology": 80
+      },
+      "disqualifiers": [
+        "sanctioned_registry"
+      ],
+      "adjustments": []
+    },
+    {
+      "id": "C028",
+      "scores": {
+        "removal_type": 85,
+        "additionality": 80,
+        "permanence": 82,
+        "mrv_grade": 80,
+        "vintage_year": 76,
+        "co_benefits": 55,
+        "registry_methodology": 80
+      },
+      "disqualifiers": [
+        "no_third_party"
+      ],
+      "adjustments": []
+    },
+    {
+      "id": "C029",
+      "scores": {
+        "removal_type": 82,
+        "additionality": 80,
+        "permanence": 82,
+        "mrv_grade": 80,
+        "vintage_year": 76,
+        "co_benefits": 5,
+        "registry_methodology": 80
+      },
+      "disqualifiers": [
+        "community_harm"
+      ],
+      "adjustments": []
+    }
+  ]
+}

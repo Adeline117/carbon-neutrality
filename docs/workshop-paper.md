@@ -408,7 +408,32 @@ No single perturbation produces more than 3 grade changes. The v0.4 weights are 
 
 **Permanence is the highest-impact dimension (5 flips when dropped)**, contradicting the v0.3 concern that it might be collinear with removal_type and collapsible in a future 7→6 dimension revision. On this pilot, permanence is doing independent work. MRV dropping produces zero flips, which looks like redundancy but is more likely an artifact of MRV scores being positively correlated with the other technical dimensions in this dataset; a random-MRV stress test would probably flip more credits.
 
-### 7.4 Impact on co-benefit-heavy credits
+### 7.5 LLM panel inter-rater reliability (v0.5 W1)
+
+To quantify the single-author-scoring vulnerability acknowledged in §9, three Claude models (Opus 4.6, Sonnet 4.6, Haiku 4.5) independently scored all 29 illustrative-pilot credits against the v0.4.1 rubric, using a redacted evidence pack with author scores removed. Full protocol and analysis are in `data/llm-panel-irr/`. Headline results:
+
+| Metric | Value |
+|--------|------:|
+| Grade-level Fleiss' κ (3-rater LLM panel) | **+0.600** (substantial) |
+| Composite ICC(2,k) (continuous 0-100) | **+0.993** (near-perfect) |
+| Author vs panel median — exact grade agreement | **86%** (25/29) |
+| Author vs panel median — within ±1 band | **100%** (29/29) |
+| Disqualifier recall on synthetic stress tests C026-C029 | **12/12** (100%) |
+
+Every rater-pair reaches 100% within-±1-band agreement. Per-dimension Fleiss' κ ranges from +0.684 (permanence, most-agreed) down to +0.168 (registry_methodology, least-agreed), giving a specific map of which rubric dimensions need tightening in v0.6.
+
+**Key correction to §7.2 Finding 1.** The LLM panel places C004 Charm Industrial at **AA (3/3)**, not AAA. The author's v0.4.1 composite of 90.15 sits 0.15 points above the AAA boundary; a reasonable alternative reading lands just below. Under panel consensus the headline number is **2 of 29 credits reach AAA** (Climeworks Orca, Heirloom DAC), not 3. The Oxford-hierarchy-restored finding is preserved — engineered CDR still dominates the top of the scale — but the exact AAA count is rater-dependent for credits within ~1 composite point of the boundary.
+
+C011 (N2O destruction, BBB) and C014 (Plan Vivo agroforestry, A) are not fragile in practice: C011 matches 3/3, C014 matches 2/3 with the third rater dropping to the adjacent BBB.
+
+**v0.6 rubric-refinement targets driven by this study:**
+
+1. Collapse `07_registry_methodology.json` into a 2-tier (CCP-eligible / not) scheme with Boolean modifiers; target κ > 0.40.
+2. Tighten or remove the informational `co_benefits` attestation (weight is 0 in v0.4 anyway).
+3. Simplify the pre-Paris override in `05_vintage_year.json` to remove the discontinuity raters disagree about.
+4. Replicate with a multi-provider panel (GPT-5, Gemini, Llama) to detect Anthropic-specific biases.
+
+### 7.6 Impact on co-benefit-heavy credits
 
 Worth naming explicitly since the safeguards-gate is the part of v0.4 that hits co-benefit-heavy credits hardest. No grade flips occur in the pilot, but composites drop meaningfully:
 

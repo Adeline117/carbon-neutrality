@@ -1,0 +1,39 @@
+{
+  "n_credits": 29,
+  "raters": [
+    "claude-opus-4-6",
+    "claude-sonnet-4-6",
+    "claude-haiku-4-5"
+  ],
+  "per_dimension_mad": {
+    "removal_type": 4.689655172413793,
+    "additionality": 9.67816091954023,
+    "permanence": 4.505747126436781,
+    "mrv_grade": 8.045977011494253,
+    "vintage_year": 11.586206896551724,
+    "co_benefits": 10.229885057471265,
+    "registry_methodology": 12.574712643678161
+  },
+  "per_dimension_pearson_mean": {
+    "removal_type": 0.9725215366143374,
+    "additionality": 0.9321542292136819,
+    "permanence": 0.9840928008754372,
+    "mrv_grade": 0.9390798639951822,
+    "vintage_year": 0.9822731853794514,
+    "co_benefits": 0.8639330557266537,
+    "registry_methodology": 0.7951953609473325
+  },
+  "per_dimension_fleiss": {
+    "removal_type": 0.585096870342772,
+    "additionality": 0.2425697988592014,
+    "permanence": 0.6835317460317462,
+    "mrv_grade": 0.2478780257780572,
+    "vintage_year": 0.32449045616305405,
+    "co_benefits": 0.18223165554881746,
+    "registry_methodology": 0.16795302013422822
+  },
+  "grade_fleiss_kappa_llm_panel": 0.5997371015445285,
+  "composite_icc_2k_llm_panel": 0.9928116333141117,
+  "author_vs_panel_median_exact": 0.8620689655172413,
+  "author_vs_panel_median_within1": 1.0
+}
