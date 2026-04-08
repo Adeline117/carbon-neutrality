@@ -1,0 +1,221 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+import {ICarbonCreditRating} from "./ICarbonCreditRating.sol";
+
+/// @title CarbonCreditRating
+/// @notice Reference implementation of the on-chain carbon credit quality rating.
+///         Weights, grade boundaries, and disqualifier caps match v0.2 of the
+///         workshop paper and data/scoring-rubrics/index.json.
+///
+/// @dev    This is a MVP prototype. Production deployment should:
+///         - Replace the single-owner rater with a multi-rater oracle or attestation network
+///         - Add rating provenance (methodology version, data inputs, proof-of-audit)
+///         - Emit per-dimension change events for auditability
+///         - Integrate rating expiry (annual re-verification)
+contract CarbonCreditRating is ICarbonCreditRating {
+    // ------------------------------------------------------------------
+    // Weights (basis points, sum = 10000)
+    // ------------------------------------------------------------------
+    uint16 private constant W_REMOVAL_TYPE       = 2000;
+    uint16 private constant W_ADDITIONALITY      = 2000;
+    uint16 private constant W_PERMANENCE         = 1500;
+    uint16 private constant W_MRV_GRADE          = 1500;
+    uint16 private constant W_VINTAGE            = 1000;
+    uint16 private constant W_CO_BENEFITS        = 1000;
+    uint16 private constant W_REGISTRY_METHOD    = 1000;
+
+    // ------------------------------------------------------------------
+    // Grade boundaries (composite in basis points)
+    // ------------------------------------------------------------------
+    uint16 private constant AAA_MIN = 9000;
+    uint16 private constant AA_MIN  = 7500;
+    uint16 private constant A_MIN   = 6000;
+    uint16 private constant BBB_MIN = 4500;
+    uint16 private constant BB_MIN  = 3000;
+
+    // ------------------------------------------------------------------
+    // Storage
+    // ------------------------------------------------------------------
+    address public owner;
+    mapping(address => bool) public isRater;
+    mapping(bytes32 => Rating) private _ratings;
+
+    // ------------------------------------------------------------------
+    // Errors
+    // ------------------------------------------------------------------
+    error NotOwner();
+    error NotRater();
+    error ScoreOutOfRange(string dimension, uint8 value);
+    error Unrated();
+
+    // ------------------------------------------------------------------
+    // Events
+    // ------------------------------------------------------------------
+    event RaterSet(address indexed rater, bool allowed);
+    event OwnerTransferred(address indexed from, address indexed to);
+
+    // ------------------------------------------------------------------
+    // Modifiers
+    // ------------------------------------------------------------------
+    modifier onlyOwner() {
+        if (msg.sender != owner) revert NotOwner();
+        _;
+    }
+
+    modifier onlyRater() {
+        if (!isRater[msg.sender]) revert NotRater();
+        _;
+    }
+
+    // ------------------------------------------------------------------
+    // Constructor
+    // ------------------------------------------------------------------
+    constructor(address initialRater) {
+        owner = msg.sender;
+        isRater[initialRater] = true;
+        emit OwnerTransferred(address(0), msg.sender);
+        emit RaterSet(initialRater, true);
+    }
+
+    // ------------------------------------------------------------------
+    // Admin
+    // ------------------------------------------------------------------
+    function setRater(address rater, bool allowed) external onlyOwner {
+        isRater[rater] = allowed;
+        emit RaterSet(rater, allowed);
+    }
+
+    function transferOwnership(address newOwner) external onlyOwner {
+        emit OwnerTransferred(owner, newOwner);
+        owner = newOwner;
+    }
+
+    // ------------------------------------------------------------------
+    // Rating write path
+    // ------------------------------------------------------------------
+    function setRating(
+        address creditToken,
+        uint256 tokenId,
+        DimensionScores calldata scores,
+        Disqualifiers calldata flags
+    ) external onlyRater {
+        _validateScores(scores);
+        uint16 compositeBps = _computeCompositeBps(scores);
+        Grade nominal = _gradeFromComposite(compositeBps);
+        Grade finalGrade = _applyDisqualifiers(nominal, flags);
+
+        bytes32 key = _key(creditToken, tokenId);
+        _ratings[key] = Rating({
+            scores: scores,
+            flags: flags,
+            compositeBps: compositeBps,
+            nominalGrade: nominal,
+            finalGrade: finalGrade,
+            lastUpdatedAt: uint64(block.timestamp),
+            attestedBy: msg.sender
+        });
+
+        emit RatingSet(creditToken, tokenId, compositeBps, nominal, finalGrade, msg.sender);
+    }
+
+    // ------------------------------------------------------------------
+    // Rating read path
+    // ------------------------------------------------------------------
+    function ratingOf(address creditToken, uint256 tokenId)
+        external
+        view
+        returns (Rating memory)
+    {
+        Rating memory r = _ratings[_key(creditToken, tokenId)];
+        if (r.lastUpdatedAt == 0) revert Unrated();
+        return r;
+    }
+
+    function meetsGrade(address creditToken, uint256 tokenId, Grade minGrade)
+        external
+        view
+        returns (bool)
+    {
+        Rating memory r = _ratings[_key(creditToken, tokenId)];
+        if (r.lastUpdatedAt == 0) return false;
+        return uint8(r.finalGrade) >= uint8(minGrade);
+    }
+
+    // ------------------------------------------------------------------
+    // Pure helpers (exposed for testing and off-chain reproducibility)
+    // ------------------------------------------------------------------
+    function computeComposite(DimensionScores calldata scores) external pure returns (uint16) {
+        _validateScores(scores);
+        return _computeCompositeBps(scores);
+    }
+
+    function gradeFromComposite(uint16 compositeBps) external pure returns (Grade) {
+        return _gradeFromComposite(compositeBps);
+    }
+
+    function applyDisqualifiers(Grade nominal, Disqualifiers calldata flags)
+        external
+        pure
+        returns (Grade)
+    {
+        return _applyDisqualifiers(nominal, flags);
+    }
+
+    // ------------------------------------------------------------------
+    // Internal
+    // ------------------------------------------------------------------
+    function _key(address creditToken, uint256 tokenId) private pure returns (bytes32) {
+        return keccak256(abi.encode(creditToken, tokenId));
+    }
+
+    function _validateScores(DimensionScores calldata s) private pure {
+        if (s.removalType > 100) revert ScoreOutOfRange("removalType", s.removalType);
+        if (s.additionality > 100) revert ScoreOutOfRange("additionality", s.additionality);
+        if (s.permanence > 100) revert ScoreOutOfRange("permanence", s.permanence);
+        if (s.mrvGrade > 100) revert ScoreOutOfRange("mrvGrade", s.mrvGrade);
+        if (s.vintageYear > 100) revert ScoreOutOfRange("vintageYear", s.vintageYear);
+        if (s.coBenefits > 100) revert ScoreOutOfRange("coBenefits", s.coBenefits);
+        if (s.registryMethodology > 100) revert ScoreOutOfRange("registryMethodology", s.registryMethodology);
+    }
+
+    /// @dev composite_bps = sum(score_i * weight_bps_i) / 100
+    ///      score in [0,100], weight in [0,10000], result in [0,10000].
+    function _computeCompositeBps(DimensionScores calldata s) private pure returns (uint16) {
+        uint256 sum =
+              uint256(s.removalType)         * W_REMOVAL_TYPE
+            + uint256(s.additionality)       * W_ADDITIONALITY
+            + uint256(s.permanence)          * W_PERMANENCE
+            + uint256(s.mrvGrade)            * W_MRV_GRADE
+            + uint256(s.vintageYear)         * W_VINTAGE
+            + uint256(s.coBenefits)          * W_CO_BENEFITS
+            + uint256(s.registryMethodology) * W_REGISTRY_METHOD;
+        return uint16(sum / 100);
+    }
+
+    function _gradeFromComposite(uint16 bps) private pure returns (Grade) {
+        if (bps >= AAA_MIN) return Grade.AAA;
+        if (bps >= AA_MIN)  return Grade.AA;
+        if (bps >= A_MIN)   return Grade.A;
+        if (bps >= BBB_MIN) return Grade.BBB;
+        if (bps >= BB_MIN)  return Grade.BB;
+        return Grade.B;
+    }
+
+    /// @dev Disqualifiers cap the maximum achievable grade. They never raise a grade.
+    function _applyDisqualifiers(Grade nominal, Disqualifiers calldata flags)
+        private
+        pure
+        returns (Grade)
+    {
+        Grade capped = nominal;
+
+        if (flags.doubleCounting      && capped > Grade.B)   capped = Grade.B;
+        if (flags.failedVerification  && capped > Grade.B)   capped = Grade.B;
+        if (flags.humanRights         && capped > Grade.B)   capped = Grade.B;
+        if (flags.sanctionedRegistry  && capped > Grade.BB)  capped = Grade.BB;
+        if (flags.noThirdParty        && capped > Grade.BBB) capped = Grade.BBB;
+
+        return capped;
+    }
+}

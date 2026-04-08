@@ -1,0 +1,87 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+
+/// @title ICarbonCreditRating
+/// @notice Interface for the on-chain carbon credit quality rating framework.
+///         See docs/workshop-paper.md and data/scoring-rubrics/ for the full methodology.
+///         Scores are uint8 values in [0, 100]. Composite is expressed in basis points
+///         (0-10000) so that grade boundaries map to round numbers (AAA=9000+, etc.).
+interface ICarbonCreditRating {
+    /// @notice Six-tier quality grade. Ordered from lowest (B) to highest (AAA).
+    ///         Higher enum value = higher quality.
+    enum Grade {
+        B,    // 0   <  30
+        BB,   // 1   30-44
+        BBB,  // 2   45-59
+        A,    // 3   60-74
+        AA,   // 4   75-89
+        AAA   // 5   90-100
+    }
+
+    /// @notice Per-dimension scores for a credit, all in [0, 100].
+    ///         Struct order MUST match the weight layout in CarbonCreditRating.
+    struct DimensionScores {
+        uint8 removalType;          // 20% weight
+        uint8 additionality;        // 20% weight
+        uint8 permanence;           // 15% weight
+        uint8 mrvGrade;             // 15% weight
+        uint8 vintageYear;          // 10% weight
+        uint8 coBenefits;           // 10% weight
+        uint8 registryMethodology;  // 10% weight
+    }
+
+    /// @notice Bitmap of disqualifier flags. Any set bit may cap the final grade.
+    ///         Bit positions are stable and must match the rubric index.json order.
+    struct Disqualifiers {
+        bool doubleCounting;       // caps at B
+        bool failedVerification;   // caps at B
+        bool sanctionedRegistry;   // caps at BB
+        bool noThirdParty;         // caps at BBB
+        bool humanRights;          // caps at B
+    }
+
+    /// @notice Full rating result for a credit token.
+    struct Rating {
+        DimensionScores scores;
+        Disqualifiers flags;
+        uint16 compositeBps;   // 0-10000
+        Grade nominalGrade;    // pre-disqualifier
+        Grade finalGrade;      // post-disqualifier
+        uint64 lastUpdatedAt;  // unix seconds
+        address attestedBy;
+    }
+
+    /// @notice Emitted when a credit's scores are set or updated.
+    event RatingSet(
+        address indexed creditToken,
+        uint256 indexed tokenId,
+        uint16 compositeBps,
+        Grade nominalGrade,
+        Grade finalGrade,
+        address indexed attestedBy
+    );
+
+    /// @notice Set or update the per-dimension scores and disqualifier flags for a credit.
+    ///         Only an authorized rater may call. The composite, nominal grade and final
+    ///         grade are recomputed and stored.
+    function setRating(
+        address creditToken,
+        uint256 tokenId,
+        DimensionScores calldata scores,
+        Disqualifiers calldata flags
+    ) external;
+
+    /// @notice Fetch the full rating for a credit. Reverts if unrated.
+    function ratingOf(address creditToken, uint256 tokenId)
+        external
+        view
+        returns (Rating memory);
+
+    /// @notice Returns whether `(creditToken, tokenId)` meets the minimum grade.
+    ///         Unrated credits are considered ineligible.
+    function meetsGrade(
+        address creditToken,
+        uint256 tokenId,
+        Grade minGrade
+    ) external view returns (bool);
+}
