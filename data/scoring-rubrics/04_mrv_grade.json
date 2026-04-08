@@ -1,0 +1,56 @@
+{
+  "id": "mrv_grade",
+  "name": "MRV Grade",
+  "weight": 0.15,
+  "rationale": "The credibility of the claimed emission reduction depends entirely on how well it is measured, reported, and independently verified. Digital MRV is rapidly advancing and should be preferred.",
+  "data_source": "Verification reports + monitoring plan (oracle required)",
+  "on_chain_feasibility": "low",
+  "bands": [
+    {
+      "score_min": 90, "score_max": 100,
+      "label": "Digital MRV",
+      "monitoring": "Continuous IoT/sensor data; satellite imagery with <10m resolution; automated anomaly detection",
+      "reporting":  "Real-time or near-real-time automated reporting; uncertainty quantified",
+      "verification": "Independent third-party + automated cross-validation; dispute mechanism"
+    },
+    {
+      "score_min": 75, "score_max": 89,
+      "label": "Enhanced",
+      "monitoring": "Regular sensor data or high-res satellite; defined monitoring protocol",
+      "reporting":  "Standardized reporting with uncertainty bounds",
+      "verification": "Independent third-party with methodology-specific competence"
+    },
+    {
+      "score_min": 60, "score_max": 74,
+      "label": "Standard+",
+      "monitoring": "Periodic sampling per methodology; some remote sensing",
+      "reporting":  "Meets registry requirements; conservative default factors",
+      "verification": "Standard VVB verification per registry rules"
+    },
+    {
+      "score_min": 45, "score_max": 59,
+      "label": "Standard",
+      "monitoring": "Meets minimum registry monitoring requirements",
+      "reporting":  "Template-based reporting; limited uncertainty analysis",
+      "verification": "Standard verification; no red flags"
+    },
+    {
+      "score_min": 30, "score_max": 44,
+      "label": "Basic",
+      "monitoring": "Minimum monitoring; reliance on default emission factors",
+      "reporting":  "Basic reporting; significant reliance on estimates",
+      "verification": "Verification completed but with findings/CARs"
+    },
+    {
+      "score_min": 0, "score_max": 29,
+      "label": "Deficient",
+      "monitoring": "Known monitoring gaps; self-reported only",
+      "reporting":  "Late or incomplete reporting",
+      "verification": "Failed verification; unresolved material findings"
+    }
+  ],
+  "notes": [
+    "Digital MRV initiatives to track: Verra-Pachama DMRV, ESA SatMRV, Open Forest Protocol, Isometric.",
+    "MRV scoring should be re-evaluated at each verification cycle (typically annual)."
+  ]
+}

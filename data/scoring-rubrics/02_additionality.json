@@ -1,0 +1,64 @@
+{
+  "id": "additionality",
+  "name": "Additionality",
+  "weight": 0.20,
+  "rationale": "A credit that represents an emission reduction that would have happened anyway has zero climate value. Additionality is the most contested yet most important integrity dimension.",
+  "data_source": "Project design document + financial analysis + common practice review (oracle required)",
+  "on_chain_feasibility": "low",
+  "bands": [
+    {
+      "score_min": 90, "score_max": 100,
+      "label": "Very High",
+      "criteria": "Carbon revenue is >50% of project income; technology is pre-commercial; no regulatory mandate; financial analysis shows negative NPV without carbon finance"
+    },
+    {
+      "score_min": 75, "score_max": 89,
+      "label": "High",
+      "criteria": "Carbon revenue is 30-50% of income; clear investment barrier documented; regulatory surplus demonstrated"
+    },
+    {
+      "score_min": 60, "score_max": 74,
+      "label": "Moderate",
+      "criteria": "Carbon revenue is 15-30% of income; multiple revenue streams; common practice analysis supports not-yet-standard"
+    },
+    {
+      "score_min": 45, "score_max": 59,
+      "label": "Marginal",
+      "criteria": "Carbon revenue <15% of income; project type becoming standard practice; relies primarily on barrier analysis"
+    },
+    {
+      "score_min": 30, "score_max": 44,
+      "label": "Low",
+      "criteria": "Project type is common in jurisdiction; weak barrier analysis; regulatory requirements approaching project standard"
+    },
+    {
+      "score_min": 0, "score_max": 29,
+      "label": "Questionable",
+      "criteria": "Project type is mandated or standard practice; no credible barrier analysis; free-rider concerns"
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "construction_before_finance",
+      "condition": "Project was already under construction before carbon finance was secured",
+      "effect": "score_cap",
+      "cap": 40
+    },
+    {
+      "id": "heavy_subsidy",
+      "condition": "Government subsidies cover >80% of project costs",
+      "effect": "score_cap",
+      "cap": 40
+    },
+    {
+      "id": "lowest_cost_anyway",
+      "condition": "Technology is the cheapest available option regardless of carbon revenue",
+      "effect": "score_cap",
+      "cap": 40
+    }
+  ],
+  "notes": [
+    "Scoring requires off-chain expert evaluation; attested via oracle.",
+    "Calyx Global's additive scoring model is recommended: positive in one area cannot overcome risk in another."
+  ]
+}

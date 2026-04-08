@@ -1,0 +1,63 @@
+{
+  "id": "registry_methodology",
+  "name": "Registry & Methodology",
+  "weight": 0.10,
+  "rationale": "The crediting program (registry) and the specific methodology together determine the rules and rigor under which credits are generated. A good project under a weak methodology is still a weak credit.",
+  "data_source": "Token metadata -- registry ID + methodology ID (on-chain native via mapping table)",
+  "on_chain_feasibility": "high",
+  "registry_tiers": [
+    {
+      "tier": 1,
+      "registries": ["Verra VCS", "Gold Standard", "ACR", "CAR", "ART"],
+      "base_score_min": 70,
+      "base_score_max": 100,
+      "notes": "ICVCM CCP-assessed registries"
+    },
+    {
+      "tier": 2,
+      "registries": ["Plan Vivo", "Cercarbono", "Global Carbon Council", "BioCarbon Registry"],
+      "base_score_min": 40,
+      "base_score_max": 69,
+      "notes": "Recognized but not CCP-assessed"
+    },
+    {
+      "tier": 3,
+      "registries": ["Emerging / regional"],
+      "base_score_min": 10,
+      "base_score_max": 39,
+      "notes": "Limited track record"
+    },
+    {
+      "tier": 4,
+      "registries": ["Unrecognized / no registry"],
+      "base_score_min": 0,
+      "base_score_max": 9
+    }
+  ],
+  "methodology_modifiers": [
+    {
+      "id": "ccp_eligible",
+      "condition": "Methodology category approved under ICVCM CCP",
+      "delta": 15
+    },
+    {
+      "id": "conservative_baseline",
+      "condition": "Demonstrated conservative crediting baseline",
+      "delta": 10
+    },
+    {
+      "id": "under_review",
+      "condition": "Active integrity review or revision process",
+      "delta": -15
+    },
+    {
+      "id": "known_overcrediting",
+      "condition": "Published research demonstrates systematic overcrediting (e.g., West et al. 2023 for REDD+)",
+      "delta": -25
+    }
+  ],
+  "notes": [
+    "Final score is clamped to [0, 100] after applying modifiers.",
+    "Registry-to-tier mapping is maintained in data/mappings/registry-to-tier.json and expected to evolve as ICVCM assessments proceed."
+  ]
+}

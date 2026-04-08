@@ -1,0 +1,35 @@
+{
+  "id": "vintage_year",
+  "name": "Vintage Year",
+  "weight": 0.10,
+  "rationale": "Older credits may not reflect current project performance, and their continued availability on the market may indicate weak demand -- a negative quality signal.",
+  "data_source": "Token metadata (on-chain native)",
+  "on_chain_feasibility": "high",
+  "scoring_formula": {
+    "expression": "max(0, 100 - (current_year - vintage_year) * 12)",
+    "inputs": ["current_year", "vintage_year"],
+    "floor": 0,
+    "ceiling": 100
+  },
+  "example_table": [
+    {"age_years": 0,  "score": 100},
+    {"age_years": 1,  "score": 88},
+    {"age_years": 3,  "score": 64},
+    {"age_years": 5,  "score": 40},
+    {"age_years": 8,  "score": 4},
+    {"age_years": 9,  "score": 0}
+  ],
+  "overrides": [
+    {
+      "id": "pre_paris",
+      "condition": "vintage_year < 2016",
+      "effect": "score_cap",
+      "cap": 20,
+      "reason": "Pre-Paris Agreement baselines may not align with current net-zero-aligned standards"
+    }
+  ],
+  "notes": [
+    "Vintage is the only dimension computable entirely on-chain from token metadata.",
+    "The 12 points per year decay rate is a provisional choice; expert calibration should validate."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "removal_type",
+  "name": "Removal Type Hierarchy",
+  "weight": 0.20,
+  "rationale": "Oxford Principles establish that carbon removal with durable storage is more climate-valuable than avoidance. Engineered removal with geological storage represents the highest-integrity intervention.",
+  "data_source": "Methodology category (mapped from registry methodology ID)",
+  "on_chain_feasibility": "high",
+  "bands": [
+    {
+      "score_min": 95, "score_max": 100,
+      "label": "Engineered removal + geological storage",
+      "criteria": "Atmospheric CO2 capture; geological injection with >10,000 yr durability",
+      "examples": ["DACCS", "BECCS with geological injection", "CO2 mineralization in basalt"]
+    },
+    {
+      "score_min": 85, "score_max": 94,
+      "label": "Engineered removal + durable storage",
+      "criteria": "Atmospheric CO2 capture; conversion to stable mineral/chemical form with >1,000 yr durability",
+      "examples": ["Enhanced weathering with verified mineralization", "Ocean alkalinity enhancement"]
+    },
+    {
+      "score_min": 75, "score_max": 84,
+      "label": "Nature-based removal + long storage commitment",
+      "criteria": "Biogenic CO2 removal with contractual/legal permanence mechanisms (>100 yr)",
+      "examples": ["Biochar (lab-verified stability)", "Afforestation with >100yr legal covenant", "Long-lived timber in buildings"]
+    },
+    {
+      "score_min": 60, "score_max": 74,
+      "label": "Nature-based removal + moderate storage",
+      "criteria": "Biogenic removal with standard registry permanence mechanisms (buffer pools)",
+      "examples": ["Standard reforestation", "Blue carbon (mangrove restoration)", "IFM with buffer pool"]
+    },
+    {
+      "score_min": 45, "score_max": 59,
+      "label": "Avoidance with high certainty",
+      "criteria": "Prevents emissions that would otherwise certainly occur; direct measurement possible",
+      "examples": ["Industrial fuel switching", "N2O destruction", "Landfill methane capture"]
+    },
+    {
+      "score_min": 30, "score_max": 44,
+      "label": "Avoidance with moderate certainty",
+      "criteria": "Displaces emissions based on baseline calculations with reasonable counterfactual",
+      "examples": ["Grid-connected renewable energy", "Efficient cookstoves", "Transport efficiency"]
+    },
+    {
+      "score_min": 15, "score_max": 29,
+      "label": "Avoidance with baseline uncertainty",
+      "criteria": "Credit depends heavily on contested counterfactual baseline",
+      "examples": ["REDD+ (avoided deforestation)", "Avoided conversion of grasslands"]
+    },
+    {
+      "score_min": 0, "score_max": 14,
+      "label": "Questionable intervention",
+      "criteria": "Project type has been shown to lack statistically significant climate benefit",
+      "examples": ["Wind power crediting in liberalized markets", "Large hydro with grid displacement"]
+    }
+  ],
+  "notes": [
+    "Hybrid projects score based on the primary intervention type.",
+    "Mapping from registry methodology ID to category is maintained in data/mappings/methodology-to-category.json."
+  ]
+}

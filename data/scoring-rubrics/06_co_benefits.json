@@ -1,0 +1,62 @@
+{
+  "id": "co_benefits",
+  "name": "Co-benefits",
+  "weight": 0.10,
+  "rationale": "Carbon credits that also deliver verified social and environmental benefits beyond climate mitigation are more valuable to buyers and more aligned with holistic sustainability. Also serves as the framework's safeguards dimension.",
+  "data_source": "SDG certifications, CCB certification, community impact reports (attestation)",
+  "on_chain_feasibility": "medium",
+  "bands": [
+    {
+      "score_min": 90, "score_max": 100,
+      "label": "Verified High Impact",
+      "requirements": "SD VISta or Gold Standard SDG certification; >=3 SDGs with quantified, third-party verified metrics; community engagement documented"
+    },
+    {
+      "score_min": 70, "score_max": 89,
+      "label": "Verified Moderate",
+      "requirements": "1-2 SDGs with third-party verified metrics; or CCB Gold/Silver"
+    },
+    {
+      "score_min": 50, "score_max": 69,
+      "label": "Partially Verified",
+      "requirements": "Self-reported SDG contributions with some third-party evidence; CCB standard certification"
+    },
+    {
+      "score_min": 30, "score_max": 49,
+      "label": "Self-Reported",
+      "requirements": "Project documentation claims SDG contributions without independent verification; reasonable plausibility"
+    },
+    {
+      "score_min": 10, "score_max": 29,
+      "label": "Minimal",
+      "requirements": "Limited co-benefit claims; primarily industrial/technological project"
+    },
+    {
+      "score_min": 0, "score_max": 9,
+      "label": "None",
+      "requirements": "No co-benefits identified or project has documented negative externalities"
+    }
+  ],
+  "negative_adjustments": [
+    {
+      "id": "community_opposition",
+      "condition": "Documented community opposition to project",
+      "delta": -20
+    },
+    {
+      "id": "environmental_damage",
+      "condition": "Credible environmental damage allegations",
+      "delta": -30
+    },
+    {
+      "id": "human_rights",
+      "condition": "Credible human rights concerns",
+      "effect": "score_cap",
+      "cap": 0,
+      "triggers_disqualifier": "human_rights"
+    }
+  ],
+  "notes": [
+    "This dimension partially compensates for the safeguards gap documented in Carbon Market Watch (2023) -- none of the four major rating agencies incorporate community safeguards."
+  ]
+}

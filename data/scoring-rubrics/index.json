@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "framework": "on-chain-carbon-credit-quality-rating",
+  "paper_version": "0.2",
+  "score_range": [0, 100],
+  "dimensions": [
+    {"id": "removal_type",       "file": "01_removal_type.json",       "weight": 0.20},
+    {"id": "additionality",      "file": "02_additionality.json",      "weight": 0.20},
+    {"id": "permanence",         "file": "03_permanence.json",         "weight": 0.15},
+    {"id": "mrv_grade",          "file": "04_mrv_grade.json",          "weight": 0.15},
+    {"id": "vintage_year",       "file": "05_vintage_year.json",       "weight": 0.10},
+    {"id": "co_benefits",        "file": "06_co_benefits.json",        "weight": 0.10},
+    {"id": "registry_methodology","file": "07_registry_methodology.json","weight": 0.10}
+  ],
+  "grades": [
+    {"grade": "AAA", "min": 90, "max": 100, "description": "Premium: engineered removal, high permanence, rigorous MRV"},
+    {"grade": "AA",  "min": 75, "max": 89,  "description": "High quality: nature-based removal or strong avoidance with robust verification"},
+    {"grade": "A",   "min": 60, "max": 74,  "description": "Standard quality: meets ICVCM Core Carbon Principles"},
+    {"grade": "BBB", "min": 45, "max": 59,  "description": "Acceptable: legacy methodology, adequate verification"},
+    {"grade": "BB",  "min": 30, "max": 44,  "description": "Below standard: questionable additionality or weak MRV"},
+    {"grade": "B",   "min": 0,  "max": 29,  "description": "Low quality: significant integrity concerns"}
+  ],
+  "disqualifiers": [
+    {"id": "double_counting",       "condition": "Evidence of double counting",                "grade_cap": "B"},
+    {"id": "failed_verification",   "condition": "Failed validation or verification",          "grade_cap": "B"},
+    {"id": "sanctioned_registry",   "condition": "Registry or methodology under sanction",     "grade_cap": "BB"},
+    {"id": "no_third_party",        "condition": "No independent third-party verification",    "grade_cap": "BBB"},
+    {"id": "human_rights",          "condition": "Credible human rights violation claims",     "grade_cap": "B"}
+  ],
+  "composite_formula": "sum(dimension_score_i * weight_i)",
+  "notes": [
+    "All dimension scores normalized to 0-100.",
+    "Weights sum to 1.00 and are provisional pending expert calibration (CCQI-style).",
+    "Disqualifiers cap the grade regardless of composite score."
+  ]
+}

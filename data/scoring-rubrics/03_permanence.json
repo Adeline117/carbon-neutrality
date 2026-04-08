@@ -1,0 +1,73 @@
+{
+  "id": "permanence",
+  "name": "Permanence",
+  "weight": 0.15,
+  "rationale": "A tonne of CO2 removed for 10 years has far less climate value than a tonne removed for 10,000 years. Reversal risk must be discounted explicitly.",
+  "data_source": "Project type + storage mechanism + contractual/buffer commitments",
+  "on_chain_feasibility": "medium",
+  "bands": [
+    {
+      "score_min": 95, "score_max": 100,
+      "label": ">10,000 years",
+      "mechanism": "Geological / mineralization",
+      "examples": ["CO2 geological injection", "Mineral carbonation"]
+    },
+    {
+      "score_min": 80, "score_max": 94,
+      "label": "1,000-10,000 years",
+      "mechanism": "Stable organic / mineral",
+      "examples": ["Biochar (lab-verified stability)", "Basalt weathering"]
+    },
+    {
+      "score_min": 65, "score_max": 79,
+      "label": "100-1,000 years",
+      "mechanism": "Structural / legal",
+      "examples": ["Timber in buildings (>100yr design life)", "Legally protected forests"]
+    },
+    {
+      "score_min": 50, "score_max": 64,
+      "label": "40-100 years",
+      "mechanism": "Biological with buffer",
+      "examples": ["AFOLU with >=20% buffer pool", "Managed plantation with replanting covenant"]
+    },
+    {
+      "score_min": 35, "score_max": 49,
+      "label": "20-40 years",
+      "mechanism": "Biological with monitoring",
+      "examples": ["Standard reforestation", "Soil carbon with monitoring commitment"]
+    },
+    {
+      "score_min": 15, "score_max": 34,
+      "label": "<20 years",
+      "mechanism": "Short-term biological",
+      "examples": ["Short rotation crops", "Grassland management"]
+    },
+    {
+      "score_min": 0, "score_max": 14,
+      "label": "No storage",
+      "mechanism": "N/A (avoidance only)",
+      "examples": ["Renewable energy", "Cookstoves", "Avoided emissions"]
+    }
+  ],
+  "adjustments": [
+    {
+      "id": "extra_insurance",
+      "condition": "Project has dedicated permanence insurance beyond registry buffer",
+      "delta": 5
+    },
+    {
+      "id": "reversal_history_moderate",
+      "condition": "Project type has documented reversal events in similar region/method",
+      "delta": -15
+    },
+    {
+      "id": "reversal_history_severe",
+      "condition": "Project region has major documented reversal events (e.g., forest fires in Klamath buffer pool)",
+      "delta": -30
+    }
+  ],
+  "notes": [
+    "The IPCC distinguishes geophysical permanence (>1,000 yr) from biological permanence (decades to centuries).",
+    "Buffer pool adequacy has been questioned by Badgley et al. (2022) for California forest offsets."
+  ]
+}
