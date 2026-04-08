@@ -62,22 +62,31 @@ Rather than prescribing a single consensus method upfront, this project takes an
 ```
 carbon-neutrality/
   README.md                          # This file
+  foundry.toml                       # Foundry config for contracts/
   docs/
-    workshop-paper.md                # Phase 1 workshop/short paper (v0.2)
+    workshop-paper.md                # Phase 1 workshop/short paper (v0.3)
     dimension-definitions.md         # Detailed scoring criteria per dimension
     toucan-failure-analysis.md       # What went wrong and lessons learned
-    literature-review.md             # Comprehensive survey of 27+ papers/reports (2022-2026)
-  contracts/
-    (future) Solidity rating contracts
+    literature-review.md             # Survey of 27+ papers/reports (2022-2026)
   data/
-    scoring-rubrics/                 # Detailed rubrics for each dimension
+    scoring-rubrics/                 # Machine-readable JSON rubrics (1 per dimension + index)
+    pilot-scoring/                   # 25-credit hand-scored stress test + Python scorer
+  contracts/
+    ICarbonCreditRating.sol          # Interface + shared types
+    CarbonCreditRating.sol           # Reference rating contract (weights in bps, grade bands, disqualifier caps)
+    QualityGatedPool.sol             # Example pool that rejects deposits below a minimum grade
+    test/
+      CarbonCreditRating.t.sol       # Foundry tests (5 passing)
 ```
 
 ## Status
 
 **Exploratory** | Target: Late 2026
 
-Starting with workshop paper and dimension definitions. Consensus methodology (Delphi or alternative) to be determined after initial expert feedback.
+- **v0.3 (current):** Workshop paper, machine-readable rubrics, 25-credit pilot scoring dataset with Python scorer, Solidity reference contracts + passing Foundry tests.
+- **v0.4 (next):** Expert consultation on proposed weight revisions (see `docs/workshop-paper.md` Section 7.3), decentralized rater model, rating freshness mechanics.
+
+Consensus methodology (CCQI-style structured elicitation or formal Delphi) to be determined after initial expert feedback.
 
 ## License
 

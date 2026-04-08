@@ -1,6 +1,13 @@
 # Toward a Standardized Quality Rating for On-Chain Carbon Credits
 
-*Workshop Paper -- Draft v0.2*
+*Workshop Paper -- Draft v0.3*
+
+**Changelog vs v0.2**
+- Added Section 7 ("Pilot Scoring Results") summarizing a 25-credit hand-scored stress test of the rubrics. Moved subsequent sections down accordingly.
+- Fixed duplicate Section 8 numbering (Limitations / Next Steps now Sections 9 / 10).
+- Section 4 now references the machine-readable rubrics under `data/scoring-rubrics/`.
+- Section 5.3 now points to the working Solidity prototype under `contracts/` instead of the sketched interface.
+- Section 9 (Limitations) adds the "no AAA under current weights" finding surfaced by the pilot.
 
 ## Abstract
 
@@ -197,6 +204,8 @@ Quality Score = sum(dimension_score_i * weight_i) for i in dimensions
 
 All dimension scores normalized to 0-100. Weights as defined above (summing to 100%).
 
+The weights, grade bands, adjustment factors, and disqualifiers are maintained as machine-readable JSON under `data/scoring-rubrics/` (one file per dimension plus an `index.json`) so that the pilot scoring script, the Solidity reference contract, and any third-party implementer all consume the same source of truth.
+
 ### 4.2 Grade Assignment
 
 | Grade | Score Range | Market Implication |
@@ -240,31 +249,31 @@ The primary challenge is making rating inputs available on-chain:
 - Complex dimensions (additionality, MRV) attested via decentralized oracle with dispute mechanism
 - Recommended approach
 
-### 5.3 Smart Contract Design (Sketch)
+### 5.3 Smart Contract Prototype
+
+A working reference implementation lives under `contracts/`:
+
+- `ICarbonCreditRating.sol` -- interface + shared types (`Grade` enum, `DimensionScores`, `Disqualifiers`, `Rating`).
+- `CarbonCreditRating.sol` -- storage + scoring logic. Composite is computed in basis points (`composite_bps = sum(score_i * weight_bps_i) / 100`) using the v0.2 weights from `data/scoring-rubrics/index.json`. Grade bands and disqualifier caps mirror the rubric exactly.
+- `QualityGatedPool.sol` -- minimal ERC-20-like pool that only accepts deposits of rated credits whose `finalGrade >= minGrade`, directly implementing the "quality-tiered pool" remedy to Toucan's BCT failure.
+- `test/CarbonCreditRating.t.sol` -- 5 Foundry tests covering composite calculation (cross-checked against the Python pilot scorer), nominal-to-final grade mapping, disqualifier caps, unrated-is-ineligible, and the full set-then-read path.
+
+Key excerpt -- the composite math is intentionally deterministic and consumable by any off-chain implementer:
 
 ```solidity
-// Conceptual -- not production code
-interface ICarbonCreditRating {
-    struct DimensionScore {
-        uint8 removalType;      // 0-100
-        uint8 additionality;    // 0-100
-        uint8 permanence;       // 0-100
-        uint8 mrvGrade;         // 0-100
-        uint8 vintageYear;      // 0-100
-        uint8 coBenefits;       // 0-100
-        uint8 registryMethod;   // 0-100
-    }
-
-    function rate(address creditToken, uint256 tokenId) external view returns (
-        uint16 compositeScore,  // 0-10000 (basis points for precision)
-        string memory grade,    // "AAA" to "B"
-        DimensionScore memory dimensions
-    );
-
-    function isEligibleForPool(address creditToken, uint256 tokenId, string memory poolGrade)
-        external view returns (bool);
-}
+// CarbonCreditRating.sol (abbreviated)
+uint256 sum =
+      uint256(s.removalType)         * 2000    // 20%
+    + uint256(s.additionality)       * 2000    // 20%
+    + uint256(s.permanence)          * 1500    // 15%
+    + uint256(s.mrvGrade)            * 1500    // 15%
+    + uint256(s.vintageYear)         * 1000    // 10%
+    + uint256(s.coBenefits)          * 1000    // 10%
+    + uint256(s.registryMethodology) * 1000;   // 10%
+return uint16(sum / 100); // 0-10000 bps, matches off-chain scorer exactly
 ```
+
+The contract uses a single-owner rater role as a placeholder. A production deployment would replace this with a decentralized attestation network (EAS, optimistic oracle, or multi-rater quorum) -- this is the main open governance question discussed in Section 9.
 
 ## 6. Comparison with Toucan's Approach
 
@@ -276,7 +285,45 @@ interface ICarbonCreditRating {
 | On-chain logic | Bridge + pool | Rating + quality-gated pools |
 | Adverse selection mitigation | None | Grade-specific pools prevent mixing |
 
-## 7. Adverse Selection: Formal Justification
+## 7. Pilot Scoring Results
+
+To stress-test the v0.2 weights before expert consultation, we hand-scored 25 illustrative credits spanning the full quality spectrum using the machine-readable rubrics. Full data and the Python scorer are in `data/pilot-scoring/`. This is a methodology validation, not a formal rating of the named projects.
+
+### 7.1 Distribution
+
+| Grade | Count | Share | Score range |
+|-------|-------|-------|-------------|
+| AAA   | 0     | 0%    | —           |
+| AA    | 7     | 28%   | 75.7 – 86.8 |
+| A     | 4     | 16%   | 63.3 – 70.5 |
+| BBB   | 4     | 16%   | 50.9 – 56.5 |
+| BB    | 3     | 12%   | 31.2 – 38.4 |
+| B     | 7     | 28%   | 15.4 – 29.3 |
+
+Reference: MSCI's 2025 Integrity Report rated fewer than 10% of 4,400+ projects AAA-A. Our pilot is spectrum-sampled rather than VCM-representative, so the absolute shares are not directly comparable.
+
+### 7.2 Key findings
+
+**Finding 1 -- No credit reached AAA; the co-benefits weight compresses engineered removal.** Climeworks Orca scored 86.8, 3.2 points below the AAA threshold. Inspection revealed the binding constraint: pure-CDR projects score ~15-22 on co-benefits (industrial, no direct SDG alignment) while that dimension carries a 10% weight, costing them roughly 7-8 composite points. Under the current weighting it is mathematically difficult for any engineered-removal credit to reach AAA, which inverts the Oxford Principles. Three revisions are under consideration for v0.4, listed in Section 9.
+
+**Finding 2 -- BCT pool composition in retrospect.** Of the 25 credits, 10 are tagged as historically BCT-eligible. Six graded B, two graded BB, and only two graded A or above. Had a grade-gated pool at minimum grade A existed, the BCT pool would have admitted only 2 of these 10 credits, directly neutralizing the adverse selection dynamic that drove BCT's collapse.
+
+**Finding 3 -- Disqualifiers are currently backstops only.** Every flagged credit in the pilot already scored low enough on composite alone to land at B; no high-composite credit was capped by a disqualifier in the dataset. This is defensible (disqualifiers are an edge-case safety net for catastrophic failures of otherwise high-quality credits) but should be validated with a synthetic stress test added to the pilot dataset in v0.4.
+
+**Finding 4 -- Latent collinearity between removal type and permanence.** The two dimensions correlate strongly in this dataset (both track Oxford hierarchy). Expert review should confirm whether both are warranted or whether they should be collapsed into a single "Durability" dimension.
+
+### 7.3 Revisions proposed for v0.4
+
+Based on the pilot findings:
+
+1. **Reweight** toward technical dimensions: `removal_type` 0.20 → 0.225, `mrv_grade` 0.15 → 0.175, `co_benefits` 0.10 → 0.075, `registry_methodology` 0.10 → 0.075.
+2. **Removal bonus**: +5 composite (capped at 100) if `removal_type >= 90 AND permanence >= 90 AND mrv_grade >= 85`, preserving Oxford hierarchy at the top of the scale.
+3. **Add a disqualifier stress test case** (synthetic high-composite credit with `double_counting`) to the pilot dataset so interaction with the grade-cap logic is demonstrated end-to-end.
+4. **Do not change grade band boundaries** (the current 90/75/60/45/30 split produced a defensible distribution).
+
+The author's prior is to adopt revisions 1-3 by default and gather expert input on 4.
+
+## 8. Adverse Selection: Formal Justification
 
 Manshadi, Monachou, and Morgenstern (2025) provide the first rigorous economic model of adverse selection in the VCM:
 - High-quality projects are costlier but indistinguishable from low-quality without certification
@@ -287,9 +334,9 @@ This formally validates our framework's core premise: reducing certification noi
 
 Empirical evidence from Berg et al. (2025), using proprietary dealer data, confirms that credits from **least reliable technologies but with positive non-carbon externalities are 2x more expensive** than trusted industrial solutions. Buyers are paying for *narratives* (co-benefits, sustainability stories) rather than *integrity* (real emission reductions). Quality rating should correct this mispricing by making integrity transparent and comparable.
 
-## 8. Limitations and Open Questions
+## 9. Limitations and Open Questions
 
-1. **Weight calibration**: Current weights are proposed based on literature review. Expert input needed to validate. CCQI-style structured expert elicitation is the recommended starting methodology.
+1. **Weight calibration**: Current weights are proposed based on literature review. Expert input needed to validate. CCQI-style structured expert elicitation is the recommended starting methodology. The pilot scoring (Section 7) has already surfaced one concrete weighting problem -- the inability of pure-CDR credits to reach AAA under the current co_benefits weight.
 2. **Subjectivity in additionality**: Even with structured criteria, additionality assessment involves judgment. Calyx Global's additive scoring model (positive in one area cannot overcome risk in another) may partially address this.
 3. **Dynamic vs static ratings**: Digital MRV advances (Verra-Pachama pilot, ESA SatMRV, Open Forest Protocol) may enable continuous re-rating. Initial implementation should be static with annual review cycles.
 4. **Governance**: Who can propose methodology changes? Token-weighted governance risks plutocracy. Consider a hybrid: expert committee proposes, token holders ratify.
@@ -297,15 +344,20 @@ Empirical evidence from Berg et al. (2025), using proprietary dealer data, confi
 6. **Consensus methodology**: Start with structured expert elicitation (CCQI-style) for initial weights. Consider formal Delphi or Neutrosophic Delphi-DEMATEL (Nguyen 2025) for subsequent revisions if panel size permits.
 7. **Oracle reliability**: Complex dimensions (additionality, MRV) depend on off-chain assessment. The "garbage in, garbage out" problem persists regardless of blockchain transparency.
 8. **Safeguards gap**: All four major rating agencies fail to incorporate community impact safeguards (Carbon Market Watch 2023). Our co-benefits dimension partially addresses this, but a dedicated safeguards dimension may be needed.
+9. **Decentralizing the rater role**: The v0.3 Solidity prototype uses a single-owner rater role. The open question is how to decentralize: EAS-based attestations, UMA-style optimistic oracle, multi-rater quorum, or a hybrid where registries are the primary attesters and a dispute mechanism allows challenges. Each carries different trust assumptions and latency profiles.
+10. **Rating freshness / decay**: Ratings should expire if not reattested within a defined window (e.g., 18 months). Neither the contract nor the rubrics currently enforce this.
 
-## 8. Next Steps
+## 10. Next Steps
 
-1. Circulate this paper for feedback from carbon market practitioners
+1. Circulate this paper (v0.3) for feedback from carbon market practitioners
 2. Identify 10-15 experts for consultation (registry reviewers, project developers, DeFi protocol designers, climate scientists)
 3. Select consensus methodology based on expert availability
-4. Pilot-score 20-30 tokenized credits across quality spectrum
-5. Iterate on weights and thresholds based on pilot results
-6. Develop smart contract prototype
+4. ~~Pilot-score 20-30 tokenized credits across quality spectrum~~ **done in v0.3** -- results in `data/pilot-scoring/`
+5. Iterate on weights and thresholds based on pilot results (revisions proposed in Section 7.3; to be finalized in v0.4 after expert input)
+6. ~~Develop smart contract prototype~~ **done in v0.3** -- `contracts/CarbonCreditRating.sol` + Foundry tests pass
+7. Decentralize the rater role; select an attestation model and implement
+8. Design and prototype rating freshness / re-verification mechanics
+9. Build a second pilot dataset focused on tokenized credits (MCO2, BCT, NCT, NRT) for ecosystem-relevant validation
 
 ## References
 
