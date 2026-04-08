@@ -1,13 +1,16 @@
 # Toward a Standardized Quality Rating for On-Chain Carbon Credits
 
-*Workshop Paper -- Draft v0.3*
+*Workshop Paper -- Draft v0.4*
 
-**Changelog vs v0.2**
-- Added Section 7 ("Pilot Scoring Results") summarizing a 25-credit hand-scored stress test of the rubrics. Moved subsequent sections down accordingly.
-- Fixed duplicate Section 8 numbering (Limitations / Next Steps now Sections 9 / 10).
-- Section 4 now references the machine-readable rubrics under `data/scoring-rubrics/`.
-- Section 5.3 now points to the working Solidity prototype under `contracts/` instead of the sketched interface.
-- Section 9 (Limitations) adds the "no AAA under current weights" finding surfaced by the pilot.
+**Changelog vs v0.3**
+- Adopted the **safeguards-gate mechanism** for scoring (`docs/methodology-gate-v0.4.md`). Co-benefits is no longer scored as a weighted dimension in the composite; it is attested as an informational field and used by assessors to set a new `communityHarm` disqualifier that caps the grade at BBB. The 0.075 previously on co-benefits is redistributed to removal_type (+0.05), permanence (+0.025), and mrv_grade (+0.05). This replaces the v0.3 "removal bonus" proposal, which was found in stress-testing to triple-count durability and leave C007 fragile at the AA/A boundary.
+- **Oxford hierarchy restored at the top of the scale.** Three engineered-removal credits now reach AAA (Climeworks Orca 95.2, Heirloom DAC 93.05, Charm Industrial 90.15), versus zero under v0.3. §7 is rewritten around this result.
+- Pilot dataset extended from 25 to 29 credits: four synthetic stress cases (C026–C029) validate each disqualifier cap tier, including the new `communityHarm` safeguards-gate.
+- New §7.4 sensitivity section (weight perturbation + leave-one-out + key-credit boundary buffers).
+- New fragility flag: **C004 Charm Industrial at 0.15 above the AAA boundary.** This is the v0.4 analog of the C007 fragility documented in v0.3.
+- Solidity reference implementation updated; all 7 Foundry tests pass (was 5 in v0.3). New tests: `testCoBenefitsNoEffect`, `testCommunityHarmCapsAtBBB`.
+- §9 (Limitations) adds items for the new fragility flags and the v0.3 grandfathering problem that workstream B will address.
+- §10 (Next Steps) marks pilot and prototype as done, adds explicit v0.5 scope (real tokenized credit dataset + commercial rating rank correlation + expert consultation).
 
 ## Abstract
 
@@ -196,15 +199,40 @@ Assessing the rigor of the crediting program and specific methodology:
 
 ## 4. Scoring Methodology
 
-### 4.1 Weighted Composite Score
+### 4.1 Weighted Composite Score (v0.4)
 
 ```
 Quality Score = sum(dimension_score_i * weight_i) for i in dimensions
 ```
 
-All dimension scores normalized to 0-100. Weights as defined above (summing to 100%).
+All dimension scores are normalised to 0-100. The composite is a clean linear sum -- no bonuses, no multipliers, no nonlinear transforms. The v0.4 weights are:
 
-The weights, grade bands, adjustment factors, and disqualifiers are maintained as machine-readable JSON under `data/scoring-rubrics/` (one file per dimension plus an `index.json`) so that the pilot scoring script, the Solidity reference contract, and any third-party implementer all consume the same source of truth.
+| Dimension | v0.3 weight | v0.4 weight | Δ |
+|-----------|-------------|-------------|---|
+| Removal Type Hierarchy | 0.200 | **0.250** | +0.050 |
+| Additionality | 0.200 | 0.200 | 0 |
+| Permanence | 0.150 | **0.175** | +0.025 |
+| MRV Grade | 0.150 | **0.200** | +0.050 |
+| Vintage Year | 0.100 | 0.100 | 0 |
+| Co-benefits | 0.100 | **0.000** (safeguards-gate) | −0.100 |
+| Registry & Methodology | 0.100 | 0.075 | −0.025 |
+
+**v0.4 safeguards-gate.** Co-benefits is no longer a scored dimension. Instead, it is attested as an informational 0-100 value (so off-chain buyers can still filter by SDG alignment) and its rubric is used by assessors to decide whether to set a new `communityHarm` disqualifier flag: a co-benefits score in the 0-9 "None / documented negative externalities" band triggers the flag, which caps the final grade at BBB. The technical climate value of the credit is still recognized in the composite; the credit is simply prevented from reaching premium pools.
+
+This mechanism was chosen after a stress-test gate (`docs/methodology-gate-v0.4.md`) that compared it against three alternatives including an additive removal bonus, a multiplicative premium, and a geometric-mean technical core. The safeguards-gate won on every decision criterion: it gets the three engineered-removal credits to AAA cleanly, it keeps C007 Brazilian reforestation stably at A (versus a fragile 75.3 AA under the bonus proposals), it preserves the off-chain ≡ on-chain linear-composite invariant, and it directly encodes the Berg et al. (2025) finding that buyers already pay a premium for co-benefit narratives regardless of integrity -- rewarding co-benefits in a quality rating therefore reinforces the mispricing the framework is supposed to correct.
+
+Disqualifier flags (five in v0.3, six in v0.4 including `communityHarm`) cap the maximum achievable grade regardless of composite:
+
+| Flag | Cap |
+|------|-----|
+| `doubleCounting` | B |
+| `failedVerification` | B |
+| `humanRights` | B |
+| `sanctionedRegistry` | BB |
+| `noThirdParty` | BBB |
+| `communityHarm` (v0.4) | BBB |
+
+The weights, grade bands, and disqualifiers are maintained as machine-readable JSON under `data/scoring-rubrics/` (one file per dimension plus an `index.json`) so that the pilot scoring script, the Solidity reference contract, and any third-party implementer all consume the same source of truth.
 
 ### 4.2 Grade Assignment
 
@@ -261,19 +289,27 @@ A working reference implementation lives under `contracts/`:
 Key excerpt -- the composite math is intentionally deterministic and consumable by any off-chain implementer:
 
 ```solidity
-// CarbonCreditRating.sol (abbreviated)
+// CarbonCreditRating.sol (abbreviated, v0.4)
 uint256 sum =
-      uint256(s.removalType)         * 2000    // 20%
+      uint256(s.removalType)         * 2500    // 25%
     + uint256(s.additionality)       * 2000    // 20%
-    + uint256(s.permanence)          * 1500    // 15%
-    + uint256(s.mrvGrade)            * 1500    // 15%
+    + uint256(s.permanence)          * 1750    // 17.5%
+    + uint256(s.mrvGrade)            * 2000    // 20%
     + uint256(s.vintageYear)         * 1000    // 10%
-    + uint256(s.coBenefits)          * 1000    // 10%
-    + uint256(s.registryMethodology) * 1000;   // 10%
+    + uint256(s.coBenefits)          * 0       // 0% (safeguards-gate)
+    + uint256(s.registryMethodology) * 750;    // 7.5%
 return uint16(sum / 100); // 0-10000 bps, matches off-chain scorer exactly
 ```
 
-The contract uses a single-owner rater role as a placeholder. A production deployment would replace this with a decentralized attestation network (EAS, optimistic oracle, or multi-rater quorum) -- this is the main open governance question discussed in Section 9.
+The `communityHarm` disqualifier flag is enforced by one additional line in `_applyDisqualifiers`:
+
+```solidity
+if (flags.communityHarm && capped > Grade.BBB) capped = Grade.BBB;
+```
+
+All 7 Foundry tests pass under v0.4; cross-check: `computeComposite` for the Climeworks Orca test vector (removal 98, additionality 95, permanence 98, mrv 92, vintage 100, co-benefits 15, registry 82) returns exactly 9520 bps, matching the Python pilot scorer's 95.20 composite to the basis point.
+
+The contract uses a single-owner rater role as a placeholder. A production deployment would replace this with a decentralized attestation network (EAS, optimistic oracle, or multi-rater quorum) -- this is the main open governance question discussed in Section 9, and a design doc comparing the four options ships alongside v0.4 at `docs/decentralized-rater-design.md`. v0.4 also introduces rating freshness (`expiresAt`) and a `methodologyVersion` field to the `Rating` struct so that v0.3-era ratings cannot be consumed by v0.4 logic without explicit re-attestation.
 
 ## 6. Comparison with Toucan's Approach
 
@@ -287,41 +323,103 @@ The contract uses a single-owner rater role as a placeholder. A production deplo
 
 ## 7. Pilot Scoring Results
 
-To stress-test the v0.2 weights before expert consultation, we hand-scored 25 illustrative credits spanning the full quality spectrum using the machine-readable rubrics. Full data and the Python scorer are in `data/pilot-scoring/`. This is a methodology validation, not a formal rating of the named projects.
+The rubrics were stress-tested against a 29-credit hand-scored dataset: 25 real-project archetypes spanning the full quality spectrum plus 4 synthetic credits (C026-C029) that validate each disqualifier cap tier including the new v0.4 `communityHarm` safeguards-gate. Full data, the Python scorer, and the sensitivity runner are under `data/pilot-scoring/`. Per-dimension scores were assigned by the authors based on public project documentation; they are a methodology validation, not a formal rating of any named project.
 
-### 7.1 Distribution
+The v0.3 edition of this paper reported the opposite result from what appears below: under v0.3 weights, *no credit reached AAA*, Climeworks Orca topped out at 86.8, and the co-benefits weight systematically compressed engineered-removal credits. Section 7.3 of v0.3 proposed a `+5 removal bonus` fix. Stress-testing that proposal surfaced three problems -- it triple-counted durability, left C007 Brazilian reforestation fragile at 75.3 just above the AA/A boundary, and silently failed to fix Charm Industrial because its MRV score sat just below an arbitrary threshold. v0.4 therefore adopts a different mechanism -- the **safeguards-gate** (see §4.1 and `docs/methodology-gate-v0.4.md`) -- and the results below reflect that change.
+
+### 7.1 Distribution (v0.4, real-archetype credits only)
 
 | Grade | Count | Share | Score range |
 |-------|-------|-------|-------------|
-| AAA   | 0     | 0%    | —           |
-| AA    | 7     | 28%   | 75.7 – 86.8 |
-| A     | 4     | 16%   | 63.3 – 70.5 |
-| BBB   | 4     | 16%   | 50.9 – 56.5 |
-| BB    | 3     | 12%   | 31.2 – 38.4 |
-| B     | 7     | 28%   | 15.4 – 29.3 |
+| AAA   | 3     | 12%   | 90.15 – 95.20 |
+| AA    | 3     | 12%   | 80.05 – 87.20 |
+| A     | 5     | 20%   | 60.90 – 73.90 |
+| BBB   | 4     | 16%   | 46.10 – 59.53 |
+| BB    | 2     | 8%    | 33.27 – 36.52 |
+| B     | 8     | 32%   | 16.38 – 28.57 |
 
-Reference: MSCI's 2025 Integrity Report rated fewer than 10% of 4,400+ projects AAA-A. Our pilot is spectrum-sampled rather than VCM-representative, so the absolute shares are not directly comparable.
+Reference: MSCI's 2025 Integrity Report rated fewer than 10% of 4,400+ projects AAA-A; our pilot at 44% AA-A is spectrum-sampled rather than VCM-representative.
 
 ### 7.2 Key findings
 
-**Finding 1 -- No credit reached AAA; the co-benefits weight compresses engineered removal.** Climeworks Orca scored 86.8, 3.2 points below the AAA threshold. Inspection revealed the binding constraint: pure-CDR projects score ~15-22 on co-benefits (industrial, no direct SDG alignment) while that dimension carries a 10% weight, costing them roughly 7-8 composite points. Under the current weighting it is mathematically difficult for any engineered-removal credit to reach AAA, which inverts the Oxford Principles. Three revisions are under consideration for v0.4, listed in Section 9.
+**Finding 1 -- Oxford hierarchy restored at the top of the scale.** Three credits reach AAA under v0.4, all of them engineered carbon dioxide removal with durable storage: Climeworks Orca (DACCS + geological storage, 95.20), Heirloom DAC (DAC + mineralization, 93.05), and Charm Industrial (pyrolysis bio-oil + geological injection, 90.15). Under v0.3 these scored 86.8, 85.3, and 83.0 respectively and all graded AA. The 10-percentage-point weight removed from co-benefits and redistributed across removal_type (+0.05), mrv_grade (+0.05), and permanence (+0.025) is sufficient to lift all three above the 90-point AAA threshold without any bonus mechanism.
 
-**Finding 2 -- BCT pool composition in retrospect.** Of the 25 credits, 10 are tagged as historically BCT-eligible. Six graded B, two graded BB, and only two graded A or above. Had a grade-gated pool at minimum grade A existed, the BCT pool would have admitted only 2 of these 10 credits, directly neutralizing the adverse selection dynamic that drove BCT's collapse.
+**Finding 2 -- BCT pool composition in retrospect (reframed).** Of the 25 real-archetype credits, 10 are tagged as historically BCT-eligible. Under v0.4:
 
-**Finding 3 -- Disqualifiers are currently backstops only.** Every flagged credit in the pilot already scored low enough on composite alone to land at B; no high-composite credit was capped by a disqualifier in the dataset. This is defensible (disqualifiers are an edge-case safety net for catastrophic failures of otherwise high-quality credits) but should be validated with a synthetic stress test added to the pilot dataset in v0.4.
+- 1 grades AA or higher (0 under v0.4, but C007 graded AA under v0.3)
+- 2 grade A or higher (C007 at 73.9, C009 at 66.2)
+- 1 grades BBB (C015 at 51.55)
+- 1 grades BB (C017 at 36.52)
+- 6 grade B
 
-**Finding 4 -- Latent collinearity between removal type and permanence.** The two dimensions correlate strongly in this dataset (both track Oxford hierarchy). Expert review should confirm whether both are warranted or whether they should be collapsed into a single "Durability" dimension.
+Had a grade-A gated pool existed, it would have admitted only C007 and C009 -- the same 2 of 10 credits as under v0.3. The headline finding -- **BCT's minimal eligibility criteria admitted a pool that was 60% grade B by our scoring** -- is unchanged. What changes is the grade of the best BCT-eligible credit (C007 moves from AA to A), and this move is actually a *stability improvement*: under v0.3's Rev-1+2 proposal C007 would have been AA by only 0.3 points, so any minor rescoring would have flipped it. Under v0.4, C007 is A with a 13.9-point buffer to BBB and a 1.1-point distance to AA. The BCT retrospective is now robust to small changes in per-dimension scores.
 
-### 7.3 Revisions proposed for v0.4
+One BCT-eligible credit also drops correctly across a grade boundary: **Cordillera Azul REDD+ (C018) moves from BB to B**, matching the Carbon Market Watch 2023 assessment that flagged this project as low-integrity.
 
-Based on the pilot findings:
+**Finding 3 -- Disqualifier lattice validated end-to-end.** Four synthetic credits (C026-C029) were added to demonstrate that each disqualifier cap tier fires correctly when the nominal composite exceeds the cap:
 
-1. **Reweight** toward technical dimensions: `removal_type` 0.20 → 0.225, `mrv_grade` 0.15 → 0.175, `co_benefits` 0.10 → 0.075, `registry_methodology` 0.10 → 0.075.
-2. **Removal bonus**: +5 composite (capped at 100) if `removal_type >= 90 AND permanence >= 90 AND mrv_grade >= 85`, preserving Oxford hierarchy at the top of the scale.
-3. **Add a disqualifier stress test case** (synthetic high-composite credit with `double_counting`) to the pilot dataset so interaction with the grade-cap logic is demonstrated end-to-end.
-4. **Do not change grade band boundaries** (the current 90/75/60/45/30 split produced a defensible distribution).
+| ID | Nominal composite | Nominal grade | Disqualifier | Cap | Final grade |
+|----|-------------------|---------------|--------------|-----|-------------|
+| C026 | 88.05 | AA | `double_counting` | B | B ✓ |
+| C027 | 81.72 | AA | `sanctioned_registry` | BB | BB ✓ |
+| C028 | 79.12 | AA | `no_third_party` | BBB | BBB ✓ |
+| C029 | 78.53 | AA | `community_harm` (v0.4) | BBB | BBB ✓ |
 
-The author's prior is to adopt revisions 1-3 by default and gather expert input on 4.
+C029 is the first test of the v0.4 safeguards-gate: a credit with AA-tier technical scores but a co-benefits score in the 0-9 "None / negative externalities" band, which triggers the `communityHarm` disqualifier. The gate correctly caps at BBB -- the framework recognizes the technical climate value but refuses to admit the credit into premium pools.
+
+**Finding 4 -- New fragility flags.** v0.4 surfaces three credits within 1 point of a grade boundary:
+
+| ID | Credit | Grade | Composite | Buffer | Direction |
+|----|--------|-------|-----------|--------|-----------|
+| C004 | Charm Industrial bio-oil | AAA | 90.15 | **0.15** | down → AA |
+| C011 | Adipic acid N2O destruction | BBB | 59.53 | **0.47** | up → A |
+| C014 | Plan Vivo agroforestry | A | 60.90 | **0.90** | down → BBB |
+
+C004 is the most fragile case and the v0.4 analog of v0.3's C007 fragility. Any 1-point downward rescoring on any of its contributing dimensions flips it to AA and changes the headline distribution from 3 AAA to 2 AAA. This should be noted explicitly: the AAA count is sensitive to small changes in Charm Industrial's per-dimension scoring. The same credit *is* defensibly AAA under current scoring -- engineered removal, geological storage, Puro-verified -- but reviewers should know it sits on the boundary.
+
+### 7.3 Sensitivity (weight perturbation and leave-one-out)
+
+The `--sensitivity` mode of the pilot scorer produces two sensitivity tests; full output in `data/pilot-scoring/sensitivity.md`.
+
+**Weight perturbation (±5 percentage points per dimension, redistributed proportionally):**
+
+| Dimension | Weight | +5pp flips | −5pp flips |
+|-----------|--------|-----------|-----------|
+| removal_type | 0.250 | 0/29 | 1/29 |
+| additionality | 0.200 | 1/29 | 0/29 |
+| permanence | 0.175 | 2/29 | 2/29 |
+| mrv_grade | 0.200 | 2/29 | 0/29 |
+| vintage_year | 0.100 | 2/29 | 3/29 |
+| co_benefits | 0.000 (gate) | 2/29 | 0/29 |
+| registry_methodology | 0.075 | 2/29 | 1/29 |
+
+No single perturbation produces more than 3 grade changes. The v0.4 weights are stable in aggregate. The highest-impact perturbation is vintage_year at −5pp (3 flips), which reflects the bimodal distribution of vintage scores in the dataset (recent credits ~88-100, pre-2016 credits ~0-20) rather than a fragility in vintage weighting itself.
+
+**Leave-one-out (drop each dimension, redistribute proportionally to the remainder):**
+
+| Dropped dimension | Flips |
+|-------------------|-------|
+| removal_type | 4/29 |
+| additionality | 2/29 |
+| permanence | 5/29 |
+| mrv_grade | 0/29 |
+| vintage_year | 3/29 |
+| registry_methodology | 1/29 |
+
+**Permanence is the highest-impact dimension (5 flips when dropped)**, contradicting the v0.3 concern that it might be collinear with removal_type and collapsible in a future 7→6 dimension revision. On this pilot, permanence is doing independent work. MRV dropping produces zero flips, which looks like redundancy but is more likely an artifact of MRV scores being positively correlated with the other technical dimensions in this dataset; a random-MRV stress test would probably flip more credits.
+
+### 7.4 Impact on co-benefit-heavy credits
+
+Worth naming explicitly since the safeguards-gate is the part of v0.4 that hits co-benefit-heavy credits hardest. No grade flips occur in the pilot, but composites drop meaningfully:
+
+| Credit | v0.3 | v0.4 | Δ | Flip? |
+|--------|------|------|---|-------|
+| C006 Husk biochar | 81.0 | 80.05 | −0.95 | No (still AA) |
+| C010 Kenya cookstoves | 51.8 | 46.10 | −5.70 | No (still BBB) |
+| C014 Plan Vivo agroforestry | 63.3 | 60.90 | −2.40 | No (still A, narrow) |
+| C016 Ghana cookstoves 2019 | 38.4 | 33.27 | −5.13 | No (still BB) |
+
+Cookstoves take the largest hit, as expected -- they are fundamentally avoidance-based with weak permanence but strong co-benefit narratives. Under v0.3 the narrative could push a cookstove credit into grade A territory if its other dimensions were unusually strong; under v0.4 that is structurally impossible, which matches the Alt-3 mechanism's design intent.
 
 ## 8. Adverse Selection: Formal Justification
 
@@ -336,28 +434,40 @@ Empirical evidence from Berg et al. (2025), using proprietary dealer data, confi
 
 ## 9. Limitations and Open Questions
 
-1. **Weight calibration**: Current weights are proposed based on literature review. Expert input needed to validate. CCQI-style structured expert elicitation is the recommended starting methodology. The pilot scoring (Section 7) has already surfaced one concrete weighting problem -- the inability of pure-CDR credits to reach AAA under the current co_benefits weight.
+1. **Weight calibration**: v0.4 weights were chosen on the basis of the pilot stress test and the A2 methodology gate (`docs/methodology-gate-v0.4.md`). They have not yet been validated by an expert panel. CCQI-style structured expert elicitation remains the recommended validation methodology.
 2. **Subjectivity in additionality**: Even with structured criteria, additionality assessment involves judgment. Calyx Global's additive scoring model (positive in one area cannot overcome risk in another) may partially address this.
-3. **Dynamic vs static ratings**: Digital MRV advances (Verra-Pachama pilot, ESA SatMRV, Open Forest Protocol) may enable continuous re-rating. Initial implementation should be static with annual review cycles.
+3. **Dynamic vs static ratings**: v0.4 adds an `expiresAt` field to the `Rating` struct (workstream B, `contracts/CarbonCreditRating.sol`) but does not yet enforce a specific expiry policy. A dedicated re-rating cycle -- annual is the default suggestion -- is an open implementation question.
 4. **Governance**: Who can propose methodology changes? Token-weighted governance risks plutocracy. Consider a hybrid: expert committee proposes, token holders ratify.
 5. **Cross-registry comparability**: Different registries have different standards. Can a single framework fairly rate across all? ICVCM CCP provides a common baseline; our framework adds granularity above that baseline.
 6. **Consensus methodology**: Start with structured expert elicitation (CCQI-style) for initial weights. Consider formal Delphi or Neutrosophic Delphi-DEMATEL (Nguyen 2025) for subsequent revisions if panel size permits.
 7. **Oracle reliability**: Complex dimensions (additionality, MRV) depend on off-chain assessment. The "garbage in, garbage out" problem persists regardless of blockchain transparency.
-8. **Safeguards gap**: All four major rating agencies fail to incorporate community impact safeguards (Carbon Market Watch 2023). Our co-benefits dimension partially addresses this, but a dedicated safeguards dimension may be needed.
-9. **Decentralizing the rater role**: The v0.3 Solidity prototype uses a single-owner rater role. The open question is how to decentralize: EAS-based attestations, UMA-style optimistic oracle, multi-rater quorum, or a hybrid where registries are the primary attesters and a dispute mechanism allows challenges. Each carries different trust assumptions and latency profiles.
-10. **Rating freshness / decay**: Ratings should expire if not reattested within a defined window (e.g., 18 months). Neither the contract nor the rubrics currently enforce this.
+8. **Safeguards gap (revised in v0.4)**: The v0.3 co-benefits dimension partially addressed community safeguards; v0.4 replaces it with a dedicated `communityHarm` disqualifier that caps at BBB. This is a cleaner encoding of the Carbon Market Watch 2023 finding that major rating agencies fail to incorporate community impact -- but it is only as good as the assessor's willingness to set the flag. Attestation provenance (see §5.3, workstream B) partially mitigates this.
+9. **Decentralizing the rater role**: The v0.4 Solidity prototype still uses a single-owner rater role. A design doc comparing EAS / UMA optimistic oracle / multi-rater quorum / registry-attester-with-dispute ships at `docs/decentralized-rater-design.md`. Implementation lands in v0.5 or v0.6 depending on expert feedback during the v0.5 consultation.
+10. **Methodology version grandfathering**: v0.4 bumps the methodology version, which invalidates any v0.3 rating stored on-chain. The `Rating` struct now carries a `methodologyVersion` field so the contract can reject v0.3 ratings explicitly; this is a one-time migration concern for any production deployment.
+11. **Three new fragility flags (C004 Charm Industrial, C011 N2O destruction, C014 Plan Vivo)**. See §7.2. C004 is the "load-bearing AAA boundary" credit and should be acknowledged explicitly in any external presentation of the v0.4 grade distribution.
+12. **v0.4 has not been tested against actually-tokenized credits** (MCO2, BCT, NCT, NRT, Puro CDR). The pilot uses real-project archetypes, not on-chain instruments. Workstream C in v0.5 addresses this.
 
 ## 10. Next Steps
 
-1. Circulate this paper (v0.3) for feedback from carbon market practitioners
-2. Identify 10-15 experts for consultation (registry reviewers, project developers, DeFi protocol designers, climate scientists)
-3. Select consensus methodology based on expert availability
-4. ~~Pilot-score 20-30 tokenized credits across quality spectrum~~ **done in v0.3** -- results in `data/pilot-scoring/`
-5. Iterate on weights and thresholds based on pilot results (revisions proposed in Section 7.3; to be finalized in v0.4 after expert input)
-6. ~~Develop smart contract prototype~~ **done in v0.3** -- `contracts/CarbonCreditRating.sol` + Foundry tests pass
-7. Decentralize the rater role; select an attestation model and implement
-8. Design and prototype rating freshness / re-verification mechanics
-9. Build a second pilot dataset focused on tokenized credits (MCO2, BCT, NCT, NRT) for ecosystem-relevant validation
+**Completed in v0.4:**
+- ~~Pilot-score 20-30 credits across the quality spectrum~~ (25 real + 4 synthetic; `data/pilot-scoring/`)
+- ~~Develop smart contract prototype~~ (`contracts/CarbonCreditRating.sol`, 7 Foundry tests passing)
+- ~~Iterate on weights based on pilot findings~~ (A2 gate + A3 regeneration; safeguards-gate adopted)
+- ~~Add disqualifier stress tests~~ (C026-C029)
+- ~~Design rating freshness / decay mechanism~~ (workstream B, lands with v0.4)
+- ~~Decentralized rater architecture comparison~~ (workstream D, `docs/decentralized-rater-design.md`)
+
+**Planned for v0.5:**
+1. **Real-tokenized-credit dataset.** Score 15-20 actually on-chain credits (MCO2, BCT/NCT, NRT, Puro CDR, C3, Regen Network) under v0.4 rubrics and compare the distribution to the illustrative pilot.
+2. **Commercial rating rank correlation.** For projects where Sylvera / BeZero / Calyx / MSCI ratings are public, compute pairwise grade-rank agreement with our framework. Success criterion: pairwise agreement *no worse than* the commercial agencies' pairwise agreement with each other (Carbon Market Watch 2023 documented significant inter-rater disagreement among them).
+3. **Expert consultation.** Circulate v0.4 (not v0.3) to 10-15 carbon market practitioners, registry reviewers, project developers, and DeFi protocol designers. Ask them to react to the safeguards-gate decision menu from `docs/methodology-gate-v0.4.md` rather than rubber-stamp the chosen mechanism. Use CCQI-style structured elicitation.
+4. **Implement chosen decentralized rater model** from the v0.4 design doc, informed by expert feedback on trust assumptions.
+5. **Sensitivity-harden the pilot** by adding a random-MRV stress test (current leave-one-out shows 0 flips for MRV drop, which may be a dataset artifact).
+
+**Deferred to v0.6 or later:**
+- 7→6 dimension collapse (merge removal_type + permanence into "Durability") -- only if v0.5 expert consultation recommends it. The v0.4 sensitivity analysis (§7.3) showed permanence doing independent work (5/29 leave-one-out flips), so the collapse is no longer clearly warranted.
+- Production decentralized rater deployment with live attestation.
+- Integration pilot with a real DeFi protocol that wants quality-gated pools.
 
 ## References
 

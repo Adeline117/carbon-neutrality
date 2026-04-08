@@ -64,27 +64,29 @@ carbon-neutrality/
   README.md                          # This file
   foundry.toml                       # Foundry config for contracts/
   docs/
-    workshop-paper.md                # Phase 1 workshop/short paper (v0.3)
+    workshop-paper.md                # Phase 1 workshop paper (v0.4)
+    methodology-gate-v0.4.md         # A2 design note: scoring mechanism decision
+    decentralized-rater-design.md    # D design note: rater architecture comparison
     dimension-definitions.md         # Detailed scoring criteria per dimension
     toucan-failure-analysis.md       # What went wrong and lessons learned
     literature-review.md             # Survey of 27+ papers/reports (2022-2026)
   data/
     scoring-rubrics/                 # Machine-readable JSON rubrics (1 per dimension + index)
-    pilot-scoring/                   # 25-credit hand-scored stress test + Python scorer
+    pilot-scoring/                   # 29-credit hand-scored pilot + Python scorer + sensitivity
   contracts/
-    ICarbonCreditRating.sol          # Interface + shared types
-    CarbonCreditRating.sol           # Reference rating contract (weights in bps, grade bands, disqualifier caps)
+    ICarbonCreditRating.sol          # Interface + shared types (Rating struct with freshness)
+    CarbonCreditRating.sol           # Reference rating contract (v0.4 safeguards-gate)
     QualityGatedPool.sol             # Example pool that rejects deposits below a minimum grade
     test/
-      CarbonCreditRating.t.sol       # Foundry tests (5 passing)
+      CarbonCreditRating.t.sol       # Foundry tests (7+ passing in v0.4)
 ```
 
 ## Status
 
 **Exploratory** | Target: Late 2026
 
-- **v0.3 (current):** Workshop paper, machine-readable rubrics, 25-credit pilot scoring dataset with Python scorer, Solidity reference contracts + passing Foundry tests.
-- **v0.4 (next):** Expert consultation on proposed weight revisions (see `docs/workshop-paper.md` Section 7.3), decentralized rater model, rating freshness mechanics.
+- **v0.4 (current):** Workshop paper bumped to v0.4 with the safeguards-gate scoring mechanism (see `docs/methodology-gate-v0.4.md`). Oxford hierarchy restored at the top (3 credits reach AAA: Climeworks Orca, Heirloom DAC, Charm Industrial). Pilot extended to 29 credits with disqualifier stress tests and sensitivity analysis. Rating struct gains freshness + methodology version + evidence hash. Decentralized rater design doc comparing EAS / UMA / quorum / registry-attester models.
+- **v0.5 (next):** Score actually-on-chain credits (MCO2, BCT/NCT, NRT, Puro CDR), commercial rating rank-correlation benchmark, expert consultation on v0.4 methodology.
 
 Consensus methodology (CCQI-style structured elicitation or formal Delphi) to be determined after initial expert feedback.
 
