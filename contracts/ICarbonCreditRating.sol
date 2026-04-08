@@ -20,24 +20,29 @@ interface ICarbonCreditRating {
 
     /// @notice Per-dimension scores for a credit, all in [0, 100].
     ///         Struct order MUST match the weight layout in CarbonCreditRating.
+    ///         v0.4: co_benefits is no longer scored in the composite (weight = 0);
+    ///         it is attested as an informational field and used by assessors to
+    ///         decide whether to set the communityHarm disqualifier flag.
     struct DimensionScores {
-        uint8 removalType;          // 20% weight
-        uint8 additionality;        // 20% weight
-        uint8 permanence;           // 15% weight
-        uint8 mrvGrade;             // 15% weight
-        uint8 vintageYear;          // 10% weight
-        uint8 coBenefits;           // 10% weight
-        uint8 registryMethodology;  // 10% weight
+        uint8 removalType;          // v0.4: 25% weight
+        uint8 additionality;        // v0.4: 20% weight
+        uint8 permanence;           // v0.4: 17.5% weight
+        uint8 mrvGrade;             // v0.4: 20% weight
+        uint8 vintageYear;          // v0.4: 10% weight
+        uint8 coBenefits;           // v0.4: 0% weight (informational; see communityHarm)
+        uint8 registryMethodology;  // v0.4: 7.5% weight
     }
 
     /// @notice Bitmap of disqualifier flags. Any set bit may cap the final grade.
     ///         Bit positions are stable and must match the rubric index.json order.
+    ///         v0.4: adds communityHarm (caps at BBB) as the safeguards-gate.
     struct Disqualifiers {
         bool doubleCounting;       // caps at B
         bool failedVerification;   // caps at B
         bool sanctionedRegistry;   // caps at BB
         bool noThirdParty;         // caps at BBB
         bool humanRights;          // caps at B
+        bool communityHarm;        // caps at BBB (v0.4 safeguards-gate)
     }
 
     /// @notice Full rating result for a credit token.

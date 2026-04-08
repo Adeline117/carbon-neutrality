@@ -1,7 +1,7 @@
 {
   "id": "removal_type",
   "name": "Removal Type Hierarchy",
-  "weight": 0.20,
+  "weight": 0.250,
   "rationale": "Oxford Principles establish that carbon removal with durable storage is more climate-valuable than avoidance. Engineered removal with geological storage represents the highest-integrity intervention.",
   "data_source": "Methodology category (mapped from registry methodology ID)",
   "on_chain_feasibility": "high",

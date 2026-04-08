@@ -1,7 +1,7 @@
 {
   "id": "mrv_grade",
   "name": "MRV Grade",
-  "weight": 0.15,
+  "weight": 0.200,
   "rationale": "The credibility of the claimed emission reduction depends entirely on how well it is measured, reported, and independently verified. Digital MRV is rapidly advancing and should be preferred.",
   "data_source": "Verification reports + monitoring plan (oracle required)",
   "on_chain_feasibility": "low",

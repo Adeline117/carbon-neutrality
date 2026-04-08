@@ -16,7 +16,8 @@ contract CarbonCreditRatingTest {
         rating = new CarbonCreditRating(address(this));
     }
 
-    /// @dev Climeworks Orca-style input. Matches pilot C001: composite 86.8 -> 8680 bps -> AA.
+    /// @dev Climeworks Orca-style input. v0.4: composite 95.2 -> 9520 bps -> AAA.
+    ///      Previously (v0.3): 8680 bps AA. The Oxford inversion is now resolved.
     function testOrcaComposite() public {
         setUp();
         ICarbonCreditRating.DimensionScores memory s = ICarbonCreditRating.DimensionScores({
@@ -29,11 +30,12 @@ contract CarbonCreditRatingTest {
             registryMethodology: 82
         });
         uint16 bps = rating.computeComposite(s);
-        // 98*2000 + 95*2000 + 98*1500 + 92*1500 + 100*1000 + 15*1000 + 82*1000
-        // = 196000 + 190000 + 147000 + 138000 + 100000 + 15000 + 82000
-        // = 868000 / 100 = 8680
-        require(bps == 8680, "composite mismatch");
-        require(rating.gradeFromComposite(bps) == ICarbonCreditRating.Grade.AA, "grade mismatch");
+        // v0.4 weights: 2500 / 2000 / 1750 / 2000 / 1000 / 0 / 750
+        // 98*2500 + 95*2000 + 98*1750 + 92*2000 + 100*1000 + 15*0 + 82*750
+        // = 245000 + 190000 + 171500 + 184000 + 100000 + 0 + 61500
+        // = 952000 / 100 = 9520
+        require(bps == 9520, "composite mismatch");
+        require(rating.gradeFromComposite(bps) == ICarbonCreditRating.Grade.AAA, "Orca reaches AAA");
     }
 
     /// @dev Kariba-style low-quality credit with no_third_party flag.
@@ -53,9 +55,10 @@ contract CarbonCreditRatingTest {
             failedVerification: false,
             sanctionedRegistry: false,
             noThirdParty: true,
-            humanRights: false
+            humanRights: false,
+            communityHarm: false
         });
-        // Already B on composite alone (~19 bps region); disqualifier is a no-op here.
+        // Already B on composite alone; disqualifier is a no-op here.
         uint16 bps = rating.computeComposite(s);
         require(bps < 3000, "should be below BB threshold");
         ICarbonCreditRating.Grade g = rating.applyDisqualifiers(ICarbonCreditRating.Grade.B, flags);
@@ -65,7 +68,9 @@ contract CarbonCreditRatingTest {
     /// @dev Disqualifier should CAP a high-composite credit.
     function testDisqualifierCapsHighScorer() public {
         setUp();
-        // synthetic high-quality credit: 95 across the board -> 9500 bps -> AAA
+        // synthetic high-quality credit: 95 across the board.
+        // Note: co_benefits weight is 0 in v0.4, so co_benefits=95 contributes 0,
+        // but the sum of the other weights is still 10000, so composite = 9500.
         ICarbonCreditRating.DimensionScores memory s = ICarbonCreditRating.DimensionScores({
             removalType: 95,
             additionality: 95,
@@ -80,7 +85,8 @@ contract CarbonCreditRatingTest {
             failedVerification: false,
             sanctionedRegistry: false,
             noThirdParty: false,
-            humanRights: false
+            humanRights: false,
+            communityHarm: false
         });
         uint16 bps = rating.computeComposite(s);
         require(bps == 9500, "composite");
@@ -88,6 +94,66 @@ contract CarbonCreditRatingTest {
         require(nominal == ICarbonCreditRating.Grade.AAA, "nominal AAA");
         ICarbonCreditRating.Grade finalG = rating.applyDisqualifiers(nominal, doubleCount);
         require(finalG == ICarbonCreditRating.Grade.B, "double counting caps to B");
+    }
+
+    /// @dev v0.4: co_benefits must have zero effect on the composite.
+    ///      Same scores with co_benefits=0 vs co_benefits=100 must produce identical composites.
+    function testCoBenefitsNoEffect() public {
+        setUp();
+        ICarbonCreditRating.DimensionScores memory base = ICarbonCreditRating.DimensionScores({
+            removalType: 80,
+            additionality: 70,
+            permanence: 75,
+            mrvGrade: 78,
+            vintageYear: 90,
+            coBenefits: 0,
+            registryMethodology: 72
+        });
+        ICarbonCreditRating.DimensionScores memory high = ICarbonCreditRating.DimensionScores({
+            removalType: 80,
+            additionality: 70,
+            permanence: 75,
+            mrvGrade: 78,
+            vintageYear: 90,
+            coBenefits: 100,
+            registryMethodology: 72
+        });
+        uint16 a = rating.computeComposite(base);
+        uint16 b = rating.computeComposite(high);
+        require(a == b, "co_benefits must not affect composite");
+    }
+
+    /// @dev v0.4 safeguards-gate: communityHarm caps an otherwise-high-scoring credit at BBB.
+    ///      This is the new disqualifier introduced by v0.4. A credit could have excellent
+    ///      technical integrity but document community harm; the framework still recognizes
+    ///      the technical quality (composite stays high) but refuses to admit it into
+    ///      premium pools.
+    function testCommunityHarmCapsAtBBB() public {
+        setUp();
+        // High-quality reforestation with documented community harm.
+        ICarbonCreditRating.DimensionScores memory s = ICarbonCreditRating.DimensionScores({
+            removalType: 75,
+            additionality: 78,
+            permanence: 65,
+            mrvGrade: 80,
+            vintageYear: 100,
+            coBenefits: 5,
+            registryMethodology: 78
+        });
+        ICarbonCreditRating.Disqualifiers memory flags = ICarbonCreditRating.Disqualifiers({
+            doubleCounting: false,
+            failedVerification: false,
+            sanctionedRegistry: false,
+            noThirdParty: false,
+            humanRights: false,
+            communityHarm: true
+        });
+        uint16 bps = rating.computeComposite(s);
+        ICarbonCreditRating.Grade nominal = rating.gradeFromComposite(bps);
+        // Composite should be around 76.x (AA). Let's just assert it's above BBB.
+        require(nominal >= ICarbonCreditRating.Grade.A, "nominal should be A or higher");
+        ICarbonCreditRating.Grade finalG = rating.applyDisqualifiers(nominal, flags);
+        require(finalG == ICarbonCreditRating.Grade.BBB, "community harm caps at BBB");
     }
 
     /// @dev meetsGrade should return false for unrated credits.

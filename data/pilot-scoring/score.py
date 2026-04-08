@@ -39,9 +39,12 @@ def composite(scores: dict, weights: dict) -> float:
 
 
 def grade_from_score(score: float, bands: list[dict]) -> str:
-    # bands are high-to-low; find the first that contains the score
+    # bands are declared high-to-low in index.json with integer mins.
+    # Match the Solidity contract's logic exactly: return the first band
+    # whose min is <= score. This handles non-integer composites correctly
+    # (e.g., 59.53 falls into BBB, not into a gap between BBB.max=59 and A.min=60).
     for band in bands:
-        if band["min"] <= score <= band["max"]:
+        if score >= band["min"]:
             return band["grade"]
     return "B"
 

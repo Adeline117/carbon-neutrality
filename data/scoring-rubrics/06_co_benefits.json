@@ -1,10 +1,12 @@
 {
   "id": "co_benefits",
   "name": "Co-benefits",
-  "weight": 0.10,
-  "rationale": "Carbon credits that also deliver verified social and environmental benefits beyond climate mitigation are more valuable to buyers and more aligned with holistic sustainability. Also serves as the framework's safeguards dimension.",
+  "weight": 0.000,
+  "v0_4_mechanism": "safeguards-gate",
+  "v0_4_note": "As of v0.4 (see docs/methodology-gate-v0.4.md), co_benefits is NOT a scored dimension in the composite. It is attested as an informational 0-100 value and used by assessors to decide whether to set the community_harm disqualifier: a score in the 'None / negative externalities' band (0-9) with documented harm triggers community_harm=true, which caps the grade at BBB. Bands 10-100 are preserved as informational context for buyers who want to filter by SDG alignment, but have no direct effect on the composite. This change encodes the Berg et al. (2025) finding that rewarding co-benefits in a quality rating reinforces the mispricing that quality ratings are supposed to correct.",
+  "rationale": "Carbon credits can deliver social and environmental benefits beyond climate mitigation. In v0.2-v0.3, these were rewarded as a scored dimension. In v0.4, they function as a harm filter: the dimension's protective role is preserved (bad projects get capped) but its narrative-reward role is removed (good narratives do not inflate the composite).",
   "data_source": "SDG certifications, CCB certification, community impact reports (attestation)",
-  "on_chain_feasibility": "medium",
+  "on_chain_feasibility": "medium (informational only; community_harm flag is the on-chain decision point)",
   "bands": [
     {
       "score_min": 90, "score_max": 100,

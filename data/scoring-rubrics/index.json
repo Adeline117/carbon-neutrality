@@ -1,16 +1,16 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "framework": "on-chain-carbon-credit-quality-rating",
-  "paper_version": "0.2",
+  "paper_version": "0.4",
   "score_range": [0, 100],
   "dimensions": [
-    {"id": "removal_type",       "file": "01_removal_type.json",       "weight": 0.20},
-    {"id": "additionality",      "file": "02_additionality.json",      "weight": 0.20},
-    {"id": "permanence",         "file": "03_permanence.json",         "weight": 0.15},
-    {"id": "mrv_grade",          "file": "04_mrv_grade.json",          "weight": 0.15},
-    {"id": "vintage_year",       "file": "05_vintage_year.json",       "weight": 0.10},
-    {"id": "co_benefits",        "file": "06_co_benefits.json",        "weight": 0.10},
-    {"id": "registry_methodology","file": "07_registry_methodology.json","weight": 0.10}
+    {"id": "removal_type",       "file": "01_removal_type.json",       "weight": 0.250},
+    {"id": "additionality",      "file": "02_additionality.json",      "weight": 0.200},
+    {"id": "permanence",         "file": "03_permanence.json",         "weight": 0.175},
+    {"id": "mrv_grade",          "file": "04_mrv_grade.json",          "weight": 0.200},
+    {"id": "vintage_year",       "file": "05_vintage_year.json",       "weight": 0.100},
+    {"id": "co_benefits",        "file": "06_co_benefits.json",        "weight": 0.000},
+    {"id": "registry_methodology","file": "07_registry_methodology.json","weight": 0.075}
   ],
   "grades": [
     {"grade": "AAA", "min": 90, "max": 100, "description": "Premium: engineered removal, high permanence, rigorous MRV"},
@@ -21,16 +21,19 @@
     {"grade": "B",   "min": 0,  "max": 29,  "description": "Low quality: significant integrity concerns"}
   ],
   "disqualifiers": [
-    {"id": "double_counting",       "condition": "Evidence of double counting",                "grade_cap": "B"},
-    {"id": "failed_verification",   "condition": "Failed validation or verification",          "grade_cap": "B"},
-    {"id": "sanctioned_registry",   "condition": "Registry or methodology under sanction",     "grade_cap": "BB"},
-    {"id": "no_third_party",        "condition": "No independent third-party verification",    "grade_cap": "BBB"},
-    {"id": "human_rights",          "condition": "Credible human rights violation claims",     "grade_cap": "B"}
+    {"id": "double_counting",       "condition": "Evidence of double counting",                                "grade_cap": "B"},
+    {"id": "failed_verification",   "condition": "Failed validation or verification",                          "grade_cap": "B"},
+    {"id": "sanctioned_registry",   "condition": "Registry or methodology under sanction",                     "grade_cap": "BB"},
+    {"id": "no_third_party",        "condition": "No independent third-party verification",                    "grade_cap": "BBB"},
+    {"id": "human_rights",          "condition": "Credible human rights violation claims",                     "grade_cap": "B"},
+    {"id": "community_harm",        "condition": "Documented community opposition or environmental damage (co_benefits 'None / negative externalities' band)", "grade_cap": "BBB"}
   ],
   "composite_formula": "sum(dimension_score_i * weight_i)",
   "notes": [
     "All dimension scores normalized to 0-100.",
-    "Weights sum to 1.00 and are provisional pending expert calibration (CCQI-style).",
-    "Disqualifiers cap the grade regardless of composite score."
+    "Weights sum to 1.00; co_benefits weight is 0.00 in v0.4 (safeguards-gate mechanism).",
+    "The co_benefits dimension is still attested as an informational field but does not enter the composite. Assessors use the co_benefits rubric bands to determine whether to set the community_harm disqualifier flag.",
+    "Disqualifiers cap the grade regardless of composite score. community_harm caps at BBB so harmful projects cannot reach premium pools but are not driven out of the market entirely.",
+    "v0.4 rationale for the safeguards-gate: see docs/methodology-gate-v0.4.md. In short, rewarding co_benefits as a scored dimension reinforces the Berg et al. (2025) finding that buyers pay for narratives rather than integrity. Converting co_benefits to a harm filter preserves the dimension's protective function without distorting the composite."
   ]
 }

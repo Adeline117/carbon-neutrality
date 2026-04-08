@@ -5,8 +5,12 @@ import {ICarbonCreditRating} from "./ICarbonCreditRating.sol";
 
 /// @title CarbonCreditRating
 /// @notice Reference implementation of the on-chain carbon credit quality rating.
-///         Weights, grade boundaries, and disqualifier caps match v0.2 of the
+///         Weights, grade boundaries, and disqualifier caps match v0.4 of the
 ///         workshop paper and data/scoring-rubrics/index.json.
+///
+/// @dev    v0.4 adopts the safeguards-gate mechanism (see docs/methodology-gate-v0.4.md):
+///         co_benefits weight is 0; its 0.075 is redistributed across removal_type,
+///         permanence, and mrv_grade. A new communityHarm disqualifier caps at BBB.
 ///
 /// @dev    This is a MVP prototype. Production deployment should:
 ///         - Replace the single-owner rater with a multi-rater oracle or attestation network
@@ -15,15 +19,15 @@ import {ICarbonCreditRating} from "./ICarbonCreditRating.sol";
 ///         - Integrate rating expiry (annual re-verification)
 contract CarbonCreditRating is ICarbonCreditRating {
     // ------------------------------------------------------------------
-    // Weights (basis points, sum = 10000)
+    // Weights (basis points, sum = 10000). v0.4 safeguards-gate.
     // ------------------------------------------------------------------
-    uint16 private constant W_REMOVAL_TYPE       = 2000;
+    uint16 private constant W_REMOVAL_TYPE       = 2500;   // v0.3: 2000
     uint16 private constant W_ADDITIONALITY      = 2000;
-    uint16 private constant W_PERMANENCE         = 1500;
-    uint16 private constant W_MRV_GRADE          = 1500;
+    uint16 private constant W_PERMANENCE         = 1750;   // v0.3: 1500
+    uint16 private constant W_MRV_GRADE          = 2000;   // v0.3: 1500
     uint16 private constant W_VINTAGE            = 1000;
-    uint16 private constant W_CO_BENEFITS        = 1000;
-    uint16 private constant W_REGISTRY_METHOD    = 1000;
+    uint16 private constant W_CO_BENEFITS        = 0;      // v0.3: 1000 (now informational; see communityHarm)
+    uint16 private constant W_REGISTRY_METHOD    = 750;    // v0.3: 1000
 
     // ------------------------------------------------------------------
     // Grade boundaries (composite in basis points)
@@ -215,6 +219,7 @@ contract CarbonCreditRating is ICarbonCreditRating {
         if (flags.humanRights         && capped > Grade.B)   capped = Grade.B;
         if (flags.sanctionedRegistry  && capped > Grade.BB)  capped = Grade.BB;
         if (flags.noThirdParty        && capped > Grade.BBB) capped = Grade.BBB;
+        if (flags.communityHarm       && capped > Grade.BBB) capped = Grade.BBB;
 
         return capped;
     }

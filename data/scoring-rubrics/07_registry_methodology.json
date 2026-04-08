@@ -1,7 +1,7 @@
 {
   "id": "registry_methodology",
   "name": "Registry & Methodology",
-  "weight": 0.10,
+  "weight": 0.075,
   "rationale": "The crediting program (registry) and the specific methodology together determine the rules and rigor under which credits are generated. A good project under a weak methodology is still a weak credit.",
   "data_source": "Token metadata -- registry ID + methodology ID (on-chain native via mapping table)",
   "on_chain_feasibility": "high",

@@ -8,16 +8,18 @@ Machine-readable JSON rubrics for the seven rating dimensions, derived from `doc
 
 ## Files
 
-| File | Dimension | Weight |
-|------|-----------|--------|
-| `index.json` | Framework index (weights, grades, disqualifiers) | — |
-| `01_removal_type.json` | Removal Type Hierarchy | 20% |
-| `02_additionality.json` | Additionality | 20% |
-| `03_permanence.json` | Permanence | 15% |
-| `04_mrv_grade.json` | MRV Grade | 15% |
-| `05_vintage_year.json` | Vintage Year | 10% |
-| `06_co_benefits.json` | Co-benefits | 10% |
-| `07_registry_methodology.json` | Registry & Methodology | 10% |
+| File | Dimension | v0.3 weight | v0.4 weight |
+|------|-----------|-------------|-------------|
+| `index.json` | Framework index (weights, grades, disqualifiers) | — | — |
+| `01_removal_type.json` | Removal Type Hierarchy | 20% | **25%** |
+| `02_additionality.json` | Additionality | 20% | 20% |
+| `03_permanence.json` | Permanence | 15% | **17.5%** |
+| `04_mrv_grade.json` | MRV Grade | 15% | **20%** |
+| `05_vintage_year.json` | Vintage Year | 10% | 10% |
+| `06_co_benefits.json` | Co-benefits | 10% | **0% (safeguards-gate)** |
+| `07_registry_methodology.json` | Registry & Methodology | 10% | 7.5% |
+
+**v0.4 mechanism change:** co_benefits is no longer scored in the composite. It is attested as an informational value and used by assessors to decide whether to set the `community_harm` disqualifier (caps at BBB). See `docs/methodology-gate-v0.4.md` for the decision rationale and `06_co_benefits.json` for the updated dimension doc.
 
 ## Schema Conventions
 

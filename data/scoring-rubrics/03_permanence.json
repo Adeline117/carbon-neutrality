@@ -1,7 +1,7 @@
 {
   "id": "permanence",
   "name": "Permanence",
-  "weight": 0.15,
+  "weight": 0.175,
   "rationale": "A tonne of CO2 removed for 10 years has far less climate value than a tonne removed for 10,000 years. Reversal risk must be discounted explicitly.",
   "data_source": "Project type + storage mechanism + contractual/buffer commitments",
   "on_chain_feasibility": "medium",
