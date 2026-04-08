@@ -3,17 +3,20 @@
 Pilot scoring script for the on-chain carbon credit quality rating framework.
 
 Reads:
-  ../scoring-rubrics/index.json   -- weights, grade bands, disqualifiers
-  ./credits.json                  -- per-credit dimension scores and disqualifier flags
+  ../scoring-rubrics/index.json      -- weights, grade bands, disqualifiers
+  ./credits.json                     -- default dataset
+  --credits PATH                     -- override with an alternate dataset (e.g. ../tokenized-pilot/credits.json)
 
-Writes:
-  ./scores.csv                    -- composite score, grade (nominal and post-disqualifier), per-dimension scores
-  ./scores.md                     -- markdown summary table
-  ./sensitivity.md                -- (--sensitivity only) weight perturbation + leave-one-out tables
+Writes output files as siblings of the credits file:
+  scores.csv                         -- per-credit composite, grades, per-dimension scores
+  scores.md                          -- markdown summary table
+  sensitivity.md                     -- (--sensitivity only) weight perturbation + leave-one-out
 
 Usage:
-  python3 score.py                # basic scoring pass
-  python3 score.py --sensitivity  # also write sensitivity.md
+  python3 score.py
+  python3 score.py --sensitivity
+  python3 score.py --credits ../tokenized-pilot/credits.json
+  python3 score.py --credits ../tokenized-pilot/credits.json --sensitivity
 """
 
 from __future__ import annotations
@@ -27,13 +30,23 @@ HERE = Path(__file__).parent
 RUBRICS = HERE.parent / "scoring-rubrics"
 
 
+def credits_path() -> Path:
+    """Default to ./credits.json unless --credits PATH is given."""
+    if "--credits" in sys.argv:
+        i = sys.argv.index("--credits")
+        if i + 1 >= len(sys.argv):
+            raise SystemExit("--credits requires a path argument")
+        return Path(sys.argv[i + 1]).resolve()
+    return HERE / "credits.json"
+
+
 def load_rubric_index() -> dict:
     with (RUBRICS / "index.json").open() as f:
         return json.load(f)
 
 
-def load_credits() -> dict:
-    with (HERE / "credits.json").open() as f:
+def load_credits(path: Path) -> dict:
+    with path.open() as f:
         return json.load(f)
 
 
@@ -77,7 +90,9 @@ def apply_disqualifiers(grade: str, flags: list[str], dq_spec: list[dict]) -> tu
 
 def main() -> None:
     rubrics = load_rubric_index()
-    credits = load_credits()
+    creds_path = credits_path()
+    credits = load_credits(creds_path)
+    out_dir = creds_path.parent
 
     weights = {d["id"]: d["weight"] for d in rubrics["dimensions"]}
     dimensions = list(weights.keys())
@@ -100,9 +115,9 @@ def main() -> None:
             {
                 "id": credit["id"],
                 "name": credit["name"],
-                "type": credit["type"],
-                "registry": credit["registry"],
-                "vintage": credit["vintage_year"],
+                "type": credit.get("type", ""),
+                "registry": credit.get("registry") or credit.get("underlying_registry", ""),
+                "vintage": credit.get("vintage_year", ""),
                 **{f"d_{d}": scores[d] for d in dimensions},
                 "composite": round(comp, 2),
                 "grade_nominal": nominal,
@@ -113,7 +128,7 @@ def main() -> None:
         )
 
     # write CSV
-    csv_path = HERE / "scores.csv"
+    csv_path = out_dir / "scores.csv"
     fieldnames = list(rows[0].keys())
     with csv_path.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
@@ -147,22 +162,22 @@ def main() -> None:
         md.append(f"| {g} | {c} | {c/len(rows):.0%} |")
     md.append("")
 
-    (HERE / "scores.md").write_text("\n".join(md))
+    (out_dir / "scores.md").write_text("\n".join(md))
 
     # terminal preview
-    print(f"Scored {len(rows)} credits -> {csv_path}")
+    print(f"Scored {len(rows)} credits from {creds_path} -> {csv_path}")
     print(f"Grade distribution (final): {dist}")
 
     if "--sensitivity" in sys.argv:
-        write_sensitivity(credits, rubrics, rows)
+        write_sensitivity(credits, rubrics, rows, out_dir)
 
 
-def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict]) -> None:
+def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict], out_dir: Path) -> None:
     """Weight-perturbation and leave-one-out sensitivity analyses.
 
-    Writes ./sensitivity.md. Uses the already-computed baseline grades to count
-    grade flips as each weight is perturbed. Disqualifier caps are re-applied
-    so flips reflect the full pipeline.
+    Writes sensitivity.md in `out_dir`. Uses the already-computed baseline grades
+    to count grade flips as each weight is perturbed. Disqualifier caps are
+    re-applied so flips reflect the full pipeline.
     """
     weights = {d["id"]: d["weight"] for d in rubrics["dimensions"]}
     dimensions = list(weights.keys())
@@ -248,28 +263,38 @@ def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict]) -
         md.append(f"| {dim} | {flips}/{n} |")
     md.append("")
 
-    # --- individual dimension perturbation on Orca and C007 ---
+    # --- boundary-proximity analysis: automatically find the most-fragile credits ---
     md.append("## 3. Key-credit stability under score perturbation")
     md.append("")
-    md.append("Hold weights fixed; perturb individual dimension *scores* by +/-5 for the load-bearing credits. How close are they to flipping grade?")
+    md.append("Automatically identifies the credits closest to a grade boundary. Credits with buffer < 2.0 are grade-sensitive to small per-dimension rescoring.")
     md.append("")
     md.append("| Credit | Current grade | Current composite | Nearest boundary | Buffer |")
     md.append("|--------|---------------|-------------------|------------------|--------|")
 
     boundaries = sorted({b["min"] for b in grade_bands})
-    for cid in ["C001", "C002", "C004", "C007", "C014", "C011"]:
-        credit = next(c for c in credits["credits"] if c["id"] == cid)
-        row = next(r for r in baseline_rows if r["id"] == cid)
-        comp = row["composite"]
-        g = row["grade_final"]
-        # nearest boundary above and below
+
+    def buffer_for(comp: float) -> tuple[float, int]:
         above = min((b for b in boundaries if b > comp), default=None)
         below = max((b for b in boundaries if b <= comp), default=0)
         buf_up = (above - comp) if above is not None else float("inf")
         buf_down = comp - below
-        buf = min(buf_up, buf_down)
-        nearest = above if buf_up < buf_down else below
-        md.append(f"| {cid} {credit['name'][:25]} | {g} | {comp} | {nearest} | {buf:.2f} |")
+        if buf_up < buf_down:
+            return buf_up, above
+        return buf_down, below
+
+    scored = []
+    for row in baseline_rows:
+        # skip synthetic disqualifier stress tests from boundary analysis
+        if "SYNTHETIC" in row.get("name", ""):
+            continue
+        buf, nearest = buffer_for(row["composite"])
+        scored.append((buf, row, nearest))
+
+    # sort by ascending buffer; show top 6 most fragile
+    scored.sort(key=lambda x: x[0])
+    for buf, row, nearest in scored[:6]:
+        name = row["name"][:32]
+        md.append(f"| {row['id']} {name} | {row['grade_final']} | {row['composite']} | {nearest} | {buf:.2f} |")
     md.append("")
 
     md.append("## 4. Interpretation notes")
@@ -279,8 +304,8 @@ def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict]) -
     md.append("- Buffer < 2.0 in the key-credit table indicates a credit whose grade is sensitive to per-dimension rescoring and should be flagged in the paper's sensitivity discussion.")
     md.append("")
 
-    (HERE / "sensitivity.md").write_text("\n".join(md))
-    print(f"Wrote sensitivity analysis -> {HERE / 'sensitivity.md'}")
+    (out_dir / "sensitivity.md").write_text("\n".join(md))
+    print(f"Wrote sensitivity analysis -> {out_dir / 'sensitivity.md'}")
 
 
 if __name__ == "__main__":

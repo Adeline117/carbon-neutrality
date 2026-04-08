@@ -1,0 +1,453 @@
+{
+  "dataset_version": "0.1.0",
+  "framework_version": "0.4",
+  "description": "v0.5 workstream C pilot: 14 real tokenized carbon credits (or pools) drawn from actually on-chain / tokenized instruments, hand-scored against the v0.4 rubric. Unlike the illustrative pilot in ../pilot-scoring/, every entry here corresponds to a specific real token on a real chain. Per-dimension scores are still author judgment based on public project documentation, academic analyses, and the v0.4 scoring rubrics.",
+  "important_disclaimers": [
+    "Contract addresses and chain identifiers are best-effort based on documentation. Verify before relying on them.",
+    "Per-dimension scores are illustrative archetype scoring, NOT a formal rating of any specific project.",
+    "Pools (BCT, NCT, MCO2) are scored as the weighted average quality of their typical pool composition, not as a single credit.",
+    "The `commercial_rating_coverage` field lists which commercial agencies are known to rate this type of credit; it does NOT quote specific ratings.",
+    "`confidence` = high: contract address + archetype documented in literature; medium: archetype known but specifics may vary; low: known to exist but sparse documentation."
+  ],
+  "credits": [
+    {
+      "id": "T001",
+      "name": "Toucan BCT (Base Carbon Tonne)",
+      "type": "Pooled ERC-20 representing bridged Verra VCUs",
+      "chain": "Polygon",
+      "contract_address": "0x2F800Db0fdb5223b3C3f354886d907A671414A7F",
+      "token_standard": "ERC-20",
+      "issuer": "Toucan Protocol",
+      "underlying_registry": "Verra VCS",
+      "tokenization_model": "Bridge-and-pool (retired VCUs bridged, historical)",
+      "pool_composition_notes": "Any Verra VCU from non-excluded methodology categories, vintage >= 2008. Historically dominated by older wind, REDD+, and HFC-destruction credits. HFC-23 later blocklisted.",
+      "vintage_year": 2017,
+      "current_status": "Declining. Most bridging halted after Verra 2022 statement restricting unauthorized tokenization.",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 30,
+        "additionality": 32,
+        "permanence": 15,
+        "mrv_grade": 48,
+        "vintage_year": 16,
+        "co_benefits": 35,
+        "registry_methodology": 45
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "BeZero rates individual underlying VCUs (no pool rating)",
+        "Sylvera rates individual underlying VCUs (no pool rating)",
+        "MSCI 2025 does not rate tokenized pools as instruments",
+        "ICVCM CCP: pool is NOT CCP-eligible (mixes CCP and non-CCP credits)"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Weighted average of typical BCT composition as documented by CarbonPlan 2022 analysis and Frontiers in Blockchain 2024. Dominated by pre-2018 vintage low-integrity credits."
+    },
+    {
+      "id": "T002",
+      "name": "Toucan NCT (Nature Carbon Tonne)",
+      "type": "Pooled ERC-20, nature-based subset of BCT",
+      "chain": "Polygon",
+      "contract_address": "0xD838290e877E0188a4A44700463419ED96c16107",
+      "token_standard": "ERC-20",
+      "issuer": "Toucan Protocol",
+      "underlying_registry": "Verra VCS (AFOLU subset)",
+      "tokenization_model": "Bridge-and-pool with AFOLU filter and vintage >=2012",
+      "pool_composition_notes": "Stricter than BCT: only AFOLU methodologies, vintage >=2012. Still dominated by REDD+ and some afforestation projects.",
+      "vintage_year": 2019,
+      "current_status": "Smaller than BCT; similar bridging halt",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 50,
+        "additionality": 42,
+        "permanence": 42,
+        "mrv_grade": 55,
+        "vintage_year": 40,
+        "co_benefits": 60,
+        "registry_methodology": 52
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "BeZero rates individual underlying VCUs",
+        "Sylvera: AFOLU methodologies are their core expertise; multiple individual AFOLU projects inside NCT have been rated",
+        "ICVCM CCP: not CCP-eligible as a pool"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Weighted average of typical NCT composition; improved over BCT due to AFOLU filter but still includes controversial REDD+ methodologies (VM0015 etc)."
+    },
+    {
+      "id": "T003",
+      "name": "Moss MCO2",
+      "type": "Tokenized Verra VCUs",
+      "chain": "Polygon + Ethereum mainnet (bridged)",
+      "contract_address": "0xfC98e825A2264D890F9a1e68ed50E1526abCcacD",
+      "token_standard": "ERC-20",
+      "issuer": "Moss.earth",
+      "underlying_registry": "Verra VCS (REDD+ Amazon dominant)",
+      "tokenization_model": "Bridge, each MCO2 is 1 VCU but fungible",
+      "pool_composition_notes": "Historically ~80% Amazon REDD+ (Envira, Jari Para, Manoa, etc.)",
+      "vintage_year": 2018,
+      "current_status": "Active on Ethereum/Polygon; trading volume reduced since 2022 regulatory scrutiny",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 22,
+        "additionality": 32,
+        "permanence": 32,
+        "mrv_grade": 42,
+        "vintage_year": 16,
+        "co_benefits": 60,
+        "registry_methodology": 40
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "BeZero rates several underlying Amazon REDD+ projects (results not cited here)",
+        "Sylvera rates several underlying Amazon REDD+ projects",
+        "Calyx Global rates Amazon REDD+ projects",
+        "West et al. 2023 systematically flagged Amazon REDD+ baselines as inflated"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Dominated by Amazon REDD+ whose baselines are subject to the systematic over-crediting documented in West et al. (Science, 2023)."
+    },
+    {
+      "id": "T004",
+      "name": "Nori NRT - Regenerative Agriculture",
+      "type": "Per-credit NFT representing soil carbon removal",
+      "chain": "Polygon",
+      "contract_address": "varies per credit (ERC-1155 NFT)",
+      "token_standard": "ERC-1155 (unique per credit)",
+      "issuer": "Nori",
+      "underlying_registry": "Nori (proprietary methodology)",
+      "tokenization_model": "Native (tokenized at issuance; no bridge)",
+      "pool_composition_notes": "Each NRT is a unique NFT representing a specific farm-year soil carbon removal.",
+      "vintage_year": 2022,
+      "current_status": "Active. Per Zhou et al. 2023, ~58% of transaction volume from large organizational buyers.",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 50,
+        "additionality": 65,
+        "permanence": 28,
+        "mrv_grade": 55,
+        "vintage_year": 52,
+        "co_benefits": 62,
+        "registry_methodology": 45
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Not widely rated by commercial agencies due to non-Verra registry",
+        "Academic coverage in Zhou et al. 2023 (IEEE Wireless Communications)"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Soil carbon has known permanence and measurement uncertainty challenges. Nori's per-credit NFT model is innovative but the registry is proprietary rather than ICVCM-assessed."
+    },
+    {
+      "id": "T005",
+      "name": "Flowcarbon GNT (Goddess Nature Token)",
+      "type": "Pooled nature-based credits (historical)",
+      "chain": "Celo (planned), never fully launched",
+      "contract_address": "never deployed at scale",
+      "token_standard": "ERC-20 (planned)",
+      "issuer": "Flowcarbon (defunct; Celsius-adjacent)",
+      "underlying_registry": "Verra VCS (planned)",
+      "tokenization_model": "Planned bridge-and-pool",
+      "pool_composition_notes": "Never reached market scale",
+      "vintage_year": 2021,
+      "current_status": "Defunct. Launch cancelled after Verra 2022 tokenization restriction; Celsius bankruptcy removed remaining backer.",
+      "confidence": "medium",
+      "scores": {
+        "removal_type": 55,
+        "additionality": 40,
+        "permanence": 40,
+        "mrv_grade": 35,
+        "vintage_year": 30,
+        "co_benefits": 55,
+        "registry_methodology": 35
+      },
+      "disqualifiers": ["failed_verification"],
+      "commercial_rating_coverage": [
+        "Not rated - never reached scale",
+        "Included here as a historical case: Flowcarbon is a good example of what grade-gated pools would have prevented"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Never audited as a pool. `failed_verification` disqualifier flagged because the tokenization pathway was never completed per Verra's standards."
+    },
+    {
+      "id": "T006",
+      "name": "C3 C3T (Universal Base)",
+      "type": "Pooled tokenized carbon credits",
+      "chain": "Celo + Polygon",
+      "contract_address": "varies by pool",
+      "token_standard": "ERC-20",
+      "issuer": "C3 (Climate Collective)",
+      "underlying_registry": "Verra VCS + Gold Standard + Puro",
+      "tokenization_model": "Bridge-and-pool with vintage and methodology filters",
+      "pool_composition_notes": "Multi-registry pool; offers tier variants with different eligibility",
+      "vintage_year": 2021,
+      "current_status": "Active but low volume",
+      "confidence": "medium",
+      "scores": {
+        "removal_type": 45,
+        "additionality": 48,
+        "permanence": 38,
+        "mrv_grade": 52,
+        "vintage_year": 52,
+        "co_benefits": 55,
+        "registry_methodology": 55
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Not rated as a pool; underlying credits may be covered"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Similar to NCT but across multiple registries. Quality varies by specific pool tier; this entry represents the universal base pool."
+    },
+    {
+      "id": "T007",
+      "name": "Puro.earth CORC (Biochar, average)",
+      "type": "Registry-native CO2 Removal Certificates (Biochar)",
+      "chain": "Puro.earth registry (not bridged as primary token; some Supercritical tokenization)",
+      "contract_address": "registry-native",
+      "token_standard": "N/A (registry attestation) + tokenized via Supercritical on Ethereum",
+      "issuer": "Puro.earth",
+      "underlying_registry": "Puro.earth",
+      "tokenization_model": "Registry-native tokenization at issuance",
+      "pool_composition_notes": "Pacific Biochar, Carbofex (Finland), Husk (Cambodia), etc.",
+      "vintage_year": 2023,
+      "current_status": "Active; Puro is the largest CDR-only registry",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 80,
+        "additionality": 82,
+        "permanence": 82,
+        "mrv_grade": 75,
+        "vintage_year": 88,
+        "co_benefits": 55,
+        "registry_methodology": 78
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Puro is newer and most commercial agencies do not yet rate it systematically",
+        "BeZero has begun covering CDR methodologies including Puro biochar"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Biochar is high-quality NBS removal with 1000+ year permanence when produced correctly. Puro's methodology is rigorous but not yet ICVCM-assessed."
+    },
+    {
+      "id": "T008",
+      "name": "Isometric/Heirloom DAC attestation",
+      "type": "Registry-native DAC + mineralization attestation",
+      "chain": "Isometric registry + some Supercritical tokenization",
+      "contract_address": "registry-native",
+      "token_standard": "N/A primary; Supercritical tokenizes on Ethereum",
+      "issuer": "Isometric",
+      "underlying_registry": "Isometric",
+      "tokenization_model": "Registry-native at issuance",
+      "pool_composition_notes": "Individual Heirloom DAC plant credits",
+      "vintage_year": 2024,
+      "current_status": "Active; Heirloom began commercial sales in 2024",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 96,
+        "additionality": 92,
+        "permanence": 96,
+        "mrv_grade": 90,
+        "vintage_year": 100,
+        "co_benefits": 20,
+        "registry_methodology": 78
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Isometric publishes methodology openly; rating agencies are beginning to cover DAC methodologies",
+        "MSCI 2025 Integrity report notes DAC as the highest-integrity category"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Engineered DAC with mineralization permanence. Main detractor is co_benefits (now 0 weight under v0.4) and registry maturity (Isometric is newer than Verra/Gold Standard). v0.4 safeguards-gate now lets this reach AAA."
+    },
+    {
+      "id": "T009",
+      "name": "Climeworks Orca via Puro",
+      "type": "DACCS + geological storage",
+      "chain": "Puro.earth registry; some secondary market tokenization",
+      "contract_address": "registry-native",
+      "token_standard": "N/A primary",
+      "issuer": "Puro.earth attestation of Climeworks operations",
+      "underlying_registry": "Puro.earth",
+      "tokenization_model": "Registry-native",
+      "pool_composition_notes": "Iceland DAC + CarbFix mineralization",
+      "vintage_year": 2024,
+      "current_status": "Active; Orca operational since 2021, Mammoth since 2024",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 98,
+        "additionality": 95,
+        "permanence": 98,
+        "mrv_grade": 92,
+        "vintage_year": 100,
+        "co_benefits": 15,
+        "registry_methodology": 82
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Puro + Isometric verified",
+        "MSCI 2025: DACCS is the highest-integrity category in their classification"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Gold standard for engineered CDR. Matches C001 in the illustrative pilot; this entry specifically represents the tokenized/attested form."
+    },
+    {
+      "id": "T010",
+      "name": "Charm Industrial bio-oil",
+      "type": "Pyrolysis bio-oil + geological injection",
+      "chain": "Puro registry (some secondary tokenization)",
+      "contract_address": "registry-native",
+      "token_standard": "N/A primary",
+      "issuer": "Puro.earth",
+      "underlying_registry": "Puro.earth",
+      "tokenization_model": "Registry-native",
+      "pool_composition_notes": "Charm's bio-oil wells in US",
+      "vintage_year": 2024,
+      "current_status": "Active; major buyer Frontier Fund",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 94,
+        "additionality": 90,
+        "permanence": 95,
+        "mrv_grade": 82,
+        "vintage_year": 100,
+        "co_benefits": 22,
+        "registry_methodology": 75
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Puro-rated",
+        "Frontier Fund publishes purchase decisions with quality rationale"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "High-integrity engineered CDR with geological storage. Matches C004 in the illustrative pilot. Under v0.4 this cleanly reaches AAA; under v0.3 Rev-1+2 proposal it would have been stuck at AA because mrv_grade=82 missed the arbitrary 85 threshold."
+    },
+    {
+      "id": "T011",
+      "name": "JPMorgan Kinexys (S&P Global pilot)",
+      "type": "Registry-layer tokenized carbon credits",
+      "chain": "JPMorgan Kinexys (private permissioned) + public chain partners",
+      "contract_address": "Kinexys chain",
+      "token_standard": "Private-chain native, some public bridging via S&P Global",
+      "issuer": "JPMorgan Kinexys",
+      "underlying_registry": "EcoRegistry + International Carbon Registry + S&P Global Commodity Insights",
+      "tokenization_model": "Registry-layer tokenization at issuance (not bridge-and-pool)",
+      "pool_composition_notes": "Launched 2025; structured as tokenization at the moment of issuance, avoiding the provenance gap that undermined Toucan.",
+      "vintage_year": 2024,
+      "current_status": "Early-stage launch 2025; Kinexys paper published early 2025",
+      "confidence": "medium",
+      "scores": {
+        "removal_type": 55,
+        "additionality": 62,
+        "permanence": 52,
+        "mrv_grade": 72,
+        "vintage_year": 100,
+        "co_benefits": 55,
+        "registry_methodology": 68
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "S&P Global Commodity Insights is a primary data partner (not a rating agency)",
+        "Too new for BeZero/Sylvera/Calyx systematic coverage"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Promising tokenization model (registry-native, not bridged post-hoc). Underlying credit quality depends on which registries and methodologies participate; early indicators suggest a mix spanning quality tiers."
+    },
+    {
+      "id": "T012",
+      "name": "Open Forest Protocol credit",
+      "type": "Decentralized-MRV afforestation",
+      "chain": "NEAR Protocol",
+      "contract_address": "OFP native",
+      "token_standard": "NEAR-native fungible",
+      "issuer": "Open Forest Protocol",
+      "underlying_registry": "OFP (dMRV)",
+      "tokenization_model": "Distributed verifier network with satellite + smartphone monitoring",
+      "pool_composition_notes": "Operational in ~20 countries per 2024 OFP report",
+      "vintage_year": 2024,
+      "current_status": "Active; distinctive approach with decentralized MRV",
+      "confidence": "medium",
+      "scores": {
+        "removal_type": 70,
+        "additionality": 65,
+        "permanence": 50,
+        "mrv_grade": 80,
+        "vintage_year": 100,
+        "co_benefits": 75,
+        "registry_methodology": 40
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Not covered by traditional commercial rating agencies",
+        "Academic interest as a dMRV case study"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Strong MRV via decentralized verifiers; nature-based removal; registry is very new (low registry score). v0.4 rewards the strong MRV dimension."
+    },
+    {
+      "id": "T013",
+      "name": "Regen Network NCT (Cosmos)",
+      "type": "Agricultural land management credits",
+      "chain": "Regen Network (Cosmos) + bridges",
+      "contract_address": "Regen native",
+      "token_standard": "ECOCREDIT (Cosmos SDK)",
+      "issuer": "Regen Network",
+      "underlying_registry": "Regen Registry",
+      "tokenization_model": "Native issuance on Regen chain",
+      "pool_composition_notes": "Grassland management, regenerative agriculture",
+      "vintage_year": 2023,
+      "current_status": "Active but niche",
+      "confidence": "medium",
+      "scores": {
+        "removal_type": 52,
+        "additionality": 58,
+        "permanence": 35,
+        "mrv_grade": 58,
+        "vintage_year": 88,
+        "co_benefits": 75,
+        "registry_methodology": 45
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Not covered by commercial agencies (non-Verra registry)"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Regen is a legitimate but small registry. Land management methodologies have known permanence challenges."
+    },
+    {
+      "id": "T014",
+      "name": "Toucan TCO2 - Kariba REDD+ (historical)",
+      "type": "Individual Verra VCU tokenized as TCO2",
+      "chain": "Polygon",
+      "contract_address": "TCO2 factory-deployed per project",
+      "token_standard": "ERC-20 (one contract per project)",
+      "issuer": "Toucan Protocol",
+      "underlying_registry": "Verra VCS (VM0009)",
+      "tokenization_model": "Bridge (individual project, not pool)",
+      "pool_composition_notes": "Specific to Kariba REDD+ (Zimbabwe), widely flagged for integrity issues",
+      "vintage_year": 2017,
+      "current_status": "Historical. Kariba flagged by Carbon Market Watch and multiple academic analyses.",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 18,
+        "additionality": 20,
+        "permanence": 22,
+        "mrv_grade": 25,
+        "vintage_year": 0,
+        "co_benefits": 20,
+        "registry_methodology": 25
+      },
+      "disqualifiers": ["no_third_party"],
+      "commercial_rating_coverage": [
+        "BeZero: publicly rated low",
+        "Sylvera: publicly rated low",
+        "Calyx Global: publicly rated low",
+        "Carbon Market Watch 2023 investigation documented integrity failures"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Included because Kariba is the canonical example of a low-integrity REDD+ project that nevertheless ended up in tokenized form. Matches C022 in the illustrative pilot."
+    }
+  ]
+}
