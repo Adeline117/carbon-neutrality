@@ -1,0 +1,205 @@
+{
+  "dataset_version": "0.1.0",
+  "framework_version": "0.4",
+  "description": "Rank correlation study: comparing our v0.4 framework's grades against public ratings from BeZero, Calyx Global, and Sylvera for projects where multi-rater data is public.",
+  "primary_source": "Perspectives Climate Group / Carbon Market Watch 2023 report: 'Assessing and comparing carbon credit rating agencies' (Freiburg, 11.09.2023), Table 20 (Overlapping ratings compared on normative scale). All agency ratings as of 02 June 2023.",
+  "source_url": "https://carbonmarketwatch.org/wp-content/uploads/2023/09/PCG_CMW_rating_agencies_final_report_.pdf",
+  "important_caveats": [
+    "Agency ratings are a snapshot as of 02 June 2023. Some projects have moved since (e.g. Kariba BBB->D, later delisted in Oct 2023).",
+    "Calyx NZM scale is a 5-point reduction of their 10-point internal scale for the Net Zero Marketplace.",
+    "Sylvera NZM scale is a 3-point tier reduction of their 8-point internal scale for the Net Zero Marketplace.",
+    "Our v0.4 per-dimension scores are author judgment from public project documentation, not a formal rating.",
+    "n=6 is small for statistical correlation. Report correlations with confidence intervals and treat as directional evidence not as a definitive benchmark.",
+    "The CMW report did not include a framework like ours for comparison; we are adding our v0.4 grades to their multi-rater table."
+  ],
+  "scale_mappings": {
+    "comment": "Monotonic integer mappings for rank correlation. Higher = better quality on every scale.",
+    "ours_v04": {"B": 0, "BB": 1, "BBB": 2, "A": 3, "AA": 4, "AAA": 5},
+    "bezero": {"D": 0, "C": 1, "B": 2, "BB": 3, "BBB": 4, "A": 5, "AA": 6, "AAA": 7},
+    "calyx_nzm": {"E": 0, "D": 1, "C": 2, "B": 3, "A": 4},
+    "sylvera_nzm": {"Tier 3": 0, "Tier 2": 1, "Tier 1": 2}
+  },
+  "projects": [
+    {
+      "id": "CMW01",
+      "name": "Ecomapua Amazon REDD+",
+      "vcs_id": "VCS 1094",
+      "country": "Brazil",
+      "methodology": "REDD+ AUD (VM0015 family)",
+      "our_v04": {
+        "scores": {
+          "removal_type": 20,
+          "additionality": 28,
+          "permanence": 28,
+          "mrv_grade": 45,
+          "vintage_year": 52,
+          "co_benefits": 60,
+          "registry_methodology": 55
+        },
+        "composite": 34.425,
+        "grade": "BB",
+        "disqualifiers": []
+      },
+      "agency_ratings": {
+        "bezero": "C",
+        "calyx_nzm": "D",
+        "sylvera_nzm": "Tier 1"
+      },
+      "notes": "Most-disagreed project in the CMW dataset. Sylvera Tier 1 vs BeZero C vs Calyx D is nearly maximal inter-agency disagreement."
+    },
+    {
+      "id": "CMW02",
+      "name": "Keo Seima Wildlife Sanctuary",
+      "vcs_id": "VCS 1650",
+      "country": "Cambodia",
+      "methodology": "REDD+ VM0015 v1.1, 60-yr crediting",
+      "our_v04": {
+        "scores": {
+          "removal_type": 22,
+          "additionality": 45,
+          "permanence": 38,
+          "mrv_grade": 55,
+          "vintage_year": 88,
+          "co_benefits": 88,
+          "registry_methodology": 62
+        },
+        "composite": 45.6,
+        "grade": "BBB",
+        "disqualifiers": []
+      },
+      "agency_ratings": {
+        "bezero": "A",
+        "calyx_nzm": "E",
+        "sylvera_nzm": "Tier 1"
+      },
+      "notes": "WCS-run, CCB Gold, Indigenous Community Land Titles. BeZero A + Sylvera Tier 1 on watch vs Calyx E is extreme disagreement. Our BBB falls between the extremes."
+    },
+    {
+      "id": "CMW03",
+      "name": "Mai Ndombe REDD+",
+      "vcs_id": "VCS 394",
+      "country": "Democratic Republic of the Congo",
+      "methodology": "REDD+ APD (Avoiding Planned Deforestation)",
+      "our_v04": {
+        "scores": {
+          "removal_type": 22,
+          "additionality": 30,
+          "permanence": 30,
+          "mrv_grade": 42,
+          "vintage_year": 52,
+          "co_benefits": 80,
+          "registry_methodology": 58
+        },
+        "composite": 34.7,
+        "grade": "BB",
+        "disqualifiers": []
+      },
+      "agency_ratings": {
+        "bezero": "BB",
+        "calyx_nzm": "E",
+        "sylvera_nzm": "Tier 2"
+      },
+      "notes": "Wildlife Works, world's largest VCS REDD+, CCB Gold. Additionality extensively criticized (REDD-Monitor 2017)."
+    },
+    {
+      "id": "CMW04",
+      "name": "Envira Amazonia Project",
+      "vcs_id": "VCS 1382",
+      "country": "Brazil",
+      "methodology": "REDD+ AUD",
+      "our_v04": {
+        "scores": {
+          "removal_type": 20,
+          "additionality": 30,
+          "permanence": 30,
+          "mrv_grade": 48,
+          "vintage_year": 40,
+          "co_benefits": 60,
+          "registry_methodology": 55
+        },
+        "composite": 33.975,
+        "grade": "BB",
+        "disqualifiers": []
+      },
+      "agency_ratings": {
+        "bezero": "BBB",
+        "calyx_nzm": "E",
+        "sylvera_nzm": "Tier 2"
+      },
+      "notes": "JRA Agropecuaria (commercial developer); 39,300 ha in Acre, Brazil. BeZero BBB is the agency outlier; Calyx E and Sylvera Tier 2 are harsher."
+    },
+    {
+      "id": "CMW05",
+      "name": "Luangwa Community Forests Project",
+      "vcs_id": "VCS (Zambia, Luangwa Valley)",
+      "country": "Zambia",
+      "methodology": "REDD+ AUD, community-based",
+      "our_v04": {
+        "scores": {
+          "removal_type": 22,
+          "additionality": 40,
+          "permanence": 32,
+          "mrv_grade": 45,
+          "vintage_year": 52,
+          "co_benefits": 80,
+          "registry_methodology": 58
+        },
+        "composite": 37.65,
+        "grade": "BB",
+        "disqualifiers": []
+      },
+      "agency_ratings": {
+        "bezero": "B",
+        "calyx_nzm": "E",
+        "sylvera_nzm": "Tier 2"
+      },
+      "notes": "Community-based REDD+ program. BioCarbon Partners developer. Stronger additionality argument than industrial REDD+ but low MRV."
+    },
+    {
+      "id": "CMW06",
+      "name": "Guanaré Forest Restoration Project",
+      "vcs_id": "VCS 959",
+      "country": "Uruguay",
+      "methodology": "ARR (commercial plantation)",
+      "our_v04": {
+        "scores": {
+          "removal_type": 65,
+          "additionality": 35,
+          "permanence": 40,
+          "mrv_grade": 50,
+          "vintage_year": 40,
+          "co_benefits": 35,
+          "registry_methodology": 55
+        },
+        "composite": 48.375,
+        "grade": "BBB",
+        "disqualifiers": []
+      },
+      "agency_ratings": {
+        "bezero": "B",
+        "calyx_nzm": "E",
+        "sylvera_nzm": "Tier 3"
+      },
+      "notes": "Commercial eucalyptus plantation classified as ARR. Our BBB is the outlier here; all 3 agencies rate it low. Likely driven by: (a) commercial plantation additionality concerns the v0.4 rubric may be too generous on, (b) biodiversity/community co-benefit concerns that v0.4's safeguards-gate doesn't catch because co_benefits is only a gate for documented harm, not moderate weakness."
+    }
+  ],
+  "anchor_projects": [
+    {
+      "id": "ANCHOR01",
+      "name": "Climeworks Orca (DACCS Iceland)",
+      "our_v04": {"grade": "AAA", "composite": 95.2},
+      "agency_ratings": {"bezero": "AAA"},
+      "source": "BeZero first-ever AAA, confirmed in climeworks.com news and multiple industry publications (2023).",
+      "note": "Full agreement. BeZero describes it as the most likely tonne-for-tonne removal they rate."
+    },
+    {
+      "id": "ANCHOR02",
+      "name": "Kariba REDD+",
+      "vcs_id": "VCS 902",
+      "our_v04": {"grade": "B", "composite": 19.23},
+      "agency_ratings": {"bezero": "D"},
+      "source": "BeZero downgraded BBB -> rating watch (Jan 2023) -> D (Oct 2023), then delisted entirely.",
+      "note": "Directional agreement: both rate at the bottom of their respective scales. Sylvera also documented 75-90% baseline overstatement and ~33% carbon stock overstatement, but did not publish a letter grade."
+    }
+  ]
+}
