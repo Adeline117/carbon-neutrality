@@ -1,0 +1,507 @@
+{
+  "dataset_version": "0.1.0",
+  "description": "Illustrative pilot dataset of 25 carbon credits drawn from real project archetypes spanning the full quality spectrum. Per-dimension scores are assigned by the authors based on public project documentation, academic analyses, and the scoring rubrics under data/scoring-rubrics/. This is a hand-scored workshop sample, NOT a formal rating.",
+  "note": "Attributes are representative of the project class, not a specific audit of each named project. Use for methodology validation only.",
+  "credits": [
+    {
+      "id": "C001",
+      "name": "Climeworks Orca",
+      "type": "DACCS + geological storage",
+      "registry": "Puro.earth",
+      "methodology": "CO2 Removal Certificate (geologically stored)",
+      "country": "Iceland",
+      "vintage_year": 2024,
+      "tokenization": "Puro registry native; not yet bridged to EVM",
+      "scores": {
+        "removal_type": 98,
+        "additionality": 95,
+        "permanence": 98,
+        "mrv_grade": 92,
+        "vintage_year": 100,
+        "co_benefits": 15,
+        "registry_methodology": 82
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C002",
+      "name": "Heirloom DAC (California)",
+      "type": "DAC + concrete/mineralization storage",
+      "registry": "Isometric",
+      "methodology": "Limestone-based DAC",
+      "country": "USA",
+      "vintage_year": 2024,
+      "tokenization": "Isometric attestation; not currently on a liquid secondary market",
+      "scores": {
+        "removal_type": 96,
+        "additionality": 92,
+        "permanence": 96,
+        "mrv_grade": 90,
+        "vintage_year": 100,
+        "co_benefits": 20,
+        "registry_methodology": 78
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C003",
+      "name": "CarbonCure concrete mineralization",
+      "type": "Industrial CO2 mineralization in concrete",
+      "registry": "Verra VCS + Isometric",
+      "methodology": "VM0043 CO2 utilization in concrete",
+      "country": "USA / Canada",
+      "vintage_year": 2024,
+      "tokenization": "Off-chain; CarbonCure marketplace",
+      "scores": {
+        "removal_type": 90,
+        "additionality": 78,
+        "permanence": 92,
+        "mrv_grade": 85,
+        "vintage_year": 100,
+        "co_benefits": 18,
+        "registry_methodology": 80
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C004",
+      "name": "Charm Industrial bio-oil injection",
+      "type": "Pyrolysis bio-oil + geological storage",
+      "registry": "Puro.earth",
+      "methodology": "Bio-oil geological storage",
+      "country": "USA",
+      "vintage_year": 2024,
+      "tokenization": "Puro registry native",
+      "scores": {
+        "removal_type": 94,
+        "additionality": 90,
+        "permanence": 95,
+        "mrv_grade": 82,
+        "vintage_year": 100,
+        "co_benefits": 22,
+        "registry_methodology": 75
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C005",
+      "name": "Pacific Biochar (CA)",
+      "type": "Biochar from forestry residues",
+      "registry": "Puro.earth",
+      "methodology": "Biochar carbon removal",
+      "country": "USA",
+      "vintage_year": 2024,
+      "tokenization": "Puro native",
+      "scores": {
+        "removal_type": 80,
+        "additionality": 82,
+        "permanence": 85,
+        "mrv_grade": 80,
+        "vintage_year": 100,
+        "co_benefits": 60,
+        "registry_methodology": 78
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C006",
+      "name": "Husk biochar (Cambodia)",
+      "type": "Rice-husk biochar for smallholder agriculture",
+      "registry": "Verra VCS + Puro",
+      "methodology": "VM0044 + Puro biochar",
+      "country": "Cambodia",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain retirement + optional on-chain certificate",
+      "scores": {
+        "removal_type": 78,
+        "additionality": 85,
+        "permanence": 82,
+        "mrv_grade": 72,
+        "vintage_year": 88,
+        "co_benefits": 85,
+        "registry_methodology": 80
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C007",
+      "name": "Pachama-verified Brazilian reforestation",
+      "type": "ARR (Afforestation/Reforestation) with CCB Gold",
+      "registry": "Verra VCS",
+      "methodology": "VM0047",
+      "country": "Brazil",
+      "vintage_year": 2024,
+      "tokenization": "Toucan-bridged TCO2 historically; currently held off-chain",
+      "scores": {
+        "removal_type": 70,
+        "additionality": 72,
+        "permanence": 58,
+        "mrv_grade": 80,
+        "vintage_year": 100,
+        "co_benefits": 88,
+        "registry_methodology": 78
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C008",
+      "name": "Rexford IFM (Improved Forest Management)",
+      "type": "IFM with buffer pool",
+      "registry": "CAR (Climate Action Reserve)",
+      "methodology": "Forest Project Protocol v5",
+      "country": "USA",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain",
+      "scores": {
+        "removal_type": 68,
+        "additionality": 62,
+        "permanence": 55,
+        "mrv_grade": 72,
+        "vintage_year": 88,
+        "co_benefits": 55,
+        "registry_methodology": 72
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C009",
+      "name": "Southeast Asian VCS afforestation",
+      "type": "Plantation afforestation, 40-yr commitment",
+      "registry": "Verra VCS",
+      "methodology": "AR-ACM0003",
+      "country": "Indonesia",
+      "vintage_year": 2024,
+      "tokenization": "TCO2 in BCT pool (historical)",
+      "scores": {
+        "removal_type": 65,
+        "additionality": 62,
+        "permanence": 52,
+        "mrv_grade": 68,
+        "vintage_year": 100,
+        "co_benefits": 65,
+        "registry_methodology": 65
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C010",
+      "name": "Gold Standard cookstoves (Kenya)",
+      "type": "Efficient cookstove distribution",
+      "registry": "Gold Standard",
+      "methodology": "TPDDTEC",
+      "country": "Kenya",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain; some tokenized via C3",
+      "scores": {
+        "removal_type": 38,
+        "additionality": 55,
+        "permanence": 8,
+        "mrv_grade": 50,
+        "vintage_year": 88,
+        "co_benefits": 85,
+        "registry_methodology": 72
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C011",
+      "name": "Adipic acid N2O destruction (India)",
+      "type": "Industrial N2O abatement",
+      "registry": "Verra VCS",
+      "methodology": "AM0021",
+      "country": "India",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain",
+      "scores": {
+        "removal_type": 55,
+        "additionality": 70,
+        "permanence": 10,
+        "mrv_grade": 78,
+        "vintage_year": 88,
+        "co_benefits": 20,
+        "registry_methodology": 75
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C012",
+      "name": "Landfill methane capture (US)",
+      "type": "LFG collection and flaring/use",
+      "registry": "CAR",
+      "methodology": "US LFG Protocol v5",
+      "country": "USA",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain",
+      "scores": {
+        "removal_type": 50,
+        "additionality": 58,
+        "permanence": 10,
+        "mrv_grade": 75,
+        "vintage_year": 88,
+        "co_benefits": 30,
+        "registry_methodology": 72
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C013",
+      "name": "Mangrove blue-carbon restoration",
+      "type": "Tidal wetland restoration",
+      "registry": "Verra VCS",
+      "methodology": "VM0033",
+      "country": "Indonesia",
+      "vintage_year": 2024,
+      "tokenization": "Off-chain; some Regen Network attestation",
+      "scores": {
+        "removal_type": 68,
+        "additionality": 72,
+        "permanence": 50,
+        "mrv_grade": 65,
+        "vintage_year": 100,
+        "co_benefits": 82,
+        "registry_methodology": 70
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C014",
+      "name": "Plan Vivo agroforestry (Mozambique)",
+      "type": "Smallholder agroforestry",
+      "registry": "Plan Vivo",
+      "methodology": "Plan Vivo Standard v5",
+      "country": "Mozambique",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain",
+      "scores": {
+        "removal_type": 62,
+        "additionality": 68,
+        "permanence": 45,
+        "mrv_grade": 55,
+        "vintage_year": 88,
+        "co_benefits": 80,
+        "registry_methodology": 55
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C015",
+      "name": "VCS afforestation 2018 vintage",
+      "type": "Older plantation ARR",
+      "registry": "Verra VCS",
+      "methodology": "AR-ACM0003",
+      "country": "Brazil",
+      "vintage_year": 2018,
+      "tokenization": "BCT-pooled TCO2",
+      "scores": {
+        "removal_type": 62,
+        "additionality": 55,
+        "permanence": 48,
+        "mrv_grade": 58,
+        "vintage_year": 4,
+        "co_benefits": 50,
+        "registry_methodology": 62
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C016",
+      "name": "Gold Standard cookstoves 2019 vintage",
+      "type": "Aged cookstoves credit",
+      "registry": "Gold Standard",
+      "methodology": "TPDDTEC",
+      "country": "Ghana",
+      "vintage_year": 2019,
+      "tokenization": "Off-chain",
+      "scores": {
+        "removal_type": 35,
+        "additionality": 45,
+        "permanence": 5,
+        "mrv_grade": 42,
+        "vintage_year": 16,
+        "co_benefits": 75,
+        "registry_methodology": 62
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C017",
+      "name": "Grid-connected solar (India)",
+      "type": "Utility-scale renewable energy",
+      "registry": "Verra VCS",
+      "methodology": "ACM0002",
+      "country": "India",
+      "vintage_year": 2022,
+      "tokenization": "BCT-pooled historically",
+      "scores": {
+        "removal_type": 35,
+        "additionality": 32,
+        "permanence": 6,
+        "mrv_grade": 55,
+        "vintage_year": 52,
+        "co_benefits": 40,
+        "registry_methodology": 55
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C018",
+      "name": "REDD+ Cordillera Azul (Peru)",
+      "type": "Avoided deforestation (under review)",
+      "registry": "Verra VCS",
+      "methodology": "VM0015 (under review)",
+      "country": "Peru",
+      "vintage_year": 2019,
+      "tokenization": "BCT-pooled historically",
+      "scores": {
+        "removal_type": 22,
+        "additionality": 30,
+        "permanence": 30,
+        "mrv_grade": 38,
+        "vintage_year": 16,
+        "co_benefits": 55,
+        "registry_methodology": 35
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C019",
+      "name": "Rimba Raya REDD+ (Indonesia)",
+      "type": "Avoided deforestation, CCB Gold historically",
+      "registry": "Verra VCS",
+      "methodology": "VM0015",
+      "country": "Indonesia",
+      "vintage_year": 2018,
+      "tokenization": "BCT-pooled historically; now subject to Verra review",
+      "scores": {
+        "removal_type": 22,
+        "additionality": 30,
+        "permanence": 28,
+        "mrv_grade": 35,
+        "vintage_year": 4,
+        "co_benefits": 60,
+        "registry_methodology": 30
+      },
+      "disqualifiers": []
+    },
+    {
+      "id": "C020",
+      "name": "Chinese CDM wind 2014 vintage",
+      "type": "Grid wind (pre-Paris vintage)",
+      "registry": "CDM migrated to VCS",
+      "methodology": "ACM0002",
+      "country": "China",
+      "vintage_year": 2014,
+      "tokenization": "BCT-pooled historically",
+      "scores": {
+        "removal_type": 22,
+        "additionality": 20,
+        "permanence": 5,
+        "mrv_grade": 45,
+        "vintage_year": 20,
+        "co_benefits": 15,
+        "registry_methodology": 45
+      },
+      "disqualifiers": ["pre_paris_override"]
+    },
+    {
+      "id": "C021",
+      "name": "Large hydro (Brazil) 2015",
+      "type": "Reservoir hydro",
+      "registry": "Verra VCS",
+      "methodology": "ACM0002",
+      "country": "Brazil",
+      "vintage_year": 2015,
+      "tokenization": "BCT-pooled historically",
+      "scores": {
+        "removal_type": 20,
+        "additionality": 25,
+        "permanence": 5,
+        "mrv_grade": 48,
+        "vintage_year": 20,
+        "co_benefits": 20,
+        "registry_methodology": 45
+      },
+      "disqualifiers": ["pre_paris_override"]
+    },
+    {
+      "id": "C022",
+      "name": "Kariba REDD+ (Zimbabwe)",
+      "type": "Avoided deforestation; widely flagged",
+      "registry": "Verra VCS",
+      "methodology": "VM0009",
+      "country": "Zimbabwe",
+      "vintage_year": 2017,
+      "tokenization": "BCT-pooled historically",
+      "scores": {
+        "removal_type": 18,
+        "additionality": 20,
+        "permanence": 22,
+        "mrv_grade": 25,
+        "vintage_year": 0,
+        "co_benefits": 20,
+        "registry_methodology": 25
+      },
+      "disqualifiers": ["no_third_party"]
+    },
+    {
+      "id": "C023",
+      "name": "HFC-23 destruction (pre-2013)",
+      "type": "Industrial HFC-23 abatement",
+      "registry": "CDM",
+      "methodology": "AM0001",
+      "country": "China",
+      "vintage_year": 2012,
+      "tokenization": "BCT-pooled historically (later blocklisted by Toucan)",
+      "scores": {
+        "removal_type": 48,
+        "additionality": 15,
+        "permanence": 8,
+        "mrv_grade": 35,
+        "vintage_year": 0,
+        "co_benefits": 5,
+        "registry_methodology": 20
+      },
+      "disqualifiers": ["pre_paris_override", "sanctioned_registry"]
+    },
+    {
+      "id": "C024",
+      "name": "Chinese CDM wind 2012",
+      "type": "Grid wind (old vintage)",
+      "registry": "CDM",
+      "methodology": "ACM0002",
+      "country": "China",
+      "vintage_year": 2012,
+      "tokenization": "BCT-pooled historically",
+      "scores": {
+        "removal_type": 20,
+        "additionality": 18,
+        "permanence": 5,
+        "mrv_grade": 38,
+        "vintage_year": 0,
+        "co_benefits": 10,
+        "registry_methodology": 30
+      },
+      "disqualifiers": ["pre_paris_override"]
+    },
+    {
+      "id": "C025",
+      "name": "Unverified grassland avoidance 2013",
+      "type": "Avoided conversion, informal MRV",
+      "registry": "Unrecognized regional",
+      "methodology": "Proprietary",
+      "country": "USA",
+      "vintage_year": 2013,
+      "tokenization": "NFT-minted on an obscure EVM chain",
+      "scores": {
+        "removal_type": 18,
+        "additionality": 25,
+        "permanence": 20,
+        "mrv_grade": 15,
+        "vintage_year": 0,
+        "co_benefits": 10,
+        "registry_methodology": 5
+      },
+      "disqualifiers": ["pre_paris_override", "no_third_party", "failed_verification"]
+    }
+  ]
+}
