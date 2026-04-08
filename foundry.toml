@@ -1,8 +1,22 @@
 [profile.default]
 src = "contracts"
 test = "contracts/test"
+script = "script"
 out = "out"
 cache_path = "cache"
+libs = ["lib"]
 solc_version = "0.8.24"
 optimizer = true
 optimizer_runs = 200
+fs_permissions = [
+    { access = "read", path = "./data" },
+    { access = "read", path = "./script/seed" },
+]
+
+[rpc_endpoints]
+base_sepolia = "${BASE_SEPOLIA_RPC_URL}"
+optimism_sepolia = "${OPTIMISM_SEPOLIA_RPC_URL}"
+
+[etherscan]
+base_sepolia = { key = "${BASESCAN_API_KEY}", url = "https://api-sepolia.basescan.org/api" }
+optimism_sepolia = { key = "${OPTIMISTIC_ETHERSCAN_API_KEY}", url = "https://api-sepolia-optimistic.etherscan.io/api" }

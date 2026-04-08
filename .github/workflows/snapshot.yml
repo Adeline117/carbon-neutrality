@@ -1,0 +1,66 @@
+name: Snapshot v0.4.1 ratings
+
+# Refreshes docs/api/v0.4.1/ratings.json from the deployed Base Sepolia contract.
+# The output is served via GitHub Pages as a free, cacheable public read API.
+#
+# Runs:
+#   - Daily at 08:00 UTC (cron)
+#   - On push to main (so README edits that include address changes refresh immediately)
+#   - Manual workflow_dispatch
+#
+# Requires these repo secrets:
+#   - RATING_ADDRESS        (set after running script/Deploy.s.sol)
+#   - BASE_SEPOLIA_RPC_URL  (optional; defaults to public RPC)
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "docs/v0.4.1-deployment-notes.md"
+      - "script/seed/tokenized_pilot.json"
+      - "tools/snapshot.py"
+      - ".github/workflows/snapshot.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run snapshot
+        env:
+          RATING_ADDRESS: ${{ secrets.RATING_ADDRESS }}
+          BASE_SEPOLIA_RPC_URL: ${{ secrets.BASE_SEPOLIA_RPC_URL }}
+        run: |
+          if [ -z "$RATING_ADDRESS" ]; then
+            echo "RATING_ADDRESS secret is not set. Skipping snapshot."
+            echo "Set it after running script/Deploy.s.sol."
+            exit 0
+          fi
+          python3 tools/snapshot.py
+
+      - name: Commit updated snapshot
+        run: |
+          if git diff --quiet docs/api/v0.4.1/; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/api/v0.4.1/
+          git commit -m "chore(api): refresh v0.4.1 ratings snapshot"
+          git push

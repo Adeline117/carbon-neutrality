@@ -1,0 +1,324 @@
+[
+  {
+    "id": "T001",
+    "name": "Toucan BCT (Base Carbon Tonne)",
+    "symbol": "MCC-T001",
+    "scores": {
+      "removal_type": 30,
+      "additionality": 32,
+      "permanence": 15,
+      "mrv_grade": 48,
+      "vintage_year": 16,
+      "co_benefits": 35,
+      "registry_methodology": 45
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2017
+  },
+  {
+    "id": "T002",
+    "name": "Toucan NCT (Nature Carbon Tonne)",
+    "symbol": "MCC-T002",
+    "scores": {
+      "removal_type": 50,
+      "additionality": 42,
+      "permanence": 42,
+      "mrv_grade": 55,
+      "vintage_year": 40,
+      "co_benefits": 60,
+      "registry_methodology": 52
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2019
+  },
+  {
+    "id": "T003",
+    "name": "Moss MCO2",
+    "symbol": "MCC-T003",
+    "scores": {
+      "removal_type": 22,
+      "additionality": 32,
+      "permanence": 32,
+      "mrv_grade": 42,
+      "vintage_year": 16,
+      "co_benefits": 60,
+      "registry_methodology": 40
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2018
+  },
+  {
+    "id": "T004",
+    "name": "Nori NRT - Regenerative Agriculture",
+    "symbol": "MCC-T004",
+    "scores": {
+      "removal_type": 50,
+      "additionality": 65,
+      "permanence": 28,
+      "mrv_grade": 55,
+      "vintage_year": 52,
+      "co_benefits": 62,
+      "registry_methodology": 45
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2022
+  },
+  {
+    "id": "T005",
+    "name": "Flowcarbon GNT (Goddess Nature Token)",
+    "symbol": "MCC-T005",
+    "scores": {
+      "removal_type": 55,
+      "additionality": 40,
+      "permanence": 40,
+      "mrv_grade": 35,
+      "vintage_year": 30,
+      "co_benefits": 55,
+      "registry_methodology": 35
+    },
+    "flags": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2021
+  },
+  {
+    "id": "T006",
+    "name": "C3 C3T (Universal Base)",
+    "symbol": "MCC-T006",
+    "scores": {
+      "removal_type": 45,
+      "additionality": 48,
+      "permanence": 38,
+      "mrv_grade": 52,
+      "vintage_year": 52,
+      "co_benefits": 55,
+      "registry_methodology": 55
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2021
+  },
+  {
+    "id": "T007",
+    "name": "Puro.earth CORC (Biochar, average)",
+    "symbol": "MCC-T007",
+    "scores": {
+      "removal_type": 80,
+      "additionality": 82,
+      "permanence": 82,
+      "mrv_grade": 75,
+      "vintage_year": 88,
+      "co_benefits": 55,
+      "registry_methodology": 78
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2023
+  },
+  {
+    "id": "T008",
+    "name": "Isometric/Heirloom DAC attestation",
+    "symbol": "MCC-T008",
+    "scores": {
+      "removal_type": 96,
+      "additionality": 92,
+      "permanence": 96,
+      "mrv_grade": 90,
+      "vintage_year": 100,
+      "co_benefits": 20,
+      "registry_methodology": 78
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2024
+  },
+  {
+    "id": "T009",
+    "name": "Climeworks Orca via Puro",
+    "symbol": "MCC-T009",
+    "scores": {
+      "removal_type": 98,
+      "additionality": 95,
+      "permanence": 98,
+      "mrv_grade": 92,
+      "vintage_year": 100,
+      "co_benefits": 15,
+      "registry_methodology": 82
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2024
+  },
+  {
+    "id": "T010",
+    "name": "Charm Industrial bio-oil",
+    "symbol": "MCC-T010",
+    "scores": {
+      "removal_type": 94,
+      "additionality": 90,
+      "permanence": 95,
+      "mrv_grade": 82,
+      "vintage_year": 100,
+      "co_benefits": 22,
+      "registry_methodology": 75
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2024
+  },
+  {
+    "id": "T011",
+    "name": "JPMorgan Kinexys (S&P Global pilot)",
+    "symbol": "MCC-T011",
+    "scores": {
+      "removal_type": 55,
+      "additionality": 62,
+      "permanence": 52,
+      "mrv_grade": 72,
+      "vintage_year": 100,
+      "co_benefits": 55,
+      "registry_methodology": 68
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2024
+  },
+  {
+    "id": "T012",
+    "name": "Open Forest Protocol credit",
+    "symbol": "MCC-T012",
+    "scores": {
+      "removal_type": 70,
+      "additionality": 65,
+      "permanence": 50,
+      "mrv_grade": 80,
+      "vintage_year": 100,
+      "co_benefits": 75,
+      "registry_methodology": 40
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2024
+  },
+  {
+    "id": "T013",
+    "name": "Regen Network NCT (Cosmos)",
+    "symbol": "MCC-T013",
+    "scores": {
+      "removal_type": 52,
+      "additionality": 58,
+      "permanence": 35,
+      "mrv_grade": 58,
+      "vintage_year": 88,
+      "co_benefits": 75,
+      "registry_methodology": 45
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2023
+  },
+  {
+    "id": "T014",
+    "name": "Toucan TCO2 - Kariba REDD+ (historical)",
+    "symbol": "MCC-T014",
+    "scores": {
+      "removal_type": 18,
+      "additionality": 20,
+      "permanence": 22,
+      "mrv_grade": 25,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 25
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    "vintage_year": 2017
+  }
+]

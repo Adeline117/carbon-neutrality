@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carbon credit quality rating — v0.4.1 Base Sepolia demo</title>
+  <style>
+    :root {
+      --bg: #0c1116;
+      --fg: #e6edf3;
+      --muted: #7d8590;
+      --border: #30363d;
+      --accent: #2ea043;
+      --danger: #f85149;
+      --warn: #d29922;
+      --bar: #1f6feb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      margin: 0;
+      padding: 2rem 1rem;
+      line-height: 1.5;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; margin-top: 0; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .disclaimer {
+      background: #21130a;
+      border: 1px solid var(--warn);
+      color: #d29922;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+    .disclaimer b { color: #f0a841; }
+    select, input, button {
+      background: #161b22;
+      color: var(--fg);
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.75rem;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    select { width: 100%; max-width: 500px; }
+    button {
+      cursor: pointer;
+      background: #21262d;
+    }
+    button:hover { background: #30363d; }
+    .grade {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .grade-AAA { background: #1a7f37; color: #fff; }
+    .grade-AA  { background: #2ea043; color: #fff; }
+    .grade-A   { background: #488a42; color: #fff; }
+    .grade-BBB { background: #8c6d1f; color: #fff; }
+    .grade-BB  { background: #9c5b19; color: #fff; }
+    .grade-B   { background: #cf222e; color: #fff; }
+    .dim-row {
+      display: grid;
+      grid-template-columns: 170px 1fr 50px;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .dim-row .label { color: var(--muted); font-size: 0.9rem; }
+    .dim-row .bar-outer { background: #161b22; border-radius: 3px; height: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .dim-row .bar-inner { background: var(--bar); height: 100%; transition: width 0.2s; }
+    .dim-row .value { font-variant-numeric: tabular-nums; text-align: right; }
+    .meta {
+      background: #161b22;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .meta div { margin-bottom: 0.3rem; }
+    .meta code { color: var(--fg); font-size: 0.85rem; }
+    .simulate-result {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .simulate-result.ok { border-color: var(--accent); background: #0d1f13; }
+    .simulate-result.bad { border-color: var(--danger); background: #1f0d0d; }
+    a { color: #58a6ff; }
+    footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Carbon credit quality rating — v0.4.1 demo</h1>
+
+  <div class="disclaimer">
+    <b>PRELIMINARY AUTHOR ATTESTATIONS — NOT ENDORSED</b><br>
+    The ratings below are author judgment from public documentation, applied
+    to 14 tokenized carbon credits on <b>Base Sepolia testnet</b>. They are
+    not endorsed by Verra, Gold Standard, Puro, Isometric, ICVCM, BeZero,
+    Sylvera, Calyx Global, or MSCI. Any value derived from these grades is
+    play money. See
+    <a href="https://github.com/Adeline117/carbon-neutrality/blob/main/docs/v0.4.1-deployment-notes.md">deployment notes</a>
+    and the <a href="https://github.com/Adeline117/carbon-neutrality/blob/main/docs/workshop-paper.md">workshop paper</a>
+    for methodology.
+  </div>
+
+  <h2>1. Grade explorer</h2>
+  <p>Pick a credit to see its v0.4.1 rating pulled live from
+    <code id="contract-address">(loading…)</code> on Base Sepolia.</p>
+  <select id="credit-picker"><option>loading…</option></select>
+
+  <div id="credit-display" style="margin-top: 1rem;"></div>
+
+  <h2>2. Pool gate simulator</h2>
+  <p>Which pool would accept this credit? No wallet required — this is a view-only call.</p>
+  <select id="pool-picker">
+    <option value="premium">Premium pool (AA+ gated)</option>
+    <option value="standard">Standard pool (A+ gated)</option>
+  </select>
+  <button id="simulate-btn" style="margin-left: 0.5rem;">Simulate deposit</button>
+  <div id="simulate-result"></div>
+
+  <footer>
+    <p>v0.4.1 · framework source: <a href="https://github.com/Adeline117/carbon-neutrality">Adeline117/carbon-neutrality</a>
+       · read API: <a href="../api/v0.4.1/ratings.json">ratings.json</a>
+       · static HTML, no build step, no wallet connect.</p>
+  </footer>
+</div>
+
+<script>
+const DIM_LABELS = {
+  removalType: "Removal type (25%)",
+  additionality: "Additionality (20%)",
+  permanence: "Permanence (17.5%)",
+  mrvGrade: "MRV grade (20%)",
+  vintageYear: "Vintage year (10%)",
+  coBenefits: "Co-benefits (0%, gate)",
+  registryMethodology: "Registry (7.5%)",
+};
+
+const GRADE_RANK = { "B": 0, "BB": 1, "BBB": 2, "A": 3, "AA": 4, "AAA": 5 };
+
+async function loadRatings() {
+  const picker = document.getElementById("credit-picker");
+  const contractEl = document.getElementById("contract-address");
+
+  try {
+    const r = await fetch("../api/v0.4.1/ratings.json");
+    if (!r.ok) throw new Error("ratings.json not yet published");
+    const data = await r.json();
+    const idx = await (await fetch("../api/v0.4.1/index.json")).json();
+    contractEl.textContent = idx.rating_contract || "(not deployed yet)";
+
+    picker.innerHTML = "";
+    data.forEach((c, i) => {
+      const opt = document.createElement("option");
+      opt.value = i;
+      opt.textContent = `${c.id} — ${c.name || c.symbol}`;
+      picker.appendChild(opt);
+    });
+
+    window.__ratings = data;
+    render(data[0]);
+    picker.addEventListener("change", e => render(data[parseInt(e.target.value)]));
+  } catch (e) {
+    picker.innerHTML = "";
+    document.getElementById("credit-display").innerHTML =
+      `<div class="meta">Read API not yet published. ` +
+      `Deploy the contract and run <code>tools/snapshot.py</code>, then reload. ` +
+      `Reason: ${e.message}</div>`;
+    contractEl.textContent = "(not deployed)";
+  }
+}
+
+function render(c) {
+  const cur = document.getElementById("credit-display");
+  if (!c) { cur.innerHTML = ""; return; }
+
+  const bars = Object.keys(DIM_LABELS).map(k => {
+    const v = c.scores[k] ?? 0;
+    return `<div class="dim-row">
+      <div class="label">${DIM_LABELS[k]}</div>
+      <div class="bar-outer"><div class="bar-inner" style="width: ${v}%;"></div></div>
+      <div class="value">${v}</div>
+    </div>`;
+  }).join("");
+
+  const dqs = c.disqualifiers.length
+    ? `<div>Disqualifier flags: <code>${c.disqualifiers.join(", ")}</code></div>`
+    : `<div>Disqualifier flags: <code>none</code></div>`;
+
+  cur.innerHTML = `
+    ${bars}
+    <div style="margin-top: 1rem;">
+      <span class="grade grade-${c.finalGrade}">${c.finalGrade}</span>
+      composite ${c.composite.toFixed(2)} / 100
+    </div>
+    <div class="meta">
+      <div>Credit token: <code>${c.creditTokenAddress}</code></div>
+      <div>Methodology version: <code>${c.methodologyVersion}</code></div>
+      <div>Expires at: <code>${new Date(c.expiresAt * 1000).toISOString()}</code></div>
+      <div>Evidence hash: <code>${c.evidenceHash.slice(0, 18)}…</code></div>
+      <div>Attested by: <code>${c.attestedBy.slice(0, 10)}…</code></div>
+    </div>
+  `;
+}
+
+document.getElementById("simulate-btn").addEventListener("click", () => {
+  const pool = document.getElementById("pool-picker").value;
+  const credit = window.__ratings?.[parseInt(document.getElementById("credit-picker").value)];
+  const minGrade = pool === "premium" ? "AA" : "A";
+  const result = document.getElementById("simulate-result");
+  if (!credit) { result.textContent = "No credit selected."; return; }
+
+  const meets = GRADE_RANK[credit.finalGrade] >= GRADE_RANK[minGrade];
+  if (meets) {
+    result.className = "simulate-result ok";
+    result.innerHTML =
+      `<b>deposit accepted.</b> ${credit.id} grades ${credit.finalGrade}, ` +
+      `which meets the ${pool} pool's minimum of ${minGrade}.`;
+  } else {
+    result.className = "simulate-result bad";
+    result.innerHTML =
+      `<b>deposit rejected.</b> ${credit.id} grades ${credit.finalGrade}, ` +
+      `which is below the ${pool} pool's minimum of ${minGrade}. ` +
+      `On-chain error: <code>BelowMinGrade(${credit.finalGrade}, ${minGrade})</code>.`;
+  }
+});
+
+loadRatings();
+</script>
+</body>
+</html>

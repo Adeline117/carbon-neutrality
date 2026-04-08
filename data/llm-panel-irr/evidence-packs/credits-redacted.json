@@ -1,0 +1,301 @@
+{
+  "dataset_version": "0.1.0",
+  "description": "REDACTED version of pilot-scoring/credits.json for the LLM panel IRR study. Author-assigned scores and disqualifiers have been removed. LLM raters score each credit independently based only on the identifying metadata and the rubric.",
+  "source_file": "../../pilot-scoring/credits.json",
+  "credits": [
+    {
+      "id": "C001",
+      "name": "Climeworks Orca",
+      "type": "DACCS + geological storage",
+      "registry": "Puro.earth",
+      "methodology": "CO2 Removal Certificate (geologically stored)",
+      "country": "Iceland",
+      "vintage_year": 2024,
+      "tokenization": "Puro registry native; not yet bridged to EVM"
+    },
+    {
+      "id": "C002",
+      "name": "Heirloom DAC (California)",
+      "type": "DAC + concrete/mineralization storage",
+      "registry": "Isometric",
+      "methodology": "Limestone-based DAC",
+      "country": "USA",
+      "vintage_year": 2024,
+      "tokenization": "Isometric attestation; not currently on a liquid secondary market"
+    },
+    {
+      "id": "C003",
+      "name": "CarbonCure concrete mineralization",
+      "type": "Industrial CO2 mineralization in concrete",
+      "registry": "Verra VCS + Isometric",
+      "methodology": "VM0043 CO2 utilization in concrete",
+      "country": "USA / Canada",
+      "vintage_year": 2024,
+      "tokenization": "Off-chain; CarbonCure marketplace"
+    },
+    {
+      "id": "C004",
+      "name": "Charm Industrial bio-oil injection",
+      "type": "Pyrolysis bio-oil + geological storage",
+      "registry": "Puro.earth",
+      "methodology": "Bio-oil geological storage",
+      "country": "USA",
+      "vintage_year": 2024,
+      "tokenization": "Puro registry native"
+    },
+    {
+      "id": "C005",
+      "name": "Pacific Biochar (CA)",
+      "type": "Biochar from forestry residues",
+      "registry": "Puro.earth",
+      "methodology": "Biochar carbon removal",
+      "country": "USA",
+      "vintage_year": 2024,
+      "tokenization": "Puro native"
+    },
+    {
+      "id": "C006",
+      "name": "Husk biochar (Cambodia)",
+      "type": "Rice-husk biochar for smallholder agriculture",
+      "registry": "Verra VCS + Puro",
+      "methodology": "VM0044 + Puro biochar",
+      "country": "Cambodia",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain retirement + optional on-chain certificate"
+    },
+    {
+      "id": "C007",
+      "name": "Pachama-verified Brazilian reforestation",
+      "type": "ARR (Afforestation/Reforestation) with CCB Gold",
+      "registry": "Verra VCS",
+      "methodology": "VM0047",
+      "country": "Brazil",
+      "vintage_year": 2024,
+      "tokenization": "Toucan-bridged TCO2 historically; currently held off-chain"
+    },
+    {
+      "id": "C008",
+      "name": "Rexford IFM (Improved Forest Management)",
+      "type": "IFM with buffer pool",
+      "registry": "CAR (Climate Action Reserve)",
+      "methodology": "Forest Project Protocol v5",
+      "country": "USA",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain"
+    },
+    {
+      "id": "C009",
+      "name": "Southeast Asian VCS afforestation",
+      "type": "Plantation afforestation, 40-yr commitment",
+      "registry": "Verra VCS",
+      "methodology": "AR-ACM0003",
+      "country": "Indonesia",
+      "vintage_year": 2024,
+      "tokenization": "TCO2 in BCT pool (historical)"
+    },
+    {
+      "id": "C010",
+      "name": "Gold Standard cookstoves (Kenya)",
+      "type": "Efficient cookstove distribution",
+      "registry": "Gold Standard",
+      "methodology": "TPDDTEC",
+      "country": "Kenya",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain; some tokenized via C3"
+    },
+    {
+      "id": "C011",
+      "name": "Adipic acid N2O destruction (India)",
+      "type": "Industrial N2O abatement",
+      "registry": "Verra VCS",
+      "methodology": "AM0021",
+      "country": "India",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain"
+    },
+    {
+      "id": "C012",
+      "name": "Landfill methane capture (US)",
+      "type": "LFG collection and flaring/use",
+      "registry": "CAR",
+      "methodology": "US LFG Protocol v5",
+      "country": "USA",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain"
+    },
+    {
+      "id": "C013",
+      "name": "Mangrove blue-carbon restoration",
+      "type": "Tidal wetland restoration",
+      "registry": "Verra VCS",
+      "methodology": "VM0033",
+      "country": "Indonesia",
+      "vintage_year": 2024,
+      "tokenization": "Off-chain; some Regen Network attestation"
+    },
+    {
+      "id": "C014",
+      "name": "Plan Vivo agroforestry (Mozambique)",
+      "type": "Smallholder agroforestry",
+      "registry": "Plan Vivo",
+      "methodology": "Plan Vivo Standard v5",
+      "country": "Mozambique",
+      "vintage_year": 2023,
+      "tokenization": "Off-chain"
+    },
+    {
+      "id": "C015",
+      "name": "VCS afforestation 2018 vintage",
+      "type": "Older plantation ARR",
+      "registry": "Verra VCS",
+      "methodology": "AR-ACM0003",
+      "country": "Brazil",
+      "vintage_year": 2018,
+      "tokenization": "BCT-pooled TCO2"
+    },
+    {
+      "id": "C016",
+      "name": "Gold Standard cookstoves 2019 vintage",
+      "type": "Aged cookstoves credit",
+      "registry": "Gold Standard",
+      "methodology": "TPDDTEC",
+      "country": "Ghana",
+      "vintage_year": 2019,
+      "tokenization": "Off-chain"
+    },
+    {
+      "id": "C017",
+      "name": "Grid-connected solar (India)",
+      "type": "Utility-scale renewable energy",
+      "registry": "Verra VCS",
+      "methodology": "ACM0002",
+      "country": "India",
+      "vintage_year": 2022,
+      "tokenization": "BCT-pooled historically"
+    },
+    {
+      "id": "C018",
+      "name": "REDD+ Cordillera Azul (Peru)",
+      "type": "Avoided deforestation (under review)",
+      "registry": "Verra VCS",
+      "methodology": "VM0015 (under review)",
+      "country": "Peru",
+      "vintage_year": 2019,
+      "tokenization": "BCT-pooled historically"
+    },
+    {
+      "id": "C019",
+      "name": "Rimba Raya REDD+ (Indonesia)",
+      "type": "Avoided deforestation, CCB Gold historically",
+      "registry": "Verra VCS",
+      "methodology": "VM0015",
+      "country": "Indonesia",
+      "vintage_year": 2018,
+      "tokenization": "BCT-pooled historically; now subject to Verra review"
+    },
+    {
+      "id": "C020",
+      "name": "Chinese CDM wind 2014 vintage",
+      "type": "Grid wind (pre-Paris vintage)",
+      "registry": "CDM migrated to VCS",
+      "methodology": "ACM0002",
+      "country": "China",
+      "vintage_year": 2014,
+      "tokenization": "BCT-pooled historically"
+    },
+    {
+      "id": "C021",
+      "name": "Large hydro (Brazil) 2015",
+      "type": "Reservoir hydro",
+      "registry": "Verra VCS",
+      "methodology": "ACM0002",
+      "country": "Brazil",
+      "vintage_year": 2015,
+      "tokenization": "BCT-pooled historically"
+    },
+    {
+      "id": "C022",
+      "name": "Kariba REDD+ (Zimbabwe)",
+      "type": "Avoided deforestation; widely flagged",
+      "registry": "Verra VCS",
+      "methodology": "VM0009",
+      "country": "Zimbabwe",
+      "vintage_year": 2017,
+      "tokenization": "BCT-pooled historically"
+    },
+    {
+      "id": "C023",
+      "name": "HFC-23 destruction (pre-2013)",
+      "type": "Industrial HFC-23 abatement",
+      "registry": "CDM",
+      "methodology": "AM0001",
+      "country": "China",
+      "vintage_year": 2012,
+      "tokenization": "BCT-pooled historically (later blocklisted by Toucan)"
+    },
+    {
+      "id": "C024",
+      "name": "Chinese CDM wind 2012",
+      "type": "Grid wind (old vintage)",
+      "registry": "CDM",
+      "methodology": "ACM0002",
+      "country": "China",
+      "vintage_year": 2012,
+      "tokenization": "BCT-pooled historically"
+    },
+    {
+      "id": "C025",
+      "name": "Unverified grassland avoidance 2013",
+      "type": "Avoided conversion, informal MRV",
+      "registry": "Unrecognized regional",
+      "methodology": "Proprietary",
+      "country": "USA",
+      "vintage_year": 2013,
+      "tokenization": "NFT-minted on an obscure EVM chain"
+    },
+    {
+      "id": "C026",
+      "name": "SYNTHETIC: high-composite credit with double counting",
+      "type": "Stress test: double_counting disqualifier cap",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "\u2014",
+      "vintage_year": 2024,
+      "tokenization": "synthetic \u2014 disqualifier lattice test",
+      "stress_test_note": "Credit has AAA-tier technical scores but documented double counting. Should cap at B (strictest cap) regardless of composite."
+    },
+    {
+      "id": "C027",
+      "name": "SYNTHETIC: high-composite credit from sanctioned registry",
+      "type": "Stress test: sanctioned_registry disqualifier cap",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "\u2014",
+      "vintage_year": 2024,
+      "tokenization": "synthetic \u2014 disqualifier lattice test",
+      "stress_test_note": "Credit has AA-tier technical scores but registry is under sanction. Should cap at BB."
+    },
+    {
+      "id": "C028",
+      "name": "SYNTHETIC: high-composite credit without third-party verification",
+      "type": "Stress test: no_third_party disqualifier cap",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "\u2014",
+      "vintage_year": 2024,
+      "tokenization": "synthetic \u2014 disqualifier lattice test",
+      "stress_test_note": "Credit has AA-tier technical scores but no independent verification. Should cap at BBB."
+    },
+    {
+      "id": "C029",
+      "name": "SYNTHETIC: high-composite credit with documented community harm",
+      "type": "Stress test: community_harm gate (v0.4 new)",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "\u2014",
+      "vintage_year": 2024,
+      "tokenization": "synthetic \u2014 v0.4 safeguards-gate test",
+      "stress_test_note": "v0.4 ONLY. Credit has AA-tier technical scores but documented community harm (co_benefits in 0-9 None/negative externalities band). Should cap at BBB via the safeguards-gate."
+    }
+  ]
+}
