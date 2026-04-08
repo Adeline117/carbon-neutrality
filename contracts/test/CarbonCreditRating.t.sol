@@ -177,13 +177,131 @@ contract CarbonCreditRatingTest {
         });
         ICarbonCreditRating.Disqualifiers memory flags; // all false
 
-        rating.setRating(CREDIT_TOKEN, 42, s, flags);
+        uint64 expiresAt = uint64(block.timestamp + 365 days);
+        bytes32 evidenceHash = keccak256("example-attestation-bundle");
+
+        rating.setRating(CREDIT_TOKEN, 42, s, flags, expiresAt, evidenceHash);
 
         ICarbonCreditRating.Rating memory r = rating.ratingOf(CREDIT_TOKEN, 42);
         require(r.compositeBps >= 7500, "should be AA or better");
         require(r.finalGrade >= ICarbonCreditRating.Grade.AA, "final grade AA+");
+        require(r.methodologyVersion == 0x0400, "methodology stamped v0.4");
+        require(r.expiresAt == expiresAt, "expiresAt stored");
+        require(r.evidenceHash == evidenceHash, "evidenceHash stored");
         require(rating.meetsGrade(CREDIT_TOKEN, 42, ICarbonCreditRating.Grade.A), "meets A");
         require(!rating.meetsGrade(CREDIT_TOKEN, 42, ICarbonCreditRating.Grade.AAA), "does not meet AAA");
+        require(!rating.isStale(CREDIT_TOKEN, 42), "not stale");
     }
 
+    /// @dev B: setRating must reject an expiresAt in the past.
+    function testSetRatingRejectsPastExpiry() public {
+        setUp();
+        ICarbonCreditRating.DimensionScores memory s = ICarbonCreditRating.DimensionScores({
+            removalType: 80,
+            additionality: 80,
+            permanence: 70,
+            mrvGrade: 75,
+            vintageYear: 100,
+            coBenefits: 70,
+            registryMethodology: 80
+        });
+        ICarbonCreditRating.Disqualifiers memory flags;
+        // block.timestamp starts at 1 in forge; pick 0 which is "already expired"
+        // wait -- 0 is interpreted as "never expires". Use block.timestamp directly (not strictly in the future).
+        bool reverted = false;
+        try rating.setRating(CREDIT_TOKEN, 99, s, flags, uint64(block.timestamp), bytes32(0)) {
+            reverted = false;
+        } catch {
+            reverted = true;
+        }
+        require(reverted, "setRating should revert when expiresAt is not strictly in the future");
+    }
+
+    /// @dev B: a rating past its expiresAt is stale and meetsGrade must return false.
+    function testStaleRatingRejected() public {
+        setUp();
+        ICarbonCreditRating.DimensionScores memory s = ICarbonCreditRating.DimensionScores({
+            removalType: 95,
+            additionality: 90,
+            permanence: 92,
+            mrvGrade: 88,
+            vintageYear: 100,
+            coBenefits: 30,
+            registryMethodology: 80
+        });
+        ICarbonCreditRating.Disqualifiers memory flags;
+        uint64 expiresAt = uint64(block.timestamp + 1 days);
+
+        rating.setRating(CREDIT_TOKEN, 7, s, flags, expiresAt, bytes32(0));
+        require(!rating.isStale(CREDIT_TOKEN, 7), "fresh");
+        require(rating.meetsGrade(CREDIT_TOKEN, 7, ICarbonCreditRating.Grade.AA), "AA fresh");
+
+        // fast-forward past expiry
+        vm_warp(block.timestamp + 2 days);
+
+        require(rating.isStale(CREDIT_TOKEN, 7), "now stale");
+        require(!rating.meetsGrade(CREDIT_TOKEN, 7, ICarbonCreditRating.Grade.B), "stale rating is not eligible even at B");
+    }
+
+    /// @dev B: expiresAt == 0 means "never expires".
+    function testNeverExpires() public {
+        setUp();
+        ICarbonCreditRating.DimensionScores memory s = ICarbonCreditRating.DimensionScores({
+            removalType: 80,
+            additionality: 80,
+            permanence: 80,
+            mrvGrade: 80,
+            vintageYear: 100,
+            coBenefits: 50,
+            registryMethodology: 80
+        });
+        ICarbonCreditRating.Disqualifiers memory flags;
+
+        rating.setRating(CREDIT_TOKEN, 11, s, flags, 0, bytes32(0));
+        require(!rating.isStale(CREDIT_TOKEN, 11), "expiresAt=0 is never stale");
+
+        vm_warp(block.timestamp + 3650 days);
+        require(!rating.isStale(CREDIT_TOKEN, 11), "still not stale after 10 years");
+    }
+
+    /// @dev B: re-rating (second setRating call) resets freshness and methodology version.
+    function testReRatingResetsFreshness() public {
+        setUp();
+        ICarbonCreditRating.DimensionScores memory s = ICarbonCreditRating.DimensionScores({
+            removalType: 85,
+            additionality: 85,
+            permanence: 85,
+            mrvGrade: 85,
+            vintageYear: 100,
+            coBenefits: 40,
+            registryMethodology: 80
+        });
+        ICarbonCreditRating.Disqualifiers memory flags;
+
+        rating.setRating(CREDIT_TOKEN, 55, s, flags, uint64(block.timestamp + 1 days), bytes32(0));
+        vm_warp(block.timestamp + 2 days);
+        require(rating.isStale(CREDIT_TOKEN, 55), "stale after 2 days");
+
+        // re-rate
+        rating.setRating(CREDIT_TOKEN, 55, s, flags, uint64(block.timestamp + 365 days), keccak256("new-evidence"));
+        require(!rating.isStale(CREDIT_TOKEN, 55), "fresh again after re-rating");
+
+        ICarbonCreditRating.Rating memory r = rating.ratingOf(CREDIT_TOKEN, 55);
+        require(r.evidenceHash == keccak256("new-evidence"), "new evidence hash recorded");
+    }
+
+    /// @dev B: unrated credits report isStale = false (nothing to be stale).
+    function testUnratedNotStale() public {
+        setUp();
+        require(!rating.isStale(CREDIT_TOKEN, 999), "unrated credits are not stale");
+    }
+
+    // --- Foundry cheatcode helper --------------------------------------------
+    // We use vm.warp() via the address(0x7109...) convention so this file stays
+    // free of forge-std imports.
+    function vm_warp(uint256 ts) internal {
+        address vm = address(uint160(uint256(keccak256("hevm cheat code"))));
+        (bool ok, ) = vm.call(abi.encodeWithSignature("warp(uint256)", ts));
+        require(ok, "vm.warp failed");
+    }
 }

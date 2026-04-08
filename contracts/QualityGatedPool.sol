@@ -17,11 +17,13 @@ interface IERC20Minimal {
 ///         deposits. Mirrors Toucan's BCT pattern but with grade enforcement.
 ///
 /// @dev    This is an illustrative prototype. A production pool would need:
-///         - Rating freshness check (stale rating rejected)
 ///         - Fee handling and treasury
 ///         - Re-rating on redemption (grade may have changed)
 ///         - ERC-1155 / ERC-721 support for per-credit identity
 ///         - Reentrancy guards
+///
+///         v0.4 adds rating freshness enforcement via the rating contract's
+///         isStale() view; deposits of stale ratings are rejected.
 contract QualityGatedPool {
     ICarbonCreditRating public immutable ratings;
     ICarbonCreditRating.Grade public immutable minGrade;
@@ -36,6 +38,7 @@ contract QualityGatedPool {
 
     error BelowMinGrade(ICarbonCreditRating.Grade finalGrade, ICarbonCreditRating.Grade required);
     error Unrated();
+    error StaleRating();
     error InsufficientShares();
 
     event Deposit(address indexed user, address indexed creditToken, uint256 tokenId, uint256 amount, uint256 sharesMinted);
@@ -57,12 +60,15 @@ contract QualityGatedPool {
     ///         For ERC-20 credits where there is no tokenId (pool of a single batch),
     ///         pass tokenId = 0.
     function deposit(address creditToken, uint256 tokenId, uint256 amount) external {
-        // grade check -- reverts with a descriptive error if unrated or below threshold
+        // grade check -- reverts with a descriptive error if unrated, stale, or below threshold
         ICarbonCreditRating.Rating memory r;
         try ratings.ratingOf(creditToken, tokenId) returns (ICarbonCreditRating.Rating memory got) {
             r = got;
         } catch {
             revert Unrated();
+        }
+        if (ratings.isStale(creditToken, tokenId)) {
+            revert StaleRating();
         }
         if (uint8(r.finalGrade) < uint8(minGrade)) {
             revert BelowMinGrade(r.finalGrade, minGrade);

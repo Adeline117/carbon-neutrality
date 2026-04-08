@@ -46,13 +46,18 @@ interface ICarbonCreditRating {
     }
 
     /// @notice Full rating result for a credit token.
+    /// @dev v0.4: expiresAt + methodologyVersion + evidenceHash added for
+    ///      freshness, version-grandfathering, and off-chain attestation provenance.
     struct Rating {
         DimensionScores scores;
         Disqualifiers flags;
-        uint16 compositeBps;   // 0-10000
-        Grade nominalGrade;    // pre-disqualifier
-        Grade finalGrade;      // post-disqualifier
-        uint64 lastUpdatedAt;  // unix seconds
+        uint16 compositeBps;        // 0-10000
+        Grade nominalGrade;         // pre-disqualifier
+        Grade finalGrade;           // post-disqualifier
+        uint64 lastUpdatedAt;       // unix seconds
+        uint64 expiresAt;           // v0.4: unix seconds; 0 means "never"
+        uint16 methodologyVersion;  // v0.4: e.g. 0x0400 for v0.4; contract constant at write time
+        bytes32 evidenceHash;       // v0.4: keccak256 of the attestation bundle (PDD, verification report, etc.)
         address attestedBy;
     }
 
@@ -63,17 +68,24 @@ interface ICarbonCreditRating {
         uint16 compositeBps,
         Grade nominalGrade,
         Grade finalGrade,
+        uint16 methodologyVersion,
+        uint64 expiresAt,
         address indexed attestedBy
     );
 
     /// @notice Set or update the per-dimension scores and disqualifier flags for a credit.
     ///         Only an authorized rater may call. The composite, nominal grade and final
-    ///         grade are recomputed and stored.
+    ///         grade are recomputed and stored. The methodology version is stamped from
+    ///         the contract constant, not from the caller.
+    /// @param expiresAt    Unix seconds after which the rating is considered stale. Use 0 for never.
+    /// @param evidenceHash keccak256 of the off-chain attestation bundle (PDD, verification report, etc.).
     function setRating(
         address creditToken,
         uint256 tokenId,
         DimensionScores calldata scores,
-        Disqualifiers calldata flags
+        Disqualifiers calldata flags,
+        uint64 expiresAt,
+        bytes32 evidenceHash
     ) external;
 
     /// @notice Fetch the full rating for a credit. Reverts if unrated.
@@ -83,10 +95,15 @@ interface ICarbonCreditRating {
         returns (Rating memory);
 
     /// @notice Returns whether `(creditToken, tokenId)` meets the minimum grade.
-    ///         Unrated credits are considered ineligible.
+    ///         Unrated or stale credits are considered ineligible.
     function meetsGrade(
         address creditToken,
         uint256 tokenId,
         Grade minGrade
     ) external view returns (bool);
+
+    /// @notice Returns true if the rating has expired (past `expiresAt`, where 0 means never)
+    ///         or if it was written under an older methodology version.
+    ///         Unrated credits return false (there is nothing to be stale).
+    function isStale(address creditToken, uint256 tokenId) external view returns (bool);
 }

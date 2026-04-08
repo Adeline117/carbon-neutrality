@@ -39,6 +39,12 @@ contract CarbonCreditRating is ICarbonCreditRating {
     uint16 private constant BB_MIN  = 3000;
 
     // ------------------------------------------------------------------
+    // Methodology version. Bump with each v0.X rubric release.
+    // v0.4 uses 0x0400; v0.5 would be 0x0500; patches within v0.4 use 0x0401+.
+    // ------------------------------------------------------------------
+    uint16 public constant CURRENT_METHODOLOGY_VERSION = 0x0400;
+
+    // ------------------------------------------------------------------
     // Storage
     // ------------------------------------------------------------------
     address public owner;
@@ -52,6 +58,7 @@ contract CarbonCreditRating is ICarbonCreditRating {
     error NotRater();
     error ScoreOutOfRange(string dimension, uint8 value);
     error Unrated();
+    error ExpiryInPast(uint64 expiresAt, uint64 nowTs);
 
     // ------------------------------------------------------------------
     // Events
@@ -102,9 +109,16 @@ contract CarbonCreditRating is ICarbonCreditRating {
         address creditToken,
         uint256 tokenId,
         DimensionScores calldata scores,
-        Disqualifiers calldata flags
+        Disqualifiers calldata flags,
+        uint64 expiresAt,
+        bytes32 evidenceHash
     ) external onlyRater {
         _validateScores(scores);
+        // expiresAt=0 means "never"; otherwise it must be strictly in the future.
+        if (expiresAt != 0 && expiresAt <= block.timestamp) {
+            revert ExpiryInPast(expiresAt, uint64(block.timestamp));
+        }
+
         uint16 compositeBps = _computeCompositeBps(scores);
         Grade nominal = _gradeFromComposite(compositeBps);
         Grade finalGrade = _applyDisqualifiers(nominal, flags);
@@ -117,10 +131,22 @@ contract CarbonCreditRating is ICarbonCreditRating {
             nominalGrade: nominal,
             finalGrade: finalGrade,
             lastUpdatedAt: uint64(block.timestamp),
+            expiresAt: expiresAt,
+            methodologyVersion: CURRENT_METHODOLOGY_VERSION,
+            evidenceHash: evidenceHash,
             attestedBy: msg.sender
         });
 
-        emit RatingSet(creditToken, tokenId, compositeBps, nominal, finalGrade, msg.sender);
+        emit RatingSet(
+            creditToken,
+            tokenId,
+            compositeBps,
+            nominal,
+            finalGrade,
+            CURRENT_METHODOLOGY_VERSION,
+            expiresAt,
+            msg.sender
+        );
     }
 
     // ------------------------------------------------------------------
@@ -143,7 +169,16 @@ contract CarbonCreditRating is ICarbonCreditRating {
     {
         Rating memory r = _ratings[_key(creditToken, tokenId)];
         if (r.lastUpdatedAt == 0) return false;
+        if (_isStale(r)) return false;
         return uint8(r.finalGrade) >= uint8(minGrade);
+    }
+
+    /// @notice Public view: true if the rating is expired or written under an older
+    ///         methodology version. Returns false for unrated credits (nothing to be stale).
+    function isStale(address creditToken, uint256 tokenId) external view returns (bool) {
+        Rating memory r = _ratings[_key(creditToken, tokenId)];
+        if (r.lastUpdatedAt == 0) return false;
+        return _isStale(r);
     }
 
     // ------------------------------------------------------------------
@@ -171,6 +206,15 @@ contract CarbonCreditRating is ICarbonCreditRating {
     // ------------------------------------------------------------------
     function _key(address creditToken, uint256 tokenId) private pure returns (bytes32) {
         return keccak256(abi.encode(creditToken, tokenId));
+    }
+
+    /// @dev A rating is stale if it has expired (past expiresAt, where 0 = never)
+    ///      or if it was written under an older methodology version. Never raises
+    ///      for unrated credits; callers check lastUpdatedAt first.
+    function _isStale(Rating memory r) private view returns (bool) {
+        if (r.methodologyVersion < CURRENT_METHODOLOGY_VERSION) return true;
+        if (r.expiresAt != 0 && block.timestamp >= r.expiresAt) return true;
+        return false;
     }
 
     function _validateScores(DimensionScores calldata s) private pure {
