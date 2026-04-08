@@ -502,6 +502,90 @@
         "registry_methodology": 5
       },
       "disqualifiers": ["pre_paris_override", "no_third_party", "failed_verification"]
+    },
+    {
+      "id": "C026",
+      "name": "SYNTHETIC: high-composite credit with double counting",
+      "type": "Stress test: double_counting disqualifier cap",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "—",
+      "vintage_year": 2024,
+      "tokenization": "synthetic — disqualifier lattice test",
+      "scores": {
+        "removal_type": 90,
+        "additionality": 85,
+        "permanence": 88,
+        "mrv_grade": 85,
+        "vintage_year": 100,
+        "co_benefits": 60,
+        "registry_methodology": 82
+      },
+      "disqualifiers": ["double_counting"],
+      "stress_test_note": "Credit has AAA-tier technical scores but documented double counting. Should cap at B (strictest cap) regardless of composite."
+    },
+    {
+      "id": "C027",
+      "name": "SYNTHETIC: high-composite credit from sanctioned registry",
+      "type": "Stress test: sanctioned_registry disqualifier cap",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "—",
+      "vintage_year": 2024,
+      "tokenization": "synthetic — disqualifier lattice test",
+      "scores": {
+        "removal_type": 82,
+        "additionality": 80,
+        "permanence": 80,
+        "mrv_grade": 78,
+        "vintage_year": 100,
+        "co_benefits": 55,
+        "registry_methodology": 75
+      },
+      "disqualifiers": ["sanctioned_registry"],
+      "stress_test_note": "Credit has AA-tier technical scores but registry is under sanction. Should cap at BB."
+    },
+    {
+      "id": "C028",
+      "name": "SYNTHETIC: high-composite credit without third-party verification",
+      "type": "Stress test: no_third_party disqualifier cap",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "—",
+      "vintage_year": 2024,
+      "tokenization": "synthetic — disqualifier lattice test",
+      "scores": {
+        "removal_type": 80,
+        "additionality": 78,
+        "permanence": 75,
+        "mrv_grade": 75,
+        "vintage_year": 100,
+        "co_benefits": 50,
+        "registry_methodology": 72
+      },
+      "disqualifiers": ["no_third_party"],
+      "stress_test_note": "Credit has AA-tier technical scores but no independent verification. Should cap at BBB."
+    },
+    {
+      "id": "C029",
+      "name": "SYNTHETIC: high-composite credit with documented community harm",
+      "type": "Stress test: community_harm gate (v0.4 new)",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "—",
+      "vintage_year": 2024,
+      "tokenization": "synthetic — v0.4 safeguards-gate test",
+      "scores": {
+        "removal_type": 78,
+        "additionality": 76,
+        "permanence": 72,
+        "mrv_grade": 78,
+        "vintage_year": 100,
+        "co_benefits": 5,
+        "registry_methodology": 75
+      },
+      "disqualifiers": ["community_harm"],
+      "stress_test_note": "v0.4 ONLY. Credit has AA-tier technical scores but documented community harm (co_benefits in 0-9 None/negative externalities band). Should cap at BBB via the safeguards-gate."
     }
   ]
 }

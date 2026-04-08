@@ -1,15 +1,19 @@
 # Pilot Scoring Results
 
-Dataset: 25 credits   Weights: removal_type=0.25, additionality=0.2, permanence=0.175, mrv_grade=0.2, vintage_year=0.1, co_benefits=0.0, registry_methodology=0.075
+Dataset: 29 credits   Weights: removal_type=0.25, additionality=0.2, permanence=0.175, mrv_grade=0.2, vintage_year=0.1, co_benefits=0.0, registry_methodology=0.075
 
 | ID | Name | Type | Composite | Nominal | Final | Caps |
 |----|------|------|-----------|---------|-------|------|
 | C001 | Climeworks Orca | DACCS + geological storage | 95.2 | AAA | AAA | - |
 | C002 | Heirloom DAC (California) | DAC + concrete/mineralization stora | 93.05 | AAA | AAA | - |
 | C004 | Charm Industrial bio-oil injection | Pyrolysis bio-oil + geological stor | 90.15 | AAA | AAA | - |
+| C026 | SYNTHETIC: high-composite credit with do | Stress test: double_counting disqua | 88.05 | AA | B | double_counting->B |
 | C003 | CarbonCure concrete mineralization | Industrial CO2 mineralization in co | 87.2 | AA | AA | - |
 | C005 | Pacific Biochar (CA) | Biochar from forestry residues | 83.12 | AA | AA | - |
+| C027 | SYNTHETIC: high-composite credit from sa | Stress test: sanctioned_registry di | 81.72 | AA | BB | sanctioned_registry->BB |
 | C006 | Husk biochar (Cambodia) | Rice-husk biochar for smallholder a | 80.05 | AA | AA | - |
+| C028 | SYNTHETIC: high-composite credit without | Stress test: no_third_party disqual | 79.12 | AA | BBB | no_third_party->BBB |
+| C029 | SYNTHETIC: high-composite credit with do | Stress test: community_harm gate (v | 78.53 | AA | BBB | community_harm->BBB |
 | C007 | Pachama-verified Brazilian reforestation | ARR (Afforestation/Reforestation) w | 73.9 | A | A | - |
 | C013 | Mangrove blue-carbon restoration | Tidal wetland restoration | 68.4 | A | A | - |
 | C008 | Rexford IFM (Improved Forest Management) | IFM with buffer pool | 67.62 | A | A | - |
@@ -34,9 +38,9 @@ Dataset: 25 credits   Weights: removal_type=0.25, additionality=0.2, permanence=
 
 | Grade | Count | Share |
 |-------|-------|-------|
-| AAA | 3 | 12% |
-| AA | 3 | 12% |
-| A | 5 | 20% |
-| BBB | 4 | 16% |
-| BB | 2 | 8% |
-| B | 8 | 32% |
+| AAA | 3 | 10% |
+| AA | 3 | 10% |
+| A | 5 | 17% |
+| BBB | 6 | 21% |
+| BB | 3 | 10% |
+| B | 9 | 31% |

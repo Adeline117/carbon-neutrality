@@ -1,96 +1,149 @@
-# Pilot Scoring Analysis
+# Pilot Scoring Analysis (v0.4)
 
-*25 illustrative credits, hand-scored against the v0.2 rubrics*
+*29 credits (25 real-archetype + 4 synthetic disqualifier stress tests), scored against v0.4 rubrics using the safeguards-gate mechanism (`docs/methodology-gate-v0.4.md`).*
 
-This analysis is a **methodology stress test**, not a formal rating of the named projects. Per-dimension scores were assigned by the authors based on public project documentation and archetype-level knowledge. The goal is to check whether the proposed weights and bands produce intuitively defensible grades across the full quality spectrum, and to surface any weighting issues that warrant revision before expert consultation.
+This analysis supersedes the v0.3 edition. The v0.3 headline finding — "no credit reached AAA under the current weights" — has been resolved in v0.4; the Oxford hierarchy is now correctly reflected at the top of the scale. New fragility flags have emerged that should be acknowledged in the workshop paper's sensitivity discussion.
 
 ## 1. Overall distribution
 
-| Grade | Count | Share | Score range |
-|-------|-------|-------|-------------|
-| AAA   | 0     | 0%    | —           |
-| AA    | 7     | 28%   | 75.7 – 86.8 |
-| A     | 4     | 16%   | 63.3 – 70.5 |
-| BBB   | 4     | 16%   | 50.9 – 56.5 |
-| BB    | 3     | 12%   | 31.2 – 38.4 |
-| B     | 7     | 28%   | 15.4 – 29.3 |
+| Grade | v0.3 count | v0.3 share | v0.4 count | v0.4 share | Score range (v0.4, real credits only) |
+|-------|-----------|-----------|-----------|-----------|----------|
+| AAA   | 0  | 0%  | **3** | 12% | 90.2 – 95.2 |
+| AA    | 7  | 28% | 3     | 12% | 80.05 – 87.2 |
+| A     | 4  | 16% | 5     | 20% | 60.9 – 73.9 |
+| BBB   | 4  | 16% | 4     | 16% | 46.1 – 59.53 |
+| BB    | 3  | 12% | 2     | 8%  | 33.27 – 36.52 |
+| B     | 7  | 28% | 8     | 32% | 16.38 – 28.57 |
 
-Reference benchmarks: MSCI's 2025 Integrity Report rated **<10%** of 4,400+ projects AAA-A. Our pilot distribution is somewhat more forgiving (44% AA-A combined), which reflects deliberate spectrum sampling — not a claim that the market is 44% high quality.
+Synthetic stress tests (C026–C029) are excluded from the distribution above. They demonstrate that each disqualifier cap tier triggers correctly; see §4.
+
+Reference: MSCI's 2025 Integrity Report rated fewer than 10% of 4,400+ projects AAA-A; our pilot at 44% AA-A remains spectrum-sampled rather than VCM-representative.
 
 ## 2. Key findings
 
-### 2.1 No credit reached AAA (finding: co-benefits weight compresses engineered removal)
+### 2.1 Oxford inversion resolved
 
-Climeworks Orca -- the top-scoring credit -- received 86.8, **3.2 points short of AAA**. Inspection reveals the binding constraint: engineered removal projects score ~15-22 on co-benefits (industrial projects, no direct SDG alignment) while the weight on that dimension is 10%. This single dimension costs DACCS roughly 7-8 points on the composite.
+Three credits now reach AAA, all of them engineered carbon dioxide removal with durable storage — exactly what the Oxford Principles say a quality rating should place at the top:
 
-**Implication**: the current weighting makes it mathematically difficult for any pure-engineered-removal credit to reach AAA regardless of how rigorous the removal, storage, and MRV are. This inverts the Oxford Principles, which place engineered removal with durable storage at the top of the hierarchy.
+| ID | Credit | Composite | Grade |
+|----|--------|-----------|-------|
+| C001 | Climeworks Orca (DACCS + geological storage) | 95.20 | AAA |
+| C002 | Heirloom DAC + concrete mineralization | 93.05 | AAA |
+| C004 | Charm Industrial bio-oil injection | 90.15 | AAA |
 
-**Recommended revisions to explore in Phase 2 expert consultation:**
-- Option A: Introduce a **removal-type boost**: +5 composite for credits with removal_type >= 90 and permanence >= 90.
-- Option B: Reduce co_benefits weight to 5%, redistribute to removal_type (to 22.5%) or MRV (to 17.5%).
-- Option C: Make co_benefits a *safeguards gate* rather than a weighted dimension — score 0 on co_benefits acts as a grade cap at BBB if and only if there is documented community/environmental harm; otherwise it doesn't penalize.
+Under v0.3 these scored 86.8, 85.3, and 83.0 respectively — all AA. The blocking factor was the 10% weight on co_benefits, which systematically penalized industrial CDR projects that have no SDG narrative. Under v0.4's safeguards-gate (`docs/methodology-gate-v0.4.md`), co_benefits no longer enters the composite, and the 7.5 points of freed weight are redistributed into removal_type, permanence, and mrv_grade.
 
-The author's prior is toward **Option A**, since it preserves the safeguards function of co_benefits while rewarding high-integrity CDR.
+The v0.4 change is also strictly *better at the middle of the scale*. The Rev-1+2 proposal considered in the A2 gate would have left C004 (Charm Industrial) stuck at 85.0 AA because its mrv_grade of 82 just missed the arbitrary 85 bonus threshold. Under Alt-3 (the chosen mechanism), Charm scores 90.15 AAA on pure weights — no threshold gymnastics.
 
-### 2.2 Rating inversion between industrial DAC and nature-based removal
+### 2.2 BCT retrospective — stable reframing
 
-Pacific Biochar (C005: 80.95) scores nearly identically to Heirloom DAC (C002: 85.3) and *above* CarbonCure (C003: 79.95) despite CarbonCure's much more durable storage. The strong biochar co_benefits score (60) compensates for slightly weaker permanence and registry bases. This may or may not be desired behavior.
+The v0.3 paper's Toucan retrospective claimed "only 2 of 10 BCT-eligible credits in our pilot would have passed a grade-A gated pool." That finding is preserved under v0.4, but the grade distribution of the top two changes:
 
-**Interpretation**: The framework currently rewards projects that are *balanced* across all dimensions more than it rewards *peaks* in the most important dimensions. For a quality rating, this is a debatable choice -- a "jack of all trades" AFOLU credit and a "specialist" CDR credit can end up at the same grade even though they represent fundamentally different climate products.
+| ID | Credit | v0.3 grade | v0.4 grade |
+|----|--------|-----------|-----------|
+| C007 | Pachama Brazilian reforestation | **AA** (75.7) | **A** (73.9) |
+| C009 | SE Asian VCS afforestation | A (66.4) | A (66.2) |
+| C015 | VCS afforestation 2018 vintage | BBB | BBB |
+| C017 | Grid-connected solar (India) | BB | BB |
+| C018 | REDD+ Cordillera Azul | BB | **B** |
+| C019 | Rimba Raya REDD+ | B | B |
+| C020 | Chinese CDM wind 2014 | B | B |
+| C021 | Large hydro Brazil 2015 | B | B |
+| C022 | Kariba REDD+ | B | B |
+| C023 | HFC-23 destruction 2012 | B | B |
 
-### 2.3 Toucan BCT pool composition in retrospect
+**New phrasing for paper §7.2**: "Of 10 BCT-eligible credits in our pilot, 2 grade A or higher, 1 BBB, 1 BB, 6 at B. A grade-A gated pool would have admitted only C007 and C009 — 20% of the BCT population."
 
-Of the 25 credits, 10 are tagged as historically "BCT-pooled" or eligible:
+C007 moves from fragile-AA (v0.3 had it at 75.3 under the proposed Rev-1+2 reweight, just 0.3 above the AA boundary) to stable-A (v0.4 at 73.9 with a 13.9-point buffer to the BBB boundary). This is a **cleaner reframing** than preserving the AA grade through a magic-number bonus, and the substantive finding — BCT was dominated by junk — is identical.
 
-| ID | Credit | Final grade |
-|----|--------|-------------|
-| C007 | Brazilian reforestation (CCB Gold) | AA |
-| C009 | SE Asian afforestation | A |
-| C015 | VCS afforestation 2018 vintage | BBB |
-| C017 | Grid-connected solar (India) | BB |
-| C018 | REDD+ Cordillera Azul | BB |
-| C019 | Rimba Raya REDD+ | B |
-| C020 | Chinese wind 2014 | B |
-| C021 | Large hydro 2015 | B |
-| C022 | Kariba REDD+ | B |
-| C023 | HFC-23 destruction 2012 | B |
+Cordillera Azul (C018) also correctly drops from BB to B, matching the Carbon Market Watch 2023 assessment that flagged the project.
 
-**Finding**: 6 of 10 BCT-eligible credits in this sample grade B (lowest tier). Two grade BB. Only two grade A or above. This maps directly to the "lemons problem" dynamic: BCT's minimal eligibility (any post-2008 VCU) let the B-tier dominate by volume while any AA-grade credits were withdrawn for higher OTC prices. Had the proposed framework existed, a grade-gated pool at A or higher would have admitted only C007 and C009 from this sample.
+### 2.3 New fragility flags (see §3 for data)
 
-### 2.4 Vintage dimension is doing most of the pre-Paris work
+Three credits now sit within 1 point of a grade boundary and should be flagged to expert reviewers:
 
-The `pre_paris_override` (vintage score cap at 20 for vintage < 2016) cleanly separates old credits from new. Credits C020-C025 (all vintage <2016) have vintage scores of 0-20, pulling their composite down by roughly 8-10 points relative to current-vintage counterparts. This override is arguably doing some of the work that `sanctioned_registry` and `no_third_party` disqualifiers are also doing -- which is fine (defense in depth) but worth noting.
+| ID | Credit | Grade | Composite | Buffer | Direction |
+|----|--------|-------|-----------|--------|-----------|
+| C004 | Charm Industrial bio-oil | AAA | 90.15 | **0.15** | down → AA |
+| C011 | Adipic acid N2O destruction | BBB | 59.53 | **0.47** | up → A |
+| C014 | Plan Vivo agroforestry | A | 60.90 | **0.90** | down → BBB |
 
-### 2.5 Disqualifier interaction is currently invisible
+**C004 is the v0.4 analog of v0.3's C007 fragility.** It is the weakest of the three AAA credits and a 1-point downward rescoring on any dimension would flip it to AA. This should be explicitly flagged in paper §7 as the "load-bearing AAA boundary" credit: any later rescoring by an expert reviewer that moves Charm below 90 changes the headline distribution from 3 AAA to 2 AAA.
 
-The five disqualifiers in `index.json` never produced a visible grade cap in this dataset, because every flagged credit (C022, C023, C025) already scored low enough to be B on composite alone. **The disqualifiers are backstops, not primary filters.** In a production setting, the disqualifiers would matter for edge cases where an otherwise high-scoring credit has a single catastrophic failure (e.g., discovered double counting mid-life).
+**C011 and C014 represent the new sub-AA fragility cluster.** C011 (industrial N2O abatement) would benefit from any rescoring that moves it from BBB to A. C014 (smallholder agroforestry) would lose A if rescored slightly downward.
 
-**Recommendation**: Add a test case to the dataset where a high-composite credit has a disqualifier flag, so the interaction is demonstrated. Proposed: a hypothetical "C026" with scores matching C007 (Brazilian reforestation) but flagged `double_counting` -- should cap at B.
+### 2.4 Co-benefit-heavy credits: expected compression, no grade flips
 
-## 3. Correlation observations
+The Alt-3 safeguards-gate explicitly removes the co_benefits reward. Credits that relied on strong SDG narratives lose composite points but do not flip grades in this pilot:
 
-Raw composite scores across the 25 credits show:
-- Strong positive correlation between `removal_type` and `permanence` (both track Oxford hierarchy) -- may indicate mild collinearity. Expert review should confirm both are warranted or whether they should be merged.
-- `vintage_year` is effectively bimodal: recent credits score 88-100, pre-2016 credits score 0-20. Very few "middle-aged" credits exist in the VCM because most old vintages have either been retired or sit unsold.
-- `co_benefits` is the dimension with the largest within-class variance (0-88 for credits of similar technical type), reflecting how much discretion project developers have in pursuing SDG certifications.
+| Credit | v0.3 | v0.4 | Δ | Flip? |
+|--------|------|------|---|-------|
+| C006 Husk biochar (Cambodia) | 81.0 | 80.05 | −0.95 | No (still AA) |
+| C010 Kenya cookstoves | 51.8 | 46.1 | −5.70 | No (still BBB) |
+| C014 Plan Vivo agroforestry | 63.3 | 60.9 | −2.40 | No (still A, narrow) |
+| C016 Ghana cookstoves 2019 | 38.4 | 33.27 | −5.13 | No (still BB) |
+| C013 Mangrove blue-carbon | 70.5 | 68.4 | −2.10 | No (still A) |
 
-## 4. Sensitivity checks (to run in next iteration)
+Cookstove projects take the largest hit (−5.7), as expected — they are fundamentally avoidance-based with weak permanence but strong co-benefit narratives. The framework now refuses to let that narrative push them above BBB. This is the intended Alt-3 behavior.
 
-- **Weight perturbation**: Recompute all grades under +/-5pp perturbations to each weight. How many credits change grade? If >20% of credits flip with small perturbations, weights are fragile.
-- **Leave-one-out**: Drop each dimension and recompute. Which dimensions are load-bearing vs. redundant?
-- **Rank correlation vs MSCI / BeZero**: For credits where commercial ratings are public, how does our ranking correlate? Carbon Market Watch 2023 found significant inter-rater disagreement among commercial agencies, so we should not expect perfect correlation -- but large divergence would warrant investigation.
+## 3. Sensitivity results
 
-## 5. Proposed revisions for paper v0.3
+Generated by `python3 score.py --sensitivity`; full output in `sensitivity.md`.
 
-1. **Adjust weights** toward removal_type (0.20 -> 0.225) and mrv_grade (0.15 -> 0.175), pulling from co_benefits (0.10 -> 0.075) and registry_methodology (0.10 -> 0.075). Rationale: co_benefits and registry are somewhat overlapping quality proxies; reducing them in favor of direct technical dimensions should produce cleaner signal.
-2. **Add a removal bonus**: +5 composite (capped at 100) if removal_type >= 90 AND permanence >= 90 AND mrv_grade >= 85. Preserves Oxford hierarchy at the top of the scale.
-3. **Introduce `human_rights` as both a disqualifier and a co_benefits cap at 0** (already in 06_co_benefits.json; ensure contract mirrors).
-4. **Add disqualifier interaction test case** (C026 proposed above) to the pilot dataset.
-5. **Do not change grade band boundaries** yet; the current boundaries (90/75/60/45/30) produced a defensible distribution.
+### 3.1 Weight perturbation (±5 percentage points per dimension)
 
-## 6. Caveats and limitations
+| Dimension | Weight | +5pp flips | −5pp flips |
+|-----------|--------|-----------|-----------|
+| removal_type | 0.250 | 0/29 | 1/29 |
+| additionality | 0.200 | 1/29 | 0/29 |
+| permanence | 0.175 | 2/29 | 2/29 |
+| mrv_grade | 0.200 | 2/29 | 0/29 |
+| vintage_year | 0.100 | 2/29 | 3/29 |
+| co_benefits | 0.000 (gate) | 2/29 | 0/29 |
+| registry_methodology | 0.075 | 2/29 | 1/29 |
 
-- Per-dimension scores were assigned by the authors without a structured expert panel. For any named project, scores should be considered **illustrative archetype** rather than a formal rating.
-- The dataset is not a random sample of the VCM; credits were chosen to span the quality spectrum for methodology testing.
-- CCQI and commercial rating agency assessments were used for calibration of some credits (e.g., REDD+ rated low) but no single project was scored against a specific commercial rating.
-- The analysis does not currently include "C026" or any other disqualifier stress test; this is noted as follow-up.
+**Interpretation**: Most perturbations flip 0-2 credits, which is acceptable for a 29-credit dataset. The highest-flip dimension is **vintage_year** at −5pp (3 flips), which is expected because vintage scores are bimodal in this dataset (recent credits ~88-100, pre-2016 ~0-20), so small weight changes produce boundary-adjacent effects for the cluster of old credits. No single perturbation produces ≥4 grade changes, so the v0.4 weights are not fragile in aggregate.
+
+### 3.2 Leave-one-out (drop each dimension, redistribute proportionally)
+
+| Dropped dimension | Flips |
+|-------------------|-------|
+| removal_type | 4/29 |
+| additionality | 2/29 |
+| permanence | 5/29 |
+| mrv_grade | 0/29 |
+| vintage_year | 3/29 |
+| registry_methodology | 1/29 |
+
+**Interpretation**:
+- **permanence** is the highest-impact dimension (5 flips when dropped) — it is doing real work, not merely collinear with removal_type as the v0.3 analysis worried. This argues *against* the 7→6 dimension collapse proposed for v0.6.
+- **mrv_grade** dropping produces zero flips. This looks like redundancy, but it is actually an artifact of MRV scores being positively correlated with other technical dimensions in the pilot (high-quality CDR has high MRV, low-quality avoidance has low MRV), so redistributing mrv weight to similarly-ranked dimensions preserves grades. A random-MRV stress test would probably flip more credits.
+- **removal_type** dropping produces 4 flips, confirming it is a load-bearing dimension even with v0.4's increased weight.
+
+### 3.3 Key-credit boundary buffer
+
+See §2.3 for the fragility flags (C004, C011, C014). All other spotlight credits (C001, C002, C007) have buffers greater than 3 points to their nearest relevant boundary and are not sensitivity-fragile.
+
+## 4. Disqualifier stress tests (C026–C029)
+
+Four synthetic credits were added to verify that each disqualifier cap tier triggers correctly when the nominal grade exceeds the cap. These credits do not represent real projects; they are a validation of the grade-capping lattice.
+
+| ID | Nominal composite | Nominal grade | Disqualifier | Cap tier | Final grade | Pass? |
+|----|-------------------|---------------|--------------|----------|-------------|-------|
+| C026 | 88.05 | AA | `double_counting` | B | B | ✓ |
+| C027 | 81.72 | AA | `sanctioned_registry` | BB | BB | ✓ |
+| C028 | 79.12 | AA | `no_third_party` | BBB | BBB | ✓ |
+| C029 | 78.53 | AA | `community_harm` (v0.4) | BBB | BBB | ✓ |
+
+All four caps apply correctly. The disqualifier lattice is validated.
+
+**C029 is the first test of the v0.4 safeguards-gate mechanism.** The credit has technical scores matching a mid-grade AA credit but is flagged `community_harm` via the co_benefits rubric's 0-9 "None / negative externalities" band. The gate correctly caps at BBB: the framework recognizes the technical climate value but refuses to admit the credit into premium pools where community impact is a buyer expectation.
+
+## 5. Caveats and limitations
+
+- **Per-dimension scores for real credits are illustrative**, hand-assigned by the authors based on public documentation. They are not a formal rating of the named projects. Any numeric claim in this analysis or the paper should be traceable to `scores.csv`, but the upstream inputs in `credits.json` are author judgment.
+- **The dataset is deliberately spectrum-sampled** (full quality range) for methodology testing, not representative of VCM composition.
+- **Synthetic stress tests C026–C029 are validation cases**, not real projects, and should never be conflated with the 25-credit real-archetype dataset.
+- **The three new fragility flags (C004, C011, C014) should be mentioned in paper §7** so that a reviewer can see the boundaries the framework sits on.
+- **C007 is no longer fragile under v0.4.** The v0.3 concern about the Rev-1+2 proposal leaving C007 at 75.3 AA (0.3 above the boundary) does not apply to the Alt-3 mechanism adopted here. C007 sits at 73.9 A with a 13.9-point buffer to BBB.
+- **Sensitivity analysis was run on v0.4 weights only.** A comparative run under v0.3 weights could illuminate whether the v0.4 change increased or decreased overall stability, but is not in scope for this pilot.

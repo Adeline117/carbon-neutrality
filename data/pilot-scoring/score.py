@@ -9,15 +9,18 @@ Reads:
 Writes:
   ./scores.csv                    -- composite score, grade (nominal and post-disqualifier), per-dimension scores
   ./scores.md                     -- markdown summary table
+  ./sensitivity.md                -- (--sensitivity only) weight perturbation + leave-one-out tables
 
 Usage:
-  python3 score.py
+  python3 score.py                # basic scoring pass
+  python3 score.py --sensitivity  # also write sensitivity.md
 """
 
 from __future__ import annotations
 
 import csv
 import json
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
@@ -149,6 +152,135 @@ def main() -> None:
     # terminal preview
     print(f"Scored {len(rows)} credits -> {csv_path}")
     print(f"Grade distribution (final): {dist}")
+
+    if "--sensitivity" in sys.argv:
+        write_sensitivity(credits, rubrics, rows)
+
+
+def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict]) -> None:
+    """Weight-perturbation and leave-one-out sensitivity analyses.
+
+    Writes ./sensitivity.md. Uses the already-computed baseline grades to count
+    grade flips as each weight is perturbed. Disqualifier caps are re-applied
+    so flips reflect the full pipeline.
+    """
+    weights = {d["id"]: d["weight"] for d in rubrics["dimensions"]}
+    dimensions = list(weights.keys())
+    grade_bands = rubrics["grades"]
+    dq_spec = rubrics["disqualifiers"]
+
+    baseline_grades = {r["id"]: r["grade_final"] for r in baseline_rows}
+
+    def score_all(w: dict) -> dict[str, str]:
+        out = {}
+        for credit in credits["credits"]:
+            scores = credit["scores"]
+            comp = sum(scores[d] * w[d] for d in dimensions)
+            g = grade_from_score(comp, grade_bands)
+            g, _ = apply_disqualifiers(g, credit.get("disqualifiers", []), dq_spec)
+            out[credit["id"]] = g
+        return out
+
+    md = ["# Sensitivity Analysis", ""]
+    md.append(f"Baseline grades from v0.4 weights: {weights}")
+    md.append("")
+
+    # --- weight perturbation: +/-5pp per weight, redistributing uniformly ---
+    md.append("## 1. Weight perturbation (+/-5pp)")
+    md.append("")
+    md.append("For each dimension, add or subtract 5 percentage points of weight and redistribute the delta proportionally across the other dimensions. Report the number of credits whose final grade changes.")
+    md.append("")
+    md.append("| Dimension | Baseline | +5pp flips | -5pp flips |")
+    md.append("|-----------|----------|-----------|-----------|")
+
+    n = len(credits["credits"])
+    for dim in dimensions:
+        flips_plus = 0
+        flips_minus = 0
+        for delta in (+0.05, -0.05):
+            new_w = dict(weights)
+            target = new_w[dim] + delta
+            if target < 0:
+                continue
+            new_w[dim] = target
+            others = [d for d in dimensions if d != dim and weights[d] > 0]
+            if not others:
+                continue
+            # Redistribute the delta proportionally among non-zero other weights
+            other_sum = sum(weights[d] for d in others)
+            for d in others:
+                new_w[d] = weights[d] - delta * (weights[d] / other_sum)
+            # renormalise against float error
+            total = sum(new_w.values())
+            if total > 0:
+                new_w = {k: v / total for k, v in new_w.items()}
+            new_grades = score_all(new_w)
+            flips = sum(1 for cid, g in new_grades.items() if g != baseline_grades[cid])
+            if delta > 0:
+                flips_plus = flips
+            else:
+                flips_minus = flips
+        md.append(f"| {dim} | {weights[dim]:.3f} | {flips_plus}/{n} | {flips_minus}/{n} |")
+    md.append("")
+
+    # --- leave-one-out: drop each dimension, redistribute proportionally ---
+    md.append("## 2. Leave-one-out")
+    md.append("")
+    md.append("For each dimension with nonzero weight, set its weight to 0 and redistribute proportionally to the others. Report grade flips. (co_benefits is skipped since its v0.4 weight is already 0.)")
+    md.append("")
+    md.append("| Dropped dimension | Flips |")
+    md.append("|-------------------|-------|")
+
+    for dim in dimensions:
+        if weights[dim] == 0:
+            continue
+        new_w = dict(weights)
+        dropped = new_w[dim]
+        new_w[dim] = 0.0
+        remaining = sum(v for k, v in new_w.items() if v > 0)
+        if remaining == 0:
+            continue
+        for k in new_w:
+            if new_w[k] > 0:
+                new_w[k] = new_w[k] + dropped * (new_w[k] / remaining)
+        new_grades = score_all(new_w)
+        flips = sum(1 for cid, g in new_grades.items() if g != baseline_grades[cid])
+        md.append(f"| {dim} | {flips}/{n} |")
+    md.append("")
+
+    # --- individual dimension perturbation on Orca and C007 ---
+    md.append("## 3. Key-credit stability under score perturbation")
+    md.append("")
+    md.append("Hold weights fixed; perturb individual dimension *scores* by +/-5 for the load-bearing credits. How close are they to flipping grade?")
+    md.append("")
+    md.append("| Credit | Current grade | Current composite | Nearest boundary | Buffer |")
+    md.append("|--------|---------------|-------------------|------------------|--------|")
+
+    boundaries = sorted({b["min"] for b in grade_bands})
+    for cid in ["C001", "C002", "C004", "C007", "C014", "C011"]:
+        credit = next(c for c in credits["credits"] if c["id"] == cid)
+        row = next(r for r in baseline_rows if r["id"] == cid)
+        comp = row["composite"]
+        g = row["grade_final"]
+        # nearest boundary above and below
+        above = min((b for b in boundaries if b > comp), default=None)
+        below = max((b for b in boundaries if b <= comp), default=0)
+        buf_up = (above - comp) if above is not None else float("inf")
+        buf_down = comp - below
+        buf = min(buf_up, buf_down)
+        nearest = above if buf_up < buf_down else below
+        md.append(f"| {cid} {credit['name'][:25]} | {g} | {comp} | {nearest} | {buf:.2f} |")
+    md.append("")
+
+    md.append("## 4. Interpretation notes")
+    md.append("")
+    md.append("- Weight-perturbation flips near zero or one credit per perturbation indicate stable weighting; multi-credit flips indicate fragility that should be flagged to expert reviewers.")
+    md.append("- Leave-one-out is a stronger test: if dropping a dimension leaves grades largely unchanged, the dimension is redundant with the others.")
+    md.append("- Buffer < 2.0 in the key-credit table indicates a credit whose grade is sensitive to per-dimension rescoring and should be flagged in the paper's sensitivity discussion.")
+    md.append("")
+
+    (HERE / "sensitivity.md").write_text("\n".join(md))
+    print(f"Wrote sensitivity analysis -> {HERE / 'sensitivity.md'}")
 
 
 if __name__ == "__main__":
