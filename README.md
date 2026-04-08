@@ -67,26 +67,29 @@ carbon-neutrality/
     workshop-paper.md                # Phase 1 workshop paper (v0.4)
     methodology-gate-v0.4.md         # A2 design note: scoring mechanism decision
     decentralized-rater-design.md    # D design note: rater architecture comparison
+    v0.4-executive-summary.md        # 2-page briefing for expert reviewers
+    v0.5-weight-calibration-questionnaire.md  # Structured expert questionnaire
     dimension-definitions.md         # Detailed scoring criteria per dimension
     toucan-failure-analysis.md       # What went wrong and lessons learned
     literature-review.md             # Survey of 27+ papers/reports (2022-2026)
   data/
     scoring-rubrics/                 # Machine-readable JSON rubrics (1 per dimension + index)
-    pilot-scoring/                   # 29-credit hand-scored pilot + Python scorer + sensitivity
+    pilot-scoring/                   # 29-credit illustrative pilot + Python scorer + sensitivity
+    tokenized-pilot/                 # 14-credit real-tokenized pilot (BCT, NCT, MCO2, NRT, Puro CDR, ...)
   contracts/
     ICarbonCreditRating.sol          # Interface + shared types (Rating struct with freshness)
     CarbonCreditRating.sol           # Reference rating contract (v0.4 safeguards-gate)
     QualityGatedPool.sol             # Example pool that rejects deposits below a minimum grade
     test/
-      CarbonCreditRating.t.sol       # Foundry tests (7+ passing in v0.4)
+      CarbonCreditRating.t.sol       # Foundry tests (12 passing in v0.4)
 ```
 
 ## Status
 
 **Exploratory** | Target: Late 2026
 
-- **v0.4 (current):** Workshop paper bumped to v0.4 with the safeguards-gate scoring mechanism (see `docs/methodology-gate-v0.4.md`). Oxford hierarchy restored at the top (3 credits reach AAA: Climeworks Orca, Heirloom DAC, Charm Industrial). Pilot extended to 29 credits with disqualifier stress tests and sensitivity analysis. Rating struct gains freshness + methodology version + evidence hash. Decentralized rater design doc comparing EAS / UMA / quorum / registry-attester models.
-- **v0.5 (next):** Score actually-on-chain credits (MCO2, BCT/NCT, NRT, Puro CDR), commercial rating rank-correlation benchmark, expert consultation on v0.4 methodology.
+- **v0.4 (current):** Workshop paper with the safeguards-gate scoring mechanism. 3 engineered-CDR credits reach AAA (Orca, Heirloom, Charm). Illustrative pilot at 29 credits; tokenized pilot at 14 real on-chain credits (C workstream partial — rank correlation deferred). Rating struct gains freshness + methodology version + evidence hash. Decentralized rater design doc comparing EAS / UMA / quorum / registry-attester models. Expert consultation materials (executive summary + questionnaire) ready for outreach.
+- **v0.5 (next):** Gather expert feedback via the questionnaire, complete commercial rating rank-correlation study (needs web access to BeZero/Sylvera/Calyx/MSCI ratings), integrate feedback into v0.5 methodology diff.
 
 Consensus methodology (CCQI-style structured elicitation or formal Delphi) to be determined after initial expert feedback.
 
