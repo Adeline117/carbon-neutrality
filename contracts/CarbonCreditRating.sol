@@ -305,6 +305,7 @@ contract CarbonCreditRating is ICarbonCreditRating {
         if (flags.sanctionedRegistry  && capped > Grade.BB)  capped = Grade.BB;
         if (flags.noThirdParty        && capped > Grade.BBB) capped = Grade.BBB;
         if (flags.communityHarm       && capped > Grade.BBB) capped = Grade.BBB;
+        if (flags.biodiversityHarm    && capped > Grade.BBB) capped = Grade.BBB;
 
         return capped;
     }

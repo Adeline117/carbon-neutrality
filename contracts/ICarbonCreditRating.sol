@@ -52,6 +52,9 @@ interface ICarbonCreditRating {
     /// @notice Bitmap of disqualifier flags. Any set bit may cap the final grade.
     ///         Bit positions are stable and must match the rubric index.json order.
     ///         v0.4: adds communityHarm (caps at BBB) as the safeguards-gate.
+    ///         v0.6: adds biodiversityHarm (caps at BBB) per Zeng et al. (Nature
+    ///         Reviews Biodiversity, 2026) finding of 3.7% habitat disturbance
+    ///         increase from carbon offset projects.
     struct Disqualifiers {
         bool doubleCounting;       // caps at B
         bool failedVerification;   // caps at B
@@ -59,6 +62,7 @@ interface ICarbonCreditRating {
         bool noThirdParty;         // caps at BBB
         bool humanRights;          // caps at B
         bool communityHarm;        // caps at BBB (v0.4 safeguards-gate)
+        bool biodiversityHarm;     // caps at BBB (v0.6; Zeng et al. 2026)
     }
 
     /// @notice Full rating result for a credit token.

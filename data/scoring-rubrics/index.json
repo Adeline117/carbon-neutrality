@@ -26,7 +26,8 @@
     {"id": "sanctioned_registry",   "condition": "Registry or methodology under sanction",                     "grade_cap": "BB"},
     {"id": "no_third_party",        "condition": "No independent third-party verification",                    "grade_cap": "BBB"},
     {"id": "human_rights",          "condition": "Credible human rights violation claims",                     "grade_cap": "B"},
-    {"id": "community_harm",        "condition": "Documented community opposition or environmental damage (co_benefits 'None / negative externalities' band)", "grade_cap": "BBB"}
+    {"id": "community_harm",        "condition": "Documented community opposition or environmental damage (co_benefits 'None / negative externalities' band)", "grade_cap": "BBB"},
+    {"id": "biodiversity_harm",     "condition": "Published research documents measurable biodiversity loss, habitat disturbance, or ecosystem degradation caused by the project (per Zeng et al. Nature Reviews Biodiversity 2026)", "grade_cap": "BBB"}
   ],
   "composite_formula": "sum(dimension_score_i * weight_i)",
   "composite_uncertainty_formula": "var(composite) = sum(weight_i^2 * std_i^2)",

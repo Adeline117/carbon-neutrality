@@ -103,7 +103,8 @@ contract CarbonCreditRatingTest {
             sanctionedRegistry: false,
             noThirdParty: true,
             humanRights: false,
-            communityHarm: false
+            communityHarm: false,
+            biodiversityHarm: false
         });
         // Already B on composite alone; disqualifier is a no-op here.
         uint16 bps = rating.computeComposite(s);
@@ -133,7 +134,8 @@ contract CarbonCreditRatingTest {
             sanctionedRegistry: false,
             noThirdParty: false,
             humanRights: false,
-            communityHarm: false
+            communityHarm: false,
+            biodiversityHarm: false
         });
         uint16 bps = rating.computeComposite(s);
         require(bps == 9500, "composite");
@@ -193,7 +195,8 @@ contract CarbonCreditRatingTest {
             sanctionedRegistry: false,
             noThirdParty: false,
             humanRights: false,
-            communityHarm: true
+            communityHarm: true,
+            biodiversityHarm: false
         });
         uint16 bps = rating.computeComposite(s);
         ICarbonCreditRating.Grade nominal = rating.gradeFromComposite(bps);

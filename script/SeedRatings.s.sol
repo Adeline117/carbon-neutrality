@@ -78,7 +78,8 @@ contract SeedRatings is Script {
                 sanctionedRegistry: row.sanctionedRegistry,
                 noThirdParty: row.noThirdParty,
                 humanRights: row.humanRights,
-                communityHarm: row.communityHarm
+                communityHarm: row.communityHarm,
+                biodiversityHarm: false  // v0.6: not yet flagged in pilot data
             });
             // v0.5 default stds (rounded from empirical W1 IRR data)
             ICarbonCreditRating.DimensionStds memory stds = ICarbonCreditRating.DimensionStds({
