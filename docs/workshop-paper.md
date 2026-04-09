@@ -10,7 +10,7 @@ Tokenized carbon credit markets suffer from a quality indistinguishability probl
 
 ### 1.1 The Tokenized Carbon Market
 
-The voluntary carbon market (VCM) has seen significant growth, reaching approximately $2B in 2023. Blockchain-based platforms emerged to bring transparency, liquidity, and composability to carbon credits by tokenizing verified offsets from registries like Verra and Gold Standard. However, recent systematic assessments paint a sobering picture: a Nature Communications (2024) meta-analysis of 2,346 projects covering ~1 billion tCO2e found that **less than 16% of carbon credits constitute real emission reductions** -- with cookstoves at 11%, REDD+ at 25%, and wind power showing no statistically significant reductions at all. The Annual Review of Environment and Resources (2025) concluded that most offset programs overestimate climate impact by **5-10x or more**.
+The voluntary carbon market (VCM) has seen significant growth, reaching approximately $2B in 2023. Blockchain-based platforms emerged to bring transparency, liquidity, and composability to carbon credits by tokenizing verified offsets from registries like Verra and Gold Standard. However, recent systematic assessments paint a sobering picture: a Calel et al. (Nature Communications 2024) meta-analysis of 2,346 projects covering ~1 billion tCO2e found that **less than 16% of carbon credits constitute real emission reductions** -- with cookstoves at 11%, REDD+ at 25%, and wind power showing no statistically significant reductions at all. The Annual Review of Environment and Resources (2025) concluded that most offset programs overestimate climate impact by **5-10x or more**.
 
 ### 1.2 The Pooling Problem
 
@@ -586,7 +586,7 @@ All code, rubrics, pilot data, IRR raw outputs, rank-correlation datasets, deplo
 5. Verra. (2023). VCS Program Guide v4.4.
 6. West, T.A.P., et al. (2023). Action needed to make carbon offsets from forest conservation work for climate change mitigation. *Science*, 381(6660), 873-877.
 7. Zhou, C., Chen, H., Wang, S., Sun, X., El Saddik, A., & Cai, W. (2023). Harnessing Web3 on Carbon Offset Market for Sustainability: Framework and A Case Study. *IEEE Wireless Communications*, 30(5), 104-111.
-8. Nature Communications. (2024). Systematic assessment of the achieved emission reductions of carbon crediting projects.
+8. Calel, R., Colmer, J., Dechezleprêtre, A., & Glachant, M. (2024). Systematic assessment of the achieved emission reductions of carbon crediting projects. *Nature Communications*, 15, 3388.
 9. Annual Review of Environment and Resources. (2025). Are Carbon Offsets Fixable?
 10. Trencher, G., et al. (2024). Demand for low-quality offsets by major companies undermines climate integrity of the voluntary carbon market. *Nature Communications*.
 11. Manshadi, V., Monachou, F., & Morgenstern, I. (2025). Offsetting Carbon with Lemons: Adverse Selection and Certification in the Voluntary Carbon Market. *SSRN*.

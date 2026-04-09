@@ -195,6 +195,27 @@ def test_co_benefits_no_effect():
     assert composite(s1, WEIGHTS) == composite(s2, WEIGHTS)
 
 
+# --- Python ↔ Solidity cross-check ---
+
+def test_python_solidity_crosscheck():
+    """Verify Python composite matches Solidity's integer bps math for 3 credits."""
+    import json
+    credits_path = Path(__file__).resolve().parent.parent / "data" / "pilot-scoring" / "credits.json"
+    credits_data = json.loads(credits_path.read_text())["credits"]
+    weights_bps = {d["id"]: int(d["weight"] * 10000) for d in RUBRICS["dimensions"]}
+
+    for cid, expected_bps in [("C001", 9505), ("C010", 4632), ("C022", 1960)]:
+        c = next(x for x in credits_data if x["id"] == cid)
+        s = c["scores"]
+        # Solidity: sum(score * w_bps) // 100
+        sol_bps = sum(s[d] * weights_bps[d] for d in weights_bps) // 100
+        # Python: composite * 100 rounded
+        py_comp = composite(s, WEIGHTS)
+        py_bps = int(round(py_comp * 100))
+        assert sol_bps == expected_bps, f"{cid}: Solidity {sol_bps} != expected {expected_bps}"
+        assert py_bps == sol_bps, f"{cid}: Python {py_bps} != Solidity {sol_bps}"
+
+
 if __name__ == "__main__":
     # Simple runner without pytest
     import traceback

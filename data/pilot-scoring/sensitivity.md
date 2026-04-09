@@ -8,11 +8,11 @@ For each dimension, add or subtract 5 percentage points of weight and redistribu
 
 | Dimension | Baseline | +5pp flips | -5pp flips |
 |-----------|----------|-----------|-----------|
-| removal_type | 0.250 | 0/29 | 1/29 |
-| additionality | 0.200 | 1/29 | 0/29 |
+| removal_type | 0.250 | 0/29 | 0/29 |
+| additionality | 0.200 | 0/29 | 1/29 |
 | permanence | 0.175 | 2/29 | 2/29 |
 | mrv_grade | 0.200 | 2/29 | 0/29 |
-| vintage_year | 0.100 | 2/29 | 3/29 |
+| vintage_year | 0.100 | 1/29 | 3/29 |
 | co_benefits | 0.000 | 2/29 | 0/29 |
 | registry_methodology | 0.075 | 2/29 | 1/29 |
 
@@ -24,23 +24,23 @@ For each dimension with nonzero weight, set its weight to 0 and redistribute pro
 |-------------------|-------|
 | removal_type | 4/29 |
 | additionality | 2/29 |
-| permanence | 5/29 |
-| mrv_grade | 0/29 |
+| permanence | 4/29 |
+| mrv_grade | 1/29 |
 | vintage_year | 3/29 |
 | registry_methodology | 1/29 |
 
 ## 3. Key-credit stability under score perturbation
 
-Hold weights fixed; perturb individual dimension *scores* by +/-5 for the load-bearing credits. How close are they to flipping grade?
+Automatically identifies the credits closest to a grade boundary. Credits with buffer < 2.0 are grade-sensitive to small per-dimension rescoring.
 
 | Credit | Current grade | Current composite | Nearest boundary | Buffer |
 |--------|---------------|-------------------|------------------|--------|
-| C001 Climeworks Orca | AAA | 95.2 | 90 | 5.20 |
-| C002 Heirloom DAC (California) | AAA | 93.05 | 90 | 3.05 |
-| C004 Charm Industrial bio-oil  | AAA | 90.15 | 90 | 0.15 |
-| C007 Pachama-verified Brazilia | A | 73.9 | 75 | 1.10 |
-| C014 Plan Vivo agroforestry (M | A | 60.9 | 60 | 0.90 |
-| C011 Adipic acid N2O destructi | BBB | 59.53 | 60 | 0.47 |
+| C014 Plan Vivo agroforestry (Mozambiq | A | 60.15 | 60 | 0.15 |
+| C004 Charm Industrial bio-oil injecti | AAA | 90.53 | 90 | 0.53 |
+| C007 Pachama-verified Brazilian refor | A | 74.05 | 75 | 0.95 |
+| C010 Gold Standard cookstoves (Kenya) | BBB | 46.33 | 45 | 1.33 |
+| C018 REDD+ Cordillera Azul (Peru) | B | 28.2 | 30 | 1.80 |
+| C011 Adipic acid N2O destruction (Ind | BBB | 57.28 | 60 | 2.72 |
 
 ## 4. Interpretation notes
 

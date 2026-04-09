@@ -301,10 +301,10 @@ def main() -> None:
     print(f"Posteriors -> {out_dir / 'posteriors.json'}")
 
     if "--sensitivity" in sys.argv:
-        write_sensitivity(credits, rubrics, rows, out_dir)
+        write_sensitivity(credits, rubrics, rows, out_dir, dim_adjustments)
 
 
-def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict], out_dir: Path) -> None:
+def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict], out_dir: Path, dim_adjustments: dict | None = None) -> None:
     """Weight-perturbation and leave-one-out sensitivity analyses.
 
     Writes sensitivity.md in `out_dir`. Uses the already-computed baseline grades
@@ -320,11 +320,11 @@ def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict], o
 
     def score_all(w: dict) -> dict[str, str]:
         out = {}
+        _adjs = dim_adjustments or {}
         for credit in credits["credits"]:
             base = credit["scores"]
-            # v0.6 fix: apply dimension adjustments before composite (was missing)
             adj_flags = credit.get("adjustments", [])
-            scores = apply_dimension_adjustments(base, adj_flags, dim_adjustments)
+            scores = apply_dimension_adjustments(base, adj_flags, _adjs)
             comp = sum(scores[d] * w[d] for d in dimensions)
             g = grade_from_score(comp, grade_bands)
             g, _ = apply_disqualifiers(g, credit.get("disqualifiers", []), dq_spec)

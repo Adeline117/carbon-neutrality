@@ -74,9 +74,13 @@ def score_project(
     vy = project.get("vintage_year", 2024)
     scores["vintage_year"] = vintage_score(int(vy))
 
+    # Per-archetype stds: merge archetype-specific overrides with global defaults
+    arch_stds = archetype.get("std_overrides", {})
+    stds = {d: float(arch_stds.get(d, default_stds[d])) for d in default_stds}
+
     # Compute
     comp = composite(scores, weights)
-    comp_var = composite_variance(default_stds, weights)
+    comp_var = composite_variance(stds, weights)
     comp_sigma = math.sqrt(comp_var) if comp_var > 0 else 0.0
     grade = grade_from_score(comp, grade_bands)
     posterior = grade_posterior(comp, comp_sigma, grade_bands)

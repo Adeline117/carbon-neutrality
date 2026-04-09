@@ -1,0 +1,33 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  solidity:
+    name: Foundry tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+      - run: forge build
+      - run: forge test -vv
+
+  python:
+    name: Python scorer tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python3 tests/test_scorer.py
+      - name: Verify scorer runs on both pilots
+        run: |
+          python3 data/pilot-scoring/score.py
+          python3 data/pilot-scoring/score.py --credits data/tokenized-pilot/credits.json

@@ -1,12 +1,14 @@
-# Tokenized Credit Pilot Analysis (v0.5 workstream C)
+# Tokenized Credit Pilot Analysis (v0.6)
 
-*14 real on-chain / tokenized carbon credits, hand-scored under the v0.4 rubrics. This is the companion to the illustrative pilot in `../pilot-scoring/`; where that dataset uses project archetypes, this dataset only includes instruments that actually exist as tokens on a real chain.*
+*16 real on-chain / tokenized carbon credits, hand-scored under the v0.6 rubrics. This is the companion to the illustrative pilot in `../pilot-scoring/`; where that dataset uses project archetypes, this dataset only includes instruments that actually exist as tokens on a real chain.*
 
-Every score in this file is still author judgment, not a formal rating. The goal is to apply the v0.4 methodology to the actually-tokenized carbon market and see whether its grade distribution matches, contradicts, or extends the illustrative pilot's findings.
+*v0.6 update: expanded from 14 to 16 credits with the addition of T015 (Toucan CHAR pool on Base, AA 80.25) and T016 (Rainbow Standard biochar, AA 79.95). Registry scores updated per the v0.6 2-tier CCP/Non-CCP rubric.*
+
+Every score in this file is still author judgment, not a formal rating. The goal is to apply the v0.6 methodology to the actually-tokenized carbon market and see whether its grade distribution matches, contradicts, or extends the illustrative pilot's findings.
 
 ## 1. Dataset composition
 
-14 tokenized credits / pools spanning five tokenization models:
+16 tokenized credits / pools spanning seven tokenization models:
 
 | Tokenization model | Count | Examples |
 |--------------------|-------|----------|
