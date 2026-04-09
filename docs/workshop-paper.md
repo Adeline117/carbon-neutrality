@@ -1,16 +1,17 @@
 # Toward a Standardized Quality Rating for On-Chain Carbon Credits
 
-*Workshop Paper -- Draft v0.4*
+*Workshop Paper -- Draft v0.6*
 
-**Changelog vs v0.3**
-- Adopted the **safeguards-gate mechanism** for scoring (`docs/methodology-gate-v0.4.md`). Co-benefits is no longer scored as a weighted dimension in the composite; it is attested as an informational field and used by assessors to set a new `communityHarm` disqualifier that caps the grade at BBB. The 0.075 previously on co-benefits is redistributed to removal_type (+0.05), permanence (+0.025), and mrv_grade (+0.05). This replaces the v0.3 "removal bonus" proposal, which was found in stress-testing to triple-count durability and leave C007 fragile at the AA/A boundary.
-- **Oxford hierarchy restored at the top of the scale.** Three engineered-removal credits now reach AAA (Climeworks Orca 95.2, Heirloom DAC 93.05, Charm Industrial 90.15), versus zero under v0.3. §7 is rewritten around this result.
-- Pilot dataset extended from 25 to 29 credits: four synthetic stress cases (C026–C029) validate each disqualifier cap tier, including the new `communityHarm` safeguards-gate.
-- New §7.4 sensitivity section (weight perturbation + leave-one-out + key-credit boundary buffers).
-- New fragility flag: **C004 Charm Industrial at 0.15 above the AAA boundary.** This is the v0.4 analog of the C007 fragility documented in v0.3.
-- Solidity reference implementation updated; all 7 Foundry tests pass (was 5 in v0.3). New tests: `testCoBenefitsNoEffect`, `testCommunityHarmCapsAtBBB`.
-- §9 (Limitations) adds items for the new fragility flags and the v0.3 grandfathering problem that workstream B will address.
-- §10 (Next Steps) marks pilot and prototype as done, adds explicit v0.5 scope (real tokenized credit dataset + commercial rating rank correlation + expert consultation).
+**Changelog vs v0.5**
+- **v0.6 rubric refinement (W2):** registry_methodology collapsed from 4 tiers to 2 tiers (CCP-eligible / Non-CCP) per ICVCM's 36 approved methodology list, reducing combinatorial scoring space from ~1920 to ~40 possible outcomes. Pre-Paris vintage override removed (redundant with the 12pt/yr decay). Co-benefits 0-9 harm band tightened with explicit 2-line criterion.
+- **Biodiversity safeguards (W7):** new `biodiversityHarm` disqualifier (caps at BBB) per Zeng et al. (Nature Reviews Biodiversity, 2026) finding of 3.7% habitat disturbance increase from carbon offset projects.
+- **EAS adapter (W5):** `CarbonCreditRatingEASAdapter.sol` implements the Option A2 relay pattern from `docs/decentralized-rater-design.md`. Trusted-attester allowlist with schema verification, revocation checking, and attestation decoding. References Hypercerts evaluator registry and GainForest Ecocerts.
+- **Composability demos (W6):** `KlimaRetirementGate.sol` shows kVCM retirement quality gating; `CHARQualityOverlay.sol` shows how Toucan CHAR's binary allowlist could be augmented with continuous rating + quality-based fee discounts.
+- **50 references** (was 32 in v0.4), including 15 new 2025-2026 VCM sources and 12 on-chain tech findings.
+- §10 Next Steps fully rewritten with v0.5 items marked done and explicit v0.6/v0.7 scope.
+
+**Changelog v0.4 → v0.5** (retained for reference)
+- Safeguards-gate mechanism, Oxford hierarchy restored (2-3 AAA under panel consensus), LLM panel IRR (Fleiss' κ=0.600), distributional composite (P(grade) posteriors), 16-credit tokenized pilot, rank correlation vs BeZero/Calyx/Sylvera (+0.343 vs +0.009), Base Sepolia deployment infra, expert consultation materials.
 
 ## Abstract
 
