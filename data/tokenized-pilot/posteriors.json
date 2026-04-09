@@ -1,0 +1,242 @@
+[
+  {
+    "id": "T001",
+    "name": "Toucan BCT (Base Carbon Tonne)",
+    "composite": 31.1,
+    "compositeStd": 2.88,
+    "grade": "BB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.6485,
+      "B": 0.3515
+    }
+  },
+  {
+    "id": "T002",
+    "name": "Toucan NCT (Nature Carbon Tonne)",
+    "composite": 46.62,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.7134,
+      "BB": 0.2866,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T003",
+    "name": "Moss MCO2",
+    "composite": 30.88,
+    "compositeStd": 2.88,
+    "grade": "BB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.6192,
+      "B": 0.3808
+    }
+  },
+  {
+    "id": "T004",
+    "name": "Nori NRT - Regenerative Agriculture",
+    "composite": 49.98,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0003,
+      "BBB": 0.9574,
+      "BB": 0.0423,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T005",
+    "name": "Flowcarbon GNT (Goddess Nature Token)",
+    "composite": 42.12,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.1595,
+      "BB": 0.8405,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T006",
+    "name": "C3 C3T (Universal Base)",
+    "composite": 49.1,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0001,
+      "BBB": 0.9223,
+      "BB": 0.0776,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T007",
+    "name": "Puro.earth CORC (Biochar, average)",
+    "composite": 80.55,
+    "compositeStd": 2.88,
+    "grade": "AA",
+    "posterior": {
+      "AAA": 0.0005,
+      "AA": 0.9723,
+      "A": 0.0272,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T008",
+    "name": "Isometric/Heirloom DAC attestation",
+    "composite": 93.2,
+    "compositeStd": 2.88,
+    "grade": "AAA",
+    "posterior": {
+      "AAA": 0.8664,
+      "AA": 0.1336,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T009",
+    "name": "Climeworks Orca via Puro",
+    "composite": 95.05,
+    "compositeStd": 2.88,
+    "grade": "AAA",
+    "posterior": {
+      "AAA": 0.96,
+      "AA": 0.04,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T010",
+    "name": "Charm Industrial bio-oil",
+    "composite": 90.53,
+    "compositeStd": 2.88,
+    "grade": "AAA",
+    "posterior": {
+      "AAA": 0.5722,
+      "AA": 0.4278,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T011",
+    "name": "JPMorgan Kinexys (S&P Global pilot)",
+    "composite": 63.02,
+    "compositeStd": 2.88,
+    "grade": "A",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.8528,
+      "BBB": 0.1472,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T012",
+    "name": "Open Forest Protocol credit",
+    "composite": 68.62,
+    "compositeStd": 2.88,
+    "grade": "A",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0136,
+      "A": 0.9851,
+      "BBB": 0.0014,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T013",
+    "name": "Regen Network NCT (Cosmos)",
+    "composite": 54.5,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0283,
+      "BBB": 0.9712,
+      "BB": 0.0005,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T015",
+    "name": "Toucan CHAR pool (Base, biochar)",
+    "composite": 80.25,
+    "compositeStd": 2.88,
+    "grade": "AA",
+    "posterior": {
+      "AAA": 0.0004,
+      "AA": 0.9653,
+      "A": 0.0344,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T016",
+    "name": "Rainbow Standard biochar credit",
+    "composite": 79.95,
+    "compositeStd": 2.88,
+    "grade": "AA",
+    "posterior": {
+      "AAA": 0.0002,
+      "AA": 0.9567,
+      "A": 0.0431,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "T014",
+    "name": "Toucan TCO2 - Kariba REDD+ (historical)",
+    "composite": 19.6,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0002,
+      "B": 0.9998
+    }
+  }
+]

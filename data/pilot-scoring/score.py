@@ -271,9 +271,34 @@ def main() -> None:
 
     (out_dir / "scores.md").write_text("\n".join(md))
 
+    # v0.6: write posteriors JSON for demo visualization
+    posteriors_out = []
+    for credit in credits["credits"]:
+        base_scores = credit["scores"]
+        credit_adjustments = credit.get("adjustments", [])
+        scores = apply_dimension_adjustments(base_scores, credit_adjustments, dim_adjustments)
+        credit_stds = credit.get("score_stds", {})
+        stds = {d: float(credit_stds.get(d, default_stds[d])) for d in dimensions}
+        comp = composite(scores, weights)
+        comp_var = composite_variance(stds, weights)
+        comp_sigma = math.sqrt(comp_var) if comp_var > 0 else 0.0
+        post = grade_posterior(comp, comp_sigma, grade_bands)
+        nominal = grade_from_score(comp, grade_bands)
+        final, _ = apply_disqualifiers(nominal, credit.get("disqualifiers", []), dq_spec)
+        posteriors_out.append({
+            "id": credit["id"],
+            "name": credit["name"],
+            "composite": round(comp, 2),
+            "compositeStd": round(comp_sigma, 2),
+            "grade": final,
+            "posterior": {g: round(p, 4) for g, p in post.items()},
+        })
+    (out_dir / "posteriors.json").write_text(json.dumps(posteriors_out, indent=2))
+
     # terminal preview
     print(f"Scored {len(rows)} credits from {creds_path} -> {csv_path}")
     print(f"Grade distribution (final): {dist}")
+    print(f"Posteriors -> {out_dir / 'posteriors.json'}")
 
     if "--sensitivity" in sys.argv:
         write_sensitivity(credits, rubrics, rows, out_dir)

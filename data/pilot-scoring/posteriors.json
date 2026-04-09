@@ -1,0 +1,437 @@
+[
+  {
+    "id": "C001",
+    "name": "Climeworks Orca",
+    "composite": 95.05,
+    "compositeStd": 2.88,
+    "grade": "AAA",
+    "posterior": {
+      "AAA": 0.96,
+      "AA": 0.04,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C002",
+    "name": "Heirloom DAC (California)",
+    "composite": 93.2,
+    "compositeStd": 2.88,
+    "grade": "AAA",
+    "posterior": {
+      "AAA": 0.8664,
+      "AA": 0.1336,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C003",
+    "name": "CarbonCure concrete mineralization",
+    "composite": 87.2,
+    "compositeStd": 2.88,
+    "grade": "AA",
+    "posterior": {
+      "AAA": 0.1659,
+      "AA": 0.8341,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C004",
+    "name": "Charm Industrial bio-oil injection",
+    "composite": 90.53,
+    "compositeStd": 2.88,
+    "grade": "AAA",
+    "posterior": {
+      "AAA": 0.5722,
+      "AA": 0.4278,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C005",
+    "name": "Pacific Biochar (CA)",
+    "composite": 83.28,
+    "compositeStd": 2.88,
+    "grade": "AA",
+    "posterior": {
+      "AAA": 0.0099,
+      "AA": 0.9881,
+      "A": 0.0021,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C006",
+    "name": "Husk biochar (Cambodia)",
+    "composite": 80.05,
+    "compositeStd": 2.88,
+    "grade": "AA",
+    "posterior": {
+      "AAA": 0.0003,
+      "AA": 0.9597,
+      "A": 0.04,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C007",
+    "name": "Pachama-verified Brazilian reforestation",
+    "composite": 74.05,
+    "compositeStd": 2.88,
+    "grade": "A",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.371,
+      "A": 0.629,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C008",
+    "name": "Rexford IFM (Improved Forest Management)",
+    "composite": 68.22,
+    "compositeStd": 2.88,
+    "grade": "A",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0094,
+      "A": 0.9884,
+      "BBB": 0.0022,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C009",
+    "name": "Southeast Asian VCS afforestation",
+    "composite": 64.72,
+    "compositeStd": 2.88,
+    "grade": "A",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0002,
+      "A": 0.9491,
+      "BBB": 0.0507,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C010",
+    "name": "Gold Standard cookstoves (Kenya)",
+    "composite": 46.33,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.677,
+      "BB": 0.323,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C011",
+    "name": "Adipic acid N2O destruction (India)",
+    "composite": 57.28,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.1724,
+      "BBB": 0.8276,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C012",
+    "name": "Landfill methane capture (US)",
+    "composite": 55.65,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0658,
+      "BBB": 0.9341,
+      "BB": 0.0001,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C013",
+    "name": "Mangrove blue-carbon restoration",
+    "composite": 66.53,
+    "compositeStd": 2.88,
+    "grade": "A",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0017,
+      "A": 0.9865,
+      "BBB": 0.0118,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C014",
+    "name": "Plan Vivo agroforestry (Mozambique)",
+    "composite": 60.15,
+    "compositeStd": 2.88,
+    "grade": "A",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.5207,
+      "BBB": 0.4793,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C015",
+    "name": "VCS afforestation 2018 vintage",
+    "composite": 50.27,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0004,
+      "BBB": 0.9659,
+      "BB": 0.0337,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C016",
+    "name": "Gold Standard cookstoves 2019 vintage",
+    "composite": 34.25,
+    "compositeStd": 2.88,
+    "grade": "BB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0001,
+      "BB": 0.9296,
+      "B": 0.0703
+    }
+  },
+  {
+    "id": "C017",
+    "name": "Grid-connected solar (India)",
+    "composite": 34.27,
+    "compositeStd": 2.88,
+    "grade": "BB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0001,
+      "BB": 0.9307,
+      "B": 0.0692
+    }
+  },
+  {
+    "id": "C018",
+    "name": "REDD+ Cordillera Azul (Peru)",
+    "composite": 28.2,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.2663,
+      "B": 0.7337
+    }
+  },
+  {
+    "id": "C019",
+    "name": "Rimba Raya REDD+ (Indonesia)",
+    "composite": 26.05,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0855,
+      "B": 0.9145
+    }
+  },
+  {
+    "id": "C020",
+    "name": "Chinese CDM wind 2014 vintage",
+    "composite": 23.25,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0096,
+      "B": 0.9904
+    }
+  },
+  {
+    "id": "C021",
+    "name": "Large hydro (Brazil) 2015",
+    "composite": 24.35,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0251,
+      "B": 0.9749
+    }
+  },
+  {
+    "id": "C022",
+    "name": "Kariba REDD+ (Zimbabwe)",
+    "composite": 19.6,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0002,
+      "B": 0.9998
+    }
+  },
+  {
+    "id": "C023",
+    "name": "HFC-23 destruction (pre-2013)",
+    "composite": 25.27,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0507,
+      "B": 0.9493
+    }
+  },
+  {
+    "id": "C024",
+    "name": "Chinese CDM wind 2012",
+    "composite": 18.95,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0001,
+      "B": 0.9999
+    }
+  },
+  {
+    "id": "C025",
+    "name": "Unverified grassland avoidance 2013",
+    "composite": 17.12,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.0,
+      "A": 0.0,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 1.0
+    }
+  },
+  {
+    "id": "C026",
+    "name": "SYNTHETIC: high-composite credit with double counting",
+    "composite": 83.03,
+    "compositeStd": 2.88,
+    "grade": "B",
+    "posterior": {
+      "AAA": 0.0078,
+      "AA": 0.9895,
+      "A": 0.0027,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C027",
+    "name": "SYNTHETIC: high-composite credit from sanctioned registry",
+    "composite": 77.22,
+    "compositeStd": 2.88,
+    "grade": "BB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.7797,
+      "A": 0.2203,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C028",
+    "name": "SYNTHETIC: high-composite credit without third-party verification",
+    "composite": 74.85,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.4793,
+      "A": 0.5207,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  },
+  {
+    "id": "C029",
+    "name": "SYNTHETIC: high-composite credit with documented community harm",
+    "composite": 74.03,
+    "compositeStd": 2.88,
+    "grade": "BBB",
+    "posterior": {
+      "AAA": 0.0,
+      "AA": 0.3677,
+      "A": 0.6323,
+      "BBB": 0.0,
+      "BB": 0.0,
+      "B": 0.0
+    }
+  }
+]

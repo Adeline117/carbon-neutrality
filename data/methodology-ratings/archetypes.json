@@ -1,0 +1,160 @@
+{
+  "description": "Methodology-level archetype scores for batch scoring. Each entry defines a 'typical project' score profile for a given methodology category. The batch scorer uses these as defaults, then adjusts per-project for vintage, specific registry, and any known red flags.",
+  "version": "0.6.0",
+  "archetypes": [
+    {
+      "id": "daccs_geological",
+      "category": "Engineered CDR",
+      "ccp_status": "CCP-eligible",
+      "description": "Direct air capture with geological storage (CarbFix, saline aquifer)",
+      "methodologies": ["Isometric DACCS", "Puro DACCS", "Climeworks"],
+      "scores": {"removal_type": 97, "additionality": 92, "permanence": 97, "mrv_grade": 90, "co_benefits": 18, "registry_methodology": 80},
+      "expected_grade": "AAA"
+    },
+    {
+      "id": "biochar",
+      "category": "Engineered CDR",
+      "ccp_status": "CCP-eligible",
+      "description": "Biochar production and soil application",
+      "methodologies": ["VM0044", "CAR Biochar", "Isometric Biochar", "Puro Biochar"],
+      "scores": {"removal_type": 80, "additionality": 80, "permanence": 82, "mrv_grade": 72, "co_benefits": 55, "registry_methodology": 80},
+      "expected_grade": "AA"
+    },
+    {
+      "id": "enhanced_weathering",
+      "category": "Engineered CDR",
+      "ccp_status": "under_assessment",
+      "description": "Enhanced rock weathering with mineralization",
+      "methodologies": ["Isometric ERW", "various"],
+      "scores": {"removal_type": 88, "additionality": 85, "permanence": 90, "mrv_grade": 75, "co_benefits": 35, "registry_methodology": 75},
+      "expected_grade": "AA"
+    },
+    {
+      "id": "bio_oil_geological",
+      "category": "Engineered CDR",
+      "ccp_status": "CCP-eligible",
+      "description": "Biomass pyrolysis bio-oil with geological injection",
+      "methodologies": ["Isometric Bio-oil", "Puro Bio-oil", "Charm Industrial"],
+      "scores": {"removal_type": 94, "additionality": 88, "permanence": 95, "mrv_grade": 80, "co_benefits": 22, "registry_methodology": 80},
+      "expected_grade": "AAA"
+    },
+    {
+      "id": "arr_conservation",
+      "category": "Nature-based removal",
+      "ccp_status": "CCP-eligible",
+      "description": "Afforestation/reforestation for conservation with buffer pool",
+      "methodologies": ["VM0047", "ACR AFR", "Isometric Reforestation"],
+      "scores": {"removal_type": 68, "additionality": 65, "permanence": 52, "mrv_grade": 68, "co_benefits": 75, "registry_methodology": 80},
+      "expected_grade": "A"
+    },
+    {
+      "id": "arr_commercial_plantation",
+      "category": "Nature-based removal",
+      "ccp_status": "varies",
+      "description": "Commercial timber/pulp plantation classified as ARR",
+      "methodologies": ["various ARR"],
+      "scores": {"removal_type": 45, "additionality": 35, "permanence": 40, "mrv_grade": 50, "co_benefits": 30, "registry_methodology": 40},
+      "adjustments": ["commercial_plantation_arr"],
+      "expected_grade": "BB-BBB"
+    },
+    {
+      "id": "ifm",
+      "category": "Nature-based removal",
+      "ccp_status": "CCP-eligible",
+      "description": "Improved forest management with buffer pool",
+      "methodologies": ["VM0045", "ACR IFM", "CAR Forest Protocol"],
+      "scores": {"removal_type": 65, "additionality": 60, "permanence": 52, "mrv_grade": 65, "co_benefits": 55, "registry_methodology": 80},
+      "expected_grade": "A"
+    },
+    {
+      "id": "redd_jurisdictional",
+      "category": "Avoided deforestation",
+      "ccp_status": "CCP-eligible",
+      "description": "Jurisdictional REDD+ (ART TREES, VCS JNR)",
+      "methodologies": ["ART TREES v2.0", "VM0048"],
+      "scores": {"removal_type": 25, "additionality": 45, "permanence": 35, "mrv_grade": 55, "co_benefits": 65, "registry_methodology": 80},
+      "expected_grade": "BBB"
+    },
+    {
+      "id": "redd_project",
+      "category": "Avoided deforestation",
+      "ccp_status": "not_CCP",
+      "description": "Project-level REDD+ (VM0009, VM0015 — not CCP-approved)",
+      "methodologies": ["VM0009", "VM0015"],
+      "scores": {"removal_type": 22, "additionality": 30, "permanence": 28, "mrv_grade": 40, "co_benefits": 55, "registry_methodology": 30},
+      "expected_grade": "BB-B"
+    },
+    {
+      "id": "cookstoves",
+      "category": "Avoidance",
+      "ccp_status": "CCP-eligible (with conditions)",
+      "description": "Efficient cookstove distribution",
+      "methodologies": ["Gold Standard TPDDTEC", "VM0050"],
+      "scores": {"removal_type": 38, "additionality": 52, "permanence": 8, "mrv_grade": 50, "co_benefits": 82, "registry_methodology": 75},
+      "expected_grade": "BBB"
+    },
+    {
+      "id": "landfill_gas",
+      "category": "Avoidance",
+      "ccp_status": "CCP-eligible",
+      "description": "Landfill gas capture and destruction/use",
+      "methodologies": ["ACR LFG", "CAR US LFG"],
+      "scores": {"removal_type": 50, "additionality": 58, "permanence": 10, "mrv_grade": 72, "co_benefits": 30, "registry_methodology": 80},
+      "expected_grade": "BBB"
+    },
+    {
+      "id": "n2o_abatement",
+      "category": "Avoidance",
+      "ccp_status": "CCP-eligible",
+      "description": "Nitrous oxide destruction in adipic acid production",
+      "methodologies": ["CAR N2O"],
+      "scores": {"removal_type": 55, "additionality": 68, "permanence": 10, "mrv_grade": 75, "co_benefits": 20, "registry_methodology": 80},
+      "expected_grade": "BBB"
+    },
+    {
+      "id": "ods_destruction",
+      "category": "Avoidance",
+      "ccp_status": "CCP-eligible",
+      "description": "Ozone-depleting substances destruction",
+      "methodologies": ["ACR ODS", "CAR ODS"],
+      "scores": {"removal_type": 52, "additionality": 72, "permanence": 10, "mrv_grade": 70, "co_benefits": 15, "registry_methodology": 80},
+      "expected_grade": "BBB"
+    },
+    {
+      "id": "rice_methane",
+      "category": "Avoidance",
+      "ccp_status": "CCP-eligible",
+      "description": "Methane avoidance in rice cultivation",
+      "methodologies": ["Gold Standard Rice Methane"],
+      "scores": {"removal_type": 35, "additionality": 55, "permanence": 8, "mrv_grade": 55, "co_benefits": 70, "registry_methodology": 80},
+      "expected_grade": "BBB"
+    },
+    {
+      "id": "sustainable_agriculture",
+      "category": "Removal + Avoidance",
+      "ccp_status": "CCP-eligible",
+      "description": "Soil carbon enrichment and sustainable agriculture",
+      "methodologies": ["VM0042", "CAR Soil Enrichment"],
+      "scores": {"removal_type": 50, "additionality": 60, "permanence": 30, "mrv_grade": 55, "co_benefits": 65, "registry_methodology": 80},
+      "expected_grade": "BBB"
+    },
+    {
+      "id": "grid_renewable_energy",
+      "category": "Avoidance (ICVCM-rejected)",
+      "ccp_status": "REJECTED",
+      "description": "Grid-connected wind/solar — ICVCM rejected for lack of additionality",
+      "methodologies": ["ACM0002", "AMS-I.D"],
+      "scores": {"removal_type": 25, "additionality": 25, "permanence": 5, "mrv_grade": 50, "co_benefits": 30, "registry_methodology": 25},
+      "expected_grade": "BB-B"
+    },
+    {
+      "id": "hfc23_destruction",
+      "category": "Avoidance (ICVCM-rejected)",
+      "ccp_status": "REJECTED",
+      "description": "HFC-23 destruction — ICVCM rejected, perverse incentive concerns",
+      "methodologies": ["AM0001"],
+      "scores": {"removal_type": 48, "additionality": 18, "permanence": 8, "mrv_grade": 35, "co_benefits": 5, "registry_methodology": 25},
+      "expected_grade": "B"
+    }
+  ]
+}

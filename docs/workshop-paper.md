@@ -447,6 +447,35 @@ Worth naming explicitly since the safeguards-gate is the part of v0.4 that hits 
 
 Cookstoves take the largest hit, as expected -- they are fundamentally avoidance-based with weak permanence but strong co-benefit narratives. Under v0.3 the narrative could push a cookstove credit into grade A territory if its other dimensions were unusually strong; under v0.4 that is structurally impossible, which matches the Alt-3 mechanism's design intent.
 
+### 7.7 Grade stability under distributional scoring (v0.5+)
+
+The v0.5 distributional composite replaces point-estimate grades with posterior probability distributions. For each credit, P(grade) is computed via Gaussian variance propagation using empirically calibrated per-dimension standard deviations from the W1 LLM panel IRR study (`data/llm-panel-irr/`). Key results for the load-bearing credits:
+
+| Credit | Composite | ±σ | Grade | P(grade) | Stability |
+|--------|----------:|---:|-------|----------|-----------|
+| Climeworks Orca | 95.05 | 2.88 | AAA | **96%** | stable |
+| Heirloom DAC | 93.20 | 2.88 | AAA | **87%** | stable |
+| Charm Industrial | 90.53 | 2.88 | AAA | **57%** | fragile |
+| Pacific Biochar | 83.28 | 2.88 | AA | **99%** | stable |
+| Plan Vivo agroforestry | 60.15 | 2.88 | A | **52%** | fragile |
+| Toucan BCT (tokenized) | 31.10 | 2.88 | BB | **65%** | moderate |
+
+This is a unique contribution: **no commercial carbon credit rating agency (BeZero, Sylvera, Calyx Global, MSCI) publishes any form of grade uncertainty or confidence interval alongside their ratings.** The Carbon Market Watch 2023 study documented significant inter-agency disagreement on the same projects, yet none of the agencies quantifies the uncertainty inherent in their own outputs. Our P(grade) posteriors, calibrated from empirical inter-rater data, make this uncertainty transparent and actionable: a DeFi protocol using `meetsGrade()` can now read `compositeVarianceBps2` from the on-chain `Rating` struct and compute P(grade ≥ threshold) before making an admission decision.
+
+The distributional model also explains the W1 fragility finding (§7.5): Charm Industrial's AAA at P=57% is consistent with the LLM panel's 0/3 agreement on AAA — a 57% probability corresponds to roughly even odds, and 0/3 is within the expected range of a fair coin flipped three times.
+
+### 7.8 Competitive positioning: three verifiable leapfrog claims
+
+This framework makes three specific, falsifiable claims of structural advantage over all four major commercial carbon credit rating agencies:
+
+**Claim 1 — Uncertainty quantification.** We are the only carbon credit rating system that publishes P(grade) probability distributions alongside point-estimate grades, calibrated from empirical inter-rater reliability data (Fleiss' κ = 0.600, per-dimension σ from 4.0 to 11.1). The distributional composite is stored on-chain (`compositeVarianceBps2` in the `Rating` struct) and reproducible by any consumer via the published Gaussian propagation formula. To falsify: demonstrate that any of BeZero, Sylvera, Calyx, or MSCI publishes a comparable uncertainty metric.
+
+**Claim 2 — On-chain DeFi composability.** We are the only carbon credit quality rating system with a deployed on-chain interface (`meetsGrade(address, uint256, Grade) → bool`) that DeFi protocols can call as a zero-gas `staticcall` for quality gating. We demonstrate three integration patterns: quality-gated deposit pools (`QualityGatedPool`), retirement quality gates for kVCM-style systems (`KlimaRetirementGate`), and quality-based fee discounts for pool deposits (`CHARQualityOverlay`). To falsify: demonstrate that any commercial agency has a callable smart contract interface.
+
+**Claim 3 — Published inter-rater reliability.** We are the only carbon credit rating system that has published inter-rater reliability measurements of any kind. Our 3-model panel (Claude Opus, Sonnet, Haiku) achieves grade-level Fleiss' κ = 0.600 ("substantial" per Landis & Koch 1977), composite ICC(2,k) = 0.993, and 100% within-±1-band agreement on all pairwise comparisons. Per-dimension κ breakdown identifies the weakest rubric dimensions (registry_methodology κ = 0.168, tightened in v0.6 from 4-tier to 2-tier). To falsify: demonstrate that any commercial agency has published IRR data showing comparable or better reproducibility.
+
+These claims are structural: they derive from architectural decisions (open-source rubric, linear composite, on-chain storage, published raw data) that commercial agencies cannot replicate without fundamental business-model changes. The two dimensions where commercial agencies remain ahead — credit coverage (45 vs. 500-4,400) and regulatory recognition (0 vs. Singapore NEA) — are resource-intensive gaps that the framework addresses through a scalable methodology-level scoring pipeline and an expert consultation pathway.
+
 ## 8. Adverse Selection: Formal Justification
 
 Manshadi, Monachou, and Morgenstern (2025) provide the first rigorous economic model of adverse selection in the VCM:

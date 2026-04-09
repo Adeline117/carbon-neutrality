@@ -87,6 +87,18 @@
     }
     .meta div { margin-bottom: 0.3rem; }
     .meta code { color: var(--fg); font-size: 0.85rem; }
+    .posterior-bar-row {
+      display: grid;
+      grid-template-columns: 50px 1fr 50px;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .posterior-bar-row .grade-label { font-weight: 700; font-size: 0.85rem; }
+    .posterior-bar-row .bar-outer { background: #161b22; border-radius: 3px; height: 20px; overflow: hidden; border: 1px solid var(--border); }
+    .posterior-bar-row .bar-fill { height: 100%; transition: width 0.3s; border-radius: 2px; }
+    .posterior-bar-row .pct { font-variant-numeric: tabular-nums; text-align: right; font-size: 0.85rem; color: var(--muted); }
+    .posterior-summary { margin-top: 0.5rem; font-size: 0.9rem; color: var(--muted); }
     .simulate-result {
       margin-top: 1rem;
       padding: 1rem;
@@ -122,7 +134,14 @@
 
   <div id="credit-display" style="margin-top: 1rem;"></div>
 
-  <h2>2. Pool gate simulator</h2>
+  <h2>2. Grade probability distribution</h2>
+  <p>No commercial rating agency publishes grade uncertainty. We do — P(grade) is
+    computed from empirically calibrated per-dimension standard deviations via
+    Gaussian variance propagation. A high P means the grade is robust; a low P
+    (like Charm Industrial's ~57% AAA) means the grade is rater-dependent.</p>
+  <div id="posterior-display" style="margin-top: 1rem;"></div>
+
+  <h2>3. Pool gate simulator</h2>
   <p>Which pool would accept this credit? No wallet required — this is a view-only call.</p>
   <select id="pool-picker">
     <option value="premium">Premium pool (AA+ gated)</option>
@@ -132,7 +151,7 @@
   <div id="simulate-result"></div>
 
   <footer>
-    <p>v0.4.1 · framework source: <a href="https://github.com/Adeline117/carbon-neutrality">Adeline117/carbon-neutrality</a>
+    <p>v0.6 · framework source: <a href="https://github.com/Adeline117/carbon-neutrality">Adeline117/carbon-neutrality</a>
        · read API: <a href="../api/v0.4.1/ratings.json">ratings.json</a>
        · static HTML, no build step, no wallet connect.</p>
   </footer>
@@ -170,9 +189,33 @@ async function loadRatings() {
       picker.appendChild(opt);
     });
 
+    // Try loading posteriors for P(grade) visualization
+    let posteriors = {};
+    try {
+      const pResp = await fetch("../api/v0.4.1/posteriors.json");
+      if (pResp.ok) {
+        const pData = await pResp.json();
+        pData.forEach(p => { posteriors[p.id] = p; });
+      }
+    } catch (e) { /* posteriors not yet published — demo degrades gracefully */ }
+
+    // Attach posterior data to each credit
+    data.forEach(c => {
+      const p = posteriors[c.id];
+      if (p) {
+        c.posterior = p.posterior;
+        c.compositeStd = p.compositeStd;
+      }
+    });
+
     window.__ratings = data;
     render(data[0]);
-    picker.addEventListener("change", e => render(data[parseInt(e.target.value)]));
+    renderPosterior(data[0]);
+    picker.addEventListener("change", e => {
+      const credit = data[parseInt(e.target.value)];
+      render(credit);
+      renderPosterior(credit);
+    });
   } catch (e) {
     picker.innerHTML = "";
     document.getElementById("credit-display").innerHTML =
@@ -181,6 +224,41 @@ async function loadRatings() {
       `Reason: ${e.message}</div>`;
     contractEl.textContent = "(not deployed)";
   }
+}
+
+function renderPosterior(c) {
+  const el = document.getElementById("posterior-display");
+  if (!c || !c.posterior) { el.innerHTML = "<div class='meta'>No posterior data available.</div>"; return; }
+
+  const grades = ["AAA", "AA", "A", "BBB", "BB", "B"];
+  const colors = {
+    AAA: "#1a7f37", AA: "#2ea043", A: "#488a42",
+    BBB: "#8c6d1f", BB: "#9c5b19", B: "#cf222e"
+  };
+  const post = c.posterior;
+  const maxP = Math.max(...grades.map(g => post[g] || 0), 0.01);
+
+  const rows = grades.map(g => {
+    const p = post[g] || 0;
+    const pct = (p * 100).toFixed(1);
+    const w = (p / maxP * 100).toFixed(0);
+    const isReported = g === c.finalGrade;
+    return `<div class="posterior-bar-row">
+      <div class="grade-label" style="${isReported ? 'color: #58a6ff;' : ''}">${g}${isReported ? ' ◀' : ''}</div>
+      <div class="bar-outer"><div class="bar-fill" style="width: ${w}%; background: ${colors[g]};"></div></div>
+      <div class="pct">${pct}%</div>
+    </div>`;
+  }).join("");
+
+  const pReported = (post[c.finalGrade] * 100).toFixed(1);
+  const stability = pReported >= 80 ? "stable" : pReported >= 60 ? "moderate" : "fragile";
+  const stabilityColor = stability === "stable" ? "#2ea043" : stability === "moderate" ? "#d29922" : "#f85149";
+
+  el.innerHTML = `${rows}
+    <div class="posterior-summary">
+      Grade stability: <b style="color: ${stabilityColor};">${pReported}% ${stability}</b>
+      (composite ${c.composite?.toFixed(2) || '?'} ± ${c.compositeStd?.toFixed(2) || '?'})
+    </div>`;
 }
 
 function render(c) {
