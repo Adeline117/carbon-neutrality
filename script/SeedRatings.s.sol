@@ -80,11 +80,21 @@ contract SeedRatings is Script {
                 humanRights: row.humanRights,
                 communityHarm: row.communityHarm
             });
+            // v0.5 default stds (rounded from empirical W1 IRR data)
+            ICarbonCreditRating.DimensionStds memory stds = ICarbonCreditRating.DimensionStds({
+                removalType: 4,
+                additionality: 9,
+                permanence: 4,
+                mrvGrade: 7,
+                vintageYear: 10,
+                coBenefits: 9,
+                registryMethodology: 11
+            });
             // evidenceHash = keccak of the credit id + methodology version; real provenance
             // would point to an IPFS bundle of the PDD + verification reports.
-            bytes32 evidenceHash = keccak256(abi.encodePacked(row.id, "v0.4.1"));
+            bytes32 evidenceHash = keccak256(abi.encodePacked(row.id, "v0.5.0"));
 
-            rating.setRating(address(mock), 0, scores, flags, expiresAt, evidenceHash);
+            rating.setRating(address(mock), 0, scores, stds, flags, expiresAt, evidenceHash);
 
             console2.log(row.id, address(mock));
         }

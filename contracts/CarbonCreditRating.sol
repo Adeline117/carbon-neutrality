@@ -40,9 +40,11 @@ contract CarbonCreditRating is ICarbonCreditRating {
 
     // ------------------------------------------------------------------
     // Methodology version. Bump with each v0.X rubric release.
-    // v0.4 uses 0x0400; v0.5 would be 0x0500; patches within v0.4 use 0x0401+.
+    // v0.4 uses 0x0400; v0.5 adds distributional composite at 0x0500.
+    // Any v0.4.x rating is automatically stale under a v0.5 deployment
+    // because methodologyVersion < CURRENT_METHODOLOGY_VERSION.
     // ------------------------------------------------------------------
-    uint16 public constant CURRENT_METHODOLOGY_VERSION = 0x0400;
+    uint16 public constant CURRENT_METHODOLOGY_VERSION = 0x0500;
 
     // ------------------------------------------------------------------
     // Storage
@@ -109,25 +111,30 @@ contract CarbonCreditRating is ICarbonCreditRating {
         address creditToken,
         uint256 tokenId,
         DimensionScores calldata scores,
+        DimensionStds calldata stds,
         Disqualifiers calldata flags,
         uint64 expiresAt,
         bytes32 evidenceHash
     ) external onlyRater {
         _validateScores(scores);
+        _validateStds(stds);
         // expiresAt=0 means "never"; otherwise it must be strictly in the future.
         if (expiresAt != 0 && expiresAt <= block.timestamp) {
             revert ExpiryInPast(expiresAt, uint64(block.timestamp));
         }
 
         uint16 compositeBps = _computeCompositeBps(scores);
+        uint32 varianceBps2 = _computeCompositeVarianceBps2(stds);
         Grade nominal = _gradeFromComposite(compositeBps);
         Grade finalGrade = _applyDisqualifiers(nominal, flags);
 
         bytes32 key = _key(creditToken, tokenId);
         _ratings[key] = Rating({
             scores: scores,
+            stds: stds,
             flags: flags,
             compositeBps: compositeBps,
+            compositeVarianceBps2: varianceBps2,
             nominalGrade: nominal,
             finalGrade: finalGrade,
             lastUpdatedAt: uint64(block.timestamp),
@@ -189,6 +196,12 @@ contract CarbonCreditRating is ICarbonCreditRating {
         return _computeCompositeBps(scores);
     }
 
+    /// @notice v0.5: exposed for off-chain reproducibility (Python scorer cross-check).
+    function computeCompositeVariance(DimensionStds calldata stds) external pure returns (uint32) {
+        _validateStds(stds);
+        return _computeCompositeVarianceBps2(stds);
+    }
+
     function gradeFromComposite(uint16 compositeBps) external pure returns (Grade) {
         return _gradeFromComposite(compositeBps);
     }
@@ -227,6 +240,17 @@ contract CarbonCreditRating is ICarbonCreditRating {
         if (s.registryMethodology > 100) revert ScoreOutOfRange("registryMethodology", s.registryMethodology);
     }
 
+    /// @dev v0.5: std values are in 0-100 units (same as scores). Reject >100.
+    function _validateStds(DimensionStds calldata s) private pure {
+        if (s.removalType > 100) revert ScoreOutOfRange("std.removalType", s.removalType);
+        if (s.additionality > 100) revert ScoreOutOfRange("std.additionality", s.additionality);
+        if (s.permanence > 100) revert ScoreOutOfRange("std.permanence", s.permanence);
+        if (s.mrvGrade > 100) revert ScoreOutOfRange("std.mrvGrade", s.mrvGrade);
+        if (s.vintageYear > 100) revert ScoreOutOfRange("std.vintageYear", s.vintageYear);
+        if (s.coBenefits > 100) revert ScoreOutOfRange("std.coBenefits", s.coBenefits);
+        if (s.registryMethodology > 100) revert ScoreOutOfRange("std.registryMethodology", s.registryMethodology);
+    }
+
     /// @dev composite_bps = sum(score_i * weight_bps_i) / 100
     ///      score in [0,100], weight in [0,10000], result in [0,10000].
     function _computeCompositeBps(DimensionScores calldata s) private pure returns (uint16) {
@@ -239,6 +263,23 @@ contract CarbonCreditRating is ICarbonCreditRating {
             + uint256(s.coBenefits)          * W_CO_BENEFITS
             + uint256(s.registryMethodology) * W_REGISTRY_METHOD;
         return uint16(sum / 100);
+    }
+
+    /// @dev v0.5: var(composite_bps) = sum(w_i_bps^2 * sigma_i^2) / 10000
+    ///      Same shape as _computeCompositeBps but with squared weights and
+    ///      squared stds. sigma_i is in 0-100 units (same as scores).
+    ///      Max possible: 2500^2 * 50^2 * 7 = 1.09e11; / 10000 ≈ 1.09e7, fits uint32.
+    function _computeCompositeVarianceBps2(DimensionStds calldata s) private pure returns (uint32) {
+        uint256 sum =
+              uint256(s.removalType)         * uint256(s.removalType)         * W_REMOVAL_TYPE      * W_REMOVAL_TYPE
+            + uint256(s.additionality)       * uint256(s.additionality)       * W_ADDITIONALITY    * W_ADDITIONALITY
+            + uint256(s.permanence)          * uint256(s.permanence)          * W_PERMANENCE       * W_PERMANENCE
+            + uint256(s.mrvGrade)            * uint256(s.mrvGrade)            * W_MRV_GRADE        * W_MRV_GRADE
+            + uint256(s.vintageYear)         * uint256(s.vintageYear)         * W_VINTAGE          * W_VINTAGE
+            + uint256(s.coBenefits)          * uint256(s.coBenefits)          * W_CO_BENEFITS      * W_CO_BENEFITS
+            + uint256(s.registryMethodology) * uint256(s.registryMethodology) * W_REGISTRY_METHOD  * W_REGISTRY_METHOD;
+        // Scale from (score-unit^2 * bps^2) into bps² by dividing by 100^2 (score→bps scaling).
+        return uint32(sum / 10000);
     }
 
     function _gradeFromComposite(uint16 bps) private pure returns (Grade) {

@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -84,6 +85,62 @@ def composite(scores: dict, weights: dict) -> float:
     return sum(scores[dim] * weights[dim] for dim in weights)
 
 
+def composite_variance(stds: dict, weights: dict) -> float:
+    """v0.5 distributional composite.
+
+    Linear weighted sum of independent Gaussians has variance equal to
+    sum(w_i^2 * sigma_i^2). Composite mean comes from composite(); this
+    function returns the variance in (0-100)² units. Take sqrt to get
+    the std of the composite itself.
+    """
+    return sum((weights[dim] ** 2) * (stds[dim] ** 2) for dim in weights)
+
+
+def normal_cdf(x: float) -> float:
+    """Phi(x) via math.erf; no scipy dependency."""
+    return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
+
+
+def grade_posterior(mu: float, sigma: float, bands: list[dict]) -> dict[str, float]:
+    """Given a Gaussian posterior on the composite, return P(grade == G) per band.
+
+    Bands are iterated high-to-low (the index.json convention) so the
+    highest-bound grade (AAA) gets the upper tail and the lowest (B) gets
+    the lower tail. Boundaries use min-only (match the Solidity convention).
+    """
+    if sigma <= 0:
+        # Degenerate: deterministic; put all mass on the point-estimate grade.
+        return {bands[i]["grade"]: (1.0 if mu >= bands[i]["min"] and (i == 0 or mu < bands[i - 1]["min"]) else 0.0) for i in range(len(bands))}
+
+    out: dict[str, float] = {}
+    # bands are sorted high-to-low in index.json (AAA first)
+    for i, band in enumerate(bands):
+        lower = band["min"]
+        # upper is the next higher band's min (or infinity for AAA)
+        upper = bands[i - 1]["min"] if i > 0 else float("inf")
+        if upper == float("inf"):
+            p_upper = 1.0
+        else:
+            p_upper = normal_cdf((upper - mu) / sigma)
+        p_lower = normal_cdf((lower - mu) / sigma)
+        out[band["grade"]] = max(0.0, p_upper - p_lower)
+    return out
+
+
+def load_default_stds(rubric: dict) -> dict[str, float]:
+    """Pull the default_std_per_dimension block from index.json.
+    Falls back to (band_max - band_min) / 4 if the block is missing."""
+    block = rubric.get("default_std_per_dimension", {})
+    out: dict[str, float] = {}
+    for d in rubric["dimensions"]:
+        dim_id = d["id"]
+        if dim_id in block and isinstance(block[dim_id], (int, float)):
+            out[dim_id] = float(block[dim_id])
+        else:
+            out[dim_id] = 5.0  # conservative fallback
+    return out
+
+
 def grade_from_score(score: float, bands: list[dict]) -> str:
     # bands are declared high-to-low in index.json with integer mins.
     # Match the Solidity contract's logic exactly: return the first band
@@ -129,6 +186,7 @@ def main() -> None:
     grade_bands = rubrics["grades"]
     dq_spec = rubrics["disqualifiers"]
     dim_adjustments = load_dimension_adjustments()
+    default_stds = load_default_stds(rubrics)
 
     rows = []
     for credit in credits["credits"]:
@@ -144,10 +202,19 @@ def main() -> None:
         credit_adjustments = credit.get("adjustments", [])
         scores = apply_dimension_adjustments(base_scores, credit_adjustments, dim_adjustments)
 
+        # v0.5: per-dimension uncertainty. Credits may supply "score_stds" to
+        # override the rubric defaults; otherwise use the defaults.
+        credit_stds = credit.get("score_stds", {})
+        stds = {d: float(credit_stds.get(d, default_stds[d])) for d in dimensions}
+
         comp = composite(scores, weights)
+        comp_var = composite_variance(stds, weights)
+        comp_sigma = math.sqrt(comp_var) if comp_var > 0 else 0.0
+        posterior = grade_posterior(comp, comp_sigma, grade_bands)
         nominal = grade_from_score(comp, grade_bands)
         final, applied = apply_disqualifiers(nominal, credit.get("disqualifiers", []), dq_spec)
 
+        p_reported = posterior.get(final, 0.0)
         rows.append(
             {
                 "id": credit["id"],
@@ -157,8 +224,10 @@ def main() -> None:
                 "vintage": credit.get("vintage_year", ""),
                 **{f"d_{d}": scores[d] for d in dimensions},
                 "composite": round(comp, 2),
+                "composite_std": round(comp_sigma, 2),
                 "grade_nominal": nominal,
                 "grade_final": final,
+                "p_grade": round(p_reported, 3),
                 "disqualifiers": ",".join(credit.get("disqualifiers", [])),
                 "adjustments": ",".join(credit_adjustments),
                 "caps_applied": ",".join(applied),
@@ -176,14 +245,14 @@ def main() -> None:
     # write markdown summary
     md = ["# Pilot Scoring Results", ""]
     md.append(f"Dataset: {len(rows)} credits   Weights: " + ", ".join(f"{k}={v}" for k, v in weights.items()))
+    md.append(f"v0.5 distributional composite. Default std per dimension (from W1 empirical data): {default_stds}")
     md.append("")
-    md.append("| ID | Name | Type | Composite | Nominal | Final | Caps |")
-    md.append("|----|------|------|-----------|---------|-------|------|")
+    md.append("| ID | Name | Composite | ±σ | Grade | P(grade) | Caps |")
+    md.append("|----|------|----------:|---:|-------|---------:|------|")
     for r in sorted(rows, key=lambda x: -x["composite"]):
         name = r["name"][:40]
-        typ = r["type"][:35]
         md.append(
-            f"| {r['id']} | {name} | {typ} | {r['composite']} | {r['grade_nominal']} | {r['grade_final']} | {r['caps_applied'] or '-'} |"
+            f"| {r['id']} | {name} | {r['composite']:.2f} | {r['composite_std']:.2f} | {r['grade_final']} | {r['p_grade']:.2f} | {r['caps_applied'] or '-'} |"
         )
     md.append("")
 

@@ -11,6 +11,21 @@ contract CarbonCreditRatingTest {
     CarbonCreditRating rating;
     address constant CREDIT_TOKEN = address(0xC0FFEE);
 
+    /// @dev v0.5 default stds (rounded uint8 from the rubric's empirical
+    ///      values: 4.2, 8.6, 4.0, 7.1, 10.3, 9.1, 11.1). These are the
+    ///      integer approximations callers will write on-chain.
+    function _defaultStds() internal pure returns (ICarbonCreditRating.DimensionStds memory) {
+        return ICarbonCreditRating.DimensionStds({
+            removalType: 4,
+            additionality: 9,
+            permanence: 4,
+            mrvGrade: 7,
+            vintageYear: 10,
+            coBenefits: 9,
+            registryMethodology: 11
+        });
+    }
+
     function setUp() public {
         // Make this test contract the rater so it can call setRating directly.
         rating = new CarbonCreditRating(address(this));
@@ -18,6 +33,7 @@ contract CarbonCreditRatingTest {
 
     /// @dev Climeworks Orca-style input. v0.4: composite 95.2 -> 9520 bps -> AAA.
     ///      Previously (v0.3): 8680 bps AA. The Oxford inversion is now resolved.
+    ///      v0.5 adds composite variance under default stds: 83,706 bps^2.
     function testOrcaComposite() public {
         setUp();
         ICarbonCreditRating.DimensionScores memory s = ICarbonCreditRating.DimensionScores({
@@ -36,6 +52,37 @@ contract CarbonCreditRatingTest {
         // = 952000 / 100 = 9520
         require(bps == 9520, "composite mismatch");
         require(rating.gradeFromComposite(bps) == ICarbonCreditRating.Grade.AAA, "Orca reaches AAA");
+
+        // v0.5: variance under default stds (4,9,4,7,10,9,11).
+        // (2500^2 * 4^2) + (2000^2 * 9^2) + (1750^2 * 4^2) + (2000^2 * 7^2)
+        // + (1000^2 * 10^2) + (0^2 * 9^2) + (750^2 * 11^2)
+        // = 100,000,000 + 324,000,000 + 49,000,000 + 196,000,000
+        // + 100,000,000 + 0 + 68,062,500
+        // = 837,062,500 / 10,000 = 83,706
+        uint32 variance = rating.computeCompositeVariance(_defaultStds());
+        require(variance == 83706, "variance mismatch under default stds");
+    }
+
+    /// @dev v0.5: zero stds collapse variance to 0 (point-estimate mode).
+    function testZeroStdsYieldZeroVariance() public {
+        setUp();
+        ICarbonCreditRating.DimensionStds memory zero; // all zero by default
+        uint32 v = rating.computeCompositeVariance(zero);
+        require(v == 0, "zero stds should yield zero variance");
+    }
+
+    /// @dev v0.5: variance scales as expected when one std changes.
+    function testVarianceSensitivity() public {
+        setUp();
+        ICarbonCreditRating.DimensionStds memory a = _defaultStds();
+        ICarbonCreditRating.DimensionStds memory b = _defaultStds();
+        b.removalType = 8; // double the removal_type std (4 -> 8)
+        uint32 va = rating.computeCompositeVariance(a);
+        uint32 vb = rating.computeCompositeVariance(b);
+        // Changing a single std from 4 to 8 changes that term from 16 to 64,
+        // a +48 delta on the score^2. W_REMOVAL_TYPE^2 = 2500^2 = 6,250,000.
+        // So variance delta = 48 * 6,250,000 / 10,000 = 30,000.
+        require(vb - va == 30000, "variance sensitivity mismatch");
     }
 
     /// @dev Kariba-style low-quality credit with no_third_party flag.
@@ -180,12 +227,12 @@ contract CarbonCreditRatingTest {
         uint64 expiresAt = uint64(block.timestamp + 365 days);
         bytes32 evidenceHash = keccak256("example-attestation-bundle");
 
-        rating.setRating(CREDIT_TOKEN, 42, s, flags, expiresAt, evidenceHash);
+        rating.setRating(CREDIT_TOKEN, 42, s, _defaultStds(), flags, expiresAt, evidenceHash);
 
         ICarbonCreditRating.Rating memory r = rating.ratingOf(CREDIT_TOKEN, 42);
         require(r.compositeBps >= 7500, "should be AA or better");
         require(r.finalGrade >= ICarbonCreditRating.Grade.AA, "final grade AA+");
-        require(r.methodologyVersion == 0x0400, "methodology stamped v0.4");
+        require(r.methodologyVersion == 0x0500, "methodology stamped v0.5");
         require(r.expiresAt == expiresAt, "expiresAt stored");
         require(r.evidenceHash == evidenceHash, "evidenceHash stored");
         require(rating.meetsGrade(CREDIT_TOKEN, 42, ICarbonCreditRating.Grade.A), "meets A");
@@ -209,7 +256,7 @@ contract CarbonCreditRatingTest {
         // block.timestamp starts at 1 in forge; pick 0 which is "already expired"
         // wait -- 0 is interpreted as "never expires". Use block.timestamp directly (not strictly in the future).
         bool reverted = false;
-        try rating.setRating(CREDIT_TOKEN, 99, s, flags, uint64(block.timestamp), bytes32(0)) {
+        try rating.setRating(CREDIT_TOKEN, 99, s, _defaultStds(), flags, uint64(block.timestamp), bytes32(0)) {
             reverted = false;
         } catch {
             reverted = true;
@@ -232,7 +279,7 @@ contract CarbonCreditRatingTest {
         ICarbonCreditRating.Disqualifiers memory flags;
         uint64 expiresAt = uint64(block.timestamp + 1 days);
 
-        rating.setRating(CREDIT_TOKEN, 7, s, flags, expiresAt, bytes32(0));
+        rating.setRating(CREDIT_TOKEN, 7, s, _defaultStds(), flags, expiresAt, bytes32(0));
         require(!rating.isStale(CREDIT_TOKEN, 7), "fresh");
         require(rating.meetsGrade(CREDIT_TOKEN, 7, ICarbonCreditRating.Grade.AA), "AA fresh");
 
@@ -257,7 +304,7 @@ contract CarbonCreditRatingTest {
         });
         ICarbonCreditRating.Disqualifiers memory flags;
 
-        rating.setRating(CREDIT_TOKEN, 11, s, flags, 0, bytes32(0));
+        rating.setRating(CREDIT_TOKEN, 11, s, _defaultStds(), flags, 0, bytes32(0));
         require(!rating.isStale(CREDIT_TOKEN, 11), "expiresAt=0 is never stale");
 
         vm_warp(block.timestamp + 3650 days);
@@ -278,12 +325,12 @@ contract CarbonCreditRatingTest {
         });
         ICarbonCreditRating.Disqualifiers memory flags;
 
-        rating.setRating(CREDIT_TOKEN, 55, s, flags, uint64(block.timestamp + 1 days), bytes32(0));
+        rating.setRating(CREDIT_TOKEN, 55, s, _defaultStds(), flags, uint64(block.timestamp + 1 days), bytes32(0));
         vm_warp(block.timestamp + 2 days);
         require(rating.isStale(CREDIT_TOKEN, 55), "stale after 2 days");
 
         // re-rate
-        rating.setRating(CREDIT_TOKEN, 55, s, flags, uint64(block.timestamp + 365 days), keccak256("new-evidence"));
+        rating.setRating(CREDIT_TOKEN, 55, s, _defaultStds(), flags, uint64(block.timestamp + 365 days), keccak256("new-evidence"));
         require(!rating.isStale(CREDIT_TOKEN, 55), "fresh again after re-rating");
 
         ICarbonCreditRating.Rating memory r = rating.ratingOf(CREDIT_TOKEN, 55);

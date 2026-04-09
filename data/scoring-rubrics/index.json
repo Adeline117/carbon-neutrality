@@ -1,7 +1,7 @@
 {
-  "schema_version": "0.2.1",
+  "schema_version": "0.3.0",
   "framework": "on-chain-carbon-credit-quality-rating",
-  "paper_version": "0.4.1",
+  "paper_version": "0.5.0",
   "score_range": [0, 100],
   "dimensions": [
     {"id": "removal_type",       "file": "01_removal_type.json",       "weight": 0.250},
@@ -29,6 +29,18 @@
     {"id": "community_harm",        "condition": "Documented community opposition or environmental damage (co_benefits 'None / negative externalities' band)", "grade_cap": "BBB"}
   ],
   "composite_formula": "sum(dimension_score_i * weight_i)",
+  "composite_uncertainty_formula": "var(composite) = sum(weight_i^2 * std_i^2)",
+  "default_std_per_dimension": {
+    "removal_type":         4.2,
+    "additionality":        8.6,
+    "permanence":           4.0,
+    "mrv_grade":            7.1,
+    "vintage_year":        10.3,
+    "co_benefits":          9.1,
+    "registry_methodology":11.1,
+    "_source": "Empirical per-dimension standard deviation derived from the v0.5 LLM panel IRR study (data/llm-panel-irr/). Each value is approximately (mean_abs_delta / 1.128) from the 3-rater Claude panel, which is the Gaussian-noise estimator for sigma from pairwise absolute differences. These replace the theoretical (band_max - band_min) / 4 rule because the empirical inter-rater variance is wider than the band-width heuristic predicted. See data/llm-panel-irr/analysis.md §5 for the per-dimension breakdown."
+  },
+  "grade_posterior_method": "Under a Gaussian approximation, the composite is treated as normal(mu=compositeBps/100, sigma=sqrt(compositeVariance)). P(grade = G) = Phi((upper_boundary_G - mu)/sigma) - Phi((lower_boundary_G - mu)/sigma). The 'reported grade' is the arg-max posterior; 'grade stability' is P(reported grade).",
   "notes": [
     "All dimension scores normalized to 0-100.",
     "Weights sum to 1.00; co_benefits weight is 0.00 in v0.4 (safeguards-gate mechanism).",
