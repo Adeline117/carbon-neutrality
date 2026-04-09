@@ -5,3 +5,13 @@ ours_v04 vs sylvera_nzm,0.5657,0.5394
 bezero vs calyx_nzm,-0.6642,-0.5976
 bezero vs sylvera_nzm,0.1252,0.1612
 calyx_nzm vs sylvera_nzm,0.5657,0.5394
+section,pair_or_type,n,spearman,kendall
+cross_type_overall,ours_v06 vs bezero,9,0.9064,0.8526
+per_type,Biochar,2,nan,nan
+per_type,CDR,1,nan,nan
+per_type,Cookstoves,1,nan,nan
+per_type,IFM,1,nan,nan
+per_type,Landfill gas,1,nan,nan
+per_type,Methane abatement,1,nan,nan
+per_type,REDD+,1,nan,nan
+per_type,Renewable energy,1,nan,nan

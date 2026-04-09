@@ -14,10 +14,36 @@
   ],
   "scale_mappings": {
     "comment": "Monotonic integer mappings for rank correlation. Higher = better quality on every scale.",
-    "ours_v04": {"B": 0, "BB": 1, "BBB": 2, "A": 3, "AA": 4, "AAA": 5},
-    "bezero": {"D": 0, "C": 1, "B": 2, "BB": 3, "BBB": 4, "A": 5, "AA": 6, "AAA": 7},
-    "calyx_nzm": {"E": 0, "D": 1, "C": 2, "B": 3, "A": 4},
-    "sylvera_nzm": {"Tier 3": 0, "Tier 2": 1, "Tier 1": 2}
+    "ours_v04": {
+      "B": 0,
+      "BB": 1,
+      "BBB": 2,
+      "A": 3,
+      "AA": 4,
+      "AAA": 5
+    },
+    "bezero": {
+      "D": 0,
+      "C": 1,
+      "B": 2,
+      "BB": 3,
+      "BBB": 4,
+      "A": 5,
+      "AA": 6,
+      "AAA": 7
+    },
+    "calyx_nzm": {
+      "E": 0,
+      "D": 1,
+      "C": 2,
+      "B": 3,
+      "A": 4
+    },
+    "sylvera_nzm": {
+      "Tier 3": 0,
+      "Tier 2": 1,
+      "Tier 1": 2
+    }
   },
   "projects": [
     {
@@ -157,7 +183,7 @@
     },
     {
       "id": "CMW06",
-      "name": "Guanaré Forest Restoration Project",
+      "name": "Guanar\u00e9 Forest Restoration Project",
       "vcs_id": "VCS 959",
       "country": "Uruguay",
       "methodology": "ARR (commercial plantation)",
@@ -174,7 +200,9 @@
         "composite": 48.375,
         "grade": "BBB",
         "disqualifiers": [],
-        "v0_4_1_adjustments": ["commercial_plantation_arr"],
+        "v0_4_1_adjustments": [
+          "commercial_plantation_arr"
+        ],
         "v0_4_1_grade": "BB",
         "v0_4_1_composite": 43.375,
         "v0_4_1_note": "Applying the commercial_plantation_arr adjustment (delta -20 on removal_type) brings Guanare into BB territory, matching commercial consensus. See docs/v0.4.1-changelog.md."
@@ -191,8 +219,13 @@
     {
       "id": "ANCHOR01",
       "name": "Climeworks Orca (DACCS Iceland)",
-      "our_v04": {"grade": "AAA", "composite": 95.2},
-      "agency_ratings": {"bezero": "AAA"},
+      "our_v04": {
+        "grade": "AAA",
+        "composite": 95.2
+      },
+      "agency_ratings": {
+        "bezero": "AAA"
+      },
       "source": "BeZero first-ever AAA, confirmed in climeworks.com news and multiple industry publications (2023).",
       "note": "Full agreement. BeZero describes it as the most likely tonne-for-tonne removal they rate."
     },
@@ -200,10 +233,370 @@
       "id": "ANCHOR02",
       "name": "Kariba REDD+",
       "vcs_id": "VCS 902",
-      "our_v04": {"grade": "B", "composite": 19.23},
-      "agency_ratings": {"bezero": "D"},
+      "our_v04": {
+        "grade": "B",
+        "composite": 19.23
+      },
+      "agency_ratings": {
+        "bezero": "D"
+      },
       "source": "BeZero downgraded BBB -> rating watch (Jan 2023) -> D (Oct 2023), then delisted entirely.",
       "note": "Directional agreement: both rate at the bottom of their respective scales. Sylvera also documented 75-90% baseline overstatement and ~33% carbon stock overstatement, but did not publish a letter grade."
     }
-  ]
+  ],
+  "cross_type_projects": {
+    "description": "Non-REDD+ projects with publicly documented agency ratings. Added in v0.6 (workstream W4) to test whether our framework's agreement profile changes by project type. Scored under v0.6 using methodology archetypes from data/methodology-ratings/archetypes.json, adjusted per-project based on public documentation.",
+    "framework_version": "0.6",
+    "sources": [
+      "BeZero Carbon public ratings listings (bezerocarbon.com/ratings/listings)",
+      "BeZero case studies and sector snapshots (bezerocarbon.com/insights/)",
+      "Calyx Global research hub (calyxglobal.com/research-hub/)",
+      "Sylvera blog and press releases (sylvera.com/blog/)",
+      "Carbon Herald, QC Intel, and project developer press releases"
+    ],
+    "projects": [
+      {
+        "id": "CT01",
+        "name": "Climeworks Orca (DACCS Iceland)",
+        "registry_id": "Puro.earth (Climeworks)",
+        "country": "Iceland",
+        "project_type": "CDR",
+        "methodology": "DACCS with geological storage (CarbFix)",
+        "our_v06": {
+          "archetype": "daccs_geological",
+          "scores": {
+            "removal_type": 97,
+            "additionality": 92,
+            "permanence": 97,
+            "mrv_grade": 92,
+            "vintage_year": 95,
+            "co_benefits": 18,
+            "registry_methodology": 82
+          },
+          "composite": 93.675,
+          "grade": "AAA",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "bezero": "AAA"
+        },
+        "source_urls": [
+          "https://climeworks.com/news/climeworks-receives-first-ever-aaa-rating-from-bezero-carbon",
+          "https://carbonherald.com/climeworks-orca-first-dac-project-to-receive-bezero-aaa-rating/"
+        ],
+        "notes": "BeZero's first-ever AAA rating (August 2024). Orca captures CO2 from ambient air and stores it in basalt via CarbFix mineralization. Powered by geothermal energy. Full agreement with our AAA. Promoted from anchor_projects to scored dataset."
+      },
+      {
+        "id": "CT02",
+        "name": "Novocarbo Carbon Removal Site Rhine",
+        "registry_id": "Puro.earth P643002406801000343",
+        "country": "Germany",
+        "project_type": "Biochar",
+        "methodology": "Puro.earth Biochar (PYREG pyrolysis)",
+        "our_v06": {
+          "archetype": "biochar",
+          "scores": {
+            "removal_type": 80,
+            "additionality": 82,
+            "permanence": 85,
+            "mrv_grade": 75,
+            "vintage_year": 90,
+            "co_benefits": 60,
+            "registry_methodology": 82
+          },
+          "composite": 81.425,
+          "grade": "AA",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "bezero": "A"
+        },
+        "source_urls": [
+          "https://bezerocarbon.com/case-studies/novocarbo",
+          "https://www.firstclimate.com/post/swiss-biochar-carbon-removal-project-receives-a-rating?lang=en"
+        ],
+        "notes": "BeZero's first-ever biochar rating (December 2023). PYREG pyrolysis of wood/fruit-stone residues, operational since 2018. Surplus heat to district heating. Our AA vs BeZero A: we rate one notch higher, reflecting the archetype's strong permanence and MRV; BeZero may weigh additionality risk more heavily given early-stage market."
+      },
+      {
+        "id": "CT03",
+        "name": "Exomad Green Concepcion (Biochar Bolivia)",
+        "registry_id": "Puro.earth (Exomad Green Concepcion)",
+        "country": "Bolivia",
+        "project_type": "Biochar",
+        "methodology": "Puro.earth Biochar (pyrolysis of sawmill waste)",
+        "our_v06": {
+          "archetype": "biochar",
+          "scores": {
+            "removal_type": 80,
+            "additionality": 85,
+            "permanence": 82,
+            "mrv_grade": 72,
+            "vintage_year": 92,
+            "co_benefits": 55,
+            "registry_methodology": 80
+          },
+          "composite": 80.95,
+          "grade": "AA",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "bezero": "AA",
+          "sylvera": "AA"
+        },
+        "source_urls": [
+          "https://www.exomadgreen.com/post/achievement-unlocked-exomad-green-earns-aa-sylvera-rating",
+          "https://www.senken.io/blog/the-top-biochar-carbon-removal-projects-a-buyers-guide"
+        ],
+        "notes": "World's largest biochar facility, converting sawmill waste to biochar. AA from both BeZero and Sylvera. ~260,000 tCO2/yr removed. Our AA matches both agencies \u2014 strong three-way agreement on high-quality biochar."
+      },
+      {
+        "id": "CT04",
+        "name": "EcoSafi Clean Cooking (Kenya)",
+        "registry_id": "GS 11352",
+        "country": "Kenya",
+        "project_type": "Cookstoves",
+        "methodology": "Gold Standard Metered and Measured Methodology",
+        "our_v06": {
+          "archetype": "cookstoves",
+          "scores": {
+            "removal_type": 38,
+            "additionality": 62,
+            "permanence": 8,
+            "mrv_grade": 65,
+            "vintage_year": 95,
+            "co_benefits": 88,
+            "registry_methodology": 80
+          },
+          "composite": 51.8,
+          "grade": "BBB",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "bezero": "A"
+        },
+        "source_urls": [
+          "https://bezerocarbon.com/case-studies/ecosafi",
+          "https://carbonherald.com/ecosafi-receives-a-rating-from-bezaro-carbon/"
+        ],
+        "notes": "BeZero's highest-ever cookstove rating (A, May 2024). Only 'A'-rated cookstove project globally. Uses Gold Standard Metered and Measured methodology with IoT monitoring. Our BBB vs BeZero A: permanence=8 (avoidance, no durable storage) and removal_type=38 (avoidance, not removal) drag our composite below 60; BeZero's scale does not penalize avoidance type as heavily."
+      },
+      {
+        "id": "CT05",
+        "name": "BURN / Key Carbon Global Cookstoves (Kenya)",
+        "registry_id": "GS 12350",
+        "country": "Kenya",
+        "project_type": "Cookstoves",
+        "methodology": "Gold Standard TPDDTEC (CCP-approved)",
+        "our_v06": {
+          "archetype": "cookstoves",
+          "scores": {
+            "removal_type": 38,
+            "additionality": 55,
+            "permanence": 8,
+            "mrv_grade": 58,
+            "vintage_year": 92,
+            "co_benefits": 85,
+            "registry_methodology": 80
+          },
+          "composite": 48.7,
+          "grade": "BBB",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "calyx": "AA"
+        },
+        "source_urls": [
+          "https://www.burnstoves.com/media/newsroom/newsroom-13",
+          "https://calyxglobal.com/research-hub/research/ratings-credits-from-the-first-ccp-aligned-cookstove-project/"
+        ],
+        "notes": "Calyx AA rating \u2014 among the first CCP-labelled cookstove carbon projects. Distributes Kuniokoa improved woodstoves. Calyx estimates <10% potential overestimation. Our BBB vs Calyx AA: structural divergence because our framework penalizes avoidance projects (removal_type=38, permanence=8) regardless of co-benefit or CCP quality."
+      },
+      {
+        "id": "CT06",
+        "name": "Arborify Cookstoves Togo",
+        "registry_id": "GS 12069",
+        "country": "Togo",
+        "project_type": "Cookstoves",
+        "methodology": "Gold Standard TPDDTEC v4 (CCP-approved)",
+        "our_v06": {
+          "archetype": "cookstoves",
+          "scores": {
+            "removal_type": 38,
+            "additionality": 52,
+            "permanence": 8,
+            "mrv_grade": 60,
+            "vintage_year": 95,
+            "co_benefits": 82,
+            "registry_methodology": 80
+          },
+          "composite": 48.8,
+          "grade": "BBB",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "calyx": "A"
+        },
+        "source_urls": [
+          "https://calyxglobal.com/research-hub/research/ratings-credits-from-the-first-ccp-aligned-cookstove-project/",
+          "https://www.arborify.com/blog/the-first-carbon-core-principles-icvcm-cookstove-project-in-the-world-gs12069"
+        ],
+        "notes": "First improved cookstove project (excluding metered devices) to receive Calyx A rating. Uses IoT heat sensors for precise monitoring. 250,000 stoves over 5 years in Togo. Our BBB vs Calyx A: same structural divergence as CT05."
+      },
+      {
+        "id": "CT07",
+        "name": "Rebellion Energy Heartland Methane Abatement",
+        "registry_id": "ACR 890",
+        "country": "United States",
+        "project_type": "Methane abatement",
+        "methodology": "ACR Plugging Orphan Oil and Gas Wells",
+        "our_v06": {
+          "archetype": "n2o_abatement",
+          "scores": {
+            "removal_type": 52,
+            "additionality": 75,
+            "permanence": 12,
+            "mrv_grade": 78,
+            "vintage_year": 95,
+            "co_benefits": 40,
+            "registry_methodology": 80
+          },
+          "composite": 61.2,
+          "grade": "A",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "bezero": "A"
+        },
+        "source_urls": [
+          "https://rebellionenergy.com/bezero-carbon-a-rating/",
+          "https://www.prnewswire.com/news-releases/rebellions-initial-methane-abatement-project-receives-bezero-carbon-a-rating-302178071.html"
+        ],
+        "notes": "First ACR credits for orphan well plugging. BeZero A (top 6% of all rated projects, June 2024). 80,792 tCO2e from plugging 40+ year old abandoned wells. Our A matches BeZero A \u2014 direct agreement. Scored using n2o_abatement archetype as closest analog, adjusted for methane-specific additionality (orphan wells have strong counterfactual: state has no budget to plug them)."
+      },
+      {
+        "id": "CT08",
+        "name": "Family Forest Carbon Program (US IFM)",
+        "registry_id": "ACR (American Forest Foundation)",
+        "country": "United States",
+        "project_type": "IFM",
+        "methodology": "ACR IFM (aggregated small-family-forest protocol)",
+        "our_v06": {
+          "archetype": "ifm",
+          "scores": {
+            "removal_type": 58,
+            "additionality": 48,
+            "permanence": 45,
+            "mrv_grade": 55,
+            "vintage_year": 90,
+            "co_benefits": 65,
+            "registry_methodology": 80
+          },
+          "composite": 57.975,
+          "grade": "BBB",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "bezero": "BBB"
+        },
+        "source_urls": [
+          "https://www.forestfoundation.org/why-we-do-it/family-forest-blog/family-forest-carbon-program-receives-bbbe-rating-from-carbon-ratings-agency/"
+        ],
+        "notes": "BeZero BBBe rating (November 2024) -- highest of BeZero's public US IFM ratings at the time. 'e' suffix denotes ex ante. Aggregated small-forest protocol with leakage and adverse selection risks. Our BBB matches BeZero BBB -- direct agreement. IFM archetype scores adjusted down from base archetype for: (1) adverse selection risk in aggregated small-forest programs, (2) leakage risk flagged by BeZero, (3) ex ante nature (no ex post verification yet)."
+      },
+      {
+        "id": "CT09",
+        "name": "Southern Cardamom REDD+ (Cambodia)",
+        "registry_id": "VCS 1748",
+        "country": "Cambodia",
+        "project_type": "REDD+",
+        "methodology": "REDD+ AUD (VM0015 family)",
+        "our_v06": {
+          "archetype": "redd_project",
+          "scores": {
+            "removal_type": 22,
+            "additionality": 35,
+            "permanence": 30,
+            "mrv_grade": 42,
+            "vintage_year": 65,
+            "co_benefits": 55,
+            "registry_methodology": 30
+          },
+          "composite": 34.9,
+          "grade": "BB",
+          "disqualifiers": [
+            "human_rights"
+          ],
+          "disqualifier_notes": "Human Rights Watch allegations (June 2023) led to Verra suspension and BeZero rating watch. Verra reinstated after review, but credible allegations trigger our human_rights disqualifier (caps at B). Final grade: B."
+        },
+        "agency_ratings": {
+          "bezero": "B"
+        },
+        "source_urls": [
+          "https://www.qcintel.com/carbon/article/redd-developer-rejects-ngo-s-human-rights-abuses-claims-14845.html",
+          "https://verra.org/verra-reinstates-southern-cardamom-redd-project/"
+        ],
+        "notes": "BeZero B with rating watch (2023). 497,000 ha tropical rainforest, Wildlife Alliance developer. Concerns: over-estimated baseline, additionality, non-permanence risk from community engagement gaps, and Human Rights Watch allegations. Our composite yields BB but human_rights disqualifier caps at B, matching BeZero B."
+      },
+      {
+        "id": "CT10",
+        "name": "Qnergy Weber County Landfill Methane",
+        "registry_id": "ACR (Weber County, Utah)",
+        "country": "United States",
+        "project_type": "Landfill gas",
+        "methodology": "ACR Landfill Methane Capture and Combustion",
+        "our_v06": {
+          "archetype": "landfill_gas",
+          "scores": {
+            "removal_type": 50,
+            "additionality": 62,
+            "permanence": 10,
+            "mrv_grade": 75,
+            "vintage_year": 95,
+            "co_benefits": 35,
+            "registry_methodology": 80
+          },
+          "composite": 57.15,
+          "grade": "BBB",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "bezero": "A"
+        },
+        "source_urls": [
+          "https://qnergy.com/2025/10/09/a-rated-carbon-credits-generated-from-methane-mitigation-project-at-weber-county-landfill/"
+        ],
+        "notes": "BeZero A rating for landfill methane project using TORCH4 Stirling engine destruction of stranded LFG. Our BBB vs BeZero A: our framework penalizes avoidance permanence (10) and removal_type (50) more than BeZero, whose A reflects the high measured-MRV and additionality of the small-landfill-methane niche."
+      },
+      {
+        "id": "CT11",
+        "name": "Chinese Onshore Wind (VCS 1188)",
+        "registry_id": "VCS 1188",
+        "country": "China",
+        "project_type": "Renewable energy",
+        "methodology": "ACM0002 (grid-connected wind)",
+        "our_v06": {
+          "archetype": "grid_renewable_energy",
+          "scores": {
+            "removal_type": 25,
+            "additionality": 22,
+            "permanence": 5,
+            "mrv_grade": 50,
+            "vintage_year": 40,
+            "co_benefits": 30,
+            "registry_methodology": 25
+          },
+          "composite": 27.4,
+          "grade": "B",
+          "disqualifiers": []
+        },
+        "agency_ratings": {
+          "bezero": "C"
+        },
+        "source_urls": [
+          "https://bezerocarbon.com/insights/building-bespoke-datasets-to-rate-renewable-projects"
+        ],
+        "notes": "BeZero used VCS 1188 as a case study for renewable energy rating methodology. 49.3 MW onshore wind in China. Carbon finance is a minor share of project revenue, indicating severe additionality risk. ICVCM rejected grid-connected renewables for CCP. Our B vs BeZero C: both rate at the low end; directional agreement. Our framework is one step more lenient than BeZero on this, but both agree it is low quality."
+      }
+    ]
+  }
 }

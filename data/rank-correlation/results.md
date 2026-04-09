@@ -31,3 +31,54 @@ Dataset: 6 REDD+ projects from Carbon Market Watch 2023 Table 20, scored under v
 - **Our pairwise agreement with the commercial raters is no worse than the commercial raters' agreement with each other.** This is the success criterion from the v0.4 plan note.
 
 Sample size is small (n=6). Treat the direction of the comparison as evidence, not the absolute magnitudes.
+
+---
+
+# Cross-Type Rank Correlation (v0.6 extension)
+
+Dataset: 11 non-REDD+ projects with publicly documented agency ratings, scored under v0.6 using methodology archetypes.
+
+## Per-project grades (cross-type)
+
+| ID | Project | Type | Our v0.6 | BeZero | Calyx | Sylvera |
+|----|---------|------|----------|--------|-------|---------|
+| CT01 | Climeworks Orca (DACCS Iceland) | CDR | AAA | AAA | - | - |
+| CT02 | Novocarbo Carbon Removal Site Rhine | Biochar | AA | A | - | - |
+| CT03 | Exomad Green Concepcion (Biochar Bolivia) | Biochar | AA | AA | - | AA |
+| CT04 | EcoSafi Clean Cooking (Kenya) | Cookstoves | BBB | A | - | - |
+| CT05 | BURN / Key Carbon Global Cookstoves (Kenya) | Cookstoves | BBB | - | AA | - |
+| CT06 | Arborify Cookstoves Togo | Cookstoves | BBB | - | A | - |
+| CT07 | Rebellion Energy Heartland Methane Abatement | Methane abatement | A | A | - | - |
+| CT08 | Family Forest Carbon Program (US IFM) | IFM | BBB | BBB | - | - |
+| CT09 | Southern Cardamom REDD+ (Cambodia) | REDD+ | B | B | - | - |
+| CT10 | Qnergy Weber County Landfill Methane | Landfill gas | BBB | A | - | - |
+| CT11 | Chinese Onshore Wind (VCS 1188) | Renewable energy | B | C | - | - |
+
+## Overall cross-type: Our v0.6 vs BeZero
+
+- n = 9 projects with both ratings
+- Spearman rho: **+0.906**
+- Kendall tau: **+0.853**
+
+## Per-type Spearman: Our v0.6 vs BeZero
+
+| Project type | n | Spearman rho | Kendall tau |
+|--------------|---|-------------:|------------:|
+| Biochar | 2 | n/a (tied) | n/a (tied) |
+| CDR | 1 | n/a (n<2) | n/a |
+| Cookstoves | 1 | n/a (n<2) | n/a |
+| IFM | 1 | n/a (n<2) | n/a |
+| Landfill gas | 1 | n/a (n<2) | n/a |
+| Methane abatement | 1 | n/a (n<2) | n/a |
+| REDD+ | 1 | n/a (n<2) | n/a |
+| Renewable energy | 1 | n/a (n<2) | n/a |
+
+## Our v0.6 vs Calyx (cross-type)
+
+- n = 2 projects with both ratings
+- Spearman rho: **n/a (tied on one or both variables)**
+- Kendall tau: **n/a**
+
+## Combined dataset: REDD+ + cross-type vs BeZero
+
+Pooling the 6 REDD+ projects (our v0.4.1 grades) with the cross-type projects (our v0.6 grades) for an overall correlation against BeZero.
