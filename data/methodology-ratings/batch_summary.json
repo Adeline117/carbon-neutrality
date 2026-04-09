@@ -1,11 +1,12 @@
 {
-  "total_projects": 199,
+  "total_projects": 318,
   "grade_distribution": {
-    "AA": 16,
-    "A": 40,
-    "BBB": 39,
-    "BB": 64,
-    "B": 40
+    "B": 81,
+    "BB": 77,
+    "BBB": 72,
+    "A": 34,
+    "AAA": 14,
+    "AA": 40
   },
   "methodology_categories": 17,
   "note": "Methodology-level archetype scoring. Per-project scores use archetype defaults adjusted for vintage. This is NOT per-project expert assessment \u2014 it is a scalable approximation for coverage expansion."

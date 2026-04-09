@@ -1,0 +1,319 @@
+project_id,name,methodology_category,registry,vintage_year,country
+VCS-1477,Katingan Mentaya Peatland Restoration and Conservation,redd_project,VCS (VM0009),2019,Indonesia
+VCS-0674,Rimba Raya Biodiversity Reserve REDD+,redd_project,VCS (VM0009),2018,Indonesia
+VCS-0934,Mai Ndombe REDD+ Project,redd_project,VCS (VM0009),2020,DRC
+VCS-0902,Kariba REDD+ Forest Protection,redd_project,VCS (VM0009),2019,Zimbabwe
+VCS-1396,Cordillera Azul National Park REDD+,redd_project,VCS (VM0015),2018,Peru
+VCS-0944,Madre de Dios Amazon REDD+ Project,redd_project,VCS (VM0015),2017,Peru
+VCS-1775,Southern Cardamom REDD+ Project,redd_project,VCS (VM0009),2019,Cambodia
+VCS-1650,Keo Seima Wildlife Sanctuary REDD+,redd_project,VCS (VM0009),2018,Cambodia
+VCS-0868,Alto Mayo Protected Forest REDD+,redd_project,VCS (VM0015),2016,Peru
+VCS-0985,Kasigau Corridor REDD+ Phase II,redd_project,VCS (VM0009),2019,Kenya
+VCS-1112,Russas-Purus REDD+ Acre State,redd_project,VCS (VM0015),2018,Brazil
+VCS-1113,Envira Amazonia REDD+ Project,redd_project,VCS (VM0015),2017,Brazil
+VCS-0981,Pacajai REDD+ Amazon Rainforest,redd_project,VCS (VM0015),2020,Brazil
+VCS-0612,Maisa REDD+ DRC,redd_project,VCS (VM0009),2019,DRC
+VCS-1503,Tambopata-Bahuaja REDD+ Project,redd_project,VCS (VM0015),2017,Peru
+VCS-0688,Isangi REDD+ Project DRC,redd_project,VCS (VM0009),2016,DRC
+VCS-0844,Virunga National Park REDD+,redd_project,VCS (VM0009),2020,DRC
+VCS-1382,Mataven Forest Conservation REDD+,redd_project,VCS (VM0009),2018,Colombia
+VCS-1020,Bajo Calima Community REDD+,redd_project,VCS (VM0015),2019,Colombia
+VCS-1340,Ntakata Mountains REDD+,redd_project,VCS (VM0009),2021,Tanzania
+VCS-1553,Paraguay Forest Conservation REDD+,redd_project,VCS (VM0009),2020,Paraguay
+VCS-1721,REDD+ Para State Forest Project,redd_project,VCS (VM0015),2018,Brazil
+VCS-0892,Nyungwe National Park REDD+,redd_project,VCS (VM0009),2019,Rwanda
+VCS-1025,Makame WMA REDD+ Project,redd_project,VCS (VM0009),2017,Tanzania
+VCS-1561,Aceh Province REDD+ Concession,redd_project,VCS (VM0009),2020,Indonesia
+VCS-1622,East Kalimantan Peatland REDD+,redd_project,VCS (VM0009),2019,Indonesia
+VCS-1833,Guyana ART TREES Jurisdictional REDD+,redd_project,VCS (VM0015),2021,Guyana
+VCS-1199,Myanmar Mangrove REDD+ Delta,redd_project,VCS (VM0009),2015,Myanmar
+VCS-1766,Lindi Region REDD+ Tanzania,redd_project,VCS (VM0009),2022,Tanzania
+VCS-1010,Sierra Leone Community Forest REDD+,redd_project,VCS (VM0009),2019,Sierra Leone
+VCS-1434,Bale Mountains REDD+ Ethiopia,redd_project,VCS (VM0009),2020,Ethiopia
+VCS-1598,Cerrado Biome REDD+ Brazil,redd_project,VCS (VM0015),2021,Brazil
+VCS-0901,Papua New Guinea Highland Forest REDD+,redd_project,VCS (VM0009),2016,Papua New Guinea
+VCS-1145,Lacandón Rainforest REDD+ Mexico,redd_project,VCS (VM0015),2018,Mexico
+VCS-1805,Chocó-Darién REDD+ Colombia,redd_project,VCS (VM0015),2022,Colombia
+VCS-1455,Mekong Delta Mangrove REDD+ Vietnam,redd_project,VCS (VM0009),2020,Vietnam
+VCS-1678,Cross River National Park REDD+ Nigeria,redd_project,VCS (VM0009),2021,Nigeria
+VCS-1923,West Papua Community Forest REDD+,redd_project,VCS (VM0009),2023,Indonesia
+JNR-0001,Guyana ART TREES Phase I REDD+,redd_jurisdictional,ART TREES v2.0,2022,Guyana
+JNR-0002,Costa Rica National REDD+ Strategy,redd_jurisdictional,ART TREES v2.0,2021,Costa Rica
+JNR-0003,Ecuador National REDD+ Program,redd_jurisdictional,ART TREES v2.0,2022,Ecuador
+JNR-0004,Papua New Guinea JNR REDD+,redd_jurisdictional,VCS JNR (VM0048),2023,Papua New Guinea
+JNR-0005,Colombia National REDD+ System,redd_jurisdictional,ART TREES v2.0,2022,Colombia
+JNR-0006,Peru National Forest Reference Level REDD+,redd_jurisdictional,ART TREES v2.0,2023,Peru
+JNR-0007,Ghana Cocoa Forest REDD+ JNR,redd_jurisdictional,ART TREES v2.0,2022,Ghana
+JNR-0008,DRC Mai-Ndombe Province JNR REDD+,redd_jurisdictional,VCS JNR (VM0048),2023,DRC
+JNR-0009,Vietnam Central Highlands JNR REDD+,redd_jurisdictional,ART TREES v2.0,2023,Vietnam
+JNR-0010,Indonesia East Kalimantan JNR REDD+,redd_jurisdictional,VCS JNR (VM0048),2024,Indonesia
+JNR-0011,Brazil Acre State JNR REDD+,redd_jurisdictional,ART TREES v2.0,2024,Brazil
+JNR-0012,Mexico Yucatan Peninsula JNR REDD+,redd_jurisdictional,ART TREES v2.0,2023,Mexico
+GS-1559,UpEnergy Clean Cookstoves Uganda,cookstoves,Gold Standard (TPDDTEC),2021,Uganda
+GS-2010,Gyapa Improved Cookstoves Ghana,cookstoves,Gold Standard (TPDDTEC),2020,Ghana
+GS-1820,Hongera Energy Efficient Cookstoves Kenya,cookstoves,Gold Standard (TPDDTEC),2022,Kenya
+GS-2145,Murang'a Improved Cookstove Project Kenya,cookstoves,Gold Standard (TPDDTEC),2021,Kenya
+GS-1990,Rwanda Improved Kitchen Regimes Bugesera,cookstoves,Gold Standard (TPDDTEC),2020,Rwanda
+GS-1750,ECOA Efficient Cookstoves Households Kenya,cookstoves,Gold Standard (TPDDTEC),2022,Kenya
+GS-1440,Envirofit Clean Cooking India,cookstoves,Gold Standard (TPDDTEC),2019,India
+GS-2200,Transformative Cookstove Activity Ghana,cookstoves,Gold Standard (TPDDTEC),2023,Ghana
+GS-1880,CO2balance Clean Cooking Mozambique,cookstoves,Gold Standard (TPDDTEC),2021,Mozambique
+GS-1650,Simoshi Institutional Cookstoves Uganda,cookstoves,Gold Standard (TPDDTEC),2020,Uganda
+GS-2055,BioLite HomeStove Distribution Kenya,cookstoves,Gold Standard (TPDDTEC),2022,Kenya
+GS-1710,Paradigm Efficient Stoves Ethiopia,cookstoves,Gold Standard (TPDDTEC),2020,Ethiopia
+GS-1920,Greenway Grameen Clean Cooking India,cookstoves,Gold Standard (TPDDTEC),2021,India
+GS-2110,Toyola Efficient Stoves Ghana,cookstoves,Gold Standard (TPDDTEC),2023,Ghana
+GS-1580,BURN Manufacturing Cookstoves Kenya,cookstoves,Gold Standard (TPDDTEC),2022,Kenya
+GS-2250,Improved Cookstoves Malawi Rural,cookstoves,Gold Standard (TPDDTEC),2023,Malawi
+GS-1830,EcoZoom Clean Stoves Tanzania,cookstoves,Gold Standard (TPDDTEC),2021,Tanzania
+GS-1960,Prakti Clean Cookstove India,cookstoves,Gold Standard (TPDDTEC),2020,India
+VCS-1590,Improved Cookstoves Distribution Bangladesh,cookstoves,VCS (VM0050),2021,Bangladesh
+VCS-1785,REMS Cookstove Programme Zambia,cookstoves,VCS (VM0050),2022,Zambia
+VCS-1690,EcoAct Clean Cooking Cambodia,cookstoves,VCS (VM0050),2020,Cambodia
+VCS-1442,DelAgua Tubeho Neza Rwanda,cookstoves,VCS (VM0050),2019,Rwanda
+GS-2300,Fuel Efficient Stoves South Sudan,cookstoves,Gold Standard (TPDDTEC),2023,South Sudan
+GS-2340,Lao PDR Clean Cooking Programme,cookstoves,Gold Standard (TPDDTEC),2024,Laos
+GS-1510,Biolite Clean Cooking Haiti,cookstoves,Gold Standard (TPDDTEC),2020,Haiti
+GS-2180,Efficient Stoves for Schools Nigeria,cookstoves,Gold Standard (TPDDTEC),2022,Nigeria
+GS-1370,Cookswell Jikos Efficient Stoves Kenya,cookstoves,Gold Standard (TPDDTEC),2019,Kenya
+GS-2402,Myanmar Efficient Cookstoves Rural,cookstoves,Gold Standard (TPDDTEC),2023,Myanmar
+GS-2440,Improved Biomass Stoves Philippines,cookstoves,Gold Standard (TPDDTEC),2024,Philippines
+GS-2380,Solar Cookstoves Pilot Burkina Faso,cookstoves,Gold Standard (TPDDTEC),2024,Burkina Faso
+GS-2420,Clean Cooking Energy Access Niger,cookstoves,Gold Standard (TPDDTEC),2024,Niger
+RE-0001,Kutch Wind Farm 250 MW India,grid_renewable_energy,VCS (ACM0002),2014,India
+RE-0002,Tamil Nadu Wind Power Project India,grid_renewable_energy,VCS (ACM0002),2015,India
+RE-0003,Rajasthan Solar Park 500 MW India,grid_renewable_energy,VCS (AMS-I.D),2016,India
+RE-0004,Inner Mongolia Wind Farm China,grid_renewable_energy,CDM (ACM0002),2013,China
+RE-0005,Gansu Province Wind Project China,grid_renewable_energy,CDM (ACM0002),2014,China
+RE-0006,Hebei Solar PV Project China,grid_renewable_energy,CDM (AMS-I.D),2015,China
+RE-0007,Yunnan Hydropower Small Scale China,grid_renewable_energy,CDM (AMS-I.D),2012,China
+RE-0008,Sao Paulo Wind Farm Brazil,grid_renewable_energy,VCS (ACM0002),2016,Brazil
+RE-0009,Bahia Wind Energy Complex Brazil,grid_renewable_energy,VCS (ACM0002),2017,Brazil
+RE-0010,Rio Grande do Norte Wind Brazil,grid_renewable_energy,VCS (ACM0002),2018,Brazil
+RE-0011,Karaburun Wind Farm Turkey,grid_renewable_energy,VCS (ACM0002),2015,Turkey
+RE-0012,Mersin Solar Park Turkey,grid_renewable_energy,VCS (AMS-I.D),2016,Turkey
+RE-0013,Binh Thuan Wind Farm Vietnam,grid_renewable_energy,VCS (ACM0002),2019,Vietnam
+RE-0014,Ninh Thuan Solar Project Vietnam,grid_renewable_energy,VCS (AMS-I.D),2020,Vietnam
+RE-0015,Gujarat Solar Park India,grid_renewable_energy,VCS (AMS-I.D),2014,India
+RE-0016,Maharashtra Wind Project India,grid_renewable_energy,VCS (ACM0002),2013,India
+RE-0017,Anhui Province Wind Farm China,grid_renewable_energy,CDM (ACM0002),2014,China
+RE-0018,Shandong Solar PV Park China,grid_renewable_energy,CDM (AMS-I.D),2016,China
+RE-0019,Pernambuco Solar Complex Brazil,grid_renewable_energy,VCS (AMS-I.D),2019,Brazil
+RE-0020,Central Anatolian Wind Farm Turkey,grid_renewable_energy,VCS (ACM0002),2017,Turkey
+RE-0021,Quang Binh Wind Power Vietnam,grid_renewable_energy,VCS (ACM0002),2021,Vietnam
+RE-0022,Andhra Pradesh Wind Farm India,grid_renewable_energy,VCS (ACM0002),2015,India
+RE-0023,Karnataka Solar Park India,grid_renewable_energy,VCS (AMS-I.D),2017,India
+RE-0024,Xinjiang Wind Energy China,grid_renewable_energy,CDM (ACM0002),2013,China
+RE-0025,Minas Gerais Wind Project Brazil,grid_renewable_energy,VCS (ACM0002),2020,Brazil
+RE-0026,Izmir Geothermal Power Turkey,grid_renewable_energy,VCS (ACM0002),2016,Turkey
+RE-0027,Bac Lieu Wind Farm Vietnam,grid_renewable_energy,VCS (ACM0002),2020,Vietnam
+RE-0028,Madhya Pradesh Solar PV India,grid_renewable_energy,VCS (AMS-I.D),2018,India
+RE-0029,Liaoning Wind Energy China,grid_renewable_energy,CDM (ACM0002),2015,China
+RE-0030,Piaui Wind Complex Brazil,grid_renewable_energy,VCS (ACM0002),2021,Brazil
+RE-0031,Hatay Wind Farm Turkey,grid_renewable_energy,VCS (ACM0002),2018,Turkey
+RE-0032,Gia Lai Wind Power Vietnam,grid_renewable_energy,VCS (ACM0002),2022,Vietnam
+RE-0033,Telangana Solar Project India,grid_renewable_energy,VCS (AMS-I.D),2019,India
+RE-0034,Jiangsu Offshore Wind China,grid_renewable_energy,CDM (ACM0002),2017,China
+RE-0035,Ceara Wind Energy Brazil,grid_renewable_energy,VCS (ACM0002),2020,Brazil
+ARR-0001,Teak Reforestation Atlantic Forest Brazil,arr_conservation,VCS (VM0047),2021,Brazil
+ARR-0002,Kibale National Park Buffer Reforestation Uganda,arr_conservation,VCS (VM0047),2022,Uganda
+ARR-0003,Humbo Community Reforestation Ethiopia,arr_conservation,VCS (VM0047),2020,Ethiopia
+ARR-0004,Panna Tiger Reserve Reforestation India,arr_conservation,VCS (VM0047),2023,India
+ARR-0005,Rizome Kawayan Bamboo Philippines,arr_conservation,VCS (VM0047),2024,Philippines
+ARR-0006,Cerrado Native Species Restoration Brazil,arr_conservation,VCS (VM0047),2022,Brazil
+ARR-0007,Mt Elgon Forest Restoration Kenya,arr_conservation,VCS (VM0047),2021,Kenya
+ARR-0008,Andean Cloud Forest Reforestation Colombia,arr_conservation,VCS (VM0047),2023,Colombia
+ARR-0009,Chagga Agroforestry Tanzania,arr_conservation,VCS (VM0047),2022,Tanzania
+ARR-0010,Mangrove Restoration Sundarbans Bangladesh,arr_conservation,ACR AFR,2021,Bangladesh
+ARR-0011,Sahel Great Green Wall Reforestation Niger,arr_conservation,VCS (VM0047),2023,Niger
+ARR-0012,Borneo Rainforest Restoration Malaysia,arr_conservation,VCS (VM0047),2024,Malaysia
+ARR-0013,Mata Atlantica Corridor Restoration Brazil,arr_conservation,VCS (VM0047),2023,Brazil
+ARR-0014,Western Ghats Reforestation India,arr_conservation,VCS (VM0047),2022,India
+ARR-0015,Malawi Lake Shore Restoration,arr_conservation,VCS (VM0047),2023,Malawi
+ARR-0016,Mekong River Basin Reforestation Laos,arr_conservation,VCS (VM0047),2024,Laos
+ARR-0017,Nordic Boreal Afforestation Estonia,arr_conservation,Ecobase Nordic ARR,2023,Estonia
+ARR-0018,Madagascar Dry Forest Restoration,arr_conservation,VCS (VM0047),2022,Madagascar
+ARR-0019,Guatemala Community Reforestation,arr_conservation,VCS (VM0047),2021,Guatemala
+ARR-0020,Haiti Mangrove Restoration Project,arr_conservation,VCS (VM0047),2023,Haiti
+ARRP-0001,Hancock Timber Plantation Uruguay,arr_commercial_plantation,VCS (various ARR),2019,Uruguay
+ARRP-0002,Arauco Pulp Plantation Chile,arr_commercial_plantation,VCS (various ARR),2018,Chile
+ARRP-0003,Suzano Eucalyptus Plantation Brazil,arr_commercial_plantation,VCS (various ARR),2020,Brazil
+ARRP-0004,APP Acacia Plantation Sumatra,arr_commercial_plantation,VCS (various ARR),2017,Indonesia
+ARRP-0005,CMPC Pine Plantation Chile,arr_commercial_plantation,VCS (various ARR),2019,Chile
+ARRP-0006,Mondi Timber Plantation South Africa,arr_commercial_plantation,VCS (various ARR),2020,South Africa
+ARRP-0007,Klabin Eucalyptus Plantation Parana Brazil,arr_commercial_plantation,VCS (various ARR),2021,Brazil
+ARRP-0008,Sinar Mas Pulp Plantation Kalimantan,arr_commercial_plantation,VCS (various ARR),2018,Indonesia
+ARRP-0009,Weyerhaeuser Southeastern US Timber,arr_commercial_plantation,ACR AFR,2020,USA
+ARRP-0010,UPM Eucalyptus Plantation Uruguay,arr_commercial_plantation,VCS (various ARR),2022,Uruguay
+IFM-0001,Finite Carbon Pacific Northwest IFM,ifm,ACR IFM,2020,USA
+IFM-0002,Green Diamond California IFM,ifm,CAR Forest Protocol,2019,USA
+IFM-0003,Lyme Timber Northeast IFM,ifm,ACR IFM,2021,USA
+IFM-0004,Forest Carbon Partners British Columbia IFM,ifm,VCS (VM0045),2020,Canada
+IFM-0005,The Nature Conservancy Montana IFM,ifm,ACR IFM,2019,USA
+IFM-0006,Potlatch Idaho IFM Project,ifm,CAR Forest Protocol,2018,USA
+IFM-0007,Merrill & Ring Washington IFM,ifm,ACR IFM,2020,USA
+IFM-0008,Baskahegan Maine IFM Project,ifm,ACR IFM,2021,USA
+IFM-0009,Victorian Central Highlands IFM Australia,ifm,VCS (VM0045),2022,Australia
+IFM-0010,Amazonas Sustainable Forestry IFM Brazil,ifm,VCS (VM0045),2020,Brazil
+IFM-0011,New Brunswick Community Forest IFM,ifm,ACR IFM,2021,Canada
+IFM-0012,Blue Source Appalachian IFM,ifm,ACR IFM,2019,USA
+IFM-0013,Ecotrust Oregon Coast IFM,ifm,ACR IFM,2020,USA
+IFM-0014,Great Smoky Mountains Buffer IFM,ifm,CAR Forest Protocol,2022,USA
+IFM-0015,Tasmania Old Growth Forest IFM,ifm,VCS (VM0045),2023,Australia
+IFM-0016,Parana State Forest Management IFM Brazil,ifm,VCS (VM0045),2021,Brazil
+IFM-0017,Mendocino County California IFM,ifm,CAR Forest Protocol,2019,USA
+IFM-0018,Vancouver Island IFM Canada,ifm,VCS (VM0045),2022,Canada
+DAC-0001,Climeworks Orca DACCS Hellisheidi Iceland,daccs_geological,Isometric DACCS,2024,Iceland
+DAC-0002,Climeworks Mammoth DACCS Hellisheidi Iceland,daccs_geological,Isometric DACCS,2025,Iceland
+DAC-0003,1PointFive STRATOS DAC Ector County Texas,daccs_geological,Puro DACCS,2025,USA
+DAC-0004,Heirloom Carbon DAC Louisiana Phase I,daccs_geological,Isometric DACCS,2025,USA
+DAC-0005,Climeworks Project Cypress Louisiana,daccs_geological,Isometric DACCS,2026,USA
+DAC-0006,Carbon Engineering Squamish Pilot Canada,daccs_geological,Puro DACCS,2023,Canada
+DAC-0007,Octavia Carbon DAC Kenya,daccs_geological,Isometric DACCS,2025,Kenya
+DAC-0008,Phlair DAC Pilot Germany,daccs_geological,Puro DACCS,2025,Germany
+DAC-0009,Carbyon DAC Netherlands Pilot,daccs_geological,Puro DACCS,2025,Netherlands
+DAC-0010,Deep Sky DAC Manitoba Canada,daccs_geological,Isometric DACCS,2026,Canada
+DAC-0011,Avnos Project Cedar Hybrid DAC,daccs_geological,Isometric DACCS,2026,USA
+DAC-0012,CarbFix Coda Terminal Iceland,daccs_geological,Isometric DACCS,2024,Iceland
+DAC-0013,Verdox Electrochemical DAC Massachusetts,daccs_geological,Puro DACCS,2026,USA
+DAC-0014,Noya Cooling Tower DAC California,daccs_geological,Puro DACCS,2025,USA
+BCR-0001,Exomad Green Biochar Mongolia,biochar,Puro Biochar,2023,Mongolia
+BCR-0002,Oregon Biochar Solutions Pacific NW,biochar,Isometric Biochar,2024,USA
+BCR-0003,NetZero Biochar Paraguacu Brazil,biochar,Puro Biochar,2024,Brazil
+BCR-0004,Carbofex Biochar Finland,biochar,Puro Biochar,2023,Finland
+BCR-0005,Varaha Biochar India,biochar,Puro Biochar,2024,India
+BCR-0006,Bio-Logical Biochar Kenya,biochar,Puro Biochar,2024,Kenya
+BCR-0007,Aperam BioEnergia Biochar Brazil,biochar,Puro Biochar,2024,Brazil
+BCR-0008,Greenglow Biochar Southeast Asia,biochar,Puro Biochar,2024,Cambodia
+BCR-0009,Pacific Biochar California,biochar,Isometric Biochar,2023,USA
+BCR-0010,CharGrow Biochar Nebraska,biochar,CAR Biochar,2024,USA
+BCR-0011,Carbon Gold Biochar UK,biochar,Puro Biochar,2023,UK
+BCR-0012,ECHO2 Biochar Australia,biochar,Puro Biochar,2024,Australia
+BCR-0013,Tigercat Biochar Canada,biochar,Isometric Biochar,2024,Canada
+BCR-0014,Rainbow Bee Eater Biochar Australia,biochar,Puro Biochar,2023,Australia
+BCR-0015,Biochar Works Colorado,biochar,Isometric Biochar,2024,USA
+BCR-0016,Carbo Culture Biochar Finland,biochar,Puro Biochar,2023,Finland
+BCR-0017,NovoCarbo Biochar Germany,biochar,Puro Biochar,2024,Germany
+BCR-0018,Carbon Terra Biochar Germany,biochar,Puro Biochar,2023,Germany
+ERW-0001,UNDO Enhanced Weathering Scotland UK,enhanced_weathering,Isometric ERW,2024,UK
+ERW-0002,Lithos Carbon North Carolina ERW,enhanced_weathering,Isometric ERW,2024,USA
+ERW-0003,Eion Olivine Mid-Atlantic US,enhanced_weathering,Isometric ERW,2024,USA
+ERW-0004,Mati Carbon ERW Smallholder India,enhanced_weathering,Isometric ERW,2024,India
+ERW-0005,UNDO Enhanced Weathering Northern England,enhanced_weathering,Isometric ERW,2023,UK
+ERW-0006,Mati Carbon ERW Tanzania,enhanced_weathering,Isometric ERW,2025,Tanzania
+ERW-0007,InPlanet ERW Brazil,enhanced_weathering,Isometric ERW,2024,Brazil
+ERW-0008,Silica Enhanced Weathering Netherlands,enhanced_weathering,Isometric ERW,2025,Netherlands
+ERW-0009,Carbonaught ERW Australia,enhanced_weathering,Isometric ERW,2025,Australia
+ERW-0010,Eion Kenya Farmland ERW,enhanced_weathering,Isometric ERW,2025,Kenya
+BIO-0001,Charm Industrial Bio-Oil Geological Injection Kansas,bio_oil_geological,Isometric Bio-oil,2024,USA
+BIO-0002,Charm Industrial Bio-Oil Oklahoma,bio_oil_geological,Isometric Bio-oil,2024,USA
+BIO-0003,BioCirc BECCS Denmark,bio_oil_geological,Isometric Bio-oil,2025,Denmark
+BIO-0004,Vaulted Deep Geological Bio-Slurry Texas,bio_oil_geological,Isometric Bio-oil,2024,USA
+BIO-0005,Graphyte Bio-Carbon Storage Arkansas,bio_oil_geological,Isometric Bio-oil,2024,USA
+BIO-0006,Supercritical BECCS Project UK,bio_oil_geological,Puro Bio-oil,2025,UK
+LFG-0001,Republic Services Landfill Gas South Carolina,landfill_gas,ACR LFG,2020,USA
+LFG-0002,Waste Management LFG Capture Louisiana,landfill_gas,ACR LFG,2019,USA
+LFG-0003,Veolia Landfill Gas Recovery Illinois,landfill_gas,ACR LFG,2021,USA
+LFG-0004,CGR Bandeirantes LFG Sao Paulo,landfill_gas,VCS LFG,2018,Brazil
+LFG-0005,Monterrey Landfill Gas Mexico,landfill_gas,VCS LFG,2019,Mexico
+LFG-0006,Istanbul Kemerburgaz LFG Turkey,landfill_gas,VCS LFG,2017,Turkey
+LFG-0007,Advanced Disposal LFG Georgia USA,landfill_gas,ACR LFG,2020,USA
+LFG-0008,Nova Iguacu LFG Rio de Janeiro,landfill_gas,VCS LFG,2019,Brazil
+LFG-0009,Queretaro Landfill Gas Capture Mexico,landfill_gas,VCS LFG,2020,Mexico
+LFG-0010,Casella Waste LFG Vermont,landfill_gas,ACR LFG,2021,USA
+LFG-0011,Paulinia Landfill Gas Campinas Brazil,landfill_gas,VCS LFG,2020,Brazil
+LFG-0012,Izmir Harmandali LFG Turkey,landfill_gas,VCS LFG,2018,Turkey
+LFG-0013,Clean Harbors LFG Arkansas USA,landfill_gas,ACR LFG,2022,USA
+LFG-0014,Bogota Dona Juana LFG Colombia,landfill_gas,VCS LFG,2019,Colombia
+N2O-0001,Deepak Fertilizers N2O India,n2o_abatement,CAR N2O,2018,India
+N2O-0002,Hanwha Solutions N2O South Korea,n2o_abatement,CAR N2O,2019,South Korea
+N2O-0003,Chongqing Changshou N2O Destruction China,n2o_abatement,CDM AM0028,2016,China
+N2O-0004,Gujarat Narmada Fertilizers N2O India,n2o_abatement,CAR N2O,2020,India
+N2O-0005,Kumho Mitsui N2O Yeosu Korea,n2o_abatement,CAR N2O,2019,South Korea
+N2O-0006,Wuxi Shentong N2O China,n2o_abatement,CDM AM0028,2017,China
+N2O-0007,IFFCO Aonla N2O Abatement India,n2o_abatement,CAR N2O,2021,India
+N2O-0008,Henan Shenma N2O Destruction China,n2o_abatement,CDM AM0028,2018,China
+ODS-0001,Tradewater ODS Destruction Midwest USA,ods_destruction,ACR ODS,2021,USA
+ODS-0002,EOS Climate ODS Collection California,ods_destruction,ACR ODS,2020,USA
+ODS-0003,Tradewater ODS Programme Thailand,ods_destruction,ACR ODS,2022,Thailand
+ODS-0004,Reclamation Technologies ODS Mexico,ods_destruction,CAR ODS,2021,Mexico
+ODS-0005,Tradewater ODS Ghana Programme,ods_destruction,ACR ODS,2023,Ghana
+ODS-0006,Eco-Fridge ODS Recovery UK,ods_destruction,ACR ODS,2022,UK
+ODS-0007,A-Gas ODS Destruction Florida USA,ods_destruction,CAR ODS,2021,USA
+ODS-0008,Tradewater Dominican Republic ODS,ods_destruction,ACR ODS,2023,Dominican Republic
+ODS-0009,EOS Climate Pacific Northwest ODS,ods_destruction,ACR ODS,2022,USA
+RICE-0001,Vietnam Mekong AWD Rice Methane,rice_methane,Gold Standard Rice Methane,2022,Vietnam
+RICE-0002,Thai Jasmine Rice AWD Chiang Rai,rice_methane,Gold Standard Rice Methane,2023,Thailand
+RICE-0003,Andhra Pradesh SRI Rice India,rice_methane,Gold Standard Rice Methane,2022,India
+RICE-0004,Bangladesh Aman Rice AWD,rice_methane,Gold Standard Rice Methane,2023,Bangladesh
+RICE-0005,Central Java Rice Methane Project,rice_methane,Gold Standard Rice Methane,2022,Indonesia
+RICE-0006,Punjab Rice Straw Management India,rice_methane,Gold Standard Rice Methane,2023,India
+RICE-0007,Cambodia Battambang Rice AWD,rice_methane,Gold Standard Rice Methane,2024,Cambodia
+RICE-0008,Myanmar Irrawaddy Rice AWD,rice_methane,Gold Standard Rice Methane,2023,Myanmar
+RICE-0009,Vietnam Red River Delta Rice AWD,rice_methane,Gold Standard Rice Methane,2024,Vietnam
+RICE-0010,Philippines Nueva Ecija Rice AWD,rice_methane,Gold Standard Rice Methane,2024,Philippines
+SAG-0001,Indigo Agriculture Soil Carbon Kansas,sustainable_agriculture,VCS (VM0042),2022,USA
+SAG-0002,Nori Croplands Soil Carbon Iowa,sustainable_agriculture,VCS (VM0042),2021,USA
+SAG-0003,Regrow Ag Soil Carbon Nebraska,sustainable_agriculture,VCS (VM0042),2023,USA
+SAG-0004,CIBO Technologies Illinois Soil Carbon,sustainable_agriculture,CAR Soil Enrichment,2022,USA
+SAG-0005,Bayer Carbon Programme Brazil,sustainable_agriculture,VCS (VM0042),2023,Brazil
+SAG-0006,Agreena Soil Carbon Denmark,sustainable_agriculture,VCS (VM0042),2023,Denmark
+SAG-0007,Carbon Farmers Australia Soil Carbon,sustainable_agriculture,VCS (VM0042),2022,Australia
+SAG-0008,Agoro Carbon Alliance Kenya Soil,sustainable_agriculture,VCS (VM0042),2023,Kenya
+SAG-0009,Grassroots Carbon Texas Rangeland,sustainable_agriculture,VCS (VM0042),2022,USA
+SAG-0010,Climate Farmers Mediterranean Spain,sustainable_agriculture,VCS (VM0042),2024,Spain
+SAG-0011,Radicle Ranch Soil Carbon Montana,sustainable_agriculture,CAR Soil Enrichment,2023,USA
+SAG-0012,TIST Agroforestry Soil Carbon India,sustainable_agriculture,VCS (VM0042),2022,India
+SAG-0013,Pivot Bio Soil Carbon Programme Iowa,sustainable_agriculture,VCS (VM0042),2024,USA
+SAG-0014,South Pole Soil Carbon Argentina,sustainable_agriculture,VCS (VM0042),2023,Argentina
+HFC-0001,Zhejiang Juhua HFC-23 Destruction China,hfc23_destruction,CDM (AM0001),2013,China
+HFC-0002,Gujarat Fluorochemicals HFC-23 India,hfc23_destruction,CDM (AM0001),2014,India
+HFC-0003,Shandong Dongyue HFC-23 China,hfc23_destruction,CDM (AM0001),2012,China
+HFC-0004,SRF Limited HFC-23 India,hfc23_destruction,CDM (AM0001),2013,India
+HFC-0005,Changshu Feiyu HFC-23 China,hfc23_destruction,CDM (AM0001),2014,China
+HFC-0006,Jiangsu Meilan HFC-23 Destruction China,hfc23_destruction,CDM (AM0001),2012,China
+HFC-0007,Navin Fluorine HFC-23 India,hfc23_destruction,CDM (AM0001),2015,India
+HFC-0008,Zhejiang Sanmei HFC-23 China,hfc23_destruction,CDM (AM0001),2013,China
+VCS-1950,Xishuangbanna Tropical Forest REDD+,redd_project,VCS (VM0009),2021,China
+VCS-1877,Bolaven Plateau Forest REDD+ Laos,redd_project,VCS (VM0015),2020,Laos
+VCS-2001,Yucatan Dry Forest REDD+ Mexico,redd_project,VCS (VM0015),2022,Mexico
+VCS-1999,Prey Lang Forest REDD+ Cambodia,redd_project,VCS (VM0009),2021,Cambodia
+VCS-2020,Leuser Ecosystem REDD+ Sumatra,redd_project,VCS (VM0009),2023,Indonesia
+VCS-2033,Central Sulawesi Mangrove REDD+,redd_project,VCS (VM0009),2022,Indonesia
+VCS-1710,Oddar Meanchey Community Forest REDD+,redd_project,VCS (VM0015),2019,Cambodia
+RE-0036,Telangana Wind Power Phase II India,grid_renewable_energy,VCS (ACM0002),2020,India
+RE-0037,Fujian Offshore Wind Phase I China,grid_renewable_energy,CDM (ACM0002),2018,China
+RE-0038,Sergipe Solar PV Complex Brazil,grid_renewable_energy,VCS (AMS-I.D),2021,Brazil
+RE-0039,Manisa Geothermal Project Turkey,grid_renewable_energy,VCS (ACM0002),2019,Turkey
+RE-0040,Dak Lak Wind Farm Vietnam,grid_renewable_energy,VCS (ACM0002),2021,Vietnam
+GS-2460,Clean Cooking Enterprise Madagascar,cookstoves,Gold Standard (TPDDTEC),2024,Madagascar
+GS-2500,Efficient Stoves Togo Rural Programme,cookstoves,Gold Standard (TPDDTEC),2024,Togo
+GS-2520,LPG Transition Programme Senegal,cookstoves,Gold Standard (TPDDTEC),2023,Senegal
+GS-2550,Solar Cookers for Refugee Camps Chad,cookstoves,Gold Standard (TPDDTEC),2024,Chad
+GS-2480,Ethanol Cookstoves Pilot Kenya,cookstoves,Gold Standard (TPDDTEC),2023,Kenya
+ARR-0021,Jharkhand Community Reforestation India,arr_conservation,VCS (VM0047),2024,India
+ARR-0022,Atlantic Forest Corridor Restoration Brazil,arr_conservation,VCS (VM0047),2024,Brazil
+ARR-0023,Mozambique Miombo Restoration,arr_conservation,VCS (VM0047),2023,Mozambique
+ARR-0024,Honduras Cloud Forest Reforestation,arr_conservation,VCS (VM0047),2024,Honduras
+ARR-0025,Ivory Coast Cocoa Agroforestry,arr_conservation,VCS (VM0047),2024,Ivory Coast
+IFM-0019,Sierra Pacific Industries California IFM,ifm,CAR Forest Protocol,2020,USA
+IFM-0020,Ontario Crown Forest IFM Canada,ifm,VCS (VM0045),2023,Canada
+LFG-0015,Santiago Cerros de Renca LFG Chile,landfill_gas,VCS LFG,2021,Chile
+LFG-0016,Medellin Curva de Rodas LFG Colombia,landfill_gas,VCS LFG,2020,Colombia
+BCR-0019,Waste2Char Biochar Philippines,biochar,Puro Biochar,2025,Philippines
+BCR-0020,Burn+ Biochar Rwanda,biochar,Puro Biochar,2025,Rwanda
+SAG-0015,TerViva Pongamia Soil Carbon Florida,sustainable_agriculture,VCS (VM0042),2024,USA
+SAG-0016,Yara Soil Carbon Programme France,sustainable_agriculture,VCS (VM0042),2024,France
+RICE-0011,Haryana AWD Rice India,rice_methane,Gold Standard Rice Methane,2024,India
+RICE-0012,Mekong Delta Phase II Vietnam,rice_methane,Gold Standard Rice Methane,2024,Vietnam
+ODS-0010,Tradewater ODS Recovery Colombia,ods_destruction,ACR ODS,2024,Colombia
+N2O-0009,GNFC Bharuch N2O India,n2o_abatement,CAR N2O,2022,India
+N2O-0010,Jilin Connell N2O China,n2o_abatement,CDM AM0028,2019,China
+ERW-0011,Vaulterra ERW Illinois USA,enhanced_weathering,Isometric ERW,2025,USA
+ERW-0012,ClimeRock ERW Spain,enhanced_weathering,Isometric ERW,2025,Spain
+BIO-0007,Stockholm Exergi BECCS Sweden,bio_oil_geological,Puro Bio-oil,2025,Sweden
+BIO-0008,Drax BECCS North Yorkshire UK,bio_oil_geological,Puro Bio-oil,2026,UK
+JNR-0013,Laos National Forest JNR REDD+,redd_jurisdictional,ART TREES v2.0,2024,Laos
+JNR-0014,Tanzania National REDD+ Framework,redd_jurisdictional,ART TREES v2.0,2024,Tanzania
+ARRP-0011,Portucel Eucalyptus Plantation Mozambique,arr_commercial_plantation,VCS (various ARR),2022,Mozambique
+ARRP-0012,Asia Pulp Paper Plantation Riau Indonesia,arr_commercial_plantation,VCS (various ARR),2019,Indonesia
