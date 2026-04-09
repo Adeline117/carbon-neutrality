@@ -48,7 +48,7 @@ Composite is mapped to a 6-tier grade enum (`B` < `BB` < `BBB` < `A` < `AA` < `A
 | BB    | 3000 |
 | B     | 0 |
 
-### Disqualifiers (6 in v0.4)
+### Disqualifiers (7 in v0.6)
 
 Flags that **cap** the final grade regardless of composite score. They never raise grades.
 
@@ -59,14 +59,15 @@ Flags that **cap** the final grade regardless of composite score. They never rai
 | `humanRights` | B | |
 | `sanctionedRegistry` | BB | |
 | `noThirdParty` | BBB | |
-| `communityHarm` | BBB | v0.4 safeguards-gate (new) |
+| `communityHarm` | BBB | v0.4 safeguards-gate |
+| `biodiversityHarm` | BBB | v0.6; Zeng et al. 2026 |
 
-### Freshness and provenance (v0.4)
+### Freshness and provenance (v0.4+)
 
 The `Rating` struct carries three new fields:
 
 - `expiresAt` (uint64) — unix timestamp after which the rating is considered stale. A value of `0` means "never expires". `setRating` rejects any non-zero value that is not strictly in the future.
-- `methodologyVersion` (uint16) — stamped from `CURRENT_METHODOLOGY_VERSION` (v0.4 = `0x0400`) at write time. A rating written under an older methodology version is automatically stale even if its `expiresAt` has not elapsed. This is the grandfathering mechanism: bumping the contract's methodology version invalidates all prior ratings until they are explicitly re-attested.
+- `methodologyVersion` (uint16) — stamped from `CURRENT_METHODOLOGY_VERSION` (v0.6 = `0x0500`) at write time. A rating written under an older methodology version is automatically stale even if its `expiresAt` has not elapsed. This is the grandfathering mechanism: bumping the contract's methodology version invalidates all prior ratings until they are explicitly re-attested.
 - `evidenceHash` (bytes32) — `keccak256` of the off-chain attestation bundle (project design document, verification report, satellite imagery index, etc.). The contract does not enforce any particular content; it is a pointer that assessors, downstream verifiers, and dispute resolvers can check against their canonical copy.
 
 `isStale(address, uint256) view returns (bool)` is the single source of truth for freshness. `meetsGrade(...)` returns `false` for stale ratings. `QualityGatedPool.deposit(...)` rejects stale ratings with a `StaleRating` error.
@@ -94,7 +95,7 @@ forge test --match-path 'contracts/test/*.t.sol' -vv
 
 The test file uses only native Solidity assertions (no forge-std imports) so it can be read as documentation even without Foundry installed.
 
-## Known limitations (for paper v0.4 discussion)
+## Known limitations (v0.6)
 
 1. **Single rater role.** Centralization risk; documented in workshop paper §9 and addressed in `docs/decentralized-rater-design.md`.
 2. ~~No rating expiry~~ **resolved in v0.4** — `expiresAt` + `methodologyVersion` + `isStale()`.

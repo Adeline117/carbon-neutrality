@@ -321,7 +321,10 @@ def write_sensitivity(credits: dict, rubrics: dict, baseline_rows: list[dict], o
     def score_all(w: dict) -> dict[str, str]:
         out = {}
         for credit in credits["credits"]:
-            scores = credit["scores"]
+            base = credit["scores"]
+            # v0.6 fix: apply dimension adjustments before composite (was missing)
+            adj_flags = credit.get("adjustments", [])
+            scores = apply_dimension_adjustments(base, adj_flags, dim_adjustments)
             comp = sum(scores[d] * w[d] for d in dimensions)
             g = grade_from_score(comp, grade_bands)
             g, _ = apply_disqualifiers(g, credit.get("disqualifiers", []), dq_spec)

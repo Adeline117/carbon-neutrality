@@ -43,14 +43,14 @@ contract CarbonCreditRatingTest {
             mrvGrade: 92,
             vintageYear: 100,
             coBenefits: 15,
-            registryMethodology: 82
+            registryMethodology: 80
         });
         uint16 bps = rating.computeComposite(s);
-        // v0.4 weights: 2500 / 2000 / 1750 / 2000 / 1000 / 0 / 750
-        // 98*2500 + 95*2000 + 98*1750 + 92*2000 + 100*1000 + 15*0 + 82*750
-        // = 245000 + 190000 + 171500 + 184000 + 100000 + 0 + 61500
-        // = 952000 / 100 = 9520
-        require(bps == 9520, "composite mismatch");
+        // v0.6 weights: 2500 / 2000 / 1750 / 2000 / 1000 / 0 / 750
+        // 98*2500 + 95*2000 + 98*1750 + 92*2000 + 100*1000 + 15*0 + 80*750
+        // = 245000 + 190000 + 171500 + 184000 + 100000 + 0 + 60000
+        // = 950500 / 100 = 9505
+        require(bps == 9505, "composite mismatch");
         require(rating.gradeFromComposite(bps) == ICarbonCreditRating.Grade.AAA, "Orca reaches AAA");
 
         // v0.5: variance under default stds (4,9,4,7,10,9,11).
