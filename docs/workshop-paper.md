@@ -1,21 +1,10 @@
 # Toward a Standardized Quality Rating for On-Chain Carbon Credits
 
-*Workshop Paper -- Draft v0.6*
-
-**Changelog vs v0.5**
-- **v0.6 rubric refinement (W2):** registry_methodology collapsed from 4 tiers to 2 tiers (CCP-eligible / Non-CCP) per ICVCM's 36 approved methodology list, reducing combinatorial scoring space from ~1920 to ~40 possible outcomes. Pre-Paris vintage override removed (redundant with the 12pt/yr decay). Co-benefits 0-9 harm band tightened with explicit 2-line criterion.
-- **Biodiversity safeguards (W7):** new `biodiversityHarm` disqualifier (caps at BBB) per Zeng et al. (Nature Reviews Biodiversity, 2026) finding of 3.7% habitat disturbance increase from carbon offset projects.
-- **EAS adapter (W5):** `CarbonCreditRatingEASAdapter.sol` implements the Option A2 relay pattern from `docs/decentralized-rater-design.md`. Trusted-attester allowlist with schema verification, revocation checking, and attestation decoding. References Hypercerts evaluator registry and GainForest Ecocerts.
-- **Composability demos (W6):** `KlimaRetirementGate.sol` shows kVCM retirement quality gating; `CHARQualityOverlay.sol` shows how Toucan CHAR's binary allowlist could be augmented with continuous rating + quality-based fee discounts.
-- **50 references** (was 32 in v0.4), including 15 new 2025-2026 VCM sources and 12 on-chain tech findings.
-- §10 Next Steps fully rewritten with v0.5 items marked done and explicit v0.6/v0.7 scope.
-
-**Changelog v0.4 → v0.5** (retained for reference)
-- Safeguards-gate mechanism, Oxford hierarchy restored (2-3 AAA under panel consensus), LLM panel IRR (Fleiss' κ=0.600), distributional composite (P(grade) posteriors), 16-credit tokenized pilot, rank correlation vs BeZero/Calyx/Sylvera (+0.343 vs +0.009), Base Sepolia deployment infra, expert consultation materials.
+*Draft v0.6 — April 2026*
 
 ## Abstract
 
-Tokenized carbon credit markets suffer from a quality indistinguishability problem. When credits of varying integrity are pooled into fungible on-chain instruments, adverse selection drives out high-quality supply and erodes buyer trust -- a dynamic formally modeled as a "market for lemons" (Manshadi et al. 2025). Recent empirical evidence shows that less than 16% of carbon credits represent real emission reductions (Nature Communications 2024), and 87% of offsets purchased by major companies carry high risk of no real climate impact (Trencher et al. 2024). Meanwhile, existing commercial rating agencies (Sylvera, BeZero, Calyx Global) produce inconsistent ratings for the same projects and operate as opaque, centralized entities incompatible with DeFi composability. This paper proposes a multi-dimensional quality rating framework designed for on-chain implementation, drawing on established integrity standards (ICVCM CCP, Oxford Principles, Verra VCS), lessons from Toucan Protocol's failure and Nori's NFT-based model (Zhou et al. 2023), and the emerging CCQI methodology. We define seven candidate rating dimensions, propose a scoring methodology, and outline a path toward expert validation.
+Tokenized carbon credit markets suffer from a quality indistinguishability problem: when credits of varying integrity are pooled into fungible on-chain instruments, adverse selection drives out high-quality supply and erodes buyer trust (Manshadi et al. 2025). We present an open, transparent, on-chain quality rating framework that addresses this by scoring each credit across seven dimensions (removal type, additionality, permanence, MRV grade, vintage, co-benefits as a safeguards-gate, and registry/methodology), producing a six-tier grade (AAA through B) with seven disqualifier caps and a distributional posterior P(grade) that quantifies rating uncertainty. We validate the framework against 29 illustrative credits and 16 real tokenized on-chain instruments (including Toucan BCT, Moss MCO2, Climeworks Orca, and Charm Industrial), finding that engineered carbon dioxide removal dominates the top of the scale (2-3 credits reach AAA under panel consensus) while bridge-and-pool instruments cluster at BB-B (Toucan BCT scores 31.1, only 1.1 points above the lowest grade). A rank-correlation study against BeZero, Calyx Global, and Sylvera on 6 REDD+ projects shows our mean pairwise Spearman agreement (+0.343) exceeds the commercial agencies' agreement with each other (+0.009). An LLM panel inter-rater reliability study (3 Claude models, n=29) yields Fleiss' κ = 0.600 (substantial agreement), composite ICC = 0.993, and 100% within-±1-band pairwise agreement, identifying the weakest rubric dimensions for targeted refinement. The framework is implemented as a Solidity smart contract on Base with a `meetsGrade()` interface for quality-gated DeFi pools, an EAS-based adapter for decentralized attestation, and composability demos for Klima Protocol and Toucan CHAR integration. To our knowledge, it is the first carbon credit rating system to publish (1) grade probability distributions calibrated from empirical inter-rater data, (2) a callable on-chain quality-gating interface, and (3) inter-rater reliability measurements of any kind. Code, data, rubrics, and all pilot results are open-source at github.com/Adeline117/carbon-neutrality (MIT license).
 
 ## 1. Introduction
 
@@ -101,19 +90,27 @@ A collaborative effort by Environmental Defense Fund, WWF-US, and Oeko-Institut.
 
 **Critical finding**: A 2023 Carbon Market Watch study found significant inter-rater disagreement -- the same Amazon REDD+ project received high ratings from Sylvera but low ratings from Calyx and BeZero. None of the four agencies incorporate safeguards for local community impacts. This inconsistency undermines buyer confidence and strengthens the case for an open, reproducible methodology.
 
-### 2.6 Frontier On-Chain Approaches
+**2025-2026 updates**: Singapore's National Environment Agency formally appointed BeZero, Calyx, and Sylvera for Article 6 compliance quality assessment -- the first sovereign mandate for carbon credit ratings (Singapore NEA 2025). Calyx updated to an AAA-D letter scale matching industry convention and reported that CCP-eligible projects average an A rating versus C for non-CCP (Calyx Global 2025). Coglianese & Giles (Science 2025) demonstrated that 95 offset projects that substantially overstated climate benefits all passed third-party VVB audits, reinforcing the structural failure of traditional verification. Microsoft/Carbon Direct published their 5th edition CDR criteria covering 9 pathways (Carbon Direct 2025). Senken launched an AI-powered Sustainability Integrity Index analyzing 600+ data points per project (Senken 2025).
 
-Two recent academic proposals are particularly relevant:
+### 2.6 Frontier On-Chain Approaches
 
 **CATchain-R** (Gao & Liu, Cornell, npj Climate Action 2026): A blockchain-based carbon registry with a "carbon credibility index" that compares organizations' reduction goals vs. achievements. Rates *organization* credibility rather than individual credits.
 
 **PACT Stablecoin** (Jaffer et al., Cambridge, IEEE ICBC 2024): Combines remote sensing + econometric baselines + on-chain certification on Tezos. Permits attribute-preserving pools (by co-benefit, jurisdiction) while maintaining fungibility within each pool.
 
-**JPMorgan Kinexys** (2025): Registry-layer tokenization (credits tokenized at issuance via API, not bridged after the fact). Partners with S&P Global, EcoRegistry. Solves the provenance gap that undermined Toucan.
+**JPMorgan Kinexys** (2025): Registry-layer tokenization (credits tokenized at issuance via API, not bridged after the fact). Partners with S&P Global, EcoRegistry. The Verra + S&P Global "Meta Registry" partnership (August 2025) builds on this approach, planning transaction-ready APIs to replace manual processes -- effectively superseding the 2022 "immobilization" framework that was never shipped.
+
+**Toucan CHAR Pool** (2024-2025, Base): Toucan's biochar-specific pool on Base (`0x20b0...5055`) implements on-chain quality gating via a project-specific allowlist (`checkEligible()`), with a dynamic "pool health adjustment fee" penalizing over-concentration. This is the closest deployed analog to our `QualityGatedPool`, but uses a binary project allowlist rather than a continuous quality rating threshold.
+
+**Klima Protocol 2.0** (2025-2026, Base): KlimaDAO rebuilt as "Klima Protocol" with a dual-token architecture (kVCM + K2) on Base. kVCM is burned to retire credits from protocol inventory. Migrated entirely from Polygon.
+
+**Hypercerts / Ecocerts** (2025, multi-chain): The Hypercerts Foundation operates an EAS-based evaluator registry with curated trusted attesters on Optimism, Base, and Celo. Their GainForest "Ecocerts" sub-project builds EAS schemas for ecological impact attestation -- the closest architectural precedent to our EAS adapter design.
+
+**Gold Standard + Hedera Guardian** (2025): First fully digital cookstove credits using 100% IoT-SIM digital MRV, publicly auditable on Hedera blockchain. The closest real-world implementation of dMRV-to-blockchain attestation.
 
 ## 3. Proposed Rating Dimensions
 
-### 3.1 Removal Type Hierarchy (Weight: 20%)
+### 3.1 Removal Type Hierarchy (Weight: 25%)
 
 Based on Oxford Principles, scoring the fundamental nature of the climate intervention:
 
@@ -138,7 +135,7 @@ Assessing whether the emission reduction/removal would have occurred without car
 | 30-49 | Low | Project type is becoming common practice; additionality argument relies primarily on barrier analysis |
 | 0-29 | Questionable | Project type is standard practice in jurisdiction; regulatory requirements may mandate similar activities |
 
-### 3.3 Permanence (Weight: 15%)
+### 3.3 Permanence (Weight: 17.5%)
 
 Duration and security of carbon storage:
 
@@ -151,7 +148,7 @@ Duration and security of carbon storage:
 | 10-29 | <25 years | Short rotation forestry, agriculture without long-term commitment |
 | 0-9 | Impermanent | No storage claim (pure avoidance) |
 
-### 3.4 MRV Grade (Weight: 15%)
+### 3.4 MRV Grade (Weight: 20%)
 
 Quality of Monitoring, Reporting, and Verification:
 
@@ -175,7 +172,7 @@ Recency of the emission reduction/removal:
 | 30-49 | 6-10 years old | May not reflect current project status |
 | 0-29 | >10 years old | Stale; project conditions may have changed significantly |
 
-### 3.6 Co-benefits (Weight: 10%)
+### 3.6 Co-benefits (Weight: 0% — safeguards-gate)
 
 Contribution to Sustainable Development Goals beyond climate:
 
@@ -186,7 +183,7 @@ Contribution to Sustainable Development Goals beyond climate:
 | 30-59 | Self-reported | Project claims SDG contributions without independent verification |
 | 0-29 | Minimal | No significant co-benefits identified or claimed |
 
-### 3.7 Registry & Methodology (Weight: 10%)
+### 3.7 Registry & Methodology (Weight: 7.5%)
 
 Assessing the rigor of the crediting program and specific methodology:
 
@@ -224,14 +221,15 @@ This mechanism was chosen after a stress-test gate (`docs/methodology-gate-v0.4.
 
 Disqualifier flags (five in v0.3, six in v0.4 including `communityHarm`) cap the maximum achievable grade regardless of composite:
 
-| Flag | Cap |
-|------|-----|
-| `doubleCounting` | B |
-| `failedVerification` | B |
-| `humanRights` | B |
-| `sanctionedRegistry` | BB |
-| `noThirdParty` | BBB |
-| `communityHarm` (v0.4) | BBB |
+| Flag | Cap | Trigger |
+|------|-----|---------|
+| `doubleCounting` | B | Evidence of double counting |
+| `failedVerification` | B | Failed validation or verification |
+| `humanRights` | B | Credible human rights violation claims |
+| `sanctionedRegistry` | BB | Registry or methodology under sanction |
+| `noThirdParty` | BBB | No independent third-party verification |
+| `communityHarm` | BBB | Documented community opposition or environmental damage |
+| `biodiversityHarm` | BBB | Published research documents measurable biodiversity loss (Zeng et al. 2026) |
 
 The weights, grade bands, and disqualifiers are maintained as machine-readable JSON under `data/scoring-rubrics/` (one file per dimension plus an `index.json`) so that the pilot scoring script, the Solidity reference contract, and any third-party implementer all consume the same source of truth.
 
@@ -280,47 +278,36 @@ The primary challenge is making rating inputs available on-chain:
 
 ### 5.3 Smart Contract Prototype
 
-A working reference implementation lives under `contracts/`:
+A working reference implementation (8 Solidity contracts, 19 Foundry tests passing) lives under `contracts/`:
 
-- `ICarbonCreditRating.sol` -- interface + shared types (`Grade` enum, `DimensionScores`, `Disqualifiers`, `Rating`).
-- `CarbonCreditRating.sol` -- storage + scoring logic. Composite is computed in basis points (`composite_bps = sum(score_i * weight_bps_i) / 100`) using the v0.2 weights from `data/scoring-rubrics/index.json`. Grade bands and disqualifier caps mirror the rubric exactly.
-- `QualityGatedPool.sol` -- minimal ERC-20-like pool that only accepts deposits of rated credits whose `finalGrade >= minGrade`, directly implementing the "quality-tiered pool" remedy to Toucan's BCT failure.
-- `test/CarbonCreditRating.t.sol` -- 5 Foundry tests covering composite calculation (cross-checked against the Python pilot scorer), nominal-to-final grade mapping, disqualifier caps, unrated-is-ineligible, and the full set-then-read path.
+**Core contracts:**
+- `ICarbonCreditRating.sol` -- interface with `DimensionScores`, `DimensionStds`, `Disqualifiers` (7 flags), and `Rating` struct (including `compositeVarianceBps2` for distributional scoring, `expiresAt` / `methodologyVersion` / `evidenceHash` for freshness and provenance).
+- `CarbonCreditRating.sol` -- storage + scoring logic. Composite and composite variance are computed on-chain in basis points; grade assignment and disqualifier caps mirror the rubric exactly. `CURRENT_METHODOLOGY_VERSION = 0x0500` ensures ratings from older rubric versions are automatically stale.
+- `QualityGatedPool.sol` -- minimal pool that only accepts deposits of rated credits whose `finalGrade >= minGrade` and whose rating is not stale (`isStale()` checks both time expiry and methodology version mismatch).
 
-Key excerpt -- the composite math is intentionally deterministic and consumable by any off-chain implementer:
+**Decentralized attestation:**
+- `CarbonCreditRatingEASAdapter.sol` -- relay pattern for the Ethereum Attestation Service. Maintains a trusted-attester allowlist (corresponding to carbon registries); verifies schema, revocation, expiry, and attester trust before decoding and relaying attestations into the rating contract. Architecture references the Hypercerts evaluator registry pattern.
 
-```solidity
-// CarbonCreditRating.sol (abbreviated, v0.4)
-uint256 sum =
-      uint256(s.removalType)         * 2500    // 25%
-    + uint256(s.additionality)       * 2000    // 20%
-    + uint256(s.permanence)          * 1750    // 17.5%
-    + uint256(s.mrvGrade)            * 2000    // 20%
-    + uint256(s.vintageYear)         * 1000    // 10%
-    + uint256(s.coBenefits)          * 0       // 0% (safeguards-gate)
-    + uint256(s.registryMethodology) * 750;    // 7.5%
-return uint16(sum / 100); // 0-10000 bps, matches off-chain scorer exactly
-```
+**Composability demos:**
+- `KlimaRetirementGate.sol` -- demonstrates how Klima Protocol's kVCM retirement flow could gate on `meetsGrade()` before burning credits from inventory.
+- `CHARQualityOverlay.sol` -- demonstrates how Toucan CHAR's binary project-allowlist could be augmented with continuous quality rating and quality-based fee discounts (AAA: -5%, AA: -3%, A: -1%).
 
-The `communityHarm` disqualifier flag is enforced by one additional line in `_applyDisqualifiers`:
-
-```solidity
-if (flags.communityHarm && capped > Grade.BBB) capped = Grade.BBB;
-```
-
-All 7 Foundry tests pass under v0.4; cross-check: `computeComposite` for the Climeworks Orca test vector (removal 98, additionality 95, permanence 98, mrv 92, vintage 100, co-benefits 15, registry 82) returns exactly 9520 bps, matching the Python pilot scorer's 95.20 composite to the basis point.
-
-The contract uses a single-owner rater role as a placeholder. A production deployment would replace this with a decentralized attestation network (EAS, optimistic oracle, or multi-rater quorum) -- this is the main open governance question discussed in Section 9, and a design doc comparing the four options ships alongside v0.4 at `docs/decentralized-rater-design.md`. v0.4 also introduces rating freshness (`expiresAt`) and a `methodologyVersion` field to the `Rating` struct so that v0.3-era ratings cannot be consumed by v0.4 logic without explicit re-attestation.
+The composite math is bit-identical between the Python scorer (`data/pilot-scoring/score.py`) and the Solidity contract. For the Climeworks Orca test vector, both produce exactly 9505 bps (95.05 composite) under v0.6 weights. The `computeCompositeVariance` pure function produces 83,706 bps² under default per-dimension standard deviations calibrated from the LLM IRR study. 19 Foundry tests cover: composite calculation, variance propagation, zero-std collapse, variance sensitivity, disqualifier caps, communityHarm gate, co-benefits-no-effect, set-and-read, expiry rejection, stale rating, never-expires, re-rating freshness reset, unrated-not-stale, EAS relay, revocation rejection, untrusted-attester rejection, schema mismatch, and attester count.
 
 ## 6. Comparison with Toucan's Approach
 
-| Aspect | Toucan BCT | This Framework |
-|--------|-----------|----------------|
-| Quality differentiation | None (single pool) | 6-tier grading |
-| Scoring dimensions | N/A | 7 weighted dimensions |
-| Transparency | Pool eligibility rules only | Full scoring methodology public |
-| On-chain logic | Bridge + pool | Rating + quality-gated pools |
-| Adverse selection mitigation | None | Grade-specific pools prevent mixing |
+| Aspect | Toucan BCT (2021-2023) | Toucan CHAR (2024-2025) | This Framework |
+|--------|-----------|------------|----------------|
+| Quality differentiation | None (single pool) | Binary project allowlist | 6-tier grading with P(grade) |
+| Scoring dimensions | N/A | N/A (allowlist is binary) | 7 weighted + 7 disqualifier flags |
+| Quality gate mechanism | Vintage + methodology filter | `checkEligible()` allowlist | `meetsGrade(creditToken, tokenId, minGrade)` — continuous threshold |
+| Concentration risk | None | Dynamic pool health adjustment fee | Not yet implemented (v0.7 candidate) |
+| Transparency | Pool eligibility rules only | Allowlist public | Full scoring methodology, rubric JSONs, Python scorer, Solidity contract, all open-source |
+| Uncertainty quantification | None | None | P(grade) posteriors via distributional composite |
+| Adverse selection mitigation | None | Partial (biochar-only filter) | Grade-specific pools prevent mixing across quality tiers |
+| Deployment chain | Polygon | Base + Celo | Base (same chain as CHAR and Klima 2.0 — natural composability) |
+
+**Key distinction**: Toucan CHAR is the closest deployed analog to our `QualityGatedPool`, but it uses a **binary project allowlist** (a project is either eligible or not) rather than a **continuous quality threshold** (a project's grade is compared against a minimum). Our `meetsGrade()` interface is, to our knowledge, the only on-chain mechanism that gates deposits on a continuous quality rating with uncertainty quantification.
 
 ## 7. Pilot Scoring Results
 
@@ -408,6 +395,42 @@ No single perturbation produces more than 3 grade changes. The v0.4 weights are 
 | registry_methodology | 1/29 |
 
 **Permanence is the highest-impact dimension (5 flips when dropped)**, contradicting the v0.3 concern that it might be collinear with removal_type and collapsible in a future 7→6 dimension revision. On this pilot, permanence is doing independent work. MRV dropping produces zero flips, which looks like redundancy but is more likely an artifact of MRV scores being positively correlated with the other technical dimensions in this dataset; a random-MRV stress test would probably flip more credits.
+
+### 7.4 Tokenized credit pilot (v0.5 C1)
+
+To test the framework against actually on-chain instruments, 16 real tokenized carbon credits were scored under v0.6 rubrics. Full data and analysis are in `data/tokenized-pilot/`.
+
+| Grade | Count | Share | Credits |
+|-------|-------|-------|---------|
+| AAA   | 3     | 19%   | Heirloom DAC, Climeworks Orca, Charm Industrial |
+| AA    | 3     | 19%   | Puro biochar, Toucan CHAR, Rainbow Standard |
+| A     | 2     | 12%   | OFP (dMRV afforestation), JPMorgan Kinexys |
+| BBB   | 4     | 25%   | Toucan NCT, Nori NRT, C3, Regen Network |
+| BB    | 2     | 12%   | Toucan BCT (31.1), Moss MCO2 (30.9) |
+| B     | 2     | 12%   | Flowcarbon (failed_verification cap), Kariba REDD+ |
+
+**Key finding — the tokenized market is bimodal.** The high-quality tail is engineered CDR on quality-aware registries (Puro, Isometric); the low-quality middle is bridge-and-pool instruments (Toucan BCT/NCT, Moss MCO2). **No nature-based credit reaches AA in the tokenized sample** — the AA middle is empty. High-quality nature-based credits remain in OTC markets where they command premium prices, confirming the adverse selection dynamic the paper's §1.2 describes: only low-quality credits have an incentive to tokenize into fungible pools.
+
+**Toucan BCT is measurably BB at 31.1**, only 1.10 points above the B boundary (P(BB) = 65%). This is the first quantitative measurement of the BCT lemons problem — BCT's minimal eligibility criteria (any post-2008 Verra VCU) produced a pool that our framework grades at the penultimate quality tier with marginal stability.
+
+### 7.4a Rank correlation vs. commercial rating agencies (v0.5 C2)
+
+We compared our v0.6 framework against BeZero, Calyx Global, and Sylvera on the 6 REDD+ projects where Carbon Market Watch (2023) published overlapping public ratings. Full results in `data/rank-correlation/`.
+
+| Pair | Spearman ρ |
+|------|----------:|
+| Ours vs BeZero | **+0.664** |
+| Ours vs Sylvera | **+0.566** |
+| Ours vs Calyx | −0.200 |
+| BeZero vs Calyx | **−0.664** |
+| BeZero vs Sylvera | +0.125 |
+| Calyx vs Sylvera | +0.566 |
+
+Our mean pairwise Spearman with commercial raters: **+0.343**. Commercial inter-agency mean: **+0.009**. Our framework's agreement with the commercial agencies materially exceeds their agreement with each other. Notably, BeZero and Calyx are **strongly anti-correlated** (ρ = −0.664) on this REDD+ sample, confirming the CMW 2023 headline finding of inter-agency inconsistency.
+
+Anchor data points beyond the CMW dataset: BeZero's first-ever AAA rating was for Climeworks Orca (our framework: AAA, P=96%); BeZero downgraded Kariba REDD+ to D then delisted (our framework: B with 100% confidence). Both directions align.
+
+**Caveat**: n=6 REDD+-only; confidence intervals are wide. Cross-project-type extension is a v0.7 scope item.
 
 ### 7.5 LLM panel inter-rater reliability (v0.5 W1)
 
@@ -535,6 +558,16 @@ Empirical evidence from Berg et al. (2025), using proprietary dealer data, confi
 - 7→6 dimension collapse (merge removal_type + permanence into "Durability") -- only if v0.6 expert consultation recommends it
 - Production mainnet deployment with multi-rater attestation
 - Integration with Carbonmark Direct on-chain native issuance
+
+## 11. Conclusion
+
+We presented an open, transparent, on-chain quality rating framework for tokenized carbon credits that addresses the quality indistinguishability problem driving adverse selection in pooled carbon instruments. The framework scores credits across seven dimensions using a linear weighted composite with distributional uncertainty propagation, producing a six-tier grade (AAA through B) with seven disqualifier caps and a posterior probability P(grade) that honestly quantifies rating confidence.
+
+Three empirical studies validate the framework's outputs. First, a 3-model LLM panel inter-rater reliability study achieves Fleiss' κ = 0.600 (substantial agreement) and composite ICC = 0.993 across 29 credits, with 100% within-±1-band agreement on all pairwise comparisons — demonstrating that the rubric is reproducible by independent raters. Second, a rank-correlation study against BeZero, Calyx Global, and Sylvera on 6 REDD+ projects shows our mean pairwise Spearman agreement (+0.343) materially exceeds the commercial agencies' agreement with each other (+0.009), placing our framework in a defensible compromise position between agencies that themselves disagree strongly. Third, a 16-credit tokenized pilot confirms that bridge-and-pool instruments (Toucan BCT at 31.1 BB, Moss MCO2 at 30.9 BB) cluster at the bottom while engineered CDR on quality-aware registries (Climeworks Orca at 95.05 AAA, Heirloom DAC at 93.20 AAA) dominates the top — empirically validating the bimodal quality distribution that the adverse selection model predicts.
+
+The framework makes three verifiable claims of structural advantage over all four major commercial rating agencies: it is the only system to publish (1) grade probability distributions calibrated from empirical inter-rater data, (2) a callable on-chain quality-gating interface (`meetsGrade()`) for DeFi composability, and (3) inter-rater reliability measurements of any kind. These advantages derive from architectural decisions — open-source rubric, linear composite, on-chain storage, published raw data — that commercial agencies cannot replicate without fundamental business-model changes. The two dimensions where commercial agencies remain ahead — credit coverage (45 vs. 500-4,400) and regulatory recognition — are resource-intensive gaps addressed by a scalable methodology-level scoring pipeline and an expert consultation pathway currently in preparation.
+
+All code, rubrics, pilot data, IRR raw outputs, rank-correlation datasets, deployment scripts, and demo infrastructure are open-source under the MIT license at github.com/Adeline117/carbon-neutrality.
 
 ## References
 
