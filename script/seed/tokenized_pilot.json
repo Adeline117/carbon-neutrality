@@ -299,6 +299,52 @@
     "vintage_year": 2023
   },
   {
+    "id": "T015",
+    "name": "Toucan CHAR pool (Base, biochar)",
+    "symbol": "MCC-T015",
+    "scores": {
+      "removal_type": 78,
+      "additionality": 80,
+      "permanence": 82,
+      "mrv_grade": 72,
+      "vintage_year": 100,
+      "co_benefits": 50,
+      "registry_methodology": 75
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2024
+  },
+  {
+    "id": "T016",
+    "name": "Rainbow Standard biochar credit",
+    "symbol": "MCC-T016",
+    "scores": {
+      "removal_type": 80,
+      "additionality": 78,
+      "permanence": 82,
+      "mrv_grade": 70,
+      "vintage_year": 100,
+      "co_benefits": 45,
+      "registry_methodology": 72
+    },
+    "flags": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "vintage_year": 2025
+  },
+  {
     "id": "T014",
     "name": "Toucan TCO2 - Kariba REDD+ (historical)",
     "symbol": "MCC-T014",

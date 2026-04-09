@@ -107,8 +107,8 @@ carbon-neutrality/
 
 **Exploratory** | Target: Late 2026
 
-- **v0.4.1 (current):** Workshop paper with the safeguards-gate scoring mechanism. 3 engineered-CDR credits reach AAA (Orca, Heirloom, Charm). Illustrative pilot at 29 credits; tokenized pilot at 14 real on-chain credits; rank-correlation study against BeZero/Calyx/Sylvera on 6 REDD+ projects (mean Spearman +0.343 vs inter-agency +0.009 under v0.4.1). Expert consultation materials drafted. Base Sepolia deployment infrastructure ready (scripts + demo HTML + read-API snapshot tool); physical deployment pending a rater key and faucet ETH.
-- **v0.5 (next):** LLM panel IRR study, distributional composite with per-dimension uncertainty propagation, gather expert feedback via the questionnaire, integrate into v0.5 methodology diff.
+- **v0.5 (current):** Safeguards-gate scoring + distributional composite (per-dimension uncertainty propagation, P(grade) posteriors). LLM panel IRR study (Fleiss' κ=0.600, ICC=0.993) confirmed C004 Charm's AAA is rater-dependent (0/3 LLMs agree). Rank correlation vs BeZero/Calyx/Sylvera (mean Spearman +0.343). 29-credit illustrative pilot + 16-credit tokenized pilot (incl. Toucan CHAR on Base, Rainbow Standard). 50 references. 20 expert reviewer candidates identified. Base Sepolia deployment infrastructure ready; physical deployment pending user execution.
+- **v0.6 (next):** Expert consultation execution (20 candidates identified), multi-provider LLM panel (GPT-5/Gemini), rubric refinement (registry_methodology κ=0.168 → 2-tier CCP/not-CCP), EAS adapter implementation referencing Hypercerts/Ecocerts, Klima 2.0 composability pilot on Base.
 
 ## Try it on Base Sepolia
 
@@ -124,7 +124,7 @@ Once deployed (see `script/README.md` for the runbook), the framework offers thr
 | Read API (no RPC required) | `https://<user>.github.io/carbon-neutrality/api/v0.4.1/ratings.json` |
 | Interactive demo (no wallet required) | `https://<user>.github.io/carbon-neutrality/demo/` |
 
-A 14-credit seed dataset (Toucan BCT/NCT/Kariba, Moss MCO2, Nori NRT, Puro CDR, Heirloom DAC, Climeworks Orca, Charm Industrial, JPMorgan Kinexys, Open Forest Protocol, Regen Network, C3, Flowcarbon) is written on-chain as `MockCarbonCredit` ERC-20s. Pick any of them in the demo to see the seven dimension bars, composite, final grade, methodology version, expiry, and evidence hash — all fetched live from the deployed contract via a daily GitHub Action snapshot to GitHub Pages.
+A 16-credit seed dataset (Toucan BCT/NCT/CHAR/Kariba, Moss MCO2, Nori NRT, Puro CDR, Rainbow biochar, Heirloom DAC, Climeworks Orca, Charm Industrial, JPMorgan Kinexys, Open Forest Protocol, Regen Network, C3, Flowcarbon) is written on-chain as `MockCarbonCredit` ERC-20s. Pick any of them in the demo to see the seven dimension bars, composite, final grade, methodology version, expiry, and evidence hash — all fetched live from the deployed contract via a daily GitHub Action snapshot to GitHub Pages.
 
 **Limitations of this deployment:**
 1. Single-rater testnet key — not decentralized; see `docs/decentralized-rater-design.md` for the v0.5 plan

@@ -48,7 +48,7 @@ contract SeedRatings is Script {
 
         // The JSON is a top-level array, so we parse each index individually.
         string memory json = vm.readFile("script/seed/tokenized_pilot.json");
-        uint256 n = 14; // known at generation time; script/seed/tokenized_pilot.json is hand-audited
+        uint256 n = 16; // known at generation time; script/seed/tokenized_pilot.json is hand-audited
 
         vm.startBroadcast(deployerPrivateKey);
 
@@ -103,7 +103,7 @@ contract SeedRatings is Script {
 
         console2.log("");
         console2.log("=====================================================");
-        console2.log("Seeded 14 tokenized-pilot credits as MockCarbonCredit ERC-20s.");
+        console2.log("Seeded 16 tokenized-pilot credits as MockCarbonCredit ERC-20s.");
         console2.log("Addresses are logged above; copy them into docs/v0.4.1-deployment-notes.md");
         console2.log("Then run: python3 tools/snapshot.py to generate the public read API");
         console2.log("=====================================================");
