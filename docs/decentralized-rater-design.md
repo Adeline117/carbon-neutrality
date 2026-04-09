@@ -45,6 +45,8 @@ Who can attest? Two sub-variants:
 
 **Works on.** Ethereum mainnet, Base, Optimism, Arbitrum, Scroll, Linea, Polygon. Broadest footprint of any option considered.
 
+**Implementation precedent (discovered in v0.5 research).** The Hypercerts Foundation already operates an EAS-based evaluator registry with curated trusted attesters on Optimism, Base, and Celo. Their "Ecocerts" sub-project (with GainForest) builds EAS schemas specifically for ecological impact claims — structurally near-identical to our Option A2. Their evaluator registry contract pattern (roles controlling who can update the attester list) maps directly to our `isTrustedAttester` mapping. See `docs/research-on-chain-2025-2026.md` Finding 1 and Finding 12 for details. The Gold Standard + Hedera Guardian project (2025) demonstrates a working dMRV-to-blockchain pipeline for cookstove credits, validating the attestation model end-to-end.
+
 ### 2.2 Option B — UMA-style optimistic oracle
 
 **Mechanism.** A rater *proposes* a rating and posts an economic bond. A challenge window (e.g., 48-72 hours) opens. Anyone can challenge the proposed rating by posting a counter-bond; if challenged, the dispute escalates to UMA's Data Verification Mechanism (DVM) where UMA token holders vote on the correct answer. Winners keep their bonds; losers forfeit them.

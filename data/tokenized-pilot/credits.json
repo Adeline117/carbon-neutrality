@@ -417,6 +417,67 @@
       "pool_score_basis": "Regen is a legitimate but small registry. Land management methodologies have known permanence challenges."
     },
     {
+      "id": "T015",
+      "name": "Toucan CHAR pool (Base, biochar)",
+      "type": "Quality-gated biochar carbon pool on Base",
+      "chain": "Base",
+      "contract_address": "0x20b048fA035D5763685D695e66aDF62c5D9F5055",
+      "token_standard": "ERC-20",
+      "issuer": "Toucan Protocol",
+      "underlying_registry": "Puro.earth (biochar subset)",
+      "tokenization_model": "Bridge-and-pool with project-specific allowlist gating",
+      "pool_composition_notes": "Biochar credits from Puro-certified projects. CHAR uses checkEligible() to allowlist specific projects and a dynamic fee mechanism to penalize over-concentration.",
+      "vintage_year": 2024,
+      "current_status": "Active on Base and Celo; the most selective Toucan pool",
+      "confidence": "high",
+      "scores": {
+        "removal_type": 78,
+        "additionality": 80,
+        "permanence": 82,
+        "mrv_grade": 72,
+        "vintage_year": 100,
+        "co_benefits": 50,
+        "registry_methodology": 75
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Puro-certified; individual projects within the pool may have BeZero biochar ratings"
+      ],
+      "ccp_eligible": false,
+      "pool_score_basis": "Higher quality than BCT/NCT because of biochar-specific allowlist and Puro certification. The pool health adjustment fee is a novel risk mitigation mechanism not present in BCT/NCT."
+    },
+    {
+      "id": "T016",
+      "name": "Rainbow Standard biochar credit",
+      "type": "CDR-focused registry biochar attestation",
+      "chain": "Off-chain registry (not natively on-chain)",
+      "contract_address": "registry-native",
+      "token_standard": "N/A",
+      "issuer": "Rainbow Standard",
+      "underlying_registry": "Rainbow Standard (CCP-Eligible program)",
+      "tokenization_model": "Registry-native; some secondary market tokenization possible",
+      "pool_composition_notes": "Biochar from European and global producers. Rainbow gained ICVCM CCP-Eligible status in 2025.",
+      "vintage_year": 2025,
+      "current_status": "Active; 80+ projects, 400K+ credits issued, ~6% durable CDR market share",
+      "confidence": "medium",
+      "scores": {
+        "removal_type": 80,
+        "additionality": 78,
+        "permanence": 82,
+        "mrv_grade": 70,
+        "vintage_year": 100,
+        "co_benefits": 45,
+        "registry_methodology": 72
+      },
+      "disqualifiers": [],
+      "commercial_rating_coverage": [
+        "Rainbow is newer; commercial agencies beginning to cover CDR registries",
+        "CCP-Eligible status from ICVCM provides a baseline quality signal"
+      ],
+      "ccp_eligible": true,
+      "pool_score_basis": "Similar to Puro biochar but with CCP-Eligible status. Registry is newer and smaller; methodology quality is reportedly comparable to Puro's biochar standard."
+    },
+    {
       "id": "T014",
       "name": "Toucan TCO2 - Kariba REDD+ (historical)",
       "type": "Individual Verra VCU tokenized as TCO2",

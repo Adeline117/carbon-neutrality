@@ -1,6 +1,6 @@
 # Pilot Scoring Results
 
-Dataset: 14 credits   Weights: removal_type=0.25, additionality=0.2, permanence=0.175, mrv_grade=0.2, vintage_year=0.1, co_benefits=0.0, registry_methodology=0.075
+Dataset: 16 credits   Weights: removal_type=0.25, additionality=0.2, permanence=0.175, mrv_grade=0.2, vintage_year=0.1, co_benefits=0.0, registry_methodology=0.075
 v0.5 distributional composite. Default std per dimension (from W1 empirical data): {'removal_type': 4.2, 'additionality': 8.6, 'permanence': 4.0, 'mrv_grade': 7.1, 'vintage_year': 10.3, 'co_benefits': 9.1, 'registry_methodology': 11.1}
 
 | ID | Name | Composite | ±σ | Grade | P(grade) | Caps |
@@ -9,6 +9,8 @@ v0.5 distributional composite. Default std per dimension (from W1 empirical data
 | T008 | Isometric/Heirloom DAC attestation | 93.05 | 2.88 | AAA | 0.85 | - |
 | T010 | Charm Industrial bio-oil | 90.15 | 2.88 | AAA | 0.52 | - |
 | T007 | Puro.earth CORC (Biochar, average) | 80.40 | 2.88 | AA | 0.97 | - |
+| T015 | Toucan CHAR pool (Base, biochar) | 79.88 | 2.88 | AA | 0.95 | - |
+| T016 | Rainbow Standard biochar credit | 79.35 | 2.88 | AA | 0.93 | - |
 | T012 | Open Forest Protocol credit | 68.25 | 2.88 | A | 0.99 | - |
 | T011 | JPMorgan Kinexys (S&P Global pilot) | 64.75 | 2.88 | A | 0.95 | - |
 | T013 | Regen Network NCT (Cosmos) | 54.50 | 2.88 | BBB | 0.97 | - |
@@ -24,9 +26,9 @@ v0.5 distributional composite. Default std per dimension (from W1 empirical data
 
 | Grade | Count | Share |
 |-------|-------|-------|
-| AAA | 3 | 21% |
-| AA | 1 | 7% |
-| A | 2 | 14% |
-| BBB | 4 | 29% |
-| BB | 2 | 14% |
-| B | 2 | 14% |
+| AAA | 3 | 19% |
+| AA | 3 | 19% |
+| A | 2 | 12% |
+| BBB | 4 | 25% |
+| BB | 2 | 12% |
+| B | 2 | 12% |

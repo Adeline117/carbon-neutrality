@@ -244,6 +244,16 @@ Start with **structured expert elicitation** (CCQI-style) for initial weight cal
 
 8. **Adverse selection is formally modeled**: Manshadi et al. (2025) proves that certification noise above a threshold causes market collapse. This validates the need for granular quality signals.
 
+9. **Third-party auditing is structurally broken**: Coglianese & Giles (Science, 2025) showed that 95 projects that substantially overstated climate benefits ALL passed third-party VVB audits. The conflict of interest (auditors selected and paid by developers) is structural and cannot be reformed. This validates heavy MRV weighting and the preference for dMRV + decentralized attestation.
+
+10. **Sovereign governments are mandating quality ratings**: Singapore (2025) formally appointed BeZero, Calyx, and Sylvera for Article 6 compliance carbon credit assessment. First government to require commercial carbon credit ratings for regulatory use, validating independent quality rating as regulatory infrastructure.
+
+11. **Carbon-biodiversity tradeoffs are empirically confirmed**: Zeng et al. (Nature Reviews Biodiversity, 2026) found offset projects associated with 3.7% increase in habitat disturbance. Monoculture plantations optimized for carbon uptake reduce species diversity. Strengthens the safeguards-gate and commercial_plantation_arr adjustment.
+
+12. **CCP labeling correlates with quality at 1.5-2 grade levels**: Calyx Global (2025) found CCP-eligible projects average A on their scale vs C for non-CCP projects. CORSIA credits average BB-B. Quantitative validation that CCP threshold is a meaningful quality signal.
+
+13. **Fully digital dMRV-to-blockchain pipeline is operational**: Gold Standard + ATEC Global (2025) issued the first cookstove credits using 100% IoT-SIM digital MRV, publicly auditable on Hedera Guardian blockchain. Closest real-world implementation of our dMRV + on-chain traceability architecture.
+
 ---
 
 ## References
@@ -275,3 +285,18 @@ Start with **structured expert elicitation** (CCQI-style) for initial weight cal
 25. Open Forest Protocol. openforestprotocol.org.
 26. Isometric. isometric.com.
 27. RMI. Carbon Crediting Data Framework.
+28. Coglianese, C. & Giles, C. (2025). Auditors can't save carbon offsets. *Science*, 389(6733). DOI: 10.1126/science.ady4864.
+29. Singapore NEA. (2025). Carbon Rating Panel: BeZero, Calyx, Sylvera for ICC Framework. nea.gov.sg.
+30. Zeng, Y. et al. (2026). Limitations of carbon markets for biodiversity conservation. *Nature Reviews Biodiversity*. DOI: 10.1038/s44358-026-00150-4.
+31. Calyx Global. (2025). Are carbon credit quality indicators delivering? calyxglobal.com.
+32. Gold Standard & ATEC Global. (2025). First fully digital cookstove carbon credits on Hedera Guardian. goldstandard.org.
+33. West, T.A.P. et al. (2025). Demystifying the Romanticized Narratives About Carbon Credits From Voluntary Forest Conservation. *Global Change Biology*, 31(10), e70527.
+34. Garcia, A. & Sanford, L. (2026). On the potential for strategic behavior in jurisdictional REDD+. *PNAS*, 123(14). DOI: 10.1073/pnas.2531612123.
+35. Cabiyo, B. & Field, C.B. (2025). Embracing imperfection: Carbon offset markets must learn to mitigate the risk of overcrediting. *PNAS Nexus*, 4(5), pgaf091.
+36. Fernandez Salguero, R.A. (2025). Effectiveness of Carbon Pricing and Compensation Instruments: An Umbrella Review. *arXiv*, 2512.06887.
+37. Cheong, B.C. (2025). The Paradox and Fallacy of Global Carbon Credits. *Anthropocene Science*, 4, 72-83.
+38. Columbia CGEP (Ahonen, P. et al.). (2025). How to Fully Operationalize Article 6 of the Paris Agreement. energypolicy.columbia.edu.
+39. Bosshard et al. (2025). Blockchain-based voluntary carbon market: strategic insights into network structure. *Frontiers in Blockchain*, 8, 1603695.
+40. Verra. (2026). First credits approved under DMRV pilot for high-frequency issuance. verra.org.
+41. ICVCM. (2025-2026). Six CDR + three cookstove methodology approvals (with conditions). icvcm.org.
+42. Calyx Global. (2026). New AAA-D rating scale + VM0050 cookstove coverage. calyxglobal.com.

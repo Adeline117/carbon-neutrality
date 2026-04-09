@@ -12,4 +12,6 @@ T010,Charm Industrial bio-oil,Pyrolysis bio-oil + geological injection,Puro.eart
 T011,JPMorgan Kinexys (S&P Global pilot),Registry-layer tokenized carbon credits,EcoRegistry + International Carbon Registry + S&P Global Commodity Insights,2024,55,62,52,72,100,55,68,64.75,2.88,A,A,0.95,,,
 T012,Open Forest Protocol credit,Decentralized-MRV afforestation,OFP (dMRV),2024,70,65,50,80,100,75,40,68.25,2.88,A,A,0.988,,,
 T013,Regen Network NCT (Cosmos),Agricultural land management credits,Regen Registry,2023,52,58,35,58,88,75,45,54.5,2.88,BBB,BBB,0.971,,,
+T015,"Toucan CHAR pool (Base, biochar)",Quality-gated biochar carbon pool on Base,Puro.earth (biochar subset),2024,78,80,82,72,100,50,75,79.88,2.88,AA,AA,0.954,,,
+T016,Rainbow Standard biochar credit,CDR-focused registry biochar attestation,Rainbow Standard (CCP-Eligible program),2025,80,78,82,70,100,45,72,79.35,2.88,AA,AA,0.934,,,
 T014,Toucan TCO2 - Kariba REDD+ (historical),Individual Verra VCU tokenized as TCO2,Verra VCS (VM0009),2017,18,20,22,25,0,20,25,19.23,2.88,B,B,1.0,no_third_party,,

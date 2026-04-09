@@ -482,17 +482,29 @@ Empirical evidence from Berg et al. (2025), using proprietary dealer data, confi
 - ~~Design rating freshness / decay mechanism~~ (workstream B, lands with v0.4)
 - ~~Decentralized rater architecture comparison~~ (workstream D, `docs/decentralized-rater-design.md`)
 
-**Planned for v0.5:**
-1. **Real-tokenized-credit dataset.** Score 15-20 actually on-chain credits (MCO2, BCT/NCT, NRT, Puro CDR, C3, Regen Network) under v0.4 rubrics and compare the distribution to the illustrative pilot.
-2. **Commercial rating rank correlation.** For projects where Sylvera / BeZero / Calyx / MSCI ratings are public, compute pairwise grade-rank agreement with our framework. Success criterion: pairwise agreement *no worse than* the commercial agencies' pairwise agreement with each other (Carbon Market Watch 2023 documented significant inter-rater disagreement among them).
-3. **Expert consultation.** Circulate v0.4 (not v0.3) to 10-15 carbon market practitioners, registry reviewers, project developers, and DeFi protocol designers. Ask them to react to the safeguards-gate decision menu from `docs/methodology-gate-v0.4.md` rather than rubber-stamp the chosen mechanism. Use CCQI-style structured elicitation.
-4. **Implement chosen decentralized rater model** from the v0.4 design doc, informed by expert feedback on trust assumptions.
-5. **Sensitivity-harden the pilot** by adding a random-MRV stress test (current leave-one-out shows 0 flips for MRV drop, which may be a dataset artifact).
+**Completed in v0.5:**
+- ~~Real-tokenized-credit dataset~~ (16 on-chain credits including Toucan CHAR on Base and Rainbow Standard biochar; `data/tokenized-pilot/`)
+- ~~Commercial rating rank correlation~~ (6-REDD+ study vs BeZero/Calyx/Sylvera, mean Spearman +0.343 vs inter-agency +0.009; `data/rank-correlation/`)
+- ~~LLM panel inter-rater reliability~~ (3-model Claude panel, grade-level Fleiss' κ = +0.600, ICC = +0.993; `data/llm-panel-irr/`)
+- ~~Distributional composite~~ (per-dimension uncertainty propagation, P(grade) posteriors calibrated from empirical W1 data; `data/scoring-rubrics/index.json` schema v0.3.0)
+- ~~Base Sepolia deployment infrastructure~~ (`script/Deploy.s.sol` + `script/SeedRatings.s.sol` + demo HTML; pending user execution)
+- ~~Expert consultation materials~~ (executive summary + 10-section questionnaire + 20-person reviewer candidate list; `docs/v0.5-*`)
+- ~~Deep research~~ (15 new VCM sources 2025-2026, 12 on-chain tech findings, 20 expert profiles)
 
-**Deferred to v0.6 or later:**
-- 7→6 dimension collapse (merge removal_type + permanence into "Durability") -- only if v0.5 expert consultation recommends it. The v0.4 sensitivity analysis (§7.3) showed permanence doing independent work (5/29 leave-one-out flips), so the collapse is no longer clearly warranted.
-- Production decentralized rater deployment with live attestation.
-- Integration pilot with a real DeFi protocol that wants quality-gated pools.
+**Planned for v0.6:**
+1. **Expert consultation execution.** Distribute the questionnaire to the 20 identified reviewers (`docs/v0.5-reviewer-candidates.md`). Priority contacts: Lambert Schneider (CCQI/ICVCM), CarbonPlan (Freeman/Cullenward), Manshadi (Yale). Incorporate feedback into v0.6 methodology diff.
+2. **Multi-provider LLM panel extension.** Replicate W1 study with GPT-5 + Gemini 2.5 Pro + DeepSeek/Llama to detect Anthropic-specific biases in per-dimension κ.
+3. **Rubric refinement driven by W1 findings.** Collapse registry_methodology 4-tier → 2-tier CCP/not-CCP scheme (κ=0.168, weakest dimension). Tighten co_benefits attestation criteria. Simplify vintage_year pre-Paris override.
+4. **EAS adapter implementation.** Register carbon credit quality schema on EAS (Base), referencing Hypercerts evaluator registry pattern and GainForest Ecocerts schema. Deploy `CarbonCreditRatingEASAdapter` per `docs/decentralized-rater-design.md`.
+5. **Klima 2.0 / Toucan CHAR composability pilot.** Both are on Base; test `meetsGrade()` calls from kVCM retirement pipeline and CHAR deposit flow.
+6. **Cross-project-type rank correlation.** Extend beyond REDD+ to CDR, biochar, industrial avoidance, cookstoves — project types where commercial agencies agree more (per Calyx 2025: CCP projects average A vs C for non-CCP).
+7. **Verra Meta Registry API integration.** When S&P Global Phase 1 launches (expected Q1 2026), prototype an EAS attester that reads credit metadata from the Verra API and relays attestations on-chain.
+8. **Biodiversity safeguards enhancement.** Per Zeng et al. (2026) finding of 3.7% habitat disturbance increase from carbon offset projects, consider adding biodiversity harm to the `communityHarm` disqualifier scope or introducing a dedicated `biodiversityHarm` flag.
+
+**Deferred to v0.7 or later:**
+- 7→6 dimension collapse (merge removal_type + permanence into "Durability") -- only if v0.6 expert consultation recommends it
+- Production mainnet deployment with multi-rater attestation
+- Integration with Carbonmark Direct on-chain native issuance
 
 ## References
 
@@ -528,6 +540,24 @@ Empirical evidence from Berg et al. (2025), using proprietary dealer data, confi
 30. Open Forest Protocol. openforestprotocol.org.
 31. Isometric. (2024). First verified Enhanced Weathering credits. isometric.com.
 32. RMI. Carbon Crediting Data Framework. rmi.org.
+33. Coglianese, C. & Giles, C. (2025). Auditors can't save carbon offsets. *Science*, 389(6733). DOI: 10.1126/science.ady4864.
+34. Singapore NEA. (2025). Carbon Rating Panel appointment: BeZero, Calyx, Sylvera for ICC Framework.
+35. Zeng, Y. et al. (2026). Limitations of carbon markets for biodiversity conservation. *Nature Reviews Biodiversity*. DOI: 10.1038/s44358-026-00150-4.
+36. Calyx Global. (2025). Are carbon credit quality indicators delivering? calyxglobal.com.
+37. Gold Standard & ATEC Global. (2025). First fully digital cookstove credits on Hedera Guardian blockchain.
+38. West, T.A.P. et al. (2025). Demystifying the Romanticized Narratives About Carbon Credits From Voluntary Forest Conservation. *Global Change Biology*, 31(10), e70527.
+39. Garcia, A. & Sanford, L. (2026). On the potential for strategic behavior in jurisdictional REDD+. *PNAS*, 123(14).
+40. Cabiyo, B. & Field, C.B. (2025). Embracing imperfection: overcrediting risk and insurance mechanisms. *PNAS Nexus*, 4(5), pgaf091.
+41. Bosshard et al. (2025). Blockchain-based voluntary carbon market: network structure analysis. *Frontiers in Blockchain*, 8, 1603695.
+42. Columbia CGEP / Ahonen, P. et al. (2025). How to Fully Operationalize Article 6 of the Paris Agreement.
+43. Verra. (2026). First DMRV pilot credits approved for high-frequency issuance.
+44. Microsoft / Carbon Direct. (2025). 2025 Criteria for High-Quality CDR (5th edition).
+45. Hypercerts Foundation. (2025). EAS-based evaluator registry and Ecocerts (GainForest collaboration). hypercerts.org.
+46. Toucan Protocol. (2024-2025). CHAR biochar pool on Base. Contract: 0x20b048fA035D5763685D695e66aDF62c5D9F5055.
+47. Klima Protocol. (2025-2026). kVCM/K2 dual-token relaunch on Base. whitepaper.klimaprotocol.com.
+48. Rainbow Standard. (2025). CCP-Eligible CDR registry. rainbowstandard.io.
+49. Carbonmark. (2025). Carbonmark Direct: on-chain native issuance. carbonmark.com.
+50. Senken. (2025). Sustainability Integrity Index: AI-powered quality scoring. senken.io.
 
 ---
 
