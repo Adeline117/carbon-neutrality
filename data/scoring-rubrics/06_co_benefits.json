@@ -35,8 +35,9 @@
     },
     {
       "score_min": 0, "score_max": 9,
-      "label": "None",
-      "requirements": "No co-benefits identified or project has documented negative externalities"
+      "label": "None / documented harm",
+      "requirements": "No co-benefits identified OR project has documented negative externalities",
+      "v0_6_harm_criterion": "Set communityHarm=true (caps grade at BBB) if EITHER: (1) a credible civil society report, academic paper, or news investigation documents community opposition, displacement, or livelihood harm from the project, OR (2) published research documents measurable biodiversity loss, habitat disturbance, or ecosystem degradation caused by the project (per Zeng et al. Nature Reviews Biodiversity 2026). The trigger is 'documented harm exists in public record' — not 'the project might cause harm'."
     }
   ],
   "negative_adjustments": [

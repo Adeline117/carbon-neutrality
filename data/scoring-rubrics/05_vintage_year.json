@@ -19,17 +19,11 @@
     {"age_years": 8,  "score": 4},
     {"age_years": 9,  "score": 0}
   ],
-  "overrides": [
-    {
-      "id": "pre_paris",
-      "condition": "vintage_year < 2016",
-      "effect": "score_cap",
-      "cap": 20,
-      "reason": "Pre-Paris Agreement baselines may not align with current net-zero-aligned standards"
-    }
-  ],
+  "overrides": [],
+  "v0_6_change": "Removed the pre-Paris override (cap at 20 for vintage < 2016). The 12-point-per-year decay already drives pre-2016 vintages to 0 (vintage 2017 = 8 points in 2026; vintage 2016 = 20 in 2026 which was the old cap anyway). The override was a discontinuity that caused inter-rater disagreement on the exact cutoff year (IRR study vintage κ=0.324, partly from this). For credits from 2015 or earlier, the formula alone produces scores ≤ 0, so the override was redundant.",
   "notes": [
     "Vintage is the only dimension computable entirely on-chain from token metadata.",
-    "The 12 points per year decay rate is a provisional choice; expert calibration should validate."
+    "The 12 points per year decay rate is a provisional choice; expert calibration should validate.",
+    "v0.6: pre-Paris override removed. The formula floor at 0 handles all pre-2018 credits identically (score 0). No assessor judgment required for this dimension."
   ]
 }

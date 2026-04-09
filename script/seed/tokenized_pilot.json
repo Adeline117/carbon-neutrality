@@ -33,7 +33,7 @@
       "mrv_grade": 55,
       "vintage_year": 40,
       "co_benefits": 60,
-      "registry_methodology": 52
+      "registry_methodology": 45
     },
     "flags": [
       false,
@@ -56,7 +56,7 @@
       "mrv_grade": 42,
       "vintage_year": 16,
       "co_benefits": 60,
-      "registry_methodology": 40
+      "registry_methodology": 45
     },
     "flags": [
       false,
@@ -102,7 +102,7 @@
       "mrv_grade": 35,
       "vintage_year": 30,
       "co_benefits": 55,
-      "registry_methodology": 35
+      "registry_methodology": 45
     },
     "flags": [
       false,
@@ -125,7 +125,7 @@
       "mrv_grade": 52,
       "vintage_year": 52,
       "co_benefits": 55,
-      "registry_methodology": 55
+      "registry_methodology": 80
     },
     "flags": [
       false,
@@ -148,7 +148,7 @@
       "mrv_grade": 75,
       "vintage_year": 88,
       "co_benefits": 55,
-      "registry_methodology": 78
+      "registry_methodology": 80
     },
     "flags": [
       false,
@@ -171,7 +171,7 @@
       "mrv_grade": 90,
       "vintage_year": 100,
       "co_benefits": 20,
-      "registry_methodology": 78
+      "registry_methodology": 80
     },
     "flags": [
       false,
@@ -194,7 +194,7 @@
       "mrv_grade": 92,
       "vintage_year": 100,
       "co_benefits": 15,
-      "registry_methodology": 82
+      "registry_methodology": 80
     },
     "flags": [
       false,
@@ -217,7 +217,7 @@
       "mrv_grade": 82,
       "vintage_year": 100,
       "co_benefits": 22,
-      "registry_methodology": 75
+      "registry_methodology": 80
     },
     "flags": [
       false,
@@ -240,7 +240,7 @@
       "mrv_grade": 72,
       "vintage_year": 100,
       "co_benefits": 55,
-      "registry_methodology": 68
+      "registry_methodology": 45
     },
     "flags": [
       false,
@@ -263,7 +263,7 @@
       "mrv_grade": 80,
       "vintage_year": 100,
       "co_benefits": 75,
-      "registry_methodology": 40
+      "registry_methodology": 45
     },
     "flags": [
       false,
@@ -309,7 +309,7 @@
       "mrv_grade": 72,
       "vintage_year": 100,
       "co_benefits": 50,
-      "registry_methodology": 75
+      "registry_methodology": 80
     },
     "flags": [
       false,
@@ -332,7 +332,7 @@
       "mrv_grade": 70,
       "vintage_year": 100,
       "co_benefits": 45,
-      "registry_methodology": 72
+      "registry_methodology": 80
     },
     "flags": [
       false,
@@ -355,7 +355,7 @@
       "mrv_grade": 25,
       "vintage_year": 0,
       "co_benefits": 20,
-      "registry_methodology": 25
+      "registry_methodology": 30
     },
     "flags": [
       false,

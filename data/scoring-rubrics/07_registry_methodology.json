@@ -2,62 +2,49 @@
   "id": "registry_methodology",
   "name": "Registry & Methodology",
   "weight": 0.075,
-  "rationale": "The crediting program (registry) and the specific methodology together determine the rules and rigor under which credits are generated. A good project under a weak methodology is still a weak credit.",
+  "rationale": "The crediting program and specific methodology determine the rules and rigor under which credits are generated. v0.6 simplifies from 4 tiers + 4 modifiers (inter-rater κ=0.168, weakest dimension) to 2 tiers + 2 Boolean modifiers to improve inter-rater reliability.",
   "data_source": "Token metadata -- registry ID + methodology ID (on-chain native via mapping table)",
   "on_chain_feasibility": "high",
-  "registry_tiers": [
+  "v0_6_change": "Collapsed from 4 tiers (70-100 / 40-69 / 10-39 / 0-9) with 4 prose-based modifiers to 2 tiers with 2 Boolean modifiers. Motivation: LLM panel IRR study (data/llm-panel-irr/) found registry_methodology had the worst Fleiss' κ (0.168, 'slight' agreement). The 4-tier × 4-modifier combinatorial space (1920 possible outcomes) produced too much assessor variance. The new 2-tier × 2-modifier structure has ~40 possible outcomes. Target: κ > 0.40 on re-run.",
+  "tiers": [
     {
-      "tier": 1,
-      "registries": ["Verra VCS", "Gold Standard", "ACR", "CAR", "ART"],
-      "base_score_min": 70,
-      "base_score_max": 100,
-      "notes": "ICVCM CCP-assessed registries"
+      "tier": "CCP",
+      "condition": "Program is ICVCM CCP-Eligible AND methodology is CCP-approved (per icvcm.org/ccp-approved-methodologies/)",
+      "base_score": 80,
+      "band_min": 75,
+      "band_max": 85,
+      "guidance": "Score 75 for a CCP methodology with known limitations or conditions (e.g., cookstoves with constrained fNRB); 80 for standard CCP methodology; 85 for CCP methodology with peer-reviewed conservative baseline.",
+      "examples": ["Verra VM0047 (ARR)", "CAR US Biochar v1.0", "Isometric Reforestation v1.1", "Gold Standard TPDDTEC (cookstoves, CCP with conditions)", "ART TREES v2.0 (J-REDD+)"]
     },
     {
-      "tier": 2,
-      "registries": ["Plan Vivo", "Cercarbono", "Global Carbon Council", "BioCarbon Registry"],
-      "base_score_min": 40,
-      "base_score_max": 69,
-      "notes": "Recognized but not CCP-assessed"
-    },
-    {
-      "tier": 3,
-      "registries": ["Emerging / regional"],
-      "base_score_min": 10,
-      "base_score_max": 39,
-      "notes": "Limited track record"
-    },
-    {
-      "tier": 4,
-      "registries": ["Unrecognized / no registry"],
-      "base_score_min": 0,
-      "base_score_max": 9
+      "tier": "Non-CCP",
+      "condition": "Program is NOT CCP-Eligible, OR methodology is not CCP-approved, OR no registry",
+      "base_score": 40,
+      "band_min": 25,
+      "band_max": 50,
+      "guidance": "Score 45-50 for an ICVCM-assessed program (Verra/GS/ACR/CAR) with a non-CCP methodology that has no known integrity concerns; 35-40 for an emerging registry (Plan Vivo, Regen, OFP, Nori); 25-30 for unrecognized registry, ICVCM-rejected methodology (grid RE, HFC-23, waste heat recovery), or no registry.",
+      "examples": ["Verra VM0033 (mangrove, not yet CCP)", "Nori (proprietary, not ICVCM-assessed)", "CDM ACM0002 (grid RE, ICVCM-rejected)", "Unrecognized regional registries"]
     }
   ],
-  "methodology_modifiers": [
-    {
-      "id": "ccp_eligible",
-      "condition": "Methodology category approved under ICVCM CCP",
-      "delta": 15
-    },
+  "modifiers": [
     {
       "id": "conservative_baseline",
-      "condition": "Demonstrated conservative crediting baseline",
+      "condition": "Published independent methodology review confirms conservative crediting baseline (e.g., Calyx peer-reviewed assessment, ICVCM assessment report, or academic analysis)",
+      "type": "boolean",
       "delta": 10
     },
     {
-      "id": "under_review",
-      "condition": "Active integrity review or revision process",
-      "delta": -15
-    },
-    {
       "id": "known_overcrediting",
-      "condition": "Published research demonstrates systematic overcrediting (e.g., West et al. 2023 for REDD+)",
-      "delta": -25
+      "condition": "Published peer-reviewed research demonstrates systematic overcrediting for this specific methodology (e.g., West et al. 2023 for VM0009 REDD+; Nature Communications 2024 for grid wind)",
+      "type": "boolean",
+      "delta": -15
     }
   ],
+  "scoring_procedure": "1. Determine tier (CCP or Non-CCP) based on ICVCM public list. 2. Pick base score within the tier band per guidance. 3. Apply Boolean modifiers if evidence exists. 4. Clamp to [0, 100].",
   "notes": [
-    "Final score is clamped to [0, 100] after applying modifiers.",
-    "Registry-to-tier mapping is maintained in data/mappings/registry-to-tier.json and expected to evolve as ICVCM assessments proceed."
+    "The CCP-eligible determination is binary and references icvcm.org/ccp-approved-methodologies/ — the same source the Solidity contract would query via an oracle or mapping table.",
+    "Removed the old 'under_review' modifier because it was subjective; replaced by the 'known_overcrediting' modifier which requires published evidence.",
+    "The ICVCM-rejected category (grid RE, HFC-23, waste heat recovery) maps to the bottom of the Non-CCP band (25-30) because ICVCM explicitly evaluated and rejected these methodologies.",
+    "CCP-Eligible programs as of Q1 2026: Verra, Gold Standard, ACR, CAR, ART, Puro.earth, Isometric, Equitable Earth, Rainbow Standard."
   ]
 }

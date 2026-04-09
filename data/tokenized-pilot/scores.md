@@ -5,22 +5,22 @@ v0.5 distributional composite. Default std per dimension (from W1 empirical data
 
 | ID | Name | Composite | ±σ | Grade | P(grade) | Caps |
 |----|------|----------:|---:|-------|---------:|------|
-| T009 | Climeworks Orca via Puro | 95.20 | 2.88 | AAA | 0.96 | - |
-| T008 | Isometric/Heirloom DAC attestation | 93.05 | 2.88 | AAA | 0.85 | - |
-| T010 | Charm Industrial bio-oil | 90.15 | 2.88 | AAA | 0.52 | - |
-| T007 | Puro.earth CORC (Biochar, average) | 80.40 | 2.88 | AA | 0.97 | - |
-| T015 | Toucan CHAR pool (Base, biochar) | 79.88 | 2.88 | AA | 0.95 | - |
-| T016 | Rainbow Standard biochar credit | 79.35 | 2.88 | AA | 0.93 | - |
-| T012 | Open Forest Protocol credit | 68.25 | 2.88 | A | 0.99 | - |
-| T011 | JPMorgan Kinexys (S&P Global pilot) | 64.75 | 2.88 | A | 0.95 | - |
+| T009 | Climeworks Orca via Puro | 95.05 | 2.88 | AAA | 0.96 | - |
+| T008 | Isometric/Heirloom DAC attestation | 93.20 | 2.88 | AAA | 0.87 | - |
+| T010 | Charm Industrial bio-oil | 90.53 | 2.88 | AAA | 0.57 | - |
+| T007 | Puro.earth CORC (Biochar, average) | 80.55 | 2.88 | AA | 0.97 | - |
+| T015 | Toucan CHAR pool (Base, biochar) | 80.25 | 2.88 | AA | 0.96 | - |
+| T016 | Rainbow Standard biochar credit | 79.95 | 2.88 | AA | 0.96 | - |
+| T012 | Open Forest Protocol credit | 68.62 | 2.88 | A | 0.98 | - |
+| T011 | JPMorgan Kinexys (S&P Global pilot) | 63.02 | 2.88 | A | 0.85 | - |
 | T013 | Regen Network NCT (Cosmos) | 54.50 | 2.88 | BBB | 0.97 | - |
 | T004 | Nori NRT - Regenerative Agriculture | 49.98 | 2.88 | BBB | 0.96 | - |
-| T006 | C3 C3T (Universal Base) | 47.23 | 2.88 | BBB | 0.78 | - |
-| T002 | Toucan NCT (Nature Carbon Tonne) | 47.15 | 2.88 | BBB | 0.77 | - |
-| T005 | Flowcarbon GNT (Goddess Nature Token) | 41.38 | 2.88 | B | 0.00 | failed_verification->B |
+| T006 | C3 C3T (Universal Base) | 49.10 | 2.88 | BBB | 0.92 | - |
+| T002 | Toucan NCT (Nature Carbon Tonne) | 46.62 | 2.88 | BBB | 0.71 | - |
+| T005 | Flowcarbon GNT (Goddess Nature Token) | 42.12 | 2.88 | B | 0.00 | failed_verification->B |
 | T001 | Toucan BCT (Base Carbon Tonne) | 31.10 | 2.88 | BB | 0.65 | - |
-| T003 | Moss MCO2 | 30.50 | 2.88 | BB | 0.57 | - |
-| T014 | Toucan TCO2 - Kariba REDD+ (historical) | 19.23 | 2.88 | B | 1.00 | - |
+| T003 | Moss MCO2 | 30.88 | 2.88 | BB | 0.62 | - |
+| T014 | Toucan TCO2 - Kariba REDD+ (historical) | 19.60 | 2.88 | B | 1.00 | - |
 
 ## Final grade distribution
 

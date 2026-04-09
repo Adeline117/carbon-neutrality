@@ -19,7 +19,7 @@
         "mrv_grade": 92,
         "vintage_year": 100,
         "co_benefits": 15,
-        "registry_methodology": 82
+        "registry_methodology": 80
       },
       "disqualifiers": []
     },
@@ -39,7 +39,7 @@
         "mrv_grade": 90,
         "vintage_year": 100,
         "co_benefits": 20,
-        "registry_methodology": 78
+        "registry_methodology": 80
       },
       "disqualifiers": []
     },
@@ -79,7 +79,7 @@
         "mrv_grade": 82,
         "vintage_year": 100,
         "co_benefits": 22,
-        "registry_methodology": 75
+        "registry_methodology": 80
       },
       "disqualifiers": []
     },
@@ -99,7 +99,7 @@
         "mrv_grade": 80,
         "vintage_year": 100,
         "co_benefits": 60,
-        "registry_methodology": 78
+        "registry_methodology": 80
       },
       "disqualifiers": []
     },
@@ -139,7 +139,7 @@
         "mrv_grade": 80,
         "vintage_year": 100,
         "co_benefits": 88,
-        "registry_methodology": 78
+        "registry_methodology": 80
       },
       "disqualifiers": []
     },
@@ -159,7 +159,7 @@
         "mrv_grade": 72,
         "vintage_year": 88,
         "co_benefits": 55,
-        "registry_methodology": 72
+        "registry_methodology": 80
       },
       "disqualifiers": []
     },
@@ -179,7 +179,7 @@
         "mrv_grade": 68,
         "vintage_year": 100,
         "co_benefits": 65,
-        "registry_methodology": 65
+        "registry_methodology": 45
       },
       "disqualifiers": []
     },
@@ -199,7 +199,7 @@
         "mrv_grade": 50,
         "vintage_year": 88,
         "co_benefits": 85,
-        "registry_methodology": 72
+        "registry_methodology": 75
       },
       "disqualifiers": []
     },
@@ -219,7 +219,7 @@
         "mrv_grade": 78,
         "vintage_year": 88,
         "co_benefits": 20,
-        "registry_methodology": 75
+        "registry_methodology": 45
       },
       "disqualifiers": []
     },
@@ -239,7 +239,7 @@
         "mrv_grade": 75,
         "vintage_year": 88,
         "co_benefits": 30,
-        "registry_methodology": 72
+        "registry_methodology": 80
       },
       "disqualifiers": []
     },
@@ -259,7 +259,7 @@
         "mrv_grade": 65,
         "vintage_year": 100,
         "co_benefits": 82,
-        "registry_methodology": 70
+        "registry_methodology": 45
       },
       "disqualifiers": []
     },
@@ -279,7 +279,7 @@
         "mrv_grade": 55,
         "vintage_year": 88,
         "co_benefits": 80,
-        "registry_methodology": 55
+        "registry_methodology": 45
       },
       "disqualifiers": []
     },
@@ -299,7 +299,7 @@
         "mrv_grade": 58,
         "vintage_year": 4,
         "co_benefits": 50,
-        "registry_methodology": 62
+        "registry_methodology": 45
       },
       "disqualifiers": []
     },
@@ -319,7 +319,7 @@
         "mrv_grade": 42,
         "vintage_year": 16,
         "co_benefits": 75,
-        "registry_methodology": 62
+        "registry_methodology": 75
       },
       "disqualifiers": []
     },
@@ -339,7 +339,7 @@
         "mrv_grade": 55,
         "vintage_year": 52,
         "co_benefits": 40,
-        "registry_methodology": 55
+        "registry_methodology": 25
       },
       "disqualifiers": []
     },
@@ -359,7 +359,7 @@
         "mrv_grade": 38,
         "vintage_year": 16,
         "co_benefits": 55,
-        "registry_methodology": 35
+        "registry_methodology": 30
       },
       "disqualifiers": []
     },
@@ -399,9 +399,11 @@
         "mrv_grade": 45,
         "vintage_year": 20,
         "co_benefits": 15,
-        "registry_methodology": 45
+        "registry_methodology": 25
       },
-      "disqualifiers": ["pre_paris_override"]
+      "disqualifiers": [
+        "pre_paris_override"
+      ]
     },
     {
       "id": "C021",
@@ -419,9 +421,11 @@
         "mrv_grade": 48,
         "vintage_year": 20,
         "co_benefits": 20,
-        "registry_methodology": 45
+        "registry_methodology": 25
       },
-      "disqualifiers": ["pre_paris_override"]
+      "disqualifiers": [
+        "pre_paris_override"
+      ]
     },
     {
       "id": "C022",
@@ -439,9 +443,11 @@
         "mrv_grade": 25,
         "vintage_year": 0,
         "co_benefits": 20,
-        "registry_methodology": 25
+        "registry_methodology": 30
       },
-      "disqualifiers": ["no_third_party"]
+      "disqualifiers": [
+        "no_third_party"
+      ]
     },
     {
       "id": "C023",
@@ -459,9 +465,12 @@
         "mrv_grade": 35,
         "vintage_year": 0,
         "co_benefits": 5,
-        "registry_methodology": 20
+        "registry_methodology": 25
       },
-      "disqualifiers": ["pre_paris_override", "sanctioned_registry"]
+      "disqualifiers": [
+        "pre_paris_override",
+        "sanctioned_registry"
+      ]
     },
     {
       "id": "C024",
@@ -479,9 +488,11 @@
         "mrv_grade": 38,
         "vintage_year": 0,
         "co_benefits": 10,
-        "registry_methodology": 30
+        "registry_methodology": 25
       },
-      "disqualifiers": ["pre_paris_override"]
+      "disqualifiers": [
+        "pre_paris_override"
+      ]
     },
     {
       "id": "C025",
@@ -499,9 +510,13 @@
         "mrv_grade": 15,
         "vintage_year": 0,
         "co_benefits": 10,
-        "registry_methodology": 5
+        "registry_methodology": 15
       },
-      "disqualifiers": ["pre_paris_override", "no_third_party", "failed_verification"]
+      "disqualifiers": [
+        "pre_paris_override",
+        "no_third_party",
+        "failed_verification"
+      ]
     },
     {
       "id": "C026",
@@ -509,9 +524,9 @@
       "type": "Stress test: double_counting disqualifier cap",
       "registry": "Synthetic",
       "methodology": "Synthetic",
-      "country": "—",
+      "country": "\u2014",
       "vintage_year": 2024,
-      "tokenization": "synthetic — disqualifier lattice test",
+      "tokenization": "synthetic \u2014 disqualifier lattice test",
       "scores": {
         "removal_type": 90,
         "additionality": 85,
@@ -519,9 +534,11 @@
         "mrv_grade": 85,
         "vintage_year": 100,
         "co_benefits": 60,
-        "registry_methodology": 82
+        "registry_methodology": 15
       },
-      "disqualifiers": ["double_counting"],
+      "disqualifiers": [
+        "double_counting"
+      ],
       "stress_test_note": "Credit has AAA-tier technical scores but documented double counting. Should cap at B (strictest cap) regardless of composite."
     },
     {
@@ -530,9 +547,9 @@
       "type": "Stress test: sanctioned_registry disqualifier cap",
       "registry": "Synthetic",
       "methodology": "Synthetic",
-      "country": "—",
+      "country": "\u2014",
       "vintage_year": 2024,
-      "tokenization": "synthetic — disqualifier lattice test",
+      "tokenization": "synthetic \u2014 disqualifier lattice test",
       "scores": {
         "removal_type": 82,
         "additionality": 80,
@@ -540,9 +557,11 @@
         "mrv_grade": 78,
         "vintage_year": 100,
         "co_benefits": 55,
-        "registry_methodology": 75
+        "registry_methodology": 15
       },
-      "disqualifiers": ["sanctioned_registry"],
+      "disqualifiers": [
+        "sanctioned_registry"
+      ],
       "stress_test_note": "Credit has AA-tier technical scores but registry is under sanction. Should cap at BB."
     },
     {
@@ -551,9 +570,9 @@
       "type": "Stress test: no_third_party disqualifier cap",
       "registry": "Synthetic",
       "methodology": "Synthetic",
-      "country": "—",
+      "country": "\u2014",
       "vintage_year": 2024,
-      "tokenization": "synthetic — disqualifier lattice test",
+      "tokenization": "synthetic \u2014 disqualifier lattice test",
       "scores": {
         "removal_type": 80,
         "additionality": 78,
@@ -561,9 +580,11 @@
         "mrv_grade": 75,
         "vintage_year": 100,
         "co_benefits": 50,
-        "registry_methodology": 72
+        "registry_methodology": 15
       },
-      "disqualifiers": ["no_third_party"],
+      "disqualifiers": [
+        "no_third_party"
+      ],
       "stress_test_note": "Credit has AA-tier technical scores but no independent verification. Should cap at BBB."
     },
     {
@@ -572,9 +593,9 @@
       "type": "Stress test: community_harm gate (v0.4 new)",
       "registry": "Synthetic",
       "methodology": "Synthetic",
-      "country": "—",
+      "country": "\u2014",
       "vintage_year": 2024,
-      "tokenization": "synthetic — v0.4 safeguards-gate test",
+      "tokenization": "synthetic \u2014 v0.4 safeguards-gate test",
       "scores": {
         "removal_type": 78,
         "additionality": 76,
@@ -582,9 +603,11 @@
         "mrv_grade": 78,
         "vintage_year": 100,
         "co_benefits": 5,
-        "registry_methodology": 75
+        "registry_methodology": 15
       },
-      "disqualifiers": ["community_harm"],
+      "disqualifiers": [
+        "community_harm"
+      ],
       "stress_test_note": "v0.4 ONLY. Credit has AA-tier technical scores but documented community harm (co_benefits in 0-9 None/negative externalities band). Should cap at BBB via the safeguards-gate."
     }
   ]
