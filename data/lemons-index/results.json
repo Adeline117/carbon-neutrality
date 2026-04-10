@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Toucan BCT (historical peak, 2022)",
+    "n_credits": 43,
+    "mean_composite": 27.6,
+    "lemons_index": 0.724,
+    "quality_concentration_A_plus": 0.0,
+    "grade_hhi": 0.717,
+    "grade_distribution": {
+      "B": 36,
+      "BB": 5,
+      "BBB": 2
+    }
+  },
+  {
+    "name": "Toucan NCT (2023)",
+    "n_credits": 28,
+    "mean_composite": 39.9,
+    "lemons_index": 0.601,
+    "quality_concentration_A_plus": 0.286,
+    "grade_hhi": 0.5,
+    "grade_distribution": {
+      "A": 8,
+      "B": 18,
+      "BBB": 2
+    }
+  },
+  {
+    "name": "Toucan CHAR (Base, 2025)",
+    "n_credits": 12,
+    "mean_composite": 77.9,
+    "lemons_index": 0.221,
+    "quality_concentration_A_plus": 1.0,
+    "grade_hhi": 1.0,
+    "grade_distribution": {
+      "AA": 12
+    }
+  },
+  {
+    "name": "Moss MCO2 (2022)",
+    "n_credits": 30,
+    "mean_composite": 28.7,
+    "lemons_index": 0.713,
+    "quality_concentration_A_plus": 0.067,
+    "grade_hhi": 0.876,
+    "grade_distribution": {
+      "A": 2,
+      "B": 28
+    }
+  },
+  {
+    "name": "Klima 2.0 kVCM inventory (Base, 2026)",
+    "n_credits": 20,
+    "mean_composite": 48.1,
+    "lemons_index": 0.519,
+    "quality_concentration_A_plus": 0.4,
+    "grade_hhi": 0.265,
+    "grade_distribution": {
+      "A": 4,
+      "AA": 3,
+      "AAA": 1,
+      "B": 8,
+      "BB": 4
+    }
+  },
+  {
+    "name": "Hypothetical AAA-only pool",
+    "n_credits": 13,
+    "mean_composite": 90.0,
+    "lemons_index": 0.1,
+    "quality_concentration_A_plus": 1.0,
+    "grade_hhi": 0.527,
+    "grade_distribution": {
+      "AA": 5,
+      "AAA": 8
+    }
+  }
+]

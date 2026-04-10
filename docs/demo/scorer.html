@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rate My Credit — Carbon Credit Quality Scorer</title>
+  <style>
+    :root { --bg: #0c1116; --fg: #e6edf3; --muted: #7d8590; --border: #30363d; --accent: #2ea043; --bar: #1f6feb; }
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--fg); margin: 0; padding: 2rem 1rem; line-height: 1.5; }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; margin-top: 0; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    select, input, button { background: #161b22; color: var(--fg); border: 1px solid var(--border); padding: 0.5rem; font-size: 0.95rem; border-radius: 6px; font-family: inherit; }
+    select { width: 100%; }
+    button { cursor: pointer; background: var(--accent); border-color: var(--accent); font-weight: 700; padding: 0.6rem 1.5rem; }
+    button:hover { opacity: 0.9; }
+    .grade { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 999px; font-weight: 700; font-size: 1.2rem; }
+    .grade-AAA { background: #1a7f37; color: #fff; }
+    .grade-AA { background: #2ea043; color: #fff; }
+    .grade-A { background: #488a42; color: #fff; }
+    .grade-BBB { background: #8c6d1f; color: #fff; }
+    .grade-BB { background: #9c5b19; color: #fff; }
+    .grade-B { background: #cf222e; color: #fff; }
+    .result-box { background: #161b22; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-top: 1rem; }
+    .dim-bar { display: grid; grid-template-columns: 160px 1fr 40px; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .dim-bar .bar-outer { background: #21262d; border-radius: 3px; height: 14px; overflow: hidden; }
+    .dim-bar .bar-inner { background: var(--bar); height: 100%; }
+    .dim-bar .val { text-align: right; font-size: 0.85rem; color: var(--muted); }
+    .dim-bar .lbl { font-size: 0.85rem; color: var(--muted); }
+    .posterior-row { display: grid; grid-template-columns: 45px 1fr 45px; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; }
+    .posterior-row .bar-outer { background: #21262d; border-radius: 3px; height: 18px; overflow: hidden; }
+    .posterior-row .pct { text-align: right; font-size: 0.85rem; color: var(--muted); }
+    .form-row { margin-bottom: 0.8rem; }
+    .form-row label { display: block; font-size: 0.9rem; color: var(--muted); margin-bottom: 0.3rem; }
+    footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
+    a { color: #58a6ff; }
+    .disclaimer { background: #21130a; border: 1px solid #d29922; color: #d29922; padding: 0.8rem; border-radius: 6px; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Rate My Credit</h1>
+  <p>Instant quality grade for any carbon credit. No account, no paywall, no API key. Select a methodology and vintage — get a grade with uncertainty.</p>
+
+  <div class="disclaimer">
+    Methodology-level archetype scoring under the v0.6 open rubric. NOT a formal rating of any specific project. <a href="https://github.com/Adeline117/carbon-neutrality">Source code + full methodology</a>.
+  </div>
+
+  <h2>1. Select your credit</h2>
+
+  <div class="form-row">
+    <label>Methodology category</label>
+    <select id="methodology">
+      <option value="daccs_geological">DACCS + geological storage (Climeworks, Heirloom)</option>
+      <option value="biochar">Biochar (Puro, Isometric, VM0044)</option>
+      <option value="enhanced_weathering">Enhanced rock weathering</option>
+      <option value="bio_oil_geological">Bio-oil + geological injection (Charm Industrial)</option>
+      <option value="arr_conservation">ARR — conservation reforestation (VM0047)</option>
+      <option value="arr_commercial_plantation">ARR — commercial plantation (timber/pulp)</option>
+      <option value="ifm">Improved forest management (VM0045, CAR)</option>
+      <option value="redd_jurisdictional">REDD+ jurisdictional (ART TREES)</option>
+      <option value="redd_project" selected>REDD+ project-level (VM0009, VM0015)</option>
+      <option value="cookstoves">Efficient cookstoves (TPDDTEC, VM0050)</option>
+      <option value="landfill_gas">Landfill gas capture (ACR, CAR)</option>
+      <option value="n2o_abatement">N2O abatement — adipic acid</option>
+      <option value="ods_destruction">ODS destruction</option>
+      <option value="rice_methane">Rice cultivation methane avoidance</option>
+      <option value="sustainable_agriculture">Sustainable agriculture / soil carbon</option>
+      <option value="grid_renewable_energy">Grid-connected renewable energy (ICVCM-rejected)</option>
+      <option value="hfc23_destruction">HFC-23 destruction (ICVCM-rejected)</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label>Vintage year</label>
+    <input type="number" id="vintage" value="2024" min="2008" max="2026" />
+  </div>
+
+  <div class="form-row">
+    <label>Country (optional — affects permanence/additionality risk)</label>
+    <select id="country">
+      <option value="">— no adjustment —</option>
+      <option value="HIGH">High governance risk (DRC, Myanmar, Cambodia, Zimbabwe, Venezuela)</option>
+      <option value="MODERATE">Moderate risk (Indonesia, Brazil, Peru, Colombia, India, Bangladesh)</option>
+      <option value="LOW">Low risk (USA, EU, Japan, Australia, Iceland, Norway)</option>
+    </select>
+  </div>
+
+  <button id="score-btn">Score this credit</button>
+
+  <div id="result" style="display: none;"></div>
+
+  <footer>
+    <p>v0.6 · <a href="https://github.com/Adeline117/carbon-neutrality">Source</a>
+       · <a href="index.html">Contract demo</a>
+       · <a href="../erc-ccqr.md">ERC-CCQR Standard</a>
+       · MIT License</p>
+  </footer>
+</div>
+
+<script>
+// Embedded archetypes (from data/methodology-ratings/archetypes.json)
+const ARCHETYPES = {
+  daccs_geological: {scores:{removal_type:97,additionality:92,permanence:97,mrv_grade:90,co_benefits:18,registry_methodology:80},std_overrides:{removal_type:2,permanence:2,mrv_grade:5}},
+  biochar: {scores:{removal_type:80,additionality:80,permanence:82,mrv_grade:72,co_benefits:55,registry_methodology:80},std_overrides:{removal_type:3,permanence:3}},
+  enhanced_weathering: {scores:{removal_type:88,additionality:85,permanence:90,mrv_grade:75,co_benefits:35,registry_methodology:75},std_overrides:{removal_type:3,permanence:3,mrv_grade:8}},
+  bio_oil_geological: {scores:{removal_type:94,additionality:88,permanence:95,mrv_grade:80,co_benefits:22,registry_methodology:80},std_overrides:{removal_type:2,permanence:2}},
+  arr_conservation: {scores:{removal_type:68,additionality:65,permanence:52,mrv_grade:68,co_benefits:75,registry_methodology:80},std_overrides:{additionality:10,permanence:6,mrv_grade:8}},
+  arr_commercial_plantation: {scores:{removal_type:45,additionality:35,permanence:40,mrv_grade:50,co_benefits:30,registry_methodology:40},std_overrides:{additionality:12,permanence:6}},
+  ifm: {scores:{removal_type:65,additionality:60,permanence:52,mrv_grade:65,co_benefits:55,registry_methodology:80},std_overrides:{additionality:10,permanence:6}},
+  redd_jurisdictional: {scores:{removal_type:25,additionality:45,permanence:35,mrv_grade:55,co_benefits:65,registry_methodology:80},std_overrides:{additionality:12,mrv_grade:9}},
+  redd_project: {scores:{removal_type:22,additionality:30,permanence:28,mrv_grade:40,co_benefits:55,registry_methodology:30},std_overrides:{additionality:14,mrv_grade:10,permanence:7}},
+  cookstoves: {scores:{removal_type:38,additionality:52,permanence:8,mrv_grade:50,co_benefits:82,registry_methodology:75},std_overrides:{additionality:10,mrv_grade:9}},
+  landfill_gas: {scores:{removal_type:50,additionality:58,permanence:10,mrv_grade:72,co_benefits:30,registry_methodology:80},std_overrides:{}},
+  n2o_abatement: {scores:{removal_type:55,additionality:68,permanence:10,mrv_grade:75,co_benefits:20,registry_methodology:80},std_overrides:{}},
+  ods_destruction: {scores:{removal_type:52,additionality:72,permanence:10,mrv_grade:70,co_benefits:15,registry_methodology:80},std_overrides:{}},
+  rice_methane: {scores:{removal_type:35,additionality:55,permanence:8,mrv_grade:55,co_benefits:70,registry_methodology:80},std_overrides:{additionality:10}},
+  sustainable_agriculture: {scores:{removal_type:50,additionality:60,permanence:30,mrv_grade:55,co_benefits:65,registry_methodology:80},std_overrides:{additionality:10,permanence:6}},
+  grid_renewable_energy: {scores:{removal_type:25,additionality:25,permanence:5,mrv_grade:50,co_benefits:30,registry_methodology:25},std_overrides:{additionality:5,removal_type:3}},
+  hfc23_destruction: {scores:{removal_type:48,additionality:18,permanence:8,mrv_grade:35,co_benefits:5,registry_methodology:25},std_overrides:{additionality:5}},
+};
+
+const WEIGHTS = {removal_type:0.25,additionality:0.20,permanence:0.175,mrv_grade:0.20,vintage_year:0.10,co_benefits:0,registry_methodology:0.075};
+const DEFAULT_STDS = {removal_type:4.2,additionality:8.6,permanence:4.0,mrv_grade:7.1,vintage_year:10.3,co_benefits:9.1,registry_methodology:11.1};
+const BANDS = [{grade:"AAA",min:90},{grade:"AA",min:75},{grade:"A",min:60},{grade:"BBB",min:45},{grade:"BB",min:30},{grade:"B",min:0}];
+const GRADE_COLORS = {AAA:"#1a7f37",AA:"#2ea043",A:"#488a42",BBB:"#8c6d1f",BB:"#9c5b19",B:"#cf222e"};
+const DIM_LABELS = {removal_type:"Removal type (25%)",additionality:"Additionality (20%)",permanence:"Permanence (17.5%)",mrv_grade:"MRV grade (20%)",vintage_year:"Vintage (10%)",co_benefits:"Co-benefits (0%)",registry_methodology:"Registry (7.5%)"};
+
+function vintageScore(vy) { return Math.max(0, Math.min(100, 100 - (2026 - vy) * 12)); }
+function erf(x) {
+  const a1=0.254829592,a2=-0.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=0.3275911;
+  const sign = x<0?-1:1; x=Math.abs(x);
+  const t=1/(1+p*x); const y=1-(((((a5*t+a4)*t)+a3)*t+a2)*t+a1)*t*Math.exp(-x*x);
+  return sign*y;
+}
+function normalCdf(x) { return 0.5*(1+erf(x/Math.sqrt(2))); }
+
+function scoreCredit() {
+  const cat = document.getElementById("methodology").value;
+  const vy = parseInt(document.getElementById("vintage").value);
+  const countryRisk = document.getElementById("country").value;
+  const arch = ARCHETYPES[cat];
+  if (!arch) return;
+
+  const scores = {...arch.scores, vintage_year: vintageScore(vy)};
+  // Country adjustments
+  if (countryRisk === "HIGH") { scores.permanence = Math.max(0,scores.permanence-5); scores.additionality = Math.max(0,scores.additionality-3); }
+  else if (countryRisk === "MODERATE") { scores.permanence = Math.max(0,scores.permanence-2); }
+  // Old vintage MRV decay
+  const age = 2026 - vy;
+  if (age > 5) scores.mrv_grade = Math.max(0, scores.mrv_grade - Math.min(age-5, 10));
+
+  // Composite
+  let comp = 0;
+  for (const [d,w] of Object.entries(WEIGHTS)) comp += (scores[d]||0) * w;
+
+  // Variance
+  const stds = {};
+  for (const d of Object.keys(WEIGHTS)) stds[d] = arch.std_overrides?.[d] ?? DEFAULT_STDS[d];
+  let variance = 0;
+  for (const [d,w] of Object.entries(WEIGHTS)) variance += w*w * stds[d]*stds[d];
+  const sigma = Math.sqrt(variance);
+
+  // Grade
+  let grade = "B";
+  for (const b of BANDS) { if (comp >= b.min) { grade = b.grade; break; } }
+
+  // Posterior
+  const posterior = {};
+  for (let i=0; i<BANDS.length; i++) {
+    const lower = BANDS[i].min;
+    const upper = i>0 ? BANDS[i-1].min : Infinity;
+    const pUpper = upper===Infinity ? 1.0 : normalCdf((upper-comp)/sigma);
+    const pLower = normalCdf((lower-comp)/sigma);
+    posterior[BANDS[i].grade] = Math.max(0, pUpper - pLower);
+  }
+  const pGrade = posterior[grade] || 0;
+  const stability = pGrade>=0.8?"stable":pGrade>=0.6?"moderate":"fragile";
+
+  // Render
+  const dimBars = Object.entries(DIM_LABELS).map(([d,label]) => {
+    const v = scores[d]||0;
+    return `<div class="dim-bar"><div class="lbl">${label}</div><div class="bar-outer"><div class="bar-inner" style="width:${v}%"></div></div><div class="val">${v}</div></div>`;
+  }).join("");
+
+  const maxP = Math.max(...Object.values(posterior), 0.01);
+  const postBars = BANDS.map(b => {
+    const p = posterior[b.grade]||0;
+    const pct = (p*100).toFixed(1);
+    const w = (p/maxP*100).toFixed(0);
+    const active = b.grade===grade ? "◀" : "";
+    return `<div class="posterior-row"><div style="font-weight:700">${b.grade}${active}</div><div class="bar-outer"><div class="bar-inner" style="width:${w}%;background:${GRADE_COLORS[b.grade]}"></div></div><div class="pct">${pct}%</div></div>`;
+  }).join("");
+
+  const stabilityColor = stability==="stable"?"#2ea043":stability==="moderate"?"#d29922":"#f85149";
+
+  document.getElementById("result").style.display = "block";
+  document.getElementById("result").innerHTML = `
+    <div class="result-box">
+      <div style="text-align:center;margin-bottom:1rem">
+        <span class="grade grade-${grade}">${grade}</span>
+        <span style="margin-left:1rem;font-size:1.1rem">${comp.toFixed(1)} / 100</span>
+        <span style="margin-left:0.5rem;color:var(--muted)">± ${sigma.toFixed(1)}</span>
+      </div>
+      <h2 style="border:none;margin-top:0">Per-dimension scores</h2>
+      ${dimBars}
+      <h2 style="border:none">Grade probability</h2>
+      ${postBars}
+      <div style="margin-top:0.5rem;font-size:0.9rem;color:var(--muted)">
+        Stability: <b style="color:${stabilityColor}">${(pGrade*100).toFixed(0)}% ${stability}</b>
+      </div>
+    </div>`;
+}
+
+document.getElementById("score-btn").addEventListener("click", scoreCredit);
+scoreCredit(); // auto-score on load
+</script>
+</body>
+</html>
