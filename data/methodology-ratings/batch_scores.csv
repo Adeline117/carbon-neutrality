@@ -1,167 +1,167 @@
 project_id,name,methodology_category,archetype_id,registry,vintage_year,country,composite,composite_std,grade,p_grade,ccp_status
-VCS-1477,Katingan Mentaya Peatland Restoration and Conservation,redd_project,redd_project,VCS (VM0009),2019,Indonesia,28.25,4.02,B,0.668,not_CCP
-VCS-0674,Rimba Raya Biodiversity Reserve REDD+,redd_project,redd_project,VCS (VM0009),2018,Indonesia,27.05,4.02,B,0.768,not_CCP
-VCS-0934,Mai Ndombe REDD+ Project,redd_project,redd_project,VCS (VM0009),2020,DRC,29.45,4.02,B,0.554,not_CCP
-VCS-0902,Kariba REDD+ Forest Protection,redd_project,redd_project,VCS (VM0009),2019,Zimbabwe,28.25,4.02,B,0.668,not_CCP
-VCS-1396,Cordillera Azul National Park REDD+,redd_project,redd_project,VCS (VM0015),2018,Peru,27.05,4.02,B,0.768,not_CCP
-VCS-0944,Madre de Dios Amazon REDD+ Project,redd_project,redd_project,VCS (VM0015),2017,Peru,26.65,4.02,B,0.797,not_CCP
-VCS-1775,Southern Cardamom REDD+ Project,redd_project,redd_project,VCS (VM0009),2019,Cambodia,28.25,4.02,B,0.668,not_CCP
-VCS-1650,Keo Seima Wildlife Sanctuary REDD+,redd_project,redd_project,VCS (VM0009),2018,Cambodia,27.05,4.02,B,0.768,not_CCP
-VCS-0868,Alto Mayo Protected Forest REDD+,redd_project,redd_project,VCS (VM0015),2016,Peru,26.65,4.02,B,0.797,not_CCP
-VCS-0985,Kasigau Corridor REDD+ Phase II,redd_project,redd_project,VCS (VM0009),2019,Kenya,28.25,4.02,B,0.668,not_CCP
-VCS-1112,Russas-Purus REDD+ Acre State,redd_project,redd_project,VCS (VM0015),2018,Brazil,27.05,4.02,B,0.768,not_CCP
-VCS-1113,Envira Amazonia REDD+ Project,redd_project,redd_project,VCS (VM0015),2017,Brazil,26.65,4.02,B,0.797,not_CCP
-VCS-0981,Pacajai REDD+ Amazon Rainforest,redd_project,redd_project,VCS (VM0015),2020,Brazil,29.45,4.02,B,0.554,not_CCP
-VCS-0612,Maisa REDD+ DRC,redd_project,redd_project,VCS (VM0009),2019,DRC,28.25,4.02,B,0.668,not_CCP
-VCS-1503,Tambopata-Bahuaja REDD+ Project,redd_project,redd_project,VCS (VM0015),2017,Peru,26.65,4.02,B,0.797,not_CCP
-VCS-0688,Isangi REDD+ Project DRC,redd_project,redd_project,VCS (VM0009),2016,DRC,26.65,4.02,B,0.797,not_CCP
-VCS-0844,Virunga National Park REDD+,redd_project,redd_project,VCS (VM0009),2020,DRC,29.45,4.02,B,0.554,not_CCP
-VCS-1382,Mataven Forest Conservation REDD+,redd_project,redd_project,VCS (VM0009),2018,Colombia,27.05,4.02,B,0.768,not_CCP
-VCS-1020,Bajo Calima Community REDD+,redd_project,redd_project,VCS (VM0015),2019,Colombia,28.25,4.02,B,0.668,not_CCP
+VCS-1477,Katingan Mentaya Peatland Restoration and Conservation,redd_project,redd_project,VCS (VM0009),2019,Indonesia,27.5,4.02,B,0.733,not_CCP
+VCS-0674,Rimba Raya Biodiversity Reserve REDD+,redd_project,redd_project,VCS (VM0009),2018,Indonesia,26.1,4.02,B,0.834,not_CCP
+VCS-0934,Mai Ndombe REDD+ Project,redd_project,redd_project,VCS (VM0009),2020,DRC,27.78,4.02,B,0.71,not_CCP
+VCS-0902,Kariba REDD+ Forest Protection,redd_project,redd_project,VCS (VM0009),2019,Zimbabwe,26.38,4.02,B,0.816,not_CCP
+VCS-1396,Cordillera Azul National Park REDD+,redd_project,redd_project,VCS (VM0015),2018,Peru,26.1,4.02,B,0.834,not_CCP
+VCS-0944,Madre de Dios Amazon REDD+ Project,redd_project,redd_project,VCS (VM0015),2017,Peru,25.5,4.02,B,0.868,not_CCP
+VCS-1775,Southern Cardamom REDD+ Project,redd_project,redd_project,VCS (VM0009),2019,Cambodia,26.38,4.02,B,0.816,not_CCP
+VCS-1650,Keo Seima Wildlife Sanctuary REDD+,redd_project,redd_project,VCS (VM0009),2018,Cambodia,24.98,4.02,B,0.894,not_CCP
+VCS-0868,Alto Mayo Protected Forest REDD+,redd_project,redd_project,VCS (VM0015),2016,Peru,25.3,4.02,B,0.879,not_CCP
+VCS-0985,Kasigau Corridor REDD+ Phase II,redd_project,redd_project,VCS (VM0009),2019,Kenya,27.85,4.02,B,0.703,not_CCP
+VCS-1112,Russas-Purus REDD+ Acre State,redd_project,redd_project,VCS (VM0015),2018,Brazil,26.1,4.02,B,0.834,not_CCP
+VCS-1113,Envira Amazonia REDD+ Project,redd_project,redd_project,VCS (VM0015),2017,Brazil,25.5,4.02,B,0.868,not_CCP
+VCS-0981,Pacajai REDD+ Amazon Rainforest,redd_project,redd_project,VCS (VM0015),2020,Brazil,28.9,4.02,B,0.608,not_CCP
+VCS-0612,Maisa REDD+ DRC,redd_project,redd_project,VCS (VM0009),2019,DRC,26.38,4.02,B,0.816,not_CCP
+VCS-1503,Tambopata-Bahuaja REDD+ Project,redd_project,redd_project,VCS (VM0015),2017,Peru,25.5,4.02,B,0.868,not_CCP
+VCS-0688,Isangi REDD+ Project DRC,redd_project,redd_project,VCS (VM0009),2016,DRC,24.18,4.02,B,0.926,not_CCP
+VCS-0844,Virunga National Park REDD+,redd_project,redd_project,VCS (VM0009),2020,DRC,27.78,4.02,B,0.71,not_CCP
+VCS-1382,Mataven Forest Conservation REDD+,redd_project,redd_project,VCS (VM0009),2018,Colombia,26.1,4.02,B,0.834,not_CCP
+VCS-1020,Bajo Calima Community REDD+,redd_project,redd_project,VCS (VM0015),2019,Colombia,27.5,4.02,B,0.733,not_CCP
 VCS-1340,Ntakata Mountains REDD+,redd_project,redd_project,VCS (VM0009),2021,Tanzania,30.65,4.02,BB,0.564,not_CCP
-VCS-1553,Paraguay Forest Conservation REDD+,redd_project,redd_project,VCS (VM0009),2020,Paraguay,29.45,4.02,B,0.554,not_CCP
-VCS-1721,REDD+ Para State Forest Project,redd_project,redd_project,VCS (VM0015),2018,Brazil,27.05,4.02,B,0.768,not_CCP
-VCS-0892,Nyungwe National Park REDD+,redd_project,redd_project,VCS (VM0009),2019,Rwanda,28.25,4.02,B,0.668,not_CCP
-VCS-1025,Makame WMA REDD+ Project,redd_project,redd_project,VCS (VM0009),2017,Tanzania,26.65,4.02,B,0.797,not_CCP
-VCS-1561,Aceh Province REDD+ Concession,redd_project,redd_project,VCS (VM0009),2020,Indonesia,29.45,4.02,B,0.554,not_CCP
-VCS-1622,East Kalimantan Peatland REDD+,redd_project,redd_project,VCS (VM0009),2019,Indonesia,28.25,4.02,B,0.668,not_CCP
+VCS-1553,Paraguay Forest Conservation REDD+,redd_project,redd_project,VCS (VM0009),2020,Paraguay,29.25,4.02,B,0.574,not_CCP
+VCS-1721,REDD+ Para State Forest Project,redd_project,redd_project,VCS (VM0015),2018,Brazil,26.1,4.02,B,0.834,not_CCP
+VCS-0892,Nyungwe National Park REDD+,redd_project,redd_project,VCS (VM0009),2019,Rwanda,27.85,4.02,B,0.703,not_CCP
+VCS-1025,Makame WMA REDD+ Project,redd_project,redd_project,VCS (VM0009),2017,Tanzania,25.85,4.02,B,0.849,not_CCP
+VCS-1561,Aceh Province REDD+ Concession,redd_project,redd_project,VCS (VM0009),2020,Indonesia,28.9,4.02,B,0.608,not_CCP
+VCS-1622,East Kalimantan Peatland REDD+,redd_project,redd_project,VCS (VM0009),2019,Indonesia,27.5,4.02,B,0.733,not_CCP
 VCS-1833,Guyana ART TREES Jurisdictional REDD+,redd_project,redd_project,VCS (VM0015),2021,Guyana,30.65,4.02,BB,0.564,not_CCP
-VCS-1199,Myanmar Mangrove REDD+ Delta,redd_project,redd_project,VCS (VM0009),2015,Myanmar,26.65,4.02,B,0.797,not_CCP
+VCS-1199,Myanmar Mangrove REDD+ Delta,redd_project,redd_project,VCS (VM0009),2015,Myanmar,23.98,4.02,B,0.933,not_CCP
 VCS-1766,Lindi Region REDD+ Tanzania,redd_project,redd_project,VCS (VM0009),2022,Tanzania,31.85,4.02,BB,0.677,not_CCP
-VCS-1010,Sierra Leone Community Forest REDD+,redd_project,redd_project,VCS (VM0009),2019,Sierra Leone,28.25,4.02,B,0.668,not_CCP
-VCS-1434,Bale Mountains REDD+ Ethiopia,redd_project,redd_project,VCS (VM0009),2020,Ethiopia,29.45,4.02,B,0.554,not_CCP
-VCS-1598,Cerrado Biome REDD+ Brazil,redd_project,redd_project,VCS (VM0015),2021,Brazil,30.65,4.02,BB,0.564,not_CCP
-VCS-0901,Papua New Guinea Highland Forest REDD+,redd_project,redd_project,VCS (VM0009),2016,Papua New Guinea,26.65,4.02,B,0.797,not_CCP
-VCS-1145,Lacandón Rainforest REDD+ Mexico,redd_project,redd_project,VCS (VM0015),2018,Mexico,27.05,4.02,B,0.768,not_CCP
-VCS-1805,Chocó-Darién REDD+ Colombia,redd_project,redd_project,VCS (VM0015),2022,Colombia,31.85,4.02,BB,0.677,not_CCP
-VCS-1455,Mekong Delta Mangrove REDD+ Vietnam,redd_project,redd_project,VCS (VM0009),2020,Vietnam,29.45,4.02,B,0.554,not_CCP
+VCS-1010,Sierra Leone Community Forest REDD+,redd_project,redd_project,VCS (VM0009),2019,Sierra Leone,27.85,4.02,B,0.703,not_CCP
+VCS-1434,Bale Mountains REDD+ Ethiopia,redd_project,redd_project,VCS (VM0009),2020,Ethiopia,29.25,4.02,B,0.574,not_CCP
+VCS-1598,Cerrado Biome REDD+ Brazil,redd_project,redd_project,VCS (VM0015),2021,Brazil,30.3,4.02,BB,0.53,not_CCP
+VCS-0901,Papua New Guinea Highland Forest REDD+,redd_project,redd_project,VCS (VM0009),2016,Papua New Guinea,25.65,4.02,B,0.86,not_CCP
+VCS-1145,Lacandón Rainforest REDD+ Mexico,redd_project,redd_project,VCS (VM0015),2018,Mexico,26.45,4.02,B,0.811,not_CCP
+VCS-1805,Chocó-Darién REDD+ Colombia,redd_project,redd_project,VCS (VM0015),2022,Colombia,31.5,4.02,BB,0.645,not_CCP
+VCS-1455,Mekong Delta Mangrove REDD+ Vietnam,redd_project,redd_project,VCS (VM0009),2020,Vietnam,29.25,4.02,B,0.574,not_CCP
 VCS-1678,Cross River National Park REDD+ Nigeria,redd_project,redd_project,VCS (VM0009),2021,Nigeria,30.65,4.02,BB,0.564,not_CCP
-VCS-1923,West Papua Community Forest REDD+,redd_project,redd_project,VCS (VM0009),2023,Indonesia,33.05,4.02,BB,0.774,not_CCP
+VCS-1923,West Papua Community Forest REDD+,redd_project,redd_project,VCS (VM0009),2023,Indonesia,32.7,4.02,BB,0.748,not_CCP
 JNR-0001,Guyana ART TREES Phase I REDD+,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2022,Guyana,43.58,3.51,BB,0.657,CCP-eligible
 JNR-0002,Costa Rica National REDD+ Strategy,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2021,Costa Rica,42.38,3.51,BB,0.772,CCP-eligible
 JNR-0003,Ecuador National REDD+ Program,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2022,Ecuador,43.58,3.51,BB,0.657,CCP-eligible
 JNR-0004,Papua New Guinea JNR REDD+,redd_jurisdictional,redd_jurisdictional,VCS JNR (VM0048),2023,Papua New Guinea,44.77,3.51,BB,0.526,CCP-eligible
-JNR-0005,Colombia National REDD+ System,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2022,Colombia,43.58,3.51,BB,0.657,CCP-eligible
-JNR-0006,Peru National Forest Reference Level REDD+,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2023,Peru,44.77,3.51,BB,0.526,CCP-eligible
+JNR-0005,Colombia National REDD+ System,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2022,Colombia,43.23,3.51,BB,0.693,CCP-eligible
+JNR-0006,Peru National Forest Reference Level REDD+,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2023,Peru,44.42,3.51,BB,0.565,CCP-eligible
 JNR-0007,Ghana Cocoa Forest REDD+ JNR,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2022,Ghana,43.58,3.51,BB,0.657,CCP-eligible
-JNR-0008,DRC Mai-Ndombe Province JNR REDD+,redd_jurisdictional,redd_jurisdictional,VCS JNR (VM0048),2023,DRC,44.77,3.51,BB,0.526,CCP-eligible
+JNR-0008,DRC Mai-Ndombe Province JNR REDD+,redd_jurisdictional,redd_jurisdictional,VCS JNR (VM0048),2023,DRC,43.3,3.51,BB,0.686,CCP-eligible
 JNR-0009,Vietnam Central Highlands JNR REDD+,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2023,Vietnam,44.77,3.51,BB,0.526,CCP-eligible
-JNR-0010,Indonesia East Kalimantan JNR REDD+,redd_jurisdictional,redd_jurisdictional,VCS JNR (VM0048),2024,Indonesia,45.98,3.51,BBB,0.609,CCP-eligible
-JNR-0011,Brazil Acre State JNR REDD+,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2024,Brazil,45.98,3.51,BBB,0.609,CCP-eligible
+JNR-0010,Indonesia East Kalimantan JNR REDD+,redd_jurisdictional,redd_jurisdictional,VCS JNR (VM0048),2024,Indonesia,45.62,3.51,BBB,0.571,CCP-eligible
+JNR-0011,Brazil Acre State JNR REDD+,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2024,Brazil,45.62,3.51,BBB,0.571,CCP-eligible
 JNR-0012,Mexico Yucatan Peninsula JNR REDD+,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2023,Mexico,44.77,3.51,BB,0.526,CCP-eligible
 GS-1559,UpEnergy Clean Cookstoves Uganda,cookstoves,cookstoves,Gold Standard (TPDDTEC),2021,Uganda,40.92,3.25,BB,0.894,CCP-eligible (with conditions)
-GS-2010,Gyapa Improved Cookstoves Ghana,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Ghana,39.73,3.25,BB,0.946,CCP-eligible (with conditions)
+GS-2010,Gyapa Improved Cookstoves Ghana,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Ghana,39.52,3.25,BB,0.952,CCP-eligible (with conditions)
 GS-1820,Hongera Energy Efficient Cookstoves Kenya,cookstoves,cookstoves,Gold Standard (TPDDTEC),2022,Kenya,42.12,3.25,BB,0.811,CCP-eligible (with conditions)
 GS-2145,Murang'a Improved Cookstove Project Kenya,cookstoves,cookstoves,Gold Standard (TPDDTEC),2021,Kenya,40.92,3.25,BB,0.894,CCP-eligible (with conditions)
-GS-1990,Rwanda Improved Kitchen Regimes Bugesera,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Rwanda,39.73,3.25,BB,0.946,CCP-eligible (with conditions)
+GS-1990,Rwanda Improved Kitchen Regimes Bugesera,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Rwanda,39.52,3.25,BB,0.952,CCP-eligible (with conditions)
 GS-1750,ECOA Efficient Cookstoves Households Kenya,cookstoves,cookstoves,Gold Standard (TPDDTEC),2022,Kenya,42.12,3.25,BB,0.811,CCP-eligible (with conditions)
-GS-1440,Envirofit Clean Cooking India,cookstoves,cookstoves,Gold Standard (TPDDTEC),2019,India,38.52,3.25,BB,0.972,CCP-eligible (with conditions)
+GS-1440,Envirofit Clean Cooking India,cookstoves,cookstoves,Gold Standard (TPDDTEC),2019,India,37.77,3.25,BB,0.978,CCP-eligible (with conditions)
 GS-2200,Transformative Cookstove Activity Ghana,cookstoves,cookstoves,Gold Standard (TPDDTEC),2023,Ghana,43.33,3.25,BB,0.697,CCP-eligible (with conditions)
 GS-1880,CO2balance Clean Cooking Mozambique,cookstoves,cookstoves,Gold Standard (TPDDTEC),2021,Mozambique,40.92,3.25,BB,0.894,CCP-eligible (with conditions)
-GS-1650,Simoshi Institutional Cookstoves Uganda,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Uganda,39.73,3.25,BB,0.946,CCP-eligible (with conditions)
+GS-1650,Simoshi Institutional Cookstoves Uganda,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Uganda,39.52,3.25,BB,0.952,CCP-eligible (with conditions)
 GS-2055,BioLite HomeStove Distribution Kenya,cookstoves,cookstoves,Gold Standard (TPDDTEC),2022,Kenya,42.12,3.25,BB,0.811,CCP-eligible (with conditions)
-GS-1710,Paradigm Efficient Stoves Ethiopia,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Ethiopia,39.73,3.25,BB,0.946,CCP-eligible (with conditions)
-GS-1920,Greenway Grameen Clean Cooking India,cookstoves,cookstoves,Gold Standard (TPDDTEC),2021,India,40.92,3.25,BB,0.894,CCP-eligible (with conditions)
+GS-1710,Paradigm Efficient Stoves Ethiopia,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Ethiopia,39.52,3.25,BB,0.952,CCP-eligible (with conditions)
+GS-1920,Greenway Grameen Clean Cooking India,cookstoves,cookstoves,Gold Standard (TPDDTEC),2021,India,40.58,3.25,BB,0.913,CCP-eligible (with conditions)
 GS-2110,Toyola Efficient Stoves Ghana,cookstoves,cookstoves,Gold Standard (TPDDTEC),2023,Ghana,43.33,3.25,BB,0.697,CCP-eligible (with conditions)
 GS-1580,BURN Manufacturing Cookstoves Kenya,cookstoves,cookstoves,Gold Standard (TPDDTEC),2022,Kenya,42.12,3.25,BB,0.811,CCP-eligible (with conditions)
 GS-2250,Improved Cookstoves Malawi Rural,cookstoves,cookstoves,Gold Standard (TPDDTEC),2023,Malawi,43.33,3.25,BB,0.697,CCP-eligible (with conditions)
 GS-1830,EcoZoom Clean Stoves Tanzania,cookstoves,cookstoves,Gold Standard (TPDDTEC),2021,Tanzania,40.92,3.25,BB,0.894,CCP-eligible (with conditions)
-GS-1960,Prakti Clean Cookstove India,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,India,39.73,3.25,BB,0.946,CCP-eligible (with conditions)
-VCS-1590,Improved Cookstoves Distribution Bangladesh,cookstoves,cookstoves,VCS (VM0050),2021,Bangladesh,40.92,3.25,BB,0.894,CCP-eligible (with conditions)
+GS-1960,Prakti Clean Cookstove India,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,India,39.18,3.25,BB,0.961,CCP-eligible (with conditions)
+VCS-1590,Improved Cookstoves Distribution Bangladesh,cookstoves,cookstoves,VCS (VM0050),2021,Bangladesh,40.58,3.25,BB,0.913,CCP-eligible (with conditions)
 VCS-1785,REMS Cookstove Programme Zambia,cookstoves,cookstoves,VCS (VM0050),2022,Zambia,42.12,3.25,BB,0.811,CCP-eligible (with conditions)
-VCS-1690,EcoAct Clean Cooking Cambodia,cookstoves,cookstoves,VCS (VM0050),2020,Cambodia,39.73,3.25,BB,0.946,CCP-eligible (with conditions)
-VCS-1442,DelAgua Tubeho Neza Rwanda,cookstoves,cookstoves,VCS (VM0050),2019,Rwanda,38.52,3.25,BB,0.972,CCP-eligible (with conditions)
+VCS-1690,EcoAct Clean Cooking Cambodia,cookstoves,cookstoves,VCS (VM0050),2020,Cambodia,38.05,3.25,BB,0.977,CCP-eligible (with conditions)
+VCS-1442,DelAgua Tubeho Neza Rwanda,cookstoves,cookstoves,VCS (VM0050),2019,Rwanda,38.12,3.25,BB,0.976,CCP-eligible (with conditions)
 GS-2300,Fuel Efficient Stoves South Sudan,cookstoves,cookstoves,Gold Standard (TPDDTEC),2023,South Sudan,43.33,3.25,BB,0.697,CCP-eligible (with conditions)
 GS-2340,Lao PDR Clean Cooking Programme,cookstoves,cookstoves,Gold Standard (TPDDTEC),2024,Laos,44.52,3.25,BB,0.558,CCP-eligible (with conditions)
-GS-1510,Biolite Clean Cooking Haiti,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Haiti,39.73,3.25,BB,0.946,CCP-eligible (with conditions)
+GS-1510,Biolite Clean Cooking Haiti,cookstoves,cookstoves,Gold Standard (TPDDTEC),2020,Haiti,39.52,3.25,BB,0.952,CCP-eligible (with conditions)
 GS-2180,Efficient Stoves for Schools Nigeria,cookstoves,cookstoves,Gold Standard (TPDDTEC),2022,Nigeria,42.12,3.25,BB,0.811,CCP-eligible (with conditions)
-GS-1370,Cookswell Jikos Efficient Stoves Kenya,cookstoves,cookstoves,Gold Standard (TPDDTEC),2019,Kenya,38.52,3.25,BB,0.972,CCP-eligible (with conditions)
-GS-2402,Myanmar Efficient Cookstoves Rural,cookstoves,cookstoves,Gold Standard (TPDDTEC),2023,Myanmar,43.33,3.25,BB,0.697,CCP-eligible (with conditions)
+GS-1370,Cookswell Jikos Efficient Stoves Kenya,cookstoves,cookstoves,Gold Standard (TPDDTEC),2019,Kenya,38.12,3.25,BB,0.976,CCP-eligible (with conditions)
+GS-2402,Myanmar Efficient Cookstoves Rural,cookstoves,cookstoves,Gold Standard (TPDDTEC),2023,Myanmar,41.85,3.25,BB,0.833,CCP-eligible (with conditions)
 GS-2440,Improved Biomass Stoves Philippines,cookstoves,cookstoves,Gold Standard (TPDDTEC),2024,Philippines,44.52,3.25,BB,0.558,CCP-eligible (with conditions)
 GS-2380,Solar Cookstoves Pilot Burkina Faso,cookstoves,cookstoves,Gold Standard (TPDDTEC),2024,Burkina Faso,44.52,3.25,BB,0.558,CCP-eligible (with conditions)
 GS-2420,Clean Cooking Energy Access Niger,cookstoves,cookstoves,Gold Standard (TPDDTEC),2024,Niger,44.52,3.25,BB,0.558,CCP-eligible (with conditions)
-RE-0001,Kutch Wind Farm 250 MW India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2014,India,24.0,2.41,B,0.994,REJECTED
-RE-0002,Tamil Nadu Wind Power Project India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2015,India,24.0,2.41,B,0.994,REJECTED
-RE-0003,Rajasthan Solar Park 500 MW India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2016,India,24.0,2.41,B,0.994,REJECTED
-RE-0004,Inner Mongolia Wind Farm China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2013,China,24.0,2.41,B,0.994,REJECTED
-RE-0005,Gansu Province Wind Project China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2014,China,24.0,2.41,B,0.994,REJECTED
-RE-0006,Hebei Solar PV Project China,grid_renewable_energy,grid_renewable_energy,CDM (AMS-I.D),2015,China,24.0,2.41,B,0.994,REJECTED
-RE-0007,Yunnan Hydropower Small Scale China,grid_renewable_energy,grid_renewable_energy,CDM (AMS-I.D),2012,China,24.0,2.41,B,0.994,REJECTED
-RE-0008,Sao Paulo Wind Farm Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2016,Brazil,24.0,2.41,B,0.994,REJECTED
-RE-0009,Bahia Wind Energy Complex Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2017,Brazil,24.0,2.41,B,0.994,REJECTED
-RE-0010,Rio Grande do Norte Wind Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2018,Brazil,24.4,2.41,B,0.99,REJECTED
-RE-0011,Karaburun Wind Farm Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2015,Turkey,24.0,2.41,B,0.994,REJECTED
-RE-0012,Mersin Solar Park Turkey,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2016,Turkey,24.0,2.41,B,0.994,REJECTED
-RE-0013,Binh Thuan Wind Farm Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2019,Vietnam,25.6,2.41,B,0.966,REJECTED
-RE-0014,Ninh Thuan Solar Project Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2020,Vietnam,26.8,2.41,B,0.908,REJECTED
-RE-0015,Gujarat Solar Park India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2014,India,24.0,2.41,B,0.994,REJECTED
-RE-0016,Maharashtra Wind Project India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2013,India,24.0,2.41,B,0.994,REJECTED
-RE-0017,Anhui Province Wind Farm China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2014,China,24.0,2.41,B,0.994,REJECTED
-RE-0018,Shandong Solar PV Park China,grid_renewable_energy,grid_renewable_energy,CDM (AMS-I.D),2016,China,24.0,2.41,B,0.994,REJECTED
-RE-0019,Pernambuco Solar Complex Brazil,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2019,Brazil,25.6,2.41,B,0.966,REJECTED
-RE-0020,Central Anatolian Wind Farm Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2017,Turkey,24.0,2.41,B,0.994,REJECTED
+RE-0001,Kutch Wind Farm 250 MW India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2014,India,22.25,2.41,B,0.999,REJECTED
+RE-0002,Tamil Nadu Wind Power Project India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2015,India,22.45,2.41,B,0.999,REJECTED
+RE-0003,Rajasthan Solar Park 500 MW India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2016,India,22.65,2.41,B,0.999,REJECTED
+RE-0004,Inner Mongolia Wind Farm China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2013,China,22.4,2.41,B,0.999,REJECTED
+RE-0005,Gansu Province Wind Project China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2014,China,22.6,2.41,B,0.999,REJECTED
+RE-0006,Hebei Solar PV Project China,grid_renewable_energy,grid_renewable_energy,CDM (AMS-I.D),2015,China,22.8,2.41,B,0.999,REJECTED
+RE-0007,Yunnan Hydropower Small Scale China,grid_renewable_energy,grid_renewable_energy,CDM (AMS-I.D),2012,China,22.2,2.41,B,0.999,REJECTED
+RE-0008,Sao Paulo Wind Farm Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2016,Brazil,22.65,2.41,B,0.999,REJECTED
+RE-0009,Bahia Wind Energy Complex Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2017,Brazil,22.85,2.41,B,0.998,REJECTED
+RE-0010,Rio Grande do Norte Wind Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2018,Brazil,23.45,2.41,B,0.997,REJECTED
+RE-0011,Karaburun Wind Farm Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2015,Turkey,22.8,2.41,B,0.999,REJECTED
+RE-0012,Mersin Solar Park Turkey,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2016,Turkey,23.0,2.41,B,0.998,REJECTED
+RE-0013,Binh Thuan Wind Farm Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2019,Vietnam,25.2,2.41,B,0.977,REJECTED
+RE-0014,Ninh Thuan Solar Project Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2020,Vietnam,26.6,2.41,B,0.921,REJECTED
+RE-0015,Gujarat Solar Park India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2014,India,22.25,2.41,B,0.999,REJECTED
+RE-0016,Maharashtra Wind Project India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2013,India,22.05,2.41,B,1.0,REJECTED
+RE-0017,Anhui Province Wind Farm China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2014,China,22.6,2.41,B,0.999,REJECTED
+RE-0018,Shandong Solar PV Park China,grid_renewable_energy,grid_renewable_energy,CDM (AMS-I.D),2016,China,23.0,2.41,B,0.998,REJECTED
+RE-0019,Pernambuco Solar Complex Brazil,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2019,Brazil,24.85,2.41,B,0.984,REJECTED
+RE-0020,Central Anatolian Wind Farm Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2017,Turkey,23.2,2.41,B,0.998,REJECTED
 RE-0021,Quang Binh Wind Power Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2021,Vietnam,28.0,2.41,B,0.796,REJECTED
-RE-0022,Andhra Pradesh Wind Farm India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2015,India,24.0,2.41,B,0.994,REJECTED
-RE-0023,Karnataka Solar Park India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2017,India,24.0,2.41,B,0.994,REJECTED
-RE-0024,Xinjiang Wind Energy China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2013,China,24.0,2.41,B,0.994,REJECTED
-RE-0025,Minas Gerais Wind Project Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2020,Brazil,26.8,2.41,B,0.908,REJECTED
-RE-0026,Izmir Geothermal Power Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2016,Turkey,24.0,2.41,B,0.994,REJECTED
-RE-0027,Bac Lieu Wind Farm Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2020,Vietnam,26.8,2.41,B,0.908,REJECTED
-RE-0028,Madhya Pradesh Solar PV India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2018,India,24.4,2.41,B,0.99,REJECTED
-RE-0029,Liaoning Wind Energy China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2015,China,24.0,2.41,B,0.994,REJECTED
-RE-0030,Piaui Wind Complex Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2021,Brazil,28.0,2.41,B,0.796,REJECTED
-RE-0031,Hatay Wind Farm Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2018,Turkey,24.4,2.41,B,0.99,REJECTED
+RE-0022,Andhra Pradesh Wind Farm India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2015,India,22.45,2.41,B,0.999,REJECTED
+RE-0023,Karnataka Solar Park India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2017,India,22.85,2.41,B,0.998,REJECTED
+RE-0024,Xinjiang Wind Energy China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2013,China,22.4,2.41,B,0.999,REJECTED
+RE-0025,Minas Gerais Wind Project Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2020,Brazil,26.25,2.41,B,0.94,REJECTED
+RE-0026,Izmir Geothermal Power Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2016,Turkey,23.0,2.41,B,0.998,REJECTED
+RE-0027,Bac Lieu Wind Farm Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2020,Vietnam,26.6,2.41,B,0.921,REJECTED
+RE-0028,Madhya Pradesh Solar PV India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2018,India,23.45,2.41,B,0.997,REJECTED
+RE-0029,Liaoning Wind Energy China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2015,China,22.8,2.41,B,0.999,REJECTED
+RE-0030,Piaui Wind Complex Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2021,Brazil,27.65,2.41,B,0.835,REJECTED
+RE-0031,Hatay Wind Farm Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2018,Turkey,23.8,2.41,B,0.995,REJECTED
 RE-0032,Gia Lai Wind Power Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2022,Vietnam,29.2,2.41,B,0.63,REJECTED
-RE-0033,Telangana Solar Project India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2019,India,25.6,2.41,B,0.966,REJECTED
-RE-0034,Jiangsu Offshore Wind China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2017,China,24.0,2.41,B,0.994,REJECTED
-RE-0035,Ceara Wind Energy Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2020,Brazil,26.8,2.41,B,0.908,REJECTED
-ARR-0001,Teak Reforestation Atlantic Forest Brazil,arr_conservation,arr_conservation,VCS (VM0047),2021,Brazil,62.7,3.24,A,0.797,CCP-eligible
+RE-0033,Telangana Solar Project India,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2019,India,24.85,2.41,B,0.984,REJECTED
+RE-0034,Jiangsu Offshore Wind China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2017,China,23.2,2.41,B,0.998,REJECTED
+RE-0035,Ceara Wind Energy Brazil,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2020,Brazil,26.25,2.41,B,0.94,REJECTED
+ARR-0001,Teak Reforestation Atlantic Forest Brazil,arr_conservation,arr_conservation,VCS (VM0047),2021,Brazil,62.35,3.24,A,0.766,CCP-eligible
 ARR-0002,Kibale National Park Buffer Reforestation Uganda,arr_conservation,arr_conservation,VCS (VM0047),2022,Uganda,63.9,3.24,A,0.885,CCP-eligible
-ARR-0003,Humbo Community Reforestation Ethiopia,arr_conservation,arr_conservation,VCS (VM0047),2020,Ethiopia,61.5,3.24,A,0.678,CCP-eligible
-ARR-0004,Panna Tiger Reserve Reforestation India,arr_conservation,arr_conservation,VCS (VM0047),2023,India,65.1,3.24,A,0.941,CCP-eligible
+ARR-0003,Humbo Community Reforestation Ethiopia,arr_conservation,arr_conservation,VCS (VM0047),2020,Ethiopia,61.3,3.24,A,0.656,CCP-eligible
+ARR-0004,Panna Tiger Reserve Reforestation India,arr_conservation,arr_conservation,VCS (VM0047),2023,India,64.75,3.24,A,0.928,CCP-eligible
 ARR-0005,Rizome Kawayan Bamboo Philippines,arr_conservation,arr_conservation,VCS (VM0047),2024,Philippines,66.3,3.24,A,0.97,CCP-eligible
-ARR-0006,Cerrado Native Species Restoration Brazil,arr_conservation,arr_conservation,VCS (VM0047),2022,Brazil,63.9,3.24,A,0.885,CCP-eligible
+ARR-0006,Cerrado Native Species Restoration Brazil,arr_conservation,arr_conservation,VCS (VM0047),2022,Brazil,63.55,3.24,A,0.863,CCP-eligible
 ARR-0007,Mt Elgon Forest Restoration Kenya,arr_conservation,arr_conservation,VCS (VM0047),2021,Kenya,62.7,3.24,A,0.797,CCP-eligible
-ARR-0008,Andean Cloud Forest Reforestation Colombia,arr_conservation,arr_conservation,VCS (VM0047),2023,Colombia,65.1,3.24,A,0.941,CCP-eligible
+ARR-0008,Andean Cloud Forest Reforestation Colombia,arr_conservation,arr_conservation,VCS (VM0047),2023,Colombia,64.75,3.24,A,0.928,CCP-eligible
 ARR-0009,Chagga Agroforestry Tanzania,arr_conservation,arr_conservation,VCS (VM0047),2022,Tanzania,63.9,3.24,A,0.885,CCP-eligible
-ARR-0010,Mangrove Restoration Sundarbans Bangladesh,arr_conservation,arr_conservation,ACR AFR,2021,Bangladesh,62.7,3.24,A,0.797,CCP-eligible
+ARR-0010,Mangrove Restoration Sundarbans Bangladesh,arr_conservation,arr_conservation,ACR AFR,2021,Bangladesh,62.35,3.24,A,0.766,CCP-eligible
 ARR-0011,Sahel Great Green Wall Reforestation Niger,arr_conservation,arr_conservation,VCS (VM0047),2023,Niger,65.1,3.24,A,0.941,CCP-eligible
 ARR-0012,Borneo Rainforest Restoration Malaysia,arr_conservation,arr_conservation,VCS (VM0047),2024,Malaysia,66.3,3.24,A,0.97,CCP-eligible
-ARR-0013,Mata Atlantica Corridor Restoration Brazil,arr_conservation,arr_conservation,VCS (VM0047),2023,Brazil,65.1,3.24,A,0.941,CCP-eligible
-ARR-0014,Western Ghats Reforestation India,arr_conservation,arr_conservation,VCS (VM0047),2022,India,63.9,3.24,A,0.885,CCP-eligible
+ARR-0013,Mata Atlantica Corridor Restoration Brazil,arr_conservation,arr_conservation,VCS (VM0047),2023,Brazil,64.75,3.24,A,0.928,CCP-eligible
+ARR-0014,Western Ghats Reforestation India,arr_conservation,arr_conservation,VCS (VM0047),2022,India,63.55,3.24,A,0.863,CCP-eligible
 ARR-0015,Malawi Lake Shore Restoration,arr_conservation,arr_conservation,VCS (VM0047),2023,Malawi,65.1,3.24,A,0.941,CCP-eligible
 ARR-0016,Mekong River Basin Reforestation Laos,arr_conservation,arr_conservation,VCS (VM0047),2024,Laos,66.3,3.24,A,0.97,CCP-eligible
 ARR-0017,Nordic Boreal Afforestation Estonia,arr_conservation,arr_conservation,Ecobase Nordic ARR,2023,Estonia,65.1,3.24,A,0.941,CCP-eligible
 ARR-0018,Madagascar Dry Forest Restoration,arr_conservation,arr_conservation,VCS (VM0047),2022,Madagascar,63.9,3.24,A,0.885,CCP-eligible
 ARR-0019,Guatemala Community Reforestation,arr_conservation,arr_conservation,VCS (VM0047),2021,Guatemala,62.7,3.24,A,0.797,CCP-eligible
 ARR-0020,Haiti Mangrove Restoration Project,arr_conservation,arr_conservation,VCS (VM0047),2023,Haiti,65.1,3.24,A,0.941,CCP-eligible
-ARRP-0001,Hancock Timber Plantation Uruguay,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2019,Uruguay,39.85,3.43,BB,0.932,varies
-ARRP-0002,Arauco Pulp Plantation Chile,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2018,Chile,38.65,3.43,BB,0.962,varies
-ARRP-0003,Suzano Eucalyptus Plantation Brazil,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2020,Brazil,41.05,3.43,BB,0.875,varies
-ARRP-0004,APP Acacia Plantation Sumatra,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2017,Indonesia,38.25,3.43,BB,0.968,varies
-ARRP-0005,CMPC Pine Plantation Chile,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2019,Chile,39.85,3.43,BB,0.932,varies
-ARRP-0006,Mondi Timber Plantation South Africa,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2020,South Africa,41.05,3.43,BB,0.875,varies
-ARRP-0007,Klabin Eucalyptus Plantation Parana Brazil,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2021,Brazil,42.25,3.43,BB,0.789,varies
-ARRP-0008,Sinar Mas Pulp Plantation Kalimantan,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2018,Indonesia,38.65,3.43,BB,0.962,varies
-ARRP-0009,Weyerhaeuser Southeastern US Timber,arr_commercial_plantation,arr_commercial_plantation,ACR AFR,2020,USA,41.05,3.43,BB,0.875,varies
+ARRP-0001,Hancock Timber Plantation Uruguay,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2019,Uruguay,39.45,3.43,BB,0.944,varies
+ARRP-0002,Arauco Pulp Plantation Chile,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2018,Chile,38.05,3.43,BB,0.969,varies
+ARRP-0003,Suzano Eucalyptus Plantation Brazil,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2020,Brazil,40.5,3.43,BB,0.904,varies
+ARRP-0004,APP Acacia Plantation Sumatra,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2017,Indonesia,37.1,3.43,BB,0.97,varies
+ARRP-0005,CMPC Pine Plantation Chile,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2019,Chile,39.45,3.43,BB,0.944,varies
+ARRP-0006,Mondi Timber Plantation South Africa,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2020,South Africa,40.85,3.43,BB,0.886,varies
+ARRP-0007,Klabin Eucalyptus Plantation Parana Brazil,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2021,Brazil,41.9,3.43,BB,0.817,varies
+ARRP-0008,Sinar Mas Pulp Plantation Kalimantan,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2018,Indonesia,37.7,3.43,BB,0.971,varies
+ARRP-0009,Weyerhaeuser Southeastern US Timber,arr_commercial_plantation,arr_commercial_plantation,ACR AFR,2020,USA,40.85,3.43,BB,0.886,varies
 ARRP-0010,UPM Eucalyptus Plantation Uruguay,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2022,Uruguay,43.45,3.43,BB,0.674,varies
-IFM-0001,Finite Carbon Pacific Northwest IFM,ifm,ifm,ACR IFM,2020,USA,59.15,3.16,BBB,0.606,CCP-eligible
-IFM-0002,Green Diamond California IFM,ifm,ifm,CAR Forest Protocol,2019,USA,57.95,3.16,BBB,0.742,CCP-eligible
+IFM-0001,Finite Carbon Pacific Northwest IFM,ifm,ifm,ACR IFM,2020,USA,58.95,3.16,BBB,0.63,CCP-eligible
+IFM-0002,Green Diamond California IFM,ifm,ifm,CAR Forest Protocol,2019,USA,57.55,3.16,BBB,0.781,CCP-eligible
 IFM-0003,Lyme Timber Northeast IFM,ifm,ifm,ACR IFM,2021,USA,60.35,3.16,A,0.544,CCP-eligible
-IFM-0004,Forest Carbon Partners British Columbia IFM,ifm,ifm,VCS (VM0045),2020,Canada,59.15,3.16,BBB,0.606,CCP-eligible
-IFM-0005,The Nature Conservancy Montana IFM,ifm,ifm,ACR IFM,2019,USA,57.95,3.16,BBB,0.742,CCP-eligible
-IFM-0006,Potlatch Idaho IFM Project,ifm,ifm,CAR Forest Protocol,2018,USA,56.75,3.16,BBB,0.848,CCP-eligible
-IFM-0007,Merrill & Ring Washington IFM,ifm,ifm,ACR IFM,2020,USA,59.15,3.16,BBB,0.606,CCP-eligible
+IFM-0004,Forest Carbon Partners British Columbia IFM,ifm,ifm,VCS (VM0045),2020,Canada,58.95,3.16,BBB,0.63,CCP-eligible
+IFM-0005,The Nature Conservancy Montana IFM,ifm,ifm,ACR IFM,2019,USA,57.55,3.16,BBB,0.781,CCP-eligible
+IFM-0006,Potlatch Idaho IFM Project,ifm,ifm,CAR Forest Protocol,2018,USA,56.15,3.16,BBB,0.888,CCP-eligible
+IFM-0007,Merrill & Ring Washington IFM,ifm,ifm,ACR IFM,2020,USA,58.95,3.16,BBB,0.63,CCP-eligible
 IFM-0008,Baskahegan Maine IFM Project,ifm,ifm,ACR IFM,2021,USA,60.35,3.16,A,0.544,CCP-eligible
 IFM-0009,Victorian Central Highlands IFM Australia,ifm,ifm,VCS (VM0045),2022,Australia,61.55,3.16,A,0.688,CCP-eligible
-IFM-0010,Amazonas Sustainable Forestry IFM Brazil,ifm,ifm,VCS (VM0045),2020,Brazil,59.15,3.16,BBB,0.606,CCP-eligible
+IFM-0010,Amazonas Sustainable Forestry IFM Brazil,ifm,ifm,VCS (VM0045),2020,Brazil,58.6,3.16,BBB,0.671,CCP-eligible
 IFM-0011,New Brunswick Community Forest IFM,ifm,ifm,ACR IFM,2021,Canada,60.35,3.16,A,0.544,CCP-eligible
-IFM-0012,Blue Source Appalachian IFM,ifm,ifm,ACR IFM,2019,USA,57.95,3.16,BBB,0.742,CCP-eligible
-IFM-0013,Ecotrust Oregon Coast IFM,ifm,ifm,ACR IFM,2020,USA,59.15,3.16,BBB,0.606,CCP-eligible
+IFM-0012,Blue Source Appalachian IFM,ifm,ifm,ACR IFM,2019,USA,57.55,3.16,BBB,0.781,CCP-eligible
+IFM-0013,Ecotrust Oregon Coast IFM,ifm,ifm,ACR IFM,2020,USA,58.95,3.16,BBB,0.63,CCP-eligible
 IFM-0014,Great Smoky Mountains Buffer IFM,ifm,ifm,CAR Forest Protocol,2022,USA,61.55,3.16,A,0.688,CCP-eligible
 IFM-0015,Tasmania Old Growth Forest IFM,ifm,ifm,VCS (VM0045),2023,Australia,62.75,3.16,A,0.808,CCP-eligible
-IFM-0016,Parana State Forest Management IFM Brazil,ifm,ifm,VCS (VM0045),2021,Brazil,60.35,3.16,A,0.544,CCP-eligible
-IFM-0017,Mendocino County California IFM,ifm,ifm,CAR Forest Protocol,2019,USA,57.95,3.16,BBB,0.742,CCP-eligible
+IFM-0016,Parana State Forest Management IFM Brazil,ifm,ifm,VCS (VM0045),2021,Brazil,60.0,3.16,A,0.5,CCP-eligible
+IFM-0017,Mendocino County California IFM,ifm,ifm,CAR Forest Protocol,2019,USA,57.55,3.16,BBB,0.781,CCP-eligible
 IFM-0018,Vancouver Island IFM Canada,ifm,ifm,VCS (VM0045),2022,Canada,61.55,3.16,A,0.688,CCP-eligible
 DAC-0001,Climeworks Orca DACCS Hellisheidi Iceland,daccs_geological,daccs_geological,Isometric DACCS,2024,Iceland,91.22,2.47,AAA,0.69,CCP-eligible
 DAC-0002,Climeworks Mammoth DACCS Hellisheidi Iceland,daccs_geological,daccs_geological,Isometric DACCS,2025,Iceland,92.42,2.47,AAA,0.837,CCP-eligible
@@ -179,12 +179,12 @@ DAC-0013,Verdox Electrochemical DAC Massachusetts,daccs_geological,daccs_geologi
 DAC-0014,Noya Cooling Tower DAC California,daccs_geological,daccs_geological,Puro DACCS,2025,USA,92.42,2.47,AAA,0.837,CCP-eligible
 BCR-0001,Exomad Green Biochar Mongolia,biochar,biochar,Puro Biochar,2023,Mongolia,77.15,2.75,AA,0.783,CCP-eligible
 BCR-0002,Oregon Biochar Solutions Pacific NW,biochar,biochar,Isometric Biochar,2024,USA,78.35,2.75,AA,0.888,CCP-eligible
-BCR-0003,NetZero Biochar Paraguacu Brazil,biochar,biochar,Puro Biochar,2024,Brazil,78.35,2.75,AA,0.888,CCP-eligible
+BCR-0003,NetZero Biochar Paraguacu Brazil,biochar,biochar,Puro Biochar,2024,Brazil,78.0,2.75,AA,0.862,CCP-eligible
 BCR-0004,Carbofex Biochar Finland,biochar,biochar,Puro Biochar,2023,Finland,77.15,2.75,AA,0.783,CCP-eligible
-BCR-0005,Varaha Biochar India,biochar,biochar,Puro Biochar,2024,India,78.35,2.75,AA,0.888,CCP-eligible
+BCR-0005,Varaha Biochar India,biochar,biochar,Puro Biochar,2024,India,78.0,2.75,AA,0.862,CCP-eligible
 BCR-0006,Bio-Logical Biochar Kenya,biochar,biochar,Puro Biochar,2024,Kenya,78.35,2.75,AA,0.888,CCP-eligible
-BCR-0007,Aperam BioEnergia Biochar Brazil,biochar,biochar,Puro Biochar,2024,Brazil,78.35,2.75,AA,0.888,CCP-eligible
-BCR-0008,Greenglow Biochar Southeast Asia,biochar,biochar,Puro Biochar,2024,Cambodia,78.35,2.75,AA,0.888,CCP-eligible
+BCR-0007,Aperam BioEnergia Biochar Brazil,biochar,biochar,Puro Biochar,2024,Brazil,78.0,2.75,AA,0.862,CCP-eligible
+BCR-0008,Greenglow Biochar Southeast Asia,biochar,biochar,Puro Biochar,2024,Cambodia,76.88,2.75,AA,0.752,CCP-eligible
 BCR-0009,Pacific Biochar California,biochar,biochar,Isometric Biochar,2023,USA,77.15,2.75,AA,0.783,CCP-eligible
 BCR-0010,CharGrow Biochar Nebraska,biochar,biochar,CAR Biochar,2024,USA,78.35,2.75,AA,0.888,CCP-eligible
 BCR-0011,Carbon Gold Biochar UK,biochar,biochar,Puro Biochar,2023,UK,77.15,2.75,AA,0.783,CCP-eligible
@@ -198,10 +198,10 @@ BCR-0018,Carbon Terra Biochar Germany,biochar,biochar,Puro Biochar,2023,Germany,
 ERW-0001,UNDO Enhanced Weathering Scotland UK,enhanced_weathering,enhanced_weathering,Isometric ERW,2024,UK,82.97,2.85,AA,0.991,under_assessment
 ERW-0002,Lithos Carbon North Carolina ERW,enhanced_weathering,enhanced_weathering,Isometric ERW,2024,USA,82.97,2.85,AA,0.991,under_assessment
 ERW-0003,Eion Olivine Mid-Atlantic US,enhanced_weathering,enhanced_weathering,Isometric ERW,2024,USA,82.97,2.85,AA,0.991,under_assessment
-ERW-0004,Mati Carbon ERW Smallholder India,enhanced_weathering,enhanced_weathering,Isometric ERW,2024,India,82.97,2.85,AA,0.991,under_assessment
+ERW-0004,Mati Carbon ERW Smallholder India,enhanced_weathering,enhanced_weathering,Isometric ERW,2024,India,82.62,2.85,AA,0.991,under_assessment
 ERW-0005,UNDO Enhanced Weathering Northern England,enhanced_weathering,enhanced_weathering,Isometric ERW,2023,UK,81.78,2.85,AA,0.989,under_assessment
 ERW-0006,Mati Carbon ERW Tanzania,enhanced_weathering,enhanced_weathering,Isometric ERW,2025,Tanzania,84.17,2.85,AA,0.979,under_assessment
-ERW-0007,InPlanet ERW Brazil,enhanced_weathering,enhanced_weathering,Isometric ERW,2024,Brazil,82.97,2.85,AA,0.991,under_assessment
+ERW-0007,InPlanet ERW Brazil,enhanced_weathering,enhanced_weathering,Isometric ERW,2024,Brazil,82.62,2.85,AA,0.991,under_assessment
 ERW-0008,Silica Enhanced Weathering Netherlands,enhanced_weathering,enhanced_weathering,Isometric ERW,2025,Netherlands,84.17,2.85,AA,0.979,under_assessment
 ERW-0009,Carbonaught ERW Australia,enhanced_weathering,enhanced_weathering,Isometric ERW,2025,Australia,84.17,2.85,AA,0.979,under_assessment
 ERW-0010,Eion Kenya Farmland ERW,enhanced_weathering,enhanced_weathering,Isometric ERW,2025,Kenya,84.17,2.85,AA,0.979,under_assessment
@@ -211,30 +211,30 @@ BIO-0003,BioCirc BECCS Denmark,bio_oil_geological,bio_oil_geological,Isometric B
 BIO-0004,Vaulted Deep Geological Bio-Slurry Texas,bio_oil_geological,bio_oil_geological,Isometric Bio-oil,2024,USA,87.33,2.66,AA,0.842,CCP-eligible
 BIO-0005,Graphyte Bio-Carbon Storage Arkansas,bio_oil_geological,bio_oil_geological,Isometric Bio-oil,2024,USA,87.33,2.66,AA,0.842,CCP-eligible
 BIO-0006,Supercritical BECCS Project UK,bio_oil_geological,bio_oil_geological,Puro Bio-oil,2025,UK,88.53,2.66,AA,0.71,CCP-eligible
-LFG-0001,Republic Services Landfill Gas South Carolina,landfill_gas,landfill_gas,ACR LFG,2020,USA,49.05,2.88,BBB,0.92,CCP-eligible
-LFG-0002,Waste Management LFG Capture Louisiana,landfill_gas,landfill_gas,ACR LFG,2019,USA,47.85,2.88,BBB,0.838,CCP-eligible
+LFG-0001,Republic Services Landfill Gas South Carolina,landfill_gas,landfill_gas,ACR LFG,2020,USA,48.85,2.88,BBB,0.909,CCP-eligible
+LFG-0002,Waste Management LFG Capture Louisiana,landfill_gas,landfill_gas,ACR LFG,2019,USA,47.45,2.88,BBB,0.802,CCP-eligible
 LFG-0003,Veolia Landfill Gas Recovery Illinois,landfill_gas,landfill_gas,ACR LFG,2021,USA,50.25,2.88,BBB,0.965,CCP-eligible
-LFG-0004,CGR Bandeirantes LFG Sao Paulo,landfill_gas,landfill_gas,VCS LFG,2018,Brazil,46.65,2.88,BBB,0.716,CCP-eligible
-LFG-0005,Monterrey Landfill Gas Mexico,landfill_gas,landfill_gas,VCS LFG,2019,Mexico,47.85,2.88,BBB,0.838,CCP-eligible
-LFG-0006,Istanbul Kemerburgaz LFG Turkey,landfill_gas,landfill_gas,VCS LFG,2017,Turkey,46.25,2.88,BBB,0.668,CCP-eligible
-LFG-0007,Advanced Disposal LFG Georgia USA,landfill_gas,landfill_gas,ACR LFG,2020,USA,49.05,2.88,BBB,0.92,CCP-eligible
-LFG-0008,Nova Iguacu LFG Rio de Janeiro,landfill_gas,landfill_gas,VCS LFG,2019,Brazil,47.85,2.88,BBB,0.838,CCP-eligible
-LFG-0009,Queretaro Landfill Gas Capture Mexico,landfill_gas,landfill_gas,VCS LFG,2020,Mexico,49.05,2.88,BBB,0.92,CCP-eligible
+LFG-0004,CGR Bandeirantes LFG Sao Paulo,landfill_gas,landfill_gas,VCS LFG,2018,Brazil,45.7,2.88,BBB,0.596,CCP-eligible
+LFG-0005,Monterrey Landfill Gas Mexico,landfill_gas,landfill_gas,VCS LFG,2019,Mexico,47.45,2.88,BBB,0.802,CCP-eligible
+LFG-0006,Istanbul Kemerburgaz LFG Turkey,landfill_gas,landfill_gas,VCS LFG,2017,Turkey,45.45,2.88,BBB,0.562,CCP-eligible
+LFG-0007,Advanced Disposal LFG Georgia USA,landfill_gas,landfill_gas,ACR LFG,2020,USA,48.85,2.88,BBB,0.909,CCP-eligible
+LFG-0008,Nova Iguacu LFG Rio de Janeiro,landfill_gas,landfill_gas,VCS LFG,2019,Brazil,47.1,2.88,BBB,0.767,CCP-eligible
+LFG-0009,Queretaro Landfill Gas Capture Mexico,landfill_gas,landfill_gas,VCS LFG,2020,Mexico,48.85,2.88,BBB,0.909,CCP-eligible
 LFG-0010,Casella Waste LFG Vermont,landfill_gas,landfill_gas,ACR LFG,2021,USA,50.25,2.88,BBB,0.965,CCP-eligible
-LFG-0011,Paulinia Landfill Gas Campinas Brazil,landfill_gas,landfill_gas,VCS LFG,2020,Brazil,49.05,2.88,BBB,0.92,CCP-eligible
-LFG-0012,Izmir Harmandali LFG Turkey,landfill_gas,landfill_gas,VCS LFG,2018,Turkey,46.65,2.88,BBB,0.716,CCP-eligible
+LFG-0011,Paulinia Landfill Gas Campinas Brazil,landfill_gas,landfill_gas,VCS LFG,2020,Brazil,48.5,2.88,BBB,0.887,CCP-eligible
+LFG-0012,Izmir Harmandali LFG Turkey,landfill_gas,landfill_gas,VCS LFG,2018,Turkey,46.05,2.88,BBB,0.642,CCP-eligible
 LFG-0013,Clean Harbors LFG Arkansas USA,landfill_gas,landfill_gas,ACR LFG,2022,USA,51.45,2.88,BBB,0.986,CCP-eligible
-LFG-0014,Bogota Dona Juana LFG Colombia,landfill_gas,landfill_gas,VCS LFG,2019,Colombia,47.85,2.88,BBB,0.838,CCP-eligible
-N2O-0001,Deepak Fertilizers N2O India,n2o_abatement,n2o_abatement,CAR N2O,2018,India,50.5,2.88,BBB,0.971,CCP-eligible
-N2O-0002,Hanwha Solutions N2O South Korea,n2o_abatement,n2o_abatement,CAR N2O,2019,South Korea,51.7,2.88,BBB,0.988,CCP-eligible
-N2O-0003,Chongqing Changshou N2O Destruction China,n2o_abatement,n2o_abatement,CDM AM0028,2016,China,50.1,2.88,BBB,0.961,CCP-eligible
-N2O-0004,Gujarat Narmada Fertilizers N2O India,n2o_abatement,n2o_abatement,CAR N2O,2020,India,52.9,2.88,BBB,0.99,CCP-eligible
-N2O-0005,Kumho Mitsui N2O Yeosu Korea,n2o_abatement,n2o_abatement,CAR N2O,2019,South Korea,51.7,2.88,BBB,0.988,CCP-eligible
-N2O-0006,Wuxi Shentong N2O China,n2o_abatement,n2o_abatement,CDM AM0028,2017,China,50.1,2.88,BBB,0.961,CCP-eligible
-N2O-0007,IFFCO Aonla N2O Abatement India,n2o_abatement,n2o_abatement,CAR N2O,2021,India,54.1,2.88,BBB,0.979,CCP-eligible
-N2O-0008,Henan Shenma N2O Destruction China,n2o_abatement,n2o_abatement,CDM AM0028,2018,China,50.5,2.88,BBB,0.971,CCP-eligible
+LFG-0014,Bogota Dona Juana LFG Colombia,landfill_gas,landfill_gas,VCS LFG,2019,Colombia,47.1,2.88,BBB,0.767,CCP-eligible
+N2O-0001,Deepak Fertilizers N2O India,n2o_abatement,n2o_abatement,CAR N2O,2018,India,49.55,2.88,BBB,0.942,CCP-eligible
+N2O-0002,Hanwha Solutions N2O South Korea,n2o_abatement,n2o_abatement,CAR N2O,2019,South Korea,51.3,2.88,BBB,0.984,CCP-eligible
+N2O-0003,Chongqing Changshou N2O Destruction China,n2o_abatement,n2o_abatement,CDM AM0028,2016,China,49.1,2.88,BBB,0.922,CCP-eligible
+N2O-0004,Gujarat Narmada Fertilizers N2O India,n2o_abatement,n2o_abatement,CAR N2O,2020,India,52.35,2.88,BBB,0.991,CCP-eligible
+N2O-0005,Kumho Mitsui N2O Yeosu Korea,n2o_abatement,n2o_abatement,CAR N2O,2019,South Korea,51.3,2.88,BBB,0.984,CCP-eligible
+N2O-0006,Wuxi Shentong N2O China,n2o_abatement,n2o_abatement,CDM AM0028,2017,China,49.3,2.88,BBB,0.932,CCP-eligible
+N2O-0007,IFFCO Aonla N2O Abatement India,n2o_abatement,n2o_abatement,CAR N2O,2021,India,53.75,2.88,BBB,0.984,CCP-eligible
+N2O-0008,Henan Shenma N2O Destruction China,n2o_abatement,n2o_abatement,CDM AM0028,2018,China,49.9,2.88,BBB,0.955,CCP-eligible
 ODS-0001,Tradewater ODS Destruction Midwest USA,ods_destruction,ods_destruction,ACR ODS,2021,USA,53.15,2.88,BBB,0.989,CCP-eligible
-ODS-0002,EOS Climate ODS Collection California,ods_destruction,ods_destruction,ACR ODS,2020,USA,51.95,2.88,BBB,0.989,CCP-eligible
+ODS-0002,EOS Climate ODS Collection California,ods_destruction,ods_destruction,ACR ODS,2020,USA,51.75,2.88,BBB,0.988,CCP-eligible
 ODS-0003,Tradewater ODS Programme Thailand,ods_destruction,ods_destruction,ACR ODS,2022,Thailand,54.35,2.88,BBB,0.974,CCP-eligible
 ODS-0004,Reclamation Technologies ODS Mexico,ods_destruction,ods_destruction,CAR ODS,2021,Mexico,53.15,2.88,BBB,0.989,CCP-eligible
 ODS-0005,Tradewater ODS Ghana Programme,ods_destruction,ods_destruction,ACR ODS,2023,Ghana,55.55,2.88,BBB,0.938,CCP-eligible
@@ -244,71 +244,71 @@ ODS-0008,Tradewater Dominican Republic ODS,ods_destruction,ods_destruction,ACR O
 ODS-0009,EOS Climate Pacific Northwest ODS,ods_destruction,ods_destruction,ACR ODS,2022,USA,54.35,2.88,BBB,0.974,CCP-eligible
 RICE-0001,Vietnam Mekong AWD Rice Methane,rice_methane,rice_methane,Gold Standard Rice Methane,2022,Vietnam,43.35,3.06,BB,0.705,CCP-eligible
 RICE-0002,Thai Jasmine Rice AWD Chiang Rai,rice_methane,rice_methane,Gold Standard Rice Methane,2023,Thailand,44.55,3.06,BB,0.558,CCP-eligible
-RICE-0003,Andhra Pradesh SRI Rice India,rice_methane,rice_methane,Gold Standard Rice Methane,2022,India,43.35,3.06,BB,0.705,CCP-eligible
-RICE-0004,Bangladesh Aman Rice AWD,rice_methane,rice_methane,Gold Standard Rice Methane,2023,Bangladesh,44.55,3.06,BB,0.558,CCP-eligible
-RICE-0005,Central Java Rice Methane Project,rice_methane,rice_methane,Gold Standard Rice Methane,2022,Indonesia,43.35,3.06,BB,0.705,CCP-eligible
-RICE-0006,Punjab Rice Straw Management India,rice_methane,rice_methane,Gold Standard Rice Methane,2023,India,44.55,3.06,BB,0.558,CCP-eligible
-RICE-0007,Cambodia Battambang Rice AWD,rice_methane,rice_methane,Gold Standard Rice Methane,2024,Cambodia,45.75,3.06,BBB,0.597,CCP-eligible
-RICE-0008,Myanmar Irrawaddy Rice AWD,rice_methane,rice_methane,Gold Standard Rice Methane,2023,Myanmar,44.55,3.06,BB,0.558,CCP-eligible
+RICE-0003,Andhra Pradesh SRI Rice India,rice_methane,rice_methane,Gold Standard Rice Methane,2022,India,43.0,3.06,BB,0.743,CCP-eligible
+RICE-0004,Bangladesh Aman Rice AWD,rice_methane,rice_methane,Gold Standard Rice Methane,2023,Bangladesh,44.2,3.06,BB,0.603,CCP-eligible
+RICE-0005,Central Java Rice Methane Project,rice_methane,rice_methane,Gold Standard Rice Methane,2022,Indonesia,43.0,3.06,BB,0.743,CCP-eligible
+RICE-0006,Punjab Rice Straw Management India,rice_methane,rice_methane,Gold Standard Rice Methane,2023,India,44.2,3.06,BB,0.603,CCP-eligible
+RICE-0007,Cambodia Battambang Rice AWD,rice_methane,rice_methane,Gold Standard Rice Methane,2024,Cambodia,44.27,3.06,BB,0.594,CCP-eligible
+RICE-0008,Myanmar Irrawaddy Rice AWD,rice_methane,rice_methane,Gold Standard Rice Methane,2023,Myanmar,43.08,3.06,BB,0.735,CCP-eligible
 RICE-0009,Vietnam Red River Delta Rice AWD,rice_methane,rice_methane,Gold Standard Rice Methane,2024,Vietnam,45.75,3.06,BBB,0.597,CCP-eligible
 RICE-0010,Philippines Nueva Ecija Rice AWD,rice_methane,rice_methane,Gold Standard Rice Methane,2024,Philippines,45.75,3.06,BBB,0.597,CCP-eligible
 SAG-0001,Indigo Agriculture Soil Carbon Kansas,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2022,USA,51.95,3.16,BBB,0.981,CCP-eligible
 SAG-0002,Nori Croplands Soil Carbon Iowa,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2021,USA,50.75,3.16,BBB,0.964,CCP-eligible
 SAG-0003,Regrow Ag Soil Carbon Nebraska,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2023,USA,53.15,3.16,BBB,0.98,CCP-eligible
 SAG-0004,CIBO Technologies Illinois Soil Carbon,sustainable_agriculture,sustainable_agriculture,CAR Soil Enrichment,2022,USA,51.95,3.16,BBB,0.981,CCP-eligible
-SAG-0005,Bayer Carbon Programme Brazil,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2023,Brazil,53.15,3.16,BBB,0.98,CCP-eligible
+SAG-0005,Bayer Carbon Programme Brazil,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2023,Brazil,52.8,3.16,BBB,0.982,CCP-eligible
 SAG-0006,Agreena Soil Carbon Denmark,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2023,Denmark,53.15,3.16,BBB,0.98,CCP-eligible
 SAG-0007,Carbon Farmers Australia Soil Carbon,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2022,Australia,51.95,3.16,BBB,0.981,CCP-eligible
 SAG-0008,Agoro Carbon Alliance Kenya Soil,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2023,Kenya,53.15,3.16,BBB,0.98,CCP-eligible
 SAG-0009,Grassroots Carbon Texas Rangeland,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2022,USA,51.95,3.16,BBB,0.981,CCP-eligible
 SAG-0010,Climate Farmers Mediterranean Spain,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2024,Spain,54.35,3.16,BBB,0.962,CCP-eligible
 SAG-0011,Radicle Ranch Soil Carbon Montana,sustainable_agriculture,sustainable_agriculture,CAR Soil Enrichment,2023,USA,53.15,3.16,BBB,0.98,CCP-eligible
-SAG-0012,TIST Agroforestry Soil Carbon India,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2022,India,51.95,3.16,BBB,0.981,CCP-eligible
+SAG-0012,TIST Agroforestry Soil Carbon India,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2022,India,51.6,3.16,BBB,0.978,CCP-eligible
 SAG-0013,Pivot Bio Soil Carbon Programme Iowa,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2024,USA,54.35,3.16,BBB,0.962,CCP-eligible
 SAG-0014,South Pole Soil Carbon Argentina,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2023,Argentina,53.15,3.16,BBB,0.98,CCP-eligible
-HFC-0001,Zhejiang Juhua HFC-23 Destruction China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2013,China,25.88,2.52,B,0.949,REJECTED
-HFC-0002,Gujarat Fluorochemicals HFC-23 India,hfc23_destruction,hfc23_destruction,CDM (AM0001),2014,India,25.88,2.52,B,0.949,REJECTED
-HFC-0003,Shandong Dongyue HFC-23 China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2012,China,25.88,2.52,B,0.949,REJECTED
-HFC-0004,SRF Limited HFC-23 India,hfc23_destruction,hfc23_destruction,CDM (AM0001),2013,India,25.88,2.52,B,0.949,REJECTED
-HFC-0005,Changshu Feiyu HFC-23 China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2014,China,25.88,2.52,B,0.949,REJECTED
-HFC-0006,Jiangsu Meilan HFC-23 Destruction China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2012,China,25.88,2.52,B,0.949,REJECTED
-HFC-0007,Navin Fluorine HFC-23 India,hfc23_destruction,hfc23_destruction,CDM (AM0001),2015,India,25.88,2.52,B,0.949,REJECTED
-HFC-0008,Zhejiang Sanmei HFC-23 China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2013,China,25.88,2.52,B,0.949,REJECTED
+HFC-0001,Zhejiang Juhua HFC-23 Destruction China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2013,China,24.27,2.52,B,0.988,REJECTED
+HFC-0002,Gujarat Fluorochemicals HFC-23 India,hfc23_destruction,hfc23_destruction,CDM (AM0001),2014,India,24.12,2.52,B,0.99,REJECTED
+HFC-0003,Shandong Dongyue HFC-23 China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2012,China,24.07,2.52,B,0.991,REJECTED
+HFC-0004,SRF Limited HFC-23 India,hfc23_destruction,hfc23_destruction,CDM (AM0001),2013,India,23.93,2.52,B,0.992,REJECTED
+HFC-0005,Changshu Feiyu HFC-23 China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2014,China,24.48,2.52,B,0.986,REJECTED
+HFC-0006,Jiangsu Meilan HFC-23 Destruction China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2012,China,24.07,2.52,B,0.991,REJECTED
+HFC-0007,Navin Fluorine HFC-23 India,hfc23_destruction,hfc23_destruction,CDM (AM0001),2015,India,24.32,2.52,B,0.988,REJECTED
+HFC-0008,Zhejiang Sanmei HFC-23 China,hfc23_destruction,hfc23_destruction,CDM (AM0001),2013,China,24.27,2.52,B,0.988,REJECTED
 VCS-1950,Xishuangbanna Tropical Forest REDD+,redd_project,redd_project,VCS (VM0009),2021,China,30.65,4.02,BB,0.564,not_CCP
-VCS-1877,Bolaven Plateau Forest REDD+ Laos,redd_project,redd_project,VCS (VM0015),2020,Laos,29.45,4.02,B,0.554,not_CCP
+VCS-1877,Bolaven Plateau Forest REDD+ Laos,redd_project,redd_project,VCS (VM0015),2020,Laos,29.25,4.02,B,0.574,not_CCP
 VCS-2001,Yucatan Dry Forest REDD+ Mexico,redd_project,redd_project,VCS (VM0015),2022,Mexico,31.85,4.02,BB,0.677,not_CCP
-VCS-1999,Prey Lang Forest REDD+ Cambodia,redd_project,redd_project,VCS (VM0009),2021,Cambodia,30.65,4.02,BB,0.564,not_CCP
-VCS-2020,Leuser Ecosystem REDD+ Sumatra,redd_project,redd_project,VCS (VM0009),2023,Indonesia,33.05,4.02,BB,0.774,not_CCP
-VCS-2033,Central Sulawesi Mangrove REDD+,redd_project,redd_project,VCS (VM0009),2022,Indonesia,31.85,4.02,BB,0.677,not_CCP
-VCS-1710,Oddar Meanchey Community Forest REDD+,redd_project,redd_project,VCS (VM0015),2019,Cambodia,28.25,4.02,B,0.668,not_CCP
-RE-0036,Telangana Wind Power Phase II India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2020,India,26.8,2.41,B,0.908,REJECTED
-RE-0037,Fujian Offshore Wind Phase I China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2018,China,24.4,2.41,B,0.99,REJECTED
-RE-0038,Sergipe Solar PV Complex Brazil,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2021,Brazil,28.0,2.41,B,0.796,REJECTED
-RE-0039,Manisa Geothermal Project Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2019,Turkey,25.6,2.41,B,0.966,REJECTED
+VCS-1999,Prey Lang Forest REDD+ Cambodia,redd_project,redd_project,VCS (VM0009),2021,Cambodia,29.18,4.02,B,0.581,not_CCP
+VCS-2020,Leuser Ecosystem REDD+ Sumatra,redd_project,redd_project,VCS (VM0009),2023,Indonesia,32.7,4.02,BB,0.748,not_CCP
+VCS-2033,Central Sulawesi Mangrove REDD+,redd_project,redd_project,VCS (VM0009),2022,Indonesia,31.5,4.02,BB,0.645,not_CCP
+VCS-1710,Oddar Meanchey Community Forest REDD+,redd_project,redd_project,VCS (VM0015),2019,Cambodia,26.38,4.02,B,0.816,not_CCP
+RE-0036,Telangana Wind Power Phase II India,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2020,India,26.25,2.41,B,0.94,REJECTED
+RE-0037,Fujian Offshore Wind Phase I China,grid_renewable_energy,grid_renewable_energy,CDM (ACM0002),2018,China,23.8,2.41,B,0.995,REJECTED
+RE-0038,Sergipe Solar PV Complex Brazil,grid_renewable_energy,grid_renewable_energy,VCS (AMS-I.D),2021,Brazil,27.65,2.41,B,0.835,REJECTED
+RE-0039,Manisa Geothermal Project Turkey,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2019,Turkey,25.2,2.41,B,0.977,REJECTED
 RE-0040,Dak Lak Wind Farm Vietnam,grid_renewable_energy,grid_renewable_energy,VCS (ACM0002),2021,Vietnam,28.0,2.41,B,0.796,REJECTED
 GS-2460,Clean Cooking Enterprise Madagascar,cookstoves,cookstoves,Gold Standard (TPDDTEC),2024,Madagascar,44.52,3.25,BB,0.558,CCP-eligible (with conditions)
 GS-2500,Efficient Stoves Togo Rural Programme,cookstoves,cookstoves,Gold Standard (TPDDTEC),2024,Togo,44.52,3.25,BB,0.558,CCP-eligible (with conditions)
 GS-2520,LPG Transition Programme Senegal,cookstoves,cookstoves,Gold Standard (TPDDTEC),2023,Senegal,43.33,3.25,BB,0.697,CCP-eligible (with conditions)
 GS-2550,Solar Cookers for Refugee Camps Chad,cookstoves,cookstoves,Gold Standard (TPDDTEC),2024,Chad,44.52,3.25,BB,0.558,CCP-eligible (with conditions)
 GS-2480,Ethanol Cookstoves Pilot Kenya,cookstoves,cookstoves,Gold Standard (TPDDTEC),2023,Kenya,43.33,3.25,BB,0.697,CCP-eligible (with conditions)
-ARR-0021,Jharkhand Community Reforestation India,arr_conservation,arr_conservation,VCS (VM0047),2024,India,66.3,3.24,A,0.97,CCP-eligible
-ARR-0022,Atlantic Forest Corridor Restoration Brazil,arr_conservation,arr_conservation,VCS (VM0047),2024,Brazil,66.3,3.24,A,0.97,CCP-eligible
+ARR-0021,Jharkhand Community Reforestation India,arr_conservation,arr_conservation,VCS (VM0047),2024,India,65.95,3.24,A,0.964,CCP-eligible
+ARR-0022,Atlantic Forest Corridor Restoration Brazil,arr_conservation,arr_conservation,VCS (VM0047),2024,Brazil,65.95,3.24,A,0.964,CCP-eligible
 ARR-0023,Mozambique Miombo Restoration,arr_conservation,arr_conservation,VCS (VM0047),2023,Mozambique,65.1,3.24,A,0.941,CCP-eligible
 ARR-0024,Honduras Cloud Forest Reforestation,arr_conservation,arr_conservation,VCS (VM0047),2024,Honduras,66.3,3.24,A,0.97,CCP-eligible
 ARR-0025,Ivory Coast Cocoa Agroforestry,arr_conservation,arr_conservation,VCS (VM0047),2024,Ivory Coast,66.3,3.24,A,0.97,CCP-eligible
-IFM-0019,Sierra Pacific Industries California IFM,ifm,ifm,CAR Forest Protocol,2020,USA,59.15,3.16,BBB,0.606,CCP-eligible
+IFM-0019,Sierra Pacific Industries California IFM,ifm,ifm,CAR Forest Protocol,2020,USA,58.95,3.16,BBB,0.63,CCP-eligible
 IFM-0020,Ontario Crown Forest IFM Canada,ifm,ifm,VCS (VM0045),2023,Canada,62.75,3.16,A,0.808,CCP-eligible
 LFG-0015,Santiago Cerros de Renca LFG Chile,landfill_gas,landfill_gas,VCS LFG,2021,Chile,50.25,2.88,BBB,0.965,CCP-eligible
-LFG-0016,Medellin Curva de Rodas LFG Colombia,landfill_gas,landfill_gas,VCS LFG,2020,Colombia,49.05,2.88,BBB,0.92,CCP-eligible
+LFG-0016,Medellin Curva de Rodas LFG Colombia,landfill_gas,landfill_gas,VCS LFG,2020,Colombia,48.5,2.88,BBB,0.887,CCP-eligible
 BCR-0019,Waste2Char Biochar Philippines,biochar,biochar,Puro Biochar,2025,Philippines,79.55,2.75,AA,0.951,CCP-eligible
 BCR-0020,Burn+ Biochar Rwanda,biochar,biochar,Puro Biochar,2025,Rwanda,79.55,2.75,AA,0.951,CCP-eligible
 SAG-0015,TerViva Pongamia Soil Carbon Florida,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2024,USA,54.35,3.16,BBB,0.962,CCP-eligible
 SAG-0016,Yara Soil Carbon Programme France,sustainable_agriculture,sustainable_agriculture,VCS (VM0042),2024,France,54.35,3.16,BBB,0.962,CCP-eligible
-RICE-0011,Haryana AWD Rice India,rice_methane,rice_methane,Gold Standard Rice Methane,2024,India,45.75,3.06,BBB,0.597,CCP-eligible
+RICE-0011,Haryana AWD Rice India,rice_methane,rice_methane,Gold Standard Rice Methane,2024,India,45.4,3.06,BBB,0.552,CCP-eligible
 RICE-0012,Mekong Delta Phase II Vietnam,rice_methane,rice_methane,Gold Standard Rice Methane,2024,Vietnam,45.75,3.06,BBB,0.597,CCP-eligible
-ODS-0010,Tradewater ODS Recovery Colombia,ods_destruction,ods_destruction,ACR ODS,2024,Colombia,56.75,2.88,BBB,0.87,CCP-eligible
-N2O-0009,GNFC Bharuch N2O India,n2o_abatement,n2o_abatement,CAR N2O,2022,India,55.3,2.88,BBB,0.948,CCP-eligible
-N2O-0010,Jilin Connell N2O China,n2o_abatement,n2o_abatement,CDM AM0028,2019,China,51.7,2.88,BBB,0.988,CCP-eligible
+ODS-0010,Tradewater ODS Recovery Colombia,ods_destruction,ods_destruction,ACR ODS,2024,Colombia,56.4,2.88,BBB,0.894,CCP-eligible
+N2O-0009,GNFC Bharuch N2O India,n2o_abatement,n2o_abatement,CAR N2O,2022,India,54.95,2.88,BBB,0.96,CCP-eligible
+N2O-0010,Jilin Connell N2O China,n2o_abatement,n2o_abatement,CDM AM0028,2019,China,51.3,2.88,BBB,0.984,CCP-eligible
 ERW-0011,Vaulterra ERW Illinois USA,enhanced_weathering,enhanced_weathering,Isometric ERW,2025,USA,84.17,2.85,AA,0.979,under_assessment
 ERW-0012,ClimeRock ERW Spain,enhanced_weathering,enhanced_weathering,Isometric ERW,2025,Spain,84.17,2.85,AA,0.979,under_assessment
 BIO-0007,Stockholm Exergi BECCS Sweden,bio_oil_geological,bio_oil_geological,Puro Bio-oil,2025,Sweden,88.53,2.66,AA,0.71,CCP-eligible
@@ -316,4 +316,4 @@ BIO-0008,Drax BECCS North Yorkshire UK,bio_oil_geological,bio_oil_geological,Pur
 JNR-0013,Laos National Forest JNR REDD+,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2024,Laos,45.98,3.51,BBB,0.609,CCP-eligible
 JNR-0014,Tanzania National REDD+ Framework,redd_jurisdictional,redd_jurisdictional,ART TREES v2.0,2024,Tanzania,45.98,3.51,BBB,0.609,CCP-eligible
 ARRP-0011,Portucel Eucalyptus Plantation Mozambique,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2022,Mozambique,43.45,3.43,BB,0.674,varies
-ARRP-0012,Asia Pulp Paper Plantation Riau Indonesia,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2019,Indonesia,39.85,3.43,BB,0.932,varies
+ARRP-0012,Asia Pulp Paper Plantation Riau Indonesia,arr_commercial_plantation,arr_commercial_plantation,VCS (various ARR),2019,Indonesia,39.1,3.43,BB,0.954,varies

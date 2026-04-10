@@ -74,6 +74,25 @@ def score_project(
     vy = project.get("vintage_year", 2024)
     scores["vintage_year"] = vintage_score(int(vy))
 
+    # v0.6: project-level adjustments beyond vintage
+    country = project.get("country", "")
+
+    # Country governance risk: projects in countries with weak governance
+    # face higher reversal and leakage risks (affects permanence + additionality)
+    HIGH_RISK_COUNTRIES = {"DRC", "Myanmar", "Cambodia", "Zimbabwe", "Venezuela"}
+    MODERATE_RISK = {"Indonesia", "Brazil", "Peru", "Colombia", "India", "Bangladesh"}
+    if country in HIGH_RISK_COUNTRIES:
+        scores["permanence"] = max(0, scores["permanence"] - 5)
+        scores["additionality"] = max(0, scores["additionality"] - 3)
+    elif country in MODERATE_RISK:
+        scores["permanence"] = max(0, scores["permanence"] - 2)
+
+    # Old vintage penalty beyond the formula: projects >5 years old may have
+    # stale monitoring data (affects mrv_grade)
+    age = 2026 - int(vy)
+    if age > 5:
+        scores["mrv_grade"] = max(0, scores["mrv_grade"] - min(age - 5, 10))
+
     # Per-archetype stds: merge archetype-specific overrides with global defaults
     arch_stds = archetype.get("std_overrides", {})
     stds = {d: float(arch_stds.get(d, default_stds[d])) for d in default_stds}
