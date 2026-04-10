@@ -1,0 +1,121 @@
+{
+  "description": "Adversarial credits designed to game the v0.6 rubric. Each exploits a specific potential weakness. If the framework assigns the WRONG grade, the rubric has a vulnerability that needs fixing. If it assigns the RIGHT grade, the vulnerability is already mitigated.",
+  "credits": [
+    {
+      "id": "ADV01",
+      "name": "ADVERSARIAL: narrative-washing cookstove (max co-benefits, min integrity)",
+      "type": "Cookstove project with SDG Gold certification but no real emission reduction",
+      "registry": "Gold Standard",
+      "methodology": "TPDDTEC",
+      "country": "Kenya",
+      "vintage_year": 2024,
+      "tokenization": "adversarial test",
+      "attack_vector": "Under v0.3 weights (co_benefits=10%), this would have scored ~55 (BBB). Under v0.4+ safeguards-gate (co_benefits=0%), the narrative inflation should be eliminated. Expected grade: BB or lower.",
+      "scores": {
+        "removal_type": 35,
+        "additionality": 30,
+        "permanence": 5,
+        "mrv_grade": 35,
+        "vintage_year": 100,
+        "co_benefits": 95,
+        "registry_methodology": 75
+      },
+      "disqualifiers": [],
+      "expected_grade_if_rubric_works": "BB",
+      "expected_grade_if_gamed": "BBB or A (inflated by narrative)"
+    },
+    {
+      "id": "ADV02",
+      "name": "ADVERSARIAL: zombie credit (perfect scores, double-counted)",
+      "type": "Hypothetical CDR with perfect technical scores but known double-counting",
+      "registry": "Synthetic",
+      "methodology": "Synthetic",
+      "country": "—",
+      "vintage_year": 2025,
+      "tokenization": "adversarial test",
+      "attack_vector": "Tests whether the disqualifier lattice catches a technically-perfect credit with a fatal flaw. Composite should be AAA-level but final grade should be capped at B by double_counting.",
+      "scores": {
+        "removal_type": 98,
+        "additionality": 95,
+        "permanence": 98,
+        "mrv_grade": 95,
+        "vintage_year": 100,
+        "co_benefits": 90,
+        "registry_methodology": 80
+      },
+      "disqualifiers": ["double_counting"],
+      "expected_grade_if_rubric_works": "B (capped from AAA)",
+      "expected_grade_if_gamed": "AAA (disqualifier ignored)"
+    },
+    {
+      "id": "ADV03",
+      "name": "ADVERSARIAL: registry-shopping (weak project, top-tier registry)",
+      "type": "Marginal grid solar on Verra VCS with CCP-eligible methodology",
+      "registry": "Verra VCS",
+      "methodology": "ACM0002",
+      "country": "India",
+      "vintage_year": 2024,
+      "tokenization": "adversarial test",
+      "attack_vector": "Tests whether a top-tier registry + CCP methodology can inflate a fundamentally weak project (grid solar has no real additionality in India 2024). Under v0.6 rubric, ACM0002 is ICVCM-rejected, so registry_methodology should score low despite being on Verra.",
+      "scores": {
+        "removal_type": 30,
+        "additionality": 20,
+        "permanence": 5,
+        "mrv_grade": 55,
+        "vintage_year": 100,
+        "co_benefits": 35,
+        "registry_methodology": 25
+      },
+      "disqualifiers": [],
+      "expected_grade_if_rubric_works": "BB (ICVCM-rejected methodology overrides Verra prestige)",
+      "expected_grade_if_gamed": "BBB or A (Verra name inflates registry score)"
+    },
+    {
+      "id": "ADV04",
+      "name": "ADVERSARIAL: vintage-arbitrage (old credit, re-tokenized as fresh)",
+      "type": "2012 CDM wind credit re-bridged in 2024 with a 'new' tokenization date",
+      "registry": "CDM migrated to VCS",
+      "methodology": "ACM0002",
+      "country": "China",
+      "vintage_year": 2012,
+      "tokenization": "adversarial test — re-tokenized 2024 but vintage is 2012",
+      "attack_vector": "Tests whether the framework correctly uses VINTAGE YEAR (2012) not tokenization date (2024). The vintage formula gives score 0 for 2012 vintage in 2026. Tokenization date should be irrelevant.",
+      "scores": {
+        "removal_type": 22,
+        "additionality": 18,
+        "permanence": 5,
+        "mrv_grade": 40,
+        "vintage_year": 0,
+        "co_benefits": 10,
+        "registry_methodology": 25
+      },
+      "disqualifiers": [],
+      "expected_grade_if_rubric_works": "B (vintage 0, ICVCM-rejected methodology)",
+      "expected_grade_if_gamed": "BB+ (if tokenization date used instead of vintage)"
+    },
+    {
+      "id": "ADV05",
+      "name": "ADVERSARIAL: biodiversity-destroyer (high carbon, high habitat harm)",
+      "type": "Monoculture eucalyptus plantation maximizing carbon uptake at biodiversity cost",
+      "registry": "Verra VCS",
+      "methodology": "AR-ACM0003",
+      "country": "Brazil",
+      "vintage_year": 2024,
+      "tokenization": "adversarial test",
+      "attack_vector": "Tests whether biodiversityHarm disqualifier catches a project that maximizes carbon at the expense of ecosystems (Zeng et al. 2026 finding). Without the disqualifier, it could reach A. With biodiversityHarm, it should cap at BBB.",
+      "scores": {
+        "removal_type": 65,
+        "additionality": 45,
+        "permanence": 45,
+        "mrv_grade": 60,
+        "vintage_year": 100,
+        "co_benefits": 8,
+        "registry_methodology": 45
+      },
+      "disqualifiers": ["biodiversity_harm"],
+      "adjustments": ["commercial_plantation_arr"],
+      "expected_grade_if_rubric_works": "BBB (biodiversityHarm caps from A, commercial_plantation_arr drops removal_type)",
+      "expected_grade_if_gamed": "A (no safeguards)"
+    }
+  ]
+}

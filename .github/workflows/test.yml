@@ -31,6 +31,7 @@ jobs:
           python3 tests/test_scorer.py
           python3 tests/test_statistics.py
           python3 tests/test_batch_scorer.py
+          python3 tests/test_adversarial.py
       - name: Verify scorer runs on both pilots
         run: |
           python3 data/pilot-scoring/score.py
