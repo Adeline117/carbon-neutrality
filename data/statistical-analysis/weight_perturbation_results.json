@@ -1,0 +1,2888 @@
+{
+  "perturbation": {
+    "removal_type": {
+      "plus_5pp": {
+        "n_flips": 0,
+        "flips": [],
+        "max_abs_delta": 1.52,
+        "mean_abs_delta": 0.27,
+        "all_deltas": [
+          [
+            "C001",
+            0.2
+          ],
+          [
+            "C002",
+            0.19
+          ],
+          [
+            "C003",
+            0.19
+          ],
+          [
+            "C004",
+            0.23
+          ],
+          [
+            "C005",
+            -0.22
+          ],
+          [
+            "C006",
+            -0.14
+          ],
+          [
+            "C007",
+            -0.27
+          ],
+          [
+            "C008",
+            -0.02
+          ],
+          [
+            "C009",
+            0.02
+          ],
+          [
+            "C010",
+            -0.55
+          ],
+          [
+            "C011",
+            -0.15
+          ],
+          [
+            "C012",
+            -0.38
+          ],
+          [
+            "C013",
+            0.1
+          ],
+          [
+            "C014",
+            0.12
+          ],
+          [
+            "C015",
+            0.78
+          ],
+          [
+            "C016",
+            0.05
+          ],
+          [
+            "C017",
+            0.05
+          ],
+          [
+            "C018",
+            -0.41
+          ],
+          [
+            "C019",
+            -0.27
+          ],
+          [
+            "C020",
+            -0.08
+          ],
+          [
+            "C021",
+            -0.29
+          ],
+          [
+            "C022",
+            -0.11
+          ],
+          [
+            "C023",
+            1.52
+          ],
+          [
+            "C024",
+            0.07
+          ],
+          [
+            "C025",
+            0.06
+          ],
+          [
+            "C026",
+            0.46
+          ],
+          [
+            "C027",
+            0.32
+          ],
+          [
+            "C028",
+            0.34
+          ],
+          [
+            "C029",
+            0.27
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.3,
+          "additionality": 0.1867,
+          "permanence": 0.1633,
+          "mrv_grade": 0.1867,
+          "vintage_year": 0.0933,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.07
+        }
+      },
+      "minus_5pp": {
+        "n_flips": 0,
+        "flips": [],
+        "max_abs_delta": 1.51,
+        "mean_abs_delta": 0.27,
+        "all_deltas": [
+          [
+            "C001",
+            -0.2
+          ],
+          [
+            "C002",
+            -0.19
+          ],
+          [
+            "C003",
+            -0.19
+          ],
+          [
+            "C004",
+            -0.23
+          ],
+          [
+            "C005",
+            0.22
+          ],
+          [
+            "C006",
+            0.14
+          ],
+          [
+            "C007",
+            0.27
+          ],
+          [
+            "C008",
+            0.02
+          ],
+          [
+            "C009",
+            -0.02
+          ],
+          [
+            "C010",
+            0.55
+          ],
+          [
+            "C011",
+            0.15
+          ],
+          [
+            "C012",
+            0.38
+          ],
+          [
+            "C013",
+            -0.1
+          ],
+          [
+            "C014",
+            -0.12
+          ],
+          [
+            "C015",
+            -0.78
+          ],
+          [
+            "C016",
+            -0.05
+          ],
+          [
+            "C017",
+            -0.05
+          ],
+          [
+            "C018",
+            0.41
+          ],
+          [
+            "C019",
+            0.27
+          ],
+          [
+            "C020",
+            0.08
+          ],
+          [
+            "C021",
+            0.29
+          ],
+          [
+            "C022",
+            0.11
+          ],
+          [
+            "C023",
+            -1.51
+          ],
+          [
+            "C024",
+            -0.07
+          ],
+          [
+            "C025",
+            -0.06
+          ],
+          [
+            "C026",
+            -0.47
+          ],
+          [
+            "C027",
+            -0.32
+          ],
+          [
+            "C028",
+            -0.34
+          ],
+          [
+            "C029",
+            -0.27
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2,
+          "additionality": 0.2133,
+          "permanence": 0.1867,
+          "mrv_grade": 0.2133,
+          "vintage_year": 0.1067,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.08
+        }
+      }
+    },
+    "additionality": {
+      "plus_5pp": {
+        "n_flips": 0,
+        "flips": [],
+        "max_abs_delta": 0.8,
+        "mean_abs_delta": 0.26,
+        "all_deltas": [
+          [
+            "C001",
+            -0.0
+          ],
+          [
+            "C002",
+            -0.08
+          ],
+          [
+            "C003",
+            -0.58
+          ],
+          [
+            "C004",
+            -0.03
+          ],
+          [
+            "C005",
+            -0.08
+          ],
+          [
+            "C006",
+            0.31
+          ],
+          [
+            "C007",
+            -0.13
+          ],
+          [
+            "C008",
+            -0.39
+          ],
+          [
+            "C009",
+            -0.17
+          ],
+          [
+            "C010",
+            0.54
+          ],
+          [
+            "C011",
+            0.8
+          ],
+          [
+            "C012",
+            0.15
+          ],
+          [
+            "C013",
+            0.34
+          ],
+          [
+            "C014",
+            0.49
+          ],
+          [
+            "C015",
+            0.3
+          ],
+          [
+            "C016",
+            0.67
+          ],
+          [
+            "C017",
+            -0.14
+          ],
+          [
+            "C018",
+            0.11
+          ],
+          [
+            "C019",
+            0.25
+          ],
+          [
+            "C020",
+            -0.2
+          ],
+          [
+            "C021",
+            0.04
+          ],
+          [
+            "C022",
+            0.02
+          ],
+          [
+            "C023",
+            -0.64
+          ],
+          [
+            "C024",
+            -0.06
+          ],
+          [
+            "C025",
+            0.49
+          ],
+          [
+            "C026",
+            0.12
+          ],
+          [
+            "C027",
+            0.17
+          ],
+          [
+            "C028",
+            0.2
+          ],
+          [
+            "C029",
+            0.12
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2344,
+          "additionality": 0.25,
+          "permanence": 0.1641,
+          "mrv_grade": 0.1875,
+          "vintage_year": 0.0938,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.0703
+        }
+      },
+      "minus_5pp": {
+        "n_flips": 1,
+        "flips": [
+          {
+            "id": "C014",
+            "name": "Plan Vivo agroforestry (Mozambique)",
+            "base_grade": "A",
+            "new_grade": "BBB",
+            "base_composite": 60.15,
+            "new_composite": 59.66,
+            "delta": -0.49,
+            "direction": "down"
+          }
+        ],
+        "max_abs_delta": 0.8,
+        "mean_abs_delta": 0.26,
+        "all_deltas": [
+          [
+            "C001",
+            0.0
+          ],
+          [
+            "C002",
+            0.08
+          ],
+          [
+            "C003",
+            0.58
+          ],
+          [
+            "C004",
+            0.03
+          ],
+          [
+            "C005",
+            0.08
+          ],
+          [
+            "C006",
+            -0.31
+          ],
+          [
+            "C007",
+            0.13
+          ],
+          [
+            "C008",
+            0.39
+          ],
+          [
+            "C009",
+            0.17
+          ],
+          [
+            "C010",
+            -0.54
+          ],
+          [
+            "C011",
+            -0.8
+          ],
+          [
+            "C012",
+            -0.15
+          ],
+          [
+            "C013",
+            -0.34
+          ],
+          [
+            "C014",
+            -0.49
+          ],
+          [
+            "C015",
+            -0.3
+          ],
+          [
+            "C016",
+            -0.67
+          ],
+          [
+            "C017",
+            0.14
+          ],
+          [
+            "C018",
+            -0.11
+          ],
+          [
+            "C019",
+            -0.25
+          ],
+          [
+            "C020",
+            0.2
+          ],
+          [
+            "C021",
+            -0.04
+          ],
+          [
+            "C022",
+            -0.03
+          ],
+          [
+            "C023",
+            0.64
+          ],
+          [
+            "C024",
+            0.06
+          ],
+          [
+            "C025",
+            -0.49
+          ],
+          [
+            "C026",
+            -0.12
+          ],
+          [
+            "C027",
+            -0.17
+          ],
+          [
+            "C028",
+            -0.2
+          ],
+          [
+            "C029",
+            -0.12
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2656,
+          "additionality": 0.15,
+          "permanence": 0.1859,
+          "mrv_grade": 0.2125,
+          "vintage_year": 0.1063,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.0797
+        }
+      }
+    },
+    "permanence": {
+      "plus_5pp": {
+        "n_flips": 2,
+        "flips": [
+          {
+            "id": "C010",
+            "name": "Gold Standard cookstoves (Kenya)",
+            "base_grade": "BBB",
+            "new_grade": "BB",
+            "base_composite": 46.33,
+            "new_composite": 44.0,
+            "delta": -2.32,
+            "direction": "down"
+          },
+          {
+            "id": "C014",
+            "name": "Plan Vivo agroforestry (Mozambique)",
+            "base_grade": "A",
+            "new_grade": "BBB",
+            "base_composite": 60.15,
+            "new_composite": 59.23,
+            "delta": -0.92,
+            "direction": "down"
+          }
+        ],
+        "max_abs_delta": 2.87,
+        "mean_abs_delta": 0.78,
+        "all_deltas": [
+          [
+            "C001",
+            0.18
+          ],
+          [
+            "C002",
+            0.17
+          ],
+          [
+            "C003",
+            0.29
+          ],
+          [
+            "C004",
+            0.27
+          ],
+          [
+            "C005",
+            0.1
+          ],
+          [
+            "C006",
+            0.12
+          ],
+          [
+            "C007",
+            -0.97
+          ],
+          [
+            "C008",
+            -0.8
+          ],
+          [
+            "C009",
+            -0.77
+          ],
+          [
+            "C010",
+            -2.32
+          ],
+          [
+            "C011",
+            -2.87
+          ],
+          [
+            "C012",
+            -2.77
+          ],
+          [
+            "C013",
+            -1.0
+          ],
+          [
+            "C014",
+            -0.92
+          ],
+          [
+            "C015",
+            -0.14
+          ],
+          [
+            "C016",
+            -1.77
+          ],
+          [
+            "C017",
+            -1.71
+          ],
+          [
+            "C018",
+            0.11
+          ],
+          [
+            "C019",
+            0.12
+          ],
+          [
+            "C020",
+            -1.11
+          ],
+          [
+            "C021",
+            -1.17
+          ],
+          [
+            "C022",
+            0.15
+          ],
+          [
+            "C023",
+            -1.05
+          ],
+          [
+            "C024",
+            -0.85
+          ],
+          [
+            "C025",
+            0.17
+          ],
+          [
+            "C026",
+            0.3
+          ],
+          [
+            "C027",
+            0.17
+          ],
+          [
+            "C028",
+            0.01
+          ],
+          [
+            "C029",
+            -0.12
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2348,
+          "additionality": 0.1879,
+          "permanence": 0.225,
+          "mrv_grade": 0.1879,
+          "vintage_year": 0.0939,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.0705
+        }
+      },
+      "minus_5pp": {
+        "n_flips": 2,
+        "flips": [
+          {
+            "id": "C007",
+            "name": "Pachama-verified Brazilian reforestation",
+            "base_grade": "A",
+            "new_grade": "AA",
+            "base_composite": 74.05,
+            "new_composite": 75.02,
+            "delta": 0.97,
+            "direction": "up"
+          },
+          {
+            "id": "C011",
+            "name": "Adipic acid N2O destruction (India)",
+            "base_grade": "BBB",
+            "new_grade": "A",
+            "base_composite": 57.28,
+            "new_composite": 60.14,
+            "delta": 2.87,
+            "direction": "up"
+          }
+        ],
+        "max_abs_delta": 2.87,
+        "mean_abs_delta": 0.78,
+        "all_deltas": [
+          [
+            "C001",
+            -0.18
+          ],
+          [
+            "C002",
+            -0.17
+          ],
+          [
+            "C003",
+            -0.29
+          ],
+          [
+            "C004",
+            -0.27
+          ],
+          [
+            "C005",
+            -0.1
+          ],
+          [
+            "C006",
+            -0.12
+          ],
+          [
+            "C007",
+            0.97
+          ],
+          [
+            "C008",
+            0.8
+          ],
+          [
+            "C009",
+            0.77
+          ],
+          [
+            "C010",
+            2.32
+          ],
+          [
+            "C011",
+            2.87
+          ],
+          [
+            "C012",
+            2.77
+          ],
+          [
+            "C013",
+            1.0
+          ],
+          [
+            "C014",
+            0.92
+          ],
+          [
+            "C015",
+            0.14
+          ],
+          [
+            "C016",
+            1.77
+          ],
+          [
+            "C017",
+            1.71
+          ],
+          [
+            "C018",
+            -0.11
+          ],
+          [
+            "C019",
+            -0.12
+          ],
+          [
+            "C020",
+            1.11
+          ],
+          [
+            "C021",
+            1.17
+          ],
+          [
+            "C022",
+            -0.15
+          ],
+          [
+            "C023",
+            1.05
+          ],
+          [
+            "C024",
+            0.85
+          ],
+          [
+            "C025",
+            -0.17
+          ],
+          [
+            "C026",
+            -0.3
+          ],
+          [
+            "C027",
+            -0.17
+          ],
+          [
+            "C028",
+            -0.01
+          ],
+          [
+            "C029",
+            0.12
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2652,
+          "additionality": 0.2121,
+          "permanence": 0.125,
+          "mrv_grade": 0.2121,
+          "vintage_year": 0.1061,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.0795
+        }
+      }
+    },
+    "mrv_grade": {
+      "plus_5pp": {
+        "n_flips": 2,
+        "flips": [
+          {
+            "id": "C004",
+            "name": "Charm Industrial bio-oil injection",
+            "base_grade": "AAA",
+            "new_grade": "AA",
+            "base_composite": 90.53,
+            "new_composite": 89.99,
+            "delta": -0.53,
+            "direction": "down"
+          },
+          {
+            "id": "C014",
+            "name": "Plan Vivo agroforestry (Mozambique)",
+            "base_grade": "A",
+            "new_grade": "BBB",
+            "base_composite": 60.15,
+            "new_composite": 59.83,
+            "delta": -0.32,
+            "direction": "down"
+          }
+        ],
+        "max_abs_delta": 1.48,
+        "mean_abs_delta": 0.51,
+        "all_deltas": [
+          [
+            "C001",
+            -0.19
+          ],
+          [
+            "C002",
+            -0.2
+          ],
+          [
+            "C003",
+            -0.14
+          ],
+          [
+            "C004",
+            -0.53
+          ],
+          [
+            "C005",
+            -0.2
+          ],
+          [
+            "C006",
+            -0.5
+          ],
+          [
+            "C007",
+            0.37
+          ],
+          [
+            "C008",
+            0.24
+          ],
+          [
+            "C009",
+            0.2
+          ],
+          [
+            "C010",
+            0.23
+          ],
+          [
+            "C011",
+            1.3
+          ],
+          [
+            "C012",
+            1.21
+          ],
+          [
+            "C013",
+            -0.1
+          ],
+          [
+            "C014",
+            -0.32
+          ],
+          [
+            "C015",
+            0.48
+          ],
+          [
+            "C016",
+            0.48
+          ],
+          [
+            "C017",
+            1.3
+          ],
+          [
+            "C018",
+            0.61
+          ],
+          [
+            "C019",
+            0.56
+          ],
+          [
+            "C020",
+            1.36
+          ],
+          [
+            "C021",
+            1.48
+          ],
+          [
+            "C022",
+            0.34
+          ],
+          [
+            "C023",
+            0.61
+          ],
+          [
+            "C024",
+            1.19
+          ],
+          [
+            "C025",
+            -0.13
+          ],
+          [
+            "C026",
+            0.12
+          ],
+          [
+            "C027",
+            0.05
+          ],
+          [
+            "C028",
+            0.01
+          ],
+          [
+            "C029",
+            0.25
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2344,
+          "additionality": 0.1875,
+          "permanence": 0.1641,
+          "mrv_grade": 0.25,
+          "vintage_year": 0.0938,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.0703
+        }
+      },
+      "minus_5pp": {
+        "n_flips": 0,
+        "flips": [],
+        "max_abs_delta": 1.48,
+        "mean_abs_delta": 0.51,
+        "all_deltas": [
+          [
+            "C001",
+            0.19
+          ],
+          [
+            "C002",
+            0.2
+          ],
+          [
+            "C003",
+            0.14
+          ],
+          [
+            "C004",
+            0.53
+          ],
+          [
+            "C005",
+            0.2
+          ],
+          [
+            "C006",
+            0.5
+          ],
+          [
+            "C007",
+            -0.37
+          ],
+          [
+            "C008",
+            -0.24
+          ],
+          [
+            "C009",
+            -0.2
+          ],
+          [
+            "C010",
+            -0.23
+          ],
+          [
+            "C011",
+            -1.3
+          ],
+          [
+            "C012",
+            -1.21
+          ],
+          [
+            "C013",
+            0.1
+          ],
+          [
+            "C014",
+            0.32
+          ],
+          [
+            "C015",
+            -0.48
+          ],
+          [
+            "C016",
+            -0.48
+          ],
+          [
+            "C017",
+            -1.3
+          ],
+          [
+            "C018",
+            -0.61
+          ],
+          [
+            "C019",
+            -0.56
+          ],
+          [
+            "C020",
+            -1.36
+          ],
+          [
+            "C021",
+            -1.48
+          ],
+          [
+            "C022",
+            -0.34
+          ],
+          [
+            "C023",
+            -0.61
+          ],
+          [
+            "C024",
+            -1.19
+          ],
+          [
+            "C025",
+            0.13
+          ],
+          [
+            "C026",
+            -0.12
+          ],
+          [
+            "C027",
+            -0.05
+          ],
+          [
+            "C028",
+            -0.01
+          ],
+          [
+            "C029",
+            -0.25
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2656,
+          "additionality": 0.2125,
+          "permanence": 0.1859,
+          "mrv_grade": 0.15,
+          "vintage_year": 0.1063,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.0797
+        }
+      }
+    },
+    "vintage_year": {
+      "plus_5pp": {
+        "n_flips": 1,
+        "flips": [
+          {
+            "id": "C007",
+            "name": "Pachama-verified Brazilian reforestation",
+            "base_grade": "A",
+            "new_grade": "AA",
+            "base_composite": 74.05,
+            "new_composite": 75.49,
+            "delta": 1.44,
+            "direction": "up"
+          }
+        ],
+        "max_abs_delta": 2.57,
+        "mean_abs_delta": 1.15,
+        "all_deltas": [
+          [
+            "C001",
+            0.28
+          ],
+          [
+            "C002",
+            0.38
+          ],
+          [
+            "C003",
+            0.71
+          ],
+          [
+            "C004",
+            0.53
+          ],
+          [
+            "C005",
+            0.93
+          ],
+          [
+            "C006",
+            0.44
+          ],
+          [
+            "C007",
+            1.44
+          ],
+          [
+            "C008",
+            1.1
+          ],
+          [
+            "C009",
+            1.96
+          ],
+          [
+            "C010",
+            2.32
+          ],
+          [
+            "C011",
+            1.71
+          ],
+          [
+            "C012",
+            1.8
+          ],
+          [
+            "C013",
+            1.86
+          ],
+          [
+            "C014",
+            1.55
+          ],
+          [
+            "C015",
+            -2.57
+          ],
+          [
+            "C016",
+            -1.01
+          ],
+          [
+            "C017",
+            0.98
+          ],
+          [
+            "C018",
+            -0.68
+          ],
+          [
+            "C019",
+            -1.23
+          ],
+          [
+            "C020",
+            -0.18
+          ],
+          [
+            "C021",
+            -0.24
+          ],
+          [
+            "C022",
+            -1.09
+          ],
+          [
+            "C023",
+            -1.4
+          ],
+          [
+            "C024",
+            -1.05
+          ],
+          [
+            "C025",
+            -0.95
+          ],
+          [
+            "C026",
+            0.94
+          ],
+          [
+            "C027",
+            1.27
+          ],
+          [
+            "C028",
+            1.4
+          ],
+          [
+            "C029",
+            1.44
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2361,
+          "additionality": 0.1889,
+          "permanence": 0.1653,
+          "mrv_grade": 0.1889,
+          "vintage_year": 0.15,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.0708
+        }
+      },
+      "minus_5pp": {
+        "n_flips": 3,
+        "flips": [
+          {
+            "id": "C004",
+            "name": "Charm Industrial bio-oil injection",
+            "base_grade": "AAA",
+            "new_grade": "AA",
+            "base_composite": 90.53,
+            "new_composite": 90.0,
+            "delta": -0.53,
+            "direction": "down"
+          },
+          {
+            "id": "C010",
+            "name": "Gold Standard cookstoves (Kenya)",
+            "base_grade": "BBB",
+            "new_grade": "BB",
+            "base_composite": 46.33,
+            "new_composite": 44.01,
+            "delta": -2.32,
+            "direction": "down"
+          },
+          {
+            "id": "C014",
+            "name": "Plan Vivo agroforestry (Mozambique)",
+            "base_grade": "A",
+            "new_grade": "BBB",
+            "base_composite": 60.15,
+            "new_composite": 58.6,
+            "delta": -1.55,
+            "direction": "down"
+          }
+        ],
+        "max_abs_delta": 2.57,
+        "mean_abs_delta": 1.15,
+        "all_deltas": [
+          [
+            "C001",
+            -0.27
+          ],
+          [
+            "C002",
+            -0.38
+          ],
+          [
+            "C003",
+            -0.71
+          ],
+          [
+            "C004",
+            -0.53
+          ],
+          [
+            "C005",
+            -0.93
+          ],
+          [
+            "C006",
+            -0.44
+          ],
+          [
+            "C007",
+            -1.44
+          ],
+          [
+            "C008",
+            -1.1
+          ],
+          [
+            "C009",
+            -1.96
+          ],
+          [
+            "C010",
+            -2.32
+          ],
+          [
+            "C011",
+            -1.71
+          ],
+          [
+            "C012",
+            -1.8
+          ],
+          [
+            "C013",
+            -1.86
+          ],
+          [
+            "C014",
+            -1.55
+          ],
+          [
+            "C015",
+            2.57
+          ],
+          [
+            "C016",
+            1.01
+          ],
+          [
+            "C017",
+            -0.98
+          ],
+          [
+            "C018",
+            0.68
+          ],
+          [
+            "C019",
+            1.23
+          ],
+          [
+            "C020",
+            0.18
+          ],
+          [
+            "C021",
+            0.24
+          ],
+          [
+            "C022",
+            1.09
+          ],
+          [
+            "C023",
+            1.4
+          ],
+          [
+            "C024",
+            1.05
+          ],
+          [
+            "C025",
+            0.95
+          ],
+          [
+            "C026",
+            -0.94
+          ],
+          [
+            "C027",
+            -1.27
+          ],
+          [
+            "C028",
+            -1.4
+          ],
+          [
+            "C029",
+            -1.44
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2639,
+          "additionality": 0.2111,
+          "permanence": 0.1847,
+          "mrv_grade": 0.2111,
+          "vintage_year": 0.05,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.0792
+        }
+      }
+    },
+    "co_benefits": {
+      "plus_5pp": {
+        "n_flips": 2,
+        "flips": [
+          {
+            "id": "C002",
+            "name": "Heirloom DAC (California)",
+            "base_grade": "AAA",
+            "new_grade": "AA",
+            "base_composite": 93.2,
+            "new_composite": 89.54,
+            "delta": -3.66,
+            "direction": "down"
+          },
+          {
+            "id": "C004",
+            "name": "Charm Industrial bio-oil injection",
+            "base_grade": "AAA",
+            "new_grade": "AA",
+            "base_composite": 90.53,
+            "new_composite": 87.1,
+            "delta": -3.43,
+            "direction": "down"
+          }
+        ],
+        "max_abs_delta": 4.0,
+        "mean_abs_delta": 1.34,
+        "all_deltas": [
+          [
+            "C001",
+            -4.0
+          ],
+          [
+            "C002",
+            -3.66
+          ],
+          [
+            "C003",
+            -3.46
+          ],
+          [
+            "C004",
+            -3.43
+          ],
+          [
+            "C005",
+            -1.16
+          ],
+          [
+            "C006",
+            0.25
+          ],
+          [
+            "C007",
+            0.7
+          ],
+          [
+            "C008",
+            -0.66
+          ],
+          [
+            "C009",
+            0.01
+          ],
+          [
+            "C010",
+            1.93
+          ],
+          [
+            "C011",
+            -1.86
+          ],
+          [
+            "C012",
+            -1.28
+          ],
+          [
+            "C013",
+            0.77
+          ],
+          [
+            "C014",
+            0.99
+          ],
+          [
+            "C015",
+            -0.01
+          ],
+          [
+            "C016",
+            2.04
+          ],
+          [
+            "C017",
+            0.29
+          ],
+          [
+            "C018",
+            1.34
+          ],
+          [
+            "C019",
+            1.7
+          ],
+          [
+            "C020",
+            -0.41
+          ],
+          [
+            "C021",
+            -0.22
+          ],
+          [
+            "C022",
+            0.02
+          ],
+          [
+            "C023",
+            -1.01
+          ],
+          [
+            "C024",
+            -0.45
+          ],
+          [
+            "C025",
+            -0.36
+          ],
+          [
+            "C026",
+            -1.15
+          ],
+          [
+            "C027",
+            -1.11
+          ],
+          [
+            "C028",
+            -1.24
+          ],
+          [
+            "C029",
+            -3.45
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2375,
+          "additionality": 0.19,
+          "permanence": 0.1662,
+          "mrv_grade": 0.19,
+          "vintage_year": 0.095,
+          "co_benefits": 0.05,
+          "registry_methodology": 0.0712
+        }
+      },
+      "minus_5pp": {
+        "n_flips": 0,
+        "flips": [],
+        "max_abs_delta": 0.0,
+        "mean_abs_delta": 0.0,
+        "skipped": true,
+        "reason": "weight would go negative"
+      }
+    },
+    "registry_methodology": {
+      "plus_5pp": {
+        "n_flips": 2,
+        "flips": [
+          {
+            "id": "C004",
+            "name": "Charm Industrial bio-oil injection",
+            "base_grade": "AAA",
+            "new_grade": "AA",
+            "base_composite": 90.53,
+            "new_composite": 89.96,
+            "delta": -0.57,
+            "direction": "down"
+          },
+          {
+            "id": "C014",
+            "name": "Plan Vivo agroforestry (Mozambique)",
+            "base_grade": "A",
+            "new_grade": "BBB",
+            "base_composite": 60.15,
+            "new_composite": 59.33,
+            "delta": -0.82,
+            "direction": "down"
+          }
+        ],
+        "max_abs_delta": 3.68,
+        "mean_abs_delta": 0.97,
+        "all_deltas": [
+          [
+            "C001",
+            -0.81
+          ],
+          [
+            "C002",
+            -0.71
+          ],
+          [
+            "C003",
+            -0.39
+          ],
+          [
+            "C004",
+            -0.57
+          ],
+          [
+            "C005",
+            -0.18
+          ],
+          [
+            "C006",
+            -0.0
+          ],
+          [
+            "C007",
+            0.32
+          ],
+          [
+            "C008",
+            0.64
+          ],
+          [
+            "C009",
+            -1.07
+          ],
+          [
+            "C010",
+            1.55
+          ],
+          [
+            "C011",
+            -0.66
+          ],
+          [
+            "C012",
+            1.32
+          ],
+          [
+            "C013",
+            -1.16
+          ],
+          [
+            "C014",
+            -0.82
+          ],
+          [
+            "C015",
+            -0.29
+          ],
+          [
+            "C016",
+            2.2
+          ],
+          [
+            "C017",
+            -0.5
+          ],
+          [
+            "C018",
+            0.1
+          ],
+          [
+            "C019",
+            0.21
+          ],
+          [
+            "C020",
+            0.09
+          ],
+          [
+            "C021",
+            0.04
+          ],
+          [
+            "C022",
+            0.56
+          ],
+          [
+            "C023",
+            -0.01
+          ],
+          [
+            "C024",
+            0.33
+          ],
+          [
+            "C025",
+            -0.11
+          ],
+          [
+            "C026",
+            -3.68
+          ],
+          [
+            "C027",
+            -3.36
+          ],
+          [
+            "C028",
+            -3.24
+          ],
+          [
+            "C029",
+            -3.19
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2365,
+          "additionality": 0.1892,
+          "permanence": 0.1655,
+          "mrv_grade": 0.1892,
+          "vintage_year": 0.0946,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.125
+        }
+      },
+      "minus_5pp": {
+        "n_flips": 1,
+        "flips": [
+          {
+            "id": "C010",
+            "name": "Gold Standard cookstoves (Kenya)",
+            "base_grade": "BBB",
+            "new_grade": "BB",
+            "base_composite": 46.33,
+            "new_composite": 44.77,
+            "delta": -1.55,
+            "direction": "down"
+          }
+        ],
+        "max_abs_delta": 3.68,
+        "mean_abs_delta": 0.97,
+        "all_deltas": [
+          [
+            "C001",
+            0.81
+          ],
+          [
+            "C002",
+            0.71
+          ],
+          [
+            "C003",
+            0.39
+          ],
+          [
+            "C004",
+            0.57
+          ],
+          [
+            "C005",
+            0.18
+          ],
+          [
+            "C006",
+            0.0
+          ],
+          [
+            "C007",
+            -0.32
+          ],
+          [
+            "C008",
+            -0.64
+          ],
+          [
+            "C009",
+            1.07
+          ],
+          [
+            "C010",
+            -1.55
+          ],
+          [
+            "C011",
+            0.66
+          ],
+          [
+            "C012",
+            -1.32
+          ],
+          [
+            "C013",
+            1.16
+          ],
+          [
+            "C014",
+            0.82
+          ],
+          [
+            "C015",
+            0.29
+          ],
+          [
+            "C016",
+            -2.2
+          ],
+          [
+            "C017",
+            0.5
+          ],
+          [
+            "C018",
+            -0.1
+          ],
+          [
+            "C019",
+            -0.21
+          ],
+          [
+            "C020",
+            -0.09
+          ],
+          [
+            "C021",
+            -0.04
+          ],
+          [
+            "C022",
+            -0.56
+          ],
+          [
+            "C023",
+            0.01
+          ],
+          [
+            "C024",
+            -0.33
+          ],
+          [
+            "C025",
+            0.11
+          ],
+          [
+            "C026",
+            3.68
+          ],
+          [
+            "C027",
+            3.36
+          ],
+          [
+            "C028",
+            3.24
+          ],
+          [
+            "C029",
+            3.19
+          ]
+        ],
+        "new_weights": {
+          "removal_type": 0.2635,
+          "additionality": 0.2108,
+          "permanence": 0.1845,
+          "mrv_grade": 0.2108,
+          "vintage_year": 0.1054,
+          "co_benefits": 0.0,
+          "registry_methodology": 0.025
+        }
+      }
+    }
+  },
+  "leave_one_out": {
+    "removal_type": {
+      "n_flips": 4,
+      "flips": [
+        {
+          "id": "C004",
+          "name": "Charm Industrial bio-oil injection",
+          "base_grade": "AAA",
+          "new_grade": "AA",
+          "base_composite": 90.53,
+          "new_composite": 89.37,
+          "delta": -1.16,
+          "direction": "down"
+        },
+        {
+          "id": "C007",
+          "name": "Pachama-verified Brazilian reforestation",
+          "base_grade": "A",
+          "new_grade": "AA",
+          "base_composite": 74.05,
+          "new_composite": 75.4,
+          "delta": 1.35,
+          "direction": "up"
+        },
+        {
+          "id": "C014",
+          "name": "Plan Vivo agroforestry (Mozambique)",
+          "base_grade": "A",
+          "new_grade": "BBB",
+          "base_composite": 60.15,
+          "new_composite": 59.53,
+          "delta": -0.62,
+          "direction": "down"
+        },
+        {
+          "id": "C018",
+          "name": "REDD+ Cordillera Azul (Peru)",
+          "base_grade": "B",
+          "new_grade": "BB",
+          "base_composite": 28.2,
+          "new_composite": 30.27,
+          "delta": 2.07,
+          "direction": "up"
+        }
+      ],
+      "max_abs_delta": 7.57,
+      "mean_abs_delta": 1.35,
+      "all_deltas": [
+        [
+          "C001",
+          -0.98
+        ],
+        [
+          "C002",
+          -0.93
+        ],
+        [
+          "C003",
+          -0.93
+        ],
+        [
+          "C004",
+          -1.16
+        ],
+        [
+          "C005",
+          1.09
+        ],
+        [
+          "C006",
+          0.68
+        ],
+        [
+          "C007",
+          1.35
+        ],
+        [
+          "C008",
+          0.08
+        ],
+        [
+          "C009",
+          -0.09
+        ],
+        [
+          "C010",
+          2.77
+        ],
+        [
+          "C011",
+          0.76
+        ],
+        [
+          "C012",
+          1.88
+        ],
+        [
+          "C013",
+          -0.49
+        ],
+        [
+          "C014",
+          -0.62
+        ],
+        [
+          "C015",
+          -3.91
+        ],
+        [
+          "C016",
+          -0.25
+        ],
+        [
+          "C017",
+          -0.24
+        ],
+        [
+          "C018",
+          2.07
+        ],
+        [
+          "C019",
+          1.35
+        ],
+        [
+          "C020",
+          0.42
+        ],
+        [
+          "C021",
+          1.45
+        ],
+        [
+          "C022",
+          0.53
+        ],
+        [
+          "C023",
+          -7.57
+        ],
+        [
+          "C024",
+          -0.35
+        ],
+        [
+          "C025",
+          -0.29
+        ],
+        [
+          "C026",
+          -2.33
+        ],
+        [
+          "C027",
+          -1.59
+        ],
+        [
+          "C028",
+          -1.72
+        ],
+        [
+          "C029",
+          -1.33
+        ]
+      ],
+      "new_weights": {
+        "removal_type": 0.0,
+        "additionality": 0.2667,
+        "permanence": 0.2333,
+        "mrv_grade": 0.2667,
+        "vintage_year": 0.1333,
+        "co_benefits": 0.0,
+        "registry_methodology": 0.1
+      }
+    },
+    "additionality": {
+      "n_flips": 2,
+      "flips": [
+        {
+          "id": "C010",
+          "name": "Gold Standard cookstoves (Kenya)",
+          "base_grade": "BBB",
+          "new_grade": "BB",
+          "base_composite": 46.33,
+          "new_composite": 44.16,
+          "delta": -2.17,
+          "direction": "down"
+        },
+        {
+          "id": "C014",
+          "name": "Plan Vivo agroforestry (Mozambique)",
+          "base_grade": "A",
+          "new_grade": "BBB",
+          "base_composite": 60.15,
+          "new_composite": 58.19,
+          "delta": -1.96,
+          "direction": "down"
+        }
+      ],
+      "max_abs_delta": 3.18,
+      "mean_abs_delta": 1.05,
+      "all_deltas": [
+        [
+          "C001",
+          0.01
+        ],
+        [
+          "C002",
+          0.3
+        ],
+        [
+          "C003",
+          2.3
+        ],
+        [
+          "C004",
+          0.13
+        ],
+        [
+          "C005",
+          0.32
+        ],
+        [
+          "C006",
+          -1.24
+        ],
+        [
+          "C007",
+          0.51
+        ],
+        [
+          "C008",
+          1.56
+        ],
+        [
+          "C009",
+          0.68
+        ],
+        [
+          "C010",
+          -2.17
+        ],
+        [
+          "C011",
+          -3.18
+        ],
+        [
+          "C012",
+          -0.59
+        ],
+        [
+          "C013",
+          -1.37
+        ],
+        [
+          "C014",
+          -1.96
+        ],
+        [
+          "C015",
+          -1.18
+        ],
+        [
+          "C016",
+          -2.69
+        ],
+        [
+          "C017",
+          0.57
+        ],
+        [
+          "C018",
+          -0.45
+        ],
+        [
+          "C019",
+          -0.99
+        ],
+        [
+          "C020",
+          0.81
+        ],
+        [
+          "C021",
+          -0.16
+        ],
+        [
+          "C022",
+          -0.1
+        ],
+        [
+          "C023",
+          2.57
+        ],
+        [
+          "C024",
+          0.24
+        ],
+        [
+          "C025",
+          -1.97
+        ],
+        [
+          "C026",
+          -0.49
+        ],
+        [
+          "C027",
+          -0.69
+        ],
+        [
+          "C028",
+          -0.79
+        ],
+        [
+          "C029",
+          -0.49
+        ]
+      ],
+      "new_weights": {
+        "removal_type": 0.3125,
+        "additionality": 0.0,
+        "permanence": 0.2188,
+        "mrv_grade": 0.25,
+        "vintage_year": 0.125,
+        "co_benefits": 0.0,
+        "registry_methodology": 0.0938
+      }
+    },
+    "permanence": {
+      "n_flips": 4,
+      "flips": [
+        {
+          "id": "C004",
+          "name": "Charm Industrial bio-oil injection",
+          "base_grade": "AAA",
+          "new_grade": "AA",
+          "base_composite": 90.53,
+          "new_composite": 89.58,
+          "delta": -0.95,
+          "direction": "down"
+        },
+        {
+          "id": "C007",
+          "name": "Pachama-verified Brazilian reforestation",
+          "base_grade": "A",
+          "new_grade": "AA",
+          "base_composite": 74.05,
+          "new_composite": 77.45,
+          "delta": 3.4,
+          "direction": "up"
+        },
+        {
+          "id": "C011",
+          "name": "Adipic acid N2O destruction (India)",
+          "base_grade": "BBB",
+          "new_grade": "A",
+          "base_composite": 57.28,
+          "new_composite": 67.3,
+          "delta": 10.03,
+          "direction": "up"
+        },
+        {
+          "id": "C012",
+          "name": "Landfill methane capture (US)",
+          "base_grade": "BBB",
+          "new_grade": "A",
+          "base_composite": 55.65,
+          "new_composite": 65.33,
+          "delta": 9.68,
+          "direction": "up"
+        }
+      ],
+      "max_abs_delta": 10.03,
+      "mean_abs_delta": 2.72,
+      "all_deltas": [
+        [
+          "C001",
+          -0.63
+        ],
+        [
+          "C002",
+          -0.59
+        ],
+        [
+          "C003",
+          -1.02
+        ],
+        [
+          "C004",
+          -0.95
+        ],
+        [
+          "C005",
+          -0.37
+        ],
+        [
+          "C006",
+          -0.41
+        ],
+        [
+          "C007",
+          3.4
+        ],
+        [
+          "C008",
+          2.81
+        ],
+        [
+          "C009",
+          2.7
+        ],
+        [
+          "C010",
+          8.13
+        ],
+        [
+          "C011",
+          10.03
+        ],
+        [
+          "C012",
+          9.68
+        ],
+        [
+          "C013",
+          3.51
+        ],
+        [
+          "C014",
+          3.21
+        ],
+        [
+          "C015",
+          0.48
+        ],
+        [
+          "C016",
+          6.2
+        ],
+        [
+          "C017",
+          6.0
+        ],
+        [
+          "C018",
+          -0.38
+        ],
+        [
+          "C019",
+          -0.41
+        ],
+        [
+          "C020",
+          3.87
+        ],
+        [
+          "C021",
+          4.1
+        ],
+        [
+          "C022",
+          -0.51
+        ],
+        [
+          "C023",
+          3.66
+        ],
+        [
+          "C024",
+          2.96
+        ],
+        [
+          "C025",
+          -0.61
+        ],
+        [
+          "C026",
+          -1.06
+        ],
+        [
+          "C027",
+          -0.59
+        ],
+        [
+          "C028",
+          -0.03
+        ],
+        [
+          "C029",
+          0.43
+        ]
+      ],
+      "new_weights": {
+        "removal_type": 0.303,
+        "additionality": 0.2424,
+        "permanence": 0.0,
+        "mrv_grade": 0.2424,
+        "vintage_year": 0.1212,
+        "co_benefits": 0.0,
+        "registry_methodology": 0.0909
+      }
+    },
+    "mrv_grade": {
+      "n_flips": 1,
+      "flips": [
+        {
+          "id": "C017",
+          "name": "Grid-connected solar (India)",
+          "base_grade": "BB",
+          "new_grade": "B",
+          "base_composite": 34.27,
+          "new_composite": 29.09,
+          "delta": -5.18,
+          "direction": "down"
+        }
+      ],
+      "max_abs_delta": 5.91,
+      "mean_abs_delta": 2.03,
+      "all_deltas": [
+        [
+          "C001",
+          0.76
+        ],
+        [
+          "C002",
+          0.8
+        ],
+        [
+          "C003",
+          0.55
+        ],
+        [
+          "C004",
+          2.13
+        ],
+        [
+          "C005",
+          0.82
+        ],
+        [
+          "C006",
+          2.01
+        ],
+        [
+          "C007",
+          -1.49
+        ],
+        [
+          "C008",
+          -0.94
+        ],
+        [
+          "C009",
+          -0.82
+        ],
+        [
+          "C010",
+          -0.92
+        ],
+        [
+          "C011",
+          -5.18
+        ],
+        [
+          "C012",
+          -4.84
+        ],
+        [
+          "C013",
+          0.38
+        ],
+        [
+          "C014",
+          1.29
+        ],
+        [
+          "C015",
+          -1.93
+        ],
+        [
+          "C016",
+          -1.94
+        ],
+        [
+          "C017",
+          -5.18
+        ],
+        [
+          "C018",
+          -2.45
+        ],
+        [
+          "C019",
+          -2.24
+        ],
+        [
+          "C020",
+          -5.44
+        ],
+        [
+          "C021",
+          -5.91
+        ],
+        [
+          "C022",
+          -1.35
+        ],
+        [
+          "C023",
+          -2.43
+        ],
+        [
+          "C024",
+          -4.76
+        ],
+        [
+          "C025",
+          0.53
+        ],
+        [
+          "C026",
+          -0.49
+        ],
+        [
+          "C027",
+          -0.19
+        ],
+        [
+          "C028",
+          -0.04
+        ],
+        [
+          "C029",
+          -0.99
+        ]
+      ],
+      "new_weights": {
+        "removal_type": 0.3125,
+        "additionality": 0.25,
+        "permanence": 0.2188,
+        "mrv_grade": 0.0,
+        "vintage_year": 0.125,
+        "co_benefits": 0.0,
+        "registry_methodology": 0.0938
+      }
+    },
+    "vintage_year": {
+      "n_flips": 3,
+      "flips": [
+        {
+          "id": "C004",
+          "name": "Charm Industrial bio-oil injection",
+          "base_grade": "AAA",
+          "new_grade": "AA",
+          "base_composite": 90.53,
+          "new_composite": 89.47,
+          "delta": -1.05,
+          "direction": "down"
+        },
+        {
+          "id": "C010",
+          "name": "Gold Standard cookstoves (Kenya)",
+          "base_grade": "BBB",
+          "new_grade": "BB",
+          "base_composite": 46.33,
+          "new_composite": 41.69,
+          "delta": -4.63,
+          "direction": "down"
+        },
+        {
+          "id": "C014",
+          "name": "Plan Vivo agroforestry (Mozambique)",
+          "base_grade": "A",
+          "new_grade": "BBB",
+          "base_composite": 60.15,
+          "new_composite": 57.06,
+          "delta": -3.09,
+          "direction": "down"
+        }
+      ],
+      "max_abs_delta": 5.14,
+      "mean_abs_delta": 2.31,
+      "all_deltas": [
+        [
+          "C001",
+          -0.55
+        ],
+        [
+          "C002",
+          -0.76
+        ],
+        [
+          "C003",
+          -1.42
+        ],
+        [
+          "C004",
+          -1.05
+        ],
+        [
+          "C005",
+          -1.86
+        ],
+        [
+          "C006",
+          -0.88
+        ],
+        [
+          "C007",
+          -2.88
+        ],
+        [
+          "C008",
+          -2.2
+        ],
+        [
+          "C009",
+          -3.92
+        ],
+        [
+          "C010",
+          -4.63
+        ],
+        [
+          "C011",
+          -3.41
+        ],
+        [
+          "C012",
+          -3.59
+        ],
+        [
+          "C013",
+          -3.72
+        ],
+        [
+          "C014",
+          -3.09
+        ],
+        [
+          "C015",
+          5.14
+        ],
+        [
+          "C016",
+          2.03
+        ],
+        [
+          "C017",
+          -1.97
+        ],
+        [
+          "C018",
+          1.36
+        ],
+        [
+          "C019",
+          2.45
+        ],
+        [
+          "C020",
+          0.36
+        ],
+        [
+          "C021",
+          0.48
+        ],
+        [
+          "C022",
+          2.18
+        ],
+        [
+          "C023",
+          2.81
+        ],
+        [
+          "C024",
+          2.11
+        ],
+        [
+          "C025",
+          1.9
+        ],
+        [
+          "C026",
+          -1.89
+        ],
+        [
+          "C027",
+          -2.53
+        ],
+        [
+          "C028",
+          -2.79
+        ],
+        [
+          "C029",
+          -2.89
+        ]
+      ],
+      "new_weights": {
+        "removal_type": 0.2778,
+        "additionality": 0.2222,
+        "permanence": 0.1944,
+        "mrv_grade": 0.2222,
+        "vintage_year": 0.0,
+        "co_benefits": 0.0,
+        "registry_methodology": 0.0833
+      }
+    },
+    "co_benefits": {
+      "n_flips": 0,
+      "flips": [],
+      "max_abs_delta": 0.0,
+      "mean_abs_delta": 0.0,
+      "skipped": true,
+      "reason": "weight already zero"
+    },
+    "registry_methodology": {
+      "n_flips": 1,
+      "flips": [
+        {
+          "id": "C010",
+          "name": "Gold Standard cookstoves (Kenya)",
+          "base_grade": "BBB",
+          "new_grade": "BB",
+          "base_composite": 46.33,
+          "new_composite": 44.0,
+          "delta": -2.33,
+          "direction": "down"
+        }
+      ],
+      "max_abs_delta": 5.52,
+      "mean_abs_delta": 1.45,
+      "all_deltas": [
+        [
+          "C001",
+          1.22
+        ],
+        [
+          "C002",
+          1.07
+        ],
+        [
+          "C003",
+          0.58
+        ],
+        [
+          "C004",
+          0.85
+        ],
+        [
+          "C005",
+          0.27
+        ],
+        [
+          "C006",
+          0.0
+        ],
+        [
+          "C007",
+          -0.48
+        ],
+        [
+          "C008",
+          -0.95
+        ],
+        [
+          "C009",
+          1.6
+        ],
+        [
+          "C010",
+          -2.33
+        ],
+        [
+          "C011",
+          1.0
+        ],
+        [
+          "C012",
+          -1.97
+        ],
+        [
+          "C013",
+          1.75
+        ],
+        [
+          "C014",
+          1.23
+        ],
+        [
+          "C015",
+          0.43
+        ],
+        [
+          "C016",
+          -3.3
+        ],
+        [
+          "C017",
+          0.75
+        ],
+        [
+          "C018",
+          -0.15
+        ],
+        [
+          "C019",
+          -0.32
+        ],
+        [
+          "C020",
+          -0.14
+        ],
+        [
+          "C021",
+          -0.05
+        ],
+        [
+          "C022",
+          -0.84
+        ],
+        [
+          "C023",
+          0.02
+        ],
+        [
+          "C024",
+          -0.49
+        ],
+        [
+          "C025",
+          0.17
+        ],
+        [
+          "C026",
+          5.52
+        ],
+        [
+          "C027",
+          5.05
+        ],
+        [
+          "C028",
+          4.85
+        ],
+        [
+          "C029",
+          4.79
+        ]
+      ],
+      "new_weights": {
+        "removal_type": 0.2703,
+        "additionality": 0.2162,
+        "permanence": 0.1892,
+        "mrv_grade": 0.2162,
+        "vintage_year": 0.1081,
+        "co_benefits": 0.0,
+        "registry_methodology": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,222 @@
+# Transparent Quality Infrastructure Prevents Adverse Selection in Voluntary Carbon Markets
+
+*Adeline Wen*
+
+*Target: Nature Sustainability, Full Article*
+
+---
+
+## Abstract
+
+The voluntary carbon market channels over $2 billion annually toward climate mitigation, yet fewer than 16% of credits represent real emission reductions, and commercial rating agencies disagree on the quality of the same projects at levels indistinguishable from chance. This quality opacity creates a textbook adverse selection problem: low-integrity credits flood the market while high-integrity credits are undervalued. We present an open, seven-dimension quality rating framework that scores individual carbon credits on a six-tier scale (AAA through B) with distributional uncertainty quantification --- the first system to publish grade probabilities. Validating against 318 credits, we find a 1.99-grade separation between credits eligible for the Integrity Council's Core Carbon Principles and those that are not (Cohen's *d* = 1.80), matching independently published measurements. Our framework's rank correlation with commercial agencies (mean Spearman *rho* = +0.343) exceeds their agreement with each other (+0.009), and inter-rater reliability reaches Fleiss' *kappa* = 0.600 with ICC = 0.993. We introduce the Lemons Index to quantify adverse selection severity and show that the Toucan Base Carbon Tonne pool --- the canonical failure of first-generation tokenized carbon --- scores 0.724, while quality-filtered pools score 0.221. Counterfactual simulations project that on-chain quality gating could reduce adverse selection by up to 44%. Implemented as a composable smart contract interface, this framework provides the transparent, granular quality infrastructure that voluntary carbon markets require for effective governance.
+
+---
+
+## Introduction
+
+The voluntary carbon market (VCM) presents a paradox. Annual trading volume exceeded $2 billion in 2023, corporate demand for offsets continues to grow, and high-integrity credits now command price premiums of up to four times those of low-integrity credits [1,2]. Yet the empirical evidence on credit quality is damning. A systematic assessment of 2,346 projects covering approximately one billion tonnes of CO2-equivalent found that fewer than 16% of credits represent real emission reductions [3]. Offsets overestimate their climate impact by five to ten times or more [4]. Among the twenty largest corporate offset purchasers, 87% of retired credits carry high risk of providing no genuine climate benefit [5]. Third-party auditors --- the system's nominal quality gatekeepers --- approved 95 projects that substantially overstated their climate benefits, a failure attributed to the structural conflict of interest inherent in developer-selected, developer-funded verification [6].
+
+This is not merely a problem of insufficient regulation. It is a problem of market mechanism design. When buyers cannot distinguish high-quality goods from low-quality goods, sellers of low-quality goods capture a disproportionate share of the market. Prices converge on the average quality rather than the marginal quality, and high-quality producers exit because they cannot recover their costs. Akerlof identified this adverse selection dynamic more than fifty years ago [7]; Manshadi, Monachou, and Morgenstern [8] formalized it for the VCM specifically, demonstrating that when certification noise exceeds a threshold, a market-for-lemons collapse becomes inevitable. Their model shows that interventions targeting only the demand side or the supply side can paradoxically reduce climate benefit without improvements in certification quality.
+
+The Toucan Base Carbon Tonne (BCT) pool provides a canonical case study. Launched in October 2021, BCT was designed to aggregate heterogeneous Verra carbon credits into a single fungible token for decentralized finance composability. By treating a 2009 HFC-23 destruction credit identically to a 2022 reforestation credit, the pool eliminated quality price discovery by design. Rational depositors responded predictably: they deposited their lowest-quality eligible credits and retained their highest-quality ones for premium over-the-counter markets. At its peak, BCT's average credit quality fell below the 28th percentile on our scoring framework, with zero credits rated A or above. CarbonPlan's analysis found that 99.9% of BCT credits were ineligible for CORSIA and 85% were ineligible for Article 6 trading [9]. The Verra tokenization ban in May 2022 and the subsequent price collapse confirmed the market's judgment, but BCT's failure was not a blockchain problem --- it was an information problem that blockchain infrastructure, absent quality signals, could not solve.
+
+Three structural gaps in the VCM's quality infrastructure perpetuate this dynamic. First, no open, reproducible methodology exists for credit-level quality assessment. The Carbon Credit Quality Initiative (CCQI) provides an open framework but operates at the methodology level rather than the individual credit level [10]. Second, commercial rating agencies --- BeZero Carbon, Calyx Global, Sylvera, and MSCI --- produce credit-level ratings, but these are proprietary and show significant inter-agency disagreement. On a six-project overlap sample, the mean pairwise Spearman correlation among the three agencies was +0.009, effectively indistinguishable from random [11]. The same Amazon REDD+ project received high marks from one agency and the lowest possible rating from another. Third, no rating system provides a callable on-chain interface, meaning that smart contracts cannot enforce quality gates at the point of deposit or retirement. The Integrity Council for the Voluntary Carbon Market (ICVCM) Core Carbon Principles (CCP) label represents an important step toward standardization [12], but its binary pass/fail structure cannot express the quality gradient above the threshold, and CCP-labelled credits still represent only a fraction of market volume.
+
+Here we argue that the VCM's quality crisis is a solvable market mechanism design problem. We present an open, seven-dimension quality rating framework that addresses all three structural gaps simultaneously: it is transparent and reproducible, it agrees with external quality signals more than those signals agree with each other, and it is implemented as a composable on-chain smart contract interface that enables automated quality enforcement. We introduce the Lemons Index as a quantitative metric for adverse selection severity and demonstrate, through counterfactual simulation, that quality-gated pools can substantially mitigate the dynamics that collapsed the first generation of tokenized carbon markets. All code, data, and rubrics are open-source under an MIT licence.
+
+---
+
+## Results
+
+### A seven-dimension quality framework with distributional uncertainty
+
+We developed a composite quality scoring framework that evaluates individual carbon credits across seven dimensions identified in the integrity literature as the primary determinants of credit quality: removal type hierarchy (weight 0.250), additionality (0.200), measurement, reporting, and verification (MRV) grade (0.200), permanence (0.175), vintage year (0.100), co-benefits (0.000, safeguards-gate only), and registry and methodology quality (0.075). The composite score maps to a six-tier grade scale: AAA (90--100), AA (75--89), A (60--74), BBB (45--59), BB (30--44), and B (below 30). Seven disqualifier conditions impose grade caps that override the composite score regardless of technical performance: evidence of double counting, failed verification, or credible human rights violations cap at B; a sanctioned registry caps at BB; absence of independent third-party verification, documented community harm, or published evidence of biodiversity loss [13] cap at BBB.
+
+The framework's most distinctive design feature is its treatment of co-benefits. Six independent sources converged on the conclusion that co-benefit narratives inflate perceived quality beyond what carbon integrity warrants: Berg et al. [14] found that buyers pay approximately double the premium for credits with positive non-carbon externalities regardless of underlying integrity; BeZero reported a 31--61% SDG premium; Calyx and Sylvera both exclude co-benefits from their integrity assessments; and Oeko-Institut documented nine-to-ten-fold overcrediting in cookstove projects where SDG narratives dominated marketing [15]. We therefore removed co-benefits from the composite and converted the dimension to a safeguards gate: documented community or environmental harm caps the grade at BBB, but positive co-benefit narratives cannot inflate an integrity score. This design prevents the narrative washing that Manshadi et al.'s model identifies as a driver of certification noise.
+
+To propagate scoring uncertainty into grade assignments, we modelled each per-dimension score as normally distributed around its point estimate, with standard deviations calibrated empirically from inter-rater data (ranging from 4.0 for permanence to 11.1 for registry and methodology). Composite variance is propagated via linear combination, and posterior grade probabilities are computed via the Gaussian cumulative distribution function. This makes the framework the first carbon credit rating system to publish P(grade) --- the probability that a credit belongs to each grade tier given measurement uncertainty. For example, Climeworks Orca scores AAA with P = 96%, while Charm Industrial bio-oil injection sits at the AAA/AA boundary with panel consensus at AA, illustrating the difference between a stable and a fragile grade assignment.
+
+[Figure 1: Framework architecture. Seven dimensions feed into a weighted linear composite with distributional uncertainty propagation. Disqualifier lattice imposes grade caps. Visual comparison of the Toucan BCT single-pool model (all credits at one price) with the proposed quality-tiered pool model (grade-stratified pricing via the meetsGrade() smart contract interface).]
+
+### CCP empirical calibration demonstrates a 1.99-grade separation
+
+To validate the framework's weight calibration without expert consultation, we scored 318 credits spanning 17 methodology categories and classified them by ICVCM CCP eligibility --- the most authoritative quality signal currently available in the VCM [12]. CCP-eligible credits (*n* = 165) achieved a mean ordinal grade of 2.69 on a 0--5 scale (where B = 0 and AAA = 5), while non-CCP credits (*n* = 153) scored 0.70 --- a gap of 1.99 grade levels (Fig. 2). No CCP-eligible credit scored B; no non-CCP credit scored A or AAA. The modal grade for CCP-eligible credits was BBB (43%); for non-CCP credits it was B (54%).
+
+The effect size was large by conventional standards. Cohen's *d* = 1.80 (95% CI: 1.50--2.16, 10,000 bootstrap resamples), the common language effect size was 91.4% (a randomly chosen CCP-eligible credit outscored a randomly chosen non-CCP credit in more than nine out of ten pairings), and a Mann-Whitney *U* test confirmed distributional separation (*z* = 13.06, *p* < 10^-38). This gap is independently validated: Calyx Global, an ICVCM-appointed rating agency, reported that CCP-eligible projects average approximately two grade levels above non-CCP projects on their proprietary scale [16]. Convergence between our independently constructed framework and Calyx's measurement constitutes evidence that the weight vector is well calibrated at the population level. If our weights were miscalibrated --- overweighting or underweighting the dimensions that CCP selects for --- the separation would be either implausibly wide or implausibly narrow.
+
+[Figure 2: Violin plot comparing composite quality score distributions for CCP-eligible (n = 165) versus non-CCP (n = 153) credits. Grade band thresholds overlaid as horizontal lines. The 1.99-grade separation (Cohen's d = 1.80) is independently validated by Calyx Global's measurement of approximately two grade levels.]
+
+### Framework agreement exceeds inter-agency agreement
+
+Using the only publicly available multi-rater overlap dataset --- six REDD+ projects rated by BeZero, Calyx Global, and Sylvera, compiled by Carbon Market Watch [11] --- we computed pairwise Spearman rank correlations with our framework as a fourth rater. The mean Spearman correlation between our framework and the three commercial agencies was *rho* = +0.343, compared with a mean inter-agency correlation of *rho* = +0.009 (Fig. 3). The inter-agency baseline is effectively zero: BeZero and Calyx Global were strongly anti-correlated (*rho* = -0.664) on the same six projects, reflecting systematic disagreement on how to weight additionality concerns in avoided-deforestation projects.
+
+When expanded to a cross-methodology dataset spanning direct air capture, biochar, cookstoves, improved forest management, methane abatement, landfill gas, and renewable energy credits (*n* = 15), the correlation with BeZero rose to *rho* = +0.913 (*p* < 0.001, permutation test). Anchor points corroborate the alignment: BeZero's publicly documented AAA for Climeworks Orca matches our AAA (P = 96%), and BeZero's D/delisted for Kariba REDD+ matches our B (100% confidence).
+
+One systematic divergence warrants disclosure. Our framework ranks cookstove credits lower than some commercial agencies, because the removal-type dimension applies the Oxford Principles hierarchy [17], which scores avoidance credits below removal credits regardless of co-benefit narratives. This reflects a normative design choice --- one that we regard as a strength in preventing narrative-driven quality inflation, but that produces predictable divergence from agencies that weight co-benefits positively.
+
+[Figure 3: Spearman rank correlation heatmap for pairwise comparisons among four raters (our framework, BeZero, Calyx Global, Sylvera) on six REDD+ projects. Our framework's mean agreement with commercial agencies (+0.343) exceeds inter-agency agreement (+0.009). Inset: scatter plot of framework grade versus BeZero rating for 15 cross-type projects (rho = +0.913).]
+
+### Inter-rater reliability confirms rubric reproducibility
+
+A quality framework is useful only if independent raters applying the same rubric reach the same conclusions. We tested inter-rater reliability using a panel of three Claude-family language models (Opus 4.6, Sonnet 4.6, Haiku 4.5), each scoring 29 credits independently in isolated sessions using redacted evidence packs with author grades removed (see Methods).
+
+Grade-level Fleiss' *kappa* across the three-rater panel was 0.600, at the boundary of the "substantial" agreement threshold [18]. Composite-level intraclass correlation (ICC(2,*k*)) was 0.993, indicating near-perfect reliability on the continuous outcome. The author's grades matched the panel median exactly on 25 of 29 credits (86%), and every discrepancy was confined to a single adjacent grade band (100% within +/-1). Per-dimension reliability varied substantially: permanence (*kappa* = 0.684) and removal type (*kappa* = 0.585) --- the two highest-weighted dimensions --- showed the strongest agreement, while registry and methodology (*kappa* = 0.168) showed the weakest, motivating a rubric simplification from four tiers to a binary CCP-eligible/non-CCP classification.
+
+Notably, 2 of 29 credits reach AAA under panel consensus (Climeworks Orca and Heirloom DAC); a third credit (Charm Industrial bio-oil injection) sits at the AAA/AA boundary with panel consensus at AA, its composite of 90.15 placing it only 0.15 points above the AAA threshold. Disqualifier recall on synthetic stress-test credits was 12 of 12 (100%) across all raters and all four cap tiers.
+
+[Figure 4: Per-dimension Fleiss' kappa bar chart with Landis-Koch interpretation thresholds annotated. The two highest-weighted dimensions (permanence and removal type) achieve the highest inter-rater reliability. Combined with a confusion matrix of author grades versus panel median grades showing 86% exact agreement and 100% within one grade band.]
+
+### Lemons Index quantifies adverse selection across pools
+
+We define the Lemons Index as *L* = 1 - (*mean composite score* / 100), where higher values indicate more severe adverse selection. The metric translates Akerlof's theory into a single number, bounded between 0 (every credit scores perfectly) and 1 (every credit scores zero), that is computable from publicly available project data and comparable across pools.
+
+We computed the Lemons Index for six real and hypothetical on-chain carbon credit pools spanning the full range of existing instruments (Fig. 5). Toucan BCT at its 2022 peak exhibited a Lemons Index of 0.724 (*n* = 43 credits, mean composite = 27.6, zero credits rated A or above). Moss MCO2 performed similarly (LI = 0.713, *n* = 30). Both pools operated without quality filters beyond basic registry eligibility, and both accumulated credits dominated by old-vintage REDD+, pre-2013 industrial gas destruction, and CDM-era renewable energy --- precisely the categories flagged as high risk for non-additionality and overcrediting [3,5].
+
+The remaining pools trace a monotonic decline in adverse selection severity that tracks the stringency of their quality controls. Toucan NCT (LI = 0.601), which restricts deposits to nature-based credits, showed moderate improvement. Toucan CHAR (LI = 0.221, *n* = 12), a biochar-specific pool that restricts deposits to an allowlist of high-integrity biochar projects, achieved a Lemons Index less than one-third of BCT's, with all 12 credits scoring A or above. A hypothetical pool restricted to AAA-rated credits (LI = 0.100) represents the empirical floor.
+
+The 0.503-point gap between BCT and CHAR quantifies the value of quality curation. Both pools operated on the same blockchain infrastructure and drew from overlapping registries, yet their quality profiles diverge by more than half the theoretical range of the index. This divergence arises directly from CHAR's restriction to a credit category --- biochar with durable storage --- that scores consistently well on removal type, permanence, and MRV dimensions. No nature-based credit reaches AA in the tokenized sample, confirming the adverse selection dynamic that quality-blind pooling accelerates.
+
+[Figure 5: Lemons Index comparison across pool types. BCT (0.724), Moss MCO2 (0.713), NCT (0.601), Klima 2.0 kVCM (0.519), CHAR (0.221), and hypothetical AAA-only pool (0.100). Dashed line at 0.5 separates severe from moderate adverse selection. Bar colour gradient maps LI from red (1.0) to green (0.0).]
+
+### Counterfactual quality gating projects substantial improvement
+
+We conducted counterfactual simulations on all six pools, progressively raising the minimum grade threshold from B (no gate) to AAA and computing the resulting Lemons Index at each level. For BCT, a minimum gate at BBB models a reduction of the Lemons Index from 0.724 to 0.405 --- a 44% improvement --- while admitting only 2 of 43 credits (5%). No credits in BCT's 2022 inventory met the A threshold, meaning that any gate above BBB would have emptied the pool entirely. For the Klima 2.0 kVCM inventory, a BBB gate projects a reduction from 0.519 to 0.273 while retaining 40% of credits.
+
+CHAR provides a natural experiment in category-based quality control. Its biochar-only allowlist admits all 12 credits at every gate threshold through AA, producing an unchanged Lemons Index regardless of the gate level. CHAR achieves through category restriction what a generic quality gate would need to enforce through per-credit scoring --- by admitting only a credit type that inherently scores well on the framework's technical dimensions.
+
+These counterfactual results should be interpreted with appropriate caution. They model what *would have happened* had quality gates been in place, not what *will happen* if gates are deployed prospectively. Market participants would adapt their behaviour in response to quality gates --- potentially improving credit quality to meet thresholds, or finding new strategies to circumvent them. Nevertheless, the magnitude of the modelled improvement (0.32 Lemons Index points for BCT under a BBB gate) suggests that quality gating could substantially alter the adverse selection equilibrium.
+
+[Table 1: Comparison matrix. This framework versus CCQI, BeZero, Calyx Global, Sylvera, MSCI, and CCP across seven capability dimensions: credit-level scoring, composite weighted score, on-chain interface, uncertainty quantification (P(grade)), published inter-rater reliability, quality-gated pools, and open-source availability. No existing system combines all seven capabilities.]
+
+---
+
+## Discussion
+
+### Quality-gated pools as market infrastructure
+
+The results presented here suggest that the VCM's adverse selection problem, while severe, is amenable to a specific architectural intervention: quality-gated deposit pools enforced at the smart contract level. The core primitive is a `meetsGrade()` view function, specified in the ERC-CCQR interface standard, that returns a boolean for any credit token against any quality threshold. A pool contract that calls `meetsGrade(creditAddress, tokenId, Grade.BBB)` before accepting a deposit would, based on our counterfactual simulations, have prevented 95% of BCT's historical inventory from entering the pool. This is not a theoretical construct: the CHAR pool's `checkEligible()` function already implements binary quality gating on Base, and the `meetsGrade()` interface generalises this to continuous quality thresholds parameterisable by pool operators.
+
+Quality-tiered pricing restores the price discovery that fungible pools destroyed. When AAA, AA, and A credits trade in separate pools at separate prices, buyers face a meaningful quality signal and sellers have an incentive to invest in credit quality rather than narrative marketing. This is precisely the market structure that Manshadi et al.'s model identifies as necessary to prevent the lemons equilibrium [8]. The insurance industry is already moving in this direction: carbon credit insurers --- including Oka, Howden, Lockton, and WTW --- have launched invalidation and reversal products that consume quality ratings as actuarial inputs [19]. Our P(grade) posteriors translate directly into the probability-of-loss estimates that underwriting models require, connecting the rating framework to a concrete commercial pathway.
+
+### Complementarity with the CCP regulatory framework
+
+The ICVCM's Core Carbon Principles label represents the most significant quality standardisation effort in the VCM to date, with 36 approved methodologies and approximately 101 million eligible credits [12]. Our framework is designed to complement, not compete with, CCP. The 1.99-grade separation between CCP-eligible and non-CCP credits confirms that CCP is an effective quality threshold --- it successfully separates high-integrity from low-integrity methodologies at the population level. However, CCP's binary pass/fail structure cannot express the quality gradient above the threshold. Among CCP-eligible credits, our framework identifies a distribution spanning from BBB (43%) through AAA (8%), a range that matters for buyers seeking to differentiate among approved credits and for pool operators setting quality floors.
+
+Singapore's National Environment Agency provided external validation of this complementary architecture when it became the first sovereign body to mandate commercial carbon credit ratings for regulatory compliance, appointing BeZero, Calyx Global, and Sylvera as approved raters under its International Carbon Credit Framework in 2025 [20]. This transition from voluntary to mandatory quality differentiation implies that on-chain markets will increasingly require callable, composable quality infrastructure --- precisely the function that the ERC-CCQR interface serves.
+
+### Normative assumptions and their consequences
+
+We acknowledge three normative choices embedded in the framework that substantively affect ratings and that some stakeholders may reasonably contest.
+
+First, the removal-type dimension encodes the Oxford Principles hierarchy, which places carbon dioxide removal above avoidance above reduction [17]. This is consequential: cookstove projects, regardless of their development co-benefits, cannot exceed BBB under our weights because avoidance-based removal types are scored lower than engineered removal. We regard this as a defensible design choice grounded in the climate science literature, but it produces systematic divergence from agencies and buyers that prioritise development co-benefits alongside carbon integrity.
+
+Second, the safeguards-gate removes co-benefits from the integrity composite. This is supported by six independent sources [14,15], but it constrains the "development-first" framing of carbon markets advocated by some stakeholders in the Global South. The framework does not claim that co-benefits are unimportant --- it claims that they should not inflate integrity scores, because doing so amplifies the adverse selection mechanism the framework is designed to detect.
+
+Third, the framework assumes that additionality is assessable at the project level from publicly available documentation. Additionality counterfactuals are inherently unobservable [6], and our additionality dimension showed only fair inter-rater agreement (*kappa* = 0.243). This limitation is shared by every carbon quality assessment system; it is the fundamental reason that commercial agencies disagree most sharply on projects where additionality is ambiguous.
+
+We also note what the framework does not claim to resolve. Quality rating makes credits more useful as instruments of differentiation, but it does not address the broader critique that offsets delay structural decarbonisation [21]. The framework improves market mechanism design within the VCM; it takes no position on whether the VCM itself is an optimal climate policy instrument.
+
+### Limitations
+
+Five limitations warrant explicit acknowledgment. First, the weight calibration derives from a single research group's judgment informed by literature synthesis rather than from structured expert elicitation. We have identified twenty domain experts for a Best-Worst Scaling consultation; the framework's open architecture (machine-readable JSON rubrics, open-source scoring engine) enables any researcher to substitute alternative weights and recompute every result.
+
+Second, the inter-rater reliability study uses three Claude-family language models rather than human domain experts. While the panel achieves substantial agreement, all three models share training data and alignment procedures, which may produce correlated biases invisible to within-family comparisons. A multi-provider replication incorporating additional model families and human expert panels is necessary.
+
+Third, the credit dataset (318 credits for CCP calibration, 29 for the pilot) is modest compared with the 4,400+ projects rated by MSCI. Resource-intensive expansion is needed to test generalisability across underrepresented project types such as enhanced weathering and ocean alkalinity enhancement.
+
+Fourth, the on-chain implementation is prototype-stage, with a single-owner attestation model. The decentralised multi-rater architecture designed around the Ethereum Attestation Service requires broader ecosystem maturity --- multiple independent raters attesting to the same credits --- before it can replace centralised quality oracles.
+
+Fifth, the registry and methodology dimension showed the weakest inter-rater reliability (*kappa* = 0.168), driven by ambiguity in the original four-tier rubric. The v0.6 simplification to a binary CCP-eligible/non-CCP classification addresses this, but the dimension remains the framework's most vulnerable scoring component.
+
+---
+
+## Methods
+
+### Quality framework specification
+
+The framework evaluates each credit on a 0--100 scale across six active dimensions. Weights reflect the relative importance assigned by the Oxford Offsetting Principles [17] and the ICVCM CCP Assessment Framework [12]: removal type (0.250), additionality (0.200), MRV grade (0.200), permanence (0.175), vintage year (0.100), and registry and methodology (0.075). The seventh dimension, co-benefits, carries zero weight and serves as a safeguards gate: documented community or environmental harm triggers the `communityHarm` disqualifier (grade cap at BBB). This design followed from the convergence of six independent sources establishing that co-benefit narratives inflate perceived quality beyond what carbon integrity warrants [14,15].
+
+The composite score is computed as the weighted linear sum: *C* = sum(*w_i* x *s_i*), where *w_i* is the weight and *s_i* is the per-dimension score. Composites map to letter grades: AAA (>=90), AA (>=75), A (>=60), BBB (>=45), BB (>=30), B (<30). Seven disqualifier conditions impose grade caps: double counting, failed verification, and human rights violations cap at B; sanctioned registry at BB; no third-party verification, community harm, and biodiversity harm [13] at BBB. Disqualifiers are applied after composite scoring and can only lower, never raise, a grade.
+
+Machine-readable rubrics are provided in JSON format. The scoring engine is implemented in Python with no external dependencies.
+
+### Lemons Index definition and computation
+
+The Lemons Index *L*(pool) = 1 - (*mean composite* / 100) quantifies adverse selection severity on the unit interval. We computed *L* for six pool compositions: Toucan BCT (43 credits at 2022 peak), Moss MCO2 (30 credits), Toucan NCT (28 credits), Toucan CHAR (12 credits on Base), Klima 2.0 kVCM (20 credits), and a hypothetical AAA-only pool (13 credits). Each credit was scored using methodology-level archetypes from a 318-credit batch dataset with vintage-year adjustments via a temporal decay formula.
+
+### Distributional uncertainty propagation
+
+Per-dimension standard deviations were calibrated from the empirical inter-rater reliability study: for each dimension, *sigma_i* is approximately equal to the mean absolute pairwise difference across the three-rater panel divided by 1.128 (the Gaussian estimator). Calibrated values range from *sigma* = 4.0 (permanence) to *sigma* = 11.1 (registry and methodology). Under the assumption of independent dimension scores, composite variance is *Var(C)* = sum(*w_i*^2 x *sigma_i*^2). Grade posteriors are computed as P(grade = G) = *Phi*((u_G - mu) / sigma_C) - *Phi*((l_G - mu) / sigma_C), where l_G and u_G are grade boundaries, mu is the composite point estimate, and sigma_C is the composite standard deviation.
+
+### CCP calibration protocol
+
+The 318-credit dataset was classified by ICVCM CCP eligibility: 165 CCP-eligible credits (from CCP-approved methodologies and eligible programmes) and 153 non-CCP credits. Grade distributions were encoded on an ordinal scale (B = 0 through AAA = 5). Five effect size measures were computed: Cohen's *d* (pooled standard deviation), Glass's *delta*, Cliff's *delta* (nonparametric), the common language effect size (CLES), and a Mann-Whitney *U* test with normal-approximation *z*-score. For each measure, 95% confidence intervals were obtained via the percentile bootstrap method with 10,000 resamples (seed = 42).
+
+### Rank correlation methodology
+
+Six REDD+ projects were drawn from Carbon Market Watch [11], which reported simultaneous public ratings from BeZero, Calyx Global, and Sylvera. Each agency's ordinal scale was mapped to a monotonic integer sequence, and each project was scored under our framework. Spearman rank correlations were computed for all pairwise combinations. An additional nine cross-type projects spanning seven methodology categories were compiled from public agency case studies and press releases and correlated against available agency ratings. For the combined dataset, Spearman *rho* was computed with 10,000-resample bootstrap confidence intervals and a two-sided permutation *p*-value.
+
+### Inter-rater reliability study
+
+Three Claude-family models (Opus 4.6, Sonnet 4.6, Haiku 4.5) independently scored 29 credits (25 real-world archetypes plus 4 synthetic stress-test credits) using redacted evidence packs with author grades removed. No inter-rater communication was permitted. We computed Fleiss' *kappa* at the grade level (six categories), per-dimension Fleiss' *kappa* on 10-point-bucketed scores, ICC(2,*k*) on continuous composites, and exact grade agreement between author grades and the panel median. Disqualifier recall was assessed on four synthetic credits with known correct disqualifiers.
+
+### Counterfactual quality-gate simulation
+
+For each pool, we simulated the application of quality gates at all six grade thresholds (B through AAA). At each threshold, a `meetsGrade()` function admitted only credits meeting or exceeding the threshold. We recomputed the number of admitted credits, the new mean composite, and the resulting Lemons Index. This simulation models the counterfactual effect of quality gating on historical pool compositions; it does not predict equilibrium behaviour under prospective deployment.
+
+### Monte Carlo weight sensitivity analysis
+
+We sampled 10,000 weight vectors from a Dirichlet distribution centred on the framework's weights with a concentration parameter of 50 (robustness checks at 20 and 100). The co-benefits weight was fixed at zero. For each sample, all 29 pilot credits were rescored and assigned grades. Global robustness (mean proportion of draws under which a credit's grade remains unchanged) was 93.7% at concentration 50. Five credits with stability below 90% were flagged as fragile; all sat within 3 points of a grade boundary.
+
+### On-chain implementation
+
+Smart contracts were written in Solidity 0.8.24 and tested using the Foundry toolchain. The core contract (`CarbonCreditRating.sol`) stores per-credit ratings containing per-dimension scores, composite score in basis points, composite variance, disqualifier flags, nominal and final grades, methodology version, expiry timestamp, and a keccak256 evidence hash. The `meetsGrade()` view function returns a boolean indicating whether a credit's final grade meets or exceeds a specified minimum, rejecting stale ratings. `QualityGatedPool.sol` calls `meetsGrade()` as a deposit precondition. An EAS adapter enables relay of decentralised attestations from a trusted attester registry, following the pattern established by Hypercerts Foundation and GainForest Ecocerts. Off-chain/on-chain equivalence was validated to produce bit-identical composite scores.
+
+### Data availability
+
+All data, scoring rubrics, analysis scripts, and smart contract source code are available at https://github.com/Adeline117/carbon-neutrality under an MIT licence. The 318-credit methodology batch dataset, 29-credit pilot dataset, LLM panel raw outputs, and rank correlation datasets are included. The ERC-CCQR standard specification is provided at `docs/erc-ccqr.md`.
+
+---
+
+## References
+
+1. MSCI. State of integrity in the global carbon-credit market. MSCI ESG Research (2025).
+2. Integrity Council for the Voluntary Carbon Market. CCP Impact Report. ICVCM (2025).
+3. Calel, R., Colmer, J., Dechezlepretre, A. & Glachant, M. Systematic assessment of the achieved emission reductions of carbon crediting projects. *Nat. Commun.* **15**, 5535 (2024).
+4. Haya, B. K. et al. Are carbon offsets fixable? *Annu. Rev. Environ. Resour.* (2025).
+5. Trencher, G. et al. Demand for low-quality offsets by major companies undermines climate integrity of the voluntary carbon market. *Nat. Commun.* **15**, 10890 (2024).
+6. Coglianese, C. & Giles, C. Auditors can't save carbon offsets. *Science* **389**, 6733 (2025).
+7. Akerlof, G. A. The market for "lemons": quality uncertainty and the market mechanism. *Q. J. Econ.* **84**, 488--500 (1970).
+8. Manshadi, V. H., Monachou, F. & Morgenstern, I. Offsetting carbon with lemons: adverse selection and certification in the voluntary carbon market. SSRN Working Paper (2025).
+9. CarbonPlan. OffsetsDB: a comprehensive database of carbon offset projects. CarbonPlan (2024).
+10. Carbon Credit Quality Initiative. CCQI scoring methodology v3.0. Environmental Defense Fund, WWF & Oeko-Institut (2024).
+11. Carbon Market Watch & Perspectives Climate Group. Assessing and comparing carbon credit rating agencies. Carbon Market Watch Report (2023).
+12. Integrity Council for the Voluntary Carbon Market. The Core Carbon Principles, Assessment Framework and Assessment Procedure. ICVCM (2023).
+13. Zeng, Y. et al. Limitations of carbon markets for biodiversity conservation. *Nat. Rev. Biodivers.* (2026).
+14. Berg, F., Kolbel, J., Pavlova, A. & Rigobon, R. The market for voluntary carbon offsets. SSRN Working Paper (2025).
+15. Oeko-Institut & Calyx Global. Cookstove overcrediting analysis. Oeko-Institut/Calyx Global Research Report (2024).
+16. Calyx Global. Are carbon credit quality indicators delivering? Calyx Global Research Report (2025).
+17. Allen, M. et al. The Oxford Principles for Net Zero Aligned Carbon Offsetting. University of Oxford (2020).
+18. Landis, J. R. & Koch, G. G. The measurement of observer agreement for categorical data. *Biometrics* **33**, 159--174 (1977).
+19. Cabiyo, B. & Field, C. B. Embracing imperfection: carbon offset markets must learn to mitigate the risk of overcrediting. *PNAS Nexus* **4**, pgaf091 (2025).
+20. Singapore National Environment Agency. Carbon rating panel: appointment of BeZero, Calyx Global, and Sylvera under the International Carbon Credit Framework. NEA Regulatory Notice (2025).
+21. Cheong, B. C. The paradox and fallacy of global carbon credits. *Anthropocene Sci.* **4**, 72--83 (2025).
+22. Battocletti, V., Caldwell, L. & Macey, J. The voluntary carbon market: market failures and policy implications. *Colo. Law Rev.* **95**, 889--960 (2024).
+23. West, T. A. P., Borner, J., Sills, E. O. & Kontoleon, A. Overstated carbon emission reductions from voluntary REDD+ projects in the Brazilian Amazon. *Science* **381**, 873--877 (2023).
+24. Garcia, A. & Sanford, L. On the potential for strategic behaviour in jurisdictional REDD+. *Proc. Natl Acad. Sci. USA* **123**, e2531612123 (2026).
+25. Huber, R., Bach, V. & Finkbeiner, M. A systematic review of quality criteria and their assessment in carbon crediting. *J. Environ. Manage.* **370**, 122693 (2024).
+26. Zhou, C. et al. Harnessing Web3 on carbon offset market for sustainability: framework and a case study. *IEEE Wirel. Commun.* **30**, 104--111 (2023).
+27. Gao, Y. & Liu, Z. CATchain-R: a blockchain-based carbon registry platform with credibility index. *npj Clim. Action* **5**, 12 (2026).
+28. Jaffer, J. et al. Global, robust and comparable digital carbon assets: PACT carbon stablecoin. In *Proc. IEEE International Conference on Blockchain and Cryptocurrency (ICBC)* 1--9 (IEEE, 2024).
+29. Sylvera. State of Carbon Credits 2025: From Volume to Value. Sylvera Research Report (2025).
+30. Fleiss, J. L. Measuring nominal scale agreement among many raters. *Psychol. Bull.* **76**, 378--382 (1971).
+31. Shrout, P. E. & Fleiss, J. L. Intraclass correlations: uses in assessing rater reliability. *Psychol. Bull.* **86**, 420--428 (1979).
+32. Cohen, J. *Statistical Power Analysis for the Behavioral Sciences* 2nd edn (Lawrence Erlbaum Associates, 1988).
+33. World Bank. State and Trends of Carbon Pricing 2025. World Bank Group (2025).
+34. Liu, Z. Carbon inequality and price discovery. WFE/SSRN Working Paper (2025).
+35. Gold Standard & ATEC Global. First fully digital cookstove carbon credits issued on Hedera Guardian. Gold Standard Impact Report (2025).
+36. Verra. First credits approved under digital MRV pilot for high-frequency issuance. Verra Registry Announcement (2026).
+37. Bosshard, C. et al. Blockchain-based voluntary carbon market: strategic insights into network structure. *Front. Blockchain* **8**, 1603695 (2025).
+38. Columbia Center on Global Energy Policy. Ahonen, P. et al. How to fully operationalize Article 6 of the Paris Agreement. Columbia University CGEP Report (2025).
+39. Ethereum Attestation Service. EAS: making Ethereum attestations accessible and composable. EAS Documentation (2023).
+40. Fernandez Salguero, R. A. Effectiveness of carbon pricing and compensation instruments: an umbrella review. Preprint at https://arxiv.org/abs/2512.06887 (2025).

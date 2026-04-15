@@ -16,6 +16,7 @@ SRC = ROOT / "data" / "tokenized-pilot" / "credits.json"
 OUT = ROOT / "script" / "seed" / "tokenized_pilot.json"
 
 # Must match ICarbonCreditRating.Disqualifiers field order.
+# v0.6: added biodiversity_harm (7th flag, per Zeng et al. 2026).
 DQ_KEYS = [
     "double_counting",
     "failed_verification",
@@ -23,6 +24,7 @@ DQ_KEYS = [
     "no_third_party",
     "human_rights",
     "community_harm",
+    "biodiversity_harm",
 ]
 
 
