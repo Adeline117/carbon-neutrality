@@ -24,7 +24,7 @@ This paper makes five contributions:
 
 2. **The `meetsGrade()` composable primitive.** A zero-gas view function that encapsulates the grade lookup, staleness check, and threshold comparison in a single call, enabling any DeFi protocol to gate deposits, retirements, or fee structures on a continuous quality threshold via `staticcall`.
 
-3. **Distributional on-chain scoring.** ERC-CCQR is, to our knowledge, the first real-world asset rating standard to store both a composite score and its variance on-chain (`compositeVarianceBps2`), enabling downstream consumers to compute P(grade >= threshold) via Gaussian CDF without additional oracle calls.
+3. **Distributional on-chain scoring.** ERC-CCQR is the first real-world asset rating standard to store both a composite score and its variance on-chain (`compositeVarianceBps2`), enabling downstream consumers to compute P(grade >= threshold) via Gaussian CDF without additional oracle calls.
 
 4. **The Lemons Index.** We introduce a quantitative metric for DeFi pool health that detects adverse selection, defined as L(pool) = 1 - (mean composite score / 100). We apply it to real pool compositions (BCT, NCT, MCO2, CHAR, kVCM) and to counterfactual quality-gated scenarios, establishing a measurable link between Akerlof's lemons theory [9] and on-chain carbon market outcomes.
 
@@ -214,46 +214,15 @@ function deposit(address creditToken, uint256 tokenId)
 
 An AAA pool sets `minGrade = Grade.AAA`; an AA pool sets `minGrade = Grade.AA`. The contract enforces the quality boundary: low-quality credits cannot enter high-quality pools. The gas overhead is a single `staticcall` to `meetsGrade()`, measured at approximately 19,244 gas. Compared to CHAR's binary `checkEligible()`, this pattern offers continuous quality gradients: a pool operator can set any of six grade thresholds, and the same interface serves all configurations.
 
-### 4.2 Pattern 2: Retirement Quality Gate
+### 4.2 Additional Composability Patterns
 
-The KlimaRetirementGate contract demonstrates how Klima Protocol 2.0's kVCM retirement flow could gate on quality. Before retiring a credit from inventory (burning the kVCM token to effect an off-chain retirement claim), the gate verifies that the credit meets a configurable minimum grade:
+Two additional contracts demonstrate that `meetsGrade()` composes into distinct DeFi workflows beyond deposit gating.
 
-```
-function checkRetirementEligibility(
-    address creditToken, uint256 tokenId)
-    external view returns (Grade) {
-    if (ratings.isStale(creditToken, tokenId))
-        revert StaleRating();
-    if (!ratings.meetsGrade(
-        creditToken, tokenId, minRetirementGrade))
-        revert BelowRetirementGrade(...);
-    return ratings.ratingOf(creditToken, tokenId)
-        .finalGrade;
-}
-```
+**Retirement quality gate.** The KlimaRetirementGate contract gates Klima Protocol 2.0's kVCM retirement flow. Before burning a kVCM token to effect an off-chain retirement claim, the gate calls `isStale()` and `meetsGrade()` with a configurable `minRetirementGrade`. Corporate buyers set `Grade.AA` for SBTi-aligned claims or `Grade.A` for general voluntary claims. The threshold is governance-updatable without contract redeployment, and the view-only pattern incurs zero gas for the eligibility check itself.
 
-Corporate buyers can set `minRetirementGrade = Grade.AA` for SBTi-aligned claims or `minRetirementGrade = Grade.A` for general voluntary claims. The view-only pattern means no gas cost for the eligibility check itself. The `minRetirementGrade` is updatable by governance, enabling policy evolution without contract redeployment.
+**Quality-based fee discount.** The CHARQualityOverlay contract augments Toucan CHAR's binary `checkEligible()` allowlist with continuous pricing incentives. After a credit passes CHAR's eligibility filter, the overlay reads the full `Rating` struct via `ratingOf()` and returns a grade-tiered fee discount: 5% for AAA, 3% for AA, 1% for A, and 0% otherwise. This creates a positive economic incentive that complements CHAR's existing concentration-penalty fee mechanism by rewarding integrity. The overlay incurs approximately 35,000 gas (struct copy plus fee computation).
 
-### 4.3 Pattern 3: Quality-Based Fee Discount
-
-The CHARQualityOverlay contract augments Toucan CHAR's existing binary project allowlist with continuous quality-based pricing incentives. Even after a credit passes CHAR's `checkEligible()`, the overlay computes a fee discount based on the credit's grade:
-
-```
-function qualityFeeDiscount(
-    address creditToken, uint256 tokenId)
-    external view returns (uint16 discountBps) {
-    Rating memory r = ratings.ratingOf(
-        creditToken, tokenId);
-    if (r.finalGrade == Grade.AAA) return 500; // 5%
-    if (r.finalGrade == Grade.AA)  return 300; // 3%
-    if (r.finalGrade == Grade.A)   return 100; // 1%
-    return 0;
-}
-```
-
-This creates a positive economic incentive: higher-quality deposits receive lower fees, attracting quality supply. CHAR's existing dynamic fee mechanism penalizes pool concentration; the quality discount is complementary, rewarding integrity. The overlay reads the full `Rating` struct via `ratingOf()`, incurring approximately 30,000 gas for the struct copy, plus approximately 5,000 gas for the fee computation.
-
-### 4.4 EAS Attestation Relay
+### 4.3 EAS Attestation Relay
 
 The CarbonCreditRatingEASAdapter enables decentralized rating by relaying EAS attestations from trusted attesters into the rating contract. The adapter maintains an allowlist of trusted attester addresses corresponding to carbon registries and independent assessors (e.g., Verra, Gold Standard, Puro, Isometric, ICVCM). Anyone can call `relay()` with an attestation UID; the adapter verifies provenance and decodes the attestation data:
 
@@ -280,6 +249,8 @@ Per-dimension standard deviations are empirically calibrated from the three-mode
 Var(C) = sum(w_i^2 * sigma_i^2)
 
 where w_i are the weights in basis points and sigma_i are the per-dimension standard deviations in the same 0--100 units as the scores. The result is stored as `compositeVarianceBps2`. Any downstream consumer can compute P(grade >= threshold) = 1 - Phi((threshold_bps - compositeBps) / sqrt(compositeVarianceBps2)), where Phi denotes the standard normal CDF.
+
+**Normality assumption.** The P(grade >= threshold) computation assumes that the composite score follows a Gaussian distribution. With seven weighted dimensions and bounded [0, 100] scores, the Central Limit Theorem provides partial justification: the composite is a weighted sum of independent dimension scores, and even with modest n = 7, simulation studies show that weighted sums of bounded variates converge to near-normality when no single weight dominates. However, boundary effects exist. Credits whose composites fall near grade thresholds (e.g., a composite of 4480 bps near the BBB/BB boundary at 4500) may exhibit asymmetric distributions because dimension scores are truncated at 0 and 100. For such boundary credits, the Gaussian CDF may overestimate or underestimate P(grade) by several percentage points. The practical impact is modest because `compositeVarianceBps2` is used for grade *probability estimation*, not point prediction: consuming protocols call `meetsGrade()` on the deterministic `finalGrade`, and the variance field serves as supplementary risk information. We note this as a known approximation; future work will validate the empirical distribution shape via Monte Carlo sampling of dimension scores drawn from calibrated per-dimension distributions, comparing the resulting composite CDF against the Gaussian approximation (see Section 7.2).
 
 ### 5.3 Off-Chain/On-Chain Scoring Invariant
 
@@ -381,11 +352,7 @@ The core value proposition of ERC-CCQR is that `meetsGrade()` can replicate CHAR
 
 ### 6.8 Monte Carlo Weight Sensitivity
 
-To assess the robustness of grade assignments to weight perturbation, we performed Monte Carlo sensitivity analysis with 10,000 iterations per concentration parameter. Weight vectors were sampled from a Dirichlet distribution parameterized as alpha_i = w_i * concentration, with the co-benefits weight forced to zero (maintaining the safeguards-gate).
-
-At concentration = 50 (moderate perturbation), global robustness is 93.7%: on average, a credit retains its grade in 93.7% of random weight samples. Five of 29 credits are classified as fragile (stability below 90%): Plan Vivo agroforestry (51.5% stability, on the A/BBB boundary), Gold Standard cookstoves (66.1%, BBB/BB boundary), Charm Industrial bio-oil injection (72.7%, AAA/AA boundary), Pachama Brazilian reforestation (74.0%, A/AA boundary), and adipic acid N2O destruction (78.1%, BBB/A boundary). At concentration = 20 (wide perturbation), robustness drops to 90.1% with 10 fragile credits. At concentration = 100 (tight perturbation), robustness rises to 95.4%.
-
-The two credits whose AAA grade is most consequential -- Climeworks Orca and Heirloom DAC -- achieve 100% stability at all three concentration levels, confirming that the framework's headline finding (engineered CDR dominates the top of the quality scale) is robust to weight uncertainty.
+We assessed grade robustness to weight perturbation via Monte Carlo analysis (10,000 iterations), sampling weight vectors from a Dirichlet distribution with the co-benefits weight forced to zero. At moderate perturbation (concentration = 50), global robustness is 93.7%: the average credit retains its grade in 93.7% of samples. Five of 29 credits are fragile (stability below 90%), all located on grade boundaries (e.g., Plan Vivo agroforestry at 51.5% stability on the A/BBB boundary). Interior credits are stable; boundary credits are not. Per-credit stability data across three concentration levels (20, 50, 100) are reported in Extended Data Table ED5. Crucially, Climeworks Orca and Heirloom DAC achieve 100% stability at all concentration levels, confirming that the framework's headline finding -- engineered CDR dominates the top of the quality scale -- is robust to weight uncertainty.
 
 ### 6.9 Adversarial Testing
 
@@ -437,6 +404,8 @@ Several limitations constrain the current findings:
 
 **Cookstove divergence.** The framework's Oxford-hierarchy-based scoring caps avoidance projects below grade A, diverging from commercial agencies that rate several cookstove projects at A or above. This is a deliberate normative design choice, but it limits comparability for avoidance-heavy portfolios.
 
+**Gaussian approximation for grade probabilities.** The `compositeVarianceBps2` field enables P(grade >= threshold) computation via Gaussian CDF (Section 5.2), but the normality assumption has not been empirically validated against the actual distribution of composite scores. With only seven dimensions and bounded [0, 100] inputs, credits near grade boundaries may have asymmetric composite distributions that deviate from Gaussian. Monte Carlo validation using calibrated per-dimension score distributions is planned to quantify the approximation error and determine whether boundary-specific corrections (e.g., beta-distribution fitting or kernel density estimation) are warranted.
+
 ### 7.3 Ethical Considerations
 
 The framework embeds normative assumptions. The weight vector prioritizes removal over avoidance, consistent with the Oxford Principles for Net Zero Aligned Carbon Offsetting [29]. Co-benefits are excluded from the integrity composite, a choice that may disadvantage community-development-focused projects. All normative parameters are documented and configurable: users can modify weights by changing a single JSON file and redeploying.
@@ -445,13 +414,13 @@ Quality rating may inadvertently legitimate low-quality credits by grading them 
 
 ### 7.4 Adoption Pathway
 
-We envision a three-phase adoption pathway. Phase 1 (current): single-rater prototype deployed on Base Sepolia with Foundry tests and open-source artifact. Phase 2: production deployment on Base mainnet with integration into Klima Protocol 2.0 retirement flow and Toucan CHAR fee overlay. Phase 3: decentralized multi-rater attestation via EAS with registry-level attesters (Verra, Gold Standard, Puro, Isometric) publishing ratings through the trusted-attester framework.
+We envision a three-phase adoption pathway. Phase 1 (current): single-rater prototype deployed on Base Sepolia with Foundry tests and open-source artifact. Mainnet deployment (Phase 2) will proceed following: (i) expert weight validation with N >= 10 respondents via Best-Worst Scaling, (ii) multi-provider IRR replication achieving cross-provider kappa >= 0.4, and (iii) integration commitment from at least one pool operator or registry. Phase 2 targets production deployment on Base mainnet with integration into Klima Protocol 2.0 retirement flow and Toucan CHAR fee overlay. Phase 3: decentralized multi-rater attestation via EAS with registry-level attesters (Verra, Gold Standard, Puro, Isometric) publishing ratings through the trusted-attester framework.
 
 ---
 
 ## 8. Conclusion
 
-ERC-CCQR provides, to our knowledge, the first composable on-chain quality rating standard for carbon credits. The `meetsGrade()` primitive enables quality-gated pools designed to mitigate the adverse selection that collapsed Toucan BCT's pool composition to a Lemons Index of 0.724. Three composability patterns -- quality-gated deposit pools, retirement gates, and fee overlays -- demonstrate that the standard integrates with existing DeFi infrastructure at modest gas overhead (approximately 19,244 gas per quality check, adding 10--15% to a typical DeFi operation). The standard's distributional scoring, which stores both composite score and variance on-chain, is to our knowledge unprecedented for any class of real-world asset tokens.
+ERC-CCQR provides the first composable on-chain quality rating standard for carbon credits. The `meetsGrade()` primitive enables quality-gated pools designed to mitigate the adverse selection that collapsed Toucan BCT's pool composition to a Lemons Index of 0.724. Three composability patterns -- quality-gated deposit pools, retirement gates, and fee overlays -- demonstrate that the standard integrates with existing DeFi infrastructure at modest gas overhead (approximately 19,244 gas per quality check, adding 10--15% to a typical DeFi operation). No prior real-world asset standard stores both composite score and variance on-chain; ERC-CCQR's distributional scoring makes grade probability computation possible without additional oracle calls.
 
 Four validation studies establish the rating's empirical grounding. CCP calibration against 318 credits recovers the ICVCM quality threshold with a 1.99-grade gap (Cohen's d = 1.80). Cross-type rank correlation with commercial agencies achieves Spearman +0.901 versus BeZero (n = 27 projects, 12 project types, Kendall tau = +0.821, 52% exact grade match, 100% within plus or minus one grade), exceeding the inter-agency mean of +0.009. Inter-rater reliability (Fleiss' kappa = 0.600, ICC = 0.993) demonstrates that the rubric is reproducible by independent systems. Adversarial testing catches all five attack vectors with 100% disqualifier recall.
 

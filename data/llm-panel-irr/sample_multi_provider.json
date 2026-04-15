@@ -1,0 +1,242 @@
+{
+  "_comment": "Sample multi-provider LLM scoring template. Replace placeholder scores with actual provider outputs. Each provider may have 1-3 raters (separate model runs). Credit IDs must match data/pilot-scoring/credits.json. Scores are integers 0-100 per dimension. Disqualifiers use the closed set from the rubric.",
+  "providers": [
+    {
+      "provider": "openai",
+      "model": "gpt-5",
+      "scored_at": "2026-04-XX",
+      "raters": [
+        {
+          "rater_id": "gpt5-run1",
+          "credits": [
+            {
+              "id": "C001",
+              "scores": {
+                "removal_type": 97,
+                "additionality": 93,
+                "permanence": 97,
+                "mrv_grade": 90,
+                "vintage_year": 100,
+                "co_benefits": 18,
+                "registry_methodology": 75
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C002",
+              "scores": {
+                "removal_type": 95,
+                "additionality": 90,
+                "permanence": 95,
+                "mrv_grade": 88,
+                "vintage_year": 100,
+                "co_benefits": 22,
+                "registry_methodology": 78
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C004",
+              "scores": {
+                "removal_type": 92,
+                "additionality": 88,
+                "permanence": 93,
+                "mrv_grade": 80,
+                "vintage_year": 100,
+                "co_benefits": 20,
+                "registry_methodology": 75
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C010",
+              "scores": {
+                "removal_type": 35,
+                "additionality": 52,
+                "permanence": 10,
+                "mrv_grade": 48,
+                "vintage_year": 88,
+                "co_benefits": 80,
+                "registry_methodology": 70
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C022",
+              "scores": {
+                "removal_type": 20,
+                "additionality": 22,
+                "permanence": 20,
+                "mrv_grade": 28,
+                "vintage_year": 0,
+                "co_benefits": 18,
+                "registry_methodology": 28
+              },
+              "disqualifiers": [
+                "no_third_party"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider": "google",
+      "model": "gemini-2.5-pro",
+      "scored_at": "2026-04-XX",
+      "raters": [
+        {
+          "rater_id": "gemini-run1",
+          "credits": [
+            {
+              "id": "C001",
+              "scores": {
+                "removal_type": 96,
+                "additionality": 94,
+                "permanence": 96,
+                "mrv_grade": 91,
+                "vintage_year": 100,
+                "co_benefits": 15,
+                "registry_methodology": 82
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C002",
+              "scores": {
+                "removal_type": 94,
+                "additionality": 91,
+                "permanence": 94,
+                "mrv_grade": 89,
+                "vintage_year": 100,
+                "co_benefits": 20,
+                "registry_methodology": 80
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C004",
+              "scores": {
+                "removal_type": 93,
+                "additionality": 87,
+                "permanence": 94,
+                "mrv_grade": 78,
+                "vintage_year": 100,
+                "co_benefits": 25,
+                "registry_methodology": 78
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C010",
+              "scores": {
+                "removal_type": 40,
+                "additionality": 58,
+                "permanence": 8,
+                "mrv_grade": 52,
+                "vintage_year": 88,
+                "co_benefits": 88,
+                "registry_methodology": 72
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C022",
+              "scores": {
+                "removal_type": 18,
+                "additionality": 18,
+                "permanence": 25,
+                "mrv_grade": 22,
+                "vintage_year": 0,
+                "co_benefits": 22,
+                "registry_methodology": 32
+              },
+              "disqualifiers": [
+                "no_third_party"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "provider": "meta",
+      "model": "llama-4-maverick",
+      "scored_at": "2026-04-XX",
+      "raters": [
+        {
+          "rater_id": "llama4-run1",
+          "credits": [
+            {
+              "id": "C001",
+              "scores": {
+                "removal_type": 95,
+                "additionality": 90,
+                "permanence": 96,
+                "mrv_grade": 88,
+                "vintage_year": 100,
+                "co_benefits": 20,
+                "registry_methodology": 70
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C002",
+              "scores": {
+                "removal_type": 93,
+                "additionality": 88,
+                "permanence": 93,
+                "mrv_grade": 85,
+                "vintage_year": 100,
+                "co_benefits": 18,
+                "registry_methodology": 72
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C004",
+              "scores": {
+                "removal_type": 90,
+                "additionality": 85,
+                "permanence": 92,
+                "mrv_grade": 75,
+                "vintage_year": 100,
+                "co_benefits": 18,
+                "registry_methodology": 70
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C010",
+              "scores": {
+                "removal_type": 32,
+                "additionality": 48,
+                "permanence": 12,
+                "mrv_grade": 45,
+                "vintage_year": 88,
+                "co_benefits": 82,
+                "registry_methodology": 68
+              },
+              "disqualifiers": []
+            },
+            {
+              "id": "C022",
+              "scores": {
+                "removal_type": 15,
+                "additionality": 25,
+                "permanence": 18,
+                "mrv_grade": 30,
+                "vintage_year": 0,
+                "co_benefits": 15,
+                "registry_methodology": 25
+              },
+              "disqualifiers": [
+                "no_third_party"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
