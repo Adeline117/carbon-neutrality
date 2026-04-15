@@ -1,0 +1,434 @@
+{
+  "metadata": {
+    "date": "2026-04-14",
+    "n": 27,
+    "bootstrap_resamples": 10000,
+    "permutations": 10000,
+    "seed": 42,
+    "method": "Python standard library (random, math, json)"
+  },
+  "point_estimates": {
+    "spearman_rho": 0.9008,
+    "kendall_tau": 0.821
+  },
+  "bootstrap": {
+    "spearman_rho": {
+      "point_estimate": 0.9008,
+      "bootstrap_se": 0.0452,
+      "ci_95_percentile": [
+        0.7828,
+        0.9589
+      ],
+      "ci_99_percentile": [
+        0.7326,
+        0.9717
+      ],
+      "ci_95_bca": [
+        0.7777,
+        0.958
+      ],
+      "bca_z0": -0.0082,
+      "bca_a": -0.013
+    },
+    "kendall_tau": {
+      "point_estimate": 0.821,
+      "bootstrap_se": 0.0555,
+      "ci_95_percentile": [
+        0.6954,
+        0.9112
+      ],
+      "ci_99_percentile": [
+        0.6399,
+        0.931
+      ]
+    }
+  },
+  "permutation_test": {
+    "spearman_rho": {
+      "observed": 0.9008,
+      "p_value": 0.0,
+      "count_ge_observed": 0,
+      "total_permutations": 10000,
+      "significant_005": true,
+      "significant_001": true,
+      "significant_0001": true
+    },
+    "kendall_tau": {
+      "observed": 0.821,
+      "p_value": 0.0,
+      "count_ge_observed": 0,
+      "total_permutations": 10000
+    },
+    "null_distribution": {
+      "mean": -0.0011,
+      "min": -0.5974,
+      "max": 0.6754
+    }
+  },
+  "leave_one_out": {
+    "full_sample_rho": 0.9008,
+    "loo_rho_min": 0.8885,
+    "loo_rho_max": 0.9215,
+    "loo_rho_mean": 0.9005,
+    "max_absolute_delta": 0.0207,
+    "most_influential_project": "Rimba Raya",
+    "stability_assessment": "GOOD: No single project changes rho by more than 0.05",
+    "projects": [
+      {
+        "index": 16,
+        "id": "EXP29",
+        "name": "Rimba Raya",
+        "our_grade": "B",
+        "bezero_grade": "BB",
+        "rho_without": 0.9215,
+        "delta_rho": 0.0207
+      },
+      {
+        "index": 3,
+        "id": "EXP04",
+        "name": "Envira",
+        "our_grade": "BB",
+        "bezero_grade": "BBB",
+        "rho_without": 0.9136,
+        "delta_rho": 0.0128
+      },
+      {
+        "index": 6,
+        "id": "EXP07",
+        "name": "Climeworks Orca",
+        "our_grade": "AAA",
+        "bezero_grade": "AAA",
+        "rho_without": 0.8885,
+        "delta_rho": -0.0123
+      },
+      {
+        "index": 18,
+        "id": "EXP19",
+        "name": "STRATOS DACCS",
+        "our_grade": "AAA",
+        "bezero_grade": "AAA",
+        "rho_without": 0.8885,
+        "delta_rho": -0.0123
+      },
+      {
+        "index": 19,
+        "id": "EXP20",
+        "name": "Octavia DAC",
+        "our_grade": "AAA",
+        "bezero_grade": "AAA",
+        "rho_without": 0.8885,
+        "delta_rho": -0.0123
+      },
+      {
+        "index": 8,
+        "id": "EXP09",
+        "name": "Exomad Green",
+        "our_grade": "AA",
+        "bezero_grade": "AA",
+        "rho_without": 0.8899,
+        "delta_rho": -0.0109
+      },
+      {
+        "index": 20,
+        "id": "EXP21",
+        "name": "Mati Carbon ERW",
+        "our_grade": "AA",
+        "bezero_grade": "AA",
+        "rho_without": 0.8899,
+        "delta_rho": -0.0109
+      },
+      {
+        "index": 22,
+        "id": "EXP23",
+        "name": "Rebellion H2",
+        "our_grade": "BBB",
+        "bezero_grade": "BB",
+        "rho_without": 0.9079,
+        "delta_rho": 0.0071
+      },
+      {
+        "index": 23,
+        "id": "EXP24",
+        "name": "Rebellion H3",
+        "our_grade": "BBB",
+        "bezero_grade": "BB",
+        "rho_without": 0.9079,
+        "delta_rho": 0.0071
+      },
+      {
+        "index": 24,
+        "id": "EXP25",
+        "name": "Guyana J-REDD+",
+        "our_grade": "BBB",
+        "bezero_grade": "BB",
+        "rho_without": 0.9079,
+        "delta_rho": 0.0071
+      },
+      {
+        "index": 0,
+        "id": "EXP01",
+        "name": "Ecomapua",
+        "our_grade": "BB",
+        "bezero_grade": "C",
+        "rho_without": 0.9073,
+        "delta_rho": 0.0065
+      },
+      {
+        "index": 15,
+        "id": "EXP18",
+        "name": "Kariba",
+        "our_grade": "B",
+        "bezero_grade": "D",
+        "rho_without": 0.8943,
+        "delta_rho": -0.0065
+      },
+      {
+        "index": 26,
+        "id": "EXP27",
+        "name": "Brazil Nut",
+        "our_grade": "BB",
+        "bezero_grade": "C",
+        "rho_without": 0.9073,
+        "delta_rho": 0.0065
+      },
+      {
+        "index": 10,
+        "id": "EXP13",
+        "name": "Rebellion H1",
+        "our_grade": "A",
+        "bezero_grade": "A",
+        "rho_without": 0.8956,
+        "delta_rho": -0.0052
+      },
+      {
+        "index": 21,
+        "id": "EXP22",
+        "name": "Tradewater ODS",
+        "our_grade": "A",
+        "bezero_grade": "A",
+        "rho_without": 0.8956,
+        "delta_rho": -0.0052
+      },
+      {
+        "index": 2,
+        "id": "EXP03",
+        "name": "Mai Ndombe",
+        "our_grade": "BB",
+        "bezero_grade": "BB",
+        "rho_without": 0.9047,
+        "delta_rho": 0.0039
+      },
+      {
+        "index": 14,
+        "id": "EXP17",
+        "name": "Chinese Wind",
+        "our_grade": "B",
+        "bezero_grade": "C",
+        "rho_without": 0.8969,
+        "delta_rho": -0.0039
+      },
+      {
+        "index": 17,
+        "id": "EXP30",
+        "name": "Cordillera Azul",
+        "our_grade": "B",
+        "bezero_grade": "C",
+        "rho_without": 0.8969,
+        "delta_rho": -0.0039
+      },
+      {
+        "index": 12,
+        "id": "EXP15",
+        "name": "Southern Cardamom",
+        "our_grade": "B",
+        "bezero_grade": "B",
+        "rho_without": 0.9045,
+        "delta_rho": 0.0037
+      },
+      {
+        "index": 7,
+        "id": "EXP08",
+        "name": "Novocarbo Rhine",
+        "our_grade": "AA",
+        "bezero_grade": "A",
+        "rho_without": 0.8981,
+        "delta_rho": -0.0027
+      },
+      {
+        "index": 4,
+        "id": "EXP05",
+        "name": "Luangwa",
+        "our_grade": "BB",
+        "bezero_grade": "B",
+        "rho_without": 0.9024,
+        "delta_rho": 0.0016
+      },
+      {
+        "index": 5,
+        "id": "EXP06",
+        "name": "Guanare",
+        "our_grade": "BB",
+        "bezero_grade": "B",
+        "rho_without": 0.9024,
+        "delta_rho": 0.0016
+      },
+      {
+        "index": 11,
+        "id": "EXP14",
+        "name": "Family Forest",
+        "our_grade": "BBB",
+        "bezero_grade": "BBB",
+        "rho_without": 0.9005,
+        "delta_rho": -0.0003
+      },
+      {
+        "index": 1,
+        "id": "EXP02",
+        "name": "Keo Seima",
+        "our_grade": "BBB",
+        "bezero_grade": "A",
+        "rho_without": 0.9006,
+        "delta_rho": -0.0001
+      },
+      {
+        "index": 9,
+        "id": "EXP10",
+        "name": "EcoSafi Cookstove",
+        "our_grade": "BBB",
+        "bezero_grade": "A",
+        "rho_without": 0.9006,
+        "delta_rho": -0.0001
+      },
+      {
+        "index": 13,
+        "id": "EXP16",
+        "name": "Qnergy LFG",
+        "our_grade": "BBB",
+        "bezero_grade": "A",
+        "rho_without": 0.9006,
+        "delta_rho": -0.0001
+      },
+      {
+        "index": 25,
+        "id": "EXP26",
+        "name": "BRCarbon APD",
+        "our_grade": "BBB",
+        "bezero_grade": "A",
+        "rho_without": 0.9006,
+        "delta_rho": -0.0001
+      }
+    ]
+  },
+  "subgroup_analysis": [
+    {
+      "label": "Removal/CDR (DACCS, biochar, ERW)",
+      "n": 9,
+      "spearman_rho": 0.9733,
+      "kendall_tau": 0.9493,
+      "ci_95": [
+        0.8463,
+        1.0
+      ],
+      "bootstrap_se": 0.0469,
+      "perm_p": 0.0003,
+      "projects": [
+        "Climeworks Orca",
+        "Novocarbo Rhine",
+        "Exomad Green",
+        "Rebellion H1",
+        "STRATOS DACCS",
+        "Octavia DAC",
+        "Mati Carbon ERW",
+        "Rebellion H2",
+        "Rebellion H3"
+      ]
+    },
+    {
+      "label": "Avoidance (REDD+, cookstoves, renewables, methane, ODS)",
+      "n": 18,
+      "spearman_rho": 0.8019,
+      "kendall_tau": 0.7013,
+      "ci_95": [
+        0.5443,
+        0.9171
+      ],
+      "bootstrap_se": 0.0978,
+      "perm_p": 0.0,
+      "projects": [
+        "Ecomapua",
+        "Keo Seima",
+        "Mai Ndombe",
+        "Envira",
+        "Luangwa",
+        "Guanare",
+        "EcoSafi Cookstove",
+        "Family Forest",
+        "Southern Cardamom",
+        "Qnergy LFG",
+        "Chinese Wind",
+        "Kariba",
+        "Rimba Raya",
+        "Cordillera Azul",
+        "Tradewater ODS",
+        "Guyana J-REDD+",
+        "BRCarbon APD",
+        "Brazil Nut"
+      ]
+    },
+    {
+      "label": "CCP-eligible subset",
+      "n": 10,
+      "spearman_rho": 0.9677,
+      "kendall_tau": 0.9459,
+      "ci_95": [
+        0.8286,
+        1.0
+      ],
+      "bootstrap_se": 0.049,
+      "perm_p": 0.0002,
+      "projects": [
+        "Climeworks Orca",
+        "Novocarbo Rhine",
+        "Exomad Green",
+        "Rebellion H1",
+        "STRATOS DACCS",
+        "Octavia DAC",
+        "Mati Carbon ERW",
+        "Tradewater ODS",
+        "Rebellion H2",
+        "Rebellion H3"
+      ]
+    },
+    {
+      "label": "Non-CCP subset",
+      "n": 17,
+      "spearman_rho": 0.7753,
+      "kendall_tau": 0.6794,
+      "ci_95": [
+        0.4776,
+        0.9232
+      ],
+      "bootstrap_se": 0.1162,
+      "perm_p": 0.0003,
+      "projects": [
+        "Ecomapua",
+        "Keo Seima",
+        "Mai Ndombe",
+        "Envira",
+        "Luangwa",
+        "Guanare",
+        "EcoSafi Cookstove",
+        "Family Forest",
+        "Southern Cardamom",
+        "Qnergy LFG",
+        "Chinese Wind",
+        "Kariba",
+        "Rimba Raya",
+        "Cordillera Azul",
+        "Guyana J-REDD+",
+        "BRCarbon APD",
+        "Brazil Nut"
+      ]
+    }
+  ]
+}

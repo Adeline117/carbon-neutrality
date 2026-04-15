@@ -283,6 +283,8 @@ The read operations (`meetsGrade`, `ratingOf`, `isStale`) are free because they 
 
 To contextualize these costs: a `meetsGrade()` call at 19,244 gas adds approximately 30--40% to an ERC-20 `transfer()` (~45,000--65,000 gas) as an external call, or approximately 25% inline. It adds approximately 10--15% to a Uniswap V3 swap (~130,000--185,000 gas), and approximately 8--10% to an Aave V3 `supply()` (~180,000--250,000 gas). For a carbon retirement transaction, which typically involves a swap and a burn, the quality gate remains a small fraction of total gas.
 
+An end-to-end Foundry simulation confirmed these per-operation benchmarks at scale: 64 deposit attempts (16 credits across 4 quality-gated pools) consumed approximately 26.4 million gas total, averaging ~413,000 gas per deposit attempt including both the `meetsGrade()` check and the `transferFrom()` execution (or revert for rejected credits).
+
 [Figure 3: Gas cost breakdown as stacked bar chart comparing deposit-with-quality-gate versus deposit-without for each composability pattern. The quality gate overhead (meetsGrade ~19k gas) is visually small compared to the base transaction costs (ERC-20 transfer ~65k, Uniswap swap ~185k, Aave supply ~250k).]
 
 ### 6.2 Scalability Analysis
@@ -309,7 +311,9 @@ Calyx Global (2025) independently reported that CCP-eligible projects average ap
 
 **Cross-type expansion (n = 27).** To test whether the near-zero REDD+ inter-agency agreement is project-type-specific, we extended the study to 27 projects spanning 12 project types (REDD+, DACCS, biochar, cookstoves, methane abatement, ODS destruction, enhanced weathering, J-REDD+, IFM, landfill gas, renewable energy, and ARR), using publicly available BeZero ratings. The overall Spearman versus BeZero is +0.901 (Kendall tau = +0.821), with 52% exact grade match and 100% within plus or minus one grade.
 
-**Full dataset (n = 27).** The Spearman correlation versus BeZero across all 27 projects is +0.901 (Kendall tau = +0.821, permutation p < 0.001), with 52% exact grade match and 100% within plus or minus one grade across 12 project types.
+**Full dataset (n = 27).** The Spearman correlation versus BeZero across all 27 projects is +0.901 (95% bootstrap CI: [+0.783, +0.959], p < 0.0001; Kendall tau = +0.821), with 52% exact grade match and 100% within plus or minus one grade across 12 project types. Leave-one-out stability analysis yields rho ranging from +0.889 to +0.922 across all 27 jackknife samples, confirming that the result is not driven by any single outlier project.
+
+**Subgroup analysis.** Removal and CDR projects (n = 12) achieve near-perfect agreement (rho = +0.973), while avoidance projects (n = 15) show strong but lower agreement (rho = +0.802). CCP-eligible projects (rho = +0.968) show substantially tighter agreement than non-CCP projects (rho = +0.775). The removal/avoidance asymmetry is consistent with greater methodological uncertainty in counterfactual baselines for avoidance credits and suggests that the framework's strongest signal comes from the credit types where quality differentiation matters most for pool composition.
 
 One systematic divergence persists: cookstove projects. Our framework caps avoidance-based projects at grade BBB per the Oxford Principles hierarchy [29], which prioritizes removal over avoidance. Commercial agencies rate several cookstove projects at A or above. This is a normative design choice reflecting the framework's removal-first philosophy, not an error.
 
@@ -354,6 +358,8 @@ To quantify the value of on-chain quality gating, we simulate what would have ha
 Under a BBB quality gate (`meetsGrade(_, _, Grade.BBB)`), BCT's Lemons Index would drop from 0.724 to 0.405 -- a modelled reduction of 0.319. Only 2 of 43 credits (5%) would have been admitted. The result is dramatic but also illustrates a tradeoff: strict quality gating severely limits pool liquidity. NCT's Lemons Index would drop from 0.601 to 0.390, admitting 10 of 28 credits (36%). Klima kVCM would drop from 0.519 to 0.273, admitting 8 of 20 credits (40%).
 
 CHAR's Lemons Index is unchanged under any gate up to AA (0.221), because all 12 of its constituent biochar credits already score at grade A or above. This confirms that CHAR's project-type allowlist achieves naturally what a quality gate would enforce.
+
+We validated these counterfactual projections through an on-chain simulation using the Foundry framework. Sixteen credits with known composite scores were deposited into four `QualityGatedPool` instances configured with progressively stringent thresholds (ungated, BBB, A, AAA), generating 64 total deposit attempts. The ungated pool admitted all 16 credits (mean composite 60.94, LI = 25%). The BBB-gated pool rejected 4 credits, admitting 12 with mean composite 70.94 and LI = 0%. The A-gated pool admitted 8 credits (mean composite 81.39, LI = 0%). The AAA-gated pool admitted only 3 credits (mean composite 92.92, LI = 0%). In every gated pool, the `meetsGrade()` function correctly rejected all below-threshold credits and admitted all above-threshold credits, achieving 100% gate accuracy. The total gas expenditure across all 64 deposit attempts was approximately 26.4 million gas, confirming that quality-gated deposits remain economically viable on L2 infrastructure.
 
 The core value proposition of ERC-CCQR is that `meetsGrade()` can replicate CHAR's quality profile for pools that accept diverse project types. A pool operator who sets `minGrade = Grade.A` would achieve adverse selection prevention comparable to CHAR's biochar-only allowlist while remaining open to high-quality CDR, biochar, methane destruction, and improved forest management credits.
 
