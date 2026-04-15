@@ -52,7 +52,7 @@ All analysis scripts, scoring rubrics, and the 318-credit methodology batch data
 
 ## References
 
-1. [Companion paper reference: open quality framework for carbon credits, submitted to ERL]
+1. Wen, A. An open, distributional quality framework for voluntary carbon credits: validation against regulatory thresholds and commercial ratings. Companion methods paper, submitted to *Environ. Res. Lett.* (2026).
 2. Berg, F., Kolbel, J., Pavlova, A. & Rigobon, R. The market for voluntary carbon offsets. SSRN Working Paper (2025).
 3. Akerlof, G. A. The market for "lemons": quality uncertainty and the market mechanism. *Q. J. Econ.* **84**, 488--500 (1970).
-4. [Companion paper reference: on-chain quality infrastructure, submitted to WWW 2027]
+4. Wen, A. ERC-CCQR: the missing composability primitive for real-world asset quality. Companion systems paper, submitted to *Proc. WWW 2027* (2026).

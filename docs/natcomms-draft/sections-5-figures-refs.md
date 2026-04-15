@@ -122,6 +122,8 @@ Lemons Index (LI), mean composite quality score, number of credits, and percenta
 
 40. Microsoft & Carbon Direct. Criteria for high-quality carbon dioxide removal, 5th edn. Carbon Direct (2025).
 
-41. [Companion paper: open quality framework for carbon credits. Submitted to ERL.]
+41. Wen, A. An open, distributional quality framework for voluntary carbon credits: validation against regulatory thresholds and commercial ratings. Companion methods paper, submitted to *Environ. Res. Lett.* (2026).
 
-42. [Companion paper: on-chain quality infrastructure for tokenized environmental markets. Submitted to WWW 2027.]
+42. Wen, A. ERC-CCQR: the missing composability primitive for real-world asset quality. Companion systems paper, submitted to *Proc. WWW 2027* (2026).
+
+43. Wen, A. The convergence paradox: why six carbon market frameworks chose the same binary trap. Companion perspective, submitted to *Nat. Sustain.* (2026).

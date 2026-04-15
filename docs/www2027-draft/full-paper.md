@@ -24,7 +24,7 @@ We validate the standard against voluntary carbon credits -- the asset class whe
 
 **Documented market failure.** BCT accepted any Verra-registered credit with a post-2008 vintage, treating all eligible credits as worth the same price. Holders of legacy HFC-23 destruction, unverified grassland avoidance, and expired CDM wind credits deposited aggressively; holders of high-quality engineered carbon dioxide removal withheld supply. Not a single credit in BCT's 43-credit composition scored at grade A or above [5, 9]. Toucan's subsequent CHAR pool introduced binary allowlist gating via `checkEligible()`, but binary gating cannot express continuous quality gradients [6]. Klima Protocol 2.0 introduced treasury-level quality selection but still lacks a per-credit gate [7]. Zhou et al. showed that NFT-based models preserve per-credit identity but attach no quality metadata [8].
 
-**Most acute information asymmetry.** Commercial rating agencies -- BeZero, Sylvera, Calyx Global, MSCI -- produce proprietary quality assessments, but the mean inter-agency Spearman rank correlation is +0.009 [13]. The same Amazon REDD+ project received the highest possible rating from one agency and the lowest from another. None provides a smart contract interface. Quality information exists but is off-chain, contradictory, and invisible to the protocols that need it most [1, 2, 3].
+**Most acute information asymmetry.** Commercial rating agencies -- BeZero, Sylvera, Calyx Global, MSCI -- produce proprietary quality assessments, but the mean inter-agency Spearman rank correlation is +0.009 [13]. The same Amazon REDD+ project received the highest possible rating from one agency and the lowest from another. None provides a smart contract interface. Quality information exists but is off-chain, contradictory, and invisible to the protocols that need it most [1, 2, 3]. A companion methods paper [52] presents the off-chain quality framework and its validation against CCP and commercial ratings; a companion empirical paper [53] documents depositor-level adverse selection in BCT using the quality scores derived from that framework.
 
 If a composable quality primitive works for carbon credits -- the worst case -- it works for any tokenized real-world asset.
 
@@ -521,3 +521,7 @@ The standard, reference implementation, test suite, scoring engine, and all eval
 [50] Battocletti, V., et al. The voluntary carbon market: Market failures and policy implications. *Colorado Law Review*, 2024.
 
 [51] RMI Centigrade. Carbon crediting data framework: Open-source framework for standardizing carbon credit data. https://centigrade.earth, 2025.
+
+[52] Wen, A. An open, distributional quality framework for voluntary carbon credits: validation against regulatory thresholds and commercial ratings. Companion methods paper, submitted to *Environmental Research Letters* (2026).
+
+[53] Wen, A. Blockchain transparency without quality signals accelerates adverse selection in carbon markets: depositor-level evidence from tokenized credit pools. Companion empirical paper, submitted to *Nature Communications* (2026).

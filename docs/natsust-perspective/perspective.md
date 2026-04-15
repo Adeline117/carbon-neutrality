@@ -71,17 +71,17 @@ The voluntary carbon market channels over $2 billion annually toward climate mit
 5. European Union. Regulation (EU) 2024/3012 establishing a Union certification framework for carbon removals and carbon farming. *Off. J. Eur. Union* L series (2024).
 6. Voluntary Carbon Markets Integrity Initiative. VCMI Claims Code of Practice v2. VCMI (2024).
 7. Calyx Global. Are carbon credit quality indicators delivering? Calyx Global Research Report (2025).
-8. Wen, A. CCP empirical weight validation: 1.99-grade separation on 318 credits. Companion dataset (2026).
-9. Wen, A. Systematic Lemons Index scan: adverse selection severity across 34 VCM pool segments. Companion dataset (2026).
+8. Wen, A. An open, distributional quality framework for voluntary carbon credits: validation against regulatory thresholds and commercial ratings. Companion methods paper, submitted to *Environ. Res. Lett.* (2026).
+9. Wen, A. Systematic Lemons Index scan: adverse selection severity across 34 VCM pool segments. Data from Ref. 8, companion dataset (2026).
 10. MSCI. State of integrity in the global carbon-credit market. MSCI ESG Research (2025).
 11. Akerlof, G. A. The market for "lemons": quality uncertainty and the market mechanism. *Q. J. Econ.* **84**, 488--500 (1970).
 12. Manshadi, V. H., Monachou, F. & Morgenstern, I. Offsetting carbon with lemons: adverse selection and certification in the voluntary carbon market. SSRN Working Paper (2025).
 13. CarbonPlan. OffsetsDB: a comprehensive database of carbon offset projects. CarbonPlan (2024).
-14. Wen, A. Quantifying adverse selection in tokenized carbon credit pools. Companion paper, *Nature Communications* (in preparation).
+14. Wen, A. Blockchain transparency without quality signals accelerates adverse selection in carbon markets: depositor-level evidence from tokenized credit pools. Companion empirical paper, submitted to *Nat. Commun.* (2026).
 15. Carbon Market Watch & Perspectives Climate Group. Assessing and comparing carbon credit rating agencies. Carbon Market Watch Report (2023).
 16. Wen, A. Distributional uncertainty quantification for carbon credit quality ratings. In Ref. 14, Methods.
 17. Cabiyo, B. & Field, C. B. Embracing imperfection: carbon offset markets must learn to mitigate the risk of overcrediting. *PNAS Nexus* **4**, pgaf091 (2025).
-18. Wen, A. Composable quality attestations for tokenized carbon credits. Companion paper, *Proc. WWW 2027* (in preparation).
+18. Wen, A. ERC-CCQR: the missing composability primitive for real-world asset quality. Companion systems paper, submitted to *Proc. WWW 2027* (2026).
 19. Wen, A. Economic impact of quality gating on the voluntary carbon market. Companion analysis (2026).
 20. Ecosystem Marketplace. State of the Voluntary Carbon Market 2025: Meeting the Moment. Ecosystem Marketplace (2025).
 21. Calel, R., Colmer, J., Dechezlepretre, A. & Glachant, M. Systematic assessment of the achieved emission reductions of carbon crediting projects. *Nat. Commun.* **15**, 5535 (2024).

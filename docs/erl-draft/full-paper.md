@@ -126,7 +126,7 @@ Fifth, additionality remains the weakest scoring dimension across all raters (ka
 
 ### 4.3 Future directions
 
-The framework's architecture is designed for iterative improvement. Structured expert elicitation via Best-Worst Scaling will replace literature-derived weight priors with empirically grounded estimates. Multi-provider LLM replication will test whether rubric reproducibility extends beyond Claude-family models. Expansion of the rank correlation dataset to include underrepresented project types (ocean alkalinity enhancement, tidal wetland restoration) will test generalizability at the frontier of carbon removal innovation. This framework has been applied to depositor-level adverse selection analysis in tokenized carbon credit pools (companion paper in preparation), where the Lemons Index serves as the quality metric for measuring pool-level quality degradation.
+The framework's architecture is designed for iterative improvement. Structured expert elicitation via Best-Worst Scaling will replace literature-derived weight priors with empirically grounded estimates. Multi-provider LLM replication will test whether rubric reproducibility extends beyond Claude-family models. Expansion of the rank correlation dataset to include underrepresented project types (ocean alkalinity enhancement, tidal wetland restoration) will test generalizability at the frontier of carbon removal innovation. This framework has been applied to depositor-level adverse selection analysis in tokenized carbon credit pools (companion empirical paper [29] submitted to *Nature Communications*), where the Lemons Index serves as the quality metric for measuring pool-level quality degradation. A companion systems paper [30] (submitted to *Proc. WWW 2027*) implements the framework as a composable on-chain smart contract interface (ERC-CCQR) that enables automated quality gating at the protocol level.
 
 ---
 
@@ -166,3 +166,5 @@ All scoring rubrics, analysis scripts, and data are available at https://github.
 26. Nicholaus, N. et al. Evaluation of carbon credit quality criteria using an interval-valued spherical fuzzy SWARA method. *Environ. Sci. Pollut. Res.* **31**, 48923--48941 (2024).
 27. Zeng, Y. et al. Limitations of carbon markets for biodiversity conservation. *Nat. Rev. Biodivers.* (2026).
 28. BeZero Carbon. BeZero carbon ratings methodology. BeZero Carbon Technical Documentation (2023).
+29. Wen, A. Blockchain transparency without quality signals accelerates adverse selection in carbon markets: depositor-level evidence from tokenized credit pools. Companion empirical paper, submitted to *Nat. Commun.* (2026).
+30. Wen, A. ERC-CCQR: the missing composability primitive for real-world asset quality. Companion systems paper, submitted to *Proc. WWW 2027* (2026).
