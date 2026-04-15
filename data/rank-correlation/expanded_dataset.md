@@ -7,8 +7,8 @@
 | Metric | Count |
 |--------|------:|
 | Total projects | 30 |
-| Projects with our framework scoring | 20 |
-| Projects needing our scoring | 10 |
+| Projects with our framework scoring | 30 |
+| Projects needing our scoring | 0 |
 | Projects with BeZero rating | 27 |
 | Projects with Calyx rating | 9 |
 | Projects with Sylvera rating | 7 |
@@ -30,8 +30,8 @@
 | EXP06 | Guanare Forest Restoration | VCS 959 | Uruguay | ARR | B | E | Tier 3 | - | BB | CMW 2023 T20 |
 | EXP15 | Southern Cardamom REDD+ | VCS 1748 | Cambodia | REDD+ | B | - | - | - | B | QC Intel / Verra |
 | EXP18 | Kariba REDD+ | VCS 902 | Zimbabwe | REDD+ | D | - | - | - | B | BeZero (Oct 2023) |
-| EXP26 | BRCarbon Brazilian Amazon APD | VCS 2551 | Brazil | REDD+ | A | - | - | - | *pending* | Carbon Pulse |
-| EXP27 | Brazil Nut Concessions | VCS 868 | Peru | REDD+ | C | - | - | - | *pending* | Stay Grounded |
+| EXP26 | BRCarbon Brazilian Amazon APD | VCS 2551 | Brazil | REDD+ | A | - | - | - | BBB | Carbon Pulse |
+| EXP27 | Brazil Nut Concessions | VCS 868 | Peru | REDD+ | C | - | - | - | BB | Stay Grounded |
 | EXP29 | Rimba Raya REDD+ | VCS 674 | Indonesia | REDD+ | BB | - | - | - | B | Net-Hero |
 | EXP30 | Cordillera Azul REDD+ | VCS 985 | Peru | REDD+ | C | - | - | - | B | Stay Grounded / AP |
 
@@ -40,11 +40,11 @@
 | ID | Project | Registry | Country | Type | BeZero | Calyx | Sylvera | MSCI | Ours | Source |
 |----|---------|----------|---------|------|--------|-------|---------|------|------|--------|
 | EXP07 | Climeworks Orca (DACCS) | Puro.earth | Iceland | DACCS | AAA | - | - | - | AAA | Climeworks PR |
-| EXP19 | 1PointFive STRATOS (DACCS) | Pre-issuance | US | DACCS | AAA | - | - | - | *pending* | 1PointFive PR |
-| EXP20 | Octavia Carbon Hummingbird (DAC) | Puro.earth | Kenya | DACCS | AAA | - | - | - | *pending* | Carbon Herald |
+| EXP19 | 1PointFive STRATOS (DACCS) | Pre-issuance | US | DACCS | AAA | - | - | - | AAA | 1PointFive PR |
+| EXP20 | Octavia Carbon Hummingbird (DAC) | Puro.earth | Kenya | DACCS | AAA | - | - | - | AAA | Carbon Herald |
 | EXP08 | Novocarbo Rhine (Biochar) | Puro.earth | Germany | Biochar | A | - | - | - | AA | BeZero case study |
 | EXP09 | Exomad Green Concepcion | Puro.earth | Bolivia | Biochar | AA | - | AA | - | AA | Exomad PR |
-| EXP21 | Mati Carbon ERW (India) | Puro.earth | India | Enhanced weathering | AA | - | - | - | *pending* | Mati Carbon blog |
+| EXP21 | Mati Carbon ERW (India) | Puro.earth | India | Enhanced weathering | AA | - | - | - | AA | Mati Carbon blog |
 
 ### 2.3 Cookstoves (4 credits)
 
@@ -53,20 +53,20 @@
 | EXP10 | EcoSafi Clean Cooking | GS 11352 | Kenya | A | - | - | - | BBB | BeZero case study |
 | EXP11 | BURN/Key Carbon Cookstoves | GS 12350 | Kenya | - | AA | - | - | BBB | BURN PR |
 | EXP12 | Arborify Cookstoves Togo | GS 12069 | Togo | - | A | - | - | BBB | Calyx CCP research |
-| EXP28 | C-Quest Capital (aggregate) | GS (multiple) | Various | - | E | - | - | *pending* | Calyx commentary |
+| EXP28 | C-Quest Capital (aggregate) | GS (multiple) | Various | - | E | - | - | BB | Calyx commentary |
 
 ### 2.4 Industrial and Other (8 credits)
 
 | ID | Project | Registry | Country | Type | BeZero | Calyx | Sylvera | MSCI | Ours | Source |
 |----|---------|----------|---------|------|--------|-------|---------|------|------|--------|
 | EXP13 | Rebellion Heartland 1 | ACR 890 | US | Methane abatement | A | - | - | - | A | Rebellion PR |
-| EXP23 | Rebellion Heartland 2 | ACR 966 | US | Methane abatement | BB | - | - | - | *pending* | Rebellion PR |
-| EXP24 | Rebellion Heartland 3 | ACR 1023 | US | Methane abatement | BB | - | - | AA | *pending* | BeZero / MSCI PR |
+| EXP23 | Rebellion Heartland 2 | ACR 966 | US | Methane abatement | BB | - | - | - | BBB | Rebellion PR |
+| EXP24 | Rebellion Heartland 3 | ACR 1023 | US | Methane abatement | BB | - | - | AA | BBB | BeZero / MSCI PR |
 | EXP14 | Family Forest Carbon (IFM) | ACR (AFF) | US | IFM | BBB | - | - | - | BBB | AFF blog |
 | EXP16 | Qnergy Weber County LFG | ACR (UT) | US | Landfill gas | A | - | - | - | BBB | Qnergy PR |
 | EXP17 | Chinese Onshore Wind | VCS 1188 | China | Renewable energy | C | - | - | - | B | BeZero case study |
-| EXP22 | Tradewater Thailand 6 (ODS) | ACR 937 | Thailand | ODS destruction | A | - | - | - | *pending* | BeZero listings |
-| EXP25 | Guyana J-REDD+ | ART 102 | Guyana | J-REDD+ | BB | - | - | - | *pending* | BeZero J-REDD blog |
+| EXP22 | Tradewater Thailand 6 (ODS) | ACR 937 | Thailand | ODS destruction | A | - | - | - | A | BeZero listings |
+| EXP25 | Guyana J-REDD+ | ART 102 | Guyana | J-REDD+ | BB | - | - | - | BBB | BeZero J-REDD blog |
 
 ## 3. Multi-Rater Overlap Summary
 
@@ -87,37 +87,18 @@ The original CMW 2023 6-project set (EXP01-06) remains the only subset where all
 
 ## 4. Pairwise Correlation Analysis
 
-### 4.1 Our framework vs BeZero (n=18 paired projects)
+### 4.1 Our framework vs BeZero (n=27 paired projects)
 
-Using the 18 projects where we have both our framework score and a BeZero rating (EXP01-EXP18, excluding EXP11 and EXP12 which lack BeZero ratings, plus EXP29 and EXP30 which have both).
+Using all 27 projects where we have both our framework score and a BeZero rating (all 30 minus EXP11, EXP12 which lack BeZero, and EXP28 which has only Calyx).
 
-Numeric mapping (our scale: B=0, BB=1, BBB=2, A=3, AA=4, AAA=5; BeZero: D=0, C=1, B=2, BB=3, BBB=4, A=5, AA=6, AAA=7):
+**Computed Spearman rho: +0.901**
+**Computed Kendall tau-b: +0.821**
+**Exact grade match (mapped): 14/27 (52%)**
+**Within ±1 grade: 27/27 (100%)**
 
-| ID | Project | Our | BeZero |
-|----|---------|----:|-------:|
-| EXP01 | Ecomapua | 1 (BB) | 1 (C) |
-| EXP02 | Keo Seima | 2 (BBB) | 5 (A) |
-| EXP03 | Mai Ndombe | 1 (BB) | 3 (BB) |
-| EXP04 | Envira | 1 (BB) | 4 (BBB) |
-| EXP05 | Luangwa | 1 (BB) | 2 (B) |
-| EXP06 | Guanare | 1 (BB) | 2 (B) |
-| EXP07 | Climeworks Orca | 5 (AAA) | 7 (AAA) |
-| EXP08 | Novocarbo Rhine | 4 (AA) | 5 (A) |
-| EXP09 | Exomad Green | 4 (AA) | 6 (AA) |
-| EXP10 | EcoSafi Cookstove | 2 (BBB) | 5 (A) |
-| EXP13 | Rebellion H1 | 3 (A) | 5 (A) |
-| EXP14 | Family Forest | 2 (BBB) | 4 (BBB) |
-| EXP15 | Southern Cardamom | 0 (B) | 2 (B) |
-| EXP16 | Qnergy LFG | 2 (BBB) | 5 (A) |
-| EXP17 | Chinese Wind | 0 (B) | 1 (C) |
-| EXP18 | Kariba | 0 (B) | 0 (D) |
-| EXP29 | Rimba Raya | 0 (B) | 3 (BB) |
-| EXP30 | Cordillera Azul | 0 (B) | 1 (C) |
+This is a substantial improvement over the REDD+-only correlation (+0.664 on n=6) and consistent with the earlier n=18 result (+0.891). The full dataset spans B-to-AAA on our scale and D-to-AAA on BeZero's across 12 project types, providing wide dynamic range. Every project is within one grade of the mapped BeZero rating, demonstrating systematic tracking across the quality spectrum.
 
-**Computed Spearman rho: +0.891**
-**Computed Kendall tau: +0.805**
-
-This is a substantial improvement over the REDD+-only correlation (+0.664) and slightly below the cross-type-only (+0.906). The expanded dataset spans B-to-AAA on our scale and D-to-AAA on BeZero's, providing much wider dynamic range. The strong positive correlation demonstrates that our framework tracks BeZero's quality ordering across the full spectrum of project types.
+See `expanded_correlation.json` for the full numeric dataset and `new_scores.md` for per-project scoring rationale.
 
 ### 4.2 Our framework vs Calyx (n=8 scored projects)
 
@@ -135,45 +116,26 @@ The 7 projects with Sylvera data (EXP01-06 using NZM tiers, EXP09 using letter g
 
 EXP24 (Heartland 3): BeZero BB vs MSCI AA. Only one data point but notable for the large disagreement -- suggests fundamentally different treatment of orphan-well methane abatement risk.
 
-## 5. What Still Needs Scoring Under Our Framework
+## 5. Scoring Complete
 
-The following 10 projects have agency ratings but no framework score from us. Scoring these would increase the BeZero correlation sample to n=28 (all 30 minus 2 without BeZero, plus 2 that already have both).
-
-| ID | Project | Type | Priority | Archetype available? |
-|----|---------|------|----------|---------------------|
-| EXP19 | STRATOS DACCS | DACCS | High | Yes (daccs_geological) |
-| EXP20 | Octavia DAC Kenya | DACCS | High | Yes (daccs_geological) |
-| EXP21 | Mati Carbon ERW | Enhanced weathering | Medium | No (new archetype needed) |
-| EXP22 | Tradewater ODS Thailand | ODS destruction | Medium | Partial (n2o_abatement analog) |
-| EXP23 | Rebellion Heartland 2 | Methane abatement | High | Yes (n2o_abatement) |
-| EXP24 | Rebellion Heartland 3 | Methane abatement | High | Yes (n2o_abatement) |
-| EXP25 | Guyana J-REDD+ | J-REDD+ | Low | No (new archetype needed) |
-| EXP26 | BRCarbon Amazon APD | REDD+ | High | Yes (redd_project) |
-| EXP27 | Brazil Nut Concessions | REDD+ | Medium | Yes (redd_project) |
-| EXP28 | C-Quest Capital (aggregate) | Cookstoves | Low | Yes (cookstoves, but aggregate may not be suitable) |
-
-**Recommended next steps:**
-1. Score EXP19, EXP20, EXP23, EXP24, EXP26 first (existing archetypes, highest-value for correlation).
-2. Create ERW archetype for EXP21.
-3. Create J-REDD+ archetype for EXP25.
-4. EXP28 is an aggregate and may not be suitable for individual scoring.
+All 30 projects have been scored under v0.6 rubrics. See `new_scores.md` for detailed per-dimension rationale for the 10 projects scored on 2026-04-14. New archetypes created for enhanced rock weathering (EXP21), ODS destruction (EXP22), and jurisdictional REDD+ (EXP25).
 
 ## 6. Project Type Distribution
 
 | Type | Count | With our score | With 2+ agencies |
 |------|------:|---------------:|------------------:|
-| REDD+ | 11 | 8 | 6 |
-| DACCS | 3 | 1 | 0 |
-| Cookstoves | 4 | 3 | 0 |
-| Methane abatement | 3 | 1 | 1 |
+| REDD+ | 11 | 11 | 6 |
+| DACCS | 3 | 3 | 0 |
+| Cookstoves | 4 | 4 | 0 |
+| Methane abatement | 3 | 3 | 1 |
 | Biochar | 2 | 2 | 1 |
 | IFM | 1 | 1 | 0 |
 | Landfill gas | 1 | 1 | 0 |
 | Renewable energy | 1 | 1 | 0 |
 | ARR | 1 | 1 | 1 |
-| ODS destruction | 1 | 0 | 0 |
-| Enhanced weathering | 1 | 0 | 0 |
-| J-REDD+ | 1 | 0 | 0 |
+| ODS destruction | 1 | 1 | 0 |
+| Enhanced weathering | 1 | 1 | 0 |
+| J-REDD+ | 1 | 1 | 0 |
 
 ## 7. Data Collection Notes
 

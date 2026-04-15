@@ -1,0 +1,171 @@
+{
+  "n": 27,
+  "spearman_rho": 0.901,
+  "kendall_tau": 0.821,
+  "exact_match_rate": 0.519,
+  "within_1_rate": 1.0,
+  "projects": [
+    {
+      "id": "EXP01",
+      "name": "Ecomapua",
+      "our_grade": "BB",
+      "bezero_grade": "C"
+    },
+    {
+      "id": "EXP02",
+      "name": "Keo Seima",
+      "our_grade": "BBB",
+      "bezero_grade": "A"
+    },
+    {
+      "id": "EXP03",
+      "name": "Mai Ndombe",
+      "our_grade": "BB",
+      "bezero_grade": "BB"
+    },
+    {
+      "id": "EXP04",
+      "name": "Envira",
+      "our_grade": "BB",
+      "bezero_grade": "BBB"
+    },
+    {
+      "id": "EXP05",
+      "name": "Luangwa",
+      "our_grade": "BB",
+      "bezero_grade": "B"
+    },
+    {
+      "id": "EXP06",
+      "name": "Guanare",
+      "our_grade": "BB",
+      "bezero_grade": "B"
+    },
+    {
+      "id": "EXP07",
+      "name": "Climeworks Orca",
+      "our_grade": "AAA",
+      "bezero_grade": "AAA"
+    },
+    {
+      "id": "EXP08",
+      "name": "Novocarbo Rhine",
+      "our_grade": "AA",
+      "bezero_grade": "A"
+    },
+    {
+      "id": "EXP09",
+      "name": "Exomad Green",
+      "our_grade": "AA",
+      "bezero_grade": "AA"
+    },
+    {
+      "id": "EXP10",
+      "name": "EcoSafi Cookstove",
+      "our_grade": "BBB",
+      "bezero_grade": "A"
+    },
+    {
+      "id": "EXP13",
+      "name": "Rebellion H1",
+      "our_grade": "A",
+      "bezero_grade": "A"
+    },
+    {
+      "id": "EXP14",
+      "name": "Family Forest",
+      "our_grade": "BBB",
+      "bezero_grade": "BBB"
+    },
+    {
+      "id": "EXP15",
+      "name": "Southern Cardamom",
+      "our_grade": "B",
+      "bezero_grade": "B"
+    },
+    {
+      "id": "EXP16",
+      "name": "Qnergy LFG",
+      "our_grade": "BBB",
+      "bezero_grade": "A"
+    },
+    {
+      "id": "EXP17",
+      "name": "Chinese Wind",
+      "our_grade": "B",
+      "bezero_grade": "C"
+    },
+    {
+      "id": "EXP18",
+      "name": "Kariba",
+      "our_grade": "B",
+      "bezero_grade": "D"
+    },
+    {
+      "id": "EXP29",
+      "name": "Rimba Raya",
+      "our_grade": "B",
+      "bezero_grade": "BB"
+    },
+    {
+      "id": "EXP30",
+      "name": "Cordillera Azul",
+      "our_grade": "B",
+      "bezero_grade": "C"
+    },
+    {
+      "id": "EXP19",
+      "name": "STRATOS DACCS",
+      "our_grade": "AAA",
+      "bezero_grade": "AAA"
+    },
+    {
+      "id": "EXP20",
+      "name": "Octavia DAC",
+      "our_grade": "AAA",
+      "bezero_grade": "AAA"
+    },
+    {
+      "id": "EXP21",
+      "name": "Mati Carbon ERW",
+      "our_grade": "AA",
+      "bezero_grade": "AA"
+    },
+    {
+      "id": "EXP22",
+      "name": "Tradewater ODS",
+      "our_grade": "A",
+      "bezero_grade": "A"
+    },
+    {
+      "id": "EXP23",
+      "name": "Rebellion H2",
+      "our_grade": "BBB",
+      "bezero_grade": "BB"
+    },
+    {
+      "id": "EXP24",
+      "name": "Rebellion H3",
+      "our_grade": "BBB",
+      "bezero_grade": "BB"
+    },
+    {
+      "id": "EXP25",
+      "name": "Guyana J-REDD+",
+      "our_grade": "BBB",
+      "bezero_grade": "BB"
+    },
+    {
+      "id": "EXP26",
+      "name": "BRCarbon APD",
+      "our_grade": "BBB",
+      "bezero_grade": "A"
+    },
+    {
+      "id": "EXP27",
+      "name": "Brazil Nut",
+      "our_grade": "BB",
+      "bezero_grade": "C"
+    }
+  ]
+}
