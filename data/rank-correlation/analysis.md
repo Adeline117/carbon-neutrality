@@ -142,10 +142,36 @@ Other project types (CDR, biochar, industrial avoidance) have much stronger inte
 
 1. **Add the commercial rating comparison to paper §7** as an empirical validation section. Frame it as: after a single targeted fix (v0.4.1 commercial_plantation_arr), our framework's mean rank-correlation agreement with commercial raters is materially stronger than the commercial raters' agreement with each other. This is a specific, defensible empirical claim.
 2. ~~Propose commercial_plantation_arr modifier~~ **done in v0.4.1**.
-3. **Defer to v0.6 a cross-project-type study**: commercial raters agree more on CDR and engineered avoidance than on REDD+. A broader dataset (20+ projects across 5+ types) would test whether our framework's agreement profile changes by project type.
+3. ~~Defer to v0.6 a cross-project-type study~~ **done in v0.6 (cross_type_notes.md)** and **expanded April 2026 (expanded_dataset.md)**.
 4. **Do NOT use commercial rating agreement as a weight calibration target**. The inter-agency baseline on REDD+ is approximately zero, so "calibrate to match" has no signal. Weight calibration should continue via CCQI-style expert elicitation (workstream E questionnaire).
-5. **Add BeZero AAA (Orca) and BeZero D (Kariba) as confirmation anchors in paper §7** — both are single-rater data points (not part of the CMW 2023 multi-rater table) but both are publicly documented and both match our framework's direction (our Orca = AAA, our Kariba = B).
+5. ~~Add BeZero AAA (Orca) and BeZero D (Kariba) as confirmation anchors~~ **done** -- both are now in the scored dataset (EXP07, EXP18).
 6. **Search for other credits warranting `commercial_plantation_arr`**: the adjustment is now in the rubric; v0.5 expert consultation should confirm whether any other credits in either pilot should also carry the flag. Candidates to screen: C009 SE Asian VCS afforestation, C015 VCS afforestation 2018 vintage.
+
+## 7.1 Expanded Dataset (April 2026 update)
+
+The expanded dataset (`expanded_dataset.md`, `expanded_dataset.json`) extends coverage from 6 to **30 projects** across **12 project types**, with agency ratings from BeZero (27 projects), Calyx (9), Sylvera (7), and MSCI (1).
+
+### Key expansion findings
+
+**Sample size.** Of the 30 projects, 20 currently have our framework scores (18 with BeZero overlap). Scoring the remaining 10 (particularly the 6 high-priority credits with existing archetypes) would bring the BeZero correlation dataset to n=28.
+
+**Computed correlation against BeZero (n=18).** Pooling the 6 REDD+ projects (v0.4.1), 11 cross-type projects (v0.6), and the Kariba/Rimba Raya/Cordillera Azul anchors, the Spearman rho against BeZero is **+0.891** (Kendall tau +0.805). This is substantially stronger than the REDD+-only (+0.664) and slightly below the cross-type-only (+0.906) because the combined dataset spans the full quality spectrum from B/D at the bottom to AAA/AAA at the top.
+
+**New project types added.** DACCS (3 projects, all AAA from BeZero), enhanced weathering (Mati Carbon, BeZero AA), ODS destruction (Tradewater, BeZero A), jurisdictional REDD+ (Guyana, BeZero BB), and additional methane abatement credits (Rebellion Heartland 2 and 3).
+
+**New inter-agency disagreement found.** Rebellion Heartland 3 (ACR 1023): BeZero BB vs MSCI AA. This is the first MSCI data point in our dataset and reveals a significant divergence on orphan-well methane abatement.
+
+**Calyx data remains sparse.** 8 of 10 Calyx data points are from the CMW 2023 table (NZM scale). Only 2 new Calyx data points were found publicly (BURN/Key Carbon AA, Arborify A, both cookstoves). Calyx opened its platform publicly in June 2025 but granular ratings remain subscriber-only.
+
+**Sylvera data remains sparse.** Only 1 new Sylvera data point (Exomad Green AA) beyond the CMW 2023 table. Sylvera's project-level ratings are largely behind a paywall.
+
+### Priority actions
+
+1. **Score 5 high-priority pending projects** (STRATOS, Octavia, Heartland 2, Heartland 3, BRCarbon) using existing archetypes.
+2. **Create ERW archetype** for Mati Carbon enhanced weathering.
+3. **Create J-REDD+ archetype** for Guyana jurisdictional REDD+.
+4. **Re-run compute.py** with the expanded dataset once scoring is complete to produce updated Spearman values.
+5. **Report the pooled n=18 (or n=28 once fully scored) Spearman in the paper** alongside the n=6 REDD+-only and n=9 cross-type values. The three-scale story is: REDD+-only shows near-zero inter-agency agreement and our framework matches; cross-type shows strong agreement (+0.906); pooled shows very strong agreement (~+0.87) driven by wide dynamic range.
 
 ## 8. Sources
 
@@ -155,6 +181,20 @@ Other project types (CDR, biochar, industrial avoidance) have much stronger inte
 4. **ICVCM.** CCP approved methodologies list (as of Nov 2025) and Puro.earth CCP-Eligibility announcement.
 5. **Calyx Global.** ICVCM CCP Label Tracker (accessed April 2026).
 6. **MSCI.** 2025 State of Integrity in the Global Carbon-Credit Market. Public summary only; per-project ratings paywalled.
+7. **1PointFive.** "STRATOS Direct Air Capture Facility Earns AAApre Rating from BeZero Carbon" (2025).
+8. **Octavia Carbon.** Carbon Herald: "Octavia Carbon Receives The Highest Possible Rating From BeZero" (2025).
+9. **Mati Carbon.** "2025: A Break-out Year for Mati Carbon" — BeZero AApre rating for enhanced rock weathering.
+10. **Rebellion Energy Solutions.** Press releases for Heartland 1 (BeZero A, Jun 2024), Heartland 2 (BeZero BB, 2025), and Heartland 3 (MSCI AA, Oct 2025).
+11. **Exomad Green.** "Achievement Unlocked: Exomad Green Earns AA Sylvera Rating" (Feb 2025).
+12. **BURN/Key Carbon.** "BURN and Key Carbon Joint Venture Receives Top Calyx Rating" — Calyx AA (2025).
+13. **Calyx Global.** "Controversy and accountability in C-Quest Capital cookstove projects" (2024) — rated 11 C-Quest projects E to D.
+14. **Stay Grounded / Associated Press.** Investigations into REDD+ baseline inflation for Cordillera Azul and Brazil Nut Concessions.
+15. **BeZero Carbon.** Public ratings listings (bezerocarbon.com/ratings/listings, accessed April 2026) — 677+ projects rated.
+16. **BeZero Carbon.** "BeZero Carbon's first J-REDD+ Rating" — Guyana ART102 rated BB (Jul 2025).
+17. **Calyx Global.** "Ratings credits from the first CCP-aligned cookstove project" — Arborify GS 12069 rated A (Nov 2025).
+18. **Carbon Pulse.** "BeZero upgrades Brazilian REDD+ project rating to A" — BRCarbon VCS 2551 (2025).
+
+Full per-project source URLs are recorded in `expanded_dataset.json`.
 
 ## 9. Reproducing this analysis
 

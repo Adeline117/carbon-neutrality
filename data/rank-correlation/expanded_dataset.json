@@ -1,0 +1,550 @@
+{
+  "dataset_version": "2.0.0",
+  "description": "Expanded rank correlation dataset: all publicly documented carbon credit agency ratings collected from press releases, case studies, blog posts, and the CMW 2023 report. Extends the original 6-project CMW Table 20 dataset and 11-project cross-type dataset to 30 credits.",
+  "date_compiled": "2026-04-14",
+  "framework_versions_used": {
+    "redd_plus_cmw": "v0.4.1",
+    "cross_type": "v0.6",
+    "new_additions": "v0.6 (archetype-based, pending full scoring)"
+  },
+  "scale_mappings": {
+    "comment": "Monotonic integer mappings for rank correlation. Higher = better quality on every scale.",
+    "ours": {
+      "B": 0, "BB": 1, "BBB": 2, "A": 3, "AA": 4, "AAA": 5
+    },
+    "bezero": {
+      "D": 0, "C": 1, "B": 2, "BB": 3, "BBB": 4, "A": 5, "AA": 6, "AAA": 7
+    },
+    "calyx": {
+      "E": 0, "E+": 0.5, "D": 1, "D+": 1.5, "C": 2, "C+": 2.5,
+      "B": 3, "B+": 3.5, "A": 4, "A+": 4.5, "AA": 5, "AA+": 5.5, "AAA": 6
+    },
+    "sylvera": {
+      "D": 0, "C": 1, "B": 2, "BB": 3, "BBB": 4, "A": 5, "AA": 6, "AAA": 7,
+      "Tier 3": 0, "Tier 2": 3, "Tier 1": 6
+    },
+    "msci": {
+      "CCC": 0, "B": 1, "BB": 2, "BBB": 3, "A": 4, "AA": 5, "AAA": 6
+    }
+  },
+  "projects": [
+    {
+      "id": "EXP01",
+      "name": "Ecomapua Amazon REDD+",
+      "registry_id": "VCS 1094",
+      "country": "Brazil",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "C",
+        "calyx": "D",
+        "sylvera": "Tier 1"
+      },
+      "our_grade": "BB",
+      "our_version": "v0.4.1",
+      "source": "CMW 2023 Table 20",
+      "source_url": "https://carbonmarketwatch.org/wp-content/uploads/2023/09/PCG_CMW_rating_agencies_final_report_.pdf",
+      "rating_date": "2023-06-02",
+      "notes": "Maximum inter-agency disagreement. Sylvera Tier 1 vs BeZero C vs Calyx D."
+    },
+    {
+      "id": "EXP02",
+      "name": "Keo Seima Wildlife Sanctuary REDD+",
+      "registry_id": "VCS 1650",
+      "country": "Cambodia",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "A",
+        "calyx": "E",
+        "sylvera": "Tier 1"
+      },
+      "our_grade": "BBB",
+      "our_version": "v0.4.1",
+      "source": "CMW 2023 Table 20",
+      "source_url": "https://carbonmarketwatch.org/wp-content/uploads/2023/09/PCG_CMW_rating_agencies_final_report_.pdf",
+      "rating_date": "2023-06-02",
+      "notes": "Three-grade-band gap between BeZero A and Calyx E."
+    },
+    {
+      "id": "EXP03",
+      "name": "Mai Ndombe REDD+",
+      "registry_id": "VCS 394",
+      "country": "DRC",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "BB",
+        "calyx": "E",
+        "sylvera": "Tier 2"
+      },
+      "our_grade": "BB",
+      "our_version": "v0.4.1",
+      "source": "CMW 2023 Table 20",
+      "source_url": "https://carbonmarketwatch.org/wp-content/uploads/2023/09/PCG_CMW_rating_agencies_final_report_.pdf",
+      "rating_date": "2023-06-02",
+      "notes": "World's largest VCS REDD+ by area. Wildlife Works developer."
+    },
+    {
+      "id": "EXP04",
+      "name": "Envira Amazonia Project",
+      "registry_id": "VCS 1382",
+      "country": "Brazil",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "BBB",
+        "calyx": "E",
+        "sylvera": "Tier 2"
+      },
+      "our_grade": "BB",
+      "our_version": "v0.4.1",
+      "source": "CMW 2023 Table 20",
+      "source_url": "https://carbonmarketwatch.org/wp-content/uploads/2023/09/PCG_CMW_rating_agencies_final_report_.pdf",
+      "rating_date": "2023-06-02",
+      "notes": "JRA Agropecuaria developer. BeZero BBB is the agency outlier."
+    },
+    {
+      "id": "EXP05",
+      "name": "Luangwa Community Forests Project",
+      "registry_id": "VCS (Zambia)",
+      "country": "Zambia",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "B",
+        "calyx": "E",
+        "sylvera": "Tier 2"
+      },
+      "our_grade": "BB",
+      "our_version": "v0.4.1",
+      "source": "CMW 2023 Table 20",
+      "source_url": "https://carbonmarketwatch.org/wp-content/uploads/2023/09/PCG_CMW_rating_agencies_final_report_.pdf",
+      "rating_date": "2023-06-02",
+      "notes": "Community-based REDD+. BioCarbon Partners."
+    },
+    {
+      "id": "EXP06",
+      "name": "Guanare Forest Restoration Project",
+      "registry_id": "VCS 959",
+      "country": "Uruguay",
+      "project_type": "ARR",
+      "agency_ratings": {
+        "bezero": "B",
+        "calyx": "E",
+        "sylvera": "Tier 3"
+      },
+      "our_grade": "BB",
+      "our_version": "v0.4.1",
+      "source": "CMW 2023 Table 20",
+      "source_url": "https://carbonmarketwatch.org/wp-content/uploads/2023/09/PCG_CMW_rating_agencies_final_report_.pdf",
+      "rating_date": "2023-06-02",
+      "notes": "Commercial eucalyptus plantation ARR. Our v0.4.1 applied commercial_plantation_arr adjustment."
+    },
+    {
+      "id": "EXP07",
+      "name": "Climeworks Orca (DACCS Iceland)",
+      "registry_id": "Puro.earth",
+      "country": "Iceland",
+      "project_type": "DACCS",
+      "agency_ratings": {
+        "bezero": "AAA"
+      },
+      "our_grade": "AAA",
+      "our_version": "v0.6",
+      "source": "Climeworks press release; BeZero first-ever AAA rating (Aug 2024)",
+      "source_url": "https://climeworks.com/news/climeworks-receives-first-ever-aaa-rating-from-bezero-carbon",
+      "rating_date": "2024-08",
+      "notes": "BeZero's first-ever AAA. DACCS with geological storage via CarbFix mineralization, powered by geothermal."
+    },
+    {
+      "id": "EXP08",
+      "name": "Novocarbo Carbon Removal Site Rhine",
+      "registry_id": "Puro.earth P643002406801000343",
+      "country": "Germany",
+      "project_type": "Biochar",
+      "agency_ratings": {
+        "bezero": "A"
+      },
+      "our_grade": "AA",
+      "our_version": "v0.6",
+      "source": "BeZero first-ever biochar rating (Dec 2023); BeZero Novocarbo case study",
+      "source_url": "https://bezerocarbon.com/case-studies/novocarbo",
+      "rating_date": "2023-12",
+      "notes": "BeZero's first-ever biochar rating. PYREG pyrolysis of wood/fruit-stone residues. Surplus heat to district heating."
+    },
+    {
+      "id": "EXP09",
+      "name": "Exomad Green Concepcion (Biochar Bolivia)",
+      "registry_id": "Puro.earth",
+      "country": "Bolivia",
+      "project_type": "Biochar",
+      "agency_ratings": {
+        "bezero": "AA",
+        "sylvera": "AA"
+      },
+      "our_grade": "AA",
+      "our_version": "v0.6",
+      "source": "Exomad Green press release (Feb 2025); Senken biochar guide",
+      "source_url": "https://www.exomadgreen.com/post/achievement-unlocked-exomad-green-earns-aa-sylvera-rating",
+      "rating_date": "2025-02",
+      "notes": "World's largest biochar facility. AA from both BeZero and Sylvera. ~260,000 tCO2/yr removed. Three-way agreement (our AA, BeZero AA, Sylvera AA)."
+    },
+    {
+      "id": "EXP10",
+      "name": "EcoSafi Clean Cooking (Kenya)",
+      "registry_id": "GS 11352",
+      "country": "Kenya",
+      "project_type": "Cookstoves",
+      "agency_ratings": {
+        "bezero": "A"
+      },
+      "our_grade": "BBB",
+      "our_version": "v0.6",
+      "source": "BeZero case study; Carbon Herald (May 2024)",
+      "source_url": "https://bezerocarbon.com/case-studies/ecosafi",
+      "rating_date": "2024-05",
+      "notes": "BeZero's highest-ever cookstove rating. Only A-rated cookstove globally (as of Dec 2024). IoT monitoring via Gold Standard Metered methodology."
+    },
+    {
+      "id": "EXP11",
+      "name": "BURN / Key Carbon Global Cookstoves (Kenya)",
+      "registry_id": "GS 12350",
+      "country": "Kenya",
+      "project_type": "Cookstoves",
+      "agency_ratings": {
+        "calyx": "AA"
+      },
+      "our_grade": "BBB",
+      "our_version": "v0.6",
+      "source": "BURN press release; Calyx CCP cookstove research (2025)",
+      "source_url": "https://www.burnstoves.com/media/newsroom/newsroom-13",
+      "rating_date": "2025",
+      "notes": "Calyx AA rating. Among first CCP-labelled cookstove carbon projects. Distributes Kuniokoa improved woodstoves."
+    },
+    {
+      "id": "EXP12",
+      "name": "Arborify Cookstoves Togo",
+      "registry_id": "GS 12069",
+      "country": "Togo",
+      "project_type": "Cookstoves",
+      "agency_ratings": {
+        "calyx": "A"
+      },
+      "our_grade": "BBB",
+      "our_version": "v0.6",
+      "source": "Calyx Global CCP cookstove research; Arborify blog (Nov 2025)",
+      "source_url": "https://calyxglobal.com/research-hub/research/ratings-credits-from-the-first-ccp-aligned-cookstove-project/",
+      "rating_date": "2025-11",
+      "notes": "First improved cookstove project (excl. metered) to receive Calyx A. 250,000 stoves over 5 years in Togo."
+    },
+    {
+      "id": "EXP13",
+      "name": "Rebellion Energy Heartland 1 Methane Abatement",
+      "registry_id": "ACR 890",
+      "country": "United States",
+      "project_type": "Methane abatement",
+      "agency_ratings": {
+        "bezero": "A"
+      },
+      "our_grade": "A",
+      "our_version": "v0.6",
+      "source": "Rebellion press release (Jun 2024); BeZero",
+      "source_url": "https://rebellionenergy.com/bezero-carbon-a-rating/",
+      "rating_date": "2024-06",
+      "notes": "First ACR credits for orphan well plugging. BeZero A = top 6% of all rated projects. 80,792 tCO2e."
+    },
+    {
+      "id": "EXP14",
+      "name": "Family Forest Carbon Program (US IFM)",
+      "registry_id": "ACR (AFF)",
+      "country": "United States",
+      "project_type": "IFM",
+      "agency_ratings": {
+        "bezero": "BBB"
+      },
+      "our_grade": "BBB",
+      "our_version": "v0.6",
+      "source": "American Forest Foundation blog (Nov 2024)",
+      "source_url": "https://www.forestfoundation.org/why-we-do-it/family-forest-blog/family-forest-carbon-program-receives-bbbe-rating-from-carbon-ratings-agency/",
+      "rating_date": "2024-11",
+      "notes": "BeZero BBBe rating (e = ex ante). Highest of BeZero's public US IFM ratings at the time."
+    },
+    {
+      "id": "EXP15",
+      "name": "Southern Cardamom REDD+ (Cambodia)",
+      "registry_id": "VCS 1748",
+      "country": "Cambodia",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "B"
+      },
+      "our_grade": "B",
+      "our_version": "v0.6",
+      "source": "QC Intel; Verra reinstatement notice",
+      "source_url": "https://verra.org/verra-reinstates-southern-cardamom-redd-project/",
+      "rating_date": "2023",
+      "notes": "BeZero B with rating watch. Human Rights Watch allegations triggered Verra suspension. Our human_rights disqualifier caps at B."
+    },
+    {
+      "id": "EXP16",
+      "name": "Qnergy Weber County Landfill Methane",
+      "registry_id": "ACR (Weber County, UT)",
+      "country": "United States",
+      "project_type": "Landfill gas",
+      "agency_ratings": {
+        "bezero": "A"
+      },
+      "our_grade": "BBB",
+      "our_version": "v0.6",
+      "source": "Qnergy press release (Oct 2025)",
+      "source_url": "https://qnergy.com/2025/10/09/a-rated-carbon-credits-generated-from-methane-mitigation-project-at-weber-county-landfill/",
+      "rating_date": "2025-10",
+      "notes": "BeZero A for landfill methane using TORCH4 Stirling engine. Our BBB reflects avoidance permanence penalty."
+    },
+    {
+      "id": "EXP17",
+      "name": "Chinese Onshore Wind (VCS 1188)",
+      "registry_id": "VCS 1188",
+      "country": "China",
+      "project_type": "Renewable energy",
+      "agency_ratings": {
+        "bezero": "C"
+      },
+      "our_grade": "B",
+      "our_version": "v0.6",
+      "source": "BeZero renewable energy rating case study",
+      "source_url": "https://bezerocarbon.com/insights/building-bespoke-datasets-to-rate-renewable-projects",
+      "rating_date": "2024",
+      "notes": "BeZero used VCS 1188 as case study. 49.3 MW wind in China. ICVCM rejected grid-connected renewables."
+    },
+    {
+      "id": "EXP18",
+      "name": "Kariba REDD+ (Zimbabwe)",
+      "registry_id": "VCS 902",
+      "country": "Zimbabwe",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "D"
+      },
+      "our_grade": "B",
+      "our_version": "v0.5",
+      "source": "BeZero downgrade (Oct 2023), then delisted",
+      "source_url": "https://bezerocarbon.com/insights/kariba-redd-downgrade-to-d-and-delist",
+      "rating_date": "2023-10",
+      "notes": "BeZero downgraded BBB -> D, then delisted entirely. Verra placed on hold. Sylvera found 75-90% baseline overstatement. Our B reflects lowest viable grade. Directional agreement."
+    },
+    {
+      "id": "EXP19",
+      "name": "1PointFive STRATOS DAC (Texas)",
+      "registry_id": "N/A (pre-issuance)",
+      "country": "United States",
+      "project_type": "DACCS",
+      "agency_ratings": {
+        "bezero": "AAA"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "1PointFive press release (2025)",
+      "source_url": "https://www.1pointfive.com/news/stratos-direct-air-capture-facility-earns-aaa-pre-rating-from-bezero-carbon",
+      "rating_date": "2025",
+      "notes": "BeZero AAApre (pre-rating, ex ante). World's largest planned DAC facility (500,000 t/yr). Occidental subsidiary. Geological storage in Texas. Our scoring: pending (expected AAA based on DACCS archetype)."
+    },
+    {
+      "id": "EXP20",
+      "name": "Octavia Carbon Project Hummingbird (DAC Kenya)",
+      "registry_id": "Puro.earth",
+      "country": "Kenya",
+      "project_type": "DACCS",
+      "agency_ratings": {
+        "bezero": "AAA"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "Carbon Herald (2025)",
+      "source_url": "https://carbonherald.com/octavia-carbon-receives-the-highest-possible-rating-from-bezero/",
+      "rating_date": "2025",
+      "notes": "BeZero AAA. Second-ever AAA rating after Climeworks. First commercial DAC plant on African continent. Geothermal-powered. Our scoring: pending (expected AAA based on DACCS archetype)."
+    },
+    {
+      "id": "EXP21",
+      "name": "Mati Carbon Enhanced Rock Weathering (India)",
+      "registry_id": "Puro.earth (pending)",
+      "country": "India",
+      "project_type": "Enhanced weathering",
+      "agency_ratings": {
+        "bezero": "AA"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "Mati Carbon blog (2025)",
+      "source_url": "https://www.mati.earth/2025-a-break-out-year-for-mati-carbon/",
+      "rating_date": "2025",
+      "notes": "BeZero AApre. Highest climate credibility score for an Indian climate tech project. Enhanced rock weathering on farms. Our scoring: pending (no ERW archetype yet; expected AA based on permanence and MRV profile)."
+    },
+    {
+      "id": "EXP22",
+      "name": "Tradewater Thailand 6 (ODS Destruction)",
+      "registry_id": "ACR 937",
+      "country": "Thailand",
+      "project_type": "ODS destruction",
+      "agency_ratings": {
+        "bezero": "A"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "BeZero public listings page (Apr 2026)",
+      "source_url": "https://bezerocarbon.com/ratings/listings",
+      "rating_date": "2025",
+      "notes": "ODS (refrigerant) destruction project. 120,000+ kg of seized CFCs/HCFCs. CCP-approved methodology. Our scoring: pending (expected A based on industrial avoidance archetype with strong MRV)."
+    },
+    {
+      "id": "EXP23",
+      "name": "Rebellion Energy Heartland 2 Methane Abatement",
+      "registry_id": "ACR 966",
+      "country": "United States",
+      "project_type": "Methane abatement",
+      "agency_ratings": {
+        "bezero": "BB"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "Rebellion press release (2025)",
+      "source_url": "https://rebellionenergy.com/rebellion-energy-solutions-earns-bb-rating-from-bezero-carbon-for-methane-abatement-project/",
+      "rating_date": "2025",
+      "notes": "Same developer as Heartland 1 (A-rated) but rated BB. ~2M verified credits from orphan wells in Oklahoma. Lower rating than H1 may reflect project-specific risk factors."
+    },
+    {
+      "id": "EXP24",
+      "name": "Rebellion Energy Heartland 3 Methane Abatement",
+      "registry_id": "ACR 1023",
+      "country": "United States",
+      "project_type": "Methane abatement",
+      "agency_ratings": {
+        "bezero": "BB",
+        "msci": "AA"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "BeZero public listings (Apr 2026); MSCI press release (Oct 2025)",
+      "source_url": "https://www.prnewswire.com/news-releases/rebellions-heartland-3-project-earns-aa-msci-carbon-project-rating-validating-premium-quality-methane-abatement-credits-302599119.html",
+      "rating_date": "2025-10",
+      "notes": "BeZero BB vs MSCI AA -- significant inter-agency disagreement on same project. ~600,000 tCO2e, 2024 vintage. MSCI rates in top 10% while BeZero rates moderately low. Valuable multi-rater data point."
+    },
+    {
+      "id": "EXP25",
+      "name": "Guyana Jurisdictional REDD+",
+      "registry_id": "ART 102",
+      "country": "Guyana",
+      "project_type": "J-REDD+",
+      "agency_ratings": {
+        "bezero": "BB"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "BeZero J-REDD+ methodology launch (Jul 2025)",
+      "source_url": "https://bezerocarbon.com/insights/bezero-carbon-s-first-j-redd-rating",
+      "rating_date": "2025-07",
+      "notes": "BeZero's first jurisdictional REDD+ rating. ART-TREES credits used by airlines for CORSIA. Our scoring: pending (no J-REDD archetype yet)."
+    },
+    {
+      "id": "EXP26",
+      "name": "BRCarbon Brazilian Amazon APD Grouped Project",
+      "registry_id": "VCS 2551",
+      "country": "Brazil",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "A"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "Carbon Pulse; QC Intel (2025)",
+      "source_url": "https://carbon-pulse.com/375981/",
+      "rating_date": "2025",
+      "notes": "First-ever Verra-registered Latam REDD+ to achieve BeZero A. APD grouped project. Limited additionality risk, low over-crediting risk, reduced non-permanence risk. Our scoring: pending."
+    },
+    {
+      "id": "EXP27",
+      "name": "REDD+ Brazil Nut Concessions (Madre de Dios, Peru)",
+      "registry_id": "VCS 868",
+      "country": "Peru",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "C"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "Stay Grounded report (2024); BeZero public rating",
+      "source_url": "https://stay-grounded.org/exaggerated-emission-savings-and-legal-challenges-the-reality-of-forest-carbon-offsets/",
+      "rating_date": "2024",
+      "notes": "BeZero C. Significant baseline overstatement concerns. Bosques Amazonicos developer. Deforestation in project area doubled after project start."
+    },
+    {
+      "id": "EXP28",
+      "name": "C-Quest Capital Cookstove Projects (aggregate)",
+      "registry_id": "GS (multiple)",
+      "country": "Various (Africa/Asia)",
+      "project_type": "Cookstoves",
+      "agency_ratings": {
+        "calyx": "E"
+      },
+      "our_grade": null,
+      "our_version": null,
+      "source": "Calyx Global commentary on C-Quest Capital (2024)",
+      "source_url": "https://calyxglobal.com/research-hub/commentary/controversy-and-accountability-in-c-quest-capital-cookstove-projects/",
+      "rating_date": "2024",
+      "notes": "Calyx rated 11 C-Quest Capital projects: 60%+ received E or E+, remainder D. High over-crediting risk. fNRB overestimated by ~230%. Not a single project but representative of low-quality cookstove category. Used as aggregate data point."
+    },
+    {
+      "id": "EXP29",
+      "name": "Rimba Raya REDD+ (Indonesia)",
+      "registry_id": "VCS 674",
+      "country": "Indonesia",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "BB"
+      },
+      "our_grade": "B",
+      "our_version": "v0.5",
+      "source": "Net-Hero project listing; BeZero rating as of Sep 2023 (pre-license revocation)",
+      "source_url": "https://www.net-hero.org/project-list/rimba-raya",
+      "rating_date": "2023-09",
+      "notes": "BeZero initially rated AA, subsequently downgraded. License revoked by Indonesian government in 2024 for carbon trading violations. Our B reflects non-permanence risk from regulatory uncertainty. Rating data point may be stale."
+    },
+    {
+      "id": "EXP30",
+      "name": "Cordillera Azul National Park REDD+ (Peru)",
+      "registry_id": "VCS 985",
+      "country": "Peru",
+      "project_type": "REDD+",
+      "agency_ratings": {
+        "bezero": "C"
+      },
+      "our_grade": "B",
+      "our_version": "v0.5",
+      "source": "Stay Grounded investigation; AP investigation; BeZero public rating",
+      "source_url": "https://stay-grounded.org/exaggerated-emission-savings-and-legal-challenges-the-reality-of-forest-carbon-offsets/",
+      "rating_date": "2024",
+      "notes": "BeZero C. AP investigation documented inflated baselines (700% population growth assumption). Used by LATAM, Qantas. Our B reflects severe additionality and baseline concerns. Directional agreement."
+    }
+  ],
+  "summary_statistics": {
+    "total_projects": 30,
+    "projects_with_our_scoring": 20,
+    "projects_needing_our_scoring": 10,
+    "projects_with_bezero": 27,
+    "projects_with_calyx": 9,
+    "projects_with_sylvera": 7,
+    "projects_with_msci": 1,
+    "projects_with_2plus_agencies": 8,
+    "project_types": {
+      "REDD+": 11,
+      "DACCS": 3,
+      "Biochar": 2,
+      "Cookstoves": 4,
+      "Methane abatement": 3,
+      "IFM": 1,
+      "Landfill gas": 1,
+      "Renewable energy": 1,
+      "ARR": 1,
+      "ODS destruction": 1,
+      "Enhanced weathering": 1,
+      "J-REDD+": 1
+    }
+  }
+}

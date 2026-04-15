@@ -65,7 +65,7 @@ carbon-neutrality/
   foundry.toml                       # Foundry config for contracts/
   .env.example                       # Base Sepolia deployment env template
   docs/
-    workshop-paper.md                # Phase 1 workshop paper (v0.4.1)
+    workshop-paper.md                # Phase 1 workshop paper (v0.6 draft, 56 references)
     methodology-gate-v0.4.md         # A2 design note: scoring mechanism decision
     v0.4.1-changelog.md              # Guanaré commercial_plantation_arr patch
     decentralized-rater-design.md    # D design note: rater architecture comparison
@@ -74,6 +74,9 @@ carbon-neutrality/
     v0.4.1-deployment-notes.md       # Base Sepolia addresses + key custody log
     announcement-v0.4.1.md           # Held public announcement draft
     demo/index.html                  # Vanilla HTML Base Sepolia demo (no wallet required)
+    natcomms-draft/                  # Nature Communications submission draft (Q2 2026)
+    natsust-draft/                   # Nature Sustainability submission draft (Q4 2026)
+    www2027-draft/                   # WWW 2027 technical paper draft (Q1 2027)
     api/v0.4.1/                      # Snapshot of deployed contract state (GitHub Pages)
     dimension-definitions.md
     toucan-failure-analysis.md
@@ -84,17 +87,28 @@ carbon-neutrality/
     tokenized-pilot/                 # 14-credit real-tokenized pilot
     rank-correlation/                # BeZero/Calyx/Sylvera rank correlation study (n=6 REDD+)
     llm-panel-irr/                   # v0.5 LLM panel inter-rater reliability study
+    statistical-analysis/            # Weight perturbation analysis (10k Dirichlet samples)
   contracts/
     ICarbonCreditRating.sol          # Interface + shared types (Rating struct with freshness)
     CarbonCreditRating.sol           # Reference rating contract (v0.4 safeguards-gate)
+    CarbonCreditRatingEASAdapter.sol # EAS relay: trusted-attester allowlist, schema/revocation checks
+    IEASMinimal.sol                  # Minimal EAS read interface
     QualityGatedPool.sol             # Example pool that rejects deposits below a minimum grade
     MockCarbonCredit.sol             # Minimal ERC-20 for Base Sepolia demo tokens
+    examples/
+      KlimaRetirementGate.sol        # kVCM retirement quality gate (meetsGrade() before burn)
+      CHARQualityOverlay.sol         # Continuous quality rating + quality-based fee discount
     test/
-      CarbonCreditRating.t.sol       # Foundry tests (12 passing in v0.4)
+      CarbonCreditRating.t.sol       # Core rating contract tests
+      EASAdapter.t.sol               # EAS adapter tests
+      GasBenchmark.t.sol             # Gas cost benchmarks
+      Integration.t.sol              # Integration tests
+                                     # 49 Foundry tests passing in v0.6
   script/
     Deploy.s.sol                     # Deploy CarbonCreditRating + 2 QualityGatedPools
     SeedRatings.s.sol                # Seed 14 MockCarbonCredit + setRating from tokenized pilot
     seed/tokenized_pilot.json        # Regenerate with tools/regen_seed.py
+    register-eas-schema.sh           # Register EAS schema on-chain
     README.md                        # Deployment runbook
   tools/
     snapshot.py                      # Read deployed contract state -> docs/api/v0.4.1/ratings.json
@@ -107,8 +121,8 @@ carbon-neutrality/
 
 **Exploratory** | Target: Late 2026
 
-- **v0.5 (current):** Safeguards-gate scoring + distributional composite (per-dimension uncertainty propagation, P(grade) posteriors). LLM panel IRR study (Fleiss' κ=0.600, ICC=0.993) confirmed C004 Charm's AAA is rater-dependent (0/3 LLMs agree). Rank correlation vs BeZero/Calyx/Sylvera (mean Spearman +0.343). 29-credit illustrative pilot + 16-credit tokenized pilot (incl. Toucan CHAR on Base, Rainbow Standard). 50 references. 20 expert reviewer candidates identified. Base Sepolia deployment infrastructure ready; physical deployment pending user execution.
-- **v0.6 (next):** Expert consultation execution (20 candidates identified), multi-provider LLM panel (GPT-5/Gemini), rubric refinement (registry_methodology κ=0.168 → 2-tier CCP/not-CCP), EAS adapter implementation referencing Hypercerts/Ecocerts, Klima 2.0 composability pilot on Base.
+- **v0.6 (current):** Rubric refinement (registry_methodology 4-tier → 2-tier CCP/not-CCP, scoring space ~1920 → ~40), EAS adapter (CarbonCreditRatingEASAdapter + IEASMinimal, referencing Hypercerts/Ecocerts), KlimaRetirementGate and CHARQualityOverlay composability demos, biodiversityHarm disqualifier (7 total, per Zeng et al. 2026). Weight perturbation analysis complete (10,000 Dirichlet samples, concentration=50). Gas benchmarks measured. 8 Solidity contracts, 49 Foundry tests passing. 56 references (workshop paper) + 53 references (Nat Comms draft). Three-paper submission pipeline: Nature Communications Q2 2026, Nature Sustainability Q4 2026, WWW 2027 Q1 2027. 20 expert reviewer candidates identified. Multi-provider LLM panel and expert consultation staged (infrastructure ready, awaiting API keys and outreach).
+- **v0.5:** Safeguards-gate scoring + distributional composite (per-dimension uncertainty propagation, P(grade) posteriors). LLM panel IRR study (Fleiss' κ=0.600, ICC=0.993) confirmed C004 Charm's AAA is rater-dependent (0/3 LLMs agree). Rank correlation vs BeZero/Calyx/Sylvera (mean Spearman +0.343). 29-credit illustrative pilot + 16-credit tokenized pilot (incl. Toucan CHAR on Base, Rainbow Standard). Base Sepolia deployment infrastructure ready.
 
 ## Try it on Base Sepolia
 

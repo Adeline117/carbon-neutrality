@@ -1,6 +1,6 @@
 # ERC-CCQR: A Composable On-Chain Quality Rating Standard for Carbon Credit DeFi
 
-**Abstract.** Tokenized carbon credit pools have suffered catastrophic adverse selection. Toucan Protocol's Base Carbon Tonne (BCT) pool, which treated all post-2008 Verra credits as fungible, accumulated a Lemons Index of 0.724, indicating that the average deposited credit scored below 28 out of 100, because low-quality credit holders exploited the single-price pool while high-quality holders withheld supply. We present ERC-CCQR, a composable on-chain quality rating standard for carbon credits that prevents this failure mode. The standard's core primitive, `meetsGrade(address creditToken, uint256 tokenId, Grade minGrade) -> bool`, is a zero-gas view function that any DeFi protocol can call to gate deposits, retirements, or fee structures by continuous quality threshold. The rating system scores credits across seven weighted dimensions (removal type 25%, additionality 20%, MRV 20%, permanence 17.5%, vintage 10%, registry 7.5%, safeguards-gate 0%) with distributional uncertainty propagation, producing six-tier letter grades (AAA through B) with posterior grade probability stored on-chain as `compositeVarianceBps2`. We validate the standard against 318 credits, achieving: (i) a 1.99-grade empirical gap between ICVCM CCP-eligible and non-CCP credits (Cohen's d = 1.80, p < 0.001); (ii) cross-type Spearman correlation of +0.906 versus BeZero (n = 9), exceeding the inter-agency mean of +0.009; (iii) LLM panel inter-rater reliability of Fleiss' kappa = 0.600 with ICC(2,k) = 0.993; and (iv) counterfactual Lemons Index reduction from 0.724 (BCT) to 0.405 under a BBB quality gate. We demonstrate three composability patterns -- quality-gated deposit pools, retirement gates, and fee overlays -- with gas costs of approximately 26,000 (meetsGrade view call), 89,000 (setRating write), and 112,000 (batch-4 write) on Base L2. The standard is implemented in Solidity with 14 Foundry tests and an EAS-based decentralized attestation adapter. To our knowledge, ERC-CCQR is the first on-chain standard to provide continuous quality gating with uncertainty quantification for any class of real-world asset tokens.
+**Abstract.** Tokenized carbon credit pools have suffered catastrophic adverse selection. Toucan Protocol's Base Carbon Tonne (BCT) pool, which treated all post-2008 Verra credits as fungible, accumulated a Lemons Index of 0.724, indicating that the average deposited credit scored below 28 out of 100, because low-quality credit holders exploited the single-price pool while high-quality holders withheld supply. We present ERC-CCQR, a composable on-chain quality rating standard for carbon credits that prevents this failure mode. The standard's core primitive, `meetsGrade(address creditToken, uint256 tokenId, Grade minGrade) -> bool`, is a zero-gas view function that any DeFi protocol can call to gate deposits, retirements, or fee structures by continuous quality threshold. The rating system scores credits across seven weighted dimensions (removal type 25%, additionality 20%, MRV 20%, permanence 17.5%, vintage 10%, registry 7.5%, safeguards-gate 0%) with distributional uncertainty propagation, producing six-tier letter grades (AAA through B) with posterior grade probability stored on-chain as `compositeVarianceBps2`. We validate the standard against 318 credits, achieving: (i) a 1.99-grade empirical gap between ICVCM CCP-eligible and non-CCP credits (Cohen's d = 1.80, p < 0.001); (ii) cross-type Spearman correlation of +0.906 versus BeZero (n = 9), exceeding the inter-agency mean of +0.009; (iii) LLM panel inter-rater reliability of Fleiss' kappa = 0.600 with ICC(2,k) = 0.993; and (iv) counterfactual Lemons Index reduction from 0.724 (BCT) to 0.405 under a BBB quality gate. We demonstrate three composability patterns -- quality-gated deposit pools, retirement gates, and fee overlays -- with measured gas costs of 19,244 (meetsGrade view call), 167,720 (setRating cold write), and 30,308 (warm update) on Base L2. The standard is implemented in Solidity with 49 Foundry tests and an EAS-based decentralized attestation adapter. To our knowledge, ERC-CCQR is the first on-chain standard to provide continuous quality gating with uncertainty quantification for any class of real-world asset tokens.
 
 ---
 
@@ -196,7 +196,7 @@ function deposit(address creditToken, uint256 tokenId)
 }
 ```
 
-An AAA pool sets `minGrade = Grade.AAA`; an AA pool sets `minGrade = Grade.AA`. The contract enforces the quality boundary: low-quality credits cannot enter high-quality pools. The gas overhead is a single `staticcall` to `meetsGrade()`, measured at approximately 26,000 gas. Compared to CHAR's binary `checkEligible()`, this pattern offers continuous quality gradients: a pool operator can set any of six grade thresholds, and the same interface serves all configurations.
+An AAA pool sets `minGrade = Grade.AAA`; an AA pool sets `minGrade = Grade.AA`. The contract enforces the quality boundary: low-quality credits cannot enter high-quality pools. The gas overhead is a single `staticcall` to `meetsGrade()`, measured at approximately 19,244 gas. Compared to CHAR's binary `checkEligible()`, this pattern offers continuous quality gradients: a pool operator can set any of six grade thresholds, and the same interface serves all configurations.
 
 ### 4.2 Pattern 2: Retirement Quality Gate
 
@@ -253,7 +253,7 @@ The EAS schema encodes a complete rating as a single ABI-encoded tuple: seven di
 
 The scoring framework evaluates carbon credits across seven dimensions, each scored 0--100 by an authorized rater. The weight vector reflects domain-prioritized calibration: removal type (25%) and additionality (20%) anchor the assessment on the two most consequential quality determinants. MRV grade (20%) reflects the empirical finding that third-party verification is structurally broken -- Coglianese and Giles found that 95 projects that substantially overstated climate benefits all passed VVB audits [28]. Permanence (17.5%) distinguishes durable storage (geological, mineralization) from reversible sequestration (forestry). Vintage year (10%) applies a decay function penalizing stale credits. Registry and methodology (7.5%) encodes CCP eligibility as a binary quality signal, reflecting the v0.6 collapse from a four-tier to a two-tier scheme (CCP-eligible: 75--85; non-CCP: 25--50) driven by the IRR finding that the original four tiers produced only slight inter-rater agreement (kappa = 0.168).
 
-The co-benefits dimension carries zero weight in the composite. Its score is attested as an informational field and used exclusively to determine whether the `communityHarm` disqualifier flag should be set. This safeguards-gate design, introduced in v0.4, prevents narrative washing -- the strategy of inflating co-benefit scores to mask low removal and permanence scores [29].
+The co-benefits dimension carries zero weight in the composite. Its score is attested as an informational field and used exclusively to determine whether the `communityHarm` disqualifier flag should be set. This safeguards-gate design, introduced in v0.4, prevents narrative washing -- the strategy of inflating co-benefit scores to mask low removal and permanence scores [21].
 
 ### 5.2 Distributional Scoring and Uncertainty Quantification
 
@@ -277,19 +277,19 @@ The Python scoring engine (`score.py`) and the Solidity contract produce bit-ide
 
 All gas measurements were obtained on Base Sepolia using Foundry's `forge test --gas-report`.
 
-[Table 2: Gas benchmarks for all ERC-CCQR operations. Columns: Operation, Gas (units), Notes. Rows: setRating (single credit) ~89,000 (cold storage write of 7 dimensions + 7 stds + 7 flags + metadata); meetsGrade (view) ~26,000 (one SLOAD mapping read + staleness check + enum compare); ratingOf (view) ~30,000 (full struct copy to memory); isStale (view) ~8,000 (SLOAD + timestamp compare); batch setRating (4 credits) ~112,000 (amortized warm storage writes); EAS relay ~150,000 (attestation fetch + decode + setRating); QualityGatedPool deposit (including meetsGrade) ~95,000 (meetsGrade + transferFrom).]
+[Table 2: Gas benchmarks for all ERC-CCQR operations (measured via `forge test --gas-report`, Foundry 2025). Columns: Operation, Measured Gas, Notes. Rows: setRating (single credit, cold) 167,720 (7 dimension scores + 7 stds + 7 flags + metadata in fresh slots); setRating (warm update) 30,308 (SSTORE nonzero-to-nonzero); meetsGrade (view) 19,244 (one SLOAD mapping read + staleness check + enum compare); ratingOf (view) 20,823 (full struct copy to memory); isStale (view) 19,057 (SLOAD + timestamp compare); isStale (unrated) 7,097 (early return); EAS relay (happy path) 250,086 (getAttestation + decode + setRating); QualityGatedPool deposit 57,000--162,000 (meetsGrade + transferFrom).]
 
 The read operations (`meetsGrade`, `ratingOf`, `isStale`) are free because they are `view` functions executed via `staticcall`. The quality check adds zero marginal gas cost to any DeFi protocol that already performs token transfers. Write operations (`setRating`) cost less than $0.10 per credit on Base L2 at current gas prices.
 
-To contextualize these costs: a `meetsGrade()` call adds approximately 5--15% to an ERC-20 `transfer()` (~45,000--65,000 gas), approximately 3--7% to a Uniswap V3 swap (~130,000--185,000 gas), and approximately 2--5% to an Aave V3 `supply()` (~180,000--250,000 gas). For a carbon retirement transaction, which typically involves a swap and a burn, the quality gate is a negligible fraction of total gas.
+To contextualize these costs: a `meetsGrade()` call at 19,244 gas adds approximately 30--40% to an ERC-20 `transfer()` (~45,000--65,000 gas) as an external call, or approximately 25% inline. It adds approximately 10--15% to a Uniswap V3 swap (~130,000--185,000 gas), and approximately 8--10% to an Aave V3 `supply()` (~180,000--250,000 gas). For a carbon retirement transaction, which typically involves a swap and a burn, the quality gate remains a small fraction of total gas.
 
-[Figure 3: Gas cost breakdown as stacked bar chart comparing deposit-with-quality-gate versus deposit-without for each composability pattern. The quality gate overhead (meetsGrade ~26k gas) is visually minimal compared to the base transaction costs (ERC-20 transfer ~65k, Uniswap swap ~185k, Aave supply ~250k).]
+[Figure 3: Gas cost breakdown as stacked bar chart comparing deposit-with-quality-gate versus deposit-without for each composability pattern. The quality gate overhead (meetsGrade ~19k gas) is visually small compared to the base transaction costs (ERC-20 transfer ~65k, Uniswap swap ~185k, Aave supply ~250k).]
 
 ### 6.2 Scalability Analysis
 
 Read scalability is O(1) due to Solidity's mapping-based storage architecture. The `meetsGrade()` function performs a constant-time `keccak256` hash of `(creditToken, tokenId)` followed by a single `SLOAD`, regardless of the total number of credits rated. Foundry tests confirm identical gas costs for `meetsGrade()` after 100, 500, and 1,000 pre-existing ratings.
 
-Write scalability is the bottleneck. A full re-rating of 318 credits requires approximately 28 million gas (318 * 89,000); scaling to 1,000 credits requires approximately 89 million gas, achievable within a few blocks on Base. At 100,000 credits, batch operations spread across multiple transactions are required. The methodology-version staleness mechanism manages this gracefully: when the methodology is bumped, all outdated ratings become stale without requiring deletion, and re-rating can proceed incrementally.
+Write scalability is the bottleneck. A full re-rating of 318 credits requires approximately 53 million gas (318 * 167,720 for cold writes); scaling to 1,000 credits requires approximately 168 million gas, achievable within a few blocks on Base. At 100,000 credits, batch operations spread across multiple transactions are required. The methodology-version staleness mechanism manages this gracefully: when the methodology is bumped, all outdated ratings become stale without requiring deletion, and re-rating can proceed incrementally.
 
 ### 6.3 CCP Empirical Calibration
 
@@ -309,15 +309,15 @@ Calyx Global (2025) independently reported that CCP-eligible projects average ap
 
 **Cross-type expansion (n = 9).** To test whether the near-zero REDD+ inter-agency agreement is project-type-specific, we extended the study to 9 cross-type projects spanning carbon dioxide removal (DACCS), biochar, cookstoves, improved forest management, methane abatement, landfill gas, and renewable energy, using publicly available BeZero, Calyx, and Sylvera ratings. The overall cross-type Spearman versus BeZero is +0.906 (Kendall tau = +0.853), with 5 of 9 exact grade matches.
 
-**Combined dataset (n = 15).** Pooling the REDD+ and cross-type projects, the Spearman correlation versus BeZero is +0.913 (95% bootstrap CI: [+0.780, +0.970], permutation p < 0.001) [31]. The combined mean of our correlations with all agencies is +0.755, versus an inter-agency mean of +0.124.
+**Combined dataset (n = 15).** Pooling the REDD+ and cross-type projects, the Spearman correlation versus BeZero is +0.913 (95% bootstrap CI: [+0.780, +0.970], permutation p < 0.001). The combined mean of our correlations with all agencies is +0.755, versus an inter-agency mean of +0.124.
 
-One systematic divergence persists: cookstove projects. Our framework caps avoidance-based projects at grade BBB per the Oxford Principles hierarchy [32], which prioritizes removal over avoidance. Commercial agencies rate several cookstove projects at A or above. This is a normative design choice reflecting the framework's removal-first philosophy, not an error.
+One systematic divergence persists: cookstove projects. Our framework caps avoidance-based projects at grade BBB per the Oxford Principles hierarchy [29], which prioritizes removal over avoidance. Commercial agencies rate several cookstove projects at A or above. This is a normative design choice reflecting the framework's removal-first philosophy, not an error.
 
 ### 6.5 Inter-Rater Reliability
 
 Three Claude-family LLM raters (Opus 4.6, Sonnet 4.6, Haiku 4.5) independently scored all 29 credits (25 real archetypes plus 4 synthetic disqualifier stress tests) using the v0.4.1 rubric with author scores redacted. Per-dimension scores were scored 0--100; composites and grades were computed deterministically by the Python scorer, measuring rubric-interpretation agreement rather than arithmetic agreement.
 
-Grade-level Fleiss' kappa across the three raters is +0.600, at the boundary between moderate and substantial agreement per Landis and Koch [33]. The composite ICC(2,k) is +0.993, indicating near-perfect reliability on the continuous score. The gap between kappa and ICC is informative: small per-dimension disagreements cancel when linearly combined into the composite, consistent with the design in which the composite is a weighted mean of noisy inputs.
+Grade-level Fleiss' kappa across the three raters is +0.600, at the boundary between moderate and substantial agreement per Landis and Koch [32]. The composite ICC(2,k) is +0.993, indicating near-perfect reliability on the continuous score. The gap between kappa and ICC is informative: small per-dimension disagreements cancel when linearly combined into the composite, consistent with the design in which the composite is a weighted mean of noisy inputs.
 
 Author versus panel median agreement is 86% (25/29 exact grade match) and 100% within plus or minus one grade band. Every discrepancy is a single-band adjacent call; no multi-band gaps were observed.
 
@@ -351,11 +351,11 @@ The Lemons Index should be published alongside TVL and APY as a third fundamenta
 
 To quantify the value of on-chain quality gating, we simulate what would have happened if historical pools had applied a `meetsGrade()` check at various thresholds.
 
-Under a BBB quality gate (`meetsGrade(_, _, Grade.BBB)`), BCT's Lemons Index drops from 0.724 to 0.405 -- a reduction of 0.319. Only 2 of 43 credits (5%) would have been admitted. The result is dramatic but also illustrates a tradeoff: strict quality gating severely limits pool liquidity. NCT's Lemons Index drops from 0.601 to 0.390, admitting 10 of 28 credits (36%). Klima kVCM drops from 0.519 to 0.273, admitting 8 of 20 credits (40%).
+Under a BBB quality gate (`meetsGrade(_, _, Grade.BBB)`), BCT's Lemons Index would drop from 0.724 to 0.405 -- a modelled reduction of 0.319. Only 2 of 43 credits (5%) would have been admitted. The result is dramatic but also illustrates a tradeoff: strict quality gating severely limits pool liquidity. NCT's Lemons Index would drop from 0.601 to 0.390, admitting 10 of 28 credits (36%). Klima kVCM would drop from 0.519 to 0.273, admitting 8 of 20 credits (40%).
 
 CHAR's Lemons Index is unchanged under any gate up to AA (0.221), because all 12 of its constituent biochar credits already score at grade A or above. This confirms that CHAR's project-type allowlist achieves naturally what a quality gate would enforce.
 
-The core value proposition of ERC-CCQR is that `meetsGrade()` can replicate CHAR's quality profile for pools that accept diverse project types. A pool operator who sets `minGrade = Grade.A` achieves adverse selection prevention comparable to CHAR's biochar-only allowlist while remaining open to high-quality CDR, biochar, methane destruction, and improved forest management credits.
+The core value proposition of ERC-CCQR is that `meetsGrade()` can replicate CHAR's quality profile for pools that accept diverse project types. A pool operator who sets `minGrade = Grade.A` would achieve adverse selection prevention comparable to CHAR's biochar-only allowlist while remaining open to high-quality CDR, biochar, methane destruction, and improved forest management credits.
 
 ### 6.8 Monte Carlo Weight Sensitivity
 
@@ -377,7 +377,7 @@ Five adversarial credits were designed to exploit specific attack vectors:
 
 4. **Vintage arbitrage.** An ancient credit with inflated dimension scores. The vintage decay function pulls the composite below the target threshold.
 
-5. **Biodiversity destruction.** A monoculture plantation with high carbon removal but documented habitat disturbance. The `biodiversityHarm` disqualifier fires, capping at BBB, per Zeng et al.'s finding that offset projects are associated with a 3.7% increase in habitat disturbance [34].
+5. **Biodiversity destruction.** A monoculture plantation with high carbon removal but documented habitat disturbance. The `biodiversityHarm` disqualifier fires, capping at BBB, per Zeng et al.'s finding that offset projects are associated with a 3.7% increase in habitat disturbance [33].
 
 All five adversarial credits were correctly caught by both the automated framework and the independent LLM panel (5/5 detection rate).
 
@@ -389,7 +389,7 @@ All five adversarial credits were correctly caught by both the automated framewo
 
 The `meetsGrade()` pattern generalizes beyond carbon credits to any tokenized real-world asset requiring quality differentiation. Biodiversity credits, water quality certificates, and renewable energy guarantees of origin all face analogous information asymmetries that could benefit from a composable on-chain quality primitive. The `compositeVarianceBps2` field for uncertainty quantification is applicable to any domain where rating confidence matters, including financial credit ratings and ESG scores.
 
-The insurance industry provides a concrete example of downstream utility. Oka, Howden, Lockton, and WTW have all launched carbon credit insurance products (invalidation, reversal, non-delivery) that consume quality ratings as underwriting inputs [35]. The composite score plus P(grade) posterior is precisely the actuarial input these models require. The quality-to-insurance pipeline theorized by Cabiyo and Field [36] is now commercially operational.
+The insurance industry provides a concrete example of downstream utility. Oka, Howden, Lockton, and WTW have all launched carbon credit insurance products (invalidation, reversal, non-delivery) that consume quality ratings as underwriting inputs [34]. The composite score plus P(grade) posterior is precisely the actuarial input these models require. This aligns with Cabiyo and Field's [35] argument that carbon markets should embrace imperfection through risk management rather than demanding perfection.
 
 ### 7.2 Limitations
 
@@ -409,9 +409,9 @@ Several limitations constrain the current findings:
 
 ### 7.3 Ethical Considerations
 
-The framework embeds normative assumptions. The weight vector prioritizes removal over avoidance, consistent with the Oxford Principles for Net Zero Aligned Carbon Offsetting [32]. Co-benefits are excluded from the integrity composite, a choice that may disadvantage community-development-focused projects. All normative parameters are documented and configurable: users can modify weights by changing a single JSON file and redeploying.
+The framework embeds normative assumptions. The weight vector prioritizes removal over avoidance, consistent with the Oxford Principles for Net Zero Aligned Carbon Offsetting [29]. Co-benefits are excluded from the integrity composite, a choice that may disadvantage community-development-focused projects. All normative parameters are documented and configurable: users can modify weights by changing a single JSON file and redeploying.
 
-Quality rating may inadvertently legitimate low-quality credits by grading them (B-rated) rather than rejecting them entirely. The framework does not resolve the fundamental debate about whether offsets delay structural decarbonization [37].
+Quality rating may inadvertently legitimate low-quality credits by grading them (B-rated) rather than rejecting them entirely. The framework does not resolve the fundamental debate about whether offsets delay structural decarbonization [36].
 
 ### 7.4 Adoption Pathway
 
@@ -421,7 +421,7 @@ We envision a three-phase adoption pathway. Phase 1 (current): single-rater prot
 
 ## 8. Conclusion
 
-ERC-CCQR provides the first composable on-chain quality rating standard for carbon credits. The `meetsGrade()` primitive enables quality-gated pools that prevent the adverse selection that collapsed Toucan BCT's pool composition to a Lemons Index of 0.724. Three composability patterns -- quality-gated deposit pools, retirement gates, and fee overlays -- demonstrate that the standard integrates with existing DeFi infrastructure at negligible gas overhead (approximately 26,000 gas per quality check). The standard's distributional scoring, which stores both composite score and variance on-chain, is to our knowledge unprecedented for any class of real-world asset tokens.
+ERC-CCQR provides, to our knowledge, the first composable on-chain quality rating standard for carbon credits. The `meetsGrade()` primitive enables quality-gated pools designed to mitigate the adverse selection that collapsed Toucan BCT's pool composition to a Lemons Index of 0.724. Three composability patterns -- quality-gated deposit pools, retirement gates, and fee overlays -- demonstrate that the standard integrates with existing DeFi infrastructure at modest gas overhead (approximately 19,244 gas per quality check, adding 10--15% to a typical DeFi operation). The standard's distributional scoring, which stores both composite score and variance on-chain, is to our knowledge unprecedented for any class of real-world asset tokens.
 
 Four validation studies establish the rating's empirical grounding. CCP calibration against 318 credits recovers the ICVCM quality threshold with a 1.99-grade gap (Cohen's d = 1.80). Cross-type rank correlation with commercial agencies achieves Spearman +0.906 versus BeZero (n = 9), exceeding the inter-agency mean of +0.009. Inter-rater reliability (Fleiss' kappa = 0.600, ICC = 0.993) demonstrates that the rubric is reproducible by independent systems. Adversarial testing catches all five attack vectors with 100% disqualifier recall.
 
@@ -495,44 +495,42 @@ The standard, reference implementation, test suite, scoring engine, and all eval
 
 [31] Bootstrap rank correlation analysis. 10,000 resamples, seed = 42. Combined dataset (REDD+ + cross-type, n = 15): Spearman rho = +0.913, 95% CI [+0.780, +0.970], permutation p < 0.001. Data available in repository.
 
-[32] Allen, M. R., et al. The Oxford Principles for Net Zero Aligned Carbon Offsetting. University of Oxford, 2020.
+[32] Landis, J. R. and Koch, G. G. The measurement of observer agreement for categorical data. *Biometrics*, 33(1):159--174, 1977.
 
-[33] Landis, J. R. and Koch, G. G. The measurement of observer agreement for categorical data. *Biometrics*, 33(1):159--174, 1977.
+[33] Zeng, Y., et al. Limitations of carbon markets for biodiversity conservation. *Nature Reviews Biodiversity*, 2026. DOI: 10.1038/s44358-026-00150-4.
 
-[34] Zeng, Y., et al. Limitations of carbon markets for biodiversity conservation. *Nature Reviews Biodiversity*, 2026. DOI: 10.1038/s44358-026-00150-4.
+[34] Oka. Carbon credit insurance: Carbon Protect and Green Credit Insurance. Lloyd's-backed. https://carboninsurance.co, 2025.
 
-[35] Oka. Carbon credit insurance: Carbon Protect and Green Credit Insurance. Lloyd's-backed. https://carboninsurance.co, 2025.
+[35] Cabiyo, B. and Field, C. B. Embracing imperfection: Carbon offset markets must learn to mitigate the risk of overcrediting. *PNAS Nexus*, 4(5):pgaf091, 2025.
 
-[36] Cabiyo, B. and Field, C. B. Embracing imperfection: Carbon offset markets must learn to mitigate the risk of overcrediting. *PNAS Nexus*, 4(5):pgaf091, 2025.
+[36] Cheong, B. C. The paradox and fallacy of global carbon credits. *Anthropocene Science*, 4:72--83, 2025.
 
-[37] Cheong, B. C. The paradox and fallacy of global carbon credits. *Anthropocene Science*, 4:72--83, 2025.
+[37] Cheong, T. (Annual Review of Environment and Resources). Are carbon offsets fixable? 2025.
 
-[38] Cheong, T. (Annual Review of Environment and Resources). Are carbon offsets fixable? 2025.
+[38] Frontiers in Blockchain. Tokenized carbon credits in voluntary carbon markets: The case of KlimaDAO. 2024.
 
-[39] Frontiers in Blockchain. Tokenized carbon credits in voluntary carbon markets: The case of KlimaDAO. 2024.
+[39] Jirasek, M. Klima DAO: A crypto answer to carbon markets. Springer, 2023.
 
-[40] Jirasek, M. Klima DAO: A crypto answer to carbon markets. Springer, 2023.
+[40] Bosshard, L., et al. Blockchain-based voluntary carbon market: Strategic insights into network structure. *Frontiers in Blockchain*, 8:1603695, 2025.
 
-[41] Bosshard, L., et al. Blockchain-based voluntary carbon market: Strategic insights into network structure. *Frontiers in Blockchain*, 8:1603695, 2025.
+[41] Finance and Space. Carbon credits meet blockchain -- Cryptocarbon projects and the algorithmic financialisation of voluntary carbon markets. 2024.
 
-[42] Finance and Space. Carbon credits meet blockchain -- Cryptocarbon projects and the algorithmic financialisation of voluntary carbon markets. 2024.
+[42] Huber, R., Bach, V., and Finkbeiner, M. Multi-criteria assessment of carbon credits: A meta-analysis of 15 quality criteria. *Journal of Environmental Management*, 2024.
 
-[43] Huber, R., Bach, V., and Finkbeiner, M. Multi-criteria assessment of carbon credits: A meta-analysis of 15 quality criteria. *Journal of Environmental Management*, 2024.
+[43] NUS SGFIN. Nine-principle program evaluation of voluntary carbon standards. Singapore Green Finance Institute, 2024.
 
-[44] NUS SGFIN. Nine-principle program evaluation of voluntary carbon standards. Singapore Green Finance Institute, 2024.
+[44] CarbonPlan. OffsetsDB: Open database of 9,000+ carbon offset projects. CDR Verification Confidence Levels (VCL). https://carbonplan.org, 2025.
 
-[45] CarbonPlan. OffsetsDB: Open database of 9,000+ carbon offset projects. CDR Verification Confidence Levels (VCL). https://carbonplan.org, 2025.
+[45] Shrout, P. E. and Fleiss, J. L. Intraclass correlations: Uses in assessing rater reliability. *Psychological Bulletin*, 86(2):420--428, 1979.
 
-[46] Shrout, P. E. and Fleiss, J. L. Intraclass correlations: Uses in assessing rater reliability. *Psychological Bulletin*, 86(2):420--428, 1979.
+[46] Singapore NEA. Carbon rating panel: BeZero, Calyx, Sylvera appointed for ICC Framework carbon credit assessment. https://nea.gov.sg, 2025.
 
-[47] Singapore NEA. Carbon rating panel: BeZero, Calyx, Sylvera appointed for ICC Framework carbon credit assessment. https://nea.gov.sg, 2025.
+[47] Gold Standard and ATEC Global. First fully digital cookstove carbon credits issued using 100% IoT-SIM digital MRV on Hedera Guardian blockchain. https://goldstandard.org, 2025.
 
-[48] Gold Standard and ATEC Global. First fully digital cookstove carbon credits issued using 100% IoT-SIM digital MRV on Hedera Guardian blockchain. https://goldstandard.org, 2025.
+[48] Garcia, A. and Sanford, L. On the potential for strategic behavior in jurisdictional REDD+. *Proceedings of the National Academy of Sciences*, 123(14), 2026. DOI: 10.1073/pnas.2531612123.
 
-[49] Garcia, A. and Sanford, L. On the potential for strategic behavior in jurisdictional REDD+. *Proceedings of the National Academy of Sciences*, 123(14), 2026. DOI: 10.1073/pnas.2531612123.
+[49] West, T. A. P., et al. Demystifying the romanticized narratives about carbon credits from voluntary forest conservation. *Global Change Biology*, 31(10):e70527, 2025.
 
-[50] West, T. A. P., et al. Demystifying the romanticized narratives about carbon credits from voluntary forest conservation. *Global Change Biology*, 31(10):e70527, 2025.
+[50] Battocletti, V., et al. The voluntary carbon market: Market failures and policy implications. *Colorado Law Review*, 2024.
 
-[51] Battocletti, V., et al. The voluntary carbon market: Market failures and policy implications. *Colorado Law Review*, 2024.
-
-[52] RMI Centigrade. Carbon crediting data framework: Open-source framework for standardizing carbon credit data. https://centigrade.earth, 2025.
+[51] RMI Centigrade. Carbon crediting data framework: Open-source framework for standardizing carbon credit data. https://centigrade.earth, 2025.
