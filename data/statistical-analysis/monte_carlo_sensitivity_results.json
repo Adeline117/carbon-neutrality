@@ -1,0 +1,3234 @@
+[
+  {
+    "concentration": 20,
+    "n_iterations": 10000,
+    "global_robustness": 0.9006,
+    "n_fragile": 10,
+    "fragile_credits": [
+      {
+        "id": "C004",
+        "name": "Charm Industrial bio-oil injection",
+        "stability": 0.6557,
+        "baseline_grade": "AAA"
+      },
+      {
+        "id": "C007",
+        "name": "Pachama-verified Brazilian reforestation",
+        "stability": 0.6672,
+        "baseline_grade": "A"
+      },
+      {
+        "id": "C010",
+        "name": "Gold Standard cookstoves (Kenya)",
+        "stability": 0.6052,
+        "baseline_grade": "BBB"
+      },
+      {
+        "id": "C011",
+        "name": "Adipic acid N2O destruction (India)",
+        "stability": 0.6534,
+        "baseline_grade": "BBB"
+      },
+      {
+        "id": "C012",
+        "name": "Landfill methane capture (US)",
+        "stability": 0.7546,
+        "baseline_grade": "BBB"
+      },
+      {
+        "id": "C014",
+        "name": "Plan Vivo agroforestry (Mozambique)",
+        "stability": 0.5004,
+        "baseline_grade": "A"
+      },
+      {
+        "id": "C016",
+        "name": "Gold Standard cookstoves 2019 vintage",
+        "stability": 0.8481,
+        "baseline_grade": "BB"
+      },
+      {
+        "id": "C017",
+        "name": "Grid-connected solar (India)",
+        "stability": 0.8826,
+        "baseline_grade": "BB"
+      },
+      {
+        "id": "C018",
+        "name": "REDD+ Cordillera Azul (Peru)",
+        "stability": 0.8914,
+        "baseline_grade": "B"
+      },
+      {
+        "id": "C023",
+        "name": "HFC-23 destruction (pre-2013)",
+        "stability": 0.899,
+        "baseline_grade": "B"
+      }
+    ],
+    "credit_results": [
+      {
+        "id": "C001",
+        "name": "Climeworks Orca",
+        "baseline_composite": 95.05,
+        "baseline_grade": "AAA",
+        "grade_stability": 0.9991,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0009,
+        "composite_mean": 95.05,
+        "composite_std": 1.09,
+        "composite_min": 88.18,
+        "composite_max": 97.84,
+        "grade_distribution": {
+          "AA": 0.0009,
+          "AAA": 0.9991
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C002",
+        "name": "Heirloom DAC (California)",
+        "baseline_composite": 93.2,
+        "baseline_grade": "AAA",
+        "grade_stability": 0.9947,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0053,
+        "composite_mean": 93.2,
+        "composite_std": 1.06,
+        "composite_min": 87.19,
+        "composite_max": 96.65,
+        "grade_distribution": {
+          "AA": 0.0053,
+          "AAA": 0.9947
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C003",
+        "name": "CarbonCure concrete mineralization",
+        "baseline_composite": 87.2,
+        "baseline_grade": "AA",
+        "grade_stability": 0.9692,
+        "p_upgrade": 0.0308,
+        "p_downgrade": 0.0,
+        "composite_mean": 87.2,
+        "composite_std": 1.45,
+        "composite_min": 82.02,
+        "composite_max": 92.94,
+        "grade_distribution": {
+          "AA": 0.9692,
+          "AAA": 0.0308
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C004",
+        "name": "Charm Industrial bio-oil injection",
+        "baseline_composite": 90.53,
+        "baseline_grade": "AAA",
+        "grade_stability": 0.6557,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.3443,
+        "composite_mean": 90.53,
+        "composite_std": 1.36,
+        "composite_min": 84.99,
+        "composite_max": 95.24,
+        "grade_distribution": {
+          "AA": 0.3443,
+          "AAA": 0.6557
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C005",
+        "name": "Pacific Biochar (CA)",
+        "baseline_composite": 83.28,
+        "baseline_grade": "AA",
+        "grade_stability": 0.9997,
+        "p_upgrade": 0.0003,
+        "p_downgrade": 0.0,
+        "composite_mean": 83.28,
+        "composite_std": 1.29,
+        "composite_min": 80.65,
+        "composite_max": 91.4,
+        "grade_distribution": {
+          "AA": 0.9997,
+          "AAA": 0.0003
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C006",
+        "name": "Husk biochar (Cambodia)",
+        "baseline_composite": 80.05,
+        "baseline_grade": "AA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 80.05,
+        "composite_std": 1.11,
+        "composite_min": 75.85,
+        "composite_max": 84.87,
+        "grade_distribution": {
+          "AA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C007",
+        "name": "Pachama-verified Brazilian reforestation",
+        "baseline_composite": 74.05,
+        "baseline_grade": "A",
+        "grade_stability": 0.6672,
+        "p_upgrade": 0.3328,
+        "p_downgrade": 0.0,
+        "composite_mean": 74.04,
+        "composite_std": 2.48,
+        "composite_min": 63.12,
+        "composite_max": 87.1,
+        "grade_distribution": {
+          "A": 0.6672,
+          "AA": 0.3328
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C008",
+        "name": "Rexford IFM (Improved Forest Management)",
+        "baseline_composite": 68.22,
+        "baseline_grade": "A",
+        "grade_stability": 0.998,
+        "p_upgrade": 0.0019,
+        "p_downgrade": 0.0001,
+        "composite_mean": 68.22,
+        "composite_std": 2.09,
+        "composite_min": 58.89,
+        "composite_max": 77.36,
+        "grade_distribution": {
+          "BBB": 0.0001,
+          "A": 0.998,
+          "AA": 0.0019
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C009",
+        "name": "Southeast Asian VCS afforestation",
+        "baseline_composite": 64.72,
+        "baseline_grade": "A",
+        "grade_stability": 0.9601,
+        "p_upgrade": 0.0038,
+        "p_downgrade": 0.0361,
+        "composite_mean": 64.72,
+        "composite_std": 3.0,
+        "composite_min": 54.86,
+        "composite_max": 82.25,
+        "grade_distribution": {
+          "BBB": 0.0361,
+          "A": 0.9601,
+          "AA": 0.0038
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C010",
+        "name": "Gold Standard cookstoves (Kenya)",
+        "baseline_composite": 46.33,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.6052,
+        "p_upgrade": 0.0043,
+        "p_downgrade": 0.3905,
+        "composite_mean": 46.31,
+        "composite_std": 5.06,
+        "composite_min": 21.39,
+        "composite_max": 69.73,
+        "grade_distribution": {
+          "B": 0.0012,
+          "BB": 0.3893,
+          "BBB": 0.6052,
+          "A": 0.0043
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C011",
+        "name": "Adipic acid N2O destruction (India)",
+        "baseline_composite": 57.28,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.6534,
+        "p_upgrade": 0.3246,
+        "p_downgrade": 0.022,
+        "composite_mean": 57.24,
+        "composite_std": 5.49,
+        "composite_min": 27.51,
+        "composite_max": 76.13,
+        "grade_distribution": {
+          "B": 0.0001,
+          "BB": 0.0219,
+          "BBB": 0.6534,
+          "A": 0.3245,
+          "AA": 0.0001
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C012",
+        "name": "Landfill methane capture (US)",
+        "baseline_composite": 55.65,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.7546,
+        "p_upgrade": 0.2113,
+        "p_downgrade": 0.0341,
+        "composite_mean": 55.63,
+        "composite_std": 5.39,
+        "composite_min": 25.86,
+        "composite_max": 73.71,
+        "grade_distribution": {
+          "B": 0.0001,
+          "BB": 0.034,
+          "BBB": 0.7546,
+          "A": 0.2113
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C013",
+        "name": "Mangrove blue-carbon restoration",
+        "baseline_composite": 66.53,
+        "baseline_grade": "A",
+        "grade_stability": 0.9779,
+        "p_upgrade": 0.0087,
+        "p_downgrade": 0.0134,
+        "composite_mean": 66.51,
+        "composite_std": 3.13,
+        "composite_min": 55.7,
+        "composite_max": 84.71,
+        "grade_distribution": {
+          "BBB": 0.0134,
+          "A": 0.9779,
+          "AA": 0.0087
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C014",
+        "name": "Plan Vivo agroforestry (Mozambique)",
+        "baseline_composite": 60.15,
+        "baseline_grade": "A",
+        "grade_stability": 0.5004,
+        "p_upgrade": 0.0001,
+        "p_downgrade": 0.4995,
+        "composite_mean": 60.14,
+        "composite_std": 2.72,
+        "composite_min": 50.62,
+        "composite_max": 75.9,
+        "grade_distribution": {
+          "BBB": 0.4995,
+          "A": 0.5004,
+          "AA": 0.0001
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C015",
+        "name": "VCS afforestation 2018 vintage",
+        "baseline_composite": 50.27,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.9137,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0863,
+        "composite_mean": 50.26,
+        "composite_std": 3.61,
+        "composite_min": 27.95,
+        "composite_max": 58.58,
+        "grade_distribution": {
+          "B": 0.0002,
+          "BB": 0.0861,
+          "BBB": 0.9137
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C016",
+        "name": "Gold Standard cookstoves 2019 vintage",
+        "baseline_composite": 34.25,
+        "baseline_grade": "BB",
+        "grade_stability": 0.8481,
+        "p_upgrade": 0.0051,
+        "p_downgrade": 0.1468,
+        "composite_mean": 34.23,
+        "composite_std": 4.06,
+        "composite_min": 16.32,
+        "composite_max": 53.8,
+        "grade_distribution": {
+          "B": 0.1468,
+          "BB": 0.8481,
+          "BBB": 0.0051
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C017",
+        "name": "Grid-connected solar (India)",
+        "baseline_composite": 34.27,
+        "baseline_grade": "BB",
+        "grade_stability": 0.8826,
+        "p_upgrade": 0.0008,
+        "p_downgrade": 0.1166,
+        "composite_mean": 34.26,
+        "composite_std": 3.59,
+        "composite_min": 15.85,
+        "composite_max": 46.28,
+        "grade_distribution": {
+          "B": 0.1166,
+          "BB": 0.8826,
+          "BBB": 0.0008
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C018",
+        "name": "REDD+ Cordillera Azul (Peru)",
+        "baseline_composite": 28.2,
+        "baseline_grade": "B",
+        "grade_stability": 0.8914,
+        "p_upgrade": 0.1086,
+        "p_downgrade": 0.0,
+        "composite_mean": 28.2,
+        "composite_std": 1.48,
+        "composite_min": 22.25,
+        "composite_max": 33.36,
+        "grade_distribution": {
+          "B": 0.8914,
+          "BB": 0.1086
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C019",
+        "name": "Rimba Raya REDD+ (Indonesia)",
+        "baseline_composite": 26.05,
+        "baseline_grade": "B",
+        "grade_stability": 0.9947,
+        "p_upgrade": 0.0053,
+        "p_downgrade": 0.0,
+        "composite_mean": 26.05,
+        "composite_std": 1.89,
+        "composite_min": 15.65,
+        "composite_max": 31.15,
+        "grade_distribution": {
+          "B": 0.9947,
+          "BB": 0.0053
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C020",
+        "name": "Chinese CDM wind 2014 vintage",
+        "baseline_composite": 23.25,
+        "baseline_grade": "B",
+        "grade_stability": 0.9885,
+        "p_upgrade": 0.0115,
+        "p_downgrade": 0.0,
+        "composite_mean": 23.24,
+        "composite_std": 2.76,
+        "composite_min": 11.45,
+        "composite_max": 34.91,
+        "grade_distribution": {
+          "B": 0.9885,
+          "BB": 0.0115
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C021",
+        "name": "Large hydro (Brazil) 2015",
+        "baseline_composite": 24.35,
+        "baseline_grade": "B",
+        "grade_stability": 0.9641,
+        "p_upgrade": 0.0359,
+        "p_downgrade": 0.0,
+        "composite_mean": 24.34,
+        "composite_std": 3.0,
+        "composite_min": 12.13,
+        "composite_max": 37.06,
+        "grade_distribution": {
+          "B": 0.9641,
+          "BB": 0.0359
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C022",
+        "name": "Kariba REDD+ (Zimbabwe)",
+        "baseline_composite": 19.6,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 19.6,
+        "composite_std": 1.62,
+        "composite_min": 9.78,
+        "composite_max": 25.08,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C023",
+        "name": "HFC-23 destruction (pre-2013)",
+        "baseline_composite": 25.27,
+        "baseline_grade": "B",
+        "grade_stability": 0.899,
+        "p_upgrade": 0.101,
+        "p_downgrade": 0.0,
+        "composite_mean": 25.25,
+        "composite_std": 3.69,
+        "composite_min": 11.18,
+        "composite_max": 38.54,
+        "grade_distribution": {
+          "B": 0.899,
+          "BB": 0.101
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C024",
+        "name": "Chinese CDM wind 2012",
+        "baseline_composite": 18.95,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 18.94,
+        "composite_std": 2.67,
+        "composite_min": 9.62,
+        "composite_max": 28.73,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C025",
+        "name": "Unverified grassland avoidance 2013",
+        "baseline_composite": 17.12,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 17.12,
+        "composite_std": 1.46,
+        "composite_min": 9.55,
+        "composite_max": 22.22,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C026",
+        "name": "SYNTHETIC: high-composite credit with double counting",
+        "baseline_composite": 83.03,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 83.02,
+        "composite_std": 4.34,
+        "composite_min": 51.28,
+        "composite_max": 92.1,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C027",
+        "name": "SYNTHETIC: high-composite credit from sanctioned registry",
+        "baseline_composite": 77.22,
+        "baseline_grade": "BB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 77.22,
+        "composite_std": 4.1,
+        "composite_min": 47.79,
+        "composite_max": 89.08,
+        "grade_distribution": {
+          "BB": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C028",
+        "name": "SYNTHETIC: high-composite credit without third-party verification",
+        "baseline_composite": 74.85,
+        "baseline_grade": "BBB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 74.84,
+        "composite_std": 4.04,
+        "composite_min": 46.54,
+        "composite_max": 88.03,
+        "grade_distribution": {
+          "BBB": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C029",
+        "name": "SYNTHETIC: high-composite credit with documented community harm",
+        "baseline_composite": 74.03,
+        "baseline_grade": "BBB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 74.02,
+        "composite_std": 4.02,
+        "composite_min": 46.0,
+        "composite_max": 87.47,
+        "grade_distribution": {
+          "BBB": 1.0
+        },
+        "is_fragile": false
+      }
+    ],
+    "weight_sensitivity": [
+      {
+        "credit_id": "C002",
+        "dimension": "removal_type",
+        "correlation": 0.3347
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "additionality",
+        "correlation": -0.123
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "permanence",
+        "correlation": 0.2672
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "mrv_grade",
+        "correlation": -0.34
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "vintage_year",
+        "correlation": 0.4708
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "registry_methodology",
+        "correlation": -0.7727
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "removal_type",
+        "correlation": 0.2401
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "additionality",
+        "correlation": -0.6873
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "permanence",
+        "correlation": 0.3337
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "mrv_grade",
+        "correlation": -0.1886
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "vintage_year",
+        "correlation": 0.6463
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "registry_methodology",
+        "correlation": -0.3018
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "removal_type",
+        "correlation": 0.3214
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "additionality",
+        "correlation": -0.0488
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "permanence",
+        "correlation": 0.3381
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "mrv_grade",
+        "correlation": -0.6945
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "vintage_year",
+        "correlation": 0.5142
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "registry_methodology",
+        "correlation": -0.4754
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "removal_type",
+        "correlation": -0.2057
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "additionality",
+        "correlation": -0.0869
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "permanence",
+        "correlation": -0.6605
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "mrv_grade",
+        "correlation": 0.2603
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "vintage_year",
+        "correlation": 0.7664
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "registry_methodology",
+        "correlation": 0.1496
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "removal_type",
+        "correlation": 0.0128
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "additionality",
+        "correlation": -0.0947
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "permanence",
+        "correlation": -0.4374
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "mrv_grade",
+        "correlation": 0.1151
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "vintage_year",
+        "correlation": 0.862
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "registry_methodology",
+        "correlation": -0.4081
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "removal_type",
+        "correlation": -0.2073
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "additionality",
+        "correlation": 0.185
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "permanence",
+        "correlation": -0.7695
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "mrv_grade",
+        "correlation": 0.0851
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "vintage_year",
+        "correlation": 0.6081
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "registry_methodology",
+        "correlation": 0.3518
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "removal_type",
+        "correlation": -0.0503
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "additionality",
+        "correlation": 0.2589
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "permanence",
+        "correlation": -0.8807
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "mrv_grade",
+        "correlation": 0.426
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "vintage_year",
+        "correlation": 0.4086
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "registry_methodology",
+        "correlation": -0.1436
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "removal_type",
+        "correlation": -0.1325
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "additionality",
+        "correlation": 0.0521
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "permanence",
+        "correlation": -0.8632
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "mrv_grade",
+        "correlation": 0.4002
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "vintage_year",
+        "correlation": 0.4401
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "registry_methodology",
+        "correlation": 0.2781
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "removal_type",
+        "correlation": 0.0881
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "additionality",
+        "correlation": 0.3116
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "permanence",
+        "correlation": -0.565
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "mrv_grade",
+        "correlation": -0.2017
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "vintage_year",
+        "correlation": 0.753
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "registry_methodology",
+        "correlation": -0.3465
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "removal_type",
+        "correlation": 0.0217
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "additionality",
+        "correlation": 0.289
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "permanence",
+        "correlation": -0.7283
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "mrv_grade",
+        "correlation": 0.2274
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "vintage_year",
+        "correlation": -0.3267
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "registry_methodology",
+        "correlation": 0.6189
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "removal_type",
+        "correlation": 0.0257
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "additionality",
+        "correlation": -0.0571
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "permanence",
+        "correlation": -0.8079
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "mrv_grade",
+        "correlation": 0.6387
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "vintage_year",
+        "correlation": 0.3571
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "registry_methodology",
+        "correlation": -0.1645
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "removal_type",
+        "correlation": -0.5256
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "additionality",
+        "correlation": 0.1398
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "permanence",
+        "correlation": 0.1141
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "mrv_grade",
+        "correlation": 0.7324
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "vintage_year",
+        "correlation": -0.6144
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "registry_methodology",
+        "correlation": 0.0725
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "removal_type",
+        "correlation": -0.2675
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "additionality",
+        "correlation": 0.232
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "permanence",
+        "correlation": 0.1
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "mrv_grade",
+        "correlation": 0.529
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "vintage_year",
+        "correlation": -0.8597
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "registry_methodology",
+        "correlation": 0.1248
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "removal_type",
+        "correlation": 0.7713
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "additionality",
+        "correlation": -0.2918
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "permanence",
+        "correlation": -0.4742
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "mrv_grade",
+        "correlation": 0.2994
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "vintage_year",
+        "correlation": -0.5029
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "registry_methodology",
+        "correlation": -0.0108
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "removal_type",
+        "correlation": 0.1507
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "additionality",
+        "correlation": 0.0787
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "permanence",
+        "correlation": 0.0615
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "mrv_grade",
+        "correlation": 0.0189
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "vintage_year",
+        "correlation": 0.4031
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "registry_methodology",
+        "correlation": -0.9446
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "removal_type",
+        "correlation": 0.1645
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "additionality",
+        "correlation": 0.0896
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "permanence",
+        "correlation": -0.0031
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "mrv_grade",
+        "correlation": 0.0027
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "vintage_year",
+        "correlation": 0.4528
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "registry_methodology",
+        "correlation": -0.922
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "removal_type",
+        "correlation": 0.1283
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "additionality",
+        "correlation": 0.0597
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "permanence",
+        "correlation": -0.0595
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "mrv_grade",
+        "correlation": 0.107
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "vintage_year",
+        "correlation": 0.469
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "registry_methodology",
+        "correlation": -0.9136
+      }
+    ]
+  },
+  {
+    "concentration": 50,
+    "n_iterations": 10000,
+    "global_robustness": 0.9368,
+    "n_fragile": 5,
+    "fragile_credits": [
+      {
+        "id": "C004",
+        "name": "Charm Industrial bio-oil injection",
+        "stability": 0.7273,
+        "baseline_grade": "AAA"
+      },
+      {
+        "id": "C007",
+        "name": "Pachama-verified Brazilian reforestation",
+        "stability": 0.7397,
+        "baseline_grade": "A"
+      },
+      {
+        "id": "C010",
+        "name": "Gold Standard cookstoves (Kenya)",
+        "stability": 0.6615,
+        "baseline_grade": "BBB"
+      },
+      {
+        "id": "C011",
+        "name": "Adipic acid N2O destruction (India)",
+        "stability": 0.781,
+        "baseline_grade": "BBB"
+      },
+      {
+        "id": "C014",
+        "name": "Plan Vivo agroforestry (Mozambique)",
+        "stability": 0.515,
+        "baseline_grade": "A"
+      }
+    ],
+    "credit_results": [
+      {
+        "id": "C001",
+        "name": "Climeworks Orca",
+        "baseline_composite": 95.05,
+        "baseline_grade": "AAA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 95.04,
+        "composite_std": 0.7,
+        "composite_min": 91.22,
+        "composite_max": 97.08,
+        "grade_distribution": {
+          "AAA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C002",
+        "name": "Heirloom DAC (California)",
+        "baseline_composite": 93.2,
+        "baseline_grade": "AAA",
+        "grade_stability": 0.9999,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0001,
+        "composite_mean": 93.19,
+        "composite_std": 0.68,
+        "composite_min": 89.61,
+        "composite_max": 95.5,
+        "grade_distribution": {
+          "AA": 0.0001,
+          "AAA": 0.9999
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C003",
+        "name": "CarbonCure concrete mineralization",
+        "baseline_composite": 87.2,
+        "baseline_grade": "AA",
+        "grade_stability": 0.9982,
+        "p_upgrade": 0.0018,
+        "p_downgrade": 0.0,
+        "composite_mean": 87.2,
+        "composite_std": 0.94,
+        "composite_min": 83.62,
+        "composite_max": 90.91,
+        "grade_distribution": {
+          "AA": 0.9982,
+          "AAA": 0.0018
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C004",
+        "name": "Charm Industrial bio-oil injection",
+        "baseline_composite": 90.53,
+        "baseline_grade": "AAA",
+        "grade_stability": 0.7273,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.2727,
+        "composite_mean": 90.52,
+        "composite_std": 0.87,
+        "composite_min": 87.43,
+        "composite_max": 93.91,
+        "grade_distribution": {
+          "AA": 0.2727,
+          "AAA": 0.7273
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C005",
+        "name": "Pacific Biochar (CA)",
+        "baseline_composite": 83.28,
+        "baseline_grade": "AA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 83.27,
+        "composite_std": 0.82,
+        "composite_min": 81.16,
+        "composite_max": 87.01,
+        "grade_distribution": {
+          "AA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C006",
+        "name": "Husk biochar (Cambodia)",
+        "baseline_composite": 80.05,
+        "baseline_grade": "AA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 80.05,
+        "composite_std": 0.7,
+        "composite_min": 77.48,
+        "composite_max": 82.66,
+        "grade_distribution": {
+          "AA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C007",
+        "name": "Pachama-verified Brazilian reforestation",
+        "baseline_composite": 74.05,
+        "baseline_grade": "A",
+        "grade_stability": 0.7397,
+        "p_upgrade": 0.2603,
+        "p_downgrade": 0.0,
+        "composite_mean": 74.04,
+        "composite_std": 1.58,
+        "composite_min": 67.54,
+        "composite_max": 81.04,
+        "grade_distribution": {
+          "A": 0.7397,
+          "AA": 0.2603
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C008",
+        "name": "Rexford IFM (Improved Forest Management)",
+        "baseline_composite": 68.22,
+        "baseline_grade": "A",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 68.23,
+        "composite_std": 1.33,
+        "composite_min": 62.87,
+        "composite_max": 74.19,
+        "grade_distribution": {
+          "A": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C009",
+        "name": "Southeast Asian VCS afforestation",
+        "baseline_composite": 64.72,
+        "baseline_grade": "A",
+        "grade_stability": 0.9971,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0029,
+        "composite_mean": 64.71,
+        "composite_std": 1.92,
+        "composite_min": 57.93,
+        "composite_max": 73.16,
+        "grade_distribution": {
+          "BBB": 0.0029,
+          "A": 0.9971
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C010",
+        "name": "Gold Standard cookstoves (Kenya)",
+        "baseline_composite": 46.33,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.6615,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.3385,
+        "composite_mean": 46.32,
+        "composite_std": 3.2,
+        "composite_min": 33.08,
+        "composite_max": 59.37,
+        "grade_distribution": {
+          "BB": 0.3385,
+          "BBB": 0.6615
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C011",
+        "name": "Adipic acid N2O destruction (India)",
+        "baseline_composite": 57.28,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.781,
+        "p_upgrade": 0.2186,
+        "p_downgrade": 0.0004,
+        "composite_mean": 57.25,
+        "composite_std": 3.47,
+        "composite_min": 40.23,
+        "composite_max": 70.18,
+        "grade_distribution": {
+          "BB": 0.0004,
+          "BBB": 0.781,
+          "A": 0.2186
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C012",
+        "name": "Landfill methane capture (US)",
+        "baseline_composite": 55.65,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.905,
+        "p_upgrade": 0.093,
+        "p_downgrade": 0.002,
+        "composite_mean": 55.64,
+        "composite_std": 3.41,
+        "composite_min": 39.82,
+        "composite_max": 68.26,
+        "grade_distribution": {
+          "BB": 0.002,
+          "BBB": 0.905,
+          "A": 0.093
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C013",
+        "name": "Mangrove blue-carbon restoration",
+        "baseline_composite": 66.53,
+        "baseline_grade": "A",
+        "grade_stability": 0.9995,
+        "p_upgrade": 0.0001,
+        "p_downgrade": 0.0004,
+        "composite_mean": 66.5,
+        "composite_std": 2.0,
+        "composite_min": 59.68,
+        "composite_max": 75.03,
+        "grade_distribution": {
+          "BBB": 0.0004,
+          "A": 0.9995,
+          "AA": 0.0001
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C014",
+        "name": "Plan Vivo agroforestry (Mozambique)",
+        "baseline_composite": 60.15,
+        "baseline_grade": "A",
+        "grade_stability": 0.515,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.485,
+        "composite_mean": 60.13,
+        "composite_std": 1.73,
+        "composite_min": 54.22,
+        "composite_max": 67.42,
+        "grade_distribution": {
+          "BBB": 0.485,
+          "A": 0.515
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C015",
+        "name": "VCS afforestation 2018 vintage",
+        "baseline_composite": 50.27,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.9781,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0219,
+        "composite_mean": 50.28,
+        "composite_std": 2.28,
+        "composite_min": 39.07,
+        "composite_max": 56.92,
+        "grade_distribution": {
+          "BB": 0.0219,
+          "BBB": 0.9781
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C016",
+        "name": "Gold Standard cookstoves 2019 vintage",
+        "baseline_composite": 34.25,
+        "baseline_grade": "BB",
+        "grade_stability": 0.95,
+        "p_upgrade": 0.0001,
+        "p_downgrade": 0.0499,
+        "composite_mean": 34.27,
+        "composite_std": 2.59,
+        "composite_min": 23.51,
+        "composite_max": 45.96,
+        "grade_distribution": {
+          "B": 0.0499,
+          "BB": 0.95,
+          "BBB": 0.0001
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C017",
+        "name": "Grid-connected solar (India)",
+        "baseline_composite": 34.27,
+        "baseline_grade": "BB",
+        "grade_stability": 0.966,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.034,
+        "composite_mean": 34.26,
+        "composite_std": 2.28,
+        "composite_min": 23.47,
+        "composite_max": 42.5,
+        "grade_distribution": {
+          "B": 0.034,
+          "BB": 0.966
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C018",
+        "name": "REDD+ Cordillera Azul (Peru)",
+        "baseline_composite": 28.2,
+        "baseline_grade": "B",
+        "grade_stability": 0.9731,
+        "p_upgrade": 0.0269,
+        "p_downgrade": 0.0,
+        "composite_mean": 28.2,
+        "composite_std": 0.94,
+        "composite_min": 24.73,
+        "composite_max": 31.5,
+        "grade_distribution": {
+          "B": 0.9731,
+          "BB": 0.0269
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C019",
+        "name": "Rimba Raya REDD+ (Indonesia)",
+        "baseline_composite": 26.05,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 26.05,
+        "composite_std": 1.21,
+        "composite_min": 20.67,
+        "composite_max": 29.65,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C020",
+        "name": "Chinese CDM wind 2014 vintage",
+        "baseline_composite": 23.25,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 23.25,
+        "composite_std": 1.74,
+        "composite_min": 15.99,
+        "composite_max": 29.92,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C021",
+        "name": "Large hydro (Brazil) 2015",
+        "baseline_composite": 24.35,
+        "baseline_grade": "B",
+        "grade_stability": 0.9976,
+        "p_upgrade": 0.0024,
+        "p_downgrade": 0.0,
+        "composite_mean": 24.35,
+        "composite_std": 1.89,
+        "composite_min": 16.72,
+        "composite_max": 31.63,
+        "grade_distribution": {
+          "B": 0.9976,
+          "BB": 0.0024
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C022",
+        "name": "Kariba REDD+ (Zimbabwe)",
+        "baseline_composite": 19.6,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 19.61,
+        "composite_std": 1.03,
+        "composite_min": 15.02,
+        "composite_max": 22.97,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C023",
+        "name": "HFC-23 destruction (pre-2013)",
+        "baseline_composite": 25.27,
+        "baseline_grade": "B",
+        "grade_stability": 0.9784,
+        "p_upgrade": 0.0216,
+        "p_downgrade": 0.0,
+        "composite_mean": 25.28,
+        "composite_std": 2.34,
+        "composite_min": 16.42,
+        "composite_max": 34.11,
+        "grade_distribution": {
+          "B": 0.9784,
+          "BB": 0.0216
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C024",
+        "name": "Chinese CDM wind 2012",
+        "baseline_composite": 18.95,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 18.95,
+        "composite_std": 1.67,
+        "composite_min": 12.5,
+        "composite_max": 25.17,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C025",
+        "name": "Unverified grassland avoidance 2013",
+        "baseline_composite": 17.12,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 17.13,
+        "composite_std": 0.94,
+        "composite_min": 12.42,
+        "composite_max": 20.18,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C026",
+        "name": "SYNTHETIC: high-composite credit with double counting",
+        "baseline_composite": 83.03,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 82.99,
+        "composite_std": 2.8,
+        "composite_min": 65.85,
+        "composite_max": 89.68,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C027",
+        "name": "SYNTHETIC: high-composite credit from sanctioned registry",
+        "baseline_composite": 77.22,
+        "baseline_grade": "BB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 77.19,
+        "composite_std": 2.65,
+        "composite_min": 61.3,
+        "composite_max": 84.43,
+        "grade_distribution": {
+          "BB": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C028",
+        "name": "SYNTHETIC: high-composite credit without third-party verification",
+        "baseline_composite": 74.85,
+        "baseline_grade": "BBB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 74.81,
+        "composite_std": 2.61,
+        "composite_min": 59.44,
+        "composite_max": 82.43,
+        "grade_distribution": {
+          "BBB": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C029",
+        "name": "SYNTHETIC: high-composite credit with documented community harm",
+        "baseline_composite": 74.03,
+        "baseline_grade": "BBB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 73.99,
+        "composite_std": 2.6,
+        "composite_min": 58.58,
+        "composite_max": 81.53,
+        "grade_distribution": {
+          "BBB": 1.0
+        },
+        "is_fragile": false
+      }
+    ],
+    "weight_sensitivity": [
+      {
+        "credit_id": "C002",
+        "dimension": "removal_type",
+        "correlation": 0.3449
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "additionality",
+        "correlation": -0.1333
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "permanence",
+        "correlation": 0.2564
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "mrv_grade",
+        "correlation": -0.325
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "vintage_year",
+        "correlation": 0.4748
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "registry_methodology",
+        "correlation": -0.7802
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "removal_type",
+        "correlation": 0.2545
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "additionality",
+        "correlation": -0.6983
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "permanence",
+        "correlation": 0.323
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "mrv_grade",
+        "correlation": -0.1651
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "vintage_year",
+        "correlation": 0.6497
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "registry_methodology",
+        "correlation": -0.3113
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "removal_type",
+        "correlation": 0.3401
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "additionality",
+        "correlation": -0.0582
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "permanence",
+        "correlation": 0.3247
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "mrv_grade",
+        "correlation": -0.6808
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "vintage_year",
+        "correlation": 0.51
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "registry_methodology",
+        "correlation": -0.4901
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "removal_type",
+        "correlation": -0.2033
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "additionality",
+        "correlation": -0.1013
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "permanence",
+        "correlation": -0.6545
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "mrv_grade",
+        "correlation": 0.2718
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "vintage_year",
+        "correlation": 0.7704
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "registry_methodology",
+        "correlation": 0.1395
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "removal_type",
+        "correlation": 0.0208
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "additionality",
+        "correlation": -0.1115
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "permanence",
+        "correlation": -0.4306
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "mrv_grade",
+        "correlation": 0.1275
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "vintage_year",
+        "correlation": 0.8653
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "registry_methodology",
+        "correlation": -0.4229
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "removal_type",
+        "correlation": -0.2078
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "additionality",
+        "correlation": 0.1791
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "permanence",
+        "correlation": -0.7693
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "mrv_grade",
+        "correlation": 0.0902
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "vintage_year",
+        "correlation": 0.6031
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "registry_methodology",
+        "correlation": 0.3483
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "removal_type",
+        "correlation": -0.055
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "additionality",
+        "correlation": 0.2539
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "permanence",
+        "correlation": -0.8752
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "mrv_grade",
+        "correlation": 0.4225
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "vintage_year",
+        "correlation": 0.4179
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "registry_methodology",
+        "correlation": -0.1521
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "removal_type",
+        "correlation": -0.1361
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "additionality",
+        "correlation": 0.0439
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "permanence",
+        "correlation": -0.8583
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "mrv_grade",
+        "correlation": 0.4005
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "vintage_year",
+        "correlation": 0.4449
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "registry_methodology",
+        "correlation": 0.2763
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "removal_type",
+        "correlation": 0.0964
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "additionality",
+        "correlation": 0.3018
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "permanence",
+        "correlation": -0.566
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "mrv_grade",
+        "correlation": -0.1956
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "vintage_year",
+        "correlation": 0.7493
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "registry_methodology",
+        "correlation": -0.3626
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "removal_type",
+        "correlation": 0.0132
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "additionality",
+        "correlation": 0.2955
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "permanence",
+        "correlation": -0.7191
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "mrv_grade",
+        "correlation": 0.2052
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "vintage_year",
+        "correlation": -0.3355
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "registry_methodology",
+        "correlation": 0.6293
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "removal_type",
+        "correlation": 0.022
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "additionality",
+        "correlation": -0.0691
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "permanence",
+        "correlation": -0.7985
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "mrv_grade",
+        "correlation": 0.6358
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "vintage_year",
+        "correlation": 0.3765
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "registry_methodology",
+        "correlation": -0.1723
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "removal_type",
+        "correlation": -0.5477
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "additionality",
+        "correlation": 0.1541
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "permanence",
+        "correlation": 0.1266
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "mrv_grade",
+        "correlation": 0.7236
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "vintage_year",
+        "correlation": -0.6036
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "registry_methodology",
+        "correlation": 0.0843
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "removal_type",
+        "correlation": -0.2886
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "additionality",
+        "correlation": 0.2505
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "permanence",
+        "correlation": 0.1091
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "mrv_grade",
+        "correlation": 0.5121
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "vintage_year",
+        "correlation": -0.8554
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "registry_methodology",
+        "correlation": 0.141
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "removal_type",
+        "correlation": 0.7772
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "additionality",
+        "correlation": -0.2988
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "permanence",
+        "correlation": -0.4709
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "mrv_grade",
+        "correlation": 0.2692
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "vintage_year",
+        "correlation": -0.4873
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "registry_methodology",
+        "correlation": -0.0034
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "removal_type",
+        "correlation": 0.1531
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "additionality",
+        "correlation": 0.0695
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "permanence",
+        "correlation": 0.06
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "mrv_grade",
+        "correlation": 0.0257
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "vintage_year",
+        "correlation": 0.4125
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "registry_methodology",
+        "correlation": -0.9468
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "removal_type",
+        "correlation": 0.1674
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "additionality",
+        "correlation": 0.0794
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "permanence",
+        "correlation": -0.0036
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "mrv_grade",
+        "correlation": 0.0097
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "vintage_year",
+        "correlation": 0.4606
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "registry_methodology",
+        "correlation": -0.9251
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "removal_type",
+        "correlation": 0.1304
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "additionality",
+        "correlation": 0.0491
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "permanence",
+        "correlation": -0.0572
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "mrv_grade",
+        "correlation": 0.1124
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "vintage_year",
+        "correlation": 0.4786
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "registry_methodology",
+        "correlation": -0.9165
+      }
+    ]
+  },
+  {
+    "concentration": 100,
+    "n_iterations": 10000,
+    "global_robustness": 0.9543,
+    "n_fragile": 5,
+    "fragile_credits": [
+      {
+        "id": "C004",
+        "name": "Charm Industrial bio-oil injection",
+        "stability": 0.8039,
+        "baseline_grade": "AAA"
+      },
+      {
+        "id": "C007",
+        "name": "Pachama-verified Brazilian reforestation",
+        "stability": 0.8016,
+        "baseline_grade": "A"
+      },
+      {
+        "id": "C010",
+        "name": "Gold Standard cookstoves (Kenya)",
+        "stability": 0.7218,
+        "baseline_grade": "BBB"
+      },
+      {
+        "id": "C011",
+        "name": "Adipic acid N2O destruction (India)",
+        "stability": 0.8686,
+        "baseline_grade": "BBB"
+      },
+      {
+        "id": "C014",
+        "name": "Plan Vivo agroforestry (Mozambique)",
+        "stability": 0.5345,
+        "baseline_grade": "A"
+      }
+    ],
+    "credit_results": [
+      {
+        "id": "C001",
+        "name": "Climeworks Orca",
+        "baseline_composite": 95.05,
+        "baseline_grade": "AAA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 95.04,
+        "composite_std": 0.5,
+        "composite_min": 92.0,
+        "composite_max": 96.5,
+        "grade_distribution": {
+          "AAA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C002",
+        "name": "Heirloom DAC (California)",
+        "baseline_composite": 93.2,
+        "baseline_grade": "AAA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 93.19,
+        "composite_std": 0.49,
+        "composite_min": 90.46,
+        "composite_max": 94.77,
+        "grade_distribution": {
+          "AAA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C003",
+        "name": "CarbonCure concrete mineralization",
+        "baseline_composite": 87.2,
+        "baseline_grade": "AA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 87.2,
+        "composite_std": 0.66,
+        "composite_min": 84.56,
+        "composite_max": 89.63,
+        "grade_distribution": {
+          "AA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C004",
+        "name": "Charm Industrial bio-oil injection",
+        "baseline_composite": 90.53,
+        "baseline_grade": "AAA",
+        "grade_stability": 0.8039,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.1961,
+        "composite_mean": 90.52,
+        "composite_std": 0.62,
+        "composite_min": 88.03,
+        "composite_max": 92.66,
+        "grade_distribution": {
+          "AA": 0.1961,
+          "AAA": 0.8039
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C005",
+        "name": "Pacific Biochar (CA)",
+        "baseline_composite": 83.28,
+        "baseline_grade": "AA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 83.28,
+        "composite_std": 0.59,
+        "composite_min": 81.6,
+        "composite_max": 85.82,
+        "grade_distribution": {
+          "AA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C006",
+        "name": "Husk biochar (Cambodia)",
+        "baseline_composite": 80.05,
+        "baseline_grade": "AA",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 80.06,
+        "composite_std": 0.5,
+        "composite_min": 78.32,
+        "composite_max": 81.94,
+        "grade_distribution": {
+          "AA": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C007",
+        "name": "Pachama-verified Brazilian reforestation",
+        "baseline_composite": 74.05,
+        "baseline_grade": "A",
+        "grade_stability": 0.8016,
+        "p_upgrade": 0.1984,
+        "p_downgrade": 0.0,
+        "composite_mean": 74.06,
+        "composite_std": 1.12,
+        "composite_min": 69.94,
+        "composite_max": 78.93,
+        "grade_distribution": {
+          "A": 0.8016,
+          "AA": 0.1984
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C008",
+        "name": "Rexford IFM (Improved Forest Management)",
+        "baseline_composite": 68.22,
+        "baseline_grade": "A",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 68.23,
+        "composite_std": 0.95,
+        "composite_min": 64.55,
+        "composite_max": 72.28,
+        "grade_distribution": {
+          "A": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C009",
+        "name": "Southeast Asian VCS afforestation",
+        "baseline_composite": 64.72,
+        "baseline_grade": "A",
+        "grade_stability": 0.9999,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0001,
+        "composite_mean": 64.72,
+        "composite_std": 1.36,
+        "composite_min": 59.97,
+        "composite_max": 70.24,
+        "grade_distribution": {
+          "BBB": 0.0001,
+          "A": 0.9999
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C010",
+        "name": "Gold Standard cookstoves (Kenya)",
+        "baseline_composite": 46.33,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.7218,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.2782,
+        "composite_mean": 46.35,
+        "composite_std": 2.29,
+        "composite_min": 38.04,
+        "composite_max": 56.39,
+        "grade_distribution": {
+          "BB": 0.2782,
+          "BBB": 0.7218
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C011",
+        "name": "Adipic acid N2O destruction (India)",
+        "baseline_composite": 57.28,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.8686,
+        "p_upgrade": 0.1314,
+        "p_downgrade": 0.0,
+        "composite_mean": 57.27,
+        "composite_std": 2.48,
+        "composite_min": 45.55,
+        "composite_max": 66.36,
+        "grade_distribution": {
+          "BBB": 0.8686,
+          "A": 0.1314
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C012",
+        "name": "Landfill methane capture (US)",
+        "baseline_composite": 55.65,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.9673,
+        "p_upgrade": 0.0327,
+        "p_downgrade": 0.0,
+        "composite_mean": 55.66,
+        "composite_std": 2.43,
+        "composite_min": 45.71,
+        "composite_max": 65.33,
+        "grade_distribution": {
+          "BBB": 0.9673,
+          "A": 0.0327
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C013",
+        "name": "Mangrove blue-carbon restoration",
+        "baseline_composite": 66.53,
+        "baseline_grade": "A",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 66.52,
+        "composite_std": 1.42,
+        "composite_min": 61.15,
+        "composite_max": 71.79,
+        "grade_distribution": {
+          "A": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C014",
+        "name": "Plan Vivo agroforestry (Mozambique)",
+        "baseline_composite": 60.15,
+        "baseline_grade": "A",
+        "grade_stability": 0.5345,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.4655,
+        "composite_mean": 60.15,
+        "composite_std": 1.24,
+        "composite_min": 55.69,
+        "composite_max": 64.57,
+        "grade_distribution": {
+          "BBB": 0.4655,
+          "A": 0.5345
+        },
+        "is_fragile": true
+      },
+      {
+        "id": "C015",
+        "name": "VCS afforestation 2018 vintage",
+        "baseline_composite": 50.27,
+        "baseline_grade": "BBB",
+        "grade_stability": 0.9974,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0026,
+        "composite_mean": 50.25,
+        "composite_std": 1.63,
+        "composite_min": 43.23,
+        "composite_max": 55.49,
+        "grade_distribution": {
+          "BB": 0.0026,
+          "BBB": 0.9974
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C016",
+        "name": "Gold Standard cookstoves 2019 vintage",
+        "baseline_composite": 34.25,
+        "baseline_grade": "BB",
+        "grade_stability": 0.9902,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0098,
+        "composite_mean": 34.26,
+        "composite_std": 1.85,
+        "composite_min": 27.98,
+        "composite_max": 43.12,
+        "grade_distribution": {
+          "B": 0.0098,
+          "BB": 0.9902
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C017",
+        "name": "Grid-connected solar (India)",
+        "baseline_composite": 34.27,
+        "baseline_grade": "BB",
+        "grade_stability": 0.9952,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0048,
+        "composite_mean": 34.26,
+        "composite_std": 1.62,
+        "composite_min": 26.77,
+        "composite_max": 40.03,
+        "grade_distribution": {
+          "B": 0.0048,
+          "BB": 0.9952
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C018",
+        "name": "REDD+ Cordillera Azul (Peru)",
+        "baseline_composite": 28.2,
+        "baseline_grade": "B",
+        "grade_stability": 0.9973,
+        "p_upgrade": 0.0027,
+        "p_downgrade": 0.0,
+        "composite_mean": 28.2,
+        "composite_std": 0.67,
+        "composite_min": 25.54,
+        "composite_max": 31.07,
+        "grade_distribution": {
+          "B": 0.9973,
+          "BB": 0.0027
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C019",
+        "name": "Rimba Raya REDD+ (Indonesia)",
+        "baseline_composite": 26.05,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 26.05,
+        "composite_std": 0.86,
+        "composite_min": 22.77,
+        "composite_max": 28.92,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C020",
+        "name": "Chinese CDM wind 2014 vintage",
+        "baseline_composite": 23.25,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 23.24,
+        "composite_std": 1.24,
+        "composite_min": 18.16,
+        "composite_max": 27.79,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C021",
+        "name": "Large hydro (Brazil) 2015",
+        "baseline_composite": 24.35,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 24.34,
+        "composite_std": 1.35,
+        "composite_min": 19.01,
+        "composite_max": 29.58,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C022",
+        "name": "Kariba REDD+ (Zimbabwe)",
+        "baseline_composite": 19.6,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 19.6,
+        "composite_std": 0.74,
+        "composite_min": 16.75,
+        "composite_max": 21.85,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C023",
+        "name": "HFC-23 destruction (pre-2013)",
+        "baseline_composite": 25.27,
+        "baseline_grade": "B",
+        "grade_stability": 0.9972,
+        "p_upgrade": 0.0028,
+        "p_downgrade": 0.0,
+        "composite_mean": 25.24,
+        "composite_std": 1.68,
+        "composite_min": 19.1,
+        "composite_max": 31.51,
+        "grade_distribution": {
+          "B": 0.9972,
+          "BB": 0.0028
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C024",
+        "name": "Chinese CDM wind 2012",
+        "baseline_composite": 18.95,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 18.94,
+        "composite_std": 1.2,
+        "composite_min": 14.69,
+        "composite_max": 23.39,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C025",
+        "name": "Unverified grassland avoidance 2013",
+        "baseline_composite": 17.12,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 17.12,
+        "composite_std": 0.67,
+        "composite_min": 14.33,
+        "composite_max": 19.33,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C026",
+        "name": "SYNTHETIC: high-composite credit with double counting",
+        "baseline_composite": 83.03,
+        "baseline_grade": "B",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 82.99,
+        "composite_std": 2.0,
+        "composite_min": 70.57,
+        "composite_max": 88.19,
+        "grade_distribution": {
+          "B": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C027",
+        "name": "SYNTHETIC: high-composite credit from sanctioned registry",
+        "baseline_composite": 77.22,
+        "baseline_grade": "BB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 77.19,
+        "composite_std": 1.89,
+        "composite_min": 66.09,
+        "composite_max": 82.67,
+        "grade_distribution": {
+          "BB": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C028",
+        "name": "SYNTHETIC: high-composite credit without third-party verification",
+        "baseline_composite": 74.85,
+        "baseline_grade": "BBB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 74.82,
+        "composite_std": 1.86,
+        "composite_min": 64.23,
+        "composite_max": 80.5,
+        "grade_distribution": {
+          "BBB": 1.0
+        },
+        "is_fragile": false
+      },
+      {
+        "id": "C029",
+        "name": "SYNTHETIC: high-composite credit with documented community harm",
+        "baseline_composite": 74.03,
+        "baseline_grade": "BBB",
+        "grade_stability": 1.0,
+        "p_upgrade": 0.0,
+        "p_downgrade": 0.0,
+        "composite_mean": 74.0,
+        "composite_std": 1.85,
+        "composite_min": 63.79,
+        "composite_max": 79.62,
+        "grade_distribution": {
+          "BBB": 1.0
+        },
+        "is_fragile": false
+      }
+    ],
+    "weight_sensitivity": [
+      {
+        "credit_id": "C002",
+        "dimension": "removal_type",
+        "correlation": 0.3376
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "additionality",
+        "correlation": -0.1128
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "permanence",
+        "correlation": 0.2585
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "mrv_grade",
+        "correlation": -0.3337
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "vintage_year",
+        "correlation": 0.4716
+      },
+      {
+        "credit_id": "C002",
+        "dimension": "registry_methodology",
+        "correlation": -0.7817
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "removal_type",
+        "correlation": 0.2435
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "additionality",
+        "correlation": -0.6864
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "permanence",
+        "correlation": 0.3276
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "mrv_grade",
+        "correlation": -0.1708
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "vintage_year",
+        "correlation": 0.646
+      },
+      {
+        "credit_id": "C003",
+        "dimension": "registry_methodology",
+        "correlation": -0.3096
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "removal_type",
+        "correlation": 0.3286
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "additionality",
+        "correlation": -0.0368
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "permanence",
+        "correlation": 0.3258
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "mrv_grade",
+        "correlation": -0.6873
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "vintage_year",
+        "correlation": 0.5115
+      },
+      {
+        "credit_id": "C004",
+        "dimension": "registry_methodology",
+        "correlation": -0.4917
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "removal_type",
+        "correlation": -0.2047
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "additionality",
+        "correlation": -0.0939
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "permanence",
+        "correlation": -0.6562
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "mrv_grade",
+        "correlation": 0.264
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "vintage_year",
+        "correlation": 0.7678
+      },
+      {
+        "credit_id": "C007",
+        "dimension": "registry_methodology",
+        "correlation": 0.1468
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "removal_type",
+        "correlation": 0.0173
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "additionality",
+        "correlation": -0.0948
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "permanence",
+        "correlation": -0.4321
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "mrv_grade",
+        "correlation": 0.1163
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "vintage_year",
+        "correlation": 0.8636
+      },
+      {
+        "credit_id": "C009",
+        "dimension": "registry_methodology",
+        "correlation": -0.4194
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "removal_type",
+        "correlation": -0.206
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "additionality",
+        "correlation": 0.1819
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "permanence",
+        "correlation": -0.7685
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "mrv_grade",
+        "correlation": 0.0829
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "vintage_year",
+        "correlation": 0.6054
+      },
+      {
+        "credit_id": "C010",
+        "dimension": "registry_methodology",
+        "correlation": 0.3514
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "removal_type",
+        "correlation": -0.0484
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "additionality",
+        "correlation": 0.2566
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "permanence",
+        "correlation": -0.8766
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "mrv_grade",
+        "correlation": 0.4162
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "vintage_year",
+        "correlation": 0.416
+      },
+      {
+        "credit_id": "C011",
+        "dimension": "registry_methodology",
+        "correlation": -0.1483
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "removal_type",
+        "correlation": -0.1323
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "additionality",
+        "correlation": 0.0437
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "permanence",
+        "correlation": -0.8592
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "mrv_grade",
+        "correlation": 0.3968
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "vintage_year",
+        "correlation": 0.4418
+      },
+      {
+        "credit_id": "C012",
+        "dimension": "registry_methodology",
+        "correlation": 0.2818
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "removal_type",
+        "correlation": 0.0949
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "additionality",
+        "correlation": 0.3165
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "permanence",
+        "correlation": -0.563
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "mrv_grade",
+        "correlation": -0.2077
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "vintage_year",
+        "correlation": 0.7502
+      },
+      {
+        "credit_id": "C014",
+        "dimension": "registry_methodology",
+        "correlation": -0.3607
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "removal_type",
+        "correlation": 0.0214
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "additionality",
+        "correlation": 0.2816
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "permanence",
+        "correlation": -0.7222
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "mrv_grade",
+        "correlation": 0.2128
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "vintage_year",
+        "correlation": -0.331
+      },
+      {
+        "credit_id": "C016",
+        "dimension": "registry_methodology",
+        "correlation": 0.6291
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "removal_type",
+        "correlation": 0.0269
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "additionality",
+        "correlation": -0.0667
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "permanence",
+        "correlation": -0.8012
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "mrv_grade",
+        "correlation": 0.6338
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "vintage_year",
+        "correlation": 0.367
+      },
+      {
+        "credit_id": "C017",
+        "dimension": "registry_methodology",
+        "correlation": -0.1656
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "removal_type",
+        "correlation": -0.5365
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "additionality",
+        "correlation": 0.1325
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "permanence",
+        "correlation": 0.1271
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "mrv_grade",
+        "correlation": 0.7291
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "vintage_year",
+        "correlation": -0.6071
+      },
+      {
+        "credit_id": "C018",
+        "dimension": "registry_methodology",
+        "correlation": 0.0855
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "removal_type",
+        "correlation": -0.2769
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "additionality",
+        "correlation": 0.228
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "permanence",
+        "correlation": 0.1089
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "mrv_grade",
+        "correlation": 0.5217
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "vintage_year",
+        "correlation": -0.8568
+      },
+      {
+        "credit_id": "C019",
+        "dimension": "registry_methodology",
+        "correlation": 0.1392
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "removal_type",
+        "correlation": 0.7752
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "additionality",
+        "correlation": -0.2996
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "permanence",
+        "correlation": -0.473
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "mrv_grade",
+        "correlation": 0.2837
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "vintage_year",
+        "correlation": -0.497
+      },
+      {
+        "credit_id": "C023",
+        "dimension": "registry_methodology",
+        "correlation": -0.0019
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "removal_type",
+        "correlation": 0.1522
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "additionality",
+        "correlation": 0.0849
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "permanence",
+        "correlation": 0.062
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "mrv_grade",
+        "correlation": 0.0151
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "vintage_year",
+        "correlation": 0.4081
+      },
+      {
+        "credit_id": "C027",
+        "dimension": "registry_methodology",
+        "correlation": -0.9468
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "removal_type",
+        "correlation": 0.1663
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "additionality",
+        "correlation": 0.0956
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "permanence",
+        "correlation": -0.0018
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "mrv_grade",
+        "correlation": -0.0013
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "vintage_year",
+        "correlation": 0.4566
+      },
+      {
+        "credit_id": "C028",
+        "dimension": "registry_methodology",
+        "correlation": -0.925
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "removal_type",
+        "correlation": 0.1302
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "additionality",
+        "correlation": 0.0645
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "permanence",
+        "correlation": -0.0556
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "mrv_grade",
+        "correlation": 0.1016
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "vintage_year",
+        "correlation": 0.4738
+      },
+      {
+        "credit_id": "C029",
+        "dimension": "registry_methodology",
+        "correlation": -0.9166
+      }
+    ]
+  }
+]

@@ -1,0 +1,594 @@
+{
+  "pools": [
+    {
+      "pool_name": "Toucan BCT (historical peak, 2022)",
+      "baseline": {
+        "n_credits": 43,
+        "mean_composite": 27.62,
+        "lemons_index": 0.7238,
+        "a_plus_pct": 0.0,
+        "grade_hhi": 0.7166,
+        "grade_distribution": {
+          "B": 36,
+          "BB": 5,
+          "BBB": 2
+        }
+      },
+      "gated": {
+        "B": {
+          "n_credits": 43,
+          "mean_composite": 27.62,
+          "lemons_index": 0.7238,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.7166,
+          "grade_distribution": {
+            "B": 36,
+            "BB": 5,
+            "BBB": 2
+          },
+          "threshold": "B",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "BB": {
+          "n_credits": 7,
+          "mean_composite": 45.32,
+          "lemons_index": 0.5468,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.5918,
+          "grade_distribution": {
+            "BB": 5,
+            "BBB": 2
+          },
+          "threshold": "BB",
+          "admission_rate": 0.1628,
+          "li_improvement": 0.177
+        },
+        "BBB": {
+          "n_credits": 2,
+          "mean_composite": 59.55,
+          "lemons_index": 0.4045,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "BBB": 2
+          },
+          "threshold": "BBB",
+          "admission_rate": 0.0465,
+          "li_improvement": 0.3193
+        },
+        "A": {
+          "n_credits": 0,
+          "mean_composite": 0.0,
+          "lemons_index": 1.0,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.0,
+          "grade_distribution": {},
+          "threshold": "A",
+          "admission_rate": 0.0,
+          "li_improvement": -0.2762
+        },
+        "AA": {
+          "n_credits": 0,
+          "mean_composite": 0.0,
+          "lemons_index": 1.0,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.0,
+          "grade_distribution": {},
+          "threshold": "AA",
+          "admission_rate": 0.0,
+          "li_improvement": -0.2762
+        },
+        "AAA": {
+          "n_credits": 0,
+          "mean_composite": 0.0,
+          "lemons_index": 1.0,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.0,
+          "grade_distribution": {},
+          "threshold": "AAA",
+          "admission_rate": 0.0,
+          "li_improvement": -0.2762
+        }
+      }
+    },
+    {
+      "pool_name": "Toucan NCT (2023)",
+      "baseline": {
+        "n_credits": 28,
+        "mean_composite": 39.85,
+        "lemons_index": 0.6015,
+        "a_plus_pct": 0.2857,
+        "grade_hhi": 0.5,
+        "grade_distribution": {
+          "B": 18,
+          "A": 8,
+          "BBB": 2
+        }
+      },
+      "gated": {
+        "B": {
+          "n_credits": 28,
+          "mean_composite": 39.85,
+          "lemons_index": 0.6015,
+          "a_plus_pct": 0.2857,
+          "grade_hhi": 0.5,
+          "grade_distribution": {
+            "B": 18,
+            "A": 8,
+            "BBB": 2
+          },
+          "threshold": "B",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "BB": {
+          "n_credits": 10,
+          "mean_composite": 60.97,
+          "lemons_index": 0.3903,
+          "a_plus_pct": 0.8,
+          "grade_hhi": 0.68,
+          "grade_distribution": {
+            "A": 8,
+            "BBB": 2
+          },
+          "threshold": "BB",
+          "admission_rate": 0.3571,
+          "li_improvement": 0.2112
+        },
+        "BBB": {
+          "n_credits": 10,
+          "mean_composite": 60.97,
+          "lemons_index": 0.3903,
+          "a_plus_pct": 0.8,
+          "grade_hhi": 0.68,
+          "grade_distribution": {
+            "A": 8,
+            "BBB": 2
+          },
+          "threshold": "BBB",
+          "admission_rate": 0.3571,
+          "li_improvement": 0.2112
+        },
+        "A": {
+          "n_credits": 8,
+          "mean_composite": 61.48,
+          "lemons_index": 0.3852,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "A": 8
+          },
+          "threshold": "A",
+          "admission_rate": 0.2857,
+          "li_improvement": 0.2163
+        },
+        "AA": {
+          "n_credits": 0,
+          "mean_composite": 0.0,
+          "lemons_index": 1.0,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.0,
+          "grade_distribution": {},
+          "threshold": "AA",
+          "admission_rate": 0.0,
+          "li_improvement": -0.3985
+        },
+        "AAA": {
+          "n_credits": 0,
+          "mean_composite": 0.0,
+          "lemons_index": 1.0,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.0,
+          "grade_distribution": {},
+          "threshold": "AAA",
+          "admission_rate": 0.0,
+          "li_improvement": -0.3985
+        }
+      }
+    },
+    {
+      "pool_name": "Toucan CHAR (Base, 2025)",
+      "baseline": {
+        "n_credits": 12,
+        "mean_composite": 77.88,
+        "lemons_index": 0.2212,
+        "a_plus_pct": 1.0,
+        "grade_hhi": 1.0,
+        "grade_distribution": {
+          "AA": 12
+        }
+      },
+      "gated": {
+        "B": {
+          "n_credits": 12,
+          "mean_composite": 77.88,
+          "lemons_index": 0.2212,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "AA": 12
+          },
+          "threshold": "B",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "BB": {
+          "n_credits": 12,
+          "mean_composite": 77.88,
+          "lemons_index": 0.2212,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "AA": 12
+          },
+          "threshold": "BB",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "BBB": {
+          "n_credits": 12,
+          "mean_composite": 77.88,
+          "lemons_index": 0.2212,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "AA": 12
+          },
+          "threshold": "BBB",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "A": {
+          "n_credits": 12,
+          "mean_composite": 77.88,
+          "lemons_index": 0.2212,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "AA": 12
+          },
+          "threshold": "A",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "AA": {
+          "n_credits": 12,
+          "mean_composite": 77.88,
+          "lemons_index": 0.2212,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "AA": 12
+          },
+          "threshold": "AA",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "AAA": {
+          "n_credits": 0,
+          "mean_composite": 0.0,
+          "lemons_index": 1.0,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.0,
+          "grade_distribution": {},
+          "threshold": "AAA",
+          "admission_rate": 0.0,
+          "li_improvement": -0.7788
+        }
+      }
+    },
+    {
+      "pool_name": "Moss MCO2 (2022)",
+      "baseline": {
+        "n_credits": 30,
+        "mean_composite": 28.7,
+        "lemons_index": 0.713,
+        "a_plus_pct": 0.0667,
+        "grade_hhi": 0.8756,
+        "grade_distribution": {
+          "B": 28,
+          "A": 2
+        }
+      },
+      "gated": {
+        "B": {
+          "n_credits": 30,
+          "mean_composite": 28.7,
+          "lemons_index": 0.713,
+          "a_plus_pct": 0.0667,
+          "grade_hhi": 0.8756,
+          "grade_distribution": {
+            "B": 28,
+            "A": 2
+          },
+          "threshold": "B",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "BB": {
+          "n_credits": 2,
+          "mean_composite": 60.95,
+          "lemons_index": 0.3905,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "A": 2
+          },
+          "threshold": "BB",
+          "admission_rate": 0.0667,
+          "li_improvement": 0.3225
+        },
+        "BBB": {
+          "n_credits": 2,
+          "mean_composite": 60.95,
+          "lemons_index": 0.3905,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "A": 2
+          },
+          "threshold": "BBB",
+          "admission_rate": 0.0667,
+          "li_improvement": 0.3225
+        },
+        "A": {
+          "n_credits": 2,
+          "mean_composite": 60.95,
+          "lemons_index": 0.3905,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "A": 2
+          },
+          "threshold": "A",
+          "admission_rate": 0.0667,
+          "li_improvement": 0.3225
+        },
+        "AA": {
+          "n_credits": 0,
+          "mean_composite": 0.0,
+          "lemons_index": 1.0,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.0,
+          "grade_distribution": {},
+          "threshold": "AA",
+          "admission_rate": 0.0,
+          "li_improvement": -0.287
+        },
+        "AAA": {
+          "n_credits": 0,
+          "mean_composite": 0.0,
+          "lemons_index": 1.0,
+          "a_plus_pct": 0.0,
+          "grade_hhi": 0.0,
+          "grade_distribution": {},
+          "threshold": "AAA",
+          "admission_rate": 0.0,
+          "li_improvement": -0.287
+        }
+      }
+    },
+    {
+      "pool_name": "Klima 2.0 kVCM inventory (Base, 2026)",
+      "baseline": {
+        "n_credits": 20,
+        "mean_composite": 48.14,
+        "lemons_index": 0.5186,
+        "a_plus_pct": 0.4,
+        "grade_hhi": 0.265,
+        "grade_distribution": {
+          "B": 8,
+          "AA": 3,
+          "A": 4,
+          "BB": 4,
+          "AAA": 1
+        }
+      },
+      "gated": {
+        "B": {
+          "n_credits": 20,
+          "mean_composite": 48.14,
+          "lemons_index": 0.5186,
+          "a_plus_pct": 0.4,
+          "grade_hhi": 0.265,
+          "grade_distribution": {
+            "B": 8,
+            "AA": 3,
+            "A": 4,
+            "BB": 4,
+            "AAA": 1
+          },
+          "threshold": "B",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "BB": {
+          "n_credits": 12,
+          "mean_composite": 62.92,
+          "lemons_index": 0.3708,
+          "a_plus_pct": 0.6667,
+          "grade_hhi": 0.2917,
+          "grade_distribution": {
+            "AA": 3,
+            "A": 4,
+            "BB": 4,
+            "AAA": 1
+          },
+          "threshold": "BB",
+          "admission_rate": 0.6,
+          "li_improvement": 0.1478
+        },
+        "BBB": {
+          "n_credits": 8,
+          "mean_composite": 72.71,
+          "lemons_index": 0.2729,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 0.4062,
+          "grade_distribution": {
+            "AA": 3,
+            "A": 4,
+            "AAA": 1
+          },
+          "threshold": "BBB",
+          "admission_rate": 0.4,
+          "li_improvement": 0.2457
+        },
+        "A": {
+          "n_credits": 8,
+          "mean_composite": 72.71,
+          "lemons_index": 0.2729,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 0.4062,
+          "grade_distribution": {
+            "AA": 3,
+            "A": 4,
+            "AAA": 1
+          },
+          "threshold": "A",
+          "admission_rate": 0.4,
+          "li_improvement": 0.2457
+        },
+        "AA": {
+          "n_credits": 4,
+          "mean_composite": 81.87,
+          "lemons_index": 0.1813,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 0.625,
+          "grade_distribution": {
+            "AA": 3,
+            "AAA": 1
+          },
+          "threshold": "AA",
+          "admission_rate": 0.2,
+          "li_improvement": 0.3373
+        },
+        "AAA": {
+          "n_credits": 1,
+          "mean_composite": 92.42,
+          "lemons_index": 0.0758,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "AAA": 1
+          },
+          "threshold": "AAA",
+          "admission_rate": 0.05,
+          "li_improvement": 0.4428
+        }
+      }
+    },
+    {
+      "pool_name": "Hypothetical AAA-only pool",
+      "baseline": {
+        "n_credits": 13,
+        "mean_composite": 89.98,
+        "lemons_index": 0.1002,
+        "a_plus_pct": 1.0,
+        "grade_hhi": 0.5266,
+        "grade_distribution": {
+          "AAA": 8,
+          "AA": 5
+        }
+      },
+      "gated": {
+        "B": {
+          "n_credits": 13,
+          "mean_composite": 89.98,
+          "lemons_index": 0.1002,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 0.5266,
+          "grade_distribution": {
+            "AAA": 8,
+            "AA": 5
+          },
+          "threshold": "B",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "BB": {
+          "n_credits": 13,
+          "mean_composite": 89.98,
+          "lemons_index": 0.1002,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 0.5266,
+          "grade_distribution": {
+            "AAA": 8,
+            "AA": 5
+          },
+          "threshold": "BB",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "BBB": {
+          "n_credits": 13,
+          "mean_composite": 89.98,
+          "lemons_index": 0.1002,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 0.5266,
+          "grade_distribution": {
+            "AAA": 8,
+            "AA": 5
+          },
+          "threshold": "BBB",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "A": {
+          "n_credits": 13,
+          "mean_composite": 89.98,
+          "lemons_index": 0.1002,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 0.5266,
+          "grade_distribution": {
+            "AAA": 8,
+            "AA": 5
+          },
+          "threshold": "A",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "AA": {
+          "n_credits": 13,
+          "mean_composite": 89.98,
+          "lemons_index": 0.1002,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 0.5266,
+          "grade_distribution": {
+            "AAA": 8,
+            "AA": 5
+          },
+          "threshold": "AA",
+          "admission_rate": 1.0,
+          "li_improvement": 0.0
+        },
+        "AAA": {
+          "n_credits": 8,
+          "mean_composite": 91.97,
+          "lemons_index": 0.0803,
+          "a_plus_pct": 1.0,
+          "grade_hhi": 1.0,
+          "grade_distribution": {
+            "AAA": 8
+          },
+          "threshold": "AAA",
+          "admission_rate": 0.6154,
+          "li_improvement": 0.0199
+        }
+      }
+    }
+  ],
+  "bct_char_comparison": {
+    "bct_baseline_li": 0.7238,
+    "bct_baseline_a_pct": 0.0,
+    "char_li": 0.2212,
+    "char_a_pct": 1.0,
+    "bct_gated_bbb_li": 0.4045,
+    "bct_gated_bbb_a_pct": 0.0,
+    "bct_gated_bbb_admission": 0.0465,
+    "bct_gated_bbb_n": 2,
+    "closest_match_threshold": "BBB",
+    "closest_match_li_diff": 0.1833,
+    "conclusion": "Quality gating BCT at grade>=BBB would have produced LI=0.4045 vs CHAR's LI=0.2212. CHAR achieves comparable quality through its biochar-only allowlist rather than an explicit grade gate."
+  }
+}

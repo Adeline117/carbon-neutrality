@@ -1,0 +1,455 @@
+{
+  "analysis": "cross_temporal_stability",
+  "versions_compared": [
+    "v0.3",
+    "v0.4",
+    "v0.6"
+  ],
+  "n_credits": 29,
+  "weight_vectors": {
+    "v0.3": {
+      "removal_type": 0.2,
+      "additionality": 0.2,
+      "permanence": 0.15,
+      "mrv_grade": 0.15,
+      "vintage_year": 0.1,
+      "co_benefits": 0.1,
+      "registry_methodology": 0.1
+    },
+    "v0.4": {
+      "removal_type": 0.25,
+      "additionality": 0.2,
+      "permanence": 0.175,
+      "mrv_grade": 0.2,
+      "vintage_year": 0.1,
+      "co_benefits": 0.0,
+      "registry_methodology": 0.075
+    },
+    "v0.6": "same as v0.4 (weights stable; rubric changes only)"
+  },
+  "grade_agreement_rate": {
+    "v0.3->v0.4": 0.8276,
+    "v0.4->v0.6": 1.0
+  },
+  "spearman_rank_correlation": {
+    "v0.3->v0.4": 0.992118,
+    "v0.4->v0.6": 1.0,
+    "v0.3->v0.6": 0.992118
+  },
+  "max_grade_change_magnitude": {
+    "steps": 1,
+    "credit": "C001",
+    "pair": "v0.3->v0.4"
+  },
+  "convergence": {
+    "avg_grade_magnitude_per_pair": {
+      "v0.3->v0.4": 0.1724,
+      "v0.4->v0.6": 0.0
+    },
+    "avg_composite_delta_per_pair": {
+      "v0.3->v0.4": 3.1966,
+      "v0.4->v0.6": 0.0
+    },
+    "is_converging": true,
+    "interpretation": "Grade-change magnitude is non-increasing across consecutive version pairs, indicating the framework is converging."
+  },
+  "grade_changes": {
+    "v0.3->v0.4": [
+      {
+        "id": "C001",
+        "name": "Climeworks Orca",
+        "grade_from": "AA",
+        "grade_to": "AAA",
+        "composite_from": 86.6,
+        "composite_to": 95.05,
+        "magnitude": 1
+      },
+      {
+        "id": "C002",
+        "name": "Heirloom DAC (California)",
+        "grade_from": "AA",
+        "grade_to": "AAA",
+        "composite_from": 85.5,
+        "composite_to": 93.2,
+        "magnitude": 1
+      },
+      {
+        "id": "C004",
+        "name": "Charm Industrial bio-oil injection",
+        "grade_from": "AA",
+        "grade_to": "AAA",
+        "composite_from": 83.55,
+        "composite_to": 90.525,
+        "magnitude": 1
+      },
+      {
+        "id": "C007",
+        "name": "Pachama-verified Brazilian reforestation",
+        "grade_from": "AA",
+        "grade_to": "A",
+        "composite_from": 75.9,
+        "composite_to": 74.05,
+        "magnitude": 1
+      },
+      {
+        "id": "C018",
+        "name": "REDD+ Cordillera Azul (Peru)",
+        "grade_from": "BB",
+        "grade_to": "B",
+        "composite_from": 30.7,
+        "composite_to": 28.2,
+        "magnitude": 1
+      }
+    ],
+    "v0.4->v0.6": []
+  },
+  "credits_with_any_grade_change": {
+    "C001": [
+      "AA",
+      "AAA",
+      "AAA"
+    ],
+    "C002": [
+      "AA",
+      "AAA",
+      "AAA"
+    ],
+    "C004": [
+      "AA",
+      "AAA",
+      "AAA"
+    ],
+    "C007": [
+      "AA",
+      "A",
+      "A"
+    ],
+    "C018": [
+      "BB",
+      "B",
+      "B"
+    ]
+  },
+  "n_stable_credits": 24,
+  "credit_details": [
+    {
+      "id": "C001",
+      "name": "Climeworks Orca",
+      "composite_v0.3": 86.6,
+      "grade_v0.3": "AA",
+      "composite_v0.4": 95.05,
+      "grade_v0.4": "AAA",
+      "composite_v0.6": 95.05,
+      "grade_v0.6": "AAA",
+      "stable": false
+    },
+    {
+      "id": "C002",
+      "name": "Heirloom DAC (California)",
+      "composite_v0.3": 85.5,
+      "grade_v0.3": "AA",
+      "composite_v0.4": 93.2,
+      "grade_v0.4": "AAA",
+      "composite_v0.6": 93.2,
+      "grade_v0.6": "AAA",
+      "stable": false
+    },
+    {
+      "id": "C003",
+      "name": "CarbonCure concrete mineralization",
+      "composite_v0.3": 79.95,
+      "grade_v0.3": "AA",
+      "composite_v0.4": 87.2,
+      "grade_v0.4": "AA",
+      "composite_v0.6": 87.2,
+      "grade_v0.6": "AA",
+      "stable": true
+    },
+    {
+      "id": "C004",
+      "name": "Charm Industrial bio-oil injection",
+      "composite_v0.3": 83.55,
+      "grade_v0.3": "AA",
+      "composite_v0.4": 90.525,
+      "grade_v0.4": "AAA",
+      "composite_v0.6": 90.525,
+      "grade_v0.6": "AAA",
+      "stable": false
+    },
+    {
+      "id": "C005",
+      "name": "Pacific Biochar (CA)",
+      "composite_v0.3": 81.15,
+      "grade_v0.3": "AA",
+      "composite_v0.4": 83.275,
+      "grade_v0.4": "AA",
+      "composite_v0.6": 83.275,
+      "grade_v0.6": "AA",
+      "stable": true
+    },
+    {
+      "id": "C006",
+      "name": "Husk biochar (Cambodia)",
+      "composite_v0.3": 81.0,
+      "grade_v0.3": "AA",
+      "composite_v0.4": 80.05,
+      "grade_v0.4": "AA",
+      "composite_v0.6": 80.05,
+      "grade_v0.6": "AA",
+      "stable": true
+    },
+    {
+      "id": "C007",
+      "name": "Pachama-verified Brazilian reforestation",
+      "composite_v0.3": 75.9,
+      "grade_v0.3": "AA",
+      "composite_v0.4": 74.05,
+      "grade_v0.4": "A",
+      "composite_v0.6": 74.05,
+      "grade_v0.6": "A",
+      "stable": false
+    },
+    {
+      "id": "C008",
+      "name": "Rexford IFM (Improved Forest Management)",
+      "composite_v0.3": 67.35,
+      "grade_v0.3": "A",
+      "composite_v0.4": 68.225,
+      "grade_v0.4": "A",
+      "composite_v0.6": 68.225,
+      "grade_v0.6": "A",
+      "stable": true
+    },
+    {
+      "id": "C009",
+      "name": "Southeast Asian VCS afforestation",
+      "composite_v0.3": 64.4,
+      "grade_v0.3": "A",
+      "composite_v0.4": 64.725,
+      "grade_v0.4": "A",
+      "composite_v0.6": 64.725,
+      "grade_v0.6": "A",
+      "stable": true
+    },
+    {
+      "id": "C010",
+      "name": "Gold Standard cookstoves (Kenya)",
+      "composite_v0.3": 52.1,
+      "grade_v0.3": "BBB",
+      "composite_v0.4": 46.325,
+      "grade_v0.4": "BBB",
+      "composite_v0.6": 46.325,
+      "grade_v0.6": "BBB",
+      "stable": true
+    },
+    {
+      "id": "C011",
+      "name": "Adipic acid N2O destruction (India)",
+      "composite_v0.3": 53.5,
+      "grade_v0.3": "BBB",
+      "composite_v0.4": 57.275,
+      "grade_v0.4": "BBB",
+      "composite_v0.6": 57.275,
+      "grade_v0.6": "BBB",
+      "stable": true
+    },
+    {
+      "id": "C012",
+      "name": "Landfill methane capture (US)",
+      "composite_v0.3": 54.15,
+      "grade_v0.3": "BBB",
+      "composite_v0.4": 55.65,
+      "grade_v0.4": "BBB",
+      "composite_v0.6": 55.65,
+      "grade_v0.6": "BBB",
+      "stable": true
+    },
+    {
+      "id": "C013",
+      "name": "Mangrove blue-carbon restoration",
+      "composite_v0.3": 67.95,
+      "grade_v0.3": "A",
+      "composite_v0.4": 66.525,
+      "grade_v0.4": "A",
+      "composite_v0.6": 66.525,
+      "grade_v0.6": "A",
+      "stable": true
+    },
+    {
+      "id": "C014",
+      "name": "Plan Vivo agroforestry (Mozambique)",
+      "composite_v0.3": 62.3,
+      "grade_v0.3": "A",
+      "composite_v0.4": 60.15,
+      "grade_v0.4": "A",
+      "composite_v0.6": 60.15,
+      "grade_v0.6": "A",
+      "stable": true
+    },
+    {
+      "id": "C015",
+      "name": "VCS afforestation 2018 vintage",
+      "composite_v0.3": 49.2,
+      "grade_v0.3": "BBB",
+      "composite_v0.4": 50.275,
+      "grade_v0.4": "BBB",
+      "composite_v0.6": 50.275,
+      "grade_v0.6": "BBB",
+      "stable": true
+    },
+    {
+      "id": "C016",
+      "name": "Gold Standard cookstoves 2019 vintage",
+      "composite_v0.3": 39.65,
+      "grade_v0.3": "BB",
+      "composite_v0.4": 34.25,
+      "grade_v0.4": "BB",
+      "composite_v0.6": 34.25,
+      "grade_v0.6": "BB",
+      "stable": true
+    },
+    {
+      "id": "C017",
+      "name": "Grid-connected solar (India)",
+      "composite_v0.3": 34.25,
+      "grade_v0.3": "BB",
+      "composite_v0.4": 34.275,
+      "grade_v0.4": "BB",
+      "composite_v0.6": 34.275,
+      "grade_v0.6": "BB",
+      "stable": true
+    },
+    {
+      "id": "C018",
+      "name": "REDD+ Cordillera Azul (Peru)",
+      "composite_v0.3": 30.7,
+      "grade_v0.3": "BB",
+      "composite_v0.4": 28.2,
+      "grade_v0.4": "B",
+      "composite_v0.6": 28.2,
+      "grade_v0.6": "B",
+      "stable": false
+    },
+    {
+      "id": "C019",
+      "name": "Rimba Raya REDD+ (Indonesia)",
+      "composite_v0.3": 29.25,
+      "grade_v0.3": "B",
+      "composite_v0.4": 26.05,
+      "grade_v0.4": "B",
+      "composite_v0.6": 26.05,
+      "grade_v0.6": "B",
+      "stable": true
+    },
+    {
+      "id": "C020",
+      "name": "Chinese CDM wind 2014 vintage",
+      "composite_v0.3": 21.9,
+      "grade_v0.3": "B",
+      "composite_v0.4": 23.25,
+      "grade_v0.4": "B",
+      "composite_v0.6": 23.25,
+      "grade_v0.6": "B",
+      "stable": true
+    },
+    {
+      "id": "C021",
+      "name": "Large hydro (Brazil) 2015",
+      "composite_v0.3": 23.45,
+      "grade_v0.3": "B",
+      "composite_v0.4": 24.35,
+      "grade_v0.4": "B",
+      "composite_v0.6": 24.35,
+      "grade_v0.6": "B",
+      "stable": true
+    },
+    {
+      "id": "C022",
+      "name": "Kariba REDD+ (Zimbabwe)",
+      "composite_v0.3": 19.65,
+      "grade_v0.3": "B",
+      "composite_v0.4": 19.6,
+      "grade_v0.4": "B",
+      "composite_v0.6": 19.6,
+      "grade_v0.6": "B",
+      "stable": true
+    },
+    {
+      "id": "C023",
+      "name": "HFC-23 destruction (pre-2013)",
+      "composite_v0.3": 22.05,
+      "grade_v0.3": "B",
+      "composite_v0.4": 25.275,
+      "grade_v0.4": "B",
+      "composite_v0.6": 25.275,
+      "grade_v0.6": "B",
+      "stable": true
+    },
+    {
+      "id": "C024",
+      "name": "Chinese CDM wind 2012",
+      "composite_v0.3": 17.55,
+      "grade_v0.3": "B",
+      "composite_v0.4": 18.95,
+      "grade_v0.4": "B",
+      "composite_v0.6": 18.95,
+      "grade_v0.6": "B",
+      "stable": true
+    },
+    {
+      "id": "C025",
+      "name": "Unverified grassland avoidance 2013",
+      "composite_v0.3": 16.35,
+      "grade_v0.3": "B",
+      "composite_v0.4": 17.125,
+      "grade_v0.4": "B",
+      "composite_v0.6": 17.125,
+      "grade_v0.6": "B",
+      "stable": true
+    },
+    {
+      "id": "C026",
+      "name": "SYNTHETIC: high-composite credit with double counting",
+      "composite_v0.3": 78.45,
+      "grade_v0.3": "B",
+      "composite_v0.4": 83.025,
+      "grade_v0.4": "B",
+      "composite_v0.6": 83.025,
+      "grade_v0.6": "B",
+      "stable": true
+    },
+    {
+      "id": "C027",
+      "name": "SYNTHETIC: high-composite credit from sanctioned registry",
+      "composite_v0.3": 73.1,
+      "grade_v0.3": "BB",
+      "composite_v0.4": 77.225,
+      "grade_v0.4": "BB",
+      "composite_v0.6": 77.225,
+      "grade_v0.6": "BB",
+      "stable": true
+    },
+    {
+      "id": "C028",
+      "name": "SYNTHETIC: high-composite credit without third-party verification",
+      "composite_v0.3": 70.6,
+      "grade_v0.3": "BBB",
+      "composite_v0.4": 74.85,
+      "grade_v0.4": "BBB",
+      "composite_v0.6": 74.85,
+      "grade_v0.6": "BBB",
+      "stable": true
+    },
+    {
+      "id": "C029",
+      "name": "SYNTHETIC: high-composite credit with documented community harm",
+      "composite_v0.3": 65.3,
+      "grade_v0.3": "BBB",
+      "composite_v0.4": 74.025,
+      "grade_v0.4": "BBB",
+      "composite_v0.6": 74.025,
+      "grade_v0.6": "BBB",
+      "stable": true
+    }
+  ]
+}
