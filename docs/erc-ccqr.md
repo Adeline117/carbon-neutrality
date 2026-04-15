@@ -118,6 +118,8 @@ Ratings decay. A rating written under an outdated methodology version (e.g., bef
 - `contracts/CarbonCreditRatingEASAdapter.sol` — Level 3 relay
 - `contracts/examples/KlimaRetirementGate.sol` — Retirement gate pattern
 - `contracts/examples/CHARQualityOverlay.sol` — Fee discount pattern
+- `contracts/examples/BiodiversityCreditGate.sol` — Generalization: biodiversity credits
+- `contracts/examples/RenewableEnergyCertGate.sol` — Generalization: renewable energy certificates
 
 All implementations: [github.com/Adeline117/carbon-neutrality/contracts/](https://github.com/Adeline117/carbon-neutrality/tree/main/contracts)
 

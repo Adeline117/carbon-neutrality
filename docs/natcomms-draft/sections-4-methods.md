@@ -22,11 +22,13 @@ Grade posteriors were computed via the Gaussian cumulative distribution function
 
 ## Lemons Index
 
-We defined the Lemons Index $L$ to quantify the degree of adverse selection in a tokenized carbon credit pool:
+We operationalised the measurement of quality degradation in tokenized carbon credit pools through the Lemons Index $L$, defined as the fraction of quality deficit in a pool relative to a perfect-quality baseline:
 
 $$L(\text{pool}) = 1 - \frac{\bar{C}}{100}$$
 
-where $\bar{C}$ is the mean composite score of all credits in the pool. The index ranges from 0 (every credit scores 100; no adverse selection) to 1 (every credit scores 0; complete quality failure). The metric is named after Akerlof's^5^ characterisation of markets in which information asymmetry drives out high-quality goods.
+where $\bar{C}$ is the mean composite score of all credits in the pool, computed from the seven-dimension framework described above. The index ranges from 0 (every credit scores at the maximum; no quality deficit) to 1 (every credit scores zero; complete quality failure). A pool's Lemons Index is interpretable relative to a random-assignment null model: if credits were drawn uniformly at random from the full population of 318 scored credits, the expected Lemons Index would be 0.51 (SD = 0.036, 90% CI: 0.45--0.57; computed from 10,000 Monte Carlo draws of matched pool size). Observed values significantly above 0.51 indicate quality distributions worse than random assignment --- an outcome consistent with the predictions of adverse selection theory^5^, in which informed depositors selectively retain higher-quality credits and deposit lower-quality ones. The Lemons Index does not by itself establish that depositors act strategically; it quantifies the degree of quality degradation in a pool's composition, which may arise from strategic adverse selection, from quality-blind pooling rules that attract low-quality supply, or from both mechanisms operating jointly.
+
+The metric is named after Akerlof's^5^ characterisation of markets in which information asymmetry drives out high-quality goods. Its contribution is not the formula --- which is a linear rescaling of mean quality --- but its systematic application to on-chain carbon credit pools with an explicit null model baseline, enabling cross-pool comparison and temporal monitoring of quality degradation.
 
 We computed $L$ for six pool compositions. Four were based on publicly documented holdings of deployed tokenized carbon pools: Toucan Base Carbon Tonne (BCT; 43 credits across 9 methodology categories at 2022 peak holdings on Polygon), Toucan Nature Carbon Tonne (NCT; 28 credits, agriculture, forestry, and other land use only, vintage $\geq$ 2012), Moss MCO2 (30 credits, Amazon REDD+-dominated), and Toucan CHAR (12 credits, biochar-only with project allowlist, deployed on Base in 2025). Two were prospective compositions: Klima 2.0 kVCM (20 credits, mixed legacy and carbon dioxide removal, projected for 2026) and a hypothetical AAA-only pool (13 credits, engineered CDR including direct air carbon capture and storage, bio-oil injection, and enhanced weathering). Each credit within a pool was scored using methodology-level archetypes from a 318-credit batch dataset, with vintage-year adjustments applied via a temporal decay formula.
 
@@ -60,7 +62,7 @@ Per-dimension standard deviations from this study were used to calibrate the dis
 
 ## Counterfactual quality-gate simulation
 
-For each of the six tokenized pools described above, we simulated the application of an on-chain quality gate at all six grade thresholds (B, BB, BBB, A, AA, AAA). At each threshold, a `meetsGrade()` function admitted only credits whose final grade met or exceeded the threshold. We then recomputed: the number of admitted credits, the new mean composite score, the resulting Lemons Index, and the fraction of admitted credits at grade A or above. The purpose of this simulation was to quantify the extent to which quality gating could reduce the Lemons Index toward levels observed in curated pools (e.g., CHAR), providing modelled evidence that on-chain quality enforcement is a tractable mechanism to counteract adverse selection. These are counterfactual simulations, not observed market outcomes.
+For each of the six tokenized pools described above, we simulated the application of a quality gate at all six grade thresholds (B, BB, BBB, A, AA, AAA). At each threshold, only credits whose final grade met or exceeded the threshold were admitted. We then recomputed: the number of admitted credits, the new mean composite score, the resulting Lemons Index, and the fraction of admitted credits at grade A or above. The purpose of this simulation was to quantify the extent to which quality gating could reduce the Lemons Index toward levels observed in curated pools (e.g., CHAR), providing modelled evidence that quality enforcement is a tractable mechanism to counteract quality degradation. These are counterfactual simulations, not observed market outcomes. A reference implementation of the quality gate is available as open-source Solidity contracts (see Data availability).
 
 ## Sensitivity analysis
 
@@ -70,15 +72,9 @@ For each of the six tokenized pools described above, we simulated the applicatio
 
 **Cross-temporal stability.** The same 29 credits were scored under three methodology versions (v0.3, v0.4, v0.6) differing in weight vectors and rubric definitions. Grade agreement rate and Spearman $\rho$ of composite rankings were computed between consecutive versions to assess convergence behaviour.
 
-## On-chain implementation
+## Reference implementation
 
-Smart contracts were written in Solidity 0.8.24, compiled and tested using the Foundry toolchain, and deployed on the Base Sepolia testnet. The core contract (`CarbonCreditRating.sol`) stored per-credit ratings as structured records containing per-dimension scores (uint8, 0--100), per-dimension standard deviations (uint8), composite score in basis points (uint16, 0--10000), composite variance in squared basis points (uint32), disqualifier flags (boolean struct), nominal and final grades (enum, B = 0 through AAA = 5), a methodology version identifier (uint16), an expiry timestamp (uint64), and a keccak256 evidence hash linking to off-chain audit materials.
-
-The contract exposed two principal read functions. `ratingOf()` returned the complete rating record for a given credit token address and token identifier. `meetsGrade()` returned a boolean indicating whether a credit's final grade met or exceeded a specified minimum, rejecting stale ratings (expired or written under a superseded methodology version).
-
-Three composability contracts demonstrated integration patterns. `QualityGatedPool.sol` called `meetsGrade()` as a deposit precondition, rejecting credits below the pool's quality threshold. `KlimaRetirementGate.sol` required `meetsGrade()` before permitting credit retirement. `CHARQualityOverlay.sol` read `ratingOf()` to apply fee discounts proportional to credit quality.
-
-**Off-chain/on-chain equivalence.** The Python scoring implementation (`score.py`) and the Solidity contract were validated to produce bit-identical composite scores. The composite calculation in Solidity used integer arithmetic in basis points: $\text{composite}_{\text{bps}} = \sum_i (s_i \times W_i) / 100$, where $s_i \in [0,100]$ and $W_i$ is the weight in basis points $\in [0,10000]$. The variance calculation followed an analogous structure: $\text{var}_{\text{bps}^2} = \sum_i (\sigma_i^2 \times W_i^2) / 10000$. Test vector: Climeworks Orca yielded composite = 9505 bps in both implementations.
+A reference implementation of the quality scoring and gating logic is available as open-source Solidity smart contracts, compiled and tested using the Foundry toolchain. The contracts encode per-credit ratings, composite scores, and disqualifier flags on-chain and expose a quality-gate function that returns a boolean indicating whether a credit meets a specified minimum grade. The Python scoring implementation and the Solidity contracts were validated to produce bit-identical composite scores on a shared test vector (Climeworks Orca: composite = 9505 basis points in both implementations). Full contract specifications and integration examples are provided in the source code repository (see Data availability).
 
 ## Data availability
 

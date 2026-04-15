@@ -20,7 +20,7 @@ interface IERC20Minimal {
 ///         - Fee handling and treasury
 ///         - Re-rating on redemption (grade may have changed)
 ///         - ERC-1155 / ERC-721 support for per-credit identity
-///         - Reentrancy guards
+///         - Reentrancy guards (deposit and withdraw follow CEI pattern)
 ///
 ///         v0.4 adds rating freshness enforcement via the rating contract's
 ///         isStale() view; deposits of stale ratings are rejected.
@@ -60,6 +60,7 @@ contract QualityGatedPool {
     ///         For ERC-20 credits where there is no tokenId (pool of a single batch),
     ///         pass tokenId = 0.
     function deposit(address creditToken, uint256 tokenId, uint256 amount) external {
+        // --- Checks ---
         // grade check -- reverts with a descriptive error if unrated, stale, or below threshold
         ICarbonCreditRating.Rating memory r;
         try ratings.ratingOf(creditToken, tokenId) returns (ICarbonCreditRating.Rating memory got) {
@@ -74,10 +75,7 @@ contract QualityGatedPool {
             revert BelowMinGrade(r.finalGrade, minGrade);
         }
 
-        // pull credit
-        bool ok = IERC20Minimal(creditToken).transferFrom(msg.sender, address(this), amount);
-        require(ok, "transferFrom failed");
-
+        // --- Effects ---
         // mint shares 1:1 (no fee, no peg maintenance in this prototype)
         balanceOf[msg.sender] += amount;
         totalSupply += amount;
@@ -85,6 +83,11 @@ contract QualityGatedPool {
 
         emit Deposit(msg.sender, creditToken, tokenId, amount, amount);
         emit Transfer(address(0), msg.sender, amount);
+
+        // --- Interactions ---
+        // pull credit (external call last, per checks-effects-interactions)
+        bool ok = IERC20Minimal(creditToken).transferFrom(msg.sender, address(this), amount);
+        require(ok, "transferFrom failed");
     }
 
     /// @notice Burn pool shares and receive the same amount of a single underlying credit.
