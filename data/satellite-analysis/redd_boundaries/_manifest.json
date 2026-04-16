@@ -4,83 +4,83 @@
     "area_ha": 100000,
     "registration_year": 2013,
     "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "west2023_available": false
   },
   "934": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_934.geojson",
     "area_ha": 299000,
     "registration_year": 2012,
-    "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "source": "west2023_vu_shapefile",
+    "west2023_available": true
   },
   "902": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_902.geojson",
     "area_ha": 785000,
     "registration_year": 2011,
     "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "west2023_available": false
   },
   "985": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_985.geojson",
     "area_ha": 1600000,
     "registration_year": 2010,
-    "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "source": "west2023_vu_shapefile",
+    "west2023_available": true
   },
   "1094": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_1094.geojson",
     "area_ha": 90000,
     "registration_year": 2012,
     "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "west2023_available": false
   },
   "1382": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_1382.geojson",
     "area_ha": 39000,
     "registration_year": 2013,
     "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "west2023_available": false
   },
   "1650": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_1650.geojson",
     "area_ha": 166000,
     "registration_year": 2015,
-    "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "source": "west2023_vu_shapefile",
+    "west2023_available": true
   },
   "1748": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_1748.geojson",
     "area_ha": 497000,
     "registration_year": 2015,
     "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "west2023_available": false
   },
   "868": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_868.geojson",
     "area_ha": 300000,
     "registration_year": 2012,
     "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "west2023_available": false
   },
   "612": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_612.geojson",
     "area_ha": 170000,
     "registration_year": 2011,
     "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "west2023_available": false
   },
   "1566": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_1566.geojson",
     "area_ha": 1150000,
     "registration_year": 2014,
-    "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "source": "west2023_vu_shapefile",
+    "west2023_available": true
   },
   "1686": {
     "path": "data/satellite-analysis/redd_boundaries/VCS_1686.geojson",
     "area_ha": 186000,
     "registration_year": 2015,
     "source": "approximate_pdd_centroid_disc",
-    "verra_kml_found": false
+    "west2023_available": false
   }
 }
