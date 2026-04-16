@@ -1,3 +1,5 @@
 [main] TCO2s to process: 161
 [phase B] Fetching transfers for 161 TCO2s (blocks 20000000..37000000, 1000-block chunks)
 [phase B] 1/161 0x0149f1c77874e922b6d2b20c5878db693dc3c3d6 events=2 (0.0s)  cum=0.0m  ETA=0.0m
+[phase B] 10/161 0x0b5ad42ae23907b0c66c92ec5198128e52e2c4cf events=2 (253.5s)  cum=28.7m  ETA=432.7m
+[phase B] 20/161 0x1bdf022e0cf838eb3c777e3e502db9e4029962c8 events=10 (203.8s)  cum=66.1m  ETA=466.1m

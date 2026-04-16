@@ -39,6 +39,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SAT_DIR = ROOT / "data" / "satellite-analysis"
 BOUND_DIR = SAT_DIR / "redd_boundaries"
 WEST_DIR = SAT_DIR / "west2023_data" / "shapefiles"
+WEST_SLIM_DIR = SAT_DIR / "west2023_data" / "shapefiles_slim"
 BOUND_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -125,8 +126,15 @@ def load_west_polygon(pid: str) -> dict | None:
     if pid not in WEST2023_MAP:
         return None
     shp_name, id_val = WEST2023_MAP[pid]
-    shp_path = WEST_DIR / shp_name
-    if not shp_path.exists():
+    # Prefer the slim per-BCT-project shapefile (committed to git, ~1 MB
+    # total); fall back to the full country shapefile (gitignored, 142 MB).
+    slim_path = WEST_SLIM_DIR / shp_name
+    full_path = WEST_DIR / shp_name
+    if slim_path.exists():
+        shp_path = slim_path
+    elif full_path.exists():
+        shp_path = full_path
+    else:
         return None
     try:
         gdf = gpd.read_file(shp_path)

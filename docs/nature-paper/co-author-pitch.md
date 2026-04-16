@@ -63,11 +63,18 @@ Every project is above 1.2×; the uniformity points to a structural baseline-vs-
 
 ### 1. REDD+ polygon-based satellite analysis
 
-BCT holds 12 REDD+ projects (Rimba Raya, Mai Ndombe, Kasigau II, Southern Cardamom, Envira, Pacajai, Agrocortex, Mataven, Cordillera Azul, Keo Seima, North Pikounda, Ecomapua). I've recorded the Hansen GFC 2001-2023 tile URLs for each (`hansen_deforestation.py`) and parsed public PDD baseline deforestation rates. I need you to:
+**[UPDATE 2026-04] MVP v2 complete — see `data/satellite-analysis/matched_synthetic_control.py` and `matched_synthetic_control_results.md`.** BCT holds 12 REDD+ projects (Rimba Raya, Mai Ndombe, Kasigau II, Southern Cardamom, Envira, Pacajai, Agrocortex, Mataven, Cordillera Azul, Keo Seima, Brazil Nut, Ecomapua). I've:
 
-- Pull the VCS project polygons from Verra's public methodology uploads or your existing JNR library.
-- Run a West et al. (2023) matched-sample counterfactual: for every project pixel, find a statistically twinned pixel outside the project+leakage belt and compute its realized Hansen loss rate.
-- Produce project-level "overclaim ratio" symmetric with our grid result.
+- Ingested West et al. 2023's DataverseNL shapefiles and per-polygon covariates for 5 of 12 BCT REDD+ projects (934, 985, 1566, 1650, 1748 — ~69% of BCT REDD+ area).
+- Re-implemented the West et al. 2023 MatchIt-cardinal K=10 + generalised synthetic control protocol in Python with DID adjustment (`matched_synthetic_control.py`; runs end-to-end in ~25 min on commodity hardware against the public Hansen COG mirror, no GEE required).
+- Produced a primary headline: BCT's 5 West-matched REDD+ projects overclaim by **5.6× (95% CI [3.3, 8.4])**, consistent with West 2023's 3.7× global mean.
+- Run a fallback pixel-level estimator for the 7 projects without West-shapefile coverage, using PDD-disc approximations. This inflates to 12.0× all-12 pooled pending real polygons.
+
+Where I need a remote-sensing co-author:
+
+- **Pull the true VCS project polygons for the 7 missing projects** (Rimba Raya, Kariba, Ecomapua, Envira, Brazil Nut, Kasigau II, Agrocortex) from Verra's public methodology uploads, JNR jurisdictional library, or direct negotiation with Verra. This tightens the pooled all-12 estimate from a noisy 12× toward the true 5-8× range.
+- **Verify our Python DID re-implementation against West 2023's R `gsynth` output** for the 5 projects we both cover. Cross-check expected: within 10% relative on per-project ATT.
+- **Produce an additional leakage-accounted estimator**: for each project, compute the 1-km and 10-km leakage-belt deforestation and net the delta against project avoidance (Guizar-Coutino 2022 style).
 
 ### 2. Hourly, location-resolved grid EF
 

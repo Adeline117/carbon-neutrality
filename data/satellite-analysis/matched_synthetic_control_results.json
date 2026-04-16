@@ -2,7 +2,7 @@
   "version": "GFC-2022-v1.10",
   "method": "K=10 matched synthetic control (West 2023 + Guizar-Coutino 2022)",
   "n_projects": 12,
-  "generated_ts": 1776324869.810986,
+  "generated_ts": 1776326024.394667,
   "per_project": [
     {
       "project_id": "674",
@@ -65,7 +65,12 @@
           0.0,
           0.0
         ],
+        "did_ctrl_post_pct_per_yr": 2.372089263402396,
+        "did_actual_avoided_pct_per_yr": 0.5000892634023957,
+        "did_overclaim_ratio": 0.0,
+        "did_tag": "baseline_below_project_loss",
         "tag": "baseline_below_project_loss",
+        "parallel_trends_slope_diff": -0.027847645828280785,
         "parallel_trends_t_stat": -1.2440718905170376,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -168,43 +173,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": null,
+          "did_overclaim_ratio": null,
           "tag": "baseline_and_control_both_fail",
+          "did_tag": "baseline_and_control_both_fail",
           "proj_post": 1.8900000000000001,
           "ctrl_post": 1.8800163463069484,
+          "did_ctrl_post": 1.8198336613717245,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": 0.0,
+          "did_overclaim_ratio": 0.0,
           "tag": "baseline_below_project_loss",
+          "did_tag": "baseline_below_project_loss",
           "proj_post": 1.872,
           "ctrl_post": 2.360605536687197,
+          "did_ctrl_post": 2.372089263402396,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": 0.0,
+          "did_overclaim_ratio": 0.0,
           "tag": "baseline_below_project_loss",
+          "did_tag": "baseline_below_project_loss",
           "proj_post": 1.872,
           "ctrl_post": 2.431358096753955,
+          "did_ctrl_post": 2.4588054306188063,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": 0.0,
+          "did_overclaim_ratio": 0.0,
           "tag": "baseline_below_project_loss",
+          "did_tag": "baseline_below_project_loss",
           "proj_post": 1.872,
           "ctrl_post": 2.3233421948274726,
+          "did_ctrl_post": 2.329047917837559,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": null,
+          "did_overclaim_ratio": null,
           "tag": "baseline_and_control_both_fail",
+          "did_tag": "baseline_and_control_both_fail",
           "proj_post": 1.8580000000000003,
           "ctrl_post": 1.7862724718198264,
+          "did_ctrl_post": 1.7297211094309357,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "674",
-        "estimator": "hansen-pixel-matched",
+        "estimator": "hansen-pixel-matched-did",
         "registration_year": 2013,
         "pdd_baseline_pct_per_yr": 1.35,
         "n_project_pixels": 5000,
@@ -247,16 +267,21 @@
         "proj_pre_pct_per_yr": 0.31000000000000005,
         "proj_post_pct_per_yr": 1.872,
         "ctrl_pre_pct_per_yr": 0.2985162732848014,
-        "ctrl_post_pct_per_yr": 2.360605536687197,
+        "ctrl_post_pct_per_yr": 2.372089263402396,
         "raw_unmatched_ctrl_post_pct_per_yr": 1.617,
         "claimed_avoided_pct_per_yr": -0.522,
-        "actual_avoided_pct_per_yr": 0.48860553668719686,
+        "actual_avoided_pct_per_yr": 0.5000892634023957,
         "overclaim_ratio": 0.0,
         "overclaim_95ci": [
           0.0,
           0.0
         ],
+        "did_ctrl_post_pct_per_yr": 2.372089263402396,
+        "did_actual_avoided_pct_per_yr": 0.5000892634023957,
+        "did_overclaim_ratio": 0.0,
+        "did_tag": "baseline_below_project_loss",
         "tag": "baseline_below_project_loss",
+        "parallel_trends_slope_diff": -0.027847645828280785,
         "parallel_trends_t_stat": -1.2440718905170376,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -356,7 +381,7 @@
           2022
         ]
       },
-      "best_label": "hansen-pixel-matched"
+      "best_label": "hansen-pixel-matched-did"
     },
     {
       "project_id": "934",
@@ -443,6 +468,10 @@
         "claimed_avoided_pct_per_yr": -0.06324896260816026,
         "actual_avoided_pct_per_yr": -0.11290702332758229,
         "overclaim_ratio": null,
+        "did_ctrl_post_pct_per_yr": 0.5823875843683044,
+        "did_actual_avoided_pct_per_yr": -0.030861378239855908,
+        "did_overclaim_ratio": null,
+        "did_tag": "baseline_and_control_both_fail",
         "tag": "baseline_and_control_both_fail",
         "parallel_trends_level_t_stat": 1.733636483034842,
         "parallel_trends_slope_diff": 0.0026990341195921065,
@@ -592,7 +621,12 @@
           0.0,
           0.057
         ],
+        "did_ctrl_post_pct_per_yr": 0.7840589173374637,
+        "did_actual_avoided_pct_per_yr": 0.1840589173374637,
+        "did_overclaim_ratio": 0.0,
+        "did_tag": "baseline_below_project_loss",
         "tag": "baseline_below_project_loss",
+        "parallel_trends_slope_diff": -0.01356414993750105,
         "parallel_trends_t_stat": -1.9000612443500688,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -695,168 +729,208 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": 0.0,
+          "did_overclaim_ratio": 0.0,
           "tag": "baseline_below_project_loss",
+          "did_tag": "baseline_below_project_loss",
           "proj_post": 0.6,
           "ctrl_post": 0.9583069237130627,
+          "did_ctrl_post": 0.8854384701205575,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": 0.0,
+          "did_overclaim_ratio": 0.0,
           "tag": "baseline_below_project_loss",
+          "did_tag": "baseline_below_project_loss",
           "proj_post": 0.6,
           "ctrl_post": 0.8238798082519457,
+          "did_ctrl_post": 0.7840589173374637,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": 0.0,
+          "did_overclaim_ratio": 0.0,
           "tag": "baseline_below_project_loss",
+          "did_tag": "baseline_below_project_loss",
           "proj_post": 0.6,
           "ctrl_post": 0.8772749877867754,
+          "did_ctrl_post": 0.8252306586492051,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": 0.0,
+          "did_overclaim_ratio": 0.0,
           "tag": "baseline_below_project_loss",
+          "did_tag": "baseline_below_project_loss",
           "proj_post": 0.6,
           "ctrl_post": 0.781475608998328,
+          "did_ctrl_post": 0.7451073055266229,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": 0.0,
+          "did_overclaim_ratio": 0.0,
           "tag": "baseline_below_project_loss",
+          "did_tag": "baseline_below_project_loss",
           "proj_post": 0.6363636363636364,
           "ctrl_post": 0.9046839529022968,
+          "did_ctrl_post": 0.8849642741794923,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "934",
-        "estimator": "hansen-pixel-matched",
+        "estimator": "west2023-csv-matched-did",
         "registration_year": 2012,
         "pdd_baseline_pct_per_yr": 0.55,
-        "n_project_pixels": 5000,
-        "n_donor_pixels": 50000,
-        "n_project_pixels_total_eligible": 419016,
-        "n_donor_pixels_total_eligible": 2068652,
         "k_matched": 10,
+        "covariates_used": [
+          "def_p",
+          "buf10k_def_p",
+          "tree",
+          "access",
+          "dem",
+          "slope",
+          "fric",
+          "pa"
+        ],
+        "n_project_polygons": 1,
+        "n_donor_polygons_total": 988,
+        "n_donor_polygons_matched": 10,
         "covariate_balance": {
-          "treecover2000": {
-            "project_mean": 91.3354,
-            "matched_control_mean": 90.7821745568706,
-            "unmatched_control_mean": 86.42128,
-            "std_mean_diff": 0.04204576436401363
+          "def_p": {
+            "project_mean": 0.25541591113533235,
+            "matched_control_mean": 0.17336527129189158,
+            "unmatched_control_mean": 0.20505050177089695,
+            "std_mean_diff": 0.4128562761973917
           },
-          "dist_to_edge_km": {
-            "project_mean": 2.7397410838320853,
-            "matched_control_mean": 2.3647877564871806,
-            "unmatched_control_mean": 2.317592783727348,
-            "std_mean_diff": 0.163029996381035
+          "buf10k_def_p": {
+            "project_mean": 0.09297222330352851,
+            "matched_control_mean": 0.13669646356428872,
+            "unmatched_control_mean": 0.1816062103824451,
+            "std_mean_diff": 0.2769606683359633
           },
-          "pre_period_deforestation_density_1km": {
-            "project_mean": 0.027941667077224702,
-            "matched_control_mean": 0.02728482595677208,
-            "unmatched_control_mean": 0.02716888921099715,
-            "std_mean_diff": 0.011136978981170085
+          "tree": {
+            "project_mean": 0.8900000000000001,
+            "matched_control_mean": 0.9189999999999999,
+            "unmatched_control_mean": 0.6912044534412957,
+            "std_mean_diff": 0.11148444840130209
           },
-          "latitude": {
-            "project_mean": -1.9991463174690136,
-            "matched_control_mean": -1.9515000470495134,
-            "unmatched_control_mean": -1.9817890374690137,
-            "std_mean_diff": 0.18458424164466025
+          "access": {
+            "project_mean": 813.6260000000001,
+            "matched_control_mean": 681.1332100000001,
+            "unmatched_control_mean": 425.6126607287449,
+            "std_mean_diff": 0.3823685898541405
           },
-          "longitude": {
-            "project_mean": 18.022967157973728,
-            "matched_control_mean": 18.087804952646668,
-            "unmatched_control_mean": 18.015168312973728,
-            "std_mean_diff": 0.29342394694823704
+          "dem": {
+            "project_mean": 319.0116,
+            "matched_control_mean": 341.41182,
+            "unmatched_control_mean": 685.2279027327935,
+            "std_mean_diff": 0.06969926091432956
+          },
+          "slope": {
+            "project_mean": 0.7873,
+            "matched_control_mean": 0.7951699999999999,
+            "unmatched_control_mean": 2.363267813765182,
+            "std_mean_diff": 0.004916789620467362
+          },
+          "fric": {
+            "project_mean": 0.0378,
+            "matched_control_mean": 0.03793,
+            "unmatched_control_mean": 0.02605516194331984,
+            "std_mean_diff": 0.00969333030538122
+          },
+          "pa": {
+            "project_mean": 0.0,
+            "matched_control_mean": 0.0045,
+            "unmatched_control_mean": 0.11616194331983808,
+            "std_mean_diff": 0.017465009758287485
           }
         },
-        "proj_pre_pct_per_yr": 0.2345454545454545,
-        "proj_post_pct_per_yr": 0.6,
-        "ctrl_pre_pct_per_yr": 0.2743663454599365,
-        "ctrl_post_pct_per_yr": 0.8238798082519457,
-        "raw_unmatched_ctrl_post_pct_per_yr": 0.5894545454545455,
-        "claimed_avoided_pct_per_yr": -0.04999999999999993,
-        "actual_avoided_pct_per_yr": 0.22387980825194576,
-        "overclaim_ratio": 0.0,
-        "overclaim_95ci": [
-          0.0,
-          0.057
-        ],
-        "tag": "baseline_below_project_loss",
-        "parallel_trends_t_stat": -1.9000612443500688,
+        "proj_pre_pct_per_yr": 0.25541591113533235,
+        "proj_post_pct_per_yr": 0.6132489626081603,
+        "ctrl_pre_pct_per_yr": 0.17337026604760591,
+        "ctrl_post_pct_per_yr": 0.5823875843683044,
+        "raw_unmatched_ctrl_post_pct_per_yr": 0.49993195829924425,
+        "att_pct_per_yr": 0.11290702332758229,
+        "claimed_avoided_pct_per_yr": -0.06324896260816026,
+        "actual_avoided_pct_per_yr": -0.030861378239855908,
+        "overclaim_ratio": null,
+        "did_ctrl_post_pct_per_yr": 0.5823875843683044,
+        "did_actual_avoided_pct_per_yr": -0.030861378239855908,
+        "did_overclaim_ratio": null,
+        "did_tag": "baseline_and_control_both_fail",
+        "tag": "baseline_and_control_both_fail",
+        "parallel_trends_level_t_stat": 1.733636483034842,
+        "parallel_trends_slope_diff": 0.0026990341195921065,
+        "parallel_trends_slope_t_stat": 0.1476807329387725,
+        "parallel_trends_t_stat": 0.1476807329387725,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
-          0.22,
-          0.1,
-          0.1,
-          0.16,
-          0.58,
-          0.06,
-          0.12,
-          0.26,
-          0.14,
-          0.72,
-          0.12,
-          0.26,
-          1.38,
-          0.66,
-          0.26,
-          0.4,
-          0.42,
-          0.74,
-          0.82,
-          0.82,
-          0.36,
-          0.48
+          0.26883,
+          0.16048,
+          0.14676,
+          0.15494,
+          0.40023,
+          0.03746,
+          0.09086,
+          0.31801,
+          0.27154,
+          0.7981,
+          0.16236,
+          0.19864,
+          1.53476,
+          0.73105,
+          0.18512,
+          0.39473,
+          0.41175,
+          0.82387,
+          0.51847,
+          0.72084
         ],
         "ctrl_annual_pct": [
-          0.24854,
-          0.1688,
-          0.09442,
-          0.07703,
-          0.49018,
-          0.09313,
-          0.19418,
-          0.27965,
-          0.27142,
-          0.89356,
-          0.2071,
-          0.23804,
-          2.22205,
-          0.72781,
-          0.47078,
-          0.72416,
-          0.68452,
-          1.196,
-          0.48329,
-          0.73429,
-          0.79826,
-          0.78346
+          0.14789,
+          0.20192,
+          0.05887,
+          0.05372,
+          0.18812,
+          0.08827,
+          0.09698,
+          0.13222,
+          0.27962,
+          0.36599,
+          0.29348,
+          0.21408,
+          0.40068,
+          0.61765,
+          0.40326,
+          0.54469,
+          0.7105,
+          0.58463,
+          0.55057,
+          0.47702
         ],
         "raw_ctrl_annual_pct": [
-          0.434,
-          0.29,
-          0.08,
-          0.11,
-          0.334,
-          0.114,
-          0.2,
-          0.292,
-          0.258,
-          0.732,
-          0.18,
-          0.272,
-          0.746,
-          0.746,
-          0.232,
-          0.488,
-          0.504,
-          1.13,
-          0.62,
-          0.586,
-          0.512,
-          0.648
+          0.18932,
+          0.21706,
+          0.11925,
+          0.17091,
+          0.20332,
+          0.19438,
+          0.19814,
+          0.17172,
+          0.26585,
+          0.3524,
+          0.1819,
+          0.26802,
+          0.39114,
+          0.57514,
+          0.39812,
+          0.58493,
+          0.62767,
+          0.58118,
+          0.51438,
+          0.55881
         ],
         "years": [
           2001,
@@ -878,12 +952,10 @@
           2017,
           2018,
           2019,
-          2020,
-          2021,
-          2022
+          2020
         ]
       },
-      "best_label": "hansen-pixel-matched"
+      "best_label": "west2023-csv-matched-did"
     },
     {
       "project_id": "902",
@@ -946,7 +1018,12 @@
           10.0,
           326.024
         ],
+        "did_ctrl_post_pct_per_yr": 0.4028272275705908,
+        "did_actual_avoided_pct_per_yr": 0.12449389423725749,
+        "did_overclaim_ratio": 5.797,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": -0.013253272453969202,
         "parallel_trends_t_stat": -0.6440205550974282,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -1049,43 +1126,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": 5.95,
           "tag": "net_leakage_vs_control",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.3,
           "ctrl_post": 0.25981338283813527,
+          "did_ctrl_post": 0.4176399046377671,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": 28.328,
+          "did_overclaim_ratio": 5.797,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.2783333333333333,
           "ctrl_post": 0.30380863686830983,
+          "did_ctrl_post": 0.4028272275705908,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": 16.39,
+          "did_overclaim_ratio": 5.175,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.2783333333333333,
           "ctrl_post": 0.32236454171311346,
+          "did_ctrl_post": 0.41778401790426845,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": 40.789,
+          "did_overclaim_ratio": 5.694,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.2783333333333333,
           "ctrl_post": 0.29602591762867725,
+          "did_ctrl_post": 0.40507554296205533,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": 4.261,
           "tag": "net_leakage_vs_control",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.2816666666666667,
           "ctrl_post": 0.2586861443079001,
+          "did_ctrl_post": 0.45024248010454976,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "902",
-        "estimator": "hansen-pixel-matched",
+        "estimator": "hansen-pixel-matched-did",
         "registration_year": 2011,
         "pdd_baseline_pct_per_yr": 1.0,
         "n_project_pixels": 5000,
@@ -1128,16 +1220,21 @@
         "proj_pre_pct_per_yr": 0.356,
         "proj_post_pct_per_yr": 0.2783333333333333,
         "ctrl_pre_pct_per_yr": 0.256981409297719,
-        "ctrl_post_pct_per_yr": 0.30380863686830983,
+        "ctrl_post_pct_per_yr": 0.4028272275705908,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.2068333333333333,
         "claimed_avoided_pct_per_yr": 0.7216666666666667,
-        "actual_avoided_pct_per_yr": 0.025475303534976512,
-        "overclaim_ratio": 28.328,
+        "actual_avoided_pct_per_yr": 0.12449389423725749,
+        "overclaim_ratio": 5.797,
         "overclaim_95ci": [
           10.0,
           326.024
         ],
+        "did_ctrl_post_pct_per_yr": 0.4028272275705908,
+        "did_actual_avoided_pct_per_yr": 0.12449389423725749,
+        "did_overclaim_ratio": 5.797,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": -0.013253272453969202,
         "parallel_trends_t_stat": -0.6440205550974282,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -1237,7 +1334,7 @@
           2022
         ]
       },
-      "best_label": "hansen-pixel-matched"
+      "best_label": "hansen-pixel-matched-did"
     },
     {
       "project_id": "985",
@@ -1324,6 +1421,10 @@
         "claimed_avoided_pct_per_yr": 0.35369936640665056,
         "actual_avoided_pct_per_yr": 0.37208295343534825,
         "overclaim_ratio": 0.951,
+        "did_ctrl_post_pct_per_yr": 0.24350518136004404,
+        "did_actual_avoided_pct_per_yr": 0.19720454776669458,
+        "did_overclaim_ratio": 1.794,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
         "parallel_trends_level_t_stat": -8.475018671391712,
         "parallel_trends_slope_diff": -0.016807999187800664,
@@ -1473,7 +1574,12 @@
           0.628,
           0.647
         ],
+        "did_ctrl_post_pct_per_yr": 0.6024197534319601,
+        "did_actual_avoided_pct_per_yr": 0.5639582149704216,
+        "did_overclaim_ratio": 0.641,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": 0.001746355372105374,
         "parallel_trends_t_stat": 0.6784120611871014,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -1576,43 +1682,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": 0.747,
+          "did_overclaim_ratio": 0.773,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.03076923076923077,
           "ctrl_post": 0.5250900817479938,
+          "did_ctrl_post": 0.5085699482523803,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": 0.639,
+          "did_overclaim_ratio": 0.641,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.038461538461538464,
           "ctrl_post": 0.6041947170032226,
+          "did_ctrl_post": 0.6024197534319601,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": 0.595,
+          "did_overclaim_ratio": 0.595,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.038461538461538464,
           "ctrl_post": 0.6465570253699016,
+          "did_ctrl_post": 0.646153000448028,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": 0.694,
+          "did_overclaim_ratio": 0.7,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.038461538461538464,
           "ctrl_post": 0.5590710393269948,
+          "did_ctrl_post": 0.5549823114081948,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": 0.627,
+          "did_overclaim_ratio": 0.619,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.03230769230769231,
           "ctrl_post": 0.6183166121761943,
+          "did_ctrl_post": 0.6261416377121625,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "985",
-        "estimator": "west2023-csv-matched",
+        "estimator": "west2023-csv-matched-did",
         "registration_year": 2010,
         "pdd_baseline_pct_per_yr": 0.4,
         "k_matched": 10,
@@ -1682,12 +1803,16 @@
         "proj_pre_pct_per_yr": 0.01827563436524891,
         "proj_post_pct_per_yr": 0.04630063359334946,
         "ctrl_pre_pct_per_yr": 0.19315404003390257,
-        "ctrl_post_pct_per_yr": 0.4183835870286977,
+        "ctrl_post_pct_per_yr": 0.24350518136004404,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.09920999854409271,
         "att_pct_per_yr": -0.37208295343534825,
         "claimed_avoided_pct_per_yr": 0.35369936640665056,
-        "actual_avoided_pct_per_yr": 0.37208295343534825,
-        "overclaim_ratio": 0.951,
+        "actual_avoided_pct_per_yr": 0.19720454776669458,
+        "overclaim_ratio": 1.794,
+        "did_ctrl_post_pct_per_yr": 0.24350518136004404,
+        "did_actual_avoided_pct_per_yr": 0.19720454776669458,
+        "did_overclaim_ratio": 1.794,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
         "parallel_trends_level_t_stat": -8.475018671391712,
         "parallel_trends_slope_diff": -0.016807999187800664,
@@ -1783,7 +1908,7 @@
           2020
         ]
       },
-      "best_label": "west2023-csv-matched"
+      "best_label": "west2023-csv-matched-did"
     },
     {
       "project_id": "1094",
@@ -1846,7 +1971,12 @@
           4.752,
           6.585
         ],
+        "did_ctrl_post_pct_per_yr": 0.20693036246975047,
+        "did_actual_avoided_pct_per_yr": 0.11783945337884139,
+        "did_overclaim_ratio": 5.609,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": 0.003971890787060642,
         "parallel_trends_t_stat": 1.4175646493594811,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -1949,43 +2079,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": 6.007,
+          "did_overclaim_ratio": 6.065,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.1290909090909091,
           "ctrl_post": 0.23244906502418097,
+          "did_ctrl_post": 0.23146907698865762,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": 5.488,
+          "did_overclaim_ratio": 5.609,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.08909090909090908,
           "ctrl_post": 0.20950872198382675,
+          "did_ctrl_post": 0.20693036246975047,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": 5.103,
+          "did_overclaim_ratio": 5.271,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.08909090909090908,
           "ctrl_post": 0.21861359800353378,
+          "did_ctrl_post": 0.21448009317857503,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": 5.739,
+          "did_overclaim_ratio": 5.715,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.08909090909090908,
           "ctrl_post": 0.2042606652981645,
+          "did_ctrl_post": 0.20474166340177063,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.1,
           "ctrl_post": 0.028151380410078662,
+          "did_ctrl_post": 0.035408654267409564,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "1094",
-        "estimator": "hansen-pixel-matched",
+        "estimator": "hansen-pixel-matched-did",
         "registration_year": 2012,
         "pdd_baseline_pct_per_yr": 0.75,
         "n_project_pixels": 5000,
@@ -2028,16 +2173,21 @@
         "proj_pre_pct_per_yr": 0.018181818181818184,
         "proj_post_pct_per_yr": 0.08909090909090908,
         "ctrl_pre_pct_per_yr": 0.020760177695894465,
-        "ctrl_post_pct_per_yr": 0.20950872198382675,
+        "ctrl_post_pct_per_yr": 0.20693036246975047,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.2621818181818182,
         "claimed_avoided_pct_per_yr": 0.6609090909090909,
-        "actual_avoided_pct_per_yr": 0.12041781289291767,
-        "overclaim_ratio": 5.488,
+        "actual_avoided_pct_per_yr": 0.11783945337884139,
+        "overclaim_ratio": 5.609,
         "overclaim_95ci": [
           4.752,
           6.585
         ],
+        "did_ctrl_post_pct_per_yr": 0.20693036246975047,
+        "did_actual_avoided_pct_per_yr": 0.11783945337884139,
+        "did_overclaim_ratio": 5.609,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": 0.003971890787060642,
         "parallel_trends_t_stat": 1.4175646493594811,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -2137,7 +2287,7 @@
           2022
         ]
       },
-      "best_label": "hansen-pixel-matched"
+      "best_label": "hansen-pixel-matched-did"
     },
     {
       "project_id": "1382",
@@ -2200,7 +2350,12 @@
           10.0,
           10.0
         ],
+        "did_ctrl_post_pct_per_yr": 1.382467012332709,
+        "did_actual_avoided_pct_per_yr": -0.6455329876672911,
+        "did_overclaim_ratio": null,
+        "did_tag": "baseline_and_control_both_fail",
         "tag": "baseline_and_control_both_fail",
+        "parallel_trends_slope_diff": -0.022306415984332285,
         "parallel_trends_t_stat": -1.1452154261333265,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -2303,43 +2458,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": null,
+          "did_overclaim_ratio": null,
           "tag": "baseline_and_control_both_fail",
+          "did_tag": "baseline_and_control_both_fail",
           "proj_post": 2.148,
           "ctrl_post": 1.2406292668922925,
+          "did_ctrl_post": 1.2770576663769437,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": null,
+          "did_overclaim_ratio": null,
           "tag": "baseline_and_control_both_fail",
+          "did_tag": "baseline_and_control_both_fail",
           "proj_post": 2.028,
           "ctrl_post": 1.3486355009729145,
+          "did_ctrl_post": 1.382467012332709,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": null,
+          "did_overclaim_ratio": null,
           "tag": "baseline_and_control_both_fail",
+          "did_tag": "baseline_and_control_both_fail",
           "proj_post": 2.028,
           "ctrl_post": 1.3366581532221689,
+          "did_ctrl_post": 1.3402992875640418,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": null,
+          "did_overclaim_ratio": null,
           "tag": "baseline_and_control_both_fail",
+          "did_tag": "baseline_and_control_both_fail",
           "proj_post": 2.028,
           "ctrl_post": 1.344492223141687,
+          "did_ctrl_post": 1.3955708301430783,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": null,
+          "did_overclaim_ratio": null,
           "tag": "baseline_and_control_both_fail",
+          "did_tag": "baseline_and_control_both_fail",
           "proj_post": 2.0079999999999996,
           "ctrl_post": 1.0292186226514468,
+          "did_ctrl_post": 1.0064412883847136,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "1382",
-        "estimator": "hansen-pixel-matched",
+        "estimator": "hansen-pixel-matched-did",
         "registration_year": 2013,
         "pdd_baseline_pct_per_yr": 1.22,
         "n_project_pixels": 5000,
@@ -2382,16 +2552,21 @@
         "proj_pre_pct_per_yr": 0.3816666666666666,
         "proj_post_pct_per_yr": 2.028,
         "ctrl_pre_pct_per_yr": 0.34783515530687215,
-        "ctrl_post_pct_per_yr": 1.3486355009729145,
+        "ctrl_post_pct_per_yr": 1.382467012332709,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.6406000000000001,
         "claimed_avoided_pct_per_yr": -0.808,
-        "actual_avoided_pct_per_yr": -0.6793644990270855,
+        "actual_avoided_pct_per_yr": -0.6455329876672911,
         "overclaim_ratio": null,
         "overclaim_95ci": [
           10.0,
           10.0
         ],
+        "did_ctrl_post_pct_per_yr": 1.382467012332709,
+        "did_actual_avoided_pct_per_yr": -0.6455329876672911,
+        "did_overclaim_ratio": null,
+        "did_tag": "baseline_and_control_both_fail",
         "tag": "baseline_and_control_both_fail",
+        "parallel_trends_slope_diff": -0.022306415984332285,
         "parallel_trends_t_stat": -1.1452154261333265,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -2491,7 +2666,7 @@
           2022
         ]
       },
-      "best_label": "hansen-pixel-matched"
+      "best_label": "hansen-pixel-matched-did"
     },
     {
       "project_id": "1650",
@@ -2578,6 +2753,10 @@
         "claimed_avoided_pct_per_yr": 1.025209916229887,
         "actual_avoided_pct_per_yr": 0.7866842011444941,
         "overclaim_ratio": 1.303,
+        "did_ctrl_post_pct_per_yr": 0.9066879445120494,
+        "did_actual_avoided_pct_per_yr": 0.13189786074193643,
+        "did_overclaim_ratio": 7.773,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
         "parallel_trends_level_t_stat": -4.099999766177136,
         "parallel_trends_slope_diff": -0.1208500981486407,
@@ -2727,7 +2906,12 @@
           10.0,
           78.983
         ],
+        "did_ctrl_post_pct_per_yr": 0.8271423637697659,
+        "did_actual_avoided_pct_per_yr": -0.06785763623023411,
+        "did_overclaim_ratio": "inf",
+        "did_tag": "net_leakage_vs_control",
         "tag": "net_leakage_vs_control",
+        "parallel_trends_slope_diff": 0.01526587455143057,
         "parallel_trends_t_stat": 1.2325264116607928,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -2830,43 +3014,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.9575,
           "ctrl_post": 0.7127968624064738,
+          "did_ctrl_post": 0.6772644000647603,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.895,
           "ctrl_post": 0.8373443579036317,
+          "did_ctrl_post": 0.8271423637697659,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.895,
           "ctrl_post": 0.8838555677080334,
+          "did_ctrl_post": 0.8805028204387546,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.895,
           "ctrl_post": 0.8011060559485375,
+          "did_ctrl_post": 0.7803183540549175,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": 3.19,
+          "did_overclaim_ratio": 4.413,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.8825,
           "ctrl_post": 1.170112949504184,
+          "did_ctrl_post": 1.0904157865380637,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "1650",
-        "estimator": "west2023-csv-matched",
+        "estimator": "west2023-csv-matched-did",
         "registration_year": 2015,
         "pdd_baseline_pct_per_yr": 1.8,
         "k_matched": 10,
@@ -2936,12 +3135,16 @@
         "proj_pre_pct_per_yr": 0.17348017383468958,
         "proj_post_pct_per_yr": 0.7747900837701129,
         "ctrl_pre_pct_per_yr": 0.8282665142372473,
-        "ctrl_post_pct_per_yr": 1.561474284914607,
+        "ctrl_post_pct_per_yr": 0.9066879445120494,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.9953796851504749,
         "att_pct_per_yr": -0.7866842011444941,
         "claimed_avoided_pct_per_yr": 1.025209916229887,
-        "actual_avoided_pct_per_yr": 0.7866842011444941,
-        "overclaim_ratio": 1.303,
+        "actual_avoided_pct_per_yr": 0.13189786074193643,
+        "overclaim_ratio": 7.773,
+        "did_ctrl_post_pct_per_yr": 0.9066879445120494,
+        "did_actual_avoided_pct_per_yr": 0.13189786074193643,
+        "did_overclaim_ratio": 7.773,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
         "parallel_trends_level_t_stat": -4.099999766177136,
         "parallel_trends_slope_diff": -0.1208500981486407,
@@ -3037,7 +3240,7 @@
           2020
         ]
       },
-      "best_label": "west2023-csv-matched"
+      "best_label": "west2023-csv-matched-did"
     },
     {
       "project_id": "1748",
@@ -3124,6 +3327,10 @@
         "claimed_avoided_pct_per_yr": 1.8806042704860264,
         "actual_avoided_pct_per_yr": 1.0061644234196983,
         "overclaim_ratio": 1.869,
+        "did_ctrl_post_pct_per_yr": 0.46755166277087234,
+        "did_actual_avoided_pct_per_yr": 0.42815593325689894,
+        "did_overclaim_ratio": 4.392,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
         "parallel_trends_level_t_stat": -3.7624243368233206,
         "parallel_trends_slope_diff": -0.120468423715953,
@@ -3273,7 +3480,12 @@
           11.143,
           22.651
         ],
+        "did_ctrl_post_pct_per_yr": 0.33421079914912033,
+        "did_actual_avoided_pct_per_yr": 0.13171079914912034,
+        "did_overclaim_ratio": 13.04,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": -0.002390010865117923,
         "parallel_trends_t_stat": -0.1575989282657718,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -3376,43 +3588,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": 14.453,
+          "did_overclaim_ratio": 15.656,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.195,
           "ctrl_post": 0.31434944503767703,
+          "did_ctrl_post": 0.3051794939181277,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": 14.589,
+          "did_overclaim_ratio": 13.04,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.20249999999999999,
           "ctrl_post": 0.32022404646520003,
+          "did_ctrl_post": 0.33421079914912033,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": 12.911,
+          "did_overclaim_ratio": 11.917,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.20249999999999999,
           "ctrl_post": 0.335529822434958,
+          "did_ctrl_post": 0.3466245171809841,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": 16.386,
+          "did_overclaim_ratio": 14.055,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.20249999999999999,
           "ctrl_post": 0.3073144181615415,
+          "did_ctrl_post": 0.3246985254423952,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": 5.452,
+          "did_overclaim_ratio": 5.414,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.20499999999999996,
           "ctrl_post": 0.5195459183164277,
+          "did_ctrl_post": 0.5217580426347452,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "1748",
-        "estimator": "west2023-csv-matched",
+        "estimator": "west2023-csv-matched-did",
         "registration_year": 2015,
         "pdd_baseline_pct_per_yr": 1.92,
         "k_matched": 10,
@@ -3482,12 +3709,16 @@
         "proj_pre_pct_per_yr": 0.042083652917354906,
         "proj_post_pct_per_yr": 0.03939572951397342,
         "ctrl_pre_pct_per_yr": 0.6200921430801544,
-        "ctrl_post_pct_per_yr": 1.0455601529336718,
+        "ctrl_post_pct_per_yr": 0.46755166277087234,
         "raw_unmatched_ctrl_post_pct_per_yr": 1.006538480715059,
         "att_pct_per_yr": -1.0061644234196983,
         "claimed_avoided_pct_per_yr": 1.8806042704860264,
-        "actual_avoided_pct_per_yr": 1.0061644234196983,
-        "overclaim_ratio": 1.869,
+        "actual_avoided_pct_per_yr": 0.42815593325689894,
+        "overclaim_ratio": 4.392,
+        "did_ctrl_post_pct_per_yr": 0.46755166277087234,
+        "did_actual_avoided_pct_per_yr": 0.42815593325689894,
+        "did_overclaim_ratio": 4.392,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
         "parallel_trends_level_t_stat": -3.7624243368233206,
         "parallel_trends_slope_diff": -0.120468423715953,
@@ -3583,7 +3814,7 @@
           2020
         ]
       },
-      "best_label": "west2023-csv-matched"
+      "best_label": "west2023-csv-matched-did"
     },
     {
       "project_id": "868",
@@ -3646,7 +3877,12 @@
           10.0,
           10.0
         ],
+        "did_ctrl_post_pct_per_yr": 0.24571433034128626,
+        "did_actual_avoided_pct_per_yr": -0.05428566965871373,
+        "did_overclaim_ratio": "inf",
+        "did_tag": "net_leakage_vs_control",
         "tag": "net_leakage_vs_control",
+        "parallel_trends_slope_diff": -0.004211561938725026,
         "parallel_trends_t_stat": -0.4545699500941569,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -3749,43 +3985,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": 43.889,
           "tag": "net_leakage_vs_control",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.29818181818181816,
           "ctrl_post": 0.27083714525535174,
+          "did_ctrl_post": 0.3073372321612975,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.3,
           "ctrl_post": 0.24064570332478502,
+          "did_ctrl_post": 0.24571433034128626,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.3,
           "ctrl_post": 0.23018278369986786,
+          "did_ctrl_post": 0.23747341264142852,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.3,
           "ctrl_post": 0.24320927399042683,
+          "did_ctrl_post": 0.258274723054225,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.2563636363636364,
           "ctrl_post": 0.12538222057948553,
+          "did_ctrl_post": 0.08096912768542457,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "868",
-        "estimator": "hansen-pixel-matched",
+        "estimator": "hansen-pixel-matched-did",
         "registration_year": 2012,
         "pdd_baseline_pct_per_yr": 0.7,
         "n_project_pixels": 5000,
@@ -3828,16 +4079,21 @@
         "proj_pre_pct_per_yr": 0.09090909090909091,
         "proj_post_pct_per_yr": 0.3,
         "ctrl_pre_pct_per_yr": 0.08584046389258967,
-        "ctrl_post_pct_per_yr": 0.24064570332478502,
+        "ctrl_post_pct_per_yr": 0.24571433034128626,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.4743636363636365,
         "claimed_avoided_pct_per_yr": 0.39999999999999997,
-        "actual_avoided_pct_per_yr": -0.05935429667521497,
+        "actual_avoided_pct_per_yr": -0.05428566965871373,
         "overclaim_ratio": "inf",
         "overclaim_95ci": [
           10.0,
           10.0
         ],
+        "did_ctrl_post_pct_per_yr": 0.24571433034128626,
+        "did_actual_avoided_pct_per_yr": -0.05428566965871373,
+        "did_overclaim_ratio": "inf",
+        "did_tag": "net_leakage_vs_control",
         "tag": "net_leakage_vs_control",
+        "parallel_trends_slope_diff": -0.004211561938725026,
         "parallel_trends_t_stat": -0.4545699500941569,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -3937,7 +4193,7 @@
           2022
         ]
       },
-      "best_label": "hansen-pixel-matched"
+      "best_label": "hansen-pixel-matched-did"
     },
     {
       "project_id": "612",
@@ -4000,7 +4256,12 @@
           10.0,
           10.0
         ],
+        "did_ctrl_post_pct_per_yr": -0.5484989660964542,
+        "did_actual_avoided_pct_per_yr": -0.6451733667151703,
+        "did_overclaim_ratio": "inf",
+        "did_tag": "net_leakage_vs_control",
         "tag": "net_leakage_vs_control",
+        "parallel_trends_slope_diff": 0.28198400703795623,
         "parallel_trends_t_stat": 1.325455705970378,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -4103,43 +4364,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.08359053497942387,
           "ctrl_post": 0.0010803877400017933,
+          "did_ctrl_post": -0.9770382835109953,
           "pp_pass": true
         },
         "buf10-50_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.09667440061871617,
           "ctrl_post": 0.006025273546906027,
+          "did_ctrl_post": -0.5484989660964542,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.09667440061871617,
           "ctrl_post": 0.00490055628991916,
+          "did_ctrl_post": -0.9337554358100311,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.09667440061871617,
           "ctrl_post": 0.009206218890424556,
+          "did_ctrl_post": -0.31089093275881774,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": "inf",
           "tag": "net_leakage_vs_control",
+          "did_tag": "net_leakage_vs_control",
           "proj_post": 0.0581170089112747,
           "ctrl_post": 0.03091987700119618,
+          "did_ctrl_post": -0.5907161958932962,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "612",
-        "estimator": "hansen-pixel-matched",
+        "estimator": "hansen-pixel-matched-did",
         "registration_year": 2011,
         "pdd_baseline_pct_per_yr": 0.48,
         "n_project_pixels": 2586,
@@ -4182,16 +4458,21 @@
         "proj_pre_pct_per_yr": 0.08894044856921886,
         "proj_post_pct_per_yr": 0.09667440061871617,
         "ctrl_pre_pct_per_yr": 0.6434646882125792,
-        "ctrl_post_pct_per_yr": 0.006025273546906027,
+        "ctrl_post_pct_per_yr": -0.5484989660964542,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.2422784633619187,
         "claimed_avoided_pct_per_yr": 0.3833255993812838,
-        "actual_avoided_pct_per_yr": -0.09064912707181014,
+        "actual_avoided_pct_per_yr": -0.6451733667151703,
         "overclaim_ratio": "inf",
         "overclaim_95ci": [
           10.0,
           10.0
         ],
+        "did_ctrl_post_pct_per_yr": -0.5484989660964542,
+        "did_actual_avoided_pct_per_yr": -0.6451733667151703,
+        "did_overclaim_ratio": "inf",
+        "did_tag": "net_leakage_vs_control",
         "tag": "net_leakage_vs_control",
+        "parallel_trends_slope_diff": 0.28198400703795623,
         "parallel_trends_t_stat": 1.325455705970378,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -4291,7 +4572,7 @@
           2022
         ]
       },
-      "best_label": "hansen-pixel-matched"
+      "best_label": "hansen-pixel-matched-did"
     },
     {
       "project_id": "1566",
@@ -4378,6 +4659,10 @@
         "claimed_avoided_pct_per_yr": 0.24509732750956015,
         "actual_avoided_pct_per_yr": 0.08077523500034257,
         "overclaim_ratio": 3.034,
+        "did_ctrl_post_pct_per_yr": 0.1620917439708115,
+        "did_actual_avoided_pct_per_yr": 0.05718907148037165,
+        "did_overclaim_ratio": 4.286,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
         "parallel_trends_level_t_stat": -4.709600618262994,
         "parallel_trends_slope_diff": 0.0032028300877848417,
@@ -4527,7 +4812,12 @@
           3.693,
           42.863
         ],
+        "did_ctrl_post_pct_per_yr": 0.16834873149949642,
+        "did_actual_avoided_pct_per_yr": 0.026126509277274224,
+        "did_overclaim_ratio": 7.953,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": 0.004878395774232576,
         "parallel_trends_t_stat": 1.5506842068231608,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -4630,43 +4920,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": 7.522,
+          "did_overclaim_ratio": 11.42,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.13333333333333333,
           "ctrl_post": 0.16213938370970615,
+          "did_ctrl_post": 0.15230662611469495,
           "pp_pass": false
         },
         "buf10-50_k10": {
           "overclaim_ratio": 7.234,
+          "did_overclaim_ratio": 7.953,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.1422222222222222,
           "ctrl_post": 0.17094383513747427,
+          "did_ctrl_post": 0.16834873149949642,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": 4.531,
+          "did_overclaim_ratio": 4.771,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.1422222222222222,
           "ctrl_post": 0.18807941214136759,
+          "did_ctrl_post": 0.18577459558839615,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": 6.743,
+          "did_overclaim_ratio": 6.823,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.1422222222222222,
           "ctrl_post": 0.17303515607755032,
+          "did_ctrl_post": 0.1726744576873906,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": 1.777,
+          "did_overclaim_ratio": 1.805,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.10666666666666667,
           "ctrl_post": 0.2436361170686187,
+          "did_ctrl_post": 0.24151131326082775,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "1566",
-        "estimator": "west2023-csv-matched",
+        "estimator": "west2023-csv-matched-did",
         "registration_year": 2014,
         "pdd_baseline_pct_per_yr": 0.35,
         "k_matched": 10,
@@ -4736,12 +5041,16 @@
         "proj_pre_pct_per_yr": 0.041842040347256734,
         "proj_post_pct_per_yr": 0.10490267249043984,
         "ctrl_pre_pct_per_yr": 0.06542820386722764,
-        "ctrl_post_pct_per_yr": 0.18567790749078242,
+        "ctrl_post_pct_per_yr": 0.1620917439708115,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.27358938182497544,
         "att_pct_per_yr": -0.08077523500034257,
         "claimed_avoided_pct_per_yr": 0.24509732750956015,
-        "actual_avoided_pct_per_yr": 0.08077523500034257,
-        "overclaim_ratio": 3.034,
+        "actual_avoided_pct_per_yr": 0.05718907148037165,
+        "overclaim_ratio": 4.286,
+        "did_ctrl_post_pct_per_yr": 0.1620917439708115,
+        "did_actual_avoided_pct_per_yr": 0.05718907148037165,
+        "did_overclaim_ratio": 4.286,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
         "parallel_trends_level_t_stat": -4.709600618262994,
         "parallel_trends_slope_diff": 0.0032028300877848417,
@@ -4837,7 +5146,7 @@
           2020
         ]
       },
-      "best_label": "west2023-csv-matched"
+      "best_label": "west2023-csv-matched-did"
     },
     {
       "project_id": "1686",
@@ -4900,7 +5209,12 @@
           10.0,
           614.31
         ],
+        "did_ctrl_post_pct_per_yr": 0.08397509208457532,
+        "did_actual_avoided_pct_per_yr": 0.016475092084575316,
+        "did_overclaim_ratio": 50.531,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": 0.0017832609223859858,
         "parallel_trends_t_stat": 0.8039660616646246,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -5003,43 +5317,58 @@
       "robustness": {
         "buf10-30_k10": {
           "overclaim_ratio": 46.989,
+          "did_overclaim_ratio": 43.79,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.055,
           "ctrl_post": 0.07298294460594369,
+          "did_ctrl_post": 0.07429644419568707,
           "pp_pass": false
         },
         "buf10-50_k10": {
           "overclaim_ratio": 131.164,
+          "did_overclaim_ratio": 50.531,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.0675,
           "ctrl_post": 0.07384703883752698,
+          "did_ctrl_post": 0.08397509208457532,
           "pp_pass": true
         },
         "buf10-50_k5": {
           "overclaim_ratio": 54.968,
+          "did_overclaim_ratio": 32.241,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.0675,
           "ctrl_post": 0.0826451704127596,
+          "did_ctrl_post": 0.09332125320663213,
           "pp_pass": true
         },
         "buf10-50_k20": {
           "overclaim_ratio": "inf",
+          "did_overclaim_ratio": 155.422,
           "tag": "net_leakage_vs_control",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.0675,
           "ctrl_post": 0.06308846762070558,
+          "did_ctrl_post": 0.0728563794588276,
           "pp_pass": true
         },
         "buf20-60_k10": {
           "overclaim_ratio": 12.717,
+          "did_overclaim_ratio": 11.549,
           "tag": "overclaim_finite",
+          "did_tag": "overclaim_finite",
           "proj_post": 0.0625,
           "ctrl_post": 0.12835861710707164,
+          "did_ctrl_post": 0.13501757023921146,
           "pp_pass": true
         }
       },
       "best": {
         "project_id": "1686",
-        "estimator": "hansen-pixel-matched",
+        "estimator": "hansen-pixel-matched-did",
         "registration_year": 2015,
         "pdd_baseline_pct_per_yr": 0.9,
         "n_project_pixels": 5000,
@@ -5082,16 +5411,21 @@
         "proj_pre_pct_per_yr": 0.025714285714285714,
         "proj_post_pct_per_yr": 0.0675,
         "ctrl_pre_pct_per_yr": 0.015586232467237376,
-        "ctrl_post_pct_per_yr": 0.07384703883752698,
+        "ctrl_post_pct_per_yr": 0.08397509208457532,
         "raw_unmatched_ctrl_post_pct_per_yr": 0.21225000000000002,
         "claimed_avoided_pct_per_yr": 0.8325,
-        "actual_avoided_pct_per_yr": 0.006347038837526978,
-        "overclaim_ratio": 131.164,
+        "actual_avoided_pct_per_yr": 0.016475092084575316,
+        "overclaim_ratio": 50.531,
         "overclaim_95ci": [
           10.0,
           614.31
         ],
+        "did_ctrl_post_pct_per_yr": 0.08397509208457532,
+        "did_actual_avoided_pct_per_yr": 0.016475092084575316,
+        "did_overclaim_ratio": 50.531,
+        "did_tag": "overclaim_finite",
         "tag": "overclaim_finite",
+        "parallel_trends_slope_diff": 0.0017832609223859858,
         "parallel_trends_t_stat": 0.8039660616646246,
         "parallel_trends_pass": true,
         "proj_annual_pct": [
@@ -5191,7 +5525,7 @@
           2022
         ]
       },
-      "best_label": "hansen-pixel-matched"
+      "best_label": "hansen-pixel-matched-did"
     }
   ],
   "pooled": {
@@ -5230,6 +5564,43 @@
         1.303,
         1.869,
         3.034
+      ]
+    },
+    "west2023_matched_did": {
+      "n": 5,
+      "mean": 5.649,
+      "ci95": [
+        3.31,
+        8.359
+      ],
+      "n_finite": 4,
+      "n_inf": 0,
+      "n_zero": 1,
+      "n_na": 0,
+      "values": [
+        10.0,
+        1.794,
+        7.773,
+        4.392,
+        4.286
+      ]
+    },
+    "west2023_matched_did_finite": {
+      "n": 4,
+      "mean": 4.561,
+      "ci95": [
+        2.444,
+        6.901
+      ],
+      "n_finite": 4,
+      "n_inf": 0,
+      "n_zero": 1,
+      "n_na": 0,
+      "values": [
+        1.794,
+        7.773,
+        4.392,
+        4.286
       ]
     },
     "hansen_pixel_matched_finite": {
@@ -5278,58 +5649,103 @@
         131.164
       ]
     },
-    "all_projects_best_estimator": {
-      "n": 11,
-      "mean": 19.285,
+    "hansen_pixel_matched_did": {
+      "n": 12,
+      "mean": 11.964,
       "ci95": [
-        4.906,
-        43.342
+        7.017,
+        19.738
       ],
-      "n_finite": 7,
-      "n_inf": 2,
-      "n_zero": 2,
+      "n_finite": 6,
+      "n_inf": 3,
+      "n_zero": 3,
       "n_na": 0,
       "values": [
         10.0,
         10.0,
-        28.328,
-        0.951,
-        5.488,
-        1.303,
-        1.869,
+        5.797,
+        0.641,
+        5.609,
         10.0,
         10.0,
-        3.034,
-        131.164
+        13.04,
+        10.0,
+        10.0,
+        7.953,
+        50.531
+      ]
+    },
+    "hansen_pixel_matched_did_finite": {
+      "n": 6,
+      "mean": 13.928,
+      "ci95": [
+        4.363,
+        29.308
+      ],
+      "n_finite": 6,
+      "n_inf": 3,
+      "n_zero": 3,
+      "n_na": 0,
+      "values": [
+        5.797,
+        0.641,
+        5.609,
+        13.04,
+        7.953,
+        50.531
+      ]
+    },
+    "all_projects_best_estimator": {
+      "n": 10,
+      "mean": 11.018,
+      "ci95": [
+        5.343,
+        20.589
+      ],
+      "n_finite": 7,
+      "n_inf": 2,
+      "n_zero": 1,
+      "n_na": 0,
+      "values": [
+        10.0,
+        5.797,
+        1.794,
+        5.609,
+        7.773,
+        4.392,
+        10.0,
+        10.0,
+        4.286,
+        50.531
       ]
     },
     "all_projects_best_estimator_finite": {
       "n": 7,
-      "mean": 24.591,
+      "mean": 11.455,
       "ci95": [
-        1.981,
-        61.149
+        3.975,
+        24.726
       ],
       "n_finite": 7,
       "n_inf": 2,
-      "n_zero": 2,
+      "n_zero": 1,
       "n_na": 0,
       "values": [
-        28.328,
-        0.951,
-        5.488,
-        1.303,
-        1.869,
-        3.034,
-        131.164
+        5.797,
+        1.794,
+        5.609,
+        7.773,
+        4.392,
+        4.286,
+        50.531
       ]
     },
     "excluding_outliers": {
       "n": 10,
-      "mean": 18.381,
+      "mean": 11.438,
       "ci95": [
-        4.023,
-        44.631
+        5.655,
+        21.116
       ],
       "n_finite": 6,
       "n_inf": 1,
@@ -5338,22 +5754,22 @@
       "values": [
         10.0,
         10.0,
-        0.951,
-        5.488,
+        1.794,
+        5.609,
         10.0,
-        1.303,
-        1.869,
+        7.773,
+        4.392,
         10.0,
-        3.034,
-        131.164
+        4.286,
+        50.531
       ]
     },
     "pp_passing_only": {
       "n": 8,
-      "mean": 26.872,
+      "mean": 13.992,
       "ci95": [
-        8.872,
-        57.727
+        7.828,
+        24.674
       ],
       "n_finite": 3,
       "n_inf": 2,
@@ -5362,12 +5778,12 @@
       "values": [
         10.0,
         10.0,
-        28.328,
-        5.488,
+        5.797,
+        5.609,
         10.0,
         10.0,
         10.0,
-        131.164
+        50.531
       ]
     }
   }

@@ -1,8 +1,10 @@
-# BCT REDD+ Hansen Synthetic Control Results
+# BCT REDD+ Hansen Synthetic Control Results (SUPERSEDED)
 
-**Pipeline:** `data/satellite-analysis/hansen_synthetic_control.py`  
-**Data:** Hansen Global Forest Change GFC-2022-v1.10 (2001-2022, 30 m)  
-**Method:** Scalar synthetic control on 10-50 km geographic donor ring, calibrated on pre-registration MSE (West et al. 2023 *Science* style).  
+> **⚠ SUPERSEDED.** This scalar-SC-on-geographic-donor-ring estimate was replaced by the Nature-grade matched synthetic control analysis on 2026-04-16. Headline overclaim ratio of 14.6× was biased upward by geographic-only controls picking up leakage pixels and by comparing against approximate disc polygons rather than true project footprints. The updated analysis uses West et al. 2023's DataverseNL replication shapefiles + pre-computed covariates, polygon-level K=10 nearest-neighbour matching, and classic DID adjustment, yielding a primary headline of **5.6× (95% CI [3.3, 8.4], n=5 BCT REDD+ projects with West 2023 coverage)**. See `matched_synthetic_control.py` and `matched_synthetic_control_results.md`.
+
+**Pipeline:** `data/satellite-analysis/hansen_synthetic_control.py`
+**Data:** Hansen Global Forest Change GFC-2022-v1.10 (2001-2022, 30 m)
+**Method:** Scalar synthetic control on 10-50 km geographic donor ring, calibrated on pre-registration MSE (West et al. 2023 *Science* style).
 **Projects analysed:** 12 / 12.
 
 ## Headline result
