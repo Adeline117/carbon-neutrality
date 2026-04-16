@@ -54,37 +54,45 @@ Four synthetic stress-test credits were constructed with known correct disqualif
 
 **Event extraction.** All `Deposited` and `Redeemed` events were extracted from Toucan Protocol's pool contracts on Polygon for BCT (contract address [PLACEHOLDER]), NCT, and CHAR. For each event, we recorded the depositor address, the TCO2 token contract address (identifying the underlying credit type), the amount deposited, and the block timestamp. Transfer events on each TCO2 token contract were separately extracted to reconstruct the complete holding history of each depositor address.
 
-**Portfolio reconstruction.** For each address that deposited into BCT, we computed: (i) the set of TCO2 token types deposited, (ii) the set of TCO2 token types held at the time of deposit but not deposited, and (iii) the quality score of each TCO2 token type, assigned by mapping the token's underlying credit to its methodology archetype in the 318-credit batch dataset. A depositor's quality delta was defined as:
+**Portfolio reconstruction.** For each address that deposited into BCT, we computed: (i) the set of TCO2 token types deposited, (ii) the set of TCO2 token types held at the time of deposit but not deposited, and (iii) the quality score of each TCO2 token type, assigned by mapping the token's underlying credit to its methodology archetype in the 318-credit batch dataset. A depositor's quality delta -- the Selection Index (SI) for that depositor -- was defined as:
 
-$$\Delta_i = \bar{C}_{\text{deposited},i} - \bar{C}_{\text{retained},i}$$
+$$\text{SI}_i = \bar{C}_{\text{deposited},i} - \bar{C}_{\text{retained},i}$$
 
 where $\bar{C}_{\text{deposited},i}$ is the mean composite score of credits deposited by address $i$ and $\bar{C}_{\text{retained},i}$ is the mean composite of credits held but not deposited. Analysis was restricted to addresses holding at least two distinct TCO2 token types to enable within-depositor comparison.
 
-**Statistical tests.** The Wilcoxon signed-rank test was applied to the vector of per-depositor deltas to test the null hypothesis that the median delta is zero. Cohen's *d* for paired samples was computed as the mean delta divided by the standard deviation of deltas. The selection rate was defined as the proportion of depositors with negative delta (deposited credits scoring lower than retained credits). Time stratification split the deposit record into six-month windows to test whether the selection effect changed over time.
+**Statistical tests.** The Wilcoxon signed-rank test was applied to the vector of per-depositor Selection Indices to test the null hypothesis that the median SI is zero. Cohen's *d* for paired samples was computed as the mean SI divided by the standard deviation of SI values. The selection rate was defined as the proportion of depositors with negative SI (deposited credits scoring lower than retained credits). Time stratification split the deposit record into six-month windows to test whether the selection effect changed over time.
 
 **Robustness.** KlimaDAO's treasury addresses were identified from publicly documented wallet addresses and excluded in a sensitivity analysis, as KlimaDAO's accumulation strategy (bonding any available credits at market price) may not represent quality-selective deposit behaviour.
 
-### Lemons Index definition and null model
+### Pool Quality Deficit, Selection Index, and null model
 
-The Lemons Index $L$ quantifies adverse selection severity in a tokenized carbon credit pool:
+We define two complementary metrics that measure distinct aspects of quality failure in carbon credit pools.
 
-$$L(\text{pool}) = 1 - \frac{\bar{C}}{100}$$
+**Pool Quality Deficit (PQD).** The Pool Quality Deficit (informally, the Lemons Index) quantifies pool-level quality degradation:
 
-where $\bar{C}$ is the mean composite score of all credits in the pool. The index ranges from 0 (every credit scores 100) to 1 (every credit scores 0). Named after Akerlof's characterisation of markets in which information asymmetry drives out high-quality goods.
+$$\text{PQD}(\text{pool}) = 1 - \frac{\bar{C}}{100}$$
 
-We computed $L$ for six pool compositions drawn from publicly documented holdings: Toucan BCT (43 credits, 2022 peak), Toucan NCT (28 credits, 2023), Moss MCO2 (30 credits, 2022), Toucan CHAR (12 credits, Base, 2025), Klima 2.0 kVCM (20 credits, Base, 2026), and a hypothetical AAA-only pool (13 credits).
+where $\bar{C}$ is the mean composite score of all credits in the pool. The index ranges from 0 (every credit scores 100) to 1 (every credit scores 0). A high PQD is *consistent with* adverse selection but does not by itself prove it -- a pool could accumulate low-quality credits through mechanisms other than strategic depositor behaviour (e.g., if only low-quality credits were tokenized). The PQD measures the outcome (quality degradation) rather than the mechanism (strategic sorting).
 
-**Null model.** To establish a statistical baseline, we computed the expected Lemons Index under random credit selection from the 318-credit population. For a pool of size $n$, we drew 100,000 random samples of $n$ credits (with replacement) and computed $L$ for each sample. The null distribution's mean (0.51) and standard deviation (0.032 for $n$ = 43) provide the reference against which observed pool quality is evaluated. BCT's $z$-score of 6.2 against this null rejects random composition at any conventional significance level.
+**Selection Index (SI).** The Selection Index measures depositor-level strategic behaviour -- the mechanism predicted by Akerlof's model:
 
-**Quality atlas.** Lemons Indices were computed for 34 methodology-vintage segments by crossing the 17 methodology categories with vintage bins (pre-2016, 2016--2019, 2020--2023, 2024+) and retaining segments with $n \geq 5$ credits.
+$$\text{SI}_i = \bar{C}_{\text{deposited},i} - \bar{C}_{\text{retained},i}$$
+
+where $\bar{C}_{\text{deposited},i}$ is the mean composite score of credits deposited by address $i$ and $\bar{C}_{\text{retained},i}$ is the mean composite of credits held but not deposited. SI < 0 indicates that a depositor systematically deposits lower-quality credits while retaining higher-quality ones -- the behavioural signature of adverse selection. The pool-level Selection Index is the mean SI across all multi-holding depositors. SI is only computable when depositor portfolio data is available; PQD can be computed for any pool whose credit composition is known. Together, PQD measures the severity of quality degradation and SI identifies the depositor-level mechanism that produces it.
+
+We computed PQD for six pool compositions drawn from publicly documented holdings: Toucan BCT (43 credits, 2022 peak), Toucan NCT (28 credits, 2023), Moss MCO2 (30 credits, 2022), Toucan CHAR (12 credits, Base, 2025), Klima 2.0 kVCM (20 credits, Base, 2026), and a hypothetical AAA-only pool (13 credits).
+
+**Null model.** To establish a statistical baseline, we computed the expected PQD under random credit selection from the 318-credit population. For a pool of size $n$, we drew 100,000 random samples of $n$ credits (with replacement) and computed PQD for each sample. The null distribution's mean (0.51) and standard deviation (0.032 for $n$ = 43) provide the reference against which observed pool quality is evaluated. BCT's $z$-score of 6.2 against this null rejects random composition at any conventional significance level.
+
+**Quality atlas.** PQD values were computed for 34 methodology-vintage segments by crossing the 17 methodology categories with vintage bins (pre-2016, 2016--2019, 2020--2023, 2024+) and retaining segments with $n \geq 5$ credits.
 
 ### Counterfactual quality-gate simulation
 
-For each of six pools, we simulated the application of a quality gate at all six grade thresholds (B, BB, BBB, A, AA, AAA). At each threshold, only credits whose final grade met or exceeded the threshold were admitted. We then recomputed: the number of admitted credits, the new mean composite score, the resulting Lemons Index, and the fraction of admitted credits at grade A or above.
+For each of six pools, we simulated the application of a quality gate at all six grade thresholds (B, BB, BBB, A, AA, AAA). At each threshold, only credits whose final grade met or exceeded the threshold were admitted. We then recomputed: the number of admitted credits, the new mean composite score, the resulting PQD, and the fraction of admitted credits at grade A or above.
 
 The simulation assumes 100% gate accuracy -- that is, perfect correspondence between the framework's grade and the credit's true quality. This is an upper bound. In practice, scoring uncertainty (quantified by the distributional model) would produce false admissions and false rejections. The distributional scoring framework enables a probabilistic extension in which the gate admits credits whose $P(\text{grade} \geq \text{threshold}) > p$ for a configurable confidence level $p$, but we defer this extension to future work.
 
-Four threshold levels were simulated across each pool to quantify the tradeoff between quality improvement (Lemons Index reduction) and liquidity loss (fraction of credits excluded). The BBB threshold was identified as the minimum viable quality gate: it excludes the bulk of low-integrity credits (HFC-23 destruction, pre-2013 renewables, poorly verified REDD+) while retaining legitimate avoidance projects with adequate verification.
+Four threshold levels were simulated across each pool to quantify the tradeoff between quality improvement (PQD reduction) and liquidity loss (fraction of credits excluded). The BBB threshold was identified as the minimum viable quality gate: it excludes the bulk of low-integrity credits (HFC-23 destruction, pre-2013 renewables, poorly verified REDD+) while retaining legitimate avoidance projects with adequate verification.
 
 ### Sensitivity and robustness
 
