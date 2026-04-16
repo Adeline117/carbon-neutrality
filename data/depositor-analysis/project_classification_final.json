@@ -628,5 +628,395 @@
     "methodology": "",
     "country": "",
     "method_source": "name"
+  },
+  "1037": {
+    "name": "Guazhou Beidaqiao No.1 Wind Farm Project in Gansu Province, ",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "476": {
+    "name": "28MW Jinkouba Hydropower Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1148": {
+    "name": "Luofan 24MW Hydropower Project in Guizhou Province China",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "253": {
+    "name": "Fuzhou Hongmiaoling Landfill  Gas to Electricity Project",
+    "type": "Waste/Methane",
+    "method_source": "auto_name"
+  },
+  "921": {
+    "name": "Inner Mongolia Jingneng Saihan Wind Farm Phase II Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "603": {
+    "name": "Sirma Run-of-River Hydro Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "528": {
+    "name": "Panjin Rice Husk Thermal Energy Generation Project",
+    "type": "Agriculture",
+    "method_source": "auto_name"
+  },
+  "1143": {
+    "name": "Ningxia Angli Lingwu Photovoltaic Grid Connected Power Plant",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1721": {
+    "name": "ONIL Stoves  Guatemala Uspantan",
+    "type": "Cookstove",
+    "method_source": "auto_name"
+  },
+  "1214": {
+    "name": "Vajrakarur Wind Power Project in Andhra Pradesh",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1686": {
+    "name": "Agrocortex REDD Project",
+    "type": "REDD+",
+    "method_source": "auto_name"
+  },
+  "758": {
+    "name": "Saracbendi HPP Run-of-River Hydro Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "148": {
+    "name": "Hebei Kangbao Wolongtushan 30 MW Wind Farm Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1261": {
+    "name": "Grid connected electricity generation using natural gas by L",
+    "type": "Fossil switch",
+    "method_source": "auto_name"
+  },
+  "936": {
+    "name": "Shiyazi Hydro power Project in Guizhou Province China",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "338": {
+    "name": "Methane Recovery Project Praktijkcentrum Sterksel, North Bra",
+    "type": "Waste/Methane",
+    "method_source": "auto_name"
+  },
+  "1021": {
+    "name": "Grid Connected Wind Power Project by M/s. D. J. Malpani in R",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "309": {
+    "name": "Bundled grid-connected wind electricity generation project i",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1497": {
+    "name": "VCS Grouped Project for Renewable Power Generation by Essel ",
+    "type": "Renewable",
+    "method_source": "manual_verified"
+  },
+  "870": {
+    "name": "Wind Power Project by M/s Chhotabhai Jethabhai Patel & Co. (",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1577": {
+    "name": "Fujian Yong\u2019an Improved Forest Management Project",
+    "type": "IFM",
+    "method_source": "auto_name"
+  },
+  "1258": {
+    "name": "Saint Nikola Wind Farm",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1566": {
+    "name": "REDD+ Project Resguardo Indigena Unificado Selva de Mataven ",
+    "type": "REDD+",
+    "method_source": "auto_name"
+  },
+  "584": {
+    "name": "2.5 MW Rice husk based cogeneration plant at Hanuman Agro In",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "529": {
+    "name": "Jilin Rice Husk Thermal Energy Generation Project",
+    "type": "Agriculture",
+    "method_source": "auto_name"
+  },
+  "755": {
+    "name": "OTLUCA HPPs run-of-river hydro project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1140": {
+    "name": "Henan Xinxiang 24MW Biomass based Cogeneration Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "2307": {
+    "name": "Ambatolampy Solar PV",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "917": {
+    "name": "ASLANCIK HYDRO POWER PLANT PROJECT",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1221": {
+    "name": "Eglence I-II Hydroelectric Power Plant",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "682": {
+    "name": "Wind Power Project at Anthiyur, Tamil Nadu",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "986": {
+    "name": "Kumk\u00f6y Hydroelectric Power Plant, Samsun",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1301": {
+    "name": "Guohua Rongcheng Phase II Wind Farm Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "766": {
+    "name": "Teesta- V Hydro Power project in Sikkim",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1228": {
+    "name": "El Panul",
+    "type": "Renewable",
+    "method_source": "manual_verified"
+  },
+  "293": {
+    "name": "Rice husk fired boiler of 6 ton capacity for process steam g",
+    "type": "Agriculture",
+    "method_source": "auto_name"
+  },
+  "1291": {
+    "name": "Hydro Power Project in backward district of Andhra Pradesh, ",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "330": {
+    "name": "Wutuhe Erji hydro power project in Guizhou Province, China",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1186": {
+    "name": "Vi\u00f1ales biomass power plant",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1656": {
+    "name": "Zhangbei Manjing Windfarm Project - CER Conversion",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "2095": {
+    "name": "Duzce Aksu Hydro Electricity Power Plant",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "823": {
+    "name": "Datong River Tianwanggou Hydropower Station",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "792": {
+    "name": "Tadi 16 MW Hydropower Project in Zhejiang Province",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1718": {
+    "name": "Inner Mongolia Keyihe IFM (conversion of logged to protected",
+    "type": "IFM",
+    "method_source": "auto_name"
+  },
+  "1824": {
+    "name": "Liucheng Biomass Power Generation Project in Guangxi Zhuang ",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1883": {
+    "name": "Pichacay Landfill Gas Renewable Energy Project",
+    "type": "Waste/Methane",
+    "method_source": "auto_name"
+  },
+  "619": {
+    "name": "15 MW Grid Connected Renewable Energy Wind Turbine in Karnat",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "784": {
+    "name": "1.6 MW Bundled Rice Husk Based Cogeneration Plant by M/s Mil",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1781": {
+    "name": "MRMPL Wind Power Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "245": {
+    "name": "Bundled Grid Connected 2.9 M.W. Wind Power Project in India ",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "733": {
+    "name": "Biomass based steam generation project by Gujarat Ambuja Exp",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1758": {
+    "name": "Dereli Hydroelectric Power Plant",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "624": {
+    "name": "15 MW Biomass Residue Based Power Project at Ghazipur, India",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "773": {
+    "name": "8MW Waste Heat Recovery Based Power Project by Sree Rengaraa",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "499": {
+    "name": "Positive Climate Care 4.67 MW Bundled Grid connected Wind Po",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "92": {
+    "name": "300MW Hydropower project by JHPL",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "929": {
+    "name": "Energy Efficiency and Solid Waste Diversion Activities withi",
+    "type": "Energy efficiency",
+    "method_source": "auto_name"
+  },
+  "498": {
+    "name": "Grid-connected wind electricity generation project in Tamil ",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1204": {
+    "name": "Guohua Wulate Zhongqi Phase I 49.5 MW Wind farm Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "934": {
+    "name": "The Mai Ndombe REDD+ Project",
+    "type": "REDD+",
+    "method_source": "auto_name"
+  },
+  "261": {
+    "name": "Bundled Biomass Based Thermal Energy Projects in U.P. & Punj",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "699": {
+    "name": "Yiyang Xiushan Hydropower Project, P.R. China",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "876": {
+    "name": "Shree Nakoda Ispat Ltd 12MW Biomass power generation project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1166": {
+    "name": "Nanba Associated Gas Processing Plant and the Auxiliary Engi",
+    "type": "Waste/Methane",
+    "method_source": "manual_verified"
+  },
+  "1162": {
+    "name": "Jiangxi Province Le'an County Forest Farm Carbon Sink Projec",
+    "type": "ARR",
+    "method_source": "manual_verified"
+  },
+  "1650": {
+    "name": "Reduced Emissions from Deforestation and Degradation in Keo ",
+    "type": "REDD+",
+    "method_source": "manual_verified"
+  },
+  "251": {
+    "name": "Biomass Based Cogeneration Project at Nectar Life Sciences L",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "612": {
+    "name": "The Kasigau Corridor REDD Project - Phase II The Community R",
+    "type": "REDD+",
+    "method_source": "auto_name"
+  },
+  "1505": {
+    "name": "Bujagali Hydropower Project - CER Conversion",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "2026": {
+    "name": "Allain Duhangan Hydroelectric Project (ADHP)",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1762": {
+    "name": "Bundled Solar Power Project by Solararise India Projects PVT",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1792": {
+    "name": "Ghani Solar Renewable Power Project by Greenko Group",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1187": {
+    "name": "Shandong Yishui Tangwangshan Wind Farm Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "1418": {
+    "name": "Renewable Energy Project by LNB Group",
+    "type": "Renewable",
+    "method_source": "manual_verified"
+  },
+  "486": {
+    "name": "50 MW Sipansihaporas Hydro Power Plant, North Sumatra",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "669": {
+    "name": "Wind Energy project by Ramco group in india",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "2092": {
+    "name": "Kirazl\u0131k Hydroelectric  Power Plant Project",
+    "type": "Renewable",
+    "method_source": "auto_name"
+  },
+  "927": {
+    "name": "13.75 MW wind power project in Davangere, Karnataka, India",
+    "type": "Renewable",
+    "method_source": "auto_name"
   }
 }

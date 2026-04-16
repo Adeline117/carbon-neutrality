@@ -1,0 +1,84 @@
+{
+  "total_tonnes": 21984482.0,
+  "total_deposits": 1187,
+  "total_projects": 168,
+  "unique_depositors": 187,
+  "pqd": 0.679,
+  "weighted_mean": 32.11,
+  "by_type": {
+    "Fossil switch": {
+      "tonnes": 2293538.0,
+      "pct": 10.4,
+      "n_projects": 9
+    },
+    "Renewable": {
+      "tonnes": 15192816.0,
+      "pct": 69.1,
+      "n_projects": 123
+    },
+    "Waste/Methane": {
+      "tonnes": 1216679.0,
+      "pct": 5.5,
+      "n_projects": 9
+    },
+    "ARR": {
+      "tonnes": 855105.0,
+      "pct": 3.9,
+      "n_projects": 3
+    },
+    "REDD+": {
+      "tonnes": 929695.0,
+      "pct": 4.2,
+      "n_projects": 12
+    },
+    "Industrial": {
+      "tonnes": 123171.0,
+      "pct": 0.6,
+      "n_projects": 2
+    },
+    "IFM": {
+      "tonnes": 449983.0,
+      "pct": 2.0,
+      "n_projects": 4
+    },
+    "Industrial gas": {
+      "tonnes": 672255.0,
+      "pct": 3.1,
+      "n_projects": 1
+    },
+    "Agriculture": {
+      "tonnes": 50489.0,
+      "pct": 0.2,
+      "n_projects": 3
+    },
+    "Cookstove": {
+      "tonnes": 750.0,
+      "pct": 0.0,
+      "n_projects": 1
+    },
+    "Energy efficiency": {
+      "tonnes": 200000.0,
+      "pct": 0.9,
+      "n_projects": 1
+    }
+  },
+  "by_grade": {
+    "B": 13342227.0,
+    "BB": 6390671.0,
+    "BBB": 2251583.0
+  },
+  "broad": {
+    "energy": {
+      "tonnes": 17686354.0,
+      "pct": 80.4
+    },
+    "waste": {
+      "tonnes": 2012105.0,
+      "pct": 9.2
+    },
+    "forestry": {
+      "tonnes": 2234783.0,
+      "pct": 10.2
+    }
+  }
+}

@@ -6,7 +6,7 @@
 
 ## On-chain data collection
 
-We collected all deposit transactions to the Toucan Protocol BCT pool contract on the Polygon blockchain using a Polygon RPC endpoint. The BCT pool contract accepts Toucan-bridged TCO2 tokens, each representing a specific Verra VCS project and vintage year. We identified 547 deposit transactions spanning the period from BCT's launch in October 2021 to the effective cessation of new deposits in late 2022. These 547 deposits mapped to 90 unique VCS project identifiers and approximately 7.5 million tonnes of tokenized carbon credits.
+We collected all deposit transactions to the Toucan Protocol BCT pool contract on the Polygon blockchain using a Polygon RPC endpoint. The BCT pool contract accepts Toucan-bridged TCO2 tokens, each representing a specific Verra VCS project and vintage year. We identified 1,187 deposit transactions spanning the period from BCT's launch in October 2021 to the effective cessation of new deposits in late 2022. These 1,187 deposits mapped to 90 unique VCS project identifiers and approximately 22 million tonnes of tokenized carbon credits.
 
 For each deposit, we recorded: the transaction hash, block number and timestamp, depositor address, TCO2 token contract address, Verra VCS project identifier (extracted from the TCO2 token metadata), vintage year, and tonnage deposited. Project identifiers were cross-referenced against the Verra registry to obtain methodology category (e.g., VM0007 for REDD+, AMS-I.D for grid-connected renewables), country of origin, and CCP eligibility status.
 
