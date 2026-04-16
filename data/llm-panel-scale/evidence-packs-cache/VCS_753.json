@@ -1,0 +1,72 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "753",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/753",
+    "name": "The Cevizlik Run-of-River Hydroelectric Power Plant"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20120701,2013,2014,2015",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x0cf85d50925be85cd1c725794cc5e08b94a01987",
+      "0x5ae9598345be49882a2d3958f80ebe272e7652ca",
+      "0x5e9ff0805e4fcf16ba0cc268c404e34c2fecf101",
+      "0xf57ad85727f95bb51c3b1a4678c5f68991357507"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822664Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.822664Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822664Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x0cf85d50925be85cd1c725794cc5e08b94a01987",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    },
+    {
+      "address": "0x5ae9598345be49882a2d3958f80ebe272e7652ca",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    },
+    {
+      "address": "0x5e9ff0805e4fcf16ba0cc268c404e34c2fecf101",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0xf57ad85727f95bb51c3b1a4678c5f68991357507",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.822664Z"
+}

@@ -1,0 +1,91 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "493",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/493",
+    "name": "5 MW Brahm Ganga Hydro \u2013 Electric Project at Kullu district "
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20080402,20100401,2011,2012,2013,2014,2015,20160101,20160401,2017,20180101",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x255c36989f7b9e2f010d00117238aa0523e9c2e7",
+      "0x3b63dd61a7914c4edcb3cc8abd33ec62f70a5428",
+      "0xb65a6c557a762608c83d0aed90d58782bb2a9a3e",
+      "0xc86eb0bea0f66f6c594d2c18d117fc49f8ca10d1",
+      "0xcb52f117dfdaeec365f155a54e33303aff964bad",
+      "0xe1695223f115b16e0e2eb1e00fc97c4532db7c73",
+      "0xfb6c87057216677a02c4ef0062a0c23b78f68ff2",
+      "0xa05fbc4cb4e632e450eebaf083b8d324c72788b7",
+      "0xceb24e21da947372a3ad9e809bb6b32d10c9ca3a",
+      "0xaa294e91113f364ede0d70d9bd627ce0266a2e42",
+      "0x00d9852eebe5c1d7a0141b4eab7574d9798c9d4b"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821393Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821393Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821393Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x255c36989f7b9e2f010d00117238aa0523e9c2e7",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    },
+    {
+      "address": "0x3b63dd61a7914c4edcb3cc8abd33ec62f70a5428",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2011
+    },
+    {
+      "address": "0xb65a6c557a762608c83d0aed90d58782bb2a9a3e",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    },
+    {
+      "address": "0xc86eb0bea0f66f6c594d2c18d117fc49f8ca10d1",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0xcb52f117dfdaeec365f155a54e33303aff964bad",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2010
+    },
+    {
+      "address": "0xe1695223f115b16e0e2eb1e00fc97c4532db7c73",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821393Z"
+}

@@ -1,0 +1,54 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "51",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/51",
+    "name": "29.70 MW Wind Power project in Karnataka India"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2012,2013,2014,2015",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x4ce8edbb79deb720c629ebf184d59ada32d79ae2",
+      "0x39edcb24097d3a2646417738c41d5f799687bce2",
+      "0x29290abd23aad187dc14a5841a83812e4ffe3944",
+      "0x851e197940e865e28bbe608538a514d092158a83"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821552Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821552Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821552Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x4ce8edbb79deb720c629ebf184d59ada32d79ae2",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821552Z"
+}

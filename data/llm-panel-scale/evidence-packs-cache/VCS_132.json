@@ -1,0 +1,72 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "132",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/132",
+    "name": "9 MW Neria Hyrdroelectric project, Karnataka, India"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20110901,2013,2014,2015",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x284a5240a5eaa9c9f6d80b12e7b7462a3e5f404f",
+      "0x7b4e7f774965f3a2dd1ac5e90ea3d26f7786fe4d",
+      "0xb785726a328d87539d5fa8e70fce7ae0cd9d59af",
+      "0xcbe1be82ab73ea79cbcc01b4af3a0e9d8cbf660c"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819090Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819090Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819090Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x284a5240a5eaa9c9f6d80b12e7b7462a3e5f404f",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    },
+    {
+      "address": "0x7b4e7f774965f3a2dd1ac5e90ea3d26f7786fe4d",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0xb785726a328d87539d5fa8e70fce7ae0cd9d59af",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    },
+    {
+      "address": "0xcbe1be82ab73ea79cbcc01b4af3a0e9d8cbf660c",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2011
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819090Z"
+}

@@ -1,0 +1,65 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "713",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/713",
+    "name": "KOYULHISAR HYDRO ELECTRICITY POWER PLANT"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20091117,20130801,2014",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x701efa21d463e1332348dea55c642456c57c2d60",
+      "0xa2aeb5d0ca351b92f539216747279cb7671bb094",
+      "0xe20035b4413cdba325c2c056f21fd1c041971efe"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822488Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.822488Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822488Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x701efa21d463e1332348dea55c642456c57c2d60",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0xa2aeb5d0ca351b92f539216747279cb7671bb094",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2009
+    },
+    {
+      "address": "0xe20035b4413cdba325c2c056f21fd1c041971efe",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.822488Z"
+}

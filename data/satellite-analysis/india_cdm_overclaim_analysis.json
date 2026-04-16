@@ -1,0 +1,1162 @@
+{
+  "meta": {
+    "cdm_ef_source": "CEA CO2 Baseline Database, India (v5-v19)",
+    "ember_ef_source": "reference_table",
+    "ember_ef_url": "https://ember-climate.org/app/uploads/2022/07/yearly_full_release_long_format.csv",
+    "cdm_cm_ef_india": {
+      "2008": 0.92,
+      "2009": 0.94,
+      "2010": 0.94,
+      "2011": 0.93,
+      "2012": 0.92,
+      "2013": 0.91,
+      "2014": 0.91,
+      "2015": 0.9,
+      "2016": 0.88,
+      "2017": 0.86,
+      "2018": 0.85,
+      "2019": 0.82,
+      "2020": 0.79,
+      "2021": 0.78,
+      "2022": 0.76,
+      "2023": 0.73
+    },
+    "ember_ef_india": {
+      "2008": 0.766,
+      "2009": 0.758,
+      "2010": 0.736,
+      "2011": 0.72,
+      "2012": 0.72,
+      "2013": 0.71,
+      "2014": 0.706,
+      "2015": 0.713,
+      "2016": 0.699,
+      "2017": 0.676,
+      "2018": 0.67,
+      "2019": 0.655,
+      "2020": 0.631,
+      "2021": 0.637,
+      "2022": 0.633,
+      "2023": 0.619
+    },
+    "n_indian_renewable_projects": 28,
+    "n_analyzed": 28,
+    "heavy_cutoff_tonnes": 100000
+  },
+  "per_project": [
+    {
+      "project_id": "173",
+      "name": "Vishnuprayag Hydro-electric Project (VHEP) by Jaiprakash Pow",
+      "tech": "hydro",
+      "mw_rated": null,
+      "tonnes_in_bct": 1189259.0,
+      "vintages": [
+        2008,
+        2013,
+        2014,
+        2015,
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2015": 347106.0,
+        "2014": 210552.0,
+        "2016": 41725.0,
+        "2008": 571776.0,
+        "2013": 18100.0
+      },
+      "ef_cdm_weighted": 0.9108,
+      "ef_ember_weighted": 0.7367,
+      "mwh_implied_from_claim": 1305677.6,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 1189259.0,
+      "ember_consistent_tco2": 961899.72,
+      "overclaim_ratio": 1.236,
+      "overclaim_pct": 23.6
+    },
+    {
+      "project_id": "766",
+      "name": "Teesta- V Hydro Power project in Sikkim",
+      "tech": "hydro",
+      "mw_rated": null,
+      "tonnes_in_bct": 927901.0,
+      "vintages": [
+        2008,
+        2009,
+        2010
+      ],
+      "tonnes_by_vintage": {
+        "2008": 250007.0,
+        "2010": 575887.0,
+        "2009": 102007.0
+      },
+      "ef_cdm_weighted": 0.9346,
+      "ef_ember_weighted": 0.7465,
+      "mwh_implied_from_claim": 992820.2,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 927901.0,
+      "ember_consistent_tco2": 741141.76,
+      "overclaim_ratio": 1.252,
+      "overclaim_pct": 25.2
+    },
+    {
+      "project_id": "51",
+      "name": "29.70 MW Wind Power project in Karnataka India",
+      "tech": "wind",
+      "mw_rated": 29.7,
+      "tonnes_in_bct": 270000.0,
+      "vintages": [
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "tonnes_by_vintage": {
+        "2013": 30129.0,
+        "2014": 90000.0,
+        "2012": 69871.0,
+        "2015": 80000.0
+      },
+      "ef_cdm_weighted": 0.9096,
+      "ef_ember_weighted": 0.7121,
+      "mwh_implied_from_claim": 296825.7,
+      "mwh_annual_estimate_from_mw": 59839.6,
+      "claimed_tco2": 270000.0,
+      "ember_consistent_tco2": 211382.43,
+      "overclaim_ratio": 1.277,
+      "overclaim_pct": 27.7
+    },
+    {
+      "project_id": "1291",
+      "name": "Hydro Power Project in backward district of Andhra Pradesh, ",
+      "tech": "hydro",
+      "mw_rated": null,
+      "tonnes_in_bct": 268500.0,
+      "vintages": [
+        2013,
+        2014
+      ],
+      "tonnes_by_vintage": {
+        "2013": 39379.0,
+        "2014": 229121.0
+      },
+      "ef_cdm_weighted": 0.91,
+      "ef_ember_weighted": 0.7066,
+      "mwh_implied_from_claim": 295054.9,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 268500.0,
+      "ember_consistent_tco2": 208481.89,
+      "overclaim_ratio": 1.288,
+      "overclaim_pct": 28.8
+    },
+    {
+      "project_id": "493",
+      "name": "5 MW Brahm Ganga Hydro \u2013 Electric Project at Kullu district ",
+      "tech": "hydro",
+      "mw_rated": 5.0,
+      "tonnes_in_bct": 191068.0,
+      "vintages": [
+        2008,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ],
+      "tonnes_by_vintage": {
+        "2014": 16422.0,
+        "2012": 21468.0,
+        "2015": 13013.0,
+        "2011": 21131.0,
+        "2010": 19658.0,
+        "2013": 20840.0,
+        "2008": 38554.0,
+        "2016": 18808.0,
+        "2017": 19588.0,
+        "2018": 1586.0
+      },
+      "ef_cdm_weighted": 0.9092,
+      "ef_ember_weighted": 0.7212,
+      "mwh_implied_from_claim": 210153.8,
+      "mwh_annual_estimate_from_mw": 16644.0,
+      "claimed_tco2": 191068.0,
+      "ember_consistent_tco2": 151555.44,
+      "overclaim_ratio": 1.261,
+      "overclaim_pct": 26.1
+    },
+    {
+      "project_id": "1525",
+      "name": "Wind power project at Jaibhim by SIIL",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 103558.0,
+      "vintages": [
+        2011,
+        2012
+      ],
+      "tonnes_by_vintage": {
+        "2011": 41581.0,
+        "2012": 61977.0
+      },
+      "ef_cdm_weighted": 0.924,
+      "ef_ember_weighted": 0.72,
+      "mwh_implied_from_claim": 112073.9,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 103558.0,
+      "ember_consistent_tco2": 80693.21,
+      "overclaim_ratio": 1.283,
+      "overclaim_pct": 28.3
+    },
+    {
+      "project_id": "1160",
+      "name": "6.5 MW cogeneration project in Akbarpur, Punjab",
+      "tech": "biomass",
+      "mw_rated": 6.5,
+      "tonnes_in_bct": 86030.0,
+      "vintages": [
+        2012,
+        2013,
+        2014
+      ],
+      "tonnes_by_vintage": {
+        "2014": 30010.0,
+        "2013": 33624.0,
+        "2012": 22396.0
+      },
+      "ef_cdm_weighted": 0.9126,
+      "ef_ember_weighted": 0.7112,
+      "mwh_implied_from_claim": 94268.8,
+      "mwh_annual_estimate_from_mw": 34164.0,
+      "claimed_tco2": 86030.0,
+      "ember_consistent_tco2": 67044.71,
+      "overclaim_ratio": 1.283,
+      "overclaim_pct": 28.3
+    },
+    {
+      "project_id": "132",
+      "name": "9 MW Neria Hyrdroelectric project, Karnataka, India",
+      "tech": "other",
+      "mw_rated": 9.0,
+      "tonnes_in_bct": 62893.0,
+      "vintages": [
+        2011,
+        2013,
+        2014,
+        2015
+      ],
+      "tonnes_by_vintage": {
+        "2013": 21040.0,
+        "2014": 17498.0,
+        "2015": 15873.0,
+        "2011": 8482.0
+      },
+      "ef_cdm_weighted": 0.9102,
+      "ef_ember_weighted": 0.711,
+      "mwh_implied_from_claim": 69100.0,
+      "mwh_annual_estimate_from_mw": 19710.0,
+      "claimed_tco2": 62893.0,
+      "ember_consistent_tco2": 49129.62,
+      "overclaim_ratio": 1.28,
+      "overclaim_pct": 28.0
+    },
+    {
+      "project_id": "566",
+      "name": "10 MW Wind Power Project in Maharashtra by Deepak Fertilizer",
+      "tech": "wind",
+      "mw_rated": 10.0,
+      "tonnes_in_bct": 60597.0,
+      "vintages": [
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "tonnes_by_vintage": {
+        "2012": 12258.0,
+        "2013": 11861.0,
+        "2014": 13234.0,
+        "2015": 23244.0
+      },
+      "ef_cdm_weighted": 0.9082,
+      "ef_ember_weighted": 0.7123,
+      "mwh_implied_from_claim": 66723.0,
+      "mwh_annual_estimate_from_mw": 20148.0,
+      "claimed_tco2": 60597.0,
+      "ember_consistent_tco2": 47526.82,
+      "overclaim_ratio": 1.275,
+      "overclaim_pct": 27.5
+    },
+    {
+      "project_id": "274",
+      "name": "Hanuman Ganga Hydro (4.95 MW) Plant at Uttarakhand",
+      "tech": "hydro",
+      "mw_rated": 4.95,
+      "tonnes_in_bct": 39492.0,
+      "vintages": [
+        2010,
+        2011,
+        2012,
+        2014,
+        2015,
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2011": 13688.0,
+        "2010": 7941.0,
+        "2012": 7442.0,
+        "2015": 5315.0,
+        "2014": 4167.0,
+        "2016": 939.0
+      },
+      "ef_cdm_weighted": 0.9228,
+      "ef_ember_weighted": 0.7203,
+      "mwh_implied_from_claim": 42796.3,
+      "mwh_annual_estimate_from_mw": 16477.6,
+      "claimed_tco2": 39492.0,
+      "ember_consistent_tco2": 30826.13,
+      "overclaim_ratio": 1.281,
+      "overclaim_pct": 28.1
+    },
+    {
+      "project_id": "655",
+      "name": "24.8 MW Wind power project by Belgaum Wind Farms Private Ltd",
+      "tech": "wind",
+      "mw_rated": 24.8,
+      "tonnes_in_bct": 36251.0,
+      "vintages": [
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2016": 36251.0
+      },
+      "ef_cdm_weighted": 0.88,
+      "ef_ember_weighted": 0.699,
+      "mwh_implied_from_claim": 41194.3,
+      "mwh_annual_estimate_from_mw": 49967.0,
+      "claimed_tco2": 36251.0,
+      "ember_consistent_tco2": 28794.83,
+      "overclaim_ratio": 1.259,
+      "overclaim_pct": 25.9
+    },
+    {
+      "project_id": "1742",
+      "name": "Hydroelectric Project in Kinnaur District in Himachal Prades",
+      "tech": "hydro",
+      "mw_rated": null,
+      "tonnes_in_bct": 33134.0,
+      "vintages": [
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2016": 33134.0
+      },
+      "ef_cdm_weighted": 0.88,
+      "ef_ember_weighted": 0.699,
+      "mwh_implied_from_claim": 37652.3,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 33134.0,
+      "ember_consistent_tco2": 26318.94,
+      "overclaim_ratio": 1.259,
+      "overclaim_pct": 25.9
+    },
+    {
+      "project_id": "631",
+      "name": "13.25 MW Wind Power Generation by RMTL, in Kutch, Gujarat",
+      "tech": "wind",
+      "mw_rated": 13.25,
+      "tonnes_in_bct": 31011.0,
+      "vintages": [
+        2014,
+        2015,
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2015": 19946.0,
+        "2014": 9176.0,
+        "2016": 1889.0
+      },
+      "ef_cdm_weighted": 0.9017,
+      "ef_ember_weighted": 0.7101,
+      "mwh_implied_from_claim": 34390.2,
+      "mwh_annual_estimate_from_mw": 26696.1,
+      "claimed_tco2": 31011.0,
+      "ember_consistent_tco2": 24419.62,
+      "overclaim_ratio": 1.27,
+      "overclaim_pct": 27.0
+    },
+    {
+      "project_id": "669",
+      "name": "Wind Energy project by Ramco group in india",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 26055.0,
+      "vintages": [
+        2013
+      ],
+      "tonnes_by_vintage": {
+        "2013": 26055.0
+      },
+      "ef_cdm_weighted": 0.91,
+      "ef_ember_weighted": 0.71,
+      "mwh_implied_from_claim": 28631.9,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 26055.0,
+      "ember_consistent_tco2": 20328.63,
+      "overclaim_ratio": 1.282,
+      "overclaim_pct": 28.2
+    },
+    {
+      "project_id": "624",
+      "name": "15 MW Biomass Residue Based Power Project at Ghazipur, India",
+      "tech": "biomass",
+      "mw_rated": 15.0,
+      "tonnes_in_bct": 15347.0,
+      "vintages": [
+        2009
+      ],
+      "tonnes_by_vintage": {
+        "2009": 15347.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.758,
+      "mwh_implied_from_claim": 16326.6,
+      "mwh_annual_estimate_from_mw": 78840.0,
+      "claimed_tco2": 15347.0,
+      "ember_consistent_tco2": 12375.56,
+      "overclaim_ratio": 1.24,
+      "overclaim_pct": 24.0
+    },
+    {
+      "project_id": "682",
+      "name": "Wind Power Project at Anthiyur, Tamil Nadu",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 10226.0,
+      "vintages": [
+        2009
+      ],
+      "tonnes_by_vintage": {
+        "2009": 10226.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.758,
+      "mwh_implied_from_claim": 10878.7,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 10226.0,
+      "ember_consistent_tco2": 8246.07,
+      "overclaim_ratio": 1.24,
+      "overclaim_pct": 24.0
+    },
+    {
+      "project_id": "927",
+      "name": "13.75 MW wind power project in Davangere, Karnataka, India",
+      "tech": "wind",
+      "mw_rated": 13.75,
+      "tonnes_in_bct": 9863.0,
+      "vintages": [
+        2010
+      ],
+      "tonnes_by_vintage": {
+        "2010": 9863.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.736,
+      "mwh_implied_from_claim": 10492.6,
+      "mwh_annual_estimate_from_mw": 27703.5,
+      "claimed_tco2": 9863.0,
+      "ember_consistent_tco2": 7722.52,
+      "overclaim_ratio": 1.277,
+      "overclaim_pct": 27.7
+    },
+    {
+      "project_id": "1190",
+      "name": "Wind power project in Gujarat",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 7719.0,
+      "vintages": [
+        2017,
+        2018
+      ],
+      "tonnes_by_vintage": {
+        "2017": 1408.0,
+        "2018": 6311.0
+      },
+      "ef_cdm_weighted": 0.8518,
+      "ef_ember_weighted": 0.6711,
+      "mwh_implied_from_claim": 9061.7,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 7719.0,
+      "ember_consistent_tco2": 6081.28,
+      "overclaim_ratio": 1.269,
+      "overclaim_pct": 26.9
+    },
+    {
+      "project_id": "245",
+      "name": "Bundled Grid Connected 2.9 M.W. Wind Power Project in India ",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 5479.0,
+      "vintages": [
+        2009
+      ],
+      "tonnes_by_vintage": {
+        "2009": 5479.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.758,
+      "mwh_implied_from_claim": 5828.7,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 5479.0,
+      "ember_consistent_tco2": 4418.17,
+      "overclaim_ratio": 1.24,
+      "overclaim_pct": 24.0
+    },
+    {
+      "project_id": "733",
+      "name": "Biomass based steam generation project by Gujarat Ambuja Exp",
+      "tech": "biomass",
+      "mw_rated": null,
+      "tonnes_in_bct": 4500.0,
+      "vintages": [
+        2009
+      ],
+      "tonnes_by_vintage": {
+        "2009": 4500.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.758,
+      "mwh_implied_from_claim": 4787.2,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 4500.0,
+      "ember_consistent_tco2": 3628.72,
+      "overclaim_ratio": 1.24,
+      "overclaim_pct": 24.0
+    },
+    {
+      "project_id": "1693",
+      "name": "Wind Power Project in Maharashtra State, India",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 4390.0,
+      "vintages": [
+        2013
+      ],
+      "tonnes_by_vintage": {
+        "2013": 4390.0
+      },
+      "ef_cdm_weighted": 0.91,
+      "ef_ember_weighted": 0.71,
+      "mwh_implied_from_claim": 4824.2,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 4390.0,
+      "ember_consistent_tco2": 3425.16,
+      "overclaim_ratio": 1.282,
+      "overclaim_pct": 28.2
+    },
+    {
+      "project_id": "1214",
+      "name": "Vajrakarur Wind Power Project in Andhra Pradesh",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 3906.0,
+      "vintages": [
+        2012
+      ],
+      "tonnes_by_vintage": {
+        "2012": 3906.0
+      },
+      "ef_cdm_weighted": 0.92,
+      "ef_ember_weighted": 0.72,
+      "mwh_implied_from_claim": 4245.7,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 3906.0,
+      "ember_consistent_tco2": 3056.87,
+      "overclaim_ratio": 1.278,
+      "overclaim_pct": 27.8
+    },
+    {
+      "project_id": "1578",
+      "name": "15 MW Solar Photovoltaic Power Project at Gujarat",
+      "tech": "solar",
+      "mw_rated": 15.0,
+      "tonnes_in_bct": 1936.0,
+      "vintages": [
+        2012
+      ],
+      "tonnes_by_vintage": {
+        "2012": 1936.0
+      },
+      "ef_cdm_weighted": 0.92,
+      "ef_ember_weighted": 0.72,
+      "mwh_implied_from_claim": 2104.3,
+      "mwh_annual_estimate_from_mw": 24966.0,
+      "claimed_tco2": 1936.0,
+      "ember_consistent_tco2": 1515.13,
+      "overclaim_ratio": 1.278,
+      "overclaim_pct": 27.8
+    },
+    {
+      "project_id": "1762",
+      "name": "Bundled Solar Power Project by Solararise India Projects PVT",
+      "tech": "solar",
+      "mw_rated": null,
+      "tonnes_in_bct": 1000.0,
+      "vintages": [
+        2019
+      ],
+      "tonnes_by_vintage": {
+        "2019": 1000.0
+      },
+      "ef_cdm_weighted": 0.82,
+      "ef_ember_weighted": 0.655,
+      "mwh_implied_from_claim": 1219.5,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 1000.0,
+      "ember_consistent_tco2": 798.78,
+      "overclaim_ratio": 1.252,
+      "overclaim_pct": 25.2
+    },
+    {
+      "project_id": "1195",
+      "name": "Wind Power Project in Rajasthan",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 736.0,
+      "vintages": [
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2016": 736.0
+      },
+      "ef_cdm_weighted": 0.88,
+      "ef_ember_weighted": 0.699,
+      "mwh_implied_from_claim": 836.4,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 736.0,
+      "ember_consistent_tco2": 584.62,
+      "overclaim_ratio": 1.259,
+      "overclaim_pct": 25.9
+    },
+    {
+      "project_id": "1521",
+      "name": "Wind Based Power Generation by Mytrah Energy (India) Limited",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 422.0,
+      "vintages": [
+        2017,
+        2019
+      ],
+      "tonnes_by_vintage": {
+        "2017": 143.0,
+        "2019": 279.0
+      },
+      "ef_cdm_weighted": 0.8336,
+      "ef_ember_weighted": 0.6621,
+      "mwh_implied_from_claim": 506.3,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 422.0,
+      "ember_consistent_tco2": 335.21,
+      "overclaim_ratio": 1.259,
+      "overclaim_pct": 25.9
+    },
+    {
+      "project_id": "1079",
+      "name": "Bundled Wind Power Project in Jamnagar, Gujarat",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 30.0,
+      "vintages": [
+        2010
+      ],
+      "tonnes_by_vintage": {
+        "2010": 30.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.736,
+      "mwh_implied_from_claim": 31.9,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 30.0,
+      "ember_consistent_tco2": 23.49,
+      "overclaim_ratio": 1.277,
+      "overclaim_pct": 27.7
+    },
+    {
+      "project_id": "1985",
+      "name": "100 MW Bundled Wind Power Project in Anantapuram, Andhra Pra",
+      "tech": "wind",
+      "mw_rated": 100.0,
+      "tonnes_in_bct": 1.0,
+      "vintages": [
+        2019
+      ],
+      "tonnes_by_vintage": {
+        "2019": 1.0
+      },
+      "ef_cdm_weighted": 0.82,
+      "ef_ember_weighted": 0.655,
+      "mwh_implied_from_claim": 1.2,
+      "mwh_annual_estimate_from_mw": 201480.0,
+      "claimed_tco2": 1.0,
+      "ember_consistent_tco2": 0.8,
+      "overclaim_ratio": 1.252,
+      "overclaim_pct": 25.2
+    }
+  ],
+  "top_by_volume": [
+    {
+      "project_id": "173",
+      "name": "Vishnuprayag Hydro-electric Project (VHEP) by Jaiprakash Pow",
+      "tech": "hydro",
+      "mw_rated": null,
+      "tonnes_in_bct": 1189259.0,
+      "vintages": [
+        2008,
+        2013,
+        2014,
+        2015,
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2015": 347106.0,
+        "2014": 210552.0,
+        "2016": 41725.0,
+        "2008": 571776.0,
+        "2013": 18100.0
+      },
+      "ef_cdm_weighted": 0.9108,
+      "ef_ember_weighted": 0.7367,
+      "mwh_implied_from_claim": 1305677.6,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 1189259.0,
+      "ember_consistent_tco2": 961899.72,
+      "overclaim_ratio": 1.236,
+      "overclaim_pct": 23.6
+    },
+    {
+      "project_id": "766",
+      "name": "Teesta- V Hydro Power project in Sikkim",
+      "tech": "hydro",
+      "mw_rated": null,
+      "tonnes_in_bct": 927901.0,
+      "vintages": [
+        2008,
+        2009,
+        2010
+      ],
+      "tonnes_by_vintage": {
+        "2008": 250007.0,
+        "2010": 575887.0,
+        "2009": 102007.0
+      },
+      "ef_cdm_weighted": 0.9346,
+      "ef_ember_weighted": 0.7465,
+      "mwh_implied_from_claim": 992820.2,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 927901.0,
+      "ember_consistent_tco2": 741141.76,
+      "overclaim_ratio": 1.252,
+      "overclaim_pct": 25.2
+    },
+    {
+      "project_id": "51",
+      "name": "29.70 MW Wind Power project in Karnataka India",
+      "tech": "wind",
+      "mw_rated": 29.7,
+      "tonnes_in_bct": 270000.0,
+      "vintages": [
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "tonnes_by_vintage": {
+        "2013": 30129.0,
+        "2014": 90000.0,
+        "2012": 69871.0,
+        "2015": 80000.0
+      },
+      "ef_cdm_weighted": 0.9096,
+      "ef_ember_weighted": 0.7121,
+      "mwh_implied_from_claim": 296825.7,
+      "mwh_annual_estimate_from_mw": 59839.6,
+      "claimed_tco2": 270000.0,
+      "ember_consistent_tco2": 211382.43,
+      "overclaim_ratio": 1.277,
+      "overclaim_pct": 27.7
+    },
+    {
+      "project_id": "1291",
+      "name": "Hydro Power Project in backward district of Andhra Pradesh, ",
+      "tech": "hydro",
+      "mw_rated": null,
+      "tonnes_in_bct": 268500.0,
+      "vintages": [
+        2013,
+        2014
+      ],
+      "tonnes_by_vintage": {
+        "2013": 39379.0,
+        "2014": 229121.0
+      },
+      "ef_cdm_weighted": 0.91,
+      "ef_ember_weighted": 0.7066,
+      "mwh_implied_from_claim": 295054.9,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 268500.0,
+      "ember_consistent_tco2": 208481.89,
+      "overclaim_ratio": 1.288,
+      "overclaim_pct": 28.8
+    },
+    {
+      "project_id": "493",
+      "name": "5 MW Brahm Ganga Hydro \u2013 Electric Project at Kullu district ",
+      "tech": "hydro",
+      "mw_rated": 5.0,
+      "tonnes_in_bct": 191068.0,
+      "vintages": [
+        2008,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018
+      ],
+      "tonnes_by_vintage": {
+        "2014": 16422.0,
+        "2012": 21468.0,
+        "2015": 13013.0,
+        "2011": 21131.0,
+        "2010": 19658.0,
+        "2013": 20840.0,
+        "2008": 38554.0,
+        "2016": 18808.0,
+        "2017": 19588.0,
+        "2018": 1586.0
+      },
+      "ef_cdm_weighted": 0.9092,
+      "ef_ember_weighted": 0.7212,
+      "mwh_implied_from_claim": 210153.8,
+      "mwh_annual_estimate_from_mw": 16644.0,
+      "claimed_tco2": 191068.0,
+      "ember_consistent_tco2": 151555.44,
+      "overclaim_ratio": 1.261,
+      "overclaim_pct": 26.1
+    },
+    {
+      "project_id": "1525",
+      "name": "Wind power project at Jaibhim by SIIL",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 103558.0,
+      "vintages": [
+        2011,
+        2012
+      ],
+      "tonnes_by_vintage": {
+        "2011": 41581.0,
+        "2012": 61977.0
+      },
+      "ef_cdm_weighted": 0.924,
+      "ef_ember_weighted": 0.72,
+      "mwh_implied_from_claim": 112073.9,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 103558.0,
+      "ember_consistent_tco2": 80693.21,
+      "overclaim_ratio": 1.283,
+      "overclaim_pct": 28.3
+    },
+    {
+      "project_id": "1160",
+      "name": "6.5 MW cogeneration project in Akbarpur, Punjab",
+      "tech": "biomass",
+      "mw_rated": 6.5,
+      "tonnes_in_bct": 86030.0,
+      "vintages": [
+        2012,
+        2013,
+        2014
+      ],
+      "tonnes_by_vintage": {
+        "2014": 30010.0,
+        "2013": 33624.0,
+        "2012": 22396.0
+      },
+      "ef_cdm_weighted": 0.9126,
+      "ef_ember_weighted": 0.7112,
+      "mwh_implied_from_claim": 94268.8,
+      "mwh_annual_estimate_from_mw": 34164.0,
+      "claimed_tco2": 86030.0,
+      "ember_consistent_tco2": 67044.71,
+      "overclaim_ratio": 1.283,
+      "overclaim_pct": 28.3
+    },
+    {
+      "project_id": "132",
+      "name": "9 MW Neria Hyrdroelectric project, Karnataka, India",
+      "tech": "other",
+      "mw_rated": 9.0,
+      "tonnes_in_bct": 62893.0,
+      "vintages": [
+        2011,
+        2013,
+        2014,
+        2015
+      ],
+      "tonnes_by_vintage": {
+        "2013": 21040.0,
+        "2014": 17498.0,
+        "2015": 15873.0,
+        "2011": 8482.0
+      },
+      "ef_cdm_weighted": 0.9102,
+      "ef_ember_weighted": 0.711,
+      "mwh_implied_from_claim": 69100.0,
+      "mwh_annual_estimate_from_mw": 19710.0,
+      "claimed_tco2": 62893.0,
+      "ember_consistent_tco2": 49129.62,
+      "overclaim_ratio": 1.28,
+      "overclaim_pct": 28.0
+    },
+    {
+      "project_id": "566",
+      "name": "10 MW Wind Power Project in Maharashtra by Deepak Fertilizer",
+      "tech": "wind",
+      "mw_rated": 10.0,
+      "tonnes_in_bct": 60597.0,
+      "vintages": [
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "tonnes_by_vintage": {
+        "2012": 12258.0,
+        "2013": 11861.0,
+        "2014": 13234.0,
+        "2015": 23244.0
+      },
+      "ef_cdm_weighted": 0.9082,
+      "ef_ember_weighted": 0.7123,
+      "mwh_implied_from_claim": 66723.0,
+      "mwh_annual_estimate_from_mw": 20148.0,
+      "claimed_tco2": 60597.0,
+      "ember_consistent_tco2": 47526.82,
+      "overclaim_ratio": 1.275,
+      "overclaim_pct": 27.5
+    },
+    {
+      "project_id": "274",
+      "name": "Hanuman Ganga Hydro (4.95 MW) Plant at Uttarakhand",
+      "tech": "hydro",
+      "mw_rated": 4.95,
+      "tonnes_in_bct": 39492.0,
+      "vintages": [
+        2010,
+        2011,
+        2012,
+        2014,
+        2015,
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2011": 13688.0,
+        "2010": 7941.0,
+        "2012": 7442.0,
+        "2015": 5315.0,
+        "2014": 4167.0,
+        "2016": 939.0
+      },
+      "ef_cdm_weighted": 0.9228,
+      "ef_ember_weighted": 0.7203,
+      "mwh_implied_from_claim": 42796.3,
+      "mwh_annual_estimate_from_mw": 16477.6,
+      "claimed_tco2": 39492.0,
+      "ember_consistent_tco2": 30826.13,
+      "overclaim_ratio": 1.281,
+      "overclaim_pct": 28.1
+    },
+    {
+      "project_id": "655",
+      "name": "24.8 MW Wind power project by Belgaum Wind Farms Private Ltd",
+      "tech": "wind",
+      "mw_rated": 24.8,
+      "tonnes_in_bct": 36251.0,
+      "vintages": [
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2016": 36251.0
+      },
+      "ef_cdm_weighted": 0.88,
+      "ef_ember_weighted": 0.699,
+      "mwh_implied_from_claim": 41194.3,
+      "mwh_annual_estimate_from_mw": 49967.0,
+      "claimed_tco2": 36251.0,
+      "ember_consistent_tco2": 28794.83,
+      "overclaim_ratio": 1.259,
+      "overclaim_pct": 25.9
+    },
+    {
+      "project_id": "1742",
+      "name": "Hydroelectric Project in Kinnaur District in Himachal Prades",
+      "tech": "hydro",
+      "mw_rated": null,
+      "tonnes_in_bct": 33134.0,
+      "vintages": [
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2016": 33134.0
+      },
+      "ef_cdm_weighted": 0.88,
+      "ef_ember_weighted": 0.699,
+      "mwh_implied_from_claim": 37652.3,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 33134.0,
+      "ember_consistent_tco2": 26318.94,
+      "overclaim_ratio": 1.259,
+      "overclaim_pct": 25.9
+    },
+    {
+      "project_id": "631",
+      "name": "13.25 MW Wind Power Generation by RMTL, in Kutch, Gujarat",
+      "tech": "wind",
+      "mw_rated": 13.25,
+      "tonnes_in_bct": 31011.0,
+      "vintages": [
+        2014,
+        2015,
+        2016
+      ],
+      "tonnes_by_vintage": {
+        "2015": 19946.0,
+        "2014": 9176.0,
+        "2016": 1889.0
+      },
+      "ef_cdm_weighted": 0.9017,
+      "ef_ember_weighted": 0.7101,
+      "mwh_implied_from_claim": 34390.2,
+      "mwh_annual_estimate_from_mw": 26696.1,
+      "claimed_tco2": 31011.0,
+      "ember_consistent_tco2": 24419.62,
+      "overclaim_ratio": 1.27,
+      "overclaim_pct": 27.0
+    },
+    {
+      "project_id": "669",
+      "name": "Wind Energy project by Ramco group in india",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 26055.0,
+      "vintages": [
+        2013
+      ],
+      "tonnes_by_vintage": {
+        "2013": 26055.0
+      },
+      "ef_cdm_weighted": 0.91,
+      "ef_ember_weighted": 0.71,
+      "mwh_implied_from_claim": 28631.9,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 26055.0,
+      "ember_consistent_tco2": 20328.63,
+      "overclaim_ratio": 1.282,
+      "overclaim_pct": 28.2
+    },
+    {
+      "project_id": "624",
+      "name": "15 MW Biomass Residue Based Power Project at Ghazipur, India",
+      "tech": "biomass",
+      "mw_rated": 15.0,
+      "tonnes_in_bct": 15347.0,
+      "vintages": [
+        2009
+      ],
+      "tonnes_by_vintage": {
+        "2009": 15347.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.758,
+      "mwh_implied_from_claim": 16326.6,
+      "mwh_annual_estimate_from_mw": 78840.0,
+      "claimed_tco2": 15347.0,
+      "ember_consistent_tco2": 12375.56,
+      "overclaim_ratio": 1.24,
+      "overclaim_pct": 24.0
+    },
+    {
+      "project_id": "682",
+      "name": "Wind Power Project at Anthiyur, Tamil Nadu",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 10226.0,
+      "vintages": [
+        2009
+      ],
+      "tonnes_by_vintage": {
+        "2009": 10226.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.758,
+      "mwh_implied_from_claim": 10878.7,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 10226.0,
+      "ember_consistent_tco2": 8246.07,
+      "overclaim_ratio": 1.24,
+      "overclaim_pct": 24.0
+    },
+    {
+      "project_id": "927",
+      "name": "13.75 MW wind power project in Davangere, Karnataka, India",
+      "tech": "wind",
+      "mw_rated": 13.75,
+      "tonnes_in_bct": 9863.0,
+      "vintages": [
+        2010
+      ],
+      "tonnes_by_vintage": {
+        "2010": 9863.0
+      },
+      "ef_cdm_weighted": 0.94,
+      "ef_ember_weighted": 0.736,
+      "mwh_implied_from_claim": 10492.6,
+      "mwh_annual_estimate_from_mw": 27703.5,
+      "claimed_tco2": 9863.0,
+      "ember_consistent_tco2": 7722.52,
+      "overclaim_ratio": 1.277,
+      "overclaim_pct": 27.7
+    },
+    {
+      "project_id": "1190",
+      "name": "Wind power project in Gujarat",
+      "tech": "wind",
+      "mw_rated": null,
+      "tonnes_in_bct": 7719.0,
+      "vintages": [
+        2017,
+        2018
+      ],
+      "tonnes_by_vintage": {
+        "2017": 1408.0,
+        "2018": 6311.0
+      },
+      "ef_cdm_weighted": 0.8518,
+      "ef_ember_weighted": 0.6711,
+      "mwh_implied_from_claim": 9061.7,
+      "mwh_annual_estimate_from_mw": null,
+      "claimed_tco2": 7719.0,
+      "ember_consistent_tco2": 6081.28,
+      "overclaim_ratio": 1.269,
+      "overclaim_pct": 26.9
+    }
+  ]
+}

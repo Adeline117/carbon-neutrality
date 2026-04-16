@@ -1,0 +1,59 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1427",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1427",
+    "name": "Adiguzel II Hydroelectric Power Plant"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20150124,2016,2017",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x1579568b031c2cd65a2fc3883a07d2e8e28954b7",
+      "0xace034fcbeee0976207be6d580fe001db1fde143",
+      "0x0e9f617560ddf16adeb31cea4270405165eb89cc"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819322Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819322Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819322Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x1579568b031c2cd65a2fc3883a07d2e8e28954b7",
+      "internal_composite": 32.62,
+      "internal_grade": "BB",
+      "vintage": 2017
+    },
+    {
+      "address": "0xace034fcbeee0976207be6d580fe001db1fde143",
+      "internal_composite": 31.43,
+      "internal_grade": "BB",
+      "vintage": 2016
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819322Z"
+}

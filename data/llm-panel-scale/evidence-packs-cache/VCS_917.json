@@ -1,0 +1,45 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "917",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/917",
+    "name": "ASLANCIK HYDRO POWER PLANT PROJECT"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20140308,2017",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0xdaec258e8c24e96e682b4c72922949b22fe6970b",
+      "0x87d0558de28926b4ad8fcc19f039b72a76ea2f95"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.825494Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.825494Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.825494Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.825494Z"
+}

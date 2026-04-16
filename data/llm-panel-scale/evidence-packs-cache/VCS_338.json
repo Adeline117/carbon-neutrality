@@ -1,0 +1,44 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "338",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/338",
+    "name": "Methane Recovery Project Praktijkcentrum Sterksel, North Bra"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2011",
+    "description": "Methane capture or destruction project (landfill gas, wastewater, livestock manure). CH4 destruction has a strong physical rationale but baseline counterfactuals are sensitive to regulatory requirements in the host country.",
+    "claims": [
+      "CH4 capture and combustion",
+      "Landfill/wastewater baseline vented CH4"
+    ],
+    "monitoring_approach": "Flow-metered CH4 combustion, periodic composition tests.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Waste/Methane",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x899b75bc5298784355ca6a265b79b839e6d02bc0"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.824706Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.824706Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.824706Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.824706Z"
+}

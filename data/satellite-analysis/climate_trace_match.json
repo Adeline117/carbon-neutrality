@@ -1,0 +1,491 @@
+{
+  "matches": [
+    {
+      "project_id": "766",
+      "name": "Teesta- V Hydro Power project in Sikkim",
+      "country": "India",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "875",
+      "name": "FLORESTAL SANTA MARIA PROJECT",
+      "country": "Brazil",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1100",
+      "name": "SANIBEY DAM AND HYDROELECTRIC POWER PLANT",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "192",
+      "name": "48 MW Houqiao Hydropower Project, Yunnan, China",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "896",
+      "name": "Foz do Chapec\u00f3 Project",
+      "country": "Brazil",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1464",
+      "name": "Alkumru Hydroelectric Power Plant",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "981",
+      "name": "Pacajai REDD+ Project",
+      "country": "Brazil",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "905",
+      "name": "The Yokuslu- Kalkandere Hydroelectric Power Plant",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "753",
+      "name": "The Cevizlik Run-of-River Hydroelectric Power Plant",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1146",
+      "name": "The Hyundai Waste Energy Recovery CO-Generation Project Phas",
+      "country": "South Korea",
+      "sector": "waste",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "51",
+      "name": "29.70 MW Wind Power project in Karnataka India",
+      "country": "India",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1291",
+      "name": "Hydro Power Project in backward district of Andhra Pradesh, ",
+      "country": "India",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1529",
+      "name": "Inner Mongolia Chao\u2019er Improved Forest Management Project",
+      "country": "China",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "674",
+      "name": "Rimba Raya Biodiversity Reserve Project",
+      "country": "Indonesia",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "535",
+      "name": "AKOCAK HYDROELECTRIC POWER PLANT",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1258",
+      "name": "Saint Nikola Wind Farm",
+      "country": "Bulgaria",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1037",
+      "name": "Guazhou Beidaqiao No.1 Wind Farm Project in Gansu Province, ",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "917",
+      "name": "ASLANCIK HYDRO POWER PLANT PROJECT",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "487",
+      "name": "210 MW Musi Hydro Power Plant, Bengkulu",
+      "country": "Indonesia",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "713",
+      "name": "KOYULHISAR HYDRO ELECTRICITY POWER PLANT",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "892",
+      "name": "Hebei Chengde Weichang Yudaokou Pasture 150MW Wind Farm Proj",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "699",
+      "name": "Yiyang Xiushan Hydropower Project, P.R. China",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "391",
+      "name": "Gullubag 96 MW Hydro Electric Power Plant Project, Turkey",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1188",
+      "name": "Shandong Wendeng Zhangjiachan Wind Farm Project",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "414",
+      "name": "Hebei Haixing 49.5MW Wind Farm Project",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1542",
+      "name": "Yunnan Kunming Liangqu Improved Forest Management Project",
+      "country": "China",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1052",
+      "name": "North Pikounda REDD+",
+      "country": "DR Congo",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "2092",
+      "name": "Kirazl\u0131k Hydroelectric  Power Plant Project",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1221",
+      "name": "Eglence I-II Hydroelectric Power Plant",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1525",
+      "name": "Wind power project at Jaibhim by SIIL",
+      "country": "India",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1427",
+      "name": "Adiguzel II Hydroelectric Power Plant",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "486",
+      "name": "50 MW Sipansihaporas Hydro Power Plant, North Sumatra",
+      "country": "Indonesia",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1577",
+      "name": "Fujian Yong\u2019an Improved Forest Management Project",
+      "country": "China",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1160",
+      "name": "6.5 MW cogeneration project in Akbarpur, Punjab",
+      "country": "India",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1174",
+      "name": "Akcay 28.78 MW, Hydroelectric Power Plant Project (HEPP), Tu",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1189",
+      "name": "Shandong Taipingshan Wind Farm Project",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "708",
+      "name": "Engenheiro Ernesto Jorge Dreher and Engenheiro Henrique Kotz",
+      "country": "Brazil",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1499",
+      "name": "Toros Hydroelectric Power Plant",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "786",
+      "name": "Hyundai Steel Waste Energy Cogeneration Project",
+      "country": "South Korea",
+      "sector": "waste",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "850",
+      "name": "Inner Mongolia Jingneng Saihan Wind Farm Phase I Project",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1505",
+      "name": "Bujagali Hydropower Project - CER Conversion",
+      "country": "Uganda",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "132",
+      "name": "9 MW Neria Hyrdroelectric project, Karnataka, India",
+      "country": "India",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "566",
+      "name": "10 MW Wind Power Project in Maharashtra by Deepak Fertilizer",
+      "country": "India",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1345",
+      "name": "Boyabat Hydroelectric Power Plant",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "755",
+      "name": "OTLUCA HPPs run-of-river hydro project",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "792",
+      "name": "Tadi 16 MW Hydropower Project in Zhejiang Province",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "810",
+      "name": "CEYHAN 61.7 MW Hydropower Project",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "921",
+      "name": "Inner Mongolia Jingneng Saihan Wind Farm Phase II Project",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1566",
+      "name": "REDD+ Project Resguardo Indigena Unificado Selva de Mataven ",
+      "country": "Colombia",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "986",
+      "name": "Kumk\u00f6y Hydroelectric Power Plant, Samsun",
+      "country": "Turkey",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "330",
+      "name": "Wutuhe Erji hydro power project in Guizhou Province, China",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "274",
+      "name": "Hanuman Ganga Hydro (4.95 MW) Plant at Uttarakhand",
+      "country": "India",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "1356",
+      "name": "Jiangsu Dongtai Phase II Wind Power Project",
+      "country": "China",
+      "sector": "power",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    },
+    {
+      "project_id": "934",
+      "name": "The Mai Ndombe REDD+ Project",
+      "country": "DR Congo",
+      "sector": "forestry-and-land-use",
+      "status": "no_trace_data",
+      "asset_count_queried": 0,
+      "nearest_km": null
+    }
+  ],
+  "max_km": 50.0
+}

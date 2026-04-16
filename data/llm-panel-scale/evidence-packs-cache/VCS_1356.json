@@ -1,0 +1,51 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1356",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1356",
+    "name": "Jiangsu Dongtai Phase II Wind Power Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2017",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x1c7a0d0517d7fe5d3c4ea73bab125632e370749d"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819207Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819207Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819207Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x1c7a0d0517d7fe5d3c4ea73bab125632e370749d",
+      "internal_composite": 32.62,
+      "internal_grade": "BB",
+      "vintage": 2017
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819207Z"
+}

@@ -1,0 +1,61 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "981",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/981",
+    "name": "Pacajai REDD+ Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20120102,2013,2014,2016,2017",
+    "description": "Reducing Emissions from Deforestation and forest Degradation project claiming avoided deforestation credits in a tropical forest. This archetype has been under sustained methodological criticism (West et al. 2023 Science, Guardian 2023): dynamic baselines and leakage-control are weak in most VM0007 vintages.",
+    "claims": [
+      "Avoided deforestation relative to regional baseline",
+      "Community co-benefits"
+    ],
+    "monitoring_approach": "Remote-sensing forest-cover change + field plots.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "REDD+",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x1bdf022e0cf838eb3c777e3e502db9e4029962c8",
+      "0x88da4c6bffdaedf6b64bdb6060973f86a77830ec",
+      "0xabfd6760151c7f9361cc5b03bbeebe2d7c0251da",
+      "0xeaa9938076748d7edd4df0721b3e3fe4077349d3",
+      "0x65d96f0d45606016e30c97ee039775de9722a7d2"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823592Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.823592Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823592Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x1bdf022e0cf838eb3c777e3e502db9e4029962c8",
+      "internal_composite": 33.55,
+      "internal_grade": "BB",
+      "vintage": 2016
+    },
+    {
+      "address": "0x88da4c6bffdaedf6b64bdb6060973f86a77830ec",
+      "internal_composite": 30.75,
+      "internal_grade": "BB",
+      "vintage": 2013
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.823592Z"
+}

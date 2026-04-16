@@ -1,0 +1,58 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "10",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/10",
+    "name": "BAESA Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2013,2014",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x35b73a62dd351030ecbd4252135e59bbb6345a60",
+      "0xc7cfca393c969865c70056d0324ee1d7d0dc98ba"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.817478Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.817478Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.817478Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x35b73a62dd351030ecbd4252135e59bbb6345a60",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0xc7cfca393c969865c70056d0324ee1d7d0dc98ba",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.817478Z"
+}

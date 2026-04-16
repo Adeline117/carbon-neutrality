@@ -1,0 +1,44 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1721",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1721",
+    "name": "ONIL Stoves  Guatemala Uspantan"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2016",
+    "description": "Improved-cookstove distribution project claiming avoided-biomass emissions. Recent work (Gill-Wiehl et al. 2024 Nature) has documented large over-crediting relative to measured stove-use and fuel-savings.",
+    "claims": [
+      "Replacement of baseline biomass stove",
+      "Fraction of non-renewable biomass savings"
+    ],
+    "monitoring_approach": "Surveys + KPT/CCT tests; recent methodologies require stove-use sensors.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Cookstove",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x76de26a656dd4736aa563c0fa6171e26efcdcd75"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.824260Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.824260Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.824260Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.824260Z"
+}

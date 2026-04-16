@@ -1,0 +1,27 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "STRESS01"
+  },
+  "fields": {
+    "type_archetype": "REDD+",
+    "methodology": "VM0007",
+    "country": "Kenya",
+    "vintage": "2022",
+    "description": "Tropical REDD+ project with credits SOLD TO TWO BUYERS under separate contracts; evidence of double-counting across VCS and host-country NDC inventory. All other technical fields are AA-tier.",
+    "claims": [
+      "Avoided deforestation",
+      "DOUBLE-ASSIGNED to country NDC"
+    ],
+    "monitoring_approach": "Remote sensing + field plots (otherwise adequate)."
+  },
+  "provenance": [
+    {
+      "source": "stress-test-synthetic",
+      "fetched_at": "synthetic"
+    }
+  ],
+  "evidence_level": "synthetic-stress-test",
+  "_expected_disqualifier": "double_counting"
+}

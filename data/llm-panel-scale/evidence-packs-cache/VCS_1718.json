@@ -1,0 +1,44 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1718",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1718",
+    "name": "Inner Mongolia Keyihe IFM (conversion of logged to protected"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2013",
+    "description": "Improved Forest Management project claiming enhanced sequestration relative to a hypothetical logging baseline. Baseline construction (e.g. ARB IFM) is contested and over-crediting is documented in CAR/ARB IFM (Badgley et al. 2022).",
+    "claims": [
+      "Reduced harvest relative to business-as-usual",
+      "Enhanced standing stock"
+    ],
+    "monitoring_approach": "Forest inventory re-measurement on fixed plots + permanence discount.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "IFM",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x0044c5a5a6f626b673224a3c0d71e851ad3d5153"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.826440Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.826440Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.826440Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.826440Z"
+}

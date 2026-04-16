@@ -1,0 +1,50 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "439",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/439",
+    "name": "Yingpeng HFC23 Decompostion Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20080718",
+    "description": "Destruction of high-GWP industrial gases (HFC-23, SF6, N2O). Physically unambiguous abatement but the perverse-incentive literature (Wara 2007, Nature 2023) shows that HFC-23 projects have historically motivated additional HFC-22 production.",
+    "claims": [
+      "Destruction of high-GWP gas (N2O / HFC-23)"
+    ],
+    "monitoring_approach": "Continuous emissions monitoring of destruction unit.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Industrial gas",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x92bfcddac83f2e94f02fc7aa092eb6aec08a0dec"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821254Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821254Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821254Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x92bfcddac83f2e94f02fc7aa092eb6aec08a0dec",
+      "internal_composite": 30.88,
+      "internal_grade": "BB",
+      "vintage": 2008
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821254Z"
+}

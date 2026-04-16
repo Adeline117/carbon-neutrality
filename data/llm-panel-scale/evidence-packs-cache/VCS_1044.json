@@ -1,0 +1,53 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1044",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1044",
+    "name": "Ziqiang 18MW Hydropower Project in Guizhou Province China"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20101220,2011,20120101",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0xdb6942dd3db6de4e1ba09da0ad03c6a4b5873216",
+      "0x6252cc6be84d4a5923162678226b8fd3a2da2b92",
+      "0x42f3148d4a93a030978e2f909ccc6626dc8e2aed"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.817974Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.817974Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.817974Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0xdb6942dd3db6de4e1ba09da0ad03c6a4b5873216",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.817974Z"
+}

@@ -1,0 +1,44 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1162",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1162",
+    "name": "Jiangxi Province Le'an County Forest Farm Carbon Sink Projec"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2015",
+    "description": "Afforestation, Reforestation, or Revegetation project. Archetype quality depends on species (native vs. monoculture), tenure security, and whether the planting is commercial timber. VM0047 is the current best-in-class methodology.",
+    "claims": [
+      "Net tree-cover increase on degraded land",
+      "Above-ground biomass growth"
+    ],
+    "monitoring_approach": "Allometric biomass estimation on permanent sample plots + remote sensing.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "ARR",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x261bef4b19ace1398c6603ed7299296d0e32cc00"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.827713Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.827713Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.827713Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.827713Z"
+}

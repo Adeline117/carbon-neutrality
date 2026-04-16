@@ -1,0 +1,51 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1742",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1742",
+    "name": "Hydroelectric Project in Kinnaur District in Himachal Prades"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2016",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0xca60e17a483c126d116a4f043a54461bf5989a78"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.820256Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.820256Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.820256Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0xca60e17a483c126d116a4f043a54461bf5989a78",
+      "internal_composite": 31.43,
+      "internal_grade": "BB",
+      "vintage": 2016
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.820256Z"
+}

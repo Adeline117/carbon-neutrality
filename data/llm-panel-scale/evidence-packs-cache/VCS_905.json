@@ -1,0 +1,72 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "905",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/905",
+    "name": "The Yokuslu- Kalkandere Hydroelectric Power Plant"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2012,2013,2014,2015",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x1e48a71c6909b0e3ec43e2ce0560915b824edd30",
+      "0x307ddba3cb35c7dbf29c9d8068426cdaf3237690",
+      "0xaf1cbdb46b9c7a1e481fe46630fa7cb390dab046",
+      "0xbd55baab51cae4e9e30387c447650eef38419fba"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823518Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.823518Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823518Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x1e48a71c6909b0e3ec43e2ce0560915b824edd30",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0x307ddba3cb35c7dbf29c9d8068426cdaf3237690",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    },
+    {
+      "address": "0xaf1cbdb46b9c7a1e481fe46630fa7cb390dab046",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    },
+    {
+      "address": "0xbd55baab51cae4e9e30387c447650eef38419fba",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.823518Z"
+}

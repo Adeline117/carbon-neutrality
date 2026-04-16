@@ -1,0 +1,2696 @@
+{
+  "10": {
+    "project_id": "10",
+    "name": "BAESA Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 226642.67,
+    "source": "fallback"
+  },
+  "1002": {
+    "project_id": "1002",
+    "name": "Natural Gas based grid connected power project at Peddapuram",
+    "type": "Fossil switch",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009",
+      "2011"
+    ],
+    "tonnes_in_bct": 530687.0,
+    "source": "fallback"
+  },
+  "1044": {
+    "project_id": "1044",
+    "name": "Ziqiang 18MW Hydropower Project in Guizhou Province China",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "tonnes_in_bct": 21779.0,
+    "source": "fallback"
+  },
+  "1052": {
+    "project_id": "1052",
+    "name": "North Pikounda REDD+",
+    "type": "REDD+",
+    "country": "DR Congo",
+    "state": null,
+    "lat": 0.18,
+    "lon": 15.7,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 109277.88,
+    "source": "fallback"
+  },
+  "1079": {
+    "project_id": "1079",
+    "name": "Bundled Wind Power Project in Jamnagar, Gujarat",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Gujarat",
+    "lat": 22.31,
+    "lon": 72.14,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2010"
+    ],
+    "tonnes_in_bct": 30.0,
+    "source": "fallback"
+  },
+  "1094": {
+    "project_id": "1094",
+    "name": "Ecomapua Amazon REDD Project",
+    "type": "REDD+",
+    "country": "Brazil",
+    "state": null,
+    "lat": -1.25,
+    "lon": -49.8,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 890.01,
+    "source": "fallback"
+  },
+  "1100": {
+    "project_id": "1100",
+    "name": "SANIBEY DAM AND HYDROELECTRIC POWER PLANT",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 664695.0,
+    "source": "fallback"
+  },
+  "1121": {
+    "project_id": "1121",
+    "name": "Anhui Guzhen Biomass Generation Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2015",
+      "2016",
+      "2018"
+    ],
+    "tonnes_in_bct": 186613.0,
+    "source": "fallback"
+  },
+  "1146": {
+    "project_id": "1146",
+    "name": "The Hyundai Waste Energy Recovery CO-Generation Project Phas",
+    "type": "Waste/Methane",
+    "country": "South Korea",
+    "state": null,
+    "lat": 35.91,
+    "lon": 127.77,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2015"
+    ],
+    "tonnes_in_bct": 300000.0,
+    "source": "fallback"
+  },
+  "1160": {
+    "project_id": "1160",
+    "name": "6.5 MW cogeneration project in Akbarpur, Punjab",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Punjab",
+    "lat": 31.15,
+    "lon": 75.34,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 86030.0,
+    "source": "fallback"
+  },
+  "1174": {
+    "project_id": "1174",
+    "name": "Akcay 28.78 MW, Hydroelectric Power Plant Project (HEPP), Tu",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013",
+      "2014",
+      "2018"
+    ],
+    "tonnes_in_bct": 85144.0,
+    "source": "fallback"
+  },
+  "1188": {
+    "project_id": "1188",
+    "name": "Shandong Wendeng Zhangjiachan Wind Farm Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011",
+      "2013",
+      "2015"
+    ],
+    "tonnes_in_bct": 110724.0,
+    "source": "fallback"
+  },
+  "1189": {
+    "project_id": "1189",
+    "name": "Shandong Taipingshan Wind Farm Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2012",
+      "2013"
+    ],
+    "tonnes_in_bct": 84990.0,
+    "source": "fallback"
+  },
+  "1190": {
+    "project_id": "1190",
+    "name": "Wind power project in Gujarat",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Gujarat",
+    "lat": 22.31,
+    "lon": 72.14,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2017",
+      "2018"
+    ],
+    "tonnes_in_bct": 7719.0,
+    "source": "fallback"
+  },
+  "1195": {
+    "project_id": "1195",
+    "name": "Wind Power Project in Rajasthan",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Rajasthan",
+    "lat": 27.02,
+    "lon": 74.22,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 736.0,
+    "source": "fallback"
+  },
+  "12": {
+    "project_id": "12",
+    "name": "Chuanwei Group 24 MW Waste Gas based Captive Power Plant",
+    "type": "Waste/Methane",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 392358.0,
+    "source": "fallback"
+  },
+  "1203": {
+    "project_id": "1203",
+    "name": "Suzlon 8.40 MW Wind Power Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011",
+      "2012"
+    ],
+    "tonnes_in_bct": 6003.0,
+    "source": "fallback"
+  },
+  "1205": {
+    "project_id": "1205",
+    "name": "Tatar Hydro Electricity Power Plant",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2018"
+    ],
+    "tonnes_in_bct": 482245.0,
+    "source": "fallback"
+  },
+  "1310": {
+    "project_id": "1310",
+    "name": "Guohua Tongliao Kezuo Zhongqi Phase I 49.5 MW Wind Farm Proj",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 5000.0,
+    "source": "fallback"
+  },
+  "132": {
+    "project_id": "132",
+    "name": "9 MW Neria Hyrdroelectric project, Karnataka, India",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Karnataka",
+    "lat": 15.32,
+    "lon": 75.71,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2011",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 62893.0,
+    "source": "fallback"
+  },
+  "1345": {
+    "project_id": "1345",
+    "name": "Boyabat Hydroelectric Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013"
+    ],
+    "tonnes_in_bct": 50000.0,
+    "source": "fallback"
+  },
+  "1356": {
+    "project_id": "1356",
+    "name": "Jiangsu Dongtai Phase II Wind Power Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2017"
+    ],
+    "tonnes_in_bct": 33715.0,
+    "source": "fallback"
+  },
+  "1382": {
+    "project_id": "1382",
+    "name": "The Envira Amazonia Project - A Tropical Forest Conservation",
+    "type": "REDD+",
+    "country": "Brazil",
+    "state": null,
+    "lat": -8.56,
+    "lon": -70.1,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2015"
+    ],
+    "tonnes_in_bct": 10.04,
+    "source": "fallback"
+  },
+  "1427": {
+    "project_id": "1427",
+    "name": "Adiguzel II Hydroelectric Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2015",
+      "2016",
+      "2017"
+    ],
+    "tonnes_in_bct": 102585.0,
+    "source": "fallback"
+  },
+  "1464": {
+    "project_id": "1464",
+    "name": "Alkumru Hydroelectric Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2017",
+      "2018"
+    ],
+    "tonnes_in_bct": 466354.0,
+    "source": "fallback"
+  },
+  "1499": {
+    "project_id": "1499",
+    "name": "Toros Hydroelectric Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 78520.0,
+    "source": "fallback"
+  },
+  "1506": {
+    "project_id": "1506",
+    "name": "Cirakdami Hydro Electricity Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 31396.0,
+    "source": "fallback"
+  },
+  "1508": {
+    "project_id": "1508",
+    "name": "Pakarab Fertiliser Co-generation Power Project - CER Convers",
+    "type": "Fossil switch",
+    "country": "Pakistan",
+    "state": null,
+    "lat": 30.38,
+    "lon": 69.35,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2010"
+    ],
+    "tonnes_in_bct": 27588.0,
+    "source": "fallback"
+  },
+  "1521": {
+    "project_id": "1521",
+    "name": "Wind Based Power Generation by Mytrah Energy (India) Limited",
+    "type": "Renewable",
+    "country": "India",
+    "state": null,
+    "lat": 22.35,
+    "lon": 78.67,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2017",
+      "2019"
+    ],
+    "tonnes_in_bct": 422.0,
+    "source": "fallback"
+  },
+  "1525": {
+    "project_id": "1525",
+    "name": "Wind power project at Jaibhim by SIIL",
+    "type": "Renewable",
+    "country": "India",
+    "state": null,
+    "lat": 22.35,
+    "lon": 78.67,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011",
+      "2012"
+    ],
+    "tonnes_in_bct": 103558.0,
+    "source": "fallback"
+  },
+  "1529": {
+    "project_id": "1529",
+    "name": "Inner Mongolia Chao\u2019er Improved Forest Management Project",
+    "type": "IFM",
+    "country": "China",
+    "state": null,
+    "lat": 47.5,
+    "lon": 120.2,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2011",
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 231831.51,
+    "source": "fallback"
+  },
+  "1542": {
+    "project_id": "1542",
+    "name": "Yunnan Kunming Liangqu Improved Forest Management Project",
+    "type": "IFM",
+    "country": "China",
+    "state": null,
+    "lat": 25.1,
+    "lon": 102.7,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 109491.33,
+    "source": "fallback"
+  },
+  "1549": {
+    "project_id": "1549",
+    "name": "AAC Block Project By Aerocon Buildwell Pvt. Ltd. (EKIESL- Ju",
+    "type": "Industrial",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 5756.0,
+    "source": "fallback"
+  },
+  "1578": {
+    "project_id": "1578",
+    "name": "15 MW Solar Photovoltaic Power Project at Gujarat",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Gujarat",
+    "lat": 22.31,
+    "lon": 72.14,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 1936.0,
+    "source": "fallback"
+  },
+  "1580": {
+    "project_id": "1580",
+    "name": "Solar Grouped project by ACME Group (EKIESL-VCS-Aug-16-01)",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016",
+      "2017"
+    ],
+    "tonnes_in_bct": 205.0,
+    "source": "fallback"
+  },
+  "1671": {
+    "project_id": "1671",
+    "name": "Wind based power generation by Panama Wind Energy Private Li",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2018"
+    ],
+    "tonnes_in_bct": 2.0,
+    "source": "fallback"
+  },
+  "1693": {
+    "project_id": "1693",
+    "name": "Wind Power Project in Maharashtra State, India",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Maharashtra",
+    "lat": 19.75,
+    "lon": 75.71,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2013"
+    ],
+    "tonnes_in_bct": 4390.0,
+    "source": "fallback"
+  },
+  "173": {
+    "project_id": "173",
+    "name": "Vishnuprayag Hydro-electric Project (VHEP) by Jaiprakash Pow",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008",
+      "2013",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 1189259.0,
+    "source": "fallback"
+  },
+  "1742": {
+    "project_id": "1742",
+    "name": "Hydroelectric Project in Kinnaur District in Himachal Prades",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 33134.0,
+    "source": "fallback"
+  },
+  "1748": {
+    "project_id": "1748",
+    "name": "Southern Cardamom REDD+ Project",
+    "type": "REDD+",
+    "country": "Cambodia",
+    "state": null,
+    "lat": 11.55,
+    "lon": 103.5,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 1.0,
+    "source": "fallback"
+  },
+  "191": {
+    "project_id": "191",
+    "name": "4\u00d750 MW Dayingjiang- 3 Hydropower Project Phases 1&2",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "tonnes_in_bct": 2468996.69,
+    "source": "fallback"
+  },
+  "192": {
+    "project_id": "192",
+    "name": "48 MW Houqiao Hydropower Project, Yunnan, China",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2008",
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "tonnes_in_bct": 620949.0,
+    "source": "fallback"
+  },
+  "1985": {
+    "project_id": "1985",
+    "name": "100 MW Bundled Wind Power Project in Anantapuram, Andhra Pra",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Andhra Pradesh",
+    "lat": 15.91,
+    "lon": 79.74,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2019"
+    ],
+    "tonnes_in_bct": 1.0,
+    "source": "fallback"
+  },
+  "2089": {
+    "project_id": "2089",
+    "name": "Rio Taquesi Hydroelectric Power Project - CER Conversion",
+    "type": "Renewable",
+    "country": "Brazil",
+    "state": null,
+    "lat": -14.24,
+    "lon": -51.93,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 10025.0,
+    "source": "fallback"
+  },
+  "2097": {
+    "project_id": "2097",
+    "name": "Tepekisla Dam & Hydropower Plant Project",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2015"
+    ],
+    "tonnes_in_bct": 23064.0,
+    "source": "fallback"
+  },
+  "2098": {
+    "project_id": "2098",
+    "name": "Nanhai MSW Incineration II Project",
+    "type": "Waste/Methane",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2017",
+      "2018"
+    ],
+    "tonnes_in_bct": 274090.0,
+    "source": "fallback"
+  },
+  "264": {
+    "project_id": "264",
+    "name": "Kargilik 24 MW Hydropower Plant, Turkey",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2010"
+    ],
+    "tonnes_in_bct": 23153.0,
+    "source": "fallback"
+  },
+  "265": {
+    "project_id": "265",
+    "name": "4.5 MW Grouped Small Hydropower Projects for Grid system by ",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011",
+      "2012",
+      "2013",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 20635.0,
+    "source": "fallback"
+  },
+  "274": {
+    "project_id": "274",
+    "name": "Hanuman Ganga Hydro (4.95 MW) Plant at Uttarakhand",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Uttarakhand",
+    "lat": 30.07,
+    "lon": 79.02,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2010",
+      "2011",
+      "2012",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 39492.0,
+    "source": "fallback"
+  },
+  "292": {
+    "project_id": "292",
+    "name": "150 MW grid connected Wind Power based electricity generatio",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2020"
+    ],
+    "tonnes_in_bct": 270200.1,
+    "source": "fallback"
+  },
+  "391": {
+    "project_id": "391",
+    "name": "Gullubag 96 MW Hydro Electric Power Plant Project, Turkey",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2017"
+    ],
+    "tonnes_in_bct": 110921.0,
+    "source": "fallback"
+  },
+  "414": {
+    "project_id": "414",
+    "name": "Hebei Haixing 49.5MW Wind Farm Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 110122.0,
+    "source": "fallback"
+  },
+  "426": {
+    "project_id": "426",
+    "name": "Wastewater Treatment with Biogas System in Palm Oil Mill at ",
+    "type": "Waste/Methane",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011",
+      "2012",
+      "2016"
+    ],
+    "tonnes_in_bct": 15373.75,
+    "source": "fallback"
+  },
+  "439": {
+    "project_id": "439",
+    "name": "Yingpeng HFC23 Decompostion Project",
+    "type": "Industrial gas",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008"
+    ],
+    "tonnes_in_bct": 672255.0,
+    "source": "fallback"
+  },
+  "487": {
+    "project_id": "487",
+    "name": "210 MW Musi Hydro Power Plant, Bengkulu",
+    "type": "Renewable",
+    "country": "Indonesia",
+    "state": null,
+    "lat": -0.79,
+    "lon": 113.92,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2016",
+      "2017"
+    ],
+    "tonnes_in_bct": 139977.0,
+    "source": "fallback"
+  },
+  "493": {
+    "project_id": "493",
+    "name": "5 MW Brahm Ganga Hydro \u2013 Electric Project at Kullu district ",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018"
+    ],
+    "tonnes_in_bct": 191068.0,
+    "source": "fallback"
+  },
+  "494": {
+    "project_id": "494",
+    "name": "Zhangjiagang Nature Gas Power Generation Project",
+    "type": "Fossil switch",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008",
+      "2009"
+    ],
+    "tonnes_in_bct": 545974.0,
+    "source": "fallback"
+  },
+  "51": {
+    "project_id": "51",
+    "name": "29.70 MW Wind Power project in Karnataka India",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Karnataka",
+    "lat": 15.32,
+    "lon": 75.71,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 270000.0,
+    "source": "fallback"
+  },
+  "513": {
+    "project_id": "513",
+    "name": "Salto Pil\u00e3o Hydropower Plant Project Activity",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 909247.0,
+    "source": "fallback"
+  },
+  "535": {
+    "project_id": "535",
+    "name": "AKOCAK HYDROELECTRIC POWER PLANT",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2014",
+      "2015",
+      "2017",
+      "2018"
+    ],
+    "tonnes_in_bct": 210921.0,
+    "source": "fallback"
+  },
+  "566": {
+    "project_id": "566",
+    "name": "10 MW Wind Power Project in Maharashtra by Deepak Fertilizer",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Maharashtra",
+    "lat": 19.75,
+    "lon": 75.71,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 60597.0,
+    "source": "fallback"
+  },
+  "614": {
+    "project_id": "614",
+    "name": "Chemical Recovery Project at Satia Industries Ltd. (SIL), fo",
+    "type": "Industrial",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 117415.0,
+    "source": "fallback"
+  },
+  "631": {
+    "project_id": "631",
+    "name": "13.25 MW Wind Power Generation by RMTL, in Kutch, Gujarat",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Gujarat",
+    "lat": 22.31,
+    "lon": 72.14,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 31011.0,
+    "source": "fallback"
+  },
+  "653": {
+    "project_id": "653",
+    "name": "65MW Dagushan hydropower Project in China",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 6349.0,
+    "source": "fallback"
+  },
+  "655": {
+    "project_id": "655",
+    "name": "24.8 MW Wind power project by Belgaum Wind Farms Private Ltd",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 36251.0,
+    "source": "fallback"
+  },
+  "670": {
+    "project_id": "670",
+    "name": "Xiaoxi Hydropower Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008"
+    ],
+    "tonnes_in_bct": 41000.0,
+    "source": "fallback"
+  },
+  "674": {
+    "project_id": "674",
+    "name": "Rimba Raya Biodiversity Reserve Project",
+    "type": "REDD+",
+    "country": "Indonesia",
+    "state": null,
+    "lat": -3.3,
+    "lon": 112.1,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2014"
+    ],
+    "tonnes_in_bct": 229016.0,
+    "source": "fallback"
+  },
+  "68": {
+    "project_id": "68",
+    "name": "119.8 MW Natural Gas based Combined Cycle Power Plant, at Ta",
+    "type": "Fossil switch",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2010",
+      "2011",
+      "2012",
+      "2013"
+    ],
+    "tonnes_in_bct": 844088.0,
+    "source": "fallback"
+  },
+  "708": {
+    "project_id": "708",
+    "name": "Engenheiro Ernesto Jorge Dreher and Engenheiro Henrique Kotz",
+    "type": "Renewable",
+    "country": "Brazil",
+    "state": null,
+    "lat": -14.24,
+    "lon": -51.93,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2012",
+      "2016"
+    ],
+    "tonnes_in_bct": 83809.0,
+    "source": "fallback"
+  },
+  "713": {
+    "project_id": "713",
+    "name": "KOYULHISAR HYDRO ELECTRICITY POWER PLANT",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2009",
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 134436.0,
+    "source": "fallback"
+  },
+  "722": {
+    "project_id": "722",
+    "name": "Guangdong Huizhou LNG Power Generation Project",
+    "type": "Fossil switch",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2008"
+    ],
+    "tonnes_in_bct": 31150.0,
+    "source": "fallback"
+  },
+  "728": {
+    "project_id": "728",
+    "name": "CECIC Gansu Yumen Changma No.3 Wind Farm Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2019",
+      "2020"
+    ],
+    "tonnes_in_bct": 9614.0,
+    "source": "fallback"
+  },
+  "753": {
+    "project_id": "753",
+    "name": "The Cevizlik Run-of-River Hydroelectric Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 317189.0,
+    "source": "fallback"
+  },
+  "762": {
+    "project_id": "762",
+    "name": "Grid connected electricity generation from renewable sources",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011",
+      "2012",
+      "2013",
+      "2015"
+    ],
+    "tonnes_in_bct": 267636.0,
+    "source": "fallback"
+  },
+  "786": {
+    "project_id": "786",
+    "name": "Hyundai Steel Waste Energy Cogeneration Project",
+    "type": "Waste/Methane",
+    "country": "South Korea",
+    "state": null,
+    "lat": 35.91,
+    "lon": 127.77,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011",
+      "2015"
+    ],
+    "tonnes_in_bct": 75139.0,
+    "source": "fallback"
+  },
+  "788": {
+    "project_id": "788",
+    "name": "China Guangdong Shenzhen Qianwan LNG generation project",
+    "type": "Fossil switch",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2008"
+    ],
+    "tonnes_in_bct": 14000.0,
+    "source": "fallback"
+  },
+  "810": {
+    "project_id": "810",
+    "name": "CEYHAN 61.7 MW Hydropower Project",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2010"
+    ],
+    "tonnes_in_bct": 47471.0,
+    "source": "fallback"
+  },
+  "812": {
+    "project_id": "812",
+    "name": "Bull Run Overseas Forest Carbon Project",
+    "type": "ARR",
+    "country": null,
+    "state": null,
+    "lat": 35.5,
+    "lon": -85.3,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 79667.01,
+    "source": "fallback"
+  },
+  "830": {
+    "project_id": "830",
+    "name": "Beijing Guanting Wind Power Project Phase II and Phase II ad",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009",
+      "2012",
+      "2013"
+    ],
+    "tonnes_in_bct": 205554.0,
+    "source": "fallback"
+  },
+  "836": {
+    "project_id": "836",
+    "name": "Song Ong Hydropower Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018"
+    ],
+    "tonnes_in_bct": 111247.0,
+    "source": "fallback"
+  },
+  "837": {
+    "project_id": "837",
+    "name": "Natural Gas Based Combined Cycle Power Generation, at Kothap",
+    "type": "Fossil switch",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 100000.0,
+    "source": "fallback"
+  },
+  "850": {
+    "project_id": "850",
+    "name": "Inner Mongolia Jingneng Saihan Wind Farm Phase I Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 75000.0,
+    "source": "fallback"
+  },
+  "875": {
+    "project_id": "875",
+    "name": "FLORESTAL SANTA MARIA PROJECT",
+    "type": "ARR",
+    "country": "Brazil",
+    "state": null,
+    "lat": -11.0,
+    "lon": -55.0,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 765437.89,
+    "source": "fallback"
+  },
+  "892": {
+    "project_id": "892",
+    "name": "Hebei Chengde Weichang Yudaokou Pasture 150MW Wind Farm Proj",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2019",
+      "2020"
+    ],
+    "tonnes_in_bct": 134295.0,
+    "source": "fallback"
+  },
+  "896": {
+    "project_id": "896",
+    "name": "Foz do Chapec\u00f3 Project",
+    "type": "Renewable",
+    "country": "Brazil",
+    "state": null,
+    "lat": -14.24,
+    "lon": -51.93,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011",
+      "2012"
+    ],
+    "tonnes_in_bct": 527818.0,
+    "source": "fallback"
+  },
+  "903": {
+    "project_id": "903",
+    "name": "Hebei Guyuan County Dongxinying 199.5 MW Wind Power Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011",
+      "2019"
+    ],
+    "tonnes_in_bct": 10333.0,
+    "source": "fallback"
+  },
+  "905": {
+    "project_id": "905",
+    "name": "The Yokuslu- Kalkandere Hydroelectric Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 324426.0,
+    "source": "fallback"
+  },
+  "981": {
+    "project_id": "981",
+    "name": "Pacajai REDD+ Project",
+    "type": "REDD+",
+    "country": "Brazil",
+    "state": null,
+    "lat": -2.7,
+    "lon": -51.0,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2016",
+      "2017"
+    ],
+    "tonnes_in_bct": 452495.7,
+    "source": "fallback"
+  },
+  "982": {
+    "project_id": "982",
+    "name": "Combined cycle natural gas based grid connected power plant ",
+    "type": "Fossil switch",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009",
+      "2010",
+      "2011"
+    ],
+    "tonnes_in_bct": 200031.02,
+    "source": "fallback"
+  },
+  "985": {
+    "project_id": "985",
+    "name": "Cordillera Azul National Park REDD Project",
+    "type": "REDD+",
+    "country": "Peru",
+    "state": null,
+    "lat": -7.3,
+    "lon": -76.0,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2013"
+    ],
+    "tonnes_in_bct": 20001.61,
+    "source": "fallback"
+  },
+  "1037": {
+    "project_id": "1037",
+    "name": "Guazhou Beidaqiao No.1 Wind Farm Project in Gansu Province, ",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 172728.0,
+    "source": "fallback"
+  },
+  "476": {
+    "project_id": "476",
+    "name": "28MW Jinkouba Hydropower Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008"
+    ],
+    "tonnes_in_bct": 64512.0,
+    "source": "fallback"
+  },
+  "1148": {
+    "project_id": "1148",
+    "name": "Luofan 24MW Hydropower Project in Guizhou Province China",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 2199.0,
+    "source": "fallback"
+  },
+  "253": {
+    "project_id": "253",
+    "name": "Fuzhou Hongmiaoling Landfill  Gas to Electricity Project",
+    "type": "Waste/Methane",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011",
+      "2012",
+      "2015"
+    ],
+    "tonnes_in_bct": 88279.0,
+    "source": "fallback"
+  },
+  "921": {
+    "project_id": "921",
+    "name": "Inner Mongolia Jingneng Saihan Wind Farm Phase II Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 47370.0,
+    "source": "fallback"
+  },
+  "603": {
+    "project_id": "603",
+    "name": "Sirma Run-of-River Hydro Project",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 4564.0,
+    "source": "fallback"
+  },
+  "528": {
+    "project_id": "528",
+    "name": "Panjin Rice Husk Thermal Energy Generation Project",
+    "type": "Agriculture",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 21448.0,
+    "source": "fallback"
+  },
+  "1143": {
+    "project_id": "1143",
+    "name": "Ningxia Angli Lingwu Photovoltaic Grid Connected Power Plant",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016",
+      "2017"
+    ],
+    "tonnes_in_bct": 72818.0,
+    "source": "fallback"
+  },
+  "1721": {
+    "project_id": "1721",
+    "name": "ONIL Stoves  Guatemala Uspantan",
+    "type": "Cookstove",
+    "country": "Guatemala",
+    "state": null,
+    "lat": 15.78,
+    "lon": -90.23,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 750.0,
+    "source": "fallback"
+  },
+  "1214": {
+    "project_id": "1214",
+    "name": "Vajrakarur Wind Power Project in Andhra Pradesh",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Andhra Pradesh",
+    "lat": 15.91,
+    "lon": 79.74,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 3906.0,
+    "source": "fallback"
+  },
+  "1686": {
+    "project_id": "1686",
+    "name": "Agrocortex REDD Project",
+    "type": "REDD+",
+    "country": "Brazil",
+    "state": null,
+    "lat": -9.4,
+    "lon": -71.4,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2017"
+    ],
+    "tonnes_in_bct": 3.0,
+    "source": "fallback"
+  },
+  "758": {
+    "project_id": "758",
+    "name": "Saracbendi HPP Run-of-River Hydro Project",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011",
+      "2012",
+      "2013"
+    ],
+    "tonnes_in_bct": 30092.0,
+    "source": "fallback"
+  },
+  "148": {
+    "project_id": "148",
+    "name": "Hebei Kangbao Wolongtushan 30 MW Wind Farm Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 30992.0,
+    "source": "fallback"
+  },
+  "1261": {
+    "project_id": "1261",
+    "name": "Grid connected electricity generation using natural gas by L",
+    "type": "Fossil switch",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 20.0,
+    "source": "fallback"
+  },
+  "936": {
+    "project_id": "936",
+    "name": "Shiyazi Hydro power Project in Guizhou Province China",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 27800.0,
+    "source": "fallback"
+  },
+  "338": {
+    "project_id": "338",
+    "name": "Methane Recovery Project Praktijkcentrum Sterksel, North Bra",
+    "type": "Waste/Methane",
+    "country": "Netherlands",
+    "state": null,
+    "lat": 52.13,
+    "lon": 5.29,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 6994.0,
+    "source": "fallback"
+  },
+  "1021": {
+    "project_id": "1021",
+    "name": "Grid Connected Wind Power Project by M/s. D. J. Malpani in R",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016"
+    ],
+    "tonnes_in_bct": 25.0,
+    "source": "fallback"
+  },
+  "309": {
+    "project_id": "309",
+    "name": "Bundled grid-connected wind electricity generation project i",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008",
+      "2009"
+    ],
+    "tonnes_in_bct": 20089.0,
+    "source": "fallback"
+  },
+  "1497": {
+    "project_id": "1497",
+    "name": "VCS Grouped Project for Renewable Power Generation by Essel ",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016",
+      "2020"
+    ],
+    "tonnes_in_bct": 3442.0,
+    "source": "fallback"
+  },
+  "870": {
+    "project_id": "870",
+    "name": "Wind Power Project by M/s Chhotabhai Jethabhai Patel & Co. (",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009",
+      "2010"
+    ],
+    "tonnes_in_bct": 5084.0,
+    "source": "fallback"
+  },
+  "1577": {
+    "project_id": "1577",
+    "name": "Fujian Yong\u2019an Improved Forest Management Project",
+    "type": "IFM",
+    "country": "China",
+    "state": null,
+    "lat": 25.8,
+    "lon": 117.35,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 90805.44,
+    "source": "fallback"
+  },
+  "1258": {
+    "project_id": "1258",
+    "name": "Saint Nikola Wind Farm",
+    "type": "Renewable",
+    "country": "Bulgaria",
+    "state": null,
+    "lat": 42.73,
+    "lon": 25.49,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2017",
+      "2019"
+    ],
+    "tonnes_in_bct": 174883.0,
+    "source": "fallback"
+  },
+  "1566": {
+    "project_id": "1566",
+    "name": "REDD+ Project Resguardo Indigena Unificado Selva de Mataven ",
+    "type": "REDD+",
+    "country": "Colombia",
+    "state": null,
+    "lat": 4.7,
+    "lon": -69.5,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2019"
+    ],
+    "tonnes_in_bct": 45000.0,
+    "source": "fallback"
+  },
+  "584": {
+    "project_id": "584",
+    "name": "2.5 MW Rice husk based cogeneration plant at Hanuman Agro In",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 8744.0,
+    "source": "fallback"
+  },
+  "529": {
+    "project_id": "529",
+    "name": "Jilin Rice Husk Thermal Energy Generation Project",
+    "type": "Agriculture",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 6020.0,
+    "source": "fallback"
+  },
+  "755": {
+    "project_id": "755",
+    "name": "OTLUCA HPPs run-of-river hydro project",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013"
+    ],
+    "tonnes_in_bct": 50000.0,
+    "source": "fallback"
+  },
+  "1140": {
+    "project_id": "1140",
+    "name": "Henan Xinxiang 24MW Biomass based Cogeneration Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016",
+      "2017"
+    ],
+    "tonnes_in_bct": 27182.0,
+    "source": "fallback"
+  },
+  "2307": {
+    "project_id": "2307",
+    "name": "Ambatolampy Solar PV",
+    "type": "Renewable",
+    "country": "Madagascar",
+    "state": null,
+    "lat": -18.77,
+    "lon": 46.87,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2018"
+    ],
+    "tonnes_in_bct": 1.0,
+    "source": "fallback"
+  },
+  "917": {
+    "project_id": "917",
+    "name": "ASLANCIK HYDRO POWER PLANT PROJECT",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2014",
+      "2017"
+    ],
+    "tonnes_in_bct": 140100.0,
+    "source": "fallback"
+  },
+  "1221": {
+    "project_id": "1221",
+    "name": "Eglence I-II Hydroelectric Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013",
+      "2015"
+    ],
+    "tonnes_in_bct": 106182.0,
+    "source": "fallback"
+  },
+  "682": {
+    "project_id": "682",
+    "name": "Wind Power Project at Anthiyur, Tamil Nadu",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Tamil Nadu",
+    "lat": 11.13,
+    "lon": 78.66,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 10226.0,
+    "source": "fallback"
+  },
+  "986": {
+    "project_id": "986",
+    "name": "Kumk\u00f6y Hydroelectric Power Plant, Samsun",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 44443.0,
+    "source": "fallback"
+  },
+  "1301": {
+    "project_id": "1301",
+    "name": "Guohua Rongcheng Phase II Wind Farm Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2014"
+    ],
+    "tonnes_in_bct": 224.0,
+    "source": "fallback"
+  },
+  "766": {
+    "project_id": "766",
+    "name": "Teesta- V Hydro Power project in Sikkim",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Sikkim",
+    "lat": 27.53,
+    "lon": 88.51,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2008",
+      "2009",
+      "2010"
+    ],
+    "tonnes_in_bct": 927901.0,
+    "source": "fallback"
+  },
+  "1228": {
+    "project_id": "1228",
+    "name": "El Panul",
+    "type": "Renewable",
+    "country": "Chile",
+    "state": null,
+    "lat": -35.68,
+    "lon": -71.54,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2008"
+    ],
+    "tonnes_in_bct": 7967.0,
+    "source": "fallback"
+  },
+  "293": {
+    "project_id": "293",
+    "name": "Rice husk fired boiler of 6 ton capacity for process steam g",
+    "type": "Agriculture",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008",
+      "2009"
+    ],
+    "tonnes_in_bct": 23020.64,
+    "source": "fallback"
+  },
+  "1291": {
+    "project_id": "1291",
+    "name": "Hydro Power Project in backward district of Andhra Pradesh, ",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Andhra Pradesh",
+    "lat": 15.91,
+    "lon": 79.74,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 268500.0,
+    "source": "fallback"
+  },
+  "330": {
+    "project_id": "330",
+    "name": "Wutuhe Erji hydro power project in Guizhou Province, China",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2010",
+      "2011"
+    ],
+    "tonnes_in_bct": 42345.0,
+    "source": "fallback"
+  },
+  "1186": {
+    "project_id": "1186",
+    "name": "Vi\u00f1ales biomass power plant",
+    "type": "Renewable",
+    "country": "Cuba",
+    "state": null,
+    "lat": 21.52,
+    "lon": -77.78,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2015",
+      "2016"
+    ],
+    "tonnes_in_bct": 2651.0,
+    "source": "fallback"
+  },
+  "1656": {
+    "project_id": "1656",
+    "name": "Zhangbei Manjing Windfarm Project - CER Conversion",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 170.0,
+    "source": "fallback"
+  },
+  "2095": {
+    "project_id": "2095",
+    "name": "Duzce Aksu Hydro Electricity Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2014"
+    ],
+    "tonnes_in_bct": 16458.0,
+    "source": "fallback"
+  },
+  "823": {
+    "project_id": "823",
+    "name": "Datong River Tianwanggou Hydropower Station",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2016",
+      "2017"
+    ],
+    "tonnes_in_bct": 200000.0,
+    "source": "fallback"
+  },
+  "792": {
+    "project_id": "792",
+    "name": "Tadi 16 MW Hydropower Project in Zhejiang Province",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2008"
+    ],
+    "tonnes_in_bct": 49363.0,
+    "source": "fallback"
+  },
+  "1718": {
+    "project_id": "1718",
+    "name": "Inner Mongolia Keyihe IFM (conversion of logged to protected",
+    "type": "IFM",
+    "country": "China",
+    "state": null,
+    "lat": 50.2,
+    "lon": 121.5,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2013"
+    ],
+    "tonnes_in_bct": 17855.0,
+    "source": "fallback"
+  },
+  "1824": {
+    "project_id": "1824",
+    "name": "Liucheng Biomass Power Generation Project in Guangxi Zhuang ",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2010"
+    ],
+    "tonnes_in_bct": 15433.0,
+    "source": "fallback"
+  },
+  "1883": {
+    "project_id": "1883",
+    "name": "Pichacay Landfill Gas Renewable Energy Project",
+    "type": "Waste/Methane",
+    "country": "Ecuador",
+    "state": null,
+    "lat": -1.83,
+    "lon": -78.18,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2018"
+    ],
+    "tonnes_in_bct": 150.0,
+    "source": "fallback"
+  },
+  "619": {
+    "project_id": "619",
+    "name": "15 MW Grid Connected Renewable Energy Wind Turbine in Karnat",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2010"
+    ],
+    "tonnes_in_bct": 12984.0,
+    "source": "fallback"
+  },
+  "784": {
+    "project_id": "784",
+    "name": "1.6 MW Bundled Rice Husk Based Cogeneration Plant by M/s Mil",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 945.0,
+    "source": "fallback"
+  },
+  "1781": {
+    "project_id": "1781",
+    "name": "MRMPL Wind Power Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2014"
+    ],
+    "tonnes_in_bct": 5000.0,
+    "source": "fallback"
+  },
+  "245": {
+    "project_id": "245",
+    "name": "Bundled Grid Connected 2.9 M.W. Wind Power Project in India ",
+    "type": "Renewable",
+    "country": "India",
+    "state": null,
+    "lat": 22.35,
+    "lon": 78.67,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 5479.0,
+    "source": "fallback"
+  },
+  "733": {
+    "project_id": "733",
+    "name": "Biomass based steam generation project by Gujarat Ambuja Exp",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Gujarat",
+    "lat": 22.31,
+    "lon": 72.14,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 4500.0,
+    "source": "fallback"
+  },
+  "1758": {
+    "project_id": "1758",
+    "name": "Dereli Hydroelectric Power Plant",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2019"
+    ],
+    "tonnes_in_bct": 2100.0,
+    "source": "fallback"
+  },
+  "624": {
+    "project_id": "624",
+    "name": "15 MW Biomass Residue Based Power Project at Ghazipur, India",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Uttar Pradesh",
+    "lat": 26.85,
+    "lon": 80.95,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 15347.0,
+    "source": "fallback"
+  },
+  "773": {
+    "project_id": "773",
+    "name": "8MW Waste Heat Recovery Based Power Project by Sree Rengaraa",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2008"
+    ],
+    "tonnes_in_bct": 26636.0,
+    "source": "fallback"
+  },
+  "499": {
+    "project_id": "499",
+    "name": "Positive Climate Care 4.67 MW Bundled Grid connected Wind Po",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009",
+      "2010",
+      "2011",
+      "2012"
+    ],
+    "tonnes_in_bct": 9699.0,
+    "source": "fallback"
+  },
+  "92": {
+    "project_id": "92",
+    "name": "300MW Hydropower project by JHPL",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 190.0,
+    "source": "fallback"
+  },
+  "929": {
+    "project_id": "929",
+    "name": "Energy Efficiency and Solid Waste Diversion Activities withi",
+    "type": "Energy efficiency",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 200000.0,
+    "source": "fallback"
+  },
+  "498": {
+    "project_id": "498",
+    "name": "Grid-connected wind electricity generation project in Tamil ",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014"
+    ],
+    "tonnes_in_bct": 26236.0,
+    "source": "fallback"
+  },
+  "1204": {
+    "project_id": "1204",
+    "name": "Guohua Wulate Zhongqi Phase I 49.5 MW Wind farm Project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2014",
+      "2016"
+    ],
+    "tonnes_in_bct": 40609.0,
+    "source": "fallback"
+  },
+  "934": {
+    "project_id": "934",
+    "name": "The Mai Ndombe REDD+ Project",
+    "type": "REDD+",
+    "country": "DR Congo",
+    "state": null,
+    "lat": -2.55,
+    "lon": 17.9,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 32000.0,
+    "source": "fallback"
+  },
+  "261": {
+    "project_id": "261",
+    "name": "Bundled Biomass Based Thermal Energy Projects in U.P. & Punj",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 16081.0,
+    "source": "fallback"
+  },
+  "699": {
+    "project_id": "699",
+    "name": "Yiyang Xiushan Hydropower Project, P.R. China",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2008",
+      "2009"
+    ],
+    "tonnes_in_bct": 118881.0,
+    "source": "fallback"
+  },
+  "876": {
+    "project_id": "876",
+    "name": "Shree Nakoda Ispat Ltd 12MW Biomass power generation project",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2009"
+    ],
+    "tonnes_in_bct": 32164.0,
+    "source": "fallback"
+  },
+  "1166": {
+    "project_id": "1166",
+    "name": "Nanba Associated Gas Processing Plant and the Auxiliary Engi",
+    "type": "Waste/Methane",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 64295.2,
+    "source": "fallback"
+  },
+  "1162": {
+    "project_id": "1162",
+    "name": "Jiangxi Province Le'an County Forest Farm Carbon Sink Projec",
+    "type": "ARR",
+    "country": "China",
+    "state": null,
+    "lat": 27.3,
+    "lon": 115.85,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2015"
+    ],
+    "tonnes_in_bct": 10000.0,
+    "source": "fallback"
+  },
+  "1650": {
+    "project_id": "1650",
+    "name": "Reduced Emissions from Deforestation and Degradation in Keo ",
+    "type": "REDD+",
+    "country": "Cambodia",
+    "state": null,
+    "lat": 12.7,
+    "lon": 106.85,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2015"
+    ],
+    "tonnes_in_bct": 25000.0,
+    "source": "fallback"
+  },
+  "251": {
+    "project_id": "251",
+    "name": "Biomass Based Cogeneration Project at Nectar Life Sciences L",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2012"
+    ],
+    "tonnes_in_bct": 1610.0,
+    "source": "fallback"
+  },
+  "612": {
+    "project_id": "612",
+    "name": "The Kasigau Corridor REDD Project - Phase II The Community R",
+    "type": "REDD+",
+    "country": "Kenya",
+    "state": null,
+    "lat": -3.75,
+    "lon": 38.6,
+    "coord_precision": "pdd_parsed_centroid",
+    "vintage_years": [
+      "2019"
+    ],
+    "tonnes_in_bct": 16000.0,
+    "source": "fallback"
+  },
+  "1505": {
+    "project_id": "1505",
+    "name": "Bujagali Hydropower Project - CER Conversion",
+    "type": "Renewable",
+    "country": "Uganda",
+    "state": null,
+    "lat": 1.37,
+    "lon": 32.29,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 70000.0,
+    "source": "fallback"
+  },
+  "2026": {
+    "project_id": "2026",
+    "name": "Allain Duhangan Hydroelectric Project (ADHP)",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2019"
+    ],
+    "tonnes_in_bct": 11784.0,
+    "source": "fallback"
+  },
+  "1762": {
+    "project_id": "1762",
+    "name": "Bundled Solar Power Project by Solararise India Projects PVT",
+    "type": "Renewable",
+    "country": "India",
+    "state": null,
+    "lat": 22.35,
+    "lon": 78.67,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2019"
+    ],
+    "tonnes_in_bct": 1000.0,
+    "source": "fallback"
+  },
+  "1792": {
+    "project_id": "1792",
+    "name": "Ghani Solar Renewable Power Project by Greenko Group",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2020"
+    ],
+    "tonnes_in_bct": 500.0,
+    "source": "fallback"
+  },
+  "1187": {
+    "project_id": "1187",
+    "name": "Shandong Yishui Tangwangshan Wind Farm Project",
+    "type": "Renewable",
+    "country": "China",
+    "state": null,
+    "lat": 35.86,
+    "lon": 104.2,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011",
+      "2012"
+    ],
+    "tonnes_in_bct": 366.0,
+    "source": "fallback"
+  },
+  "1418": {
+    "project_id": "1418",
+    "name": "Renewable Energy Project by LNB Group",
+    "type": "Renewable",
+    "country": null,
+    "state": null,
+    "lat": null,
+    "lon": null,
+    "coord_precision": null,
+    "vintage_years": [
+      "2020"
+    ],
+    "tonnes_in_bct": 1.0,
+    "source": "fallback"
+  },
+  "486": {
+    "project_id": "486",
+    "name": "50 MW Sipansihaporas Hydro Power Plant, North Sumatra",
+    "type": "Renewable",
+    "country": "Indonesia",
+    "state": null,
+    "lat": -0.79,
+    "lon": 113.92,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2011"
+    ],
+    "tonnes_in_bct": 100000.0,
+    "source": "fallback"
+  },
+  "669": {
+    "project_id": "669",
+    "name": "Wind Energy project by Ramco group in india",
+    "type": "Renewable",
+    "country": "India",
+    "state": null,
+    "lat": 22.35,
+    "lon": 78.67,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013"
+    ],
+    "tonnes_in_bct": 26055.0,
+    "source": "fallback"
+  },
+  "2092": {
+    "project_id": "2092",
+    "name": "Kirazl\u0131k Hydroelectric  Power Plant Project",
+    "type": "Renewable",
+    "country": "Turkey",
+    "state": null,
+    "lat": 38.96,
+    "lon": 35.24,
+    "coord_precision": "country_centroid",
+    "vintage_years": [
+      "2013",
+      "2014",
+      "2015"
+    ],
+    "tonnes_in_bct": 106865.0,
+    "source": "fallback"
+  },
+  "927": {
+    "project_id": "927",
+    "name": "13.75 MW wind power project in Davangere, Karnataka, India",
+    "type": "Renewable",
+    "country": "India",
+    "state": "Karnataka",
+    "lat": 15.32,
+    "lon": 75.71,
+    "coord_precision": "india_state_centroid",
+    "vintage_years": [
+      "2010"
+    ],
+    "tonnes_in_bct": 9863.0,
+    "source": "fallback"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1205",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1205",
+    "name": "Tatar Hydro Electricity Power Plant"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20131114,2014,2015,2016,2018",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x5edc0b28bf362cce80eb4fd637891916cc434ab0",
+      "0x91ed8ab86ff6a940a8307aa305c02748dd6c42f2",
+      "0xc63e384fafdbe4b0740a3f4ee65411aa659cf44a",
+      "0xeb9dea5c277b3d2eb42a54e3db9e0899d8dfdf96",
+      "0x0cf0b2c0d780520571c6e4be838b274739c07519"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.818971Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.818971Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.818971Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x5edc0b28bf362cce80eb4fd637891916cc434ab0",
+      "internal_composite": 33.83,
+      "internal_grade": "BB",
+      "vintage": 2018
+    },
+    {
+      "address": "0x91ed8ab86ff6a940a8307aa305c02748dd6c42f2",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0xc63e384fafdbe4b0740a3f4ee65411aa659cf44a",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    },
+    {
+      "address": "0xeb9dea5c277b3d2eb42a54e3db9e0899d8dfdf96",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.818971Z"
+}

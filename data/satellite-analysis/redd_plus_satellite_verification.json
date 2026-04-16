@@ -1,0 +1,209 @@
+{
+  "records": [
+    {
+      "project_id": "1052",
+      "name": "North Pikounda REDD+",
+      "country": "DR Congo",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": 0.18,
+      "lon": 15.7,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_10N_010E.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_10N_010E.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_10N_010E.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 0.45,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "1094",
+      "name": "Ecomapua Amazon REDD Project",
+      "country": "Brazil",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": -1.25,
+      "lon": -49.8,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_00N_050W.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_00N_050W.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_00N_050W.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 0.75,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "1382",
+      "name": "The Envira Amazonia Project - A Tropical Forest Conservation",
+      "country": "Brazil",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": -8.56,
+      "lon": -70.1,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_00N_080W.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_00N_080W.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_00N_080W.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 1.22,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "1748",
+      "name": "Southern Cardamom REDD+ Project",
+      "country": "Cambodia",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": 11.55,
+      "lon": 103.5,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_20N_100E.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_20N_100E.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_20N_100E.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 1.92,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "674",
+      "name": "Rimba Raya Biodiversity Reserve Project",
+      "country": "Indonesia",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": -3.3,
+      "lon": 112.1,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_00N_110E.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_00N_110E.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_00N_110E.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 1.35,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "981",
+      "name": "Pacajai REDD+ Project",
+      "country": "Brazil",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": -2.7,
+      "lon": -51.0,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_00N_060W.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_00N_060W.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_00N_060W.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 0.8,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "985",
+      "name": "Cordillera Azul National Park REDD Project",
+      "country": "Peru",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": -7.3,
+      "lon": -76.0,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_00N_080W.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_00N_080W.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_00N_080W.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 0.4,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "1686",
+      "name": "Agrocortex REDD Project",
+      "country": "Brazil",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": -9.4,
+      "lon": -71.4,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_00N_080W.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_00N_080W.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_00N_080W.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 0.9,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "1566",
+      "name": "REDD+ Project Resguardo Indigena Unificado Selva de Mataven ",
+      "country": "Colombia",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": 4.7,
+      "lon": -69.5,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_10N_070W.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_10N_070W.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_10N_070W.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 0.35,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "934",
+      "name": "The Mai Ndombe REDD+ Project",
+      "country": "DR Congo",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": -2.55,
+      "lon": 17.9,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_00N_010E.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_00N_010E.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_00N_010E.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 0.55,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "1650",
+      "name": "Reduced Emissions from Deforestation and Degradation in Keo ",
+      "country": "Cambodia",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": 12.7,
+      "lon": 106.85,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_20N_100E.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_20N_100E.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_20N_100E.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 1.8,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    },
+    {
+      "project_id": "612",
+      "name": "The Kasigau Corridor REDD Project - Phase II The Community R",
+      "country": "Kenya",
+      "coord_precision": "pdd_parsed_centroid",
+      "lat": -3.75,
+      "lon": 38.6,
+      "hansen_tiles": {
+        "lossyear": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_lossyear_00N_030E.tif",
+        "treecover2000": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_treecover2000_00N_030E.tif",
+        "datamask": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2023-v1.11/Hansen_GFC-2023-v1.11_datamask_00N_030E.tif"
+      },
+      "buffer_radius_km": 10.0,
+      "pdd_baseline_loss_pct_per_yr": 0.48,
+      "observed_loss_pct_per_yr": null,
+      "status": "urls_recorded"
+    }
+  ],
+  "comparisons": []
+}

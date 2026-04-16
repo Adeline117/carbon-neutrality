@@ -1,0 +1,45 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "929",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/929",
+    "name": "Energy Efficiency and Solid Waste Diversion Activities withi"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20131101,2014,2015",
+    "description": "End-use energy efficiency (LED distribution, industrial motors, building envelope). Additionality hinges on whether the intervention would have happened anyway under a rising energy-price baseline.",
+    "claims": [
+      "End-use energy saving vs. baseline appliance"
+    ],
+    "monitoring_approach": "Metered or stipulated savings depending on methodology.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Energy efficiency",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0xf49c1e95a9419cb7dbe077ca9344340ed91bf2ac",
+      "0xbe0cd710eaadf41dd5c591c3655f4bd0d50ffbd4",
+      "0xb51913749ff2babc2d152023b74c0af50ecf8a10"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.827255Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.827255Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.827255Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.827255Z"
+}

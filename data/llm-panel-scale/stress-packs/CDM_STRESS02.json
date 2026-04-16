@@ -1,0 +1,26 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "CDM",
+    "project_id": "STRESS02"
+  },
+  "fields": {
+    "type_archetype": "Industrial gas",
+    "methodology": "AM0001",
+    "country": "Iran",
+    "vintage": "2015",
+    "description": "Large-scale HFC-23 destruction at a sanctioned facility; the originating CDM registry has been under sanction since 2018. Technical MRV is strong.",
+    "claims": [
+      "HFC-23 destruction"
+    ],
+    "monitoring_approach": "Continuous emissions monitoring."
+  },
+  "provenance": [
+    {
+      "source": "stress-test-synthetic",
+      "fetched_at": "synthetic"
+    }
+  ],
+  "evidence_level": "synthetic-stress-test",
+  "_expected_disqualifier": "sanctioned_registry"
+}

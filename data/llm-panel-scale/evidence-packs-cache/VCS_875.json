@@ -1,0 +1,73 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "875",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/875",
+    "name": "FLORESTAL SANTA MARIA PROJECT"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20120504,2013,2014,2015,2016",
+    "description": "Afforestation, Reforestation, or Revegetation project. Archetype quality depends on species (native vs. monoculture), tenure security, and whether the planting is commercial timber. VM0047 is the current best-in-class methodology.",
+    "claims": [
+      "Net tree-cover increase on degraded land",
+      "Above-ground biomass growth"
+    ],
+    "monitoring_approach": "Allometric biomass estimation on permanent sample plots + remote sensing.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "ARR",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x05a28540de2869281fe8a39882fbadc96ec4766c",
+      "0x0bccab36f518f55e00f3efe2e828ae63cd2ac1b9",
+      "0x5a75fa233a06cfcf708549785598b428340b9261",
+      "0x65e217285f8c3bf615784c72e5874aa8ac35ef9d",
+      "0xe47838cb5874da9b8a40107abbf4edf75a7e7ba0"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823252Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.823252Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823252Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x05a28540de2869281fe8a39882fbadc96ec4766c",
+      "internal_composite": 50.38,
+      "internal_grade": "BBB",
+      "vintage": 2013
+    },
+    {
+      "address": "0x0bccab36f518f55e00f3efe2e828ae63cd2ac1b9",
+      "internal_composite": 51.98,
+      "internal_grade": "BBB",
+      "vintage": 2015
+    },
+    {
+      "address": "0x5a75fa233a06cfcf708549785598b428340b9261",
+      "internal_composite": 50.38,
+      "internal_grade": "BBB",
+      "vintage": 2012
+    },
+    {
+      "address": "0x65e217285f8c3bf615784c72e5874aa8ac35ef9d",
+      "internal_composite": 50.77,
+      "internal_grade": "BBB",
+      "vintage": 2014
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.823252Z"
+}

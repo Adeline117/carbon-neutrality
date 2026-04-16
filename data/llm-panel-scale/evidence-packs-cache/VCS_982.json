@@ -1,0 +1,59 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "982",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/982",
+    "name": "Combined cycle natural gas based grid connected power plant "
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20090414,2010,20110101",
+    "description": "Fuel-switching project that claims emissions reductions by replacing a higher-carbon fossil fuel (e.g. diesel, coal) with a lower-carbon alternative (e.g. natural gas). Additionality and permanence of avoided emissions are methodology-sensitive; this archetype is not a carbon removal.",
+    "claims": [
+      "Reduced fuel carbon intensity",
+      "Continued operation is counterfactual"
+    ],
+    "monitoring_approach": "Fuel-consumption records and emission factors per IPCC 2006.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Fossil switch",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x9962db9d201737442de87e51906c09b7d4b0a7e6",
+      "0xb685e69eebdcfcc07850609e966eda412baf7b4b",
+      "0x1dbcf6d91446e5bdb80744a4432da40e36d166d3"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823662Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.823662Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823662Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x9962db9d201737442de87e51906c09b7d4b0a7e6",
+      "internal_composite": 27.25,
+      "internal_grade": "B",
+      "vintage": 2009
+    },
+    {
+      "address": "0xb685e69eebdcfcc07850609e966eda412baf7b4b",
+      "internal_composite": 27.25,
+      "internal_grade": "B",
+      "vintage": 2011
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.823662Z"
+}

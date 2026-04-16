@@ -1,0 +1,58 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1525",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1525",
+    "name": "Wind power project at Jaibhim by SIIL"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20110311,2012",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x7526b59e5a7daa4ef2667274647c9d49f427f1fb",
+      "0xcfcad380a9f21ad3e73cb0c8898a25fcb87679fe"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819681Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819681Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819681Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x7526b59e5a7daa4ef2667274647c9d49f427f1fb",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    },
+    {
+      "address": "0xcfcad380a9f21ad3e73cb0c8898a25fcb87679fe",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2011
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819681Z"
+}

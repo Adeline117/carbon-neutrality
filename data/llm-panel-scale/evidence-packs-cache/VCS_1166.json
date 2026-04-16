@@ -1,0 +1,44 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1166",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1166",
+    "name": "Nanba Associated Gas Processing Plant and the Auxiliary Engi"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20120529",
+    "description": "Methane capture or destruction project (landfill gas, wastewater, livestock manure). CH4 destruction has a strong physical rationale but baseline counterfactuals are sensitive to regulatory requirements in the host country.",
+    "claims": [
+      "CH4 capture and combustion",
+      "Landfill/wastewater baseline vented CH4"
+    ],
+    "monitoring_approach": "Flow-metered CH4 combustion, periodic composition tests.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Waste/Methane",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x589ac761fed3f77b24ce781e2b9cf2e164a2c30f"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.827650Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.827650Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.827650Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.827650Z"
+}

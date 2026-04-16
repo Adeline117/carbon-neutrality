@@ -1,0 +1,61 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "12",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/12",
+    "name": "Chuanwei Group 24 MW Waste Gas based Captive Power Plant"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2012,2013,2014,2015,20160101",
+    "description": "Methane capture or destruction project (landfill gas, wastewater, livestock manure). CH4 destruction has a strong physical rationale but baseline counterfactuals are sensitive to regulatory requirements in the host country.",
+    "claims": [
+      "CH4 capture and combustion",
+      "Landfill/wastewater baseline vented CH4"
+    ],
+    "monitoring_approach": "Flow-metered CH4 combustion, periodic composition tests.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Waste/Methane",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0xab9c77ebc8bb34b872dbe7d0a89a7578752ab854",
+      "0xd94de726f1e03e15ea206402a93a62584afa093c",
+      "0xedf8d2f1f1820ac67bc69167f0051512da4f1f6a",
+      "0x97d84e8d227aa33014c2a008d6fda45cf8bb6e6c",
+      "0xec4db7105af6f096640217d5efc68bc808f9c641"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.818840Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.818840Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.818840Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0xab9c77ebc8bb34b872dbe7d0a89a7578752ab854",
+      "internal_composite": 41.75,
+      "internal_grade": "BB",
+      "vintage": 2012
+    },
+    {
+      "address": "0xd94de726f1e03e15ea206402a93a62584afa093c",
+      "internal_composite": 41.75,
+      "internal_grade": "BB",
+      "vintage": 2013
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.818840Z"
+}

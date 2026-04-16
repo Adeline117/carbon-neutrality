@@ -1,0 +1,86 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "614",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/614",
+    "name": "Chemical Recovery Project at Satia Industries Ltd. (SIL), fo"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20100901,2011,2012,2013,2014,2015,20160101",
+    "description": "Industrial process efficiency or energy-recovery project (cement, steel, chemicals). Additionality depends on regulatory baselines and process-economics counterfactuals.",
+    "claims": [
+      "Process efficiency improvement"
+    ],
+    "monitoring_approach": "Energy/material balance.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Industrial",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x06569829f200220f143020919935358b9c8dc03c",
+      "0x43231bc0ebef0edbc39170c0608dc6f118768eb6",
+      "0x753391766e3db5a38d755541f553362145fa8d41",
+      "0xc547254c370167baf970be5a11b7962a418b0d3e",
+      "0xcdbdf65a88b0d817e5cabe542c8a74c346f1fa38",
+      "0xf47c39d007ef5e76e6fd468a3979cb3b0af3a096",
+      "0x47e651efd873ef0f15ca1f8d5d80ed0869d9024f"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821814Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821814Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821814Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x06569829f200220f143020919935358b9c8dc03c",
+      "internal_composite": 40.75,
+      "internal_grade": "BB",
+      "vintage": 2012
+    },
+    {
+      "address": "0x43231bc0ebef0edbc39170c0608dc6f118768eb6",
+      "internal_composite": 42.35,
+      "internal_grade": "BB",
+      "vintage": 2015
+    },
+    {
+      "address": "0x753391766e3db5a38d755541f553362145fa8d41",
+      "internal_composite": 40.75,
+      "internal_grade": "BB",
+      "vintage": 2010
+    },
+    {
+      "address": "0xc547254c370167baf970be5a11b7962a418b0d3e",
+      "internal_composite": 41.15,
+      "internal_grade": "BB",
+      "vintage": 2014
+    },
+    {
+      "address": "0xcdbdf65a88b0d817e5cabe542c8a74c346f1fa38",
+      "internal_composite": 43.55,
+      "internal_grade": "BB",
+      "vintage": 2016
+    },
+    {
+      "address": "0xf47c39d007ef5e76e6fd468a3979cb3b0af3a096",
+      "internal_composite": 40.75,
+      "internal_grade": "BB",
+      "vintage": 2013
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821814Z"
+}

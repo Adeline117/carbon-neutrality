@@ -1,0 +1,58 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "896",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/896",
+    "name": "Foz do Chapec\u00f3 Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2011,20120101",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x61a6bc0c4e4a4e207007e2c8a696b50189ac4e80",
+      "0xee786dd3d9cd70712e6ba5abe66477b1f9e03994"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823385Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.823385Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823385Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x61a6bc0c4e4a4e207007e2c8a696b50189ac4e80",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    },
+    {
+      "address": "0xee786dd3d9cd70712e6ba5abe66477b1f9e03994",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2011
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.823385Z"
+}

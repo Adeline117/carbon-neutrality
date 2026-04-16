@@ -1,0 +1,67 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1542",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1542",
+    "name": "Yunnan Kunming Liangqu Improved Forest Management Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2012,2013,2014,2015,20160101",
+    "description": "Improved Forest Management project claiming enhanced sequestration relative to a hypothetical logging baseline. Baseline construction (e.g. ARB IFM) is contested and over-crediting is documented in CAR/ARB IFM (Badgley et al. 2022).",
+    "claims": [
+      "Reduced harvest relative to business-as-usual",
+      "Enhanced standing stock"
+    ],
+    "monitoring_approach": "Forest inventory re-measurement on fixed plots + permanence discount.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "IFM",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x354e2edcfbcd2f3b5fdce8cad3730408c052804e",
+      "0x7b6c20ab3aed15f8c695978282dc0a30093bec97",
+      "0xc84403a38b90f1db216db398beb9c8acb3ad7d3b",
+      "0x398e746233027723ee841488e5d166243f77d2b8",
+      "0x239b912cf695da50ad19e0c05337067e2eb55fe3"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819797Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819797Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819797Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x354e2edcfbcd2f3b5fdce8cad3730408c052804e",
+      "internal_composite": 48.12,
+      "internal_grade": "BBB",
+      "vintage": 2013
+    },
+    {
+      "address": "0x7b6c20ab3aed15f8c695978282dc0a30093bec97",
+      "internal_composite": 49.73,
+      "internal_grade": "BBB",
+      "vintage": 2015
+    },
+    {
+      "address": "0xc84403a38b90f1db216db398beb9c8acb3ad7d3b",
+      "internal_composite": 48.52,
+      "internal_grade": "BBB",
+      "vintage": 2014
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819797Z"
+}

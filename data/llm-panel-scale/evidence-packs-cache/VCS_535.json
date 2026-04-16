@@ -1,0 +1,54 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "535",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/535",
+    "name": "AKOCAK HYDROELECTRIC POWER PLANT"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2014,2015,2017,2018",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0xf76387133c8af3a6d64938d09ae248c5ee75c961",
+      "0x0c29deaa1383c88712af1083ab8328a1e3661b17",
+      "0x13cd6b343fd8fbeb0a8d8ed0338410d8c485f240",
+      "0x543f416a2c631689b848025194bc4a668b0c6970"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821696Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821696Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821696Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0xf76387133c8af3a6d64938d09ae248c5ee75c961",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821696Z"
+}

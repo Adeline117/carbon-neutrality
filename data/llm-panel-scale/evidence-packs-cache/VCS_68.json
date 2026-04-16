@@ -1,0 +1,60 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "68",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/68",
+    "name": "119.8 MW Natural Gas based Combined Cycle Power Plant, at Ta"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20101216,2011,2012,2013",
+    "description": "Fuel-switching project that claims emissions reductions by replacing a higher-carbon fossil fuel (e.g. diesel, coal) with a lower-carbon alternative (e.g. natural gas). Additionality and permanence of avoided emissions are methodology-sensitive; this archetype is not a carbon removal.",
+    "claims": [
+      "Reduced fuel carbon intensity",
+      "Continued operation is counterfactual"
+    ],
+    "monitoring_approach": "Fuel-consumption records and emission factors per IPCC 2006.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Fossil switch",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x6bb8bf64f05126a891e8d9387cc93c6523e8fb49",
+      "0x88fcde602222a0dc3afdab7e230ed3573342f5b0",
+      "0x934df63205fa37b2406625573b8eb611e72611d9",
+      "0x80b837eed4f02047b422731c30ba9abb7816198f"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822349Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.822349Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822349Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x6bb8bf64f05126a891e8d9387cc93c6523e8fb49",
+      "internal_composite": 27.25,
+      "internal_grade": "B",
+      "vintage": 2013
+    },
+    {
+      "address": "0x88fcde602222a0dc3afdab7e230ed3573342f5b0",
+      "internal_composite": 27.25,
+      "internal_grade": "B",
+      "vintage": 2012
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.822349Z"
+}

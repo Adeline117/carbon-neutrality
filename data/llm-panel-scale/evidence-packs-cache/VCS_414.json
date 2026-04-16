@@ -1,0 +1,59 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "414",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/414",
+    "name": "Hebei Haixing 49.5MW Wind Farm Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20130101,20141226,20151226",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x53064620422f681e38b93eea8f92d2e398a063c9",
+      "0xfffce8e66fd470e401fadf3d47ca9ad28e82013a",
+      "0x910781a05d3076353cdf243b9ebe7dc7ad6c21e1"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821103Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821103Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821103Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x53064620422f681e38b93eea8f92d2e398a063c9",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0xfffce8e66fd470e401fadf3d47ca9ad28e82013a",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821103Z"
+}

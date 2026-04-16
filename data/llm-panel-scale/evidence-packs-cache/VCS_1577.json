@@ -1,0 +1,48 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1577",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1577",
+    "name": "Fujian Yong\u2019an Improved Forest Management Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2012,2013,2014,2015,20160101",
+    "description": "Improved Forest Management project claiming enhanced sequestration relative to a hypothetical logging baseline. Baseline construction (e.g. ARB IFM) is contested and over-crediting is documented in CAR/ARB IFM (Badgley et al. 2022).",
+    "claims": [
+      "Reduced harvest relative to business-as-usual",
+      "Enhanced standing stock"
+    ],
+    "monitoring_approach": "Forest inventory re-measurement on fixed plots + permanence discount.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "IFM",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x04943c19896c776c78770429ec02c5384ee78292",
+      "0x80ea96d75a308144708570a8e84f50df5477ee8a",
+      "0x68e65cc375f10baf74ac41773658dd00b5de1eaa",
+      "0x38c518400a3f9e2110dc52e6c92e37fb7378aaaf",
+      "0x8d6e4e58cc7d18a7c9552d679722acddffc7387b"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.825031Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.825031Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.825031Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.825031Z"
+}

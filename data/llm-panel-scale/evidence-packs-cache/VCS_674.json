@@ -1,0 +1,51 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "674",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/674",
+    "name": "Rimba Raya Biodiversity Reserve Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20140701",
+    "description": "Reducing Emissions from Deforestation and forest Degradation project claiming avoided deforestation credits in a tropical forest. This archetype has been under sustained methodological criticism (West et al. 2023 Science, Guardian 2023): dynamic baselines and leakage-control are weak in most VM0007 vintages.",
+    "claims": [
+      "Avoided deforestation relative to regional baseline",
+      "Community co-benefits"
+    ],
+    "monitoring_approach": "Remote-sensing forest-cover change + field plots.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "REDD+",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x62896f42cf1371b268db56e50d67c34f3eb1ad7a"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822116Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.822116Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822116Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x62896f42cf1371b268db56e50d67c34f3eb1ad7a",
+      "internal_composite": 31.15,
+      "internal_grade": "BB",
+      "vintage": 2014
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.822116Z"
+}

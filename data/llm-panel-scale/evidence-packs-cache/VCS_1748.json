@@ -1,0 +1,51 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1748",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1748",
+    "name": "Southern Cardamom REDD+ Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2016",
+    "description": "Reducing Emissions from Deforestation and forest Degradation project claiming avoided deforestation credits in a tropical forest. This archetype has been under sustained methodological criticism (West et al. 2023 Science, Guardian 2023): dynamic baselines and leakage-control are weak in most VM0007 vintages.",
+    "claims": [
+      "Avoided deforestation relative to regional baseline",
+      "Community co-benefits"
+    ],
+    "monitoring_approach": "Remote-sensing forest-cover change + field plots.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "REDD+",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x882c4144c096cbd8dc08067289063e4eee21898a"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.820324Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.820324Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.820324Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x882c4144c096cbd8dc08067289063e4eee21898a",
+      "internal_composite": 33.55,
+      "internal_grade": "BB",
+      "vintage": 2016
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.820324Z"
+}

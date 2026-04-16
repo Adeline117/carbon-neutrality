@@ -1,0 +1,51 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1146",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1146",
+    "name": "The Hyundai Waste Energy Recovery CO-Generation Project Phas"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2015",
+    "description": "Methane capture or destruction project (landfill gas, wastewater, livestock manure). CH4 destruction has a strong physical rationale but baseline counterfactuals are sensitive to regulatory requirements in the host country.",
+    "claims": [
+      "CH4 capture and combustion",
+      "Landfill/wastewater baseline vented CH4"
+    ],
+    "monitoring_approach": "Flow-metered CH4 combustion, periodic composition tests.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Waste/Methane",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0xbbb0b227a5999568121f9b3af9153fcbca39e86e"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.818411Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.818411Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.818411Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0xbbb0b227a5999568121f9b3af9153fcbca39e86e",
+      "internal_composite": 43.35,
+      "internal_grade": "BB",
+      "vintage": 2015
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.818411Z"
+}

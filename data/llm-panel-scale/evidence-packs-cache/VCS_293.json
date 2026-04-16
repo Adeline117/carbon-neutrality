@@ -1,0 +1,45 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "293",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/293",
+    "name": "Rice husk fired boiler of 6 ton capacity for process steam g"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2008,2009",
+    "description": "Soil-carbon or agricultural-management project. Permanence is low relative to engineered CDR; MRV typically relies on modelled outcomes rather than direct measurement.",
+    "claims": [
+      "Soil organic carbon accumulation",
+      "Reduced tillage / cover-cropping"
+    ],
+    "monitoring_approach": "Modelled SOC change validated against sampled soil cores.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Agriculture",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x87299b25247ac6c2b1878f591d6fb8c2cb0a3b4c",
+      "0x289f9b9f58b5b9f4e69e1c292f3f17373e6dd437"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.825961Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.825961Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.825961Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.825961Z"
+}

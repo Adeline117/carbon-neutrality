@@ -1,0 +1,27 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "STRESS03"
+  },
+  "fields": {
+    "type_archetype": "ARR",
+    "methodology": "VM0047",
+    "country": "Indonesia",
+    "vintage": "2024",
+    "description": "Well-designed reforestation project \u2014 BUT monitoring reports were produced by the project developer itself; no independent VVB has verified any issuance. All technical dimensions are A/AA.",
+    "claims": [
+      "Net tree-cover increase",
+      "Self-verified"
+    ],
+    "monitoring_approach": "Self-reported; no third-party attestation."
+  },
+  "provenance": [
+    {
+      "source": "stress-test-synthetic",
+      "fetched_at": "synthetic"
+    }
+  ],
+  "evidence_level": "synthetic-stress-test",
+  "_expected_disqualifier": "no_third_party"
+}

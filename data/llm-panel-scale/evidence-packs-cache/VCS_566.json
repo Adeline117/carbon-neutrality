@@ -1,0 +1,72 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "566",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/566",
+    "name": "10 MW Wind Power Project in Maharashtra by Deepak Fertilizer"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2012,2013,2014,2015",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x1a6d0f8964e2f27be2b6d503cb57866903e12f31",
+      "0x7134b2de32d00efcf3955d9728996d944100ba5d",
+      "0x9f3d02458063131d5eb737ee4fe3c03aa1f324fc",
+      "0xbb28eb3e5678b163839b1479cde72b62e6591985"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821754Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821754Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821754Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x1a6d0f8964e2f27be2b6d503cb57866903e12f31",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    },
+    {
+      "address": "0x7134b2de32d00efcf3955d9728996d944100ba5d",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    },
+    {
+      "address": "0x9f3d02458063131d5eb737ee4fe3c03aa1f324fc",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    },
+    {
+      "address": "0xbb28eb3e5678b163839b1479cde72b62e6591985",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821754Z"
+}

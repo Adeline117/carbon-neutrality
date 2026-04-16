@@ -1,0 +1,58 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "487",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/487",
+    "name": "210 MW Musi Hydro Power Plant, Bengkulu"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2016,20170101",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x2f42a9e08afc69e7f4c4d487838decaaa5d91dd8",
+      "0x5a864120a0c3dde2f4837825f7f6cdc8a097699c"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821325Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821325Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821325Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x2f42a9e08afc69e7f4c4d487838decaaa5d91dd8",
+      "internal_composite": 32.62,
+      "internal_grade": "BB",
+      "vintage": 2017
+    },
+    {
+      "address": "0x5a864120a0c3dde2f4837825f7f6cdc8a097699c",
+      "internal_composite": 31.43,
+      "internal_grade": "BB",
+      "vintage": 2016
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821325Z"
+}

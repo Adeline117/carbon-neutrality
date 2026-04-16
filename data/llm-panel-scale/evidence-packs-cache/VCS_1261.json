@@ -1,0 +1,44 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1261",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1261",
+    "name": "Grid connected electricity generation using natural gas by L"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20120101",
+    "description": "Fuel-switching project that claims emissions reductions by replacing a higher-carbon fossil fuel (e.g. diesel, coal) with a lower-carbon alternative (e.g. natural gas). Additionality and permanence of avoided emissions are methodology-sensitive; this archetype is not a carbon removal.",
+    "claims": [
+      "Reduced fuel carbon intensity",
+      "Continued operation is counterfactual"
+    ],
+    "monitoring_approach": "Fuel-consumption records and emission factors per IPCC 2006.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Fossil switch",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x60cdbd775d606f5b36e01908f080be62bad21862"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.824572Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.824572Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.824572Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.824572Z"
+}

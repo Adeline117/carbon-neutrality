@@ -1,0 +1,48 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "498",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/498",
+    "name": "Grid-connected wind electricity generation project in Tamil "
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2010,2011,2012,2013,2014",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x8b66a0708a25a9abaac0968dadfee6d20f440dee",
+      "0xef654e80862830f2716559cc3b050794e6ea54df",
+      "0xe51f3dbec1fda6efcbae2d1bb3513de29e1746b1",
+      "0x0115ab6d9a0fd6de3a9a339115c8f2bd0e3deed6",
+      "0x68ef1e97eb3a8ebb69f40186be249a78a7e754f1"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.827317Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.827317Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.827317Z"
+    }
+  ],
+  "on_chain_internal_scores": [],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.827317Z"
+}

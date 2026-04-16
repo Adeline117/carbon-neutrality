@@ -1,0 +1,66 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "762",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/762",
+    "name": "Grid connected electricity generation from renewable sources"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20111101,2012,2013,2015",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x65f2346f4dd8cb58d2f0b17f6f00dd5933a0738b",
+      "0xd0576962d4ffc8bf72cb2d9b08a1b024e03d4a29",
+      "0xe3bcd5500886acdbae3209f65f8a04b87fdd4c33",
+      "0xa6cea633870d06a104aa9b1dd33e68ff81b1714a"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822724Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.822724Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822724Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x65f2346f4dd8cb58d2f0b17f6f00dd5933a0738b",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2011
+    },
+    {
+      "address": "0xd0576962d4ffc8bf72cb2d9b08a1b024e03d4a29",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    },
+    {
+      "address": "0xe3bcd5500886acdbae3209f65f8a04b87fdd4c33",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.822724Z"
+}

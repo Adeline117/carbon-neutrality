@@ -1,0 +1,52 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1521",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1521",
+    "name": "Wind Based Power Generation by Mytrah Energy (India) Limited"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2017,20190101",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x2c4d7f459311abd9523726fac4329138c790fd65",
+      "0xa8345ae436998fdd28c6e2f90a3f8e3a38152b10"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819623Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819623Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819623Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x2c4d7f459311abd9523726fac4329138c790fd65",
+      "internal_composite": 32.62,
+      "internal_grade": "BB",
+      "vintage": 2017
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819623Z"
+}

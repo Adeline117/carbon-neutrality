@@ -1,0 +1,58 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "494",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/494",
+    "name": "Zhangjiagang Nature Gas Power Generation Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2008,20090101",
+    "description": "Fuel-switching project that claims emissions reductions by replacing a higher-carbon fossil fuel (e.g. diesel, coal) with a lower-carbon alternative (e.g. natural gas). Additionality and permanence of avoided emissions are methodology-sensitive; this archetype is not a carbon removal.",
+    "claims": [
+      "Reduced fuel carbon intensity",
+      "Continued operation is counterfactual"
+    ],
+    "monitoring_approach": "Fuel-consumption records and emission factors per IPCC 2006.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Fossil switch",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x701f5f7a70a17b141fc2de45ef45e86eeed642fc",
+      "0xd5e352ef67f07d990f11389631d0b748b0cce9b2"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821475Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821475Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821475Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x701f5f7a70a17b141fc2de45ef45e86eeed642fc",
+      "internal_composite": 27.25,
+      "internal_grade": "B",
+      "vintage": 2009
+    },
+    {
+      "address": "0xd5e352ef67f07d990f11389631d0b748b0cce9b2",
+      "internal_composite": 27.25,
+      "internal_grade": "B",
+      "vintage": 2008
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821475Z"
+}

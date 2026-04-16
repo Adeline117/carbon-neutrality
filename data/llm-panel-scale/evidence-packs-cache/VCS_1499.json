@@ -1,0 +1,52 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1499",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1499",
+    "name": "Toros Hydroelectric Power Plant"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20130517,2014",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x9e04d79b243100ee0ae3c56c7ea83449ebc6fd88",
+      "0x66d279ec7f5a4ecbe5e375f4058e9c924ab0db5b"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819446Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819446Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819446Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x9e04d79b243100ee0ae3c56c7ea83449ebc6fd88",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819446Z"
+}

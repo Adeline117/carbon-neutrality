@@ -1,0 +1,27 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "STRESS04"
+  },
+  "fields": {
+    "type_archetype": "REDD+",
+    "methodology": "VM0015",
+    "country": "Democratic Republic of the Congo",
+    "vintage": "2022",
+    "description": "Large REDD+ concession with DOCUMENTED INDIGENOUS EVICTIONS and credible human-rights complaints filed with the registry grievance mechanism; technical scores are otherwise AA-tier.",
+    "claims": [
+      "Avoided deforestation",
+      "LAND-TENURE DISPUTE"
+    ],
+    "monitoring_approach": "Remote sensing (technically adequate)."
+  },
+  "provenance": [
+    {
+      "source": "stress-test-synthetic",
+      "fetched_at": "synthetic"
+    }
+  ],
+  "evidence_level": "synthetic-stress-test",
+  "_expected_disqualifier": "community_harm"
+}

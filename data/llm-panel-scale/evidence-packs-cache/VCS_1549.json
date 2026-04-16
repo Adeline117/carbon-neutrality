@@ -1,0 +1,50 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1549",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1549",
+    "name": "AAC Block Project By Aerocon Buildwell Pvt. Ltd. (EKIESL- Ju"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20160101",
+    "description": "Industrial process efficiency or energy-recovery project (cement, steel, chemicals). Additionality depends on regulatory baselines and process-economics counterfactuals.",
+    "claims": [
+      "Process efficiency improvement"
+    ],
+    "monitoring_approach": "Energy/material balance.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Industrial",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x0ef5f8cff1dce215eda72a36d46d9ad53f3012e9"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819858Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819858Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819858Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x0ef5f8cff1dce215eda72a36d46d9ad53f3012e9",
+      "internal_composite": 43.55,
+      "internal_grade": "BB",
+      "vintage": 2016
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819858Z"
+}

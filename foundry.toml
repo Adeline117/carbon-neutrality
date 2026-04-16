@@ -1,6 +1,6 @@
 [profile.default]
 src = "contracts"
-test = "contracts/test"
+test = "contracts"
 script = "script"
 out = "out"
 cache_path = "cache"

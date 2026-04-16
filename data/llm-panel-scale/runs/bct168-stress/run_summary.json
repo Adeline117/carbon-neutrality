@@ -1,0 +1,12 @@
+{
+  "run_id": "bct168-stress",
+  "panel": [
+    "claude-opus-4-6",
+    "claude-sonnet-4-5",
+    "claude-haiku-4-5-20251001"
+  ],
+  "n_projects": 4,
+  "rows_live": 0,
+  "rows_synthetic": 12,
+  "created_at": "2026-04-16T06:17:03.423938Z"
+}

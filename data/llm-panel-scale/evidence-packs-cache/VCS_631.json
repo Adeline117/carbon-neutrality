@@ -1,0 +1,59 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "631",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/631",
+    "name": "13.25 MW Wind Power Generation by RMTL, in Kutch, Gujarat"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2014,2015,20160101",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x714a47cd9479f4afaea334f4393499d6520945cf",
+      "0x9c4684c2eed63a1a61e762379d6c5d5f0439c052",
+      "0x6655450c27082e083daf3517b87c6a5bcc9016ff"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821878Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821878Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821878Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x714a47cd9479f4afaea334f4393499d6520945cf",
+      "internal_composite": 30.23,
+      "internal_grade": "BB",
+      "vintage": 2015
+    },
+    {
+      "address": "0x9c4684c2eed63a1a61e762379d6c5d5f0439c052",
+      "internal_composite": 29.02,
+      "internal_grade": "B",
+      "vintage": 2014
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821878Z"
+}

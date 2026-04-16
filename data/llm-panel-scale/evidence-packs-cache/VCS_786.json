@@ -1,0 +1,58 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "786",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/786",
+    "name": "Hyundai Steel Waste Energy Cogeneration Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2011,2015",
+    "description": "Methane capture or destruction project (landfill gas, wastewater, livestock manure). CH4 destruction has a strong physical rationale but baseline counterfactuals are sensitive to regulatory requirements in the host country.",
+    "claims": [
+      "CH4 capture and combustion",
+      "Landfill/wastewater baseline vented CH4"
+    ],
+    "monitoring_approach": "Flow-metered CH4 combustion, periodic composition tests.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Waste/Methane",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x314c0a010e148f1e1286f96f78ed366255267d54",
+      "0xad02ccfc793fa0edcf248fb3d93b42a289ac50b4"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822783Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.822783Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.822783Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x314c0a010e148f1e1286f96f78ed366255267d54",
+      "internal_composite": 43.35,
+      "internal_grade": "BB",
+      "vintage": 2015
+    },
+    {
+      "address": "0xad02ccfc793fa0edcf248fb3d93b42a289ac50b4",
+      "internal_composite": 41.75,
+      "internal_grade": "BB",
+      "vintage": 2011
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.822783Z"
+}

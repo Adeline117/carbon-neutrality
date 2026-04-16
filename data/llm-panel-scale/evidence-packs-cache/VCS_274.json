@@ -1,0 +1,62 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "274",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/274",
+    "name": "Hanuman Ganga Hydro (4.95 MW) Plant at Uttarakhand"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20100401,2011,2012,2014,2015,20160101",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x0149f1c77874e922b6d2b20c5878db693dc3c3d6",
+      "0xcc3bb186a33a3b299f9cec8fb023312db91b8848",
+      "0x01181906308e8be2594677c66ed312434ddb97d0",
+      "0x87e7717c5e0566c89251c5b692cd5a90274acd10",
+      "0x682aab8c40c6762195dc8e035c89040f32f468e7",
+      "0x0970d3b3bc5046b315f7cfa5108ddb2460d8d0c8"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.820927Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.820927Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.820927Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x0149f1c77874e922b6d2b20c5878db693dc3c3d6",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2011
+    },
+    {
+      "address": "0xcc3bb186a33a3b299f9cec8fb023312db91b8848",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2010
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.820927Z"
+}

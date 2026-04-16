@@ -1,0 +1,142 @@
+{
+  "run_id": "bct168-mvp",
+  "raters": [
+    "claude-haiku-4-5-20251001",
+    "claude-opus-4-6",
+    "claude-sonnet-4-5"
+  ],
+  "n_projects_complete": 168,
+  "n_live_rows": 0,
+  "n_synthetic_rows": 504,
+  "DRY_RUN_WARNING": "ALL ROWS ARE SYNTHETIC ARCHETYPE FALLBACK. Metrics below do NOT measure LLM inter-rater agreement \u2014 they measure the deterministic stub's self-consistency. Set ANTHROPIC_API_KEY and re-run to get real Claude panel scores.",
+  "grade_fleiss_kappa": 0.9324408103081381,
+  "composite_icc_2k": 0.9899182867605197,
+  "per_dimension_fleiss": {
+    "removal_type": 0.3456758401514639,
+    "additionality": 0.6555348683745374,
+    "permanence": 0.33846581013201404,
+    "mrv_grade": 0.28063753023114435,
+    "vintage_year": 1.0,
+    "co_benefits": 0.3450003154375118,
+    "registry_methodology": 0.8857175250134629
+  },
+  "pairwise_grade_agreement": [
+    {
+      "a": "claude-haiku-4-5-20251001",
+      "b": "claude-opus-4-6",
+      "cohens_kappa": 0.9492562108283621,
+      "exact": 0.9761904761904762,
+      "within_1": 1.0
+    },
+    {
+      "a": "claude-haiku-4-5-20251001",
+      "b": "claude-sonnet-4-5",
+      "cohens_kappa": 0.9245113457649966,
+      "exact": 0.9642857142857143,
+      "within_1": 1.0
+    },
+    {
+      "a": "claude-opus-4-6",
+      "b": "claude-sonnet-4-5",
+      "cohens_kappa": 0.9236016371077763,
+      "exact": 0.9642857142857143,
+      "within_1": 1.0
+    }
+  ],
+  "external_correlation": {
+    "bezero": {
+      "n": 7,
+      "pearson": -0.48047679925226205,
+      "spearman": -0.40768712416360564
+    },
+    "calyx": {
+      "n": 3,
+      "pearson": -0.957666974253339,
+      "spearman": -0.8660254037844387
+    },
+    "sylvera": {
+      "n": 3,
+      "pearson": -0.7281434845562572,
+      "spearman": -0.8660254037844387
+    }
+  },
+  "stress_test_recall": {
+    "overall_recall": 0.0,
+    "total_attempts": 12,
+    "hits": 0,
+    "per_credit": [
+      {
+        "project_id": "STRESS01",
+        "expected": "double_counting",
+        "recall_by_model": {
+          "claude-opus-4-6": {
+            "flags": [],
+            "hit": false
+          },
+          "claude-sonnet-4-5": {
+            "flags": [],
+            "hit": false
+          },
+          "claude-haiku-4-5-20251001": {
+            "flags": [],
+            "hit": false
+          }
+        }
+      },
+      {
+        "project_id": "STRESS02",
+        "expected": "sanctioned_registry",
+        "recall_by_model": {
+          "claude-opus-4-6": {
+            "flags": [],
+            "hit": false
+          },
+          "claude-sonnet-4-5": {
+            "flags": [],
+            "hit": false
+          },
+          "claude-haiku-4-5-20251001": {
+            "flags": [],
+            "hit": false
+          }
+        }
+      },
+      {
+        "project_id": "STRESS03",
+        "expected": "no_third_party",
+        "recall_by_model": {
+          "claude-opus-4-6": {
+            "flags": [],
+            "hit": false
+          },
+          "claude-sonnet-4-5": {
+            "flags": [],
+            "hit": false
+          },
+          "claude-haiku-4-5-20251001": {
+            "flags": [],
+            "hit": false
+          }
+        }
+      },
+      {
+        "project_id": "STRESS04",
+        "expected": "community_harm",
+        "recall_by_model": {
+          "claude-opus-4-6": {
+            "flags": [],
+            "hit": false
+          },
+          "claude-sonnet-4-5": {
+            "flags": [],
+            "hit": false
+          },
+          "claude-haiku-4-5-20251001": {
+            "flags": [],
+            "hit": false
+          }
+        }
+      }
+    ]
+  }
+}

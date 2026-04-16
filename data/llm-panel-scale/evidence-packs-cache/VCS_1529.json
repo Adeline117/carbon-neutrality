@@ -1,0 +1,66 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "1529",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/1529",
+    "name": "Inner Mongolia Chao\u2019er Improved Forest Management Project"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2011,2012,2013,2014",
+    "description": "Improved Forest Management project claiming enhanced sequestration relative to a hypothetical logging baseline. Baseline construction (e.g. ARB IFM) is contested and over-crediting is documented in CAR/ARB IFM (Badgley et al. 2022).",
+    "claims": [
+      "Reduced harvest relative to business-as-usual",
+      "Enhanced standing stock"
+    ],
+    "monitoring_approach": "Forest inventory re-measurement on fixed plots + permanence discount.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "IFM",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x0f310489a6eb1eeefc815ff3f0574c88a4aaaa06",
+      "0x6362364a37f34d39a1f4993fb595dab4116daf0d",
+      "0x9aeb37eea9e9a7befc983aad3e463e6247430027",
+      "0x6f0e738ea607f3a6698a813d45849dc36f7f3328"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819739Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.819739Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.819739Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x0f310489a6eb1eeefc815ff3f0574c88a4aaaa06",
+      "internal_composite": 48.52,
+      "internal_grade": "BBB",
+      "vintage": 2014
+    },
+    {
+      "address": "0x6362364a37f34d39a1f4993fb595dab4116daf0d",
+      "internal_composite": 48.12,
+      "internal_grade": "BBB",
+      "vintage": 2012
+    },
+    {
+      "address": "0x9aeb37eea9e9a7befc983aad3e463e6247430027",
+      "internal_composite": 48.12,
+      "internal_grade": "BBB",
+      "vintage": 2011
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.819739Z"
+}

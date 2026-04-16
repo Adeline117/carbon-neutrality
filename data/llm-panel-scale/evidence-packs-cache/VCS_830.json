@@ -1,0 +1,65 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "830",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/830",
+    "name": "Beijing Guanting Wind Power Project Phase II and Phase II ad"
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "20091223,20120728,2013",
+    "description": "Grid-connected renewable energy project (hydro / wind / biomass / solar) claiming avoided-emissions credits by displacing fossil-fired grid electricity. Post-Paris additionality for utility-scale renewables is widely questioned in the literature (West et al. 2023, CMW 2023).",
+    "claims": [
+      "Displaces grid fossil generation",
+      "Grid emission factor baseline"
+    ],
+    "monitoring_approach": "Metered electrical output cross-checked against grid dispatch records.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Renewable",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0x2f96571de0a14c174ba9d1d09361ff8f7c5b130f",
+      "0x3b00fd4f0314a7d8f7667604aecb3136f37ccf7f",
+      "0xee11b53bbe25d37f55483054ff5658373d81e4ee"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823016Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.823016Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.823016Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0x2f96571de0a14c174ba9d1d09361ff8f7c5b130f",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2013
+    },
+    {
+      "address": "0x3b00fd4f0314a7d8f7667604aecb3136f37ccf7f",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2012
+    },
+    {
+      "address": "0xee11b53bbe25d37f55483054ff5658373d81e4ee",
+      "internal_composite": 28.62,
+      "internal_grade": "B",
+      "vintage": 2009
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.823016Z"
+}

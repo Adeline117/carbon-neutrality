@@ -1,0 +1,53 @@
+{
+  "evidence_pack_version": "0.1.0",
+  "project_ref": {
+    "registry": "VCS",
+    "project_id": "426",
+    "canonical_url": "https://registry.verra.org/app/projectDetail/VCS/426",
+    "name": "Wastewater Treatment with Biogas System in Palm Oil Mill at "
+  },
+  "fields": {
+    "methodology": null,
+    "country": null,
+    "vintage": "2011,20120101,20160101",
+    "description": "Methane capture or destruction project (landfill gas, wastewater, livestock manure). CH4 destruction has a strong physical rationale but baseline counterfactuals are sensitive to regulatory requirements in the host country.",
+    "claims": [
+      "CH4 capture and combustion",
+      "Landfill/wastewater baseline vented CH4"
+    ],
+    "monitoring_approach": "Flow-metered CH4 combustion, periodic composition tests.",
+    "vvb_history": [],
+    "corrective_action_history": [],
+    "type_archetype": "Waste/Methane",
+    "tokenization": "Toucan TCO2 (BCT-eligible)",
+    "on_chain_addresses": [
+      "0xb1d1c03c1650ec2798c1426f9a569d5df64469d0",
+      "0x5fbf142e518d5311b76b8191bfb2470dca871365",
+      "0xfd9004350e3e584fdea4a0675a8ce73fd0d007c6"
+    ]
+  },
+  "provenance": [
+    {
+      "source": "project_classification_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821179Z"
+    },
+    {
+      "source": "tco2_metadata.json",
+      "fetched_at": "2026-04-16T06:13:23.821179Z"
+    },
+    {
+      "source": "tco2_scores_final.json",
+      "fetched_at": "2026-04-16T06:13:23.821179Z"
+    }
+  ],
+  "on_chain_internal_scores": [
+    {
+      "address": "0xb1d1c03c1650ec2798c1426f9a569d5df64469d0",
+      "internal_composite": 41.75,
+      "internal_grade": "BB",
+      "vintage": 2011
+    }
+  ],
+  "evidence_level": "metadata-only",
+  "built_at": "2026-04-16T06:13:23.821179Z"
+}
