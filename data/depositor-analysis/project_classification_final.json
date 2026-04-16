@@ -1,0 +1,632 @@
+{
+  "10": {
+    "type": "Renewable",
+    "name": "BAESA Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1002": {
+    "type": "Fossil switch",
+    "name": "Natural Gas based grid connected power project at Peddapuram",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1044": {
+    "type": "Renewable",
+    "name": "Ziqiang 18MW Hydropower Project in Guizhou Province China",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1052": {
+    "type": "REDD+",
+    "name": "North Pikounda REDD+",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1079": {
+    "type": "Renewable",
+    "name": "Bundled Wind Power Project in Jamnagar, Gujarat",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1094": {
+    "type": "REDD+",
+    "name": "Ecomapua Amazon REDD Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1100": {
+    "type": "Renewable",
+    "name": "SANIBEY DAM AND HYDROELECTRIC POWER PLANT",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1121": {
+    "type": "Renewable",
+    "name": "Anhui Guzhen Biomass Generation Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1146": {
+    "type": "Waste/Methane",
+    "name": "The Hyundai Waste Energy Recovery CO-Generation Project Phas",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1160": {
+    "type": "Renewable",
+    "name": "6.5 MW cogeneration project in Akbarpur, Punjab",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1174": {
+    "type": "Renewable",
+    "name": "Akcay 28.78 MW, Hydroelectric Power Plant Project (HEPP), Tu",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1188": {
+    "type": "Renewable",
+    "name": "Shandong Wendeng Zhangjiachan Wind Farm Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1189": {
+    "type": "Renewable",
+    "name": "Shandong Taipingshan Wind Farm Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1190": {
+    "type": "Renewable",
+    "name": "Wind power project in Gujarat",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1195": {
+    "type": "Renewable",
+    "name": "Wind Power Project in Rajasthan",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "12": {
+    "type": "Waste/Methane",
+    "name": "Chuanwei Group 24 MW Waste Gas based Captive Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1203": {
+    "type": "Renewable",
+    "name": "Suzlon 8.40 MW Wind Power Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1205": {
+    "type": "Renewable",
+    "name": "Tatar Hydro Electricity Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1310": {
+    "type": "Renewable",
+    "name": "Guohua Tongliao Kezuo Zhongqi Phase I 49.5 MW Wind Farm Proj",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "132": {
+    "type": "Renewable",
+    "name": "9 MW Neria Hyrdroelectric project, Karnataka, India",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1345": {
+    "type": "Renewable",
+    "name": "Boyabat Hydroelectric Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1356": {
+    "type": "Renewable",
+    "name": "Jiangsu Dongtai Phase II Wind Power Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1382": {
+    "type": "REDD+",
+    "name": "The Envira Amazonia Project - A Tropical Forest Conservation",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1427": {
+    "type": "Renewable",
+    "name": "Adiguzel II Hydroelectric Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1464": {
+    "type": "Renewable",
+    "name": "Alkumru Hydroelectric Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1499": {
+    "type": "Renewable",
+    "name": "Toros Hydroelectric Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1506": {
+    "type": "Renewable",
+    "name": "Cirakdami Hydro Electricity Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1508": {
+    "type": "Fossil switch",
+    "name": "Pakarab Fertiliser Co-generation Power Project - CER Convers",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1521": {
+    "type": "Renewable",
+    "name": "Wind Based Power Generation by Mytrah Energy (India) Limited",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1525": {
+    "type": "Renewable",
+    "name": "Wind power project at Jaibhim by SIIL",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1529": {
+    "type": "IFM",
+    "name": "Inner Mongolia Chao\u2019er Improved Forest Management Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1542": {
+    "type": "IFM",
+    "name": "Yunnan Kunming Liangqu Improved Forest Management Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1549": {
+    "type": "Industrial",
+    "name": "AAC Block Project By Aerocon Buildwell Pvt. Ltd. (EKIESL- Ju",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "1578": {
+    "type": "Renewable",
+    "name": "15 MW Solar Photovoltaic Power Project at Gujarat",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1580": {
+    "type": "Renewable",
+    "name": "Solar Grouped project by ACME Group (EKIESL-VCS-Aug-16-01)",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1671": {
+    "type": "Renewable",
+    "name": "Wind based power generation by Panama Wind Energy Private Li",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1693": {
+    "type": "Renewable",
+    "name": "Wind Power Project in Maharashtra State, India",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "173": {
+    "type": "Renewable",
+    "name": "Vishnuprayag Hydro-electric Project (VHEP) by Jaiprakash Pow",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1742": {
+    "type": "Renewable",
+    "name": "Hydroelectric Project in Kinnaur District in Himachal Prades",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1748": {
+    "type": "REDD+",
+    "name": "Southern Cardamom REDD+ Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "191": {
+    "type": "Renewable",
+    "name": "4\u00d750 MW Dayingjiang- 3 Hydropower Project Phases 1&2",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "192": {
+    "type": "Renewable",
+    "name": "48 MW Houqiao Hydropower Project, Yunnan, China",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "1985": {
+    "type": "Renewable",
+    "name": "100 MW Bundled Wind Power Project in Anantapuram, Andhra Pra",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "2089": {
+    "type": "Renewable",
+    "name": "Rio Taquesi Hydroelectric Power Project - CER Conversion",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "2097": {
+    "type": "Renewable",
+    "name": "Tepekisla Dam & Hydropower Plant Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "2098": {
+    "type": "Waste/Methane",
+    "name": "Nanhai MSW Incineration II Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "264": {
+    "type": "Renewable",
+    "name": "Kargilik 24 MW Hydropower Plant, Turkey",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "265": {
+    "type": "Renewable",
+    "name": "4.5 MW Grouped Small Hydropower Projects for Grid system by ",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "274": {
+    "type": "Renewable",
+    "name": "Hanuman Ganga Hydro (4.95 MW) Plant at Uttarakhand",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "292": {
+    "type": "Renewable",
+    "name": "150 MW grid connected Wind Power based electricity generatio",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "391": {
+    "type": "Renewable",
+    "name": "Gullubag 96 MW Hydro Electric Power Plant Project, Turkey",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "414": {
+    "type": "Renewable",
+    "name": "Hebei Haixing 49.5MW Wind Farm Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "426": {
+    "type": "Waste/Methane",
+    "name": "Wastewater Treatment with Biogas System in Palm Oil Mill at ",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "439": {
+    "type": "Industrial gas",
+    "name": "Yingpeng HFC23 Decompostion Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "487": {
+    "type": "Renewable",
+    "name": "210 MW Musi Hydro Power Plant, Bengkulu",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "493": {
+    "type": "Renewable",
+    "name": "5 MW Brahm Ganga Hydro \u2013 Electric Project at Kullu district ",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "494": {
+    "type": "Fossil switch",
+    "name": "Zhangjiagang Nature Gas Power Generation Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "51": {
+    "type": "Renewable",
+    "name": "29.70 MW Wind Power project in Karnataka India",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "513": {
+    "type": "Renewable",
+    "name": "Salto Pil\u00e3o Hydropower Plant Project Activity",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "535": {
+    "type": "Renewable",
+    "name": "AKOCAK HYDROELECTRIC POWER PLANT",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "566": {
+    "type": "Renewable",
+    "name": "10 MW Wind Power Project in Maharashtra by Deepak Fertilizer",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "614": {
+    "type": "Industrial",
+    "name": "Chemical Recovery Project at Satia Industries Ltd. (SIL), fo",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "631": {
+    "type": "Renewable",
+    "name": "13.25 MW Wind Power Generation by RMTL, in Kutch, Gujarat",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "653": {
+    "type": "Renewable",
+    "name": "65MW Dagushan hydropower Project in China",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "655": {
+    "type": "Renewable",
+    "name": "24.8 MW Wind power project by Belgaum Wind Farms Private Ltd",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "670": {
+    "type": "Renewable",
+    "name": "Xiaoxi Hydropower Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "674": {
+    "type": "REDD+",
+    "name": "Rimba Raya Biodiversity Reserve Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "68": {
+    "type": "Fossil switch",
+    "name": "119.8 MW Natural Gas based Combined Cycle Power Plant, at Ta",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "708": {
+    "type": "Renewable",
+    "name": "Engenheiro Ernesto Jorge Dreher and Engenheiro Henrique Kotz",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "713": {
+    "type": "Renewable",
+    "name": "KOYULHISAR HYDRO ELECTRICITY POWER PLANT",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "722": {
+    "type": "Fossil switch",
+    "name": "Guangdong Huizhou LNG Power Generation Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "728": {
+    "type": "Renewable",
+    "name": "CECIC Gansu Yumen Changma No.3 Wind Farm Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "753": {
+    "type": "Renewable",
+    "name": "The Cevizlik Run-of-River Hydroelectric Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "762": {
+    "type": "Renewable",
+    "name": "Grid connected electricity generation from renewable sources",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "786": {
+    "type": "Waste/Methane",
+    "name": "Hyundai Steel Waste Energy Cogeneration Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "788": {
+    "type": "Fossil switch",
+    "name": "China Guangdong Shenzhen Qianwan LNG generation project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "810": {
+    "type": "Renewable",
+    "name": "CEYHAN 61.7 MW Hydropower Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "812": {
+    "type": "ARR",
+    "name": "Bull Run Overseas Forest Carbon Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "830": {
+    "type": "Renewable",
+    "name": "Beijing Guanting Wind Power Project Phase II and Phase II ad",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "836": {
+    "type": "Renewable",
+    "name": "Song Ong Hydropower Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "837": {
+    "type": "Fossil switch",
+    "name": "Natural Gas Based Combined Cycle Power Generation, at Kothap",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "850": {
+    "type": "Renewable",
+    "name": "Inner Mongolia Jingneng Saihan Wind Farm Phase I Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "875": {
+    "type": "ARR",
+    "name": "FLORESTAL SANTA MARIA PROJECT",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "892": {
+    "type": "Renewable",
+    "name": "Hebei Chengde Weichang Yudaokou Pasture 150MW Wind Farm Proj",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "896": {
+    "type": "Renewable",
+    "name": "Foz do Chapec\u00f3 Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "manual_verified"
+  },
+  "903": {
+    "type": "Renewable",
+    "name": "Hebei Guyuan County Dongxinying 199.5 MW Wind Power Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "905": {
+    "type": "Renewable",
+    "name": "The Yokuslu- Kalkandere Hydroelectric Power Plant",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "981": {
+    "type": "REDD+",
+    "name": "Pacajai REDD+ Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "982": {
+    "type": "Fossil switch",
+    "name": "Combined cycle natural gas based grid connected power plant ",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  },
+  "985": {
+    "type": "REDD+",
+    "name": "Cordillera Azul National Park REDD Project",
+    "methodology": "",
+    "country": "",
+    "method_source": "name"
+  }
+}

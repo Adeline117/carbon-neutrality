@@ -1,0 +1,68 @@
+{
+  "total_tonnes": 7485458.0,
+  "total_deposits": 547,
+  "total_projects": 90,
+  "pqd": 0.685,
+  "weighted_mean": 31.53,
+  "by_type": {
+    "Fossil switch": {
+      "tonnes": 731258.0,
+      "pct": 9.8,
+      "projects": 8
+    },
+    "Renewable": {
+      "tonnes": 5548140.0,
+      "pct": 74.1,
+      "projects": 63
+    },
+    "Waste/Methane": {
+      "tonnes": 697725.0,
+      "pct": 9.3,
+      "projects": 5
+    },
+    "ARR": {
+      "tonnes": 152050.0,
+      "pct": 2.0,
+      "projects": 2
+    },
+    "REDD+": {
+      "tonnes": 112221.0,
+      "pct": 1.5,
+      "projects": 7
+    },
+    "Industrial": {
+      "tonnes": 100814.0,
+      "pct": 1.3,
+      "projects": 2
+    },
+    "IFM": {
+      "tonnes": 139750.0,
+      "pct": 1.9,
+      "projects": 2
+    },
+    "Industrial gas": {
+      "tonnes": 3500.0,
+      "pct": 0.0,
+      "projects": 1
+    }
+  },
+  "by_grade": {
+    "B": 4741944.0,
+    "BB": 2351714.0,
+    "BBB": 391800.0
+  },
+  "broad": {
+    "energy": {
+      "tonnes": 6279398.0,
+      "pct": 83.9
+    },
+    "waste_industrial": {
+      "tonnes": 798539.0,
+      "pct": 10.7
+    },
+    "forestry": {
+      "tonnes": 404021.0,
+      "pct": 5.4
+    }
+  }
+}
