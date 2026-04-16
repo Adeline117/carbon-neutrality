@@ -1,0 +1,866 @@
+{
+  "pool": {
+    "pqd": 0.6806385944423838,
+    "weighted_mean": 31.936140555761614,
+    "tonnes": 7485457.542104999,
+    "deposits": 547
+  },
+  "grades": {
+    "BB": 3837509.0,
+    "B": 3504699.0,
+    "BBB": 143250.0
+  },
+  "types": {
+    "Other": 1743822.0,
+    "Renewable": 4888451.0,
+    "Waste/Methane": 597725.0,
+    "REDD+": 112210.0,
+    "IFM": 139750.0,
+    "Industrial gas": 3500.0
+  },
+  "depositor_analysis": [
+    {
+      "depositor": "0xdb97aa9b0c07254ef9e017641f5da271e5c31f35",
+      "n_types": 8,
+      "tonnes": 196282.0,
+      "mean_quality": 43.44,
+      "min_q": 30.75,
+      "max_q": 49.73,
+      "range": 18.98,
+      "types": [
+        "IFM",
+        "IFM",
+        "IFM",
+        "REDD+",
+        "IFM",
+        "IFM",
+        "REDD+",
+        "IFM"
+      ]
+    },
+    {
+      "depositor": "0xee9930a62fbf85fb443ad3d7410da665ebc90b83",
+      "n_types": 18,
+      "tonnes": 757610.0,
+      "mean_quality": 36.23,
+      "min_q": 28.62,
+      "max_q": 43.35,
+      "range": 14.73,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Waste/Methane"
+      ]
+    },
+    {
+      "depositor": "0xe8d7763b7c6f969cf1b2ee8a88281bb172aa91ff",
+      "n_types": 14,
+      "tonnes": 413968.0,
+      "mean_quality": 32.88,
+      "min_q": 28.62,
+      "max_q": 43.35,
+      "range": 14.73,
+      "types": [
+        "Waste/Methane",
+        "Other",
+        "Other",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x6d4b1d2e2986cee0c2cb82cd17ad5b3289f6fbe8",
+      "n_types": 3,
+      "tonnes": 217056.0,
+      "mean_quality": 41.45,
+      "min_q": 28.62,
+      "max_q": 41.75,
+      "range": 13.13,
+      "types": [
+        "Waste/Methane",
+        "Waste/Methane",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xb208e3dcc8e2b091fa4b9aa65d528fdfdc8bfa93",
+      "n_types": 9,
+      "tonnes": 107424.0,
+      "mean_quality": 32.97,
+      "min_q": 28.62,
+      "max_q": 35.92,
+      "range": 7.3,
+      "types": [
+        "Other",
+        "Other",
+        "Renewable",
+        "Other",
+        "Other",
+        "Other",
+        "Other",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xa3fbf3282b227edfced3488ac8b71af4d38fc075",
+      "n_types": 9,
+      "tonnes": 150000.0,
+      "mean_quality": 30.39,
+      "min_q": 28.62,
+      "max_q": 35.92,
+      "range": 7.3,
+      "types": [
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xf36729fbfcde9a65386eb236460d8a8cfced2156",
+      "n_types": 6,
+      "tonnes": 381106.0,
+      "mean_quality": 32.92,
+      "min_q": 28.62,
+      "max_q": 35.92,
+      "range": 7.3,
+      "types": [
+        "Other",
+        "Other",
+        "Renewable",
+        "Other",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x862be47d3461caf475e02b9c5473bdd3d3766df8",
+      "n_types": 3,
+      "tonnes": 15841.0,
+      "mean_quality": 39.41,
+      "min_q": 34.73,
+      "max_q": 41.75,
+      "range": 7.02,
+      "types": [
+        "Waste/Methane",
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xd85cf713c480a6dfac34121ee362a5e0ef74001f",
+      "n_types": 8,
+      "tonnes": 120991.0,
+      "mean_quality": 29.58,
+      "min_q": 28.62,
+      "max_q": 35.02,
+      "range": 6.4,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xe519b28e8f96e229498f15bb2da4ec0e942f688f",
+      "n_types": 29,
+      "tonnes": 1091842.0,
+      "mean_quality": 29.63,
+      "min_q": 28.62,
+      "max_q": 34.73,
+      "range": 6.11,
+      "types": [
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "REDD+",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xdab7f2bc9aa986d9759718203c9a76534894e900",
+      "n_types": 5,
+      "tonnes": 255207.0,
+      "mean_quality": 30.79,
+      "min_q": 28.62,
+      "max_q": 33.83,
+      "range": 5.21,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xfea7485ec830d655ae7c6dc79dec03e25539e14b",
+      "n_types": 3,
+      "tonnes": 25000.0,
+      "mean_quality": 29.68,
+      "min_q": 28.62,
+      "max_q": 33.12,
+      "range": 4.5,
+      "types": [
+        "Renewable",
+        "Other",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xedf89984c7a9b25d05409ba32ca6e284b029384c",
+      "n_types": 2,
+      "tonnes": 710.0,
+      "mean_quality": 29.44,
+      "min_q": 28.62,
+      "max_q": 33.12,
+      "range": 4.5,
+      "types": [
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x5298ee22d6b4ec1a8c62944ba63a8a197ee726e2",
+      "n_types": 4,
+      "tonnes": 77373.0,
+      "mean_quality": 30.97,
+      "min_q": 28.62,
+      "max_q": 33.12,
+      "range": 4.5,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x362627a677a0a82261bfc3cc6c2df30f032c29c0",
+      "n_types": 3,
+      "tonnes": 79084.957004,
+      "mean_quality": 33.95,
+      "min_q": 30.23,
+      "max_q": 34.73,
+      "range": 4.5,
+      "types": [
+        "Renewable",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xaf529400ff068afbdc907c699b9184a4381481b0",
+      "n_types": 4,
+      "tonnes": 46358.0,
+      "mean_quality": 33.35,
+      "min_q": 31.43,
+      "max_q": 35.92,
+      "range": 4.49,
+      "types": [
+        "Renewable",
+        "Other",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x886b4f80a48b9516bbaa9fe092afd7565777eb82",
+      "n_types": 2,
+      "tonnes": 255000.0,
+      "mean_quality": 30.64,
+      "min_q": 29.02,
+      "max_q": 33.12,
+      "range": 4.1,
+      "types": [
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x7ef72d1e8df33cd33386efadddd9511cd4796b22",
+      "n_types": 2,
+      "tonnes": 7315.0,
+      "mean_quality": 30.54,
+      "min_q": 28.62,
+      "max_q": 31.43,
+      "range": 2.81,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x00000016f127c94a667ae3c9fdf0c31c9c79826f",
+      "n_types": 2,
+      "tonnes": 201083.0,
+      "mean_quality": 29.19,
+      "min_q": 28.62,
+      "max_q": 31.43,
+      "range": 2.81,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x79ba21bdb60c918df911d0de895ef2986630c45e",
+      "n_types": 2,
+      "tonnes": 20.025,
+      "mean_quality": 31.93,
+      "min_q": 30.75,
+      "max_q": 33.12,
+      "range": 2.37,
+      "types": [
+        "Other",
+        "REDD+"
+      ]
+    },
+    {
+      "depositor": "0xb21819c7714ff31346ebfdff8e37bb68d798103c",
+      "n_types": 2,
+      "tonnes": 4.95202,
+      "mean_quality": 29.31,
+      "min_q": 28.62,
+      "max_q": 30.75,
+      "range": 2.13,
+      "types": [
+        "REDD+",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xe1d3baa26d94f53897efbeb550d95cc2ab72d5f7",
+      "n_types": 2,
+      "tonnes": 80000.0,
+      "mean_quality": 28.72,
+      "min_q": 28.62,
+      "max_q": 30.23,
+      "range": 1.61,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x51d3a285bdb30fbdec337cb2f5d7a863d78a36be",
+      "n_types": 2,
+      "tonnes": 27777.0,
+      "mean_quality": 33.49,
+      "min_q": 32.62,
+      "max_q": 33.83,
+      "range": 1.21,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xee66bfe308c0dece0f25c46b254df50cea743674",
+      "n_types": 3,
+      "tonnes": 90156.0,
+      "mean_quality": 31.88,
+      "min_q": 31.43,
+      "max_q": 32.62,
+      "range": 1.19,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x1e942ed55bd4e0c28c1f2ede717ecb16727fcfa2",
+      "n_types": 2,
+      "tonnes": 12369.0,
+      "mean_quality": 28.62,
+      "min_q": 28.62,
+      "max_q": 28.62,
+      "range": 0.0,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xc450febeca0a1a4f802c74b5a15cfc90b799eaf5",
+      "n_types": 3,
+      "tonnes": 287362.0,
+      "mean_quality": 28.62,
+      "min_q": 28.62,
+      "max_q": 28.62,
+      "range": 0.0,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x0bf92dee04456e3851d7418ed890d5522d7bd496",
+      "n_types": 2,
+      "tonnes": 193722.0,
+      "mean_quality": 32.62,
+      "min_q": 32.62,
+      "max_q": 32.62,
+      "range": 0.0,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xcc060e0bfdc4df5c7cfb9f9fa358ddfd032aee61",
+      "n_types": 2,
+      "tonnes": 16880.0,
+      "mean_quality": 28.62,
+      "min_q": 28.62,
+      "max_q": 28.62,
+      "range": 0.0,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+      "n_types": 5,
+      "tonnes": 559851.0,
+      "mean_quality": 28.62,
+      "min_q": 28.62,
+      "max_q": 28.62,
+      "range": 0.0,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x2845ec77192ad7ba2faf67e63b49be6c8d4f8b20",
+      "n_types": 2,
+      "tonnes": 477453.0,
+      "mean_quality": 28.62,
+      "min_q": 28.62,
+      "max_q": 28.62,
+      "range": 0.0,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x477032b4ec751f8c1ebdcfa3b9c2b78e91b8a3a8",
+      "n_types": 2,
+      "tonnes": 70000.0,
+      "mean_quality": 33.12,
+      "min_q": 33.12,
+      "max_q": 33.12,
+      "range": 0.0,
+      "types": [
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xcf237f7e640e32470587ff8e5918ead1840c6e5a",
+      "n_types": 2,
+      "tonnes": 127714.0,
+      "mean_quality": 28.62,
+      "min_q": 28.62,
+      "max_q": 28.62,
+      "range": 0.0,
+      "types": [
+        "Renewable",
+        "Renewable"
+      ]
+    }
+  ],
+  "diverse_type_depositors": [
+    {
+      "depositor": "0xdb97aa9b0c07254ef9e017641f5da271e5c31f35",
+      "n_types": 8,
+      "tonnes": 196282.0,
+      "mean_quality": 43.44,
+      "min_q": 30.75,
+      "max_q": 49.73,
+      "range": 18.98,
+      "types": [
+        "IFM",
+        "IFM",
+        "IFM",
+        "REDD+",
+        "IFM",
+        "IFM",
+        "REDD+",
+        "IFM"
+      ]
+    },
+    {
+      "depositor": "0xee9930a62fbf85fb443ad3d7410da665ebc90b83",
+      "n_types": 18,
+      "tonnes": 757610.0,
+      "mean_quality": 36.23,
+      "min_q": 28.62,
+      "max_q": 43.35,
+      "range": 14.73,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Waste/Methane"
+      ]
+    },
+    {
+      "depositor": "0xe8d7763b7c6f969cf1b2ee8a88281bb172aa91ff",
+      "n_types": 14,
+      "tonnes": 413968.0,
+      "mean_quality": 32.88,
+      "min_q": 28.62,
+      "max_q": 43.35,
+      "range": 14.73,
+      "types": [
+        "Waste/Methane",
+        "Other",
+        "Other",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x6d4b1d2e2986cee0c2cb82cd17ad5b3289f6fbe8",
+      "n_types": 3,
+      "tonnes": 217056.0,
+      "mean_quality": 41.45,
+      "min_q": 28.62,
+      "max_q": 41.75,
+      "range": 13.13,
+      "types": [
+        "Waste/Methane",
+        "Waste/Methane",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xb208e3dcc8e2b091fa4b9aa65d528fdfdc8bfa93",
+      "n_types": 9,
+      "tonnes": 107424.0,
+      "mean_quality": 32.97,
+      "min_q": 28.62,
+      "max_q": 35.92,
+      "range": 7.3,
+      "types": [
+        "Other",
+        "Other",
+        "Renewable",
+        "Other",
+        "Other",
+        "Other",
+        "Other",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xa3fbf3282b227edfced3488ac8b71af4d38fc075",
+      "n_types": 9,
+      "tonnes": 150000.0,
+      "mean_quality": 30.39,
+      "min_q": 28.62,
+      "max_q": 35.92,
+      "range": 7.3,
+      "types": [
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xf36729fbfcde9a65386eb236460d8a8cfced2156",
+      "n_types": 6,
+      "tonnes": 381106.0,
+      "mean_quality": 32.92,
+      "min_q": 28.62,
+      "max_q": 35.92,
+      "range": 7.3,
+      "types": [
+        "Other",
+        "Other",
+        "Renewable",
+        "Other",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x862be47d3461caf475e02b9c5473bdd3d3766df8",
+      "n_types": 3,
+      "tonnes": 15841.0,
+      "mean_quality": 39.41,
+      "min_q": 34.73,
+      "max_q": 41.75,
+      "range": 7.02,
+      "types": [
+        "Waste/Methane",
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xe519b28e8f96e229498f15bb2da4ec0e942f688f",
+      "n_types": 29,
+      "tonnes": 1091842.0,
+      "mean_quality": 29.63,
+      "min_q": 28.62,
+      "max_q": 34.73,
+      "range": 6.11,
+      "types": [
+        "Renewable",
+        "Other",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "REDD+",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xdab7f2bc9aa986d9759718203c9a76534894e900",
+      "n_types": 5,
+      "tonnes": 255207.0,
+      "mean_quality": 30.79,
+      "min_q": 28.62,
+      "max_q": 33.83,
+      "range": 5.21,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xfea7485ec830d655ae7c6dc79dec03e25539e14b",
+      "n_types": 3,
+      "tonnes": 25000.0,
+      "mean_quality": 29.68,
+      "min_q": 28.62,
+      "max_q": 33.12,
+      "range": 4.5,
+      "types": [
+        "Renewable",
+        "Other",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0xedf89984c7a9b25d05409ba32ca6e284b029384c",
+      "n_types": 2,
+      "tonnes": 710.0,
+      "mean_quality": 29.44,
+      "min_q": 28.62,
+      "max_q": 33.12,
+      "range": 4.5,
+      "types": [
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x5298ee22d6b4ec1a8c62944ba63a8a197ee726e2",
+      "n_types": 4,
+      "tonnes": 77373.0,
+      "mean_quality": 30.97,
+      "min_q": 28.62,
+      "max_q": 33.12,
+      "range": 4.5,
+      "types": [
+        "Renewable",
+        "Renewable",
+        "Other",
+        "Renewable"
+      ]
+    },
+    {
+      "depositor": "0x362627a677a0a82261bfc3cc6c2df30f032c29c0",
+      "n_types": 3,
+      "tonnes": 79084.957004,
+      "mean_quality": 33.95,
+      "min_q": 30.23,
+      "max_q": 34.73,
+      "range": 4.5,
+      "types": [
+        "Renewable",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0xaf529400ff068afbdc907c699b9184a4381481b0",
+      "n_types": 4,
+      "tonnes": 46358.0,
+      "mean_quality": 33.35,
+      "min_q": 31.43,
+      "max_q": 35.92,
+      "range": 4.49,
+      "types": [
+        "Renewable",
+        "Other",
+        "Other",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x886b4f80a48b9516bbaa9fe092afd7565777eb82",
+      "n_types": 2,
+      "tonnes": 255000.0,
+      "mean_quality": 30.64,
+      "min_q": 29.02,
+      "max_q": 33.12,
+      "range": 4.1,
+      "types": [
+        "Renewable",
+        "Other"
+      ]
+    },
+    {
+      "depositor": "0x79ba21bdb60c918df911d0de895ef2986630c45e",
+      "n_types": 2,
+      "tonnes": 20.025,
+      "mean_quality": 31.93,
+      "min_q": 30.75,
+      "max_q": 33.12,
+      "range": 2.37,
+      "types": [
+        "Other",
+        "REDD+"
+      ]
+    },
+    {
+      "depositor": "0xb21819c7714ff31346ebfdff8e37bb68d798103c",
+      "n_types": 2,
+      "tonnes": 4.95202,
+      "mean_quality": 29.31,
+      "min_q": 28.62,
+      "max_q": 30.75,
+      "range": 2.13,
+      "types": [
+        "REDD+",
+        "Renewable"
+      ]
+    }
+  ]
+}
