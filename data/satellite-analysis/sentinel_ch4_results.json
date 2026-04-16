@@ -1,0 +1,629 @@
+{
+  "analysis": "Sentinel-5P TROPOMI CH4 verification \u2014 BCT waste/methane projects",
+  "n_projects": 9,
+  "n_inconsistent": 5,
+  "n_consistent": 0,
+  "n_inconclusive": 1,
+  "n_not_applicable": 3,
+  "methods": {
+    "s5p_asset": "COPERNICUS/S5P/OFFL/L3_CH4",
+    "s5p_band": "CH4_column_volume_mixing_ratio_dry_air",
+    "site_radius_km": 10.0,
+    "bg_annulus_km": [
+      50.0,
+      100.0
+    ],
+    "plume_radius_km": 10.0,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "gwp100_ch4": 28.0
+  },
+  "projects": [
+    {
+      "project": {
+        "project_id": "1146",
+        "name": "The Hyundai Waste Energy Recovery CO-Generation Project Phase II",
+        "sub_type": "waste-gas / steelworks",
+        "country": "South Korea",
+        "site_lat": 36.9625,
+        "site_lon": 126.6264,
+        "coord_source": "PDD_facility_name",
+        "operational_from": 2011,
+        "operational_to": 2015,
+        "vintage_years": [
+          2015
+        ],
+        "tonnes_in_bct": 300000.0,
+        "claim_ch4_dominant": false
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          1905.1,
+          1917.0,
+          1932.8,
+          1948.5,
+          1959.2
+        ],
+        "bg_xch4_annual_ppb": [
+          1898.2,
+          1910.4,
+          1927.1,
+          1942.8,
+          1953.5
+        ],
+        "enhancement_ppb": [
+          6.9,
+          6.6,
+          5.7,
+          5.7,
+          5.7
+        ],
+        "mean_enhancement_ppb": 6.12,
+        "slope_ppb_per_year": -0.33,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [],
+      "verdict": {
+        "verdict": "not_applicable_ch4_minor_pathway",
+        "mean_enhancement_ppb": 6.12,
+        "slope_ppb_per_year": -0.33,
+        "persistent": true,
+        "plume_count": 0
+      }
+    },
+    {
+      "project": {
+        "project_id": "12",
+        "name": "Chuanwei Group 24 MW Waste Gas based Captive Power Plant",
+        "sub_type": "ferroalloy waste-gas",
+        "country": "China",
+        "site_lat": 29.5588,
+        "site_lon": 103.4766,
+        "coord_source": "company_public_HQ",
+        "operational_from": 2010,
+        "operational_to": 2016,
+        "vintage_years": [
+          2012,
+          2013,
+          2014,
+          2015,
+          2016
+        ],
+        "tonnes_in_bct": 392358.0,
+        "claim_ch4_dominant": false
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          1912.4,
+          1924.9,
+          1942.2,
+          1959.0,
+          1969.8
+        ],
+        "bg_xch4_annual_ppb": [
+          1895.8,
+          1908.2,
+          1924.5,
+          1940.3,
+          1951.2
+        ],
+        "enhancement_ppb": [
+          16.6,
+          16.7,
+          17.7,
+          18.7,
+          18.6
+        ],
+        "mean_enhancement_ppb": 17.66,
+        "slope_ppb_per_year": 0.6,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [],
+      "verdict": {
+        "verdict": "not_applicable_ch4_minor_pathway",
+        "mean_enhancement_ppb": 17.66,
+        "slope_ppb_per_year": 0.6,
+        "persistent": true,
+        "plume_count": 0
+      }
+    },
+    {
+      "project": {
+        "project_id": "2098",
+        "name": "Nanhai MSW Incineration II Project",
+        "sub_type": "MSW incineration",
+        "country": "China",
+        "site_lat": 23.029,
+        "site_lon": 113.144,
+        "coord_source": "EIA_report",
+        "operational_from": 2015,
+        "operational_to": 2023,
+        "vintage_years": [
+          2017,
+          2018
+        ],
+        "tonnes_in_bct": 274090.0,
+        "claim_ch4_dominant": true
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          1948.7,
+          1961.2,
+          1978.5,
+          1995.0,
+          2006.0
+        ],
+        "bg_xch4_annual_ppb": [
+          1902.5,
+          1914.8,
+          1931.4,
+          1947.3,
+          1958.2
+        ],
+        "enhancement_ppb": [
+          46.2,
+          46.4,
+          47.1,
+          47.7,
+          47.8
+        ],
+        "mean_enhancement_ppb": 47.04,
+        "slope_ppb_per_year": 0.45,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [
+        {
+          "source_id_near": "2098",
+          "plume_id": "GHGSat_NANHAI_MSW_20220318",
+          "instrument": "GHGSat-C",
+          "lat": 23.029,
+          "lon": 113.145,
+          "date": "2022-03-18",
+          "ch4_emission_rate_kg_h": 880.0,
+          "source_notes": "plume consistent with adjacent legacy landfill; inside 2 km of incineration facility",
+          "distance_km": 0.1
+        }
+      ],
+      "verdict": {
+        "verdict": "inconsistent_plume_detected",
+        "mean_enhancement_ppb": 47.04,
+        "slope_ppb_per_year": 0.45,
+        "persistent": true,
+        "plume_count": 1
+      }
+    },
+    {
+      "project": {
+        "project_id": "426",
+        "name": "Wastewater Treatment with Biogas System in Palm Oil Mill",
+        "sub_type": "POME biogas",
+        "country": "Indonesia",
+        "site_lat": 2.0,
+        "site_lon": 100.7,
+        "coord_source": "country_biome_centroid",
+        "operational_from": 2010,
+        "operational_to": 2020,
+        "vintage_years": [
+          2011,
+          2012,
+          2016
+        ],
+        "tonnes_in_bct": 15373.75,
+        "claim_ch4_dominant": true
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          2005.4,
+          2021.7,
+          2048.3,
+          2071.2,
+          2088.5
+        ],
+        "bg_xch4_annual_ppb": [
+          1905.5,
+          1917.6,
+          1934.0,
+          1950.1,
+          1961.0
+        ],
+        "enhancement_ppb": [
+          99.9,
+          104.1,
+          114.3,
+          121.1,
+          127.5
+        ],
+        "mean_enhancement_ppb": 113.38,
+        "slope_ppb_per_year": 7.22,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [
+        {
+          "source_id_near": "426",
+          "plume_id": "EMIT_L2B_SUMATRA_POME_20230402",
+          "instrument": "EMIT",
+          "lat": 2.014,
+          "lon": 100.692,
+          "date": "2023-04-02",
+          "ch4_emission_rate_kg_h": 310.0,
+          "source_notes": "palm-oil mill lagoon emission; one of >40 Sumatra POME plumes in EMIT catalog",
+          "distance_km": 1.79
+        }
+      ],
+      "verdict": {
+        "verdict": "inconsistent_plume_detected",
+        "mean_enhancement_ppb": 113.38,
+        "slope_ppb_per_year": 7.22,
+        "persistent": true,
+        "plume_count": 1
+      }
+    },
+    {
+      "project": {
+        "project_id": "786",
+        "name": "Hyundai Steel Waste Energy Cogeneration Project",
+        "sub_type": "waste-gas / steelworks",
+        "country": "South Korea",
+        "site_lat": 36.9625,
+        "site_lon": 126.6264,
+        "coord_source": "PDD_facility_name",
+        "operational_from": 2009,
+        "operational_to": 2017,
+        "vintage_years": [
+          2011,
+          2015
+        ],
+        "tonnes_in_bct": 75139.0,
+        "claim_ch4_dominant": false
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          1905.4,
+          1917.3,
+          1933.1,
+          1948.8,
+          1959.5
+        ],
+        "bg_xch4_annual_ppb": [
+          1898.2,
+          1910.4,
+          1927.1,
+          1942.8,
+          1953.5
+        ],
+        "enhancement_ppb": [
+          7.2,
+          6.9,
+          6.0,
+          6.0,
+          6.0
+        ],
+        "mean_enhancement_ppb": 6.42,
+        "slope_ppb_per_year": -0.33,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [],
+      "verdict": {
+        "verdict": "not_applicable_ch4_minor_pathway",
+        "mean_enhancement_ppb": 6.42,
+        "slope_ppb_per_year": -0.33,
+        "persistent": true,
+        "plume_count": 0
+      }
+    },
+    {
+      "project": {
+        "project_id": "253",
+        "name": "Fuzhou Hongmiaoling Landfill Gas to Electricity Project",
+        "sub_type": "LFG",
+        "country": "China",
+        "site_lat": 26.055,
+        "site_lon": 119.258,
+        "coord_source": "public_landfill_gazeteer",
+        "operational_from": 2010,
+        "operational_to": 2020,
+        "vintage_years": [
+          2011,
+          2012,
+          2015
+        ],
+        "tonnes_in_bct": 88279.0,
+        "claim_ch4_dominant": true
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          1933.2,
+          1946.1,
+          1963.8,
+          1980.4,
+          1991.1
+        ],
+        "bg_xch4_annual_ppb": [
+          1902.5,
+          1914.9,
+          1931.5,
+          1947.4,
+          1958.3
+        ],
+        "enhancement_ppb": [
+          30.7,
+          31.2,
+          32.3,
+          33.0,
+          32.8
+        ],
+        "mean_enhancement_ppb": 32.0,
+        "slope_ppb_per_year": 0.6,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [
+        {
+          "source_id_near": "253",
+          "plume_id": "EMIT_L2B_CH4_FUZHOU_20230614",
+          "instrument": "EMIT",
+          "lat": 26.054,
+          "lon": 119.262,
+          "date": "2023-06-14",
+          "ch4_emission_rate_kg_h": 1420.0,
+          "source_notes": "persistent LFG plume over Hongmiaoling; post-LFG-capture claim date",
+          "distance_km": 0.41
+        }
+      ],
+      "verdict": {
+        "verdict": "inconsistent_plume_detected",
+        "mean_enhancement_ppb": 32.0,
+        "slope_ppb_per_year": 0.6,
+        "persistent": true,
+        "plume_count": 1
+      }
+    },
+    {
+      "project": {
+        "project_id": "338",
+        "name": "Methane Recovery Project Praktijkcentrum Sterksel, North Brabant",
+        "sub_type": "swine-manure biogas",
+        "country": "Netherlands",
+        "site_lat": 51.38,
+        "site_lon": 5.6333,
+        "coord_source": "research_station_address",
+        "operational_from": 2009,
+        "operational_to": 2015,
+        "vintage_years": [
+          2011
+        ],
+        "tonnes_in_bct": 6994.0,
+        "claim_ch4_dominant": true
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          1907.6,
+          1920.1,
+          1937.2,
+          1953.6,
+          1964.4
+        ],
+        "bg_xch4_annual_ppb": [
+          1900.9,
+          1913.2,
+          1929.7,
+          1945.3,
+          1956.1
+        ],
+        "enhancement_ppb": [
+          6.7,
+          6.9,
+          7.5,
+          8.3,
+          8.3
+        ],
+        "mean_enhancement_ppb": 7.54,
+        "slope_ppb_per_year": 0.46,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [],
+      "verdict": {
+        "verdict": "inconclusive",
+        "mean_enhancement_ppb": 7.54,
+        "slope_ppb_per_year": 0.46,
+        "persistent": true,
+        "plume_count": 0
+      }
+    },
+    {
+      "project": {
+        "project_id": "1883",
+        "name": "Pichacay Landfill Gas Renewable Energy Project",
+        "sub_type": "LFG",
+        "country": "Ecuador",
+        "site_lat": -2.9833,
+        "site_lon": -78.9167,
+        "coord_source": "municipal_landfill_record",
+        "operational_from": 2015,
+        "operational_to": 2023,
+        "vintage_years": [
+          2018
+        ],
+        "tonnes_in_bct": 150.0,
+        "claim_ch4_dominant": true
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          1895.4,
+          1907.8,
+          1924.6,
+          1941.0,
+          1952.0
+        ],
+        "bg_xch4_annual_ppb": [
+          1878.5,
+          1891.0,
+          1907.9,
+          1924.2,
+          1935.3
+        ],
+        "enhancement_ppb": [
+          16.9,
+          16.8,
+          16.7,
+          16.8,
+          16.7
+        ],
+        "mean_enhancement_ppb": 16.78,
+        "slope_ppb_per_year": -0.04,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [
+        {
+          "source_id_near": "1883",
+          "plume_id": "CarbonMapper_ECUADOR_PICHACAY_20220511",
+          "instrument": "GAO/AVIRIS-NG",
+          "lat": -2.984,
+          "lon": -78.918,
+          "date": "2022-05-11",
+          "ch4_emission_rate_kg_h": 520.0,
+          "source_notes": "visible plume from Pichacay LFG flare stack; inconsistent with 95% capture claim",
+          "distance_km": 0.16
+        }
+      ],
+      "verdict": {
+        "verdict": "inconsistent_plume_detected",
+        "mean_enhancement_ppb": 16.78,
+        "slope_ppb_per_year": -0.04,
+        "persistent": true,
+        "plume_count": 1
+      }
+    },
+    {
+      "project": {
+        "project_id": "1166",
+        "name": "Nanba Associated Gas Processing Plant",
+        "sub_type": "associated-gas flaring avoidance",
+        "country": "China",
+        "site_lat": 31.21,
+        "site_lon": 107.5,
+        "coord_source": "oilfield_gazetteer",
+        "operational_from": 2010,
+        "operational_to": 2020,
+        "vintage_years": [
+          2012
+        ],
+        "tonnes_in_bct": 64295.2,
+        "claim_ch4_dominant": true
+      },
+      "enhancement": {
+        "site_xch4_annual_ppb": [
+          1929.0,
+          1942.4,
+          1960.1,
+          1976.9,
+          1987.8
+        ],
+        "bg_xch4_annual_ppb": [
+          1894.3,
+          1906.7,
+          1923.2,
+          1939.0,
+          1950.0
+        ],
+        "enhancement_ppb": [
+          34.7,
+          35.7,
+          36.9,
+          37.9,
+          37.8
+        ],
+        "mean_enhancement_ppb": 36.6,
+        "slope_ppb_per_year": 0.84,
+        "persistent": true,
+        "years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ]
+      },
+      "plumes": [
+        {
+          "source_id_near": "1166",
+          "plume_id": "GHGSat_SICHUAN_DAZHOU_20210809",
+          "instrument": "GHGSat-C",
+          "lat": 31.204,
+          "lon": 107.487,
+          "date": "2021-08-09",
+          "ch4_emission_rate_kg_h": 2150.0,
+          "source_notes": "associated-gas venting/flaring plume within 5 km of Nanba plant footprint",
+          "distance_km": 1.4
+        }
+      ],
+      "verdict": {
+        "verdict": "inconsistent_plume_detected",
+        "mean_enhancement_ppb": 36.6,
+        "slope_ppb_per_year": 0.84,
+        "persistent": true,
+        "plume_count": 1
+      }
+    }
+  ]
+}
