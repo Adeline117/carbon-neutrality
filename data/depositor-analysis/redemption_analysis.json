@@ -1,0 +1,120 @@
+{
+  "n_redemptions_total": 0,
+  "n_redemptions_scored": 0,
+  "n_deposits_total": 1187,
+  "n_deposits_scored": 1187,
+  "total_redeemed_tonnes": 0,
+  "total_deposited_tonnes": 21984481.501703,
+  "note_redeemed": "No scored redemptions found -- likely the Redeemed topic did not match any events.",
+  "net_composition_timeseries_sample": [
+    {
+      "month_idx": 0,
+      "net_composition_pct": {
+        "Cookstove": 0.0032733218508112427,
+        "Renewable": 70.03170845054734,
+        "ARR": 3.7074516168115017,
+        "IFM": 2.035334069117893,
+        "Agriculture": 0.440702596276688,
+        "Industrial gas": 0.2531281609378006,
+        "Waste/Methane": 7.837676755015514,
+        "Industrial": 1.0751422018300574,
+        "REDD+": 6.970167904826116,
+        "Fossil switch": 7.645414922786266,
+        "Energy efficiency": 0.0
+      },
+      "net_renewable_pct": 70.03170845054734
+    },
+    {
+      "month_idx": 1,
+      "net_composition_pct": {
+        "Cookstove": 0.0023816303460406675,
+        "Renewable": 67.94926018756254,
+        "ARR": 4.883050586182147,
+        "IFM": 1.81452287905572,
+        "Agriculture": 0.32065000776240327,
+        "Industrial gas": 4.269501088740184,
+        "Waste/Methane": 6.456930120857568,
+        "Industrial": 0.7822607769391335,
+        "REDD+": 5.364117448823244,
+        "Fossil switch": 6.88712242250933,
+        "Energy efficiency": 1.2702028512216894
+      },
+      "net_renewable_pct": 67.94926018756254
+    },
+    {
+      "month_idx": 2,
+      "net_composition_pct": {
+        "Cookstove": 0.0020560145098731898,
+        "Renewable": 68.80110436476187,
+        "ARR": 4.652042003952131,
+        "IFM": 1.5664418174875454,
+        "Agriculture": 0.276810828198607,
+        "Industrial gas": 3.68577609155947,
+        "Waste/Methane": 6.670681508877288,
+        "Industrial": 0.6753103018549084,
+        "REDD+": 4.6811557669007176,
+        "Fossil switch": 7.892080229965234,
+        "Energy efficiency": 1.0965410719323678
+      },
+      "net_renewable_pct": 68.80110436476187
+    },
+    {
+      "month_idx": 11,
+      "net_composition_pct": {
+        "Cookstove": 0.003411566919695747,
+        "Renewable": 69.10638096275636,
+        "ARR": 3.889663473065467,
+        "IFM": 2.0468640723604032,
+        "Agriculture": 0.2296604991398401,
+        "Industrial gas": 3.057923892800086,
+        "Waste/Methane": 5.534375543613542,
+        "Industrial": 0.5602748120877932,
+        "REDD+": 4.228949391798857,
+        "Fossil switch": 10.432744606872424,
+        "Energy efficiency": 0.9097511785855326
+      },
+      "net_renewable_pct": 69.10638096275636
+    },
+    {
+      "month_idx": 12,
+      "net_composition_pct": {
+        "Cookstove": 0.0034115165034904315,
+        "Renewable": 69.1068301703369,
+        "ARR": 3.889605991539563,
+        "IFM": 2.0468338237615176,
+        "Agriculture": 0.22965710521231356,
+        "Industrial gas": 3.0578787027386136,
+        "Waste/Methane": 5.534293756499213,
+        "Industrial": 0.5602665323352266,
+        "REDD+": 4.228894235248572,
+        "Fossil switch": 10.432590431560467,
+        "Energy efficiency": 0.9097377342641152
+      },
+      "net_renewable_pct": 69.1068301703369
+    },
+    {
+      "month_idx": 13,
+      "net_composition_pct": {
+        "Cookstove": 0.003411497332524773,
+        "Renewable": 69.10700377403992,
+        "ARR": 3.8895841339572206,
+        "IFM": 2.046822321609644,
+        "Agriculture": 0.22965581465766646,
+        "Industrial gas": 3.057861519035255,
+        "Waste/Methane": 5.534262656618723,
+        "Industrial": 0.5602633839258785,
+        "REDD+": 4.228870471041049,
+        "Fossil switch": 10.432531805775515,
+        "Energy efficiency": 0.9097326220066062
+      },
+      "net_renewable_pct": 69.10700377403992
+    }
+  ],
+  "net_renewable_drift": {
+    "first_half_mean_renewable_pct": 69.18623524241802,
+    "second_half_mean_renewable_pct": 69.10985876667753,
+    "drift_pp": -0.07637647574048856,
+    "spearman_rho": -0.01098901098901099,
+    "spearman_p": 0.970258390096969
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "wallet_renewable_shares_summary": {
+    "n_wallets": 509,
+    "mean_renewable_share_count": 0.8924632369102703,
+    "median_renewable_share_count": 1.0,
+    "sd_renewable_share_count": 0.29051148876044075,
+    "n_100pct_renewable": 435,
+    "n_0pct_renewable": 42,
+    "n_gt50pct_renewable": 453
+  },
+  "permutation_test": {
+    "n_wallets": 509,
+    "n_permutations": 10000,
+    "base_rate": 0.37,
+    "observed_mean_wallet_renewable_share_count": 0.8924632369102703,
+    "observed_mean_wallet_renewable_share_tonnage": 0.8748148897323016,
+    "observed_weighted_mean_renewable_share": 0.6910700377403992,
+    "permutation_null_mean_count": 0.3699296088943299,
+    "permutation_null_sd_count": 0.019884473050112456,
+    "permutation_null_95ci_count": [
+      0.3309114704535091,
+      0.4094685427453929
+    ],
+    "p_value_count": 0.0,
+    "permutation_null_mean_tonnage": 0.36989815743349946,
+    "permutation_null_sd_tonnage": 0.02014758416013789,
+    "permutation_null_95ci_tonnage": [
+      0.3305881525622219,
+      0.4098462098063636
+    ],
+    "p_value_tonnage": 0.0,
+    "permutation_null_mean_weighted": 0.3697585668535344,
+    "permutation_null_sd_weighted": 0.02970202789383196,
+    "p_value_weighted": 0.0,
+    "interpretation": "Observed wallet-mean renewable share = 0.892 vs null mean = 0.370 (base rate 0.37). Permutation p = 0.0000"
+  },
+  "wallet_binomial_test": {
+    "n_wallets": 509,
+    "n_majority_renewable_by_count": 453,
+    "n_majority_renewable_by_tonnage": 447,
+    "frac_majority_renewable_count": 0.8899803536345776,
+    "frac_majority_renewable_tonnage": 0.8781925343811395,
+    "expected_majority_renewable_under_H0": 170.14663579523634,
+    "avg_p_majority_under_H0": 0.33427629822246824,
+    "binomial_p_count": 8.162655555673215e-151,
+    "binomial_p_tonnage": 9.695933933892334e-144,
+    "binomial_ci95_count": [
+      0.864472385682054,
+      1.0
+    ]
+  },
+  "effective_n_analysis": {
+    "n_deposits": 1187,
+    "n_wallets": 509,
+    "n_scored": 1187,
+    "n_renewable": 932,
+    "renewable_rate": 0.785172704296546,
+    "base_rate": 0.37,
+    "hhi": 0.011976842641676288,
+    "effective_n_hhi": 83.49445925925927,
+    "gini": 0.5320639607536127,
+    "mean_deposits_per_wallet": 2.332023575638507,
+    "cv2_cluster_sizes": 5.106244819779791,
+    "naive_binomial_p": 1.3532872341830925e-187,
+    "naive_binomial_ci95": [
+      0.7646287704970399,
+      1.0
+    ],
+    "effective_n_binomial": {
+      "n_effective": 83,
+      "k_effective": 66,
+      "p_value": 2.940417910793303e-15,
+      "ci95": [
+        0.7087628344165864,
+        1.0
+      ]
+    },
+    "deff_adjusted_binomial": {
+      "rho_icc_assumed": 0.5,
+      "deff": 4.40081924146434,
+      "n_effective_deff": 269.72250730412514,
+      "n_effective_deff_int": 270,
+      "k_effective_deff": 212,
+      "p_value": 4.710835955582362e-44
+    },
+    "summary": "Naive binomial (n=1187): p=1.35e-187. HHI-adjusted (n_eff=83.5): p=0.0000. DEFF-adjusted (n_eff=269.7): p=0.0000. Gini=0.532, HHI=0.0120"
+  },
+  "bootstrap_selection_coefficient": {
+    "n_wallets": 509,
+    "n_bootstrap": 10000,
+    "base_rate": 0.37,
+    "observed_mean_renewable_share_count": 0.8924632369102703,
+    "observed_mean_renewable_share_tonnage": 0.8748148897323016,
+    "selection_coefficient_count": 0.5224632369102703,
+    "selection_coefficient_tonnage": 0.5048148897323016,
+    "bootstrap_ci95_count": [
+      0.4961404745208689,
+      0.5470142095466732
+    ],
+    "bootstrap_ci95_tonnage": [
+      0.4760455591104578,
+      0.5322282198525045
+    ],
+    "bca_ci95_count": [
+      0.49388432985172687,
+      0.545501470784149
+    ],
+    "bootstrap_se_count": 0.01293088417804769,
+    "bootstrap_se_tonnage": 0.014166147442340462,
+    "bootstrap_bias_count": 2.1028227748076667e-05,
+    "z_score_count": 40.40429329629585,
+    "interpretation": "Selection coefficient (count) = 0.522 [0.496, 0.547] 95% CI. Selection coefficient (tonnage) = 0.505 [0.476, 0.532] 95% CI."
+  },
+  "conclusion": "SIGNIFICANT: Even after clustering at the wallet level (n=509 wallets, Gini=0.532, effective N=83.5), the renewable over-representation in BCT deposits remains statistically significant. Wallet-clustered permutation p=0.0000. Selection coefficient = 0.522 [0.496, 0.547]. The naive binomial p=1.35e-187 is inflated by clustering, but the corrected tests still reject H0."
+}
