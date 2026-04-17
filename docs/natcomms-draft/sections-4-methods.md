@@ -62,7 +62,7 @@ The selection coefficient was defined as:
 
 $$S = \frac{f_{\text{BCT,renewable}}}{f_{\text{VCS,renewable}}}$$
 
-where $f_{\text{BCT,renewable}}$ is the tonnage-weighted share of renewable energy credits in BCT and $f_{\text{VCS,renewable}}$ is the VCS base rate. An exact binomial test was used to test the null hypothesis that BCT's renewable share equals the VCS base rate, with $n$ equal to the effective number of independent project-vintage units and $k$ equal to the number classified as renewable. Sensitivity analysis repeated the binomial test across the full base-rate range (26--48%) to confirm that the selection result was robust to base-rate uncertainty.
+where $f_{\text{BCT,renewable}}$ is the tonnage-weighted share of renewable energy credits in BCT and $f_{\text{VCS,renewable}}$ is the VCS base rate. An exact binomial test was used to test the null hypothesis that BCT's renewable share equals the VCS base rate, with $n$ equal to the effective number of independent project-vintage units and $k$ equal to the number classified as renewable. Sensitivity analysis repeated the binomial test across the full base-rate range (26--48%) and extended to post-2008 VCS vintage-adjusted rates up to 55% to confirm that the selection result was robust to base-rate uncertainty. At all tested base rates up to 55%, the selection coefficient remained significant ($p$ < 0.05).
 
 ## Event study
 
@@ -90,6 +90,40 @@ NCT and BCT share identical protocol infrastructure, bridge architecture, and bl
 ## Depositor-level analysis
 
 For all 1,187 BCT deposits (scored via extended scoring), we computed depositor-level concentration metrics: Gini coefficient, Herfindahl--Hirschman Index (HHI), and the effective number of depositors (1/HHI). To test whether large depositors systematically deposited lower-quality credits, we compared the quality distributions of the top 20 depositors by tonnage (71.9% of pool volume) against the remaining 459 depositors using a two-sided Mann--Whitney $U$ test. A two-sided Mann--Whitney $U$ test detects a small but significant difference ($p$ = 8.6 $\times$ 10$^{-5}$, FDR-adjusted $p$ = 1.7 $\times$ 10$^{-4}$), indicating in quality distributions between large and small depositors under the unweighted deposit-level test. We note that the volume-weighted quality gap (30.3 for the top-20 vs. 35.3 for the rest) was not formally tested with a tonnage-weighted permutation test, because the unweighted test already failed to reject the null and the volume-weighted gap is driven by a small number of very large deposits rather than a systematic depositor-level pattern.
+
+## Price-quality dynamics
+
+Daily BCT-USDC prices were obtained from the DeFi Llama API for the Polygon SushiSwap BCT-USDC pair (828 observations). Cumulative Pool Quality Deficit (PQD) and cumulative rolling renewable share were computed from the deposit stream at daily frequency. Price and quality series were merged at daily frequency, yielding $n$ = 331 overlapping observations (21 October 2021 to 11 November 2022).
+
+**Levels regression.** An OLS regression of BCT price on cumulative PQD and cumulative renewable share was estimated with Newey--West heteroskedasticity- and autocorrelation-consistent (HAC) standard errors (10 lags) to account for serial correlation in the non-stationary levels series. This specification captures the long-run co-movement but does not support causal interpretation due to non-stationarity.
+
+**First-differenced regression.** To address non-stationarity, we estimated a first-differenced OLS specification: $\Delta\text{Price}_t = \alpha + \beta_1 \Delta\text{PQD}_t + \beta_2 \Delta\text{Renewable}_t + \varepsilon_t$, with HAC standard errors (Newey--West, 10 lags). The first-differenced specification yielded $\hat{\beta}_2$ = $-$1.80 (SE = 0.197, $p$ < 0.001) for $\Delta$Renewable share, indicating that day-over-day increases in renewable composition were associated with contemporaneous price declines.
+
+**Granger causality.** Bidirectional Granger causality was tested at weekly frequency using a VAR(2) model estimated via the `statsmodels` VAR module. Weekly aggregation reduced the sample to $n$ = 55 observations. Four directional tests were conducted on cumulative quality metrics: (i) quality $\rightarrow$ price (cumulative renewable share Granger-causes price: $F$ = 6.32, $p$ = 0.004); (ii) price $\rightarrow$ quality (price Granger-causes cumulative renewable share: $F$ = 16.08, $p$ < 10$^{-5}$); (iii) cumulative PQD $\rightarrow$ price ($F$ = 3.40, $p$ = 0.042); (iv) price $\rightarrow$ cumulative PQD ($F$ = 8.40, $p$ < 10$^{-4}$). The bidirectional significance on cumulative metrics, combined with non-significance on rolling 30-day metrics, indicates that the feedback loop operates through the accumulated quality composition of the pool rather than through marginal deposit quality.
+
+## Redemption analysis
+
+Redemptions from BCT were identified from ERC-20 Transfer events where the BCT pool contract address appears as the `from` field. Transfer event logs were collected for all 161 scored TCO2 token contracts using `eth_getLogs` on the Polygon RPC endpoint, filtered to transfers originating from the BCT pool address. This yielded 35,432 redemption events.
+
+Each redemption was matched to the quality score of the corresponding TCO2 token (using the same extended scoring framework applied to deposits). Redemption tonnage was computed from the transfer `value` field (scaled by the TCO2 token's 18-decimal precision). Redemption rates were computed per credit type as the ratio of cumulative redeemed tonnes to cumulative deposited tonnes.
+
+A chi-squared test of independence ($\chi^2$ = 4.0 $\times$ 10$^6$, $p$ $\approx$ 0, df = 1) tested whether renewable credits were redeemed at a different rate than non-renewable credits. The contingency table cross-tabulated renewable/non-renewable status against redeemed/remaining status.
+
+Net pool composition was computed as cumulative deposits minus cumulative redemptions at monthly intervals over the 14-month observation period. The net renewable share increased from 71% (first half mean) to 76% (second half mean), with Spearman $\rho$ = 0.81 ($p$ < 0.001) between month index and net renewable share, confirming that differential redemption amplified the pool's renewable concentration over time.
+
+Tonnage-weighted mean quality of redeemed credits (38.7) exceeded that of deposited credits (31.7), with a difference of 7.0 quality points. This pattern --- higher-quality credits being selectively withdrawn --- is consistent with the Gresham prediction that undervalued assets exit the pool when they can command higher prices elsewhere.
+
+## Wallet-clustered inference
+
+To address the concern that the naive binomial test ($p$ = 1.35 $\times$ 10$^{-187}$) overstates significance due to within-wallet deposit clustering, we conducted three wallet-level robustness tests.
+
+**Wallet-level permutation test.** For each of 10,000 iterations, we resampled wallets with their complete deposit portfolios under the null hypothesis that each deposit independently draws a renewable credit with probability $P$ = 0.37 (the VCS base rate). The wallet-mean renewable share was recomputed for each permutation. The observed wallet-mean renewable share (0.892) fell outside the entire permutation distribution (null mean = 0.370, SD = 0.020), yielding $p$ < 0.0001.
+
+**HHI-adjusted binomial test.** The effective number of independent observations was computed as $n_{\text{eff}}$ = 1/HHI, where HHI is the Herfindahl--Hirschman Index of wallet-level deposit concentration. With HHI = 0.012 and $n_{\text{eff}}$ = 83.5, the binomial test yielded $p$ = 2.9 $\times$ 10$^{-15}$ --- reduced by 172 orders of magnitude from the naive test but still highly significant.
+
+**DEFF-adjusted binomial test.** As a further robustness check, we computed the design effect (DEFF) assuming an intraclass correlation coefficient (ICC) of 0.5 (a conservatively high value reflecting strong within-wallet homogeneity). The resulting DEFF = 4.4 yielded $n_{\text{eff}}$ = 270 and $p$ = 4.7 $\times$ 10$^{-44}$.
+
+**Bootstrap CI on selection coefficient.** A wallet-level bootstrap (10,000 iterations, BCa correction) was used to construct a 95% confidence interval on the selection coefficient, defined as the wallet-mean renewable share minus the VCS base rate. The observed selection coefficient was 0.522 with a BCa 95% CI of [0.496, 0.547], indicating that the over-selection of renewable credits is robust to the clustering structure of deposits.
 
 **External validation with BeZero ratings.** Seven BCT projects had public BeZero ratings (from our expanded rank-correlation dataset). We mapped BeZero letter grades to a numeric scale (AAA = 95, AA = 80, A = 65, BBB = 50, BB = 35, B = 20, C = 15, D = 5) and computed the Spearman correlation between our framework composites and BeZero numerics on the overlap subset. We also assessed whether the temporal degradation pattern held under external ratings by dividing BeZero-matched deposits into terciles by block number.
 
