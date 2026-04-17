@@ -1,0 +1,193 @@
+{
+  "fdr_correction": {
+    "alpha": 0.05,
+    "n_tests": 10,
+    "n_survive": 6,
+    "tests": [
+      {
+        "rank": 1,
+        "test": "Base-rate binomial (renewable)",
+        "p_raw": 1.3532872341830925e-187,
+        "bh_threshold": 0.005000000000000001,
+        "p_adjusted": 1.3532872341830924e-186,
+        "survives_fdr": true
+      },
+      {
+        "rank": 2,
+        "test": "CCP calibration Mann-Whitney",
+        "p_raw": 5.572778610883042e-39,
+        "bh_threshold": 0.010000000000000002,
+        "p_adjusted": 2.786389305441521e-38,
+        "survives_fdr": true
+      },
+      {
+        "rank": 3,
+        "test": "Compositional shift (block~renewable)",
+        "p_raw": 8.014756154028288e-21,
+        "bh_threshold": 0.015,
+        "p_adjusted": 2.671585384676096e-20,
+        "survives_fdr": true
+      },
+      {
+        "rank": 4,
+        "test": "BCT temporal Spearman (full)",
+        "p_raw": 1.1051050109700789e-16,
+        "bh_threshold": 0.020000000000000004,
+        "p_adjusted": 2.762762527425197e-16,
+        "survives_fdr": true
+      },
+      {
+        "rank": 5,
+        "test": "Large vs small depositor (2-sided MW)",
+        "p_raw": 8.630753396047596e-05,
+        "bh_threshold": 0.025,
+        "p_adjusted": 0.00017261506792095192,
+        "survives_fdr": true
+      },
+      {
+        "rank": 6,
+        "test": "Pre-Terra temporal Spearman",
+        "p_raw": 0.0004048034840057263,
+        "bh_threshold": 0.03,
+        "p_adjusted": 0.0006746724733428772,
+        "survives_fdr": true
+      },
+      {
+        "rank": 7,
+        "test": "BeZero overlap Spearman",
+        "p_raw": 0.073,
+        "bh_threshold": 0.034999999999999996,
+        "p_adjusted": 0.10428571428571429,
+        "survives_fdr": false
+      },
+      {
+        "rank": 8,
+        "test": "Within-pool permutation null",
+        "p_raw": 0.224,
+        "bh_threshold": 0.04000000000000001,
+        "p_adjusted": 0.28,
+        "survives_fdr": false
+      },
+      {
+        "rank": 9,
+        "test": "NCT temporal Spearman",
+        "p_raw": 0.3213427539256732,
+        "bh_threshold": 0.045000000000000005,
+        "p_adjusted": 0.3570475043618591,
+        "survives_fdr": false
+      },
+      {
+        "rank": 10,
+        "test": "Token quality vs tonnage",
+        "p_raw": 0.9740496822920053,
+        "bh_threshold": 0.05,
+        "p_adjusted": 0.9740496822920053,
+        "survives_fdr": false
+      }
+    ]
+  },
+  "permutation_bct_full": {
+    "observed_rho": -0.23750113184925045,
+    "permutation_p_two_sided": 0.0,
+    "asymptotic_p": 1.1051050109700789e-16,
+    "null_mean": 0.00024302070311424729,
+    "null_sd": 0.029216796386566553,
+    "null_95_ci": [
+      -0.056818806386911204,
+      0.05778780908135903
+    ],
+    "n_permutations": 10000,
+    "n": 1187
+  },
+  "permutation_pre_terra": {
+    "observed_rho": -0.12538117565042864,
+    "permutation_p_two_sided": 0.0004,
+    "asymptotic_p": 0.0004048034840057263,
+    "null_mean": -7.793557705318206e-05,
+    "null_sd": 0.03555982642192883,
+    "null_95_ci": [
+      -0.06885216416912386,
+      0.06889334348164766
+    ],
+    "n_permutations": 10000,
+    "n": 792
+  },
+  "permutation_base_rate": {
+    "observed_renewable": 932,
+    "n_total": 1187,
+    "observed_fraction": 0.785172704296546,
+    "null_p": 0.37,
+    "permutation_p_one_sided": 0.0,
+    "asymptotic_p": 1.3532872341830925e-187,
+    "null_mean": 438.9724,
+    "null_sd": 16.64719911096158,
+    "null_max": 508,
+    "n_permutations": 10000
+  },
+  "nct_power_analysis": {
+    "n": 708,
+    "observed_rho": 0.037323418744172915,
+    "observed_p": 0.3213427539256732,
+    "mde_alpha05_power80": 0.10512397205190928,
+    "fisher_z": 0.03734076421928085,
+    "fisher_se": 0.03766217885773547,
+    "rho_95ci": [
+      -0.036459581769736196,
+      0.11070171223281527
+    ],
+    "n_required_for_rho_minus0105": 710,
+    "ratio_current_to_required": 0.9971830985915493,
+    "achieved_power": 0.1663978254044336
+  },
+  "bootstrap_cis": {
+    "n_bootstrap": 10000,
+    "observed_rho": -0.23750113184925045,
+    "naive": {
+      "mean": -0.2369022512770175,
+      "median": -0.23644187975533248,
+      "ci_95": [
+        -0.29068826010258086,
+        -0.1846413097315923
+      ],
+      "width": 0.10604695037098857
+    },
+    "cluster_robust": {
+      "n_clusters": 345,
+      "mean": -0.180359780519019,
+      "median": -0.21025192617821534,
+      "ci_95": [
+        -0.32319227620296903,
+        0.02444717883285866
+      ],
+      "width": 0.3476394550358277
+    },
+    "width_ratio_cluster_to_naive": 3.278165508953023,
+    "cluster_robust_significant": false
+  },
+  "depositor_tests": {
+    "mann_whitney_two_sided": {
+      "U": 38012.5,
+      "p_two_sided": 8.630753396047596e-05,
+      "rank_biserial_r": -0.17376872008645972,
+      "n_large": 255,
+      "n_small": 254,
+      "median_volume_threshold": 0.99,
+      "large_mean_quality": 30.993149547756982,
+      "small_mean_quality": 28.883937007874017,
+      "quality_difference": 2.1092125398829644
+    },
+    "volume_weighted_permutation": {
+      "observed_vw_gap": 2.1868298309487137,
+      "large_vw_quality": 31.099351336278893,
+      "small_vw_quality": 28.91252150533018,
+      "permutation_p_two_sided": 0.0819,
+      "null_mean": 0.025772616456582177,
+      "null_sd": 1.2670401804028013,
+      "null_95": [
+        -2.4548343301672197,
+        2.4405145134800406
+      ],
+      "n_permutations": 10000
+    }
+  }
+}

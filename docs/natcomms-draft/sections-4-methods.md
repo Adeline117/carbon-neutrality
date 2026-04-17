@@ -125,6 +125,12 @@ Per-dimension kappa values: permanence 0.684 (substantial), removal type 0.585 (
 
 **Cross-temporal stability.** The same 29 credits were scored under three methodology versions (v0.3, v0.4, v0.6). Grade agreement between v0.4 and v0.6 was 100% (29/29). Spearman $\rho$ between v0.3 and v0.6 composite rankings was 0.992.
 
+## Statistical inference and multiple testing
+
+All reported $p$-values were corrected for multiple testing using the Benjamini--Hochberg false discovery rate (FDR) procedure at $\alpha$ = 0.05, applied to the family of 10 primary hypothesis tests (see Supplementary Table). For the three headline claims (base-rate selection coefficient, BCT temporal correlation, pre-Terra temporal correlation), we supplemented asymptotic $p$-values with 10,000-permutation $p$-values. Permutation tests randomly shuffled the dependent variable (composite scores or renewable labels) across observations while preserving the independent variable (block number or deposit identity), computing the test statistic for each permutation and reporting the empirical fraction of permutation statistics at least as extreme as the observed value.
+
+**Cluster-robust inference.** Because multiple deposits may share the same TCO2 token (and thus the same quality score), the effective sample size for deposit-level tests is closer to the number of unique tokens ($n$ = 345) than the number of deposits ($n$ = 1,187). We computed cluster-robust 95% confidence intervals for the BCT temporal Spearman $\rho$ using a bootstrap that resampled at the TCO2-token level (10,000 iterations, seed = 42): each bootstrap draw sampled tokens with replacement and included all deposits for each sampled token. We report both naive (deposit-level) and cluster-robust (token-level) CIs to allow readers to assess the sensitivity of temporal inference to the clustering structure.
+
 ## Counterfactual quality-gate simulation
 
 For BCT and five additional pools, we simulated the application of quality gates at all six grade thresholds (B, BB, BBB, A, AA, AAA). At each threshold, only credits whose final grade met or exceeded the threshold were admitted. We recomputed: the number of admitted credits, the new tonnage-weighted mean composite, the resulting PQD, and the fraction of admitted credits at grade A or above.
