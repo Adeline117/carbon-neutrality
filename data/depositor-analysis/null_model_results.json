@@ -1,0 +1,47 @@
+{
+  "description": "Null model permutation test for adverse selection in BCT pool",
+  "observed": {
+    "volume_weighted_mean": 31.7094,
+    "equal_weighted_mean": 31.1206,
+    "total_tonnes": 15205729.0,
+    "n_deposits": 877,
+    "n_unique_tco2": 161,
+    "pqd": 0.6829
+  },
+  "null_model_1_bct_eligible": {
+    "description": "Permutation test: shuffle scores across TCO2 addresses within BCT-eligible universe",
+    "universe_size": 161,
+    "universe_mean": 32.2969,
+    "n_iterations": 100000,
+    "null_mean": 32.2992,
+    "null_std": 0.7454,
+    "null_p5": 31.1625,
+    "null_p95": 33.597,
+    "z_score": -0.7914,
+    "p_value_lower": 0.22397,
+    "percentile": 22.4,
+    "significant_at_005": false
+  },
+  "null_model_2_vcm_universe": {
+    "description": "Bootstrap from broader VCM universe (318 credits reconstructed from segment data)",
+    "universe_size": 318,
+    "universe_mean": 48.8493,
+    "n_iterations": 100000,
+    "null_mean": 48.8508,
+    "null_std": 2.8749,
+    "null_p5": 44.2399,
+    "null_p95": 53.7128,
+    "z_score": -5.9625,
+    "p_value_lower": 0.0,
+    "percentile": 0.0,
+    "significant_at_005": true
+  },
+  "null_model_3_bootstrap_ci": {
+    "description": "Deposit-level bootstrap for 95% CI of BCT VWM",
+    "n_iterations": 100000,
+    "bootstrap_mean": 31.713,
+    "bootstrap_std": 0.4299,
+    "ci_95_lower": 30.924,
+    "ci_95_upper": 32.6034
+  }
+}

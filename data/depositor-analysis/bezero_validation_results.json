@@ -1,0 +1,150 @@
+{
+  "section_a_direct_overlap": {
+    "n_overlap_projects": 7,
+    "overlap_details": [
+      {
+        "exp_id": "EXP01",
+        "name": "Ecomapua Amazon REDD+",
+        "vcs_id": "1094",
+        "bezero_grade": "C",
+        "bezero_numeric": 15,
+        "our_grade_expanded": "BB",
+        "our_grade_bct": "BB",
+        "our_composite": 30.75,
+        "n_tco2_tokens": 1,
+        "total_tonnes_deposited": 890.0
+      },
+      {
+        "exp_id": "EXP02",
+        "name": "Keo Seima Wildlife Sanctuary",
+        "vcs_id": "1650",
+        "bezero_grade": "A",
+        "bezero_numeric": 65,
+        "our_grade_expanded": "BBB",
+        "our_grade_bct": null,
+        "our_composite": null,
+        "n_tco2_tokens": 1,
+        "total_tonnes_deposited": 25000.0
+      },
+      {
+        "exp_id": "EXP04",
+        "name": "Envira Amazonia",
+        "vcs_id": "1382",
+        "bezero_grade": "BBB",
+        "bezero_numeric": 50,
+        "our_grade_expanded": "BB",
+        "our_grade_bct": "BB",
+        "our_composite": 32.35,
+        "n_tco2_tokens": 1,
+        "total_tonnes_deposited": 10.0
+      },
+      {
+        "exp_id": "EXP15",
+        "name": "Southern Cardamom REDD+",
+        "vcs_id": "1748",
+        "bezero_grade": "B",
+        "bezero_numeric": 20,
+        "our_grade_expanded": "B",
+        "our_grade_bct": "BB",
+        "our_composite": 33.55,
+        "n_tco2_tokens": 1,
+        "total_tonnes_deposited": 1.0
+      },
+      {
+        "exp_id": "EXP29",
+        "name": "Rimba Raya REDD+",
+        "vcs_id": "674",
+        "bezero_grade": "BB",
+        "bezero_numeric": 35,
+        "our_grade_expanded": "B",
+        "our_grade_bct": "BB",
+        "our_composite": 31.15,
+        "n_tco2_tokens": 1,
+        "total_tonnes_deposited": 229016.0
+      },
+      {
+        "exp_id": "EXP30",
+        "name": "Cordillera Azul REDD+",
+        "vcs_id": "985",
+        "bezero_grade": "C",
+        "bezero_numeric": 15,
+        "our_grade_expanded": "B",
+        "our_grade_bct": "BB",
+        "our_composite": 30.75,
+        "n_tco2_tokens": 1,
+        "total_tonnes_deposited": 20001.6
+      },
+      {
+        "exp_id": "EXP17",
+        "name": "Chinese Onshore Wind",
+        "vcs_id": "1188",
+        "bezero_grade": "C",
+        "bezero_numeric": 15,
+        "our_grade_expanded": "B",
+        "our_grade_bct": "B",
+        "our_composite": 28.62,
+        "n_tco2_tokens": 3,
+        "total_tonnes_deposited": 110724.0
+      }
+    ],
+    "total_bct_tonnes": 21984482,
+    "bezero_covered_tonnes": 385643,
+    "coverage_pct": 1.8,
+    "spearman_rho_overlap": 0.77,
+    "kendall_tau_overlap": 0.617,
+    "p_value_spearman": 0.0732
+  },
+  "section_b_broader_validation": {
+    "n_bezero_rated": 27,
+    "spearman_rho_full": 0.901,
+    "kendall_tau_full": 0.821,
+    "exact_match_rate": 0.519,
+    "within_1_grade_rate": 1.0
+  },
+  "section_c_bct_composition": {
+    "our_vwaq": 31.7,
+    "bezero_mapped_vwaq": 26.9,
+    "below_bbb_ours_pct": 63.1,
+    "below_bbb_bezero_pct": 63.1,
+    "our_grade_distribution": {
+      "B": {
+        "count": 647,
+        "tonnes": 9556068
+      },
+      "BB": {
+        "count": 159,
+        "tonnes": 4319190
+      },
+      "BBB": {
+        "count": 71,
+        "tonnes": 1330471
+      }
+    },
+    "bezero_est_distribution": {
+      "B": {
+        "count": 647,
+        "tonnes": 9553700
+      },
+      "BB": {
+        "count": 144,
+        "tonnes": 4298287
+      },
+      "BBB": {
+        "count": 75,
+        "tonnes": 1330481
+      },
+      "C": {
+        "count": 11,
+        "tonnes": 23261
+      }
+    }
+  },
+  "section_d_adverse_selection": {
+    "n_below_investment_grade_bezero": 5,
+    "pct_tonnes_below_ig_bezero": 93.5,
+    "avg_bezero_score_bct_overlap": 30.7,
+    "avg_bezero_score_full_universe": 48.1,
+    "bct_lower_by_points": 17.4
+  },
+  "conclusion": "External validation confirms BCT adverse selection. Our framework correlates with BeZero at rho=0.901 (n=27, 100% within +/-1 grade). Of 7 BCT projects with BeZero ratings, 5 (71%) are below investment grade. The BCT overlap averages 31/100 on BeZero's scale vs 48/100 for the full rated universe -- BCT selects disproportionately low-quality credits even by external standards."
+}

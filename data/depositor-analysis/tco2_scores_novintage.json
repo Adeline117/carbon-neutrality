@@ -1,0 +1,5522 @@
+{
+  "0x0149f1c77874e922b6d2b20c5878db693dc3c3d6": {
+    "project_id": "274",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x01d4f753061c6d64b80817f39ed695a5c75745b5": {
+    "project_id": "1506",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x0327d60e458421cc25926195cf705922de42593c": {
+    "project_id": "1002",
+    "type": "Fossil switch",
+    "vintage": 2011,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x04fdf735f31326d05e0ad8078f10b4f4c30885b2": {
+    "project_id": "722",
+    "type": "Fossil switch",
+    "vintage": 2008,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x057634ebb0259db4d27fe89554611685dfc297c3": {
+    "project_id": "192",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x05a28540de2869281fe8a39882fbadc96ec4766c": {
+    "project_id": "875",
+    "type": "ARR",
+    "vintage": 2013,
+    "composite_orig": 50.375,
+    "composite_novintage": 55.972,
+    "scores": {
+      "removal_type": 65,
+      "additionality": 55,
+      "permanence": 50,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 60,
+      "registry_methodology": 45
+    }
+  },
+  "0x06569829f200220f143020919935358b9c8dc03c": {
+    "project_id": "614",
+    "type": "Industrial",
+    "vintage": 2012,
+    "composite_orig": 36.375,
+    "composite_novintage": 40.417,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 45,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 25,
+      "registry_methodology": 40
+    }
+  },
+  "0x08adc81413ee0198932d8d4bd30b8c6014fbfc29": {
+    "project_id": "1985",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 32.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 64,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x08f2e2f5d30ee3f8b74bccce03b8b4ad1077fdac": {
+    "project_id": "1121",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x0b5ad42ae23907b0c66c92ec5198128e52e2c4cf": {
+    "project_id": "655",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x0bccab36f518f55e00f3efe2e828ae63cd2ac1b9": {
+    "project_id": "875",
+    "type": "ARR",
+    "vintage": 2015,
+    "composite_orig": 50.375,
+    "composite_novintage": 55.972,
+    "scores": {
+      "removal_type": 65,
+      "additionality": 55,
+      "permanence": 50,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 60,
+      "registry_methodology": 45
+    }
+  },
+  "0x0cf85d50925be85cd1c725794cc5e08b94a01987": {
+    "project_id": "753",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x0ef5f8cff1dce215eda72a36d46d9ad53f3012e9": {
+    "project_id": "1549",
+    "type": "Industrial",
+    "vintage": 2016,
+    "composite_orig": 39.175,
+    "composite_novintage": 40.417,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 45,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 28,
+      "co_benefits": 25,
+      "registry_methodology": 40
+    }
+  },
+  "0x0f310489a6eb1eeefc815ff3f0574c88a4aaaa06": {
+    "project_id": "1529",
+    "type": "IFM",
+    "vintage": 2014,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x11e8500cb005bb3f8c409b1c3f160c6e06c77629": {
+    "project_id": "1195",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x13d1167cb9fb2b0dd30e953be624ed0784637680": {
+    "project_id": "1190",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x14f68d08106437223491b1a76d3a23323084fc0c": {
+    "project_id": "513",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x1579568b031c2cd65a2fc3883a07d2e8e28954b7": {
+    "project_id": "1427",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x1a6d0f8964e2f27be2b6d503cb57866903e12f31": {
+    "project_id": "566",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x1bdf022e0cf838eb3c777e3e502db9e4029962c8": {
+    "project_id": "981",
+    "type": "REDD+",
+    "vintage": 2016,
+    "composite_orig": 30.75,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x1c7a0d0517d7fe5d3c4ea73bab125632e370749d": {
+    "project_id": "1356",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x1e48a71c6909b0e3ec43e2ce0560915b824edd30": {
+    "project_id": "905",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x202e1c39b9cad8212e35cb34a2e1ef292519b8c7": {
+    "project_id": "1580",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x225b28c1a77fd4493196db19c538a44801243537": {
+    "project_id": "173",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x255c36989f7b9e2f010d00117238aa0523e9c2e7": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x26c76a9848c24b4a7d17f69ec6b8c989f7c66c1d": {
+    "project_id": "2097",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x27217be63b40ec8a345e0de73b7e401b031b3f63": {
+    "project_id": "903",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x284a5240a5eaa9c9f6d80b12e7b7462a3e5f404f": {
+    "project_id": "132",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x2a048d7ca84f934f43c66081011a6bbc9dc785b1": {
+    "project_id": "1464",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x2c4d7f459311abd9523726fac4329138c790fd65": {
+    "project_id": "1521",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x2f42a9e08afc69e7f4c4d487838decaaa5d91dd8": {
+    "project_id": "487",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x2f96571de0a14c174ba9d1d09361ff8f7c5b130f": {
+    "project_id": "830",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x307ddba3cb35c7dbf29c9d8068426cdaf3237690": {
+    "project_id": "905",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x30c627b07cb2272da7bded8d41b8c45566122730": {
+    "project_id": "1203",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x314c0a010e148f1e1286f96f78ed366255267d54": {
+    "project_id": "786",
+    "type": "Waste/Methane",
+    "vintage": 2015,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0x354e2edcfbcd2f3b5fdce8cad3730408c052804e": {
+    "project_id": "1542",
+    "type": "IFM",
+    "vintage": 2013,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x35b73a62dd351030ecbd4252135e59bbb6345a60": {
+    "project_id": "10",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x3b00fd4f0314a7d8f7667604aecb3136f37ccf7f": {
+    "project_id": "830",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x3b63dd61a7914c4edcb3cc8abd33ec62f70a5428": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x404a385f65dd44131808bca3b2ba37458b7b9753": {
+    "project_id": "1578",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x43231bc0ebef0edbc39170c0608dc6f118768eb6": {
+    "project_id": "614",
+    "type": "Industrial",
+    "vintage": 2015,
+    "composite_orig": 36.375,
+    "composite_novintage": 40.417,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 45,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 25,
+      "registry_methodology": 40
+    }
+  },
+  "0x463de2a5c6e8bb0c87f4aa80a02689e6680f72c7": {
+    "project_id": "1052",
+    "type": "REDD+",
+    "vintage": 2012,
+    "composite_orig": 30.75,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x4ce8edbb79deb720c629ebf184d59ada32d79ae2": {
+    "project_id": "51",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x4e8e8679d420ba586cd317288eb889ae0ce0e0b8": {
+    "project_id": "788",
+    "type": "Fossil switch",
+    "vintage": 2008,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x4f0efaaba67c538dc4cf5abba9afe0ff22243408": {
+    "project_id": "850",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x51377b1758fdcb591700006b8b697229a042419c": {
+    "project_id": "391",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 31.275,
+    "composite_novintage": 30.306,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 17,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x520dd8af228937b7ecb88f815bde03b58a63ec53": {
+    "project_id": "1094",
+    "type": "REDD+",
+    "vintage": 2009,
+    "composite_orig": 27.75,
+    "composite_novintage": 30.833,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 30,
+      "permanence": 40,
+      "mrv_grade": 35,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x53064620422f681e38b93eea8f92d2e398a063c9": {
+    "project_id": "414",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.125,
+    "composite_novintage": 27.917,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x54a34c14db1093eb6e602b83db9ecc8cb929ba5c": {
+    "project_id": "1382",
+    "type": "REDD+",
+    "vintage": 2015,
+    "composite_orig": 31.35,
+    "composite_novintage": 33.056,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 30,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 16,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x5a75fa233a06cfcf708549785598b428340b9261": {
+    "project_id": "875",
+    "type": "ARR",
+    "vintage": 2012,
+    "composite_orig": 50.375,
+    "composite_novintage": 55.972,
+    "scores": {
+      "removal_type": 65,
+      "additionality": 55,
+      "permanence": 50,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 60,
+      "registry_methodology": 45
+    }
+  },
+  "0x5a864120a0c3dde2f4837825f7f6cdc8a097699c": {
+    "project_id": "487",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5ae9598345be49882a2d3958f80ebe272e7652ca": {
+    "project_id": "753",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5dbceffcf2af47f0db28460fc767024f62a7b6bd": {
+    "project_id": "836",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5e9ff0805e4fcf16ba0cc268c404e34c2fecf101": {
+    "project_id": "753",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5edc0b28bf362cce80eb4fd637891916cc434ab0": {
+    "project_id": "1205",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5f40f0bf4d238beeb3a89fa92f627ce022e38bb3": {
+    "project_id": "1160",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x61a6bc0c4e4a4e207007e2c8a696b50189ac4e80": {
+    "project_id": "896",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x62896f42cf1371b268db56e50d67c34f3eb1ad7a": {
+    "project_id": "674",
+    "type": "REDD+",
+    "vintage": 2014,
+    "composite_orig": 27.4,
+    "composite_novintage": 30.0,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 25,
+      "permanence": 30,
+      "mrv_grade": 45,
+      "vintage_year": 4,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x6362364a37f34d39a1f4993fb595dab4116daf0d": {
+    "project_id": "1529",
+    "type": "IFM",
+    "vintage": 2012,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x6404c3266f92c256856d61837ffa28b39a3d8c26": {
+    "project_id": "1345",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x64067baf50edc20aa1a80c4275bd44e92e6406dc": {
+    "project_id": "1189",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x64de5c0a430b2b15c6a3a7566c3930e1cf9b22df": {
+    "project_id": "1190",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x65e217285f8c3bf615784c72e5874aa8ac35ef9d": {
+    "project_id": "875",
+    "type": "ARR",
+    "vintage": 2014,
+    "composite_orig": 50.375,
+    "composite_novintage": 55.972,
+    "scores": {
+      "removal_type": 65,
+      "additionality": 55,
+      "permanence": 50,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 60,
+      "registry_methodology": 45
+    }
+  },
+  "0x65f2346f4dd8cb58d2f0b17f6f00dd5933a0738b": {
+    "project_id": "762",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x6ad6ddcee331bf5a47cf2c207ea672d5c9423b69": {
+    "project_id": "708",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x6bb8bf64f05126a891e8d9387cc93c6523e8fb49": {
+    "project_id": "68",
+    "type": "Fossil switch",
+    "vintage": 2013,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x6d1113b882668c6a2a1c1554425bedbe0889f2c3": {
+    "project_id": "1174",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x701efa21d463e1332348dea55c642456c57c2d60": {
+    "project_id": "713",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x701f5f7a70a17b141fc2de45ef45e86eeed642fc": {
+    "project_id": "494",
+    "type": "Fossil switch",
+    "vintage": 2009,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x7134b2de32d00efcf3955d9728996d944100ba5d": {
+    "project_id": "566",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x714a47cd9479f4afaea334f4393499d6520945cf": {
+    "project_id": "631",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x7526b59e5a7daa4ef2667274647c9d49f427f1fb": {
+    "project_id": "1525",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x753391766e3db5a38d755541f553362145fa8d41": {
+    "project_id": "614",
+    "type": "Industrial",
+    "vintage": 2010,
+    "composite_orig": 36.375,
+    "composite_novintage": 40.417,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 45,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 25,
+      "registry_methodology": 40
+    }
+  },
+  "0x76b8ced0a22f7c676222704851a1364ab9e1ab36": {
+    "project_id": "173",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x78e10f10aa3828d75d03d3137e7c43bace474cc5": {
+    "project_id": "1508",
+    "type": "Fossil switch",
+    "vintage": 2010,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x7b2bfcb06632f78eb087734384c3a07df0975fd0": {
+    "project_id": "892",
+    "type": "Renewable",
+    "vintage": 2020,
+    "composite_orig": 31.525,
+    "composite_novintage": 27.917,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 64,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x7b4e7f774965f3a2dd1ac5e90ea3d26f7786fe4d": {
+    "project_id": "132",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x7b6c20ab3aed15f8c695978282dc0a30093bec97": {
+    "project_id": "1542",
+    "type": "IFM",
+    "vintage": 2015,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x7ee872d87192dc5e049df73436187c92fed97c6a": {
+    "project_id": "1310",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x81b978517aeae9a3378fd9e98c03116457508624": {
+    "project_id": "837",
+    "type": "Fossil switch",
+    "vintage": 2012,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x882c4144c096cbd8dc08067289063e4eee21898a": {
+    "project_id": "1748",
+    "type": "REDD+",
+    "vintage": 2016,
+    "composite_orig": 31.55,
+    "composite_novintage": 31.944,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 25,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 28,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x88da4c6bffdaedf6b64bdb6060973f86a77830ec": {
+    "project_id": "981",
+    "type": "REDD+",
+    "vintage": 2013,
+    "composite_orig": 30.75,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x88fcde602222a0dc3afdab7e230ed3573342f5b0": {
+    "project_id": "68",
+    "type": "Fossil switch",
+    "vintage": 2012,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x8aa855850fbc98cf87e2523956431c1dddc82813": {
+    "project_id": "903",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x8eb8bb60e681dcebb2cf818731532cc00e2b7ee4": {
+    "project_id": "810",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x8fec92af67de859984d32ace28620a882cef07f9": {
+    "project_id": "1671",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 31.075,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 52,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x91ed8ab86ff6a940a8307aa305c02748dd6c42f2": {
+    "project_id": "1205",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x92bfcddac83f2e94f02fc7aa092eb6aec08a0dec": {
+    "project_id": "439",
+    "type": "Industrial gas",
+    "vintage": 2008,
+    "composite_orig": 38.125,
+    "composite_novintage": 42.361,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 25,
+      "permanence": 10,
+      "mrv_grade": 75,
+      "vintage_year": 0,
+      "co_benefits": 15,
+      "registry_methodology": 35
+    }
+  },
+  "0x932594f79bf38595836cabaabf28429ef9046f19": {
+    "project_id": "836",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x9962db9d201737442de87e51906c09b7d4b0a7e6": {
+    "project_id": "982",
+    "type": "Fossil switch",
+    "vintage": 2009,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x9aeb37eea9e9a7befc983aad3e463e6247430027": {
+    "project_id": "1529",
+    "type": "IFM",
+    "vintage": 2011,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x9b5df965ec38d2a0a527af38e9b452431b5ce5f7": {
+    "project_id": "728",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 32.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 64,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x9c4684c2eed63a1a61e762379d6c5d5f0439c052": {
+    "project_id": "631",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x9c73caa46d06865acd5cfd1fedc2ce7f6564bed8": {
+    "project_id": "192",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x9dd85ac3cd17a5948e709529b128dbe9a728393c": {
+    "project_id": "836",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x9e04d79b243100ee0ae3c56c7ea83449ebc6fd88": {
+    "project_id": "1499",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x9e9b3a0208e19c44096fdaf99c09fd4991e52e73": {
+    "project_id": "1100",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x9f3d02458063131d5eb737ee4fe3c03aa1f324fc": {
+    "project_id": "566",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xa0b6a73e65c55e1f7f5c2c015238fef76a9f72b6": {
+    "project_id": "670",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xa2aeb5d0ca351b92f539216747279cb7671bb094": {
+    "project_id": "713",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xa7aa54c4c6097f9e169e9d11c0c33d2bb87aadbf": {
+    "project_id": "653",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 27.925,
+    "composite_novintage": 27.917,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0xab9c77ebc8bb34b872dbe7d0a89a7578752ab854": {
+    "project_id": "12",
+    "type": "Waste/Methane",
+    "vintage": 2012,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xac22a47e0970760d825332864deec56777ba88a2": {
+    "project_id": "836",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xacc93a8ce0ca0a7f131fb042090ee03da2102121": {
+    "project_id": "1188",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xace034fcbeee0976207be6d580fe001db1fde143": {
+    "project_id": "1427",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xad02ccfc793fa0edcf248fb3d93b42a289ac50b4": {
+    "project_id": "786",
+    "type": "Waste/Methane",
+    "vintage": 2011,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xaf1cbdb46b9c7a1e481fe46630fa7cb390dab046": {
+    "project_id": "905",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb00110cc12cdc8f666f33f4e52e4957ff594282f": {
+    "project_id": "985",
+    "type": "REDD+",
+    "vintage": 2013,
+    "composite_orig": 25.75,
+    "composite_novintage": 28.611,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 20,
+      "permanence": 40,
+      "mrv_grade": 35,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0xb0d34b2ec3b47ba1f27c9d4e8520f8fa38ef538d": {
+    "project_id": "191",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb139c4cc9d20a3618e9a2268d73eff18c496b991": {
+    "project_id": "191",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb1d1c03c1650ec2798c1426f9a569d5df64469d0": {
+    "project_id": "426",
+    "type": "Waste/Methane",
+    "vintage": 2011,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xb390b9db5700a2684e7797ec54f2dbaa08194cb8": {
+    "project_id": "264",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 22,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb65a6c557a762608c83d0aed90d58782bb2a9a3e": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb685e69eebdcfcc07850609e966eda412baf7b4b": {
+    "project_id": "982",
+    "type": "Fossil switch",
+    "vintage": 2011,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0xb785726a328d87539d5fa8e70fce7ae0cd9d59af": {
+    "project_id": "132",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xb8d833df82592ea53b34e4770509ca1b3d3fa092": {
+    "project_id": "1693",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xb9095520d2179c20152fa480523a0bdcaf512070": {
+    "project_id": "1100",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xbb28eb3e5678b163839b1479cde72b62e6591985": {
+    "project_id": "566",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xbbb0b227a5999568121f9b3af9153fcbca39e86e": {
+    "project_id": "1146",
+    "type": "Waste/Methane",
+    "vintage": 2015,
+    "composite_orig": 43.35,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 16,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xbd20fff4da5605675951140a49a871fa6a76b79c": {
+    "project_id": "192",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0xbd55baab51cae4e9e30387c447650eef38419fba": {
+    "project_id": "905",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xbf606ca93ed8bc647b647ec90ce129fb15f453bb": {
+    "project_id": "173",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xbfd6a74d4e87ef36378e98091d7166f13fd51689": {
+    "project_id": "836",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xc547254c370167baf970be5a11b7962a418b0d3e": {
+    "project_id": "614",
+    "type": "Industrial",
+    "vintage": 2014,
+    "composite_orig": 36.375,
+    "composite_novintage": 40.417,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 45,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 25,
+      "registry_methodology": 40
+    }
+  },
+  "0xc63e384fafdbe4b0740a3f4ee65411aa659cf44a": {
+    "project_id": "1205",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xc645b80fd8a23a1459d59626ba3f872e8a59d4cb": {
+    "project_id": "191",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xc7cfca393c969865c70056d0324ee1d7d0dc98ba": {
+    "project_id": "10",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xc84403a38b90f1db216db398beb9c8acb3ad7d3b": {
+    "project_id": "1542",
+    "type": "IFM",
+    "vintage": 2014,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0xc86eb0bea0f66f6c594d2c18d117fc49f8ca10d1": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xc8bd17e44bb1789efae1f5d739657a2121dd5bc8": {
+    "project_id": "728",
+    "type": "Renewable",
+    "vintage": 2020,
+    "composite_orig": 32.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 64,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xca60e17a483c126d116a4f043a54461bf5989a78": {
+    "project_id": "1742",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xcb52f117dfdaeec365f155a54e33303aff964bad": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xcbe1be82ab73ea79cbcc01b4af3a0e9d8cbf660c": {
+    "project_id": "132",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xcc3bb186a33a3b299f9cec8fb023312db91b8848": {
+    "project_id": "274",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xccacc6099debd9654c6814fcb800431ef7549b10": {
+    "project_id": "191",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xcced78964f1dbbf0b1c65b2068dbda2f103a8d79": {
+    "project_id": "292",
+    "type": "Renewable",
+    "vintage": 2020,
+    "composite_orig": 33.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 76,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xcdbdf65a88b0d817e5cabe542c8a74c346f1fa38": {
+    "project_id": "614",
+    "type": "Industrial",
+    "vintage": 2016,
+    "composite_orig": 36.375,
+    "composite_novintage": 40.417,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 45,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 25,
+      "registry_methodology": 40
+    }
+  },
+  "0xcdfe0e88045be9300f859284c8b6ca5c26ee2e9f": {
+    "project_id": "2098",
+    "type": "Waste/Methane",
+    "vintage": 2018,
+    "composite_orig": 45.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 40,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xcfcad380a9f21ad3e73cb0c8898a25fcb87679fe": {
+    "project_id": "1525",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xd0576962d4ffc8bf72cb2d9b08a1b024e03d4a29": {
+    "project_id": "762",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xd1960efc6c907d01ef618e29fe9a31910cfbec66": {
+    "project_id": "513",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xd5e352ef67f07d990f11389631d0b748b0cce9b2": {
+    "project_id": "494",
+    "type": "Fossil switch",
+    "vintage": 2008,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0xd6aacd6a68bebef8d1a69efc2705b127823ee624": {
+    "project_id": "1079",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xd7d3387aff6c4ff6c0c986ad6e0ff075499f16b6": {
+    "project_id": "265",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xd821fb00d92c3b89708548242f0527903667931c": {
+    "project_id": "173",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xd94de726f1e03e15ea206402a93a62584afa093c": {
+    "project_id": "12",
+    "type": "Waste/Methane",
+    "vintage": 2013,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xdb6942dd3db6de4e1ba09da0ad03c6a4b5873216": {
+    "project_id": "1044",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0xdbcb00bde2a7f1094688f59bf257374947911f5a": {
+    "project_id": "812",
+    "type": "ARR",
+    "vintage": 2009,
+    "composite_orig": 50.375,
+    "composite_novintage": 55.972,
+    "scores": {
+      "removal_type": 65,
+      "additionality": 55,
+      "permanence": 50,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 60,
+      "registry_methodology": 45
+    }
+  },
+  "0xe1695223f115b16e0e2eb1e00fc97c4532db7c73": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe20035b4413cdba325c2c056f21fd1c041971efe": {
+    "project_id": "713",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe3bcd5500886acdbae3209f65f8a04b87fdd4c33": {
+    "project_id": "762",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe43a0c43ae598892e42131704eb487f55f4fadb7": {
+    "project_id": "2089",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe786d856b72ee39dcb5804abd7faf89a081126b8": {
+    "project_id": "1121",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xeb9dea5c277b3d2eb42a54e3db9e0899d8dfdf96": {
+    "project_id": "1205",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xeced3c561887a2c3d2778ebe45a86ca1e1e687bd": {
+    "project_id": "192",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0xee11b53bbe25d37f55483054ff5658373d81e4ee": {
+    "project_id": "830",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xee786dd3d9cd70712e6ba5abe66477b1f9e03994": {
+    "project_id": "896",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xf47c39d007ef5e76e6fd468a3979cb3b0af3a096": {
+    "project_id": "614",
+    "type": "Industrial",
+    "vintage": 2013,
+    "composite_orig": 36.375,
+    "composite_novintage": 40.417,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 45,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 25,
+      "registry_methodology": 40
+    }
+  },
+  "0xf57ad85727f95bb51c3b1a4678c5f68991357507": {
+    "project_id": "753",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xf76387133c8af3a6d64938d09ae248c5ee75c961": {
+    "project_id": "535",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xfffce8e66fd470e401fadf3d47ca9ad28e82013a": {
+    "project_id": "414",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.125,
+    "composite_novintage": 27.917,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x899b75bc5298784355ca6a265b79b839e6d02bc0": {
+    "project_id": "338",
+    "type": "Waste/Methane",
+    "vintage": 2011,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0x82b8edd544ec70f151744399f8c206f0f59d4d94": {
+    "project_id": "1792",
+    "type": "Renewable",
+    "vintage": 2020,
+    "composite_orig": 33.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 76,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5fbf142e518d5311b76b8191bfb2470dca871365": {
+    "project_id": "426",
+    "type": "Waste/Methane",
+    "vintage": 2012,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xedf8d2f1f1820ac67bc69167f0051512da4f1f6a": {
+    "project_id": "12",
+    "type": "Waste/Methane",
+    "vintage": 2015,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xa8cc5bde3134f73e25e5fa386d0e9c68ae3c77e6": {
+    "project_id": "1686",
+    "type": "REDD+",
+    "vintage": 2017,
+    "composite_orig": 34.75,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 40,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0xb5a6342ebad3a050171480b86443622c72fbced6": {
+    "project_id": "1148",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x7482e7ab7654038d5834057c916ff91e32965427": {
+    "project_id": "2307",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 31.075,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 52,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x0e45c120bc472a7f7fc25c1f9813081afed230ac": {
+    "project_id": "330",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0xfb6c87057216677a02c4ef0062a0c23b78f68ff2": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x66d279ec7f5a4ecbe5e375f4058e9c924ab0db5b": {
+    "project_id": "1499",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x04943c19896c776c78770429ec02c5384ee78292": {
+    "project_id": "1577",
+    "type": "IFM",
+    "vintage": 2015,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0xa8f4b7130ce38d37acde248a0fc56fdb4e1ed7e1": {
+    "project_id": "669",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xa8345ae436998fdd28c6e2f90a3f8e3a38152b10": {
+    "project_id": "1521",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x3b28baae3987502b436f6f37d1bcd7b87b517b27": {
+    "project_id": "1566",
+    "type": "REDD+",
+    "vintage": 2019,
+    "composite_orig": 37.15,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 64,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x97d84e8d227aa33014c2a008d6fda45cf8bb6e6c": {
+    "project_id": "12",
+    "type": "Waste/Methane",
+    "vintage": 2014,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0x910781a05d3076353cdf243b9ebe7dc7ad6c21e1": {
+    "project_id": "414",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 25.125,
+    "composite_novintage": 27.917,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x3d28d262c0efa30e70f81452ad9e76fad7f1b230": {
+    "project_id": "173",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xdb0d2fa9cc22ada2547dda9df934c3113177008c": {
+    "project_id": "1781",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x55038dceeb3b7dcab6d6054429b1005121f93d66": {
+    "project_id": "1143",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb8802c009dd265b38e320214a7720ebd7a488827": {
+    "project_id": "612",
+    "type": "REDD+",
+    "vintage": 2019,
+    "composite_orig": 37.15,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 64,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0xfd9004350e3e584fdea4a0675a8ce73fd0d007c6": {
+    "project_id": "426",
+    "type": "Waste/Methane",
+    "vintage": 2016,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xfee4da988b926cf9b2c3d3f5fecaeaa707bd1f63": {
+    "project_id": "2092",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x1f0af859d239ea6768c98c124de1205b061e1c02": {
+    "project_id": "330",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x113b855bc44052b78a1ec7434a4369fd33d6f81b": {
+    "project_id": "309",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x0c29deaa1383c88712af1083ab8328a1e3661b17": {
+    "project_id": "535",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x351501415569e372fa36eb115b309dea50289fdc": {
+    "project_id": "1505",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x01181906308e8be2594677c66ed312434ddb97d0": {
+    "project_id": "274",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x934df63205fa37b2406625573b8eb611e72611d9": {
+    "project_id": "68",
+    "type": "Fossil switch",
+    "vintage": 2011,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0xf01742db95e82e3da653a1bc894ac88007fa70d2": {
+    "project_id": "1291",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x4749d85c235ffbd2bd6c3bc89b3c731ff4a1d114": {
+    "project_id": "870",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x8b66a0708a25a9abaac0968dadfee6d20f440dee": {
+    "project_id": "498",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xd55b2a3df0ba993cf3ce580dca10594467bfc7db": {
+    "project_id": "1143",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xabfd6760151c7f9361cc5b03bbeebe2d7c0251da": {
+    "project_id": "981",
+    "type": "REDD+",
+    "vintage": 2014,
+    "composite_orig": 30.75,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x7f8e1bc8803d8960bd900bab1cf2e1ba940ea76b": {
+    "project_id": "892",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 31.525,
+    "composite_novintage": 27.917,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 64,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x94d7c2b5a7904e8c16616e05ab3402a40197a0f9": {
+    "project_id": "253",
+    "type": "Waste/Methane",
+    "vintage": 2015,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0x0cf0b2c0d780520571c6e4be838b274739c07519": {
+    "project_id": "1205",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xce95ba54fa6def1eb372b9bf4500f800916035b5": {
+    "project_id": "936",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x6377e5278d0b49227c94608f1e74485cedb25fd7": {
+    "project_id": "584",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x206276a00b570e36d4a0ee1023a00754f30dbfb8": {
+    "project_id": "699",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x9732344d41d48b0b11d11bce29095e45bda6081f": {
+    "project_id": "1258",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xbbd785d543d380a693e182542c2d0915aaa4b039": {
+    "project_id": "1021",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x13cd6b343fd8fbeb0a8d8ed0338410d8c485f240": {
+    "project_id": "535",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xa05fbc4cb4e632e450eebaf083b8d324c72788b7": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xbb44b7460ecf4a50e9cda7451aeac97e65ba5b76": {
+    "project_id": "265",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x53697c351d326e9bc50d9947eea1c5a9a92b9c83": {
+    "project_id": "148",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.125,
+    "composite_novintage": 29.028,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x6655450c27082e083daf3517b87c6a5bcc9016ff": {
+    "project_id": "631",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xd13de997164bbcecf2f1d3838f9596d44b9147a4": {
+    "project_id": "986",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x151749600a79cfd8fac9c7ef8bba0abceac19fd8": {
+    "project_id": "1221",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xcdd51e22f2cbcf704139cda53c796ef0c01d8172": {
+    "project_id": "1497",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x3ae1638be01402d56b70505a0ede1585939d3bb8": {
+    "project_id": "1301",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xa770c61eb0bb80f36af4a4d1595ab1425ea285b5": {
+    "project_id": "253",
+    "type": "Waste/Methane",
+    "vintage": 2011,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xa6cea633870d06a104aa9b1dd33e68ff81b1714a": {
+    "project_id": "762",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x664ff8ed0c81ec93c25b9a2657b918555d98bb7f": {
+    "project_id": "1186",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xef654e80862830f2716559cc3b050794e6ea54df": {
+    "project_id": "498",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xe527658f0b966f4e9803b5c2a2f832b7e402c7d8": {
+    "project_id": "265",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x543f416a2c631689b848025194bc4a668b0c6970": {
+    "project_id": "535",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xeaa9938076748d7edd4df0721b3e3fe4077349d3": {
+    "project_id": "981",
+    "type": "REDD+",
+    "vintage": 2017,
+    "composite_orig": 30.75,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0xbd83fc2647776581aacdae89f1ace55426748a62": {
+    "project_id": "1656",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xd590feea6640ff9754f321b3d3ec055bbd5c7af1": {
+    "project_id": "1189",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x930a77e06611a7a23108bed68276cd22627dfc3b": {
+    "project_id": "823",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xdaec258e8c24e96e682b4c72922949b22fe6970b": {
+    "project_id": "917",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x6252cc6be84d4a5923162678226b8fd3a2da2b92": {
+    "project_id": "1044",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0xceb24e21da947372a3ad9e809bb6b32d10c9ca3a": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x2db881fa61904f4bbed2f8e9aa7337ec241db8bf": {
+    "project_id": "513",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe51f3dbec1fda6efcbae2d1bb3513de29e1746b1": {
+    "project_id": "498",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xbdf0ac1996bacfc42c09b967723de2a5f590de64": {
+    "project_id": "499",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe0591fdfc9c4f6d3e81d7def029732a07be87de9": {
+    "project_id": "1762",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 32.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 13,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 64,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x9d62c1e6953c9ea4ccd4500af095522e895d5648": {
+    "project_id": "1464",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x6e1295bfcb681a087939ebf4509fe8a4eed820f3": {
+    "project_id": "1758",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 32.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 64,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x092082db13d837f901253fb10f67f11a98d08edc": {
+    "project_id": "619",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x06422aab8684600eb597c13524aa9f9e82387839": {
+    "project_id": "758",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x66b15c0df99053b4f3d13b84eba00217e03368c3": {
+    "project_id": "1188",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xae7c5c3e9d1501a2d829fe7cd709a4e9c0ea96b7": {
+    "project_id": "758",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x4c3356480ff470b9b75a507170c05138c36f53a0": {
+    "project_id": "330",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0x8fa690516dc1e0bf451be86d6ae7b9ab1942f44a": {
+    "project_id": "836",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x846ed37dc94fb1790eafa03c4eb3fbddface49b5": {
+    "project_id": "499",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb921a7533451449fe208f495ab8a6ff71b7c3704": {
+    "project_id": "1002",
+    "type": "Fossil switch",
+    "vintage": 2009,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x64754c9183cd22650f3aa3f8e875b964c748366d": {
+    "project_id": "624",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xb4ee149eea2aa9d1989226d2918f02490b9c3e25": {
+    "project_id": "1160",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x862e4c0bcf0133a161fed429c9fb52a06f6dbb24": {
+    "project_id": "2026",
+    "type": "Renewable",
+    "vintage": 2019,
+    "composite_orig": 32.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 64,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x80ea96d75a308144708570a8e84f50df5477ee8a": {
+    "project_id": "1577",
+    "type": "IFM",
+    "vintage": 2014,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x47e651efd873ef0f15ca1f8d5d80ed0869d9024f": {
+    "project_id": "614",
+    "type": "Industrial",
+    "vintage": 2011,
+    "composite_orig": 36.375,
+    "composite_novintage": 40.417,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 45,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 25,
+      "registry_methodology": 40
+    }
+  },
+  "0xcd91ca8bc13f9fb09837a574af864376e9f1c100": {
+    "project_id": "682",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xa244b10f9c68a684288b07768a5e7c46b54b93de": {
+    "project_id": "1824",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x87299b25247ac6c2b1878f591d6fb8c2cb0a3b4c": {
+    "project_id": "293",
+    "type": "Agriculture",
+    "vintage": 2008,
+    "composite_orig": 36.25,
+    "composite_novintage": 40.278,
+    "scores": {
+      "removal_type": 40,
+      "additionality": 45,
+      "permanence": 30,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 50,
+      "registry_methodology": 40
+    }
+  },
+  "0x7b0929f485fe2b41e2615e5783e3ec93f09c0bab": {
+    "project_id": "1174",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe8a283863c0a9fb80949c9baa60a5083492a9ce3": {
+    "project_id": "927",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xf71dadada9c134f966568e7afe6830bcdeca37d5": {
+    "project_id": "1580",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x80b837eed4f02047b422731c30ba9abb7816198f": {
+    "project_id": "68",
+    "type": "Fossil switch",
+    "vintage": 2010,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x5ac08bef4447bc83400f4dce67dcbe4d973bfb40": {
+    "project_id": "1188",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x68e65cc375f10baf74ac41773658dd00b5de1eaa": {
+    "project_id": "1577",
+    "type": "IFM",
+    "vintage": 2012,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x76de26a656dd4736aa563c0fa6171e26efcdcd75": {
+    "project_id": "1721",
+    "type": "Cookstove",
+    "vintage": 2016,
+    "composite_orig": 30.425,
+    "composite_novintage": 30.694,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 40,
+      "permanence": 5,
+      "mrv_grade": 35,
+      "vintage_year": 28,
+      "co_benefits": 50,
+      "registry_methodology": 40
+    }
+  },
+  "0xf33b6c98ebdb93fa8b6cf4a25842ddb0cbb94828": {
+    "project_id": "1140",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xc968a74376b1cc14ff2614cc027fc8562461adcd": {
+    "project_id": "773",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xaa143883f7f31c2b7d69c69f2eedbd4ec955df0b": {
+    "project_id": "1204",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe8bfbd1a18d2ca453ab143bbdbf18ef9eea57556": {
+    "project_id": "1187",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x60cdbd775d606f5b36e01908f080be62bad21862": {
+    "project_id": "1261",
+    "type": "Fossil switch",
+    "vintage": 2012,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0xa96c8e571b23a6cfc8ca6955c5d3ff03a13fa699": {
+    "project_id": "1650",
+    "type": "REDD+",
+    "vintage": 2015,
+    "composite_orig": 31.35,
+    "composite_novintage": 33.056,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 30,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 16,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x0115ab6d9a0fd6de3a9a339115c8f2bd0e3deed6": {
+    "project_id": "498",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x1006b2cf2872ebf1bb075642c16bc35816ec18d5": {
+    "project_id": "836",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xaa294e91113f364ede0d70d9bd627ce0266a2e42": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5c6ab22683c8e5b6ee26b789b12a8b1bebe8e6ab": {
+    "project_id": "2092",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5719f802a6bef11be53069c15ff8433660c095ea": {
+    "project_id": "1506",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5bd17eab79cf1d0d2f435327e43cc531216953bf": {
+    "project_id": "2095",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x77c47b081527c999b4603556a8f225d503b6f44a": {
+    "project_id": "499",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x398e746233027723ee841488e5d166243f77d2b8": {
+    "project_id": "1542",
+    "type": "IFM",
+    "vintage": 2016,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x626bda8df2bd591fd666ab1f72b554ba502861a5": {
+    "project_id": "92",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x8afc33b3b5a52030ea0d00309442ee9dd9a49674": {
+    "project_id": "758",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x6f9931b11a83fb28384034b0d044a085192bbecc": {
+    "project_id": "733",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x87e7717c5e0566c89251c5b692cd5a90274acd10": {
+    "project_id": "274",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x261bef4b19ace1398c6603ed7299296d0e32cc00": {
+    "project_id": "1162",
+    "type": "ARR",
+    "vintage": 2015,
+    "composite_orig": 51.975,
+    "composite_novintage": 55.972,
+    "scores": {
+      "removal_type": 65,
+      "additionality": 55,
+      "permanence": 50,
+      "mrv_grade": 55,
+      "vintage_year": 16,
+      "co_benefits": 60,
+      "registry_methodology": 45
+    }
+  },
+  "0x380575d40ac3b68e528a3c1394e5e71c367d7605": {
+    "project_id": "1186",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x98a7ff1b19e13770f60eb10abd6eed1a216f5029": {
+    "project_id": "251",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x841d9df5cefd9837be5c1b53c8cb2bb0111d7262": {
+    "project_id": "2092",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x38c518400a3f9e2110dc52e6c92e37fb7378aaaf": {
+    "project_id": "1577",
+    "type": "IFM",
+    "vintage": 2013,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x24ef09e68e5820b02c838b18b334e0bf9ecf109c": {
+    "project_id": "699",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0xfcb0e2b4149076d58f994fe2d106174240ea89e8": {
+    "project_id": "265",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb2a74bbce42c3fed72cc309e513dfe89e1931871": {
+    "project_id": "1203",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x3f98903065656bd43b2518816d936d29f85833ee": {
+    "project_id": "1037",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xfb4a320890a3a47c14656dd5d9828b0c76d50e41": {
+    "project_id": "2098",
+    "type": "Waste/Methane",
+    "vintage": 2017,
+    "composite_orig": 45.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 40,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xe47838cb5874da9b8a40107abbf4edf75a7e7ba0": {
+    "project_id": "875",
+    "type": "ARR",
+    "vintage": 2016,
+    "composite_orig": 50.375,
+    "composite_novintage": 55.972,
+    "scores": {
+      "removal_type": 65,
+      "additionality": 55,
+      "permanence": 50,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 60,
+      "registry_methodology": 45
+    }
+  },
+  "0xfdb4da563a57c4f35205861665f92b0486f4ee82": {
+    "project_id": "1100",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x45a0528ce0337e177a9393391e76b219e207d229": {
+    "project_id": "261",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x65d96f0d45606016e30c97ee039775de9722a7d2": {
+    "project_id": "981",
+    "type": "REDD+",
+    "vintage": 2012,
+    "composite_orig": 30.75,
+    "composite_novintage": 34.167,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 35,
+      "permanence": 40,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0x87d0558de28926b4ad8fcc19f039b72a76ea2f95": {
+    "project_id": "917",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x1ed9a5565e4192ebc076a0d309a62c1c73b7f61b": {
+    "project_id": "1883",
+    "type": "Waste/Methane",
+    "vintage": 2018,
+    "composite_orig": 46.95,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 52,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xa552e9f979706070f9e8fc2fd9d33101d81a64ef": {
+    "project_id": "1506",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x97e2a01b39f141949a70e160d030813b7f5fda42": {
+    "project_id": "603",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x532b987cb8b6b621ab32f8d286a2596fab92ec84": {
+    "project_id": "1140",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x289f9b9f58b5b9f4e69e1c292f3f17373e6dd437": {
+    "project_id": "293",
+    "type": "Agriculture",
+    "vintage": 2009,
+    "composite_orig": 36.25,
+    "composite_novintage": 40.278,
+    "scores": {
+      "removal_type": 40,
+      "additionality": 45,
+      "permanence": 30,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 50,
+      "registry_methodology": 40
+    }
+  },
+  "0x567ab9fc9dd3a1b0d5ea68865f96c58c65b24150": {
+    "project_id": "1187",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x055551c2c1d739740461ce9192fccdb8e62ad89d": {
+    "project_id": "766",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x13f27510cbdc287bf02f3eff604d3624553c73c4": {
+    "project_id": "1214",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x2ce95c8002d32a51b12b521bb623ae0454e4010f": {
+    "project_id": "766",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x8d6e4e58cc7d18a7c9552d679722acddffc7387b": {
+    "project_id": "1577",
+    "type": "IFM",
+    "vintage": 2016,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x239b912cf695da50ad19e0c05337067e2eb55fe3": {
+    "project_id": "1542",
+    "type": "IFM",
+    "vintage": 2012,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x8986b4b19ee9acf449d0f281d315ff5391a66fba": {
+    "project_id": "921",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x589ac761fed3f77b24ce781e2b9cf2e164a2c30f": {
+    "project_id": "1166",
+    "type": "Waste/Methane",
+    "vintage": 2012,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xe4a25489317bff24b630e8b76615d636012d6589": {
+    "project_id": "1221",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x976617072e08d824af49879e66ed3263b0b29845": {
+    "project_id": "1497",
+    "type": "Renewable",
+    "vintage": 2020,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb4219e3d243bcdddf34dc60dc53c99db83651a0c": {
+    "project_id": "528",
+    "type": "Agriculture",
+    "vintage": 2009,
+    "composite_orig": 36.25,
+    "composite_novintage": 40.278,
+    "scores": {
+      "removal_type": 40,
+      "additionality": 45,
+      "permanence": 30,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 50,
+      "registry_methodology": 40
+    }
+  },
+  "0x49304dfd1fefcaca11a29a66872f1a5460cecf87": {
+    "project_id": "708",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xc5558276079d691d2ce58a121a4bec1418ac016b": {
+    "project_id": "1160",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xeb64ef68bc588afbbb6c99a5800f4e0e34b9fd94": {
+    "project_id": "265",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x56bfa856bd44146d60e9f7845cc840d5f3f3f175": {
+    "project_id": "766",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x682aab8c40c6762195dc8e035c89040f32f468e7": {
+    "project_id": "274",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xf49c1e95a9419cb7dbe077ca9344340ed91bf2ac": {
+    "project_id": "929",
+    "type": "Energy efficiency",
+    "vintage": 2015,
+    "composite_orig": 31.875,
+    "composite_novintage": 35.417,
+    "scores": {
+      "removal_type": 40,
+      "additionality": 40,
+      "permanence": 5,
+      "mrv_grade": 50,
+      "vintage_year": 0,
+      "co_benefits": 35,
+      "registry_methodology": 40
+    }
+  },
+  "0x1dbcf6d91446e5bdb80744a4432da40e36d166d3": {
+    "project_id": "982",
+    "type": "Fossil switch",
+    "vintage": 2010,
+    "composite_orig": 26.85,
+    "composite_novintage": 29.833,
+    "scores": {
+      "removal_type": 35,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 20,
+      "registry_methodology": 35
+    }
+  },
+  "0x66f421b544569e1504a90c81d61473e9394b413e": {
+    "project_id": "876",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x9d7111053e1373ece87a9a830a08c60f0e5c0522": {
+    "project_id": "1121",
+    "type": "Renewable",
+    "vintage": 2018,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x0970d3b3bc5046b315f7cfa5108ddb2460d8d0c8": {
+    "project_id": "274",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xf60ea4c1890cb80ddc60ea49a09580d7f1e1a1d8": {
+    "project_id": "870",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xa824cab7edbe04ee6b0e518a5cc6b8b18b1e4442": {
+    "project_id": "823",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 28.675,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 28,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x32bede097183f160ea70cd6483b4ba32afdfa5ee": {
+    "project_id": "529",
+    "type": "Agriculture",
+    "vintage": 2009,
+    "composite_orig": 36.25,
+    "composite_novintage": 40.278,
+    "scores": {
+      "removal_type": 40,
+      "additionality": 45,
+      "permanence": 30,
+      "mrv_grade": 45,
+      "vintage_year": 0,
+      "co_benefits": 50,
+      "registry_methodology": 40
+    }
+  },
+  "0x017b4ceb7f3339ff2db8273631d1b66dd012ad58": {
+    "project_id": "1204",
+    "type": "Renewable",
+    "vintage": 2016,
+    "composite_orig": 26.275,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 4,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x0044c5a5a6f626b673224a3c0d71e851ad3d5153": {
+    "project_id": "1718",
+    "type": "IFM",
+    "vintage": 2013,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x7aca1678d7a2af41e7efb0e1bd5dbc0c9e12fa5a": {
+    "project_id": "1228",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x6f0e738ea607f3a6698a813d45849dc36f7f3328": {
+    "project_id": "1529",
+    "type": "IFM",
+    "vintage": 2013,
+    "composite_orig": 47.75,
+    "composite_novintage": 53.056,
+    "scores": {
+      "removal_type": 55,
+      "additionality": 50,
+      "permanence": 55,
+      "mrv_grade": 55,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 45
+    }
+  },
+  "0x23ad766052ab79644eb850490d1666488094ccc2": {
+    "project_id": "1418",
+    "type": "Renewable",
+    "vintage": 2020,
+    "composite_orig": 33.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 76,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x00d9852eebe5c1d7a0141b4eab7574d9798c9d4b": {
+    "project_id": "493",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x42f3148d4a93a030978e2f909ccc6626dc8e2aed": {
+    "project_id": "1044",
+    "type": "Renewable",
+    "vintage": 2010,
+    "composite_orig": 28.125,
+    "composite_novintage": 31.25,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 30
+    }
+  },
+  "0xdd974c303c25c808f1d88676be93cd51e679ba95": {
+    "project_id": "792",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x6ff91030fbe98af0047934962231eb0c47a64892": {
+    "project_id": "486",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x39edcb24097d3a2646417738c41d5f799687bce2": {
+    "project_id": "51",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x09f9bd6c0fb98d626a6b695fe610f35933f39393": {
+    "project_id": "253",
+    "type": "Waste/Methane",
+    "vintage": 2012,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0xbe0cd710eaadf41dd5c591c3655f4bd0d50ffbd4": {
+    "project_id": "929",
+    "type": "Energy efficiency",
+    "vintage": 2014,
+    "composite_orig": 31.875,
+    "composite_novintage": 35.417,
+    "scores": {
+      "removal_type": 40,
+      "additionality": 40,
+      "permanence": 5,
+      "mrv_grade": 50,
+      "vintage_year": 0,
+      "co_benefits": 35,
+      "registry_methodology": 40
+    }
+  },
+  "0xc49c0eafd92753a552cc5f90ccce0dc27ada8c73": {
+    "project_id": "476",
+    "type": "Renewable",
+    "vintage": 2008,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xf6f3f5c58d457df397f44736d10d152ec99a7d86": {
+    "project_id": "499",
+    "type": "Renewable",
+    "vintage": 2012,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x5562941e7af41152806f6cf6efaf60be6eed459f": {
+    "project_id": "245",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0xbe790423050a640bb58d01ce8882e552738acd7e": {
+    "project_id": "309",
+    "type": "Renewable",
+    "vintage": 2009,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x89d310cc4fc731e08b493c89310abe3488b52a1d": {
+    "project_id": "986",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb51913749ff2babc2d152023b74c0af50ecf8a10": {
+    "project_id": "929",
+    "type": "Energy efficiency",
+    "vintage": 2013,
+    "composite_orig": 31.875,
+    "composite_novintage": 35.417,
+    "scores": {
+      "removal_type": 40,
+      "additionality": 40,
+      "permanence": 5,
+      "mrv_grade": 50,
+      "vintage_year": 0,
+      "co_benefits": 35,
+      "registry_methodology": 40
+    }
+  },
+  "0xb6a0523042cdf69d9442ab94acf0edd2e745ef25": {
+    "project_id": "755",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xf855acf79501609d982e4793f588dff69fc4c7e6": {
+    "project_id": "934",
+    "type": "REDD+",
+    "vintage": 2012,
+    "composite_orig": 25.75,
+    "composite_novintage": 28.611,
+    "scores": {
+      "removal_type": 22,
+      "additionality": 20,
+      "permanence": 40,
+      "mrv_grade": 35,
+      "vintage_year": 0,
+      "co_benefits": 55,
+      "registry_methodology": 30
+    }
+  },
+  "0xec4db7105af6f096640217d5efc68bc808f9c641": {
+    "project_id": "12",
+    "type": "Waste/Methane",
+    "vintage": 2016,
+    "composite_orig": 41.75,
+    "composite_novintage": 46.389,
+    "scores": {
+      "removal_type": 50,
+      "additionality": 60,
+      "permanence": 5,
+      "mrv_grade": 65,
+      "vintage_year": 0,
+      "co_benefits": 40,
+      "registry_methodology": 45
+    }
+  },
+  "0x0e9f617560ddf16adeb31cea4270405165eb89cc": {
+    "project_id": "1427",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 27.475,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 16,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x29290abd23aad187dc14a5841a83812e4ffe3944": {
+    "project_id": "51",
+    "type": "Renewable",
+    "vintage": 2015,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x27506e1d7e0d9dd0c55ea87283111d0550c68fd2": {
+    "project_id": "1189",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x851e197940e865e28bbe608538a514d092158a83": {
+    "project_id": "51",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 18,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x68ef1e97eb3a8ebb69f40186be249a78a7e754f1": {
+    "project_id": "498",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 28.275,
+    "composite_novintage": 31.417,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 25,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 32
+    }
+  },
+  "0x48174098315b1b390abda702b5fbc1572714a3ad": {
+    "project_id": "1291",
+    "type": "Renewable",
+    "vintage": 2014,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xb6da49b4aa33f3a26d1c879e94bcc88824c668b4": {
+    "project_id": "1174",
+    "type": "Renewable",
+    "vintage": 2013,
+    "composite_orig": 25.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0xe72e3bcee516700dbabdae56cf10786d75f1e084": {
+    "project_id": "1258",
+    "type": "Renewable",
+    "vintage": 2017,
+    "composite_orig": 29.875,
+    "composite_novintage": 28.75,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 10,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 40,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  },
+  "0x2f5bc9be0239eb021ab7fb372654e581ef2b5e7b": {
+    "project_id": "784",
+    "type": "Renewable",
+    "vintage": 2011,
+    "composite_orig": 26.875,
+    "composite_novintage": 29.861,
+    "scores": {
+      "removal_type": 32,
+      "additionality": 15,
+      "permanence": 5,
+      "mrv_grade": 60,
+      "vintage_year": 0,
+      "co_benefits": 30,
+      "registry_methodology": 40
+    }
+  }
+}

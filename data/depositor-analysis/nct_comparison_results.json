@@ -1,0 +1,197 @@
+{
+  "bct_temporal": {
+    "pool": "BCT",
+    "n_deposits_total": 1187,
+    "n_deposits_scored": 877,
+    "pct_scored": 73.9,
+    "block_range": [
+      20177711,
+      36997152
+    ],
+    "mean_quality": 31.1206157354618,
+    "median_quality": 28.62,
+    "std_quality": 6.104933915579081,
+    "total_tonnes": 15205728.743102001,
+    "volume_weighted_mean_quality": 31.70936841452778,
+    "spearman_rho": -0.43865996766355636,
+    "spearman_p": 1.5125374723493518e-42,
+    "quartiles": {
+      "Q1": {
+        "n": 219,
+        "mean_quality": 32.40785388127854,
+        "median_quality": 29.02,
+        "std_quality": 6.425874049470025,
+        "total_tonnes": 6971024.0,
+        "block_range": [
+          20177711,
+          20671908
+        ],
+        "vol_weighted_quality": 32.01594513087316
+      },
+      "Q2": {
+        "n": 219,
+        "mean_quality": 34.36502283105023,
+        "median_quality": 29.02,
+        "std_quality": 8.813596584095665,
+        "total_tonnes": 6631200.061058,
+        "block_range": [
+          20674981,
+          25454814
+        ],
+        "vol_weighted_quality": 31.79815901189645
+      },
+      "Q3": {
+        "n": 219,
+        "mean_quality": 29.091278538812784,
+        "median_quality": 28.62,
+        "std_quality": 2.852165636241285,
+        "total_tonnes": 1603179.115825,
+        "block_range": [
+          25524824,
+          36789145
+        ],
+        "vol_weighted_quality": 30.00965845830867
+      },
+      "Q4": {
+        "n": 220,
+        "mean_quality": 28.629681818181812,
+        "median_quality": 28.62,
+        "std_quality": 0.14360457070467045,
+        "total_tonnes": 325.566219,
+        "block_range": [
+          36789639,
+          36997152
+        ],
+        "vol_weighted_quality": 28.630555722705374
+      }
+    },
+    "Q1_Q4_diff": 3.7781720630967293,
+    "first_half_mean": 33.38643835616438,
+    "second_half_mean": 28.85995444191344,
+    "half_diff": 4.526483914250942,
+    "mannwhitney_U": 141333.5,
+    "mannwhitney_p": 5.493116702432033e-46,
+    "kendall_tau": -0.31469470238899966,
+    "kendall_p": 5.999105566069453e-35,
+    "ols_slope_per_1M_blocks": -0.30472025497170063
+  },
+  "nct_temporal": {
+    "pool": "NCT",
+    "n_deposits_total": 708,
+    "n_deposits_scored": 264,
+    "pct_scored": 37.3,
+    "block_range": [
+      24755274,
+      36858250
+    ],
+    "mean_quality": 39.98204545454545,
+    "median_quality": 48.12,
+    "std_quality": 8.831769239029184,
+    "total_tonnes": 1526116.7817355725,
+    "volume_weighted_mean_quality": 43.89472557019611,
+    "spearman_rho": -0.10513750163201963,
+    "spearman_p": 0.08821227378680836,
+    "quartiles": {
+      "Q1": {
+        "n": 66,
+        "mean_quality": 40.18924242424243,
+        "median_quality": 40.235,
+        "std_quality": 9.343800957871819,
+        "total_tonnes": 1417413.4594396565,
+        "block_range": [
+          24755274,
+          33676634
+        ],
+        "vol_weighted_quality": 44.00234848989801
+      },
+      "Q2": {
+        "n": 66,
+        "mean_quality": 38.30060606060606,
+        "median_quality": 32.35,
+        "std_quality": 8.548286176194413,
+        "total_tonnes": 11772.142855982422,
+        "block_range": [
+          33677522,
+          34596267
+        ],
+        "vol_weighted_quality": 48.10718507755209
+      },
+      "Q3": {
+        "n": 66,
+        "mean_quality": 42.09106060606061,
+        "median_quality": 48.12,
+        "std_quality": 8.307151160071085,
+        "total_tonnes": 75782.78037532144,
+        "block_range": [
+          34608623,
+          35615162
+        ],
+        "vol_weighted_quality": 42.32050684079702
+      },
+      "Q4": {
+        "n": 66,
+        "mean_quality": 39.34727272727273,
+        "median_quality": 31.15,
+        "std_quality": 8.852806863962941,
+        "total_tonnes": 21148.39906461184,
+        "block_range": [
+          35648117,
+          36858250
+        ],
+        "vol_weighted_quality": 39.97777764711971
+      }
+    },
+    "Q1_Q4_diff": 0.8419696969696986,
+    "first_half_mean": 39.24492424242424,
+    "second_half_mean": 40.719166666666666,
+    "half_diff": -1.4742424242424264,
+    "mannwhitney_U": 9108.5,
+    "mannwhitney_p": 0.5000142542533723,
+    "kendall_tau": -0.0709313836676622,
+    "kendall_p": 0.1258817364757874,
+    "ols_slope_per_1M_blocks": -0.09325790187786535
+  },
+  "did": {
+    "method": "Difference-in-Differences (DiD)",
+    "treatment": "BCT (permissionless pool)",
+    "control": "NCT (AFOLU-filtered pool, vintage >= 2012)",
+    "bct_early_mean": 33.38643835616438,
+    "bct_late_mean": 28.85995444191344,
+    "bct_change": -4.526483914250942,
+    "nct_early_mean": 39.24492424242424,
+    "nct_late_mean": 40.719166666666666,
+    "nct_change": 1.4742424242424264,
+    "did_estimate": -6.000726338493369,
+    "interpretation": "BCT quality changed by -4.53 points (early 33.39 -> late 28.86). NCT quality changed by +1.47 points (early 39.24 -> late 40.72). DiD = -6.00. BCT's decline EXCEEDS NCT's, confirming that the permissionless pool mechanism drives quality degradation beyond supply-side changes.",
+    "quartile_did": {
+      "bct_Q1_mean": 32.40785388127854,
+      "bct_Q4_mean": 28.629681818181812,
+      "bct_Q1_Q4_change": -3.7781720630967293,
+      "nct_Q1_mean": 40.18924242424243,
+      "nct_Q4_mean": 39.34727272727273,
+      "nct_Q1_Q4_change": -0.8419696969696986,
+      "did_estimate": -2.9362023661270307
+    },
+    "spearman_comparison": {
+      "bct_rho": -0.43865996766355636,
+      "nct_rho": -0.10513750163201963,
+      "rho_difference": -0.33352246603153674,
+      "bct_p": 1.5125374723493518e-42,
+      "nct_p": 0.08821227378680836,
+      "fisher_z_diff": -5.175136506006781,
+      "fisher_p": 2.2774440987665036e-07,
+      "fisher_interpretation": "Fisher z-test for rho difference: z=-5.175, p=0.0000. Significant difference (p < 0.05)."
+    }
+  },
+  "summary": {
+    "bct_deposits": 1187,
+    "nct_deposits": 708,
+    "bct_scored": 877,
+    "nct_scored": 264,
+    "bct_spearman_rho": -0.43865996766355636,
+    "nct_spearman_rho": -0.10513750163201963,
+    "bct_mean_quality": 31.1206157354618,
+    "nct_mean_quality": 39.98204545454545,
+    "conclusion": "BCT shows significant temporal quality degradation (rho=-0.439, p<0.05) while NCT does NOT (rho=-0.105). This confirms that BCT's permissionless deposit mechanism drives adverse selection -- the quality decline is NOT a supply-side phenomenon. NCT's AFOLU filter + vintage requirement successfully prevents the race-to-the-bottom dynamic."
+  }
+}

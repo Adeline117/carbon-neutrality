@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "generated": "2026-04-16",
+    "purpose": "Search for an independent control pool for BCT adverse selection DiD analysis",
+    "data_source": "Polygon mainnet RPC (Tenderly gateway)",
+    "block_range_scanned": {
+      "c3_pools": [
+        25000000,
+        37000000
+      ],
+      "mco2": [
+        20000000,
+        37000000
+      ],
+      "bct_reference": [
+        20000000,
+        37000000
+      ]
+    },
+    "approximate_date_range": "Oct 2021 - Dec 2022"
+  },
+  "candidates_investigated": [
+    {
+      "name": "C3 UBO (Universal Basic Offset)",
+      "contract": "0x2B3eCb0991AF0498ECE9135bcD04013d7993110c",
+      "chain": "Polygon",
+      "protocol": "C3 (Climate Collective)",
+      "mechanism": "C3T tokens deposited into permissionless ERC-20 pool (mint on deposit)",
+      "quality_filter": "Accepts most VCS and Gold Standard methodologies, vintage >= 2014",
+      "on_chain_data": {
+        "total_deposit_events": 74,
+        "unique_c3t_tokens_deposited": 19,
+        "unique_depositors": 12,
+        "total_tonnes_deposited": 397295.14,
+        "block_range": [
+          25466853,
+          36222540
+        ],
+        "temporal_distribution": "70 early / 4 late"
+      },
+      "independence_check": {
+        "token_overlap_with_bct": 0,
+        "depositor_overlap_with_bct": 3,
+        "depositor_overlap_pct": 25.0,
+        "tokens_are_independent": true
+      },
+      "viability_for_did": "NOT VIABLE",
+      "reason": "Only 74 deposit events from 12 depositors across 19 C3T tokens. This is far below the statistical power threshold for a DiD (BCT has 1,187 deposits from 509 depositors across 345 TCO2s). Even though C3T tokens are completely independent of Toucan TCO2 tokens (zero token overlap), the sample is too small. Furthermore, UBO accepts 'most VCS and GS methodologies' with no quality differentiation -- it is permissionless like BCT, not curated. 3 of 12 UBO depositors (25%) also deposited into BCT, creating partial SUTVA concerns."
+    },
+    {
+      "name": "C3 NBO (Nature Based Offset)",
+      "contract": "0x6BCa3B77C1909Ce1a4Ba1A20d1103bDe8d222E48",
+      "chain": "Polygon",
+      "protocol": "C3 (Climate Collective)",
+      "mechanism": "C3T tokens deposited into nature-based ERC-20 pool",
+      "quality_filter": "Nature-based methodologies only (REDD+, IFM, ARR, etc.), vintage >= 2014",
+      "on_chain_data": {
+        "total_deposit_events": 18,
+        "unique_c3t_tokens": 8,
+        "unique_depositors": 9,
+        "total_tonnes_deposited": 211534.0
+      },
+      "independence_check": {
+        "token_overlap_with_bct": 0,
+        "depositor_overlap_with_bct": 3,
+        "tokens_are_independent": true
+      },
+      "viability_for_did": "NOT VIABLE",
+      "reason": "Only 18 deposits from 9 depositors across 8 C3T tokens. Hopelessly underpowered for any statistical analysis."
+    },
+    {
+      "name": "Moss MCO2 (PoS Bridge Token)",
+      "contract": "0xAa7DbD1598251f856C12f63557A4C4397c253Cea",
+      "chain": "Polygon (bridged from Ethereum via PoS bridge)",
+      "protocol": "Moss.earth",
+      "mechanism": "MCO2 is NOT a deposit pool like BCT/NCT/UBO. It is a fixed-supply ERC-20 token minted by Moss against specific Verra VCU retirements (primarily Amazon REDD+ credits). On Polygon, MCO2 arrives via the PoS bridge from Ethereum -- 'mints' on Polygon are bridge deposits, not new credit tokenizations.",
+      "quality_filter": "Curated by Moss (Amazon REDD+ focus, ~80% from specific projects)",
+      "on_chain_data": {
+        "total_mint_events_on_polygon": 608,
+        "unique_recipients": 93,
+        "total_tonnes_minted": 769327.62,
+        "block_range": [
+          22866880,
+          36922944
+        ],
+        "mints_by_block_range_M": {
+          "22M": {
+            "count": 2,
+            "tonnes": 15002.0
+          },
+          "23M": {
+            "count": 48,
+            "tonnes": 156520.60520871842
+          },
+          "24M": {
+            "count": 186,
+            "tonnes": 190277.44028759823
+          },
+          "25M": {
+            "count": 88,
+            "tonnes": 88322.255431811
+          },
+          "26M": {
+            "count": 50,
+            "tonnes": 75650.70283769672
+          },
+          "27M": {
+            "count": 33,
+            "tonnes": 73023.04860923445
+          },
+          "28M": {
+            "count": 32,
+            "tonnes": 30768.677013747652
+          },
+          "29M": {
+            "count": 37,
+            "tonnes": 39783.325077046975
+          },
+          "30M": {
+            "count": 32,
+            "tonnes": 43220.31544763314
+          },
+          "31M": {
+            "count": 21,
+            "tonnes": 13440.354740765919
+          },
+          "32M": {
+            "count": 16,
+            "tonnes": 6559.895648801596
+          },
+          "33M": {
+            "count": 15,
+            "tonnes": 6335.281676226313
+          },
+          "34M": {
+            "count": 7,
+            "tonnes": 6597.147689489146
+          },
+          "35M": {
+            "count": 22,
+            "tonnes": 13975.6628655713
+          },
+          "36M": {
+            "count": 19,
+            "tonnes": 9850.906863061922
+          }
+        }
+      },
+      "independence_check": {
+        "token_overlap_with_bct": "N/A (MCO2 is a single token, not a pool of sub-tokens)",
+        "depositor_overlap_with_bct": 0,
+        "depositor_overlap_pct": 0.0,
+        "tokens_are_independent": true,
+        "note": "ZERO wallet overlap between BCT depositors and MCO2 mint recipients"
+      },
+      "viability_for_did": "NOT VIABLE AS TEMPORAL DiD",
+      "reason": "MCO2 is fundamentally a different mechanism from BCT. BCT has a permissionless deposit pool where anyone can deposit any qualifying TCO2 -- this is what creates the adverse selection dynamic. MCO2 is a curated token issued by a single entity (Moss) against specific pre-selected REDD+ projects. There are no 'deposit events' to analyze for quality degradation over time because Moss controls the supply. The 608 PoS bridge mints represent tokens being moved between chains, not new credits being tokenized. MCO2 CAN serve as a cross-sectional comparison (Lemons Index 0.713 vs BCT 0.724) but cannot provide temporal deposit data for a DiD design."
+    },
+    {
+      "name": "Flowcarbon GNT (Goddess Nature Token)",
+      "contract": "never deployed at scale",
+      "chain": "Celo (planned)",
+      "protocol": "Flowcarbon (defunct)",
+      "mechanism": "Planned bridge-and-pool, never completed",
+      "quality_filter": "N/A",
+      "on_chain_data": null,
+      "viability_for_did": "NOT VIABLE",
+      "reason": "Flowcarbon GNT was announced but never deployed at scale. The project collapsed after Verra's 2022 tokenization restriction and the Celsius bankruptcy. No on-chain data exists."
+    },
+    {
+      "name": "Klima 2.0 kVCM (Curated Inventory)",
+      "contract": "Base chain (not Polygon)",
+      "chain": "Base",
+      "protocol": "KlimaDAO",
+      "mechanism": "Curated inventory with quality filters",
+      "quality_filter": "ICVCM CCP-aligned curation",
+      "on_chain_data": null,
+      "viability_for_did": "NOT VIABLE",
+      "reason": "kVCM launched in 2025-2026 on Base chain, well after the BCT adverse selection period (2021-2022). No temporal overlap. Cross-sectional Lemons Index comparison is available (LI=0.519 vs BCT 0.724) but not a temporal DiD."
+    }
+  ],
+  "independence_summary": {
+    "c3_tokens_vs_toucan_tokens": {
+      "c3t_tokens_found": 26,
+      "tco2_tokens_found": 161,
+      "overlap": 0,
+      "conclusion": "C3T and TCO2 token sets are COMPLETELY independent. The same Verra VCU cannot be bridged via both Toucan and C3 simultaneously because credits are immobilized/locked in the registry upon tokenization. This confirms that C3 pools would be a valid independent control IF they had sufficient volume."
+    },
+    "wallet_overlap": {
+      "bct_depositors": 509,
+      "ubo_depositors": 12,
+      "bct_ubo_overlap": 3,
+      "bct_mco2_overlap": 0,
+      "conclusion": "MCO2 has zero wallet overlap with BCT depositors (perfectly independent). C3 UBO has 3/12 = 25% overlap (partial SUTVA concern but manageable if volume were sufficient)."
+    }
+  },
+  "overall_conclusion": {
+    "viable_independent_control_found": false,
+    "headline": "No viable independent control pool exists for a temporal DiD analysis of BCT adverse selection. All candidates fail on at least one of: (1) insufficient volume, (2) wrong mechanism, (3) wrong time period.",
+    "detailed_assessment": "The fundamental problem is that the tokenized carbon credit ecosystem on Polygon in 2021-2022 was dominated by Toucan (BCT/NCT). The only independent alternatives were:\n\n- C3 (UBO/NBO): Truly independent token sets, pool-based deposit mechanism, same chain and time period -- but only 74+18=92 total deposit events vs BCT's 1,187. Statistical power is ~8% of what we need.\n\n- MCO2 (Moss): Completely independent wallets, same chain and period -- but not a deposit pool. MCO2 is a centrally-issued token, so there is no adverse selection mechanism to compare against.\n\nThis is itself a publishable finding: the Toucan pool monopolized the market for permissionless carbon credit tokenization, leaving no independent counterfactual for causal identification.",
+    "recommended_strategy": "Since no external control pool exists, the paper should pursue one of these identification strategies:\n\n1. WITHIN-BCT DiD (already computed): Compare renewable vs nature-based    credits within the same pool. Same depositors, same mechanism, only    credit type varies. Cluster-robust bootstrap p=0.20 (borderline).\n\n2. SYNTHETIC CONTROL: Use the C3 UBO data (74 deposits, 19 C3T tokens)    as a sparse but independent validation point. If C3 UBO quality does    NOT degrade while BCT quality does, this is at least suggestive evidence    (though underpowered for formal inference).\n\n3. EVENT STUDY around Verra's Aug 2022 tokenization restriction: Use BCT    deposit quality before vs after the policy shock, with MCO2 cross-sectional    quality as a static benchmark.\n\n4. ACKNOWLEDGE THE LIMITATION honestly: The absence of an independent    control is itself evidence of Toucan's monopoly on permissionless    tokenization, which is a key condition for adverse selection to emerge.",
+    "c3_ubo_as_sparse_validation": {
+      "feasibility": "Marginal -- 74 deposits, 19 tokens, but independent",
+      "what_it_could_show": "If we can score the 19 C3T tokens using our framework and find that UBO quality does NOT degrade over time (flat or improving Spearman rho), while BCT degrades (rho=-0.44), this is suggestive DiD evidence even at n=74. The C3T token set is fully independent of TCO2 tokens. However, UBO is also permissionless (like BCT), so if UBO DOES degrade, it could be evidence of a market-wide phenomenon rather than BCT-specific adverse selection.",
+      "next_step": "Score the 19 C3T tokens deposited into UBO using the methodology scoring framework. If scoring data is available for the underlying Verra/GS projects, compute temporal quality trends."
+    }
+  }
+}

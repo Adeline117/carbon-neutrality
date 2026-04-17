@@ -1,0 +1,92 @@
+{
+  "generated": "2026-04-16",
+  "step1_vintage_normalization": {
+    "entries_total": 345,
+    "entries_normalized": 132,
+    "output_file": "/Users/adelinewen/carbon-neutrality/data/depositor-analysis/tco2_metadata_fixed.json"
+  },
+  "token_coverage": {
+    "bct_unique_addresses": 345,
+    "bct_scored_total": 345,
+    "nct_unique_addresses": 35,
+    "nct_scored_total": 35,
+    "original_scored_count": 161,
+    "imputed_score_count": 184,
+    "nct_only_default_count": 4,
+    "output_file": "/Users/adelinewen/carbon-neutrality/data/depositor-analysis/tco2_scores_complete.json"
+  },
+  "vintage_distribution": {
+    "original_scored_n": 161,
+    "original_scored_median": 2013,
+    "original_scored_mean": 2013.3,
+    "imputed_n": 184,
+    "imputed_median": 2013.0,
+    "imputed_mean": 2013.28
+  },
+  "bct_volume_weighted": {
+    "all_tokens_345": {
+      "n_scored_deposits": 1187,
+      "total_tonnes": 21984481.50170301,
+      "volume_weighted_mean": 31.099343782156037,
+      "spearman_rho_block_vs_quality": -0.23750113184925048,
+      "grade_tonnes": {
+        "B": 14439180.386085002,
+        "BB": 5965972.936528,
+        "BBB": 1579328.17909
+      }
+    },
+    "original_only_161": {
+      "n_scored_deposits": 877,
+      "total_tonnes": 15205728.743101997,
+      "volume_weighted_mean": 31.709368414527784,
+      "spearman_rho_block_vs_quality": -0.4386599676635564,
+      "grade_tonnes": {
+        "B": 9556068.35858,
+        "BB": 4319189.643325,
+        "BBB": 1330470.741197
+      }
+    },
+    "vol_weighted_delta": -0.61,
+    "spearman_delta": 0.2012
+  },
+  "nct_volume_weighted": {
+    "all_tokens_35": {
+      "n_scored_deposits": 708,
+      "total_tonnes": 2220853.969732693,
+      "volume_weighted_mean": 42.15653137710965,
+      "spearman_rho_block_vs_quality": 0.037323418744172915,
+      "grade_tonnes": {
+        "BBB": 1298721.5822971535,
+        "B": 32000.0,
+        "BB": 890132.387435534
+      }
+    },
+    "original_only": {
+      "n_scored_deposits": 264,
+      "total_tonnes": 1526116.781735573,
+      "volume_weighted_mean": 43.89472557019611,
+      "spearman_rho_block_vs_quality": -0.10513750163201963,
+      "grade_tonnes": {
+        "BBB": 1029970.53935367,
+        "BB": 496146.2423819016
+      }
+    }
+  },
+  "grade_distribution_counts": {
+    "all": {
+      "B": 204,
+      "BBB": 25,
+      "BB": 120
+    },
+    "original": {
+      "B": 83,
+      "BBB": 12,
+      "BB": 66
+    },
+    "imputed": {
+      "BB": 50,
+      "B": 121,
+      "BBB": 13
+    }
+  }
+}

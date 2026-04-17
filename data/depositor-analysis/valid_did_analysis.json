@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "generated": "2026-04-16",
+    "rng_seed": 20260416,
+    "n_bootstrap": 5000,
+    "rationale": "Original BCT-vs-NCT DiD violates SUTVA: 31/35 NCT tokens also appear in BCT; ~14.9% of BCT tonnage comes from wallets that also deposit in NCT. Fisher z-test assumes independence; this script supplies three valid alternatives.",
+    "data_sources": {
+      "bct": "bct_deposits_enriched.json",
+      "nct": "nct_deposits.json",
+      "scores": "tco2_scores_final.json"
+    }
+  },
+  "approach_1_non_overlapping_subsets": {
+    "n_bct_tokens_unique": 345,
+    "n_nct_tokens_unique": 35,
+    "n_shared_tokens": 31,
+    "n_bct_only_tokens": 314,
+    "n_nct_only_tokens": 4,
+    "token_overlap_pct_of_nct": 88.6,
+    "bct_only_n_deposits": 814,
+    "nct_only_n_deposits": 0,
+    "bct_only_spearman_rho": -0.4132225512281139,
+    "bct_only_spearman_p": 6.516043477550612e-35,
+    "nct_only_spearman_rho": NaN,
+    "nct_only_spearman_p": NaN,
+    "bct_only_early_mean": 31.380171990171988,
+    "bct_only_late_mean": 28.69739557739558,
+    "bct_only_change": -2.682776412776409,
+    "nct_only_early_mean": NaN,
+    "nct_only_late_mean": NaN,
+    "nct_only_change": NaN,
+    "did_estimate": NaN,
+    "fisher_z_rho": {
+      "z": null,
+      "p": null,
+      "note": "insufficient data"
+    },
+    "conclusion": "DiD NOT IDENTIFIED in this design. All 4 NCT-only tokens are unscored, leaving zero scored deposits on the control side. The BCT-only side still degrades (rho=-0.413, p=6.52e-35), confirming that degradation is not driven solely by the shared-token subset \u2014 but without a control arm there is no DiD. Non-overlapping-subset design is infeasible with current scoring coverage.",
+    "warnings": [
+      "NCT-only subset tiny (n=0); Spearman p unreliable, DiD underpowered."
+    ]
+  },
+  "approach_2_cluster_robust_bootstrap": {
+    "n_bootstrap": 5000,
+    "n_clusters": 161,
+    "observed_rho_bct": -0.43865996766355636,
+    "observed_rho_nct": -0.10513750163201963,
+    "observed_rho_difference": -0.33352246603153674,
+    "cluster_robust_se_rho_diff": 0.2833658045767765,
+    "cluster_robust_se_rho_bct": 0.224006525228791,
+    "cluster_robust_se_rho_nct": 0.17535710533146626,
+    "cluster_robust_z": -1.1770032256703384,
+    "cluster_robust_p": 0.23919421877768188,
+    "cluster_robust_ci95": [
+      -0.5938364419355984,
+      0.4589293693776558
+    ],
+    "naive_fisher_z": -5.175136506006781,
+    "naive_fisher_p": 2.2774440987665036e-07,
+    "se_inflation_factor": 4.017218734860367,
+    "conclusion": "Cluster-robust inference does NOT preserve significance."
+  },
+  "approach_3_within_bct_credit_type": {
+    "strategy": "within-BCT renewable vs nature-based DiD",
+    "rationale": "Same pool, same depositor universe, only credit type varies. Eliminates SUTVA contamination by holding pool-design and depositor-composition fixed.",
+    "bucket_stats": {
+      "industrial": {
+        "n": 73,
+        "spearman_rho": -0.2298451921061766,
+        "spearman_p": 0.050444049032443476,
+        "early_mean": 35.007222222222225,
+        "late_mean": 30.85081081081081,
+        "change": -4.1564114114114155,
+        "mean_quality": 32.900547945205474
+      },
+      "renewable": {
+        "n": 707,
+        "spearman_rho": -0.5032271783667415,
+        "spearman_p": 1.1774621430255055e-46,
+        "early_mean": 29.606628895184134,
+        "late_mean": 28.619999999999997,
+        "change": -0.9866288951841362,
+        "mean_quality": 29.112616690240458
+      },
+      "nature": {
+        "n": 97,
+        "spearman_rho": -0.09938712559325229,
+        "spearman_p": 0.3327643194698833,
+        "early_mean": 45.17583333333334,
+        "late_mean": 43.673061224489786,
+        "change": -1.5027721088435513,
+        "mean_quality": 44.41670103092783
+      }
+    },
+    "halfsplit_did": 0.5161432136594151,
+    "fisher_z_independent": {
+      "z": -4.133433336280401,
+      "p": 3.5738398917408515e-05,
+      "rho_a": -0.5032271783667415,
+      "rho_b": -0.09938712559325229,
+      "n_a": 707,
+      "n_b": 97
+    },
+    "cluster_bootstrap": {
+      "n_bootstrap": 5000,
+      "n_clusters": 135,
+      "rho_difference": -0.40384005277348917,
+      "se": 0.3171372318291315,
+      "z": -1.2733921225341078,
+      "p": 0.20287893130985146,
+      "ci95": [
+        -0.8539401053314708,
+        0.40146085310551577
+      ]
+    },
+    "conclusion": "Within-BCT DiD does not significantly distinguish renewable from nature."
+  },
+  "approach_4_mco2_alternative_control": {
+    "pool_analyzer_mentions_mco2": true,
+    "results_mentions_mco2": {
+      "name": "Moss MCO2 (2022)",
+      "n_credits": 30,
+      "mean_composite": 28.7,
+      "lemons_index": 0.713,
+      "quality_concentration_A_plus": 0.067,
+      "grade_hhi": 0.876,
+      "grade_distribution": {
+        "A": 2,
+        "B": 28
+      }
+    },
+    "mco2_deposit_data_on_chain": false,
+    "notes": [
+      "MCO2 is an ERC-20 on Ethereum/Polygon but it is NOT a permissionless deposit pool like BCT/NCT --- it is a fixed-supply retirement token issued by Moss against specific bridged REDD+ credits. There are no ongoing 'Deposited' events to fetch. Only static composition data is available (n=30 synthetic archetype credits in pool_analyzer.py).",
+      "MCO2 therefore cannot serve as a temporal-analysis control. It can still be cited cross-sectionally (Lemons Index = 0.713) as evidence that other open-acceptance tokens suffer similar quality problems, but not as a DiD control arm."
+    ],
+    "conclusion": "MCO2 unavailable as a DiD control: no on-chain deposit stream."
+  },
+  "overall_assessment": {
+    "headline": "The original BCT-vs-NCT pool-level DiD is NOT an identified causal estimate because 88.6% of NCT tokens are also in BCT, and once token-level dependence is modelled via cluster-robust bootstrap SEs the rho difference is no longer distinguishable from zero (p=0.24). None of the three valid designs preserves the original DiD at alpha=0.05 under cluster-robust inference. What DOES survive is the descriptive finding that renewable credits degrade sharply within BCT (rho=-0.50, n=707) while nature-based credits do not (rho=-0.10, n=97) \u2014 reported honestly with the caveat that cluster-robust SEs do not reject equality of the two rhos.",
+    "approaches_that_support_claim": [],
+    "approaches_that_undermine_claim": [
+      "cluster-robust pool-level comparison: SEs inflate once token dependence is honoured, and the BCT-NCT rho difference is no longer distinguishable at alpha=0.05.",
+      "non-overlapping-subset DiD is UNIDENTIFIED: all 4 NCT-only tokens are unscored, so the control arm has zero scored deposits. Best we can say is that BCT-only (n=814) still shows rho=-0.413, ruling out shared-token churn as sole driver.",
+      "within-BCT DiD: naive Fisher z is highly significant (p=3.6e-05) but cluster-robust bootstrap p=0.203 \u2014 the SE inflates because many BCT tokens are concentrated in a small number of methodology clusters with temporally clumped deposits."
+    ],
+    "per_approach_verdicts": {
+      "non_overlapping_subset": {
+        "bct_only_still_degrades": true,
+        "nct_only_n_adequate": false,
+        "nct_only_computable": false,
+        "did_identified": false,
+        "conclusion": "DiD NOT IDENTIFIED in this design. All 4 NCT-only tokens are unscored, leaving zero scored deposits on the control side. The BCT-only side still degrades (rho=-0.413, p=6.52e-35), confirming that degradation is not driven solely by the shared-token subset \u2014 but without a control arm there is no DiD. Non-overlapping-subset design is infeasible with current scoring coverage."
+      },
+      "cluster_robust": {
+        "preserves_significance": false,
+        "p_value": 0.23919421877768188,
+        "ci_excludes_zero": false
+      },
+      "within_bct_did": {
+        "preserves_significance": false,
+        "p_value": 0.20287893130985146,
+        "renewable_degrades_more": true
+      },
+      "mco2_control": {
+        "available": false,
+        "reason": "No on-chain deposit stream for MCO2 (fixed-supply token)."
+      }
+    },
+    "recommended_paper_claim": "Drop the BCT-vs-NCT DiD as a causal claim. The paper should report: (i) BCT-only Spearman rho=-0.413 (p=6.5e-35, n=814) as a within-treatment temporal degradation fact \u2014 robust to excluding shared tokens; (ii) within-BCT descriptive decomposition rho_renewable=-0.50 vs rho_nature=-0.10 as suggestive evidence of adverse selection by credit type, with the explicit caveat that a cluster-robust bootstrap (token-clustered, n_boot=5000) yields p=0.20 for the rho difference \u2014 i.e. we CANNOT reject equality under correct inference. This is a much weaker empirical claim than the original paper's DiD. Retracting the causal DiD and retreating to descriptive correlation is the statistically defensible path."
+  }
+}

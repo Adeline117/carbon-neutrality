@@ -1,0 +1,233 @@
+{
+  "analysis": "real_on_chain_adverse_selection",
+  "pool": "Toucan BCT (Polygon)",
+  "is_simulated": false,
+  "block_range": [
+    20000000,
+    37000000
+  ],
+  "period": "Oct 2021 \u2013 Dec 2022",
+  "temporal_degradation": {
+    "spearman_rho": -0.43865996766355636,
+    "spearman_p": 1.5125374723493518e-42,
+    "mann_whitney_U": 141333.5,
+    "mann_whitney_p": 2.7465583512160165e-46,
+    "first_half_mean": 33.38643835616438,
+    "second_half_mean": 28.85995444191344,
+    "quartiles": [
+      {
+        "quartile": 1,
+        "block_min": 20177711,
+        "block_max": 20671908,
+        "n_deposits": 219,
+        "mean_composite": 32.407853881278534,
+        "vol_weighted_composite": 32.01594513087316,
+        "pct_b_grade": 51.598173515981735,
+        "total_tonnes": 6971024.0
+      },
+      {
+        "quartile": 2,
+        "block_min": 20674981,
+        "block_max": 25454814,
+        "n_deposits": 219,
+        "mean_composite": 34.36502283105023,
+        "vol_weighted_composite": 31.79815901189645,
+        "pct_b_grade": 50.68493150684932,
+        "total_tonnes": 6631200.061058
+      },
+      {
+        "quartile": 3,
+        "block_min": 25524824,
+        "block_max": 36789145,
+        "n_deposits": 219,
+        "mean_composite": 29.091278538812784,
+        "vol_weighted_composite": 30.009658458308664,
+        "pct_b_grade": 93.15068493150685,
+        "total_tonnes": 1603179.115825
+      },
+      {
+        "quartile": 4,
+        "block_min": 36789639,
+        "block_max": 36997152,
+        "n_deposits": 220,
+        "mean_composite": 28.629681818181812,
+        "vol_weighted_composite": 28.630555722705374,
+        "pct_b_grade": 99.54545454545455,
+        "total_tonnes": 325.566219
+      }
+    ]
+  },
+  "pool_composition": {
+    "n_deposits_total": 1187,
+    "n_deposits_scored": 877,
+    "n_tco2_types": 161,
+    "n_unique_wallets": 479,
+    "total_tonnes": 15205728.743102,
+    "volume_weighted_mean": 31.70936841452778,
+    "simple_mean": 31.1206157354618,
+    "median_composite": 28.62,
+    "bootstrap_95ci": [
+      30.90943948908336,
+      32.59847528731776
+    ],
+    "bootstrap_n_iter": 10000,
+    "pqd": 0.6829063158547222,
+    "grade_distribution": {
+      "AAA": {
+        "count": 0,
+        "pct_count": 0.0,
+        "tonnes": 0,
+        "pct_tonnes": 0.0
+      },
+      "AA": {
+        "count": 0,
+        "pct_count": 0.0,
+        "tonnes": 0,
+        "pct_tonnes": 0.0
+      },
+      "A": {
+        "count": 0,
+        "pct_count": 0.0,
+        "tonnes": 0,
+        "pct_tonnes": 0.0
+      },
+      "BBB": {
+        "count": 71,
+        "pct_count": 8.095781071835804,
+        "tonnes": 1330470.741197,
+        "pct_tonnes": 8.749799261022337
+      },
+      "BB": {
+        "count": 159,
+        "pct_count": 18.129988597491447,
+        "tonnes": 4319189.643324999,
+        "pct_tonnes": 28.40501574305919
+      },
+      "B": {
+        "count": 647,
+        "pct_count": 73.77423033067275,
+        "tonnes": 9556068.358580004,
+        "pct_tonnes": 62.8451849959185
+      }
+    },
+    "type_distribution": {
+      "Renewable": {
+        "count": 707,
+        "pct_count": 80.61573546180159,
+        "tonnes": 10231697.458580006,
+        "pct_tonnes": 67.28843866310297,
+        "mean_composite": 29.11261669024045,
+        "median_composite": 28.62
+      },
+      "Fossil switch": {
+        "count": 37,
+        "pct_count": 4.218928164196123,
+        "tonnes": 1735878.0,
+        "pct_tonnes": 11.415947432229922,
+        "mean_composite": 27.25,
+        "median_composite": 27.25
+      },
+      "ARR": {
+        "count": 55,
+        "pct_count": 6.271379703534778,
+        "tonnes": 845103.9044229999,
+        "pct_tonnes": 5.557799423499364,
+        "mean_composite": 50.5609090909091,
+        "median_composite": 50.38
+      },
+      "Waste/Methane": {
+        "count": 14,
+        "pct_count": 1.596351197263398,
+        "tonnes": 812725.0,
+        "pct_tonnes": 5.344860570189302,
+        "mean_composite": 43.807142857142864,
+        "median_composite": 43.35
+      },
+      "Industrial gas": {
+        "count": 13,
+        "pct_count": 1.4823261117445838,
+        "tonnes": 672255.0,
+        "pct_tonnes": 4.4210640039528855,
+        "mean_composite": 30.88,
+        "median_composite": 30.88
+      },
+      "REDD+": {
+        "count": 30,
+        "pct_count": 3.420752565564424,
+        "tonnes": 521888.543325,
+        "pct_tonnes": 3.432183699592511,
+        "mean_composite": 31.483333333333334,
+        "median_composite": 30.75
+      },
+      "IFM": {
+        "count": 12,
+        "pct_count": 1.3683010262257698,
+        "tonnes": 285366.83677399997,
+        "pct_tonnes": 1.8767060862075102,
+        "mean_composite": 48.589166666666664,
+        "median_composite": 48.12
+      },
+      "Industrial": {
+        "count": 9,
+        "pct_count": 1.0262257696693273,
+        "tonnes": 100814.0,
+        "pct_tonnes": 0.6630001212255858,
+        "mean_composite": 42.083333333333336,
+        "median_composite": 42.35
+      }
+    },
+    "grade_hhi": 0.48329211836428454
+  },
+  "depositor_concentration": {
+    "n_wallets": 479,
+    "gini": 0.9402589002194468,
+    "hhi": 0.03786209143579229,
+    "effective_n": 26.411641884491008,
+    "concentration": {
+      "top_10_for_50pct": {
+        "n_wallets": 10,
+        "pct_of_wallets": 2.0876826722338206,
+        "pct_of_tonnes": 50
+      },
+      "top_23_for_75pct": {
+        "n_wallets": 23,
+        "pct_of_wallets": 4.801670146137787,
+        "pct_of_tonnes": 75
+      },
+      "top_36_for_90pct": {
+        "n_wallets": 36,
+        "pct_of_wallets": 7.515657620041754,
+        "pct_of_tonnes": 90
+      }
+    },
+    "large_vs_small": {
+      "large_n_wallets": 20,
+      "large_n_deposits": 270,
+      "large_mean_quality": 31.343925925925927,
+      "large_vol_weighted_quality": 30.299254069161318,
+      "large_total_tonnes": 10935853.0,
+      "large_pct_tonnes": 71.91929558102234,
+      "small_n_wallets": 459,
+      "small_n_deposits": 607,
+      "small_mean_quality": 31.02128500823723,
+      "small_vol_weighted_quality": 35.320902829558754,
+      "small_total_tonnes": 4269875.743102,
+      "mann_whitney_U": 66735.0,
+      "mann_whitney_p": 0.9999998947822035,
+      "interpretation": "Large depositors deposit slightly lower quality by volume-weighting but the difference is not statistically significant by deposit-level Mann-Whitney. Adverse selection is SYSTEMIC, not driven by a few bad actors."
+    }
+  },
+  "headline_numbers": {
+    "n_deposits": 877,
+    "n_wallets": 479,
+    "total_tonnes": 15205728.743102,
+    "volume_weighted_mean_quality": 31.70936841452778,
+    "pqd": 0.6829063158547222,
+    "temporal_spearman_rho": -0.43865996766355636,
+    "temporal_p_value": 1.5125374723493518e-42,
+    "pct_B_grade_by_tonnes": 62.8451849959185,
+    "pct_below_BBB_by_tonnes": 91.2502007389777,
+    "depositor_gini": 0.9402589002194468,
+    "grade_hhi": 0.48329211836428454
+  }
+}

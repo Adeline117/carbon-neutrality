@@ -1,0 +1,224 @@
+{
+  "klima_known_addresses": [
+    "0x25d28a24ceb6f81015bb0b2007d795acac411b4d",
+    "0x4d70a031fc76da6a9bc0c922101a05fa95c3a227",
+    "0x7dc9e1ba10bb9fb1b5f82c8e6c2f6fa5f6d6a6a3",
+    "0x7dd4f0b986f032a44f913bf92c9e8b7c17d77ad7"
+  ],
+  "overall": {
+    "n": 1187,
+    "n_klima": 0,
+    "tonnes": 21984481.501703,
+    "tonnes_klima": 0,
+    "share_count": 0.0,
+    "share_tonnes": 0.0
+  },
+  "pre_terra": {
+    "n": 792,
+    "n_klima": 0,
+    "tonnes": 21579069.847726,
+    "tonnes_klima": 0,
+    "share_count": 0.0,
+    "share_tonnes": 0.0
+  },
+  "terra_to_ftx": {
+    "n": 94,
+    "n_klima": 0,
+    "tonnes": 404959.730964,
+    "tonnes_klima": 0,
+    "share_count": 0.0,
+    "share_tonnes": 0.0
+  },
+  "post_ftx": {
+    "n": 301,
+    "n_klima": 0,
+    "tonnes": 451.92301299999997,
+    "tonnes_klima": 0,
+    "share_count": 0.0,
+    "share_tonnes": 0.0
+  },
+  "top_20_depositors_all_time": [
+    {
+      "depositor": "0xaf529400ff068afbdc907c699b9184a4381481b0",
+      "tonnes": 1967489.0,
+      "count": 46,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xf36729fbfcde9a65386eb236460d8a8cfced2156",
+      "tonnes": 1526175.0,
+      "count": 28,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xee9930a62fbf85fb443ad3d7410da665ebc90b83",
+      "tonnes": 1328930.0,
+      "count": 49,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xe519b28e8f96e229498f15bb2da4ec0e942f688f",
+      "tonnes": 1284435.0,
+      "count": 47,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+      "tonnes": 1273817.0,
+      "count": 27,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xdab7f2bc9aa986d9759718203c9a76534894e900",
+      "tonnes": 1192245.0,
+      "count": 20,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x5298ee22d6b4ec1a8c62944ba63a8a197ee726e2",
+      "tonnes": 942657.0,
+      "count": 22,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x2845ec77192ad7ba2faf67e63b49be6c8d4f8b20",
+      "tonnes": 921023.0,
+      "count": 17,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xd85cf713c480a6dfac34121ee362a5e0ef74001f",
+      "tonnes": 822698.0,
+      "count": 29,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xe8d7763b7c6f969cf1b2ee8a88281bb172aa91ff",
+      "tonnes": 763977.0,
+      "count": 40,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x00000016f127c94a667ae3c9fdf0c31c9c79826f",
+      "tonnes": 681776.0,
+      "count": 22,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xa3fbf3282b227edfced3488ac8b71af4d38fc075",
+      "tonnes": 477970.0,
+      "count": 23,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xc450febeca0a1a4f802c74b5a15cfc90b799eaf5",
+      "tonnes": 464905.0,
+      "count": 5,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x79c8d248de2ffa98fa1cf1793c79bb86615a52d7",
+      "tonnes": 450186.0,
+      "count": 9,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x0bf92dee04456e3851d7418ed890d5522d7bd496",
+      "tonnes": 385347.0,
+      "count": 14,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x51d3a285bdb30fbdec337cb2f5d7a863d78a36be",
+      "tonnes": 383674.0,
+      "count": 19,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xcf237f7e640e32470587ff8e5918ead1840c6e5a",
+      "tonnes": 365157.0,
+      "count": 7,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xac5f1da716b466aedbfe24bb8496ce4b956af05f",
+      "tonnes": 343952.0,
+      "count": 2,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xb0ee473b1e6ddecd7a86e4c00d9b0a2d158e01cf",
+      "tonnes": 317391.0,
+      "count": 19,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xb208e3dcc8e2b091fa4b9aa65d528fdfdc8bfa93",
+      "tonnes": 307424.0,
+      "count": 17,
+      "is_known_klima": false
+    }
+  ],
+  "top_10_depositors_post_ftx": [
+    {
+      "depositor": "0x9fc7eeacd27d38a436462bb43ad97e49106820d7",
+      "tonnes": 60.435767999999996,
+      "count": 2,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x72678034ceb50c11fb599f850ed3dfa55edc78bb",
+      "tonnes": 55.083745,
+      "count": 1,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x5b0a9d1445392f1b9e739be8a48f72ff5029e927",
+      "tonnes": 36.061747,
+      "count": 1,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xf51d5ff1c2205cbc2d3236dafad1c14fb2acea45",
+      "tonnes": 27.149382,
+      "count": 1,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xb7cc906b14599f6797162be615087693bec41aa0",
+      "tonnes": 24.873401,
+      "count": 1,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x701386193b756f4931f68881f536724a808cdcba",
+      "tonnes": 15.559447,
+      "count": 1,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xfe5b9bf887c0fc5e784ce6e94a3e8d178d2297bb",
+      "tonnes": 10.702965,
+      "count": 1,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0xb83976ff9ab26d5dfa0d8581c5b82fd9f2e2ce60",
+      "tonnes": 8.462496,
+      "count": 1,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x69a2119a61270084ead6c95ce21d25affa7f9bf7",
+      "tonnes": 7.412288,
+      "count": 1,
+      "is_known_klima": false
+    },
+    {
+      "depositor": "0x9c8faefc2f6ce353aba87514dc20a59576cdb378",
+      "tonnes": 5.613856,
+      "count": 1,
+      "is_known_klima": false
+    }
+  ]
+}

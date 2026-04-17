@@ -1,0 +1,139 @@
+{
+  "bct_composition_by_tonnes_pct": {
+    "Fossil switch": 11.41594743222992,
+    "Renewable": 67.28843866310292,
+    "Waste/Methane": 5.344860570189301,
+    "ARR": 5.557799423499363,
+    "REDD+": 3.43218369959251,
+    "Industrial": 0.6630001212255857,
+    "IFM": 1.87670608620751,
+    "Industrial gas": 4.421064003952885
+  },
+  "bct_composition_by_count_pct": {
+    "Fossil switch": 4.218928164196123,
+    "Renewable": 80.61573546180159,
+    "Waste/Methane": 1.596351197263398,
+    "ARR": 6.2713797035347785,
+    "REDD+": 3.4207525655644244,
+    "Industrial": 1.0262257696693273,
+    "IFM": 1.3683010262257698,
+    "Industrial gas": 1.4823261117445838
+  },
+  "n_deposits_scored": 877,
+  "total_tonnes_scored": 15205728.743102001,
+  "vcs_universe": {
+    "source": "Verra VCS aggregate issuance (MSCI 2023 + solutionswill.com 2023-10 + Ecosystem Marketplace SOVCM 2022/2023 + AlliedOffsets public dashboard)",
+    "cumulative_issuance_Mt": {
+      "Energy Industries (Renewable)": 178.87,
+      "AFOLU (REDD+ / ARR / IFM)": 103.84,
+      "Waste handling / Methane": "~45",
+      "Industrial gas + other": "~60",
+      "Total VCS through 2023-10": "~483"
+    },
+    "shares_pct": {
+      "Renewable": 37.0,
+      "REDD+": 17.0,
+      "ARR": 2.5,
+      "IFM/Other": 2.0,
+      "Industrial gas": 8.5,
+      "Waste/Methane": 9.0,
+      "Fossil switch": 7.5,
+      "Other": 16.5
+    },
+    "renewable_share_95CI_pct": [
+      26.0,
+      48.0
+    ],
+    "primary_source_url": "https://solutionswill.com/en/the-verra-registry-analysis-and-trends-of-the-worlds-largest-carbon-credit-registry/",
+    "msci_source_url": "https://www.msci.com/research-and-insights/blog-post/renewable-energy-carbon-credits-losing-steam",
+    "em_source_url": "https://www.ecosystemmarketplace.com/articles/report-the-voluntary-carbon-market-contracted-in-2023-driven-by-drop-off-in-transactions-for-redd-and-renewable-energy/"
+  },
+  "selection_coefficients": {
+    "Fossil switch": {
+      "bct_share_pct": 11.41594743222992,
+      "vcs_base_share_pct": 7.5,
+      "selection_coef": 1.5221263242973226,
+      "bct_minus_base_pp": 3.9159474322299204
+    },
+    "Renewable": {
+      "bct_share_pct": 67.28843866310292,
+      "vcs_base_share_pct": 37.0,
+      "selection_coef": 1.818606450354133,
+      "bct_minus_base_pp": 30.288438663102923
+    },
+    "Waste/Methane": {
+      "bct_share_pct": 5.344860570189301,
+      "vcs_base_share_pct": 9.0,
+      "selection_coef": 0.5938733966877001,
+      "bct_minus_base_pp": -3.655139429810699
+    },
+    "ARR": {
+      "bct_share_pct": 5.557799423499363,
+      "vcs_base_share_pct": 2.5,
+      "selection_coef": 2.2231197693997453,
+      "bct_minus_base_pp": 3.057799423499363
+    },
+    "REDD+": {
+      "bct_share_pct": 3.43218369959251,
+      "vcs_base_share_pct": 17.0,
+      "selection_coef": 0.2018931587995594,
+      "bct_minus_base_pp": -13.56781630040749
+    },
+    "Industrial gas": {
+      "bct_share_pct": 4.421064003952885,
+      "vcs_base_share_pct": 8.5,
+      "selection_coef": 0.5201251769356334,
+      "bct_minus_base_pp": -4.078935996047115
+    }
+  },
+  "tonnage_weighted_selection": {
+    "paper_headline_bct_renewable_share_pct": 69.1,
+    "tco2_scored_subset_bct_renewable_tonnes_pct": 67.28843866310292,
+    "vcs_base_renewable_pct": 37.0,
+    "selection_coef_paper_headline": 1.8675675675675674,
+    "selection_coef_scored_subset": 1.818606450354133,
+    "selection_coef_low_band_26pct": 2.6576923076923076,
+    "selection_coef_high_band_48pct": 1.4395833333333332
+  },
+  "binomial_test_renewables": {
+    "bct_renewable_count": 707,
+    "bct_total_count": 877,
+    "bct_renewable_share_count": 0.806157354618016,
+    "null_vcs_base_share": 0.37,
+    "binomial_p_greater": 3.1586225344127005e-154
+  },
+  "sensitivity_different_base_rates": {
+    "em_retirement_26pct": {
+      "p_value": 1.0491891447157224e-250,
+      "bct_share": 0.806157354618016
+    },
+    "msci_point_37pct": {
+      "p_value": 3.1586225344127005e-154,
+      "bct_share": 0.806157354618016
+    },
+    "alliedoffsets_mid_43pct": {
+      "p_value": 1.881970334490866e-115,
+      "bct_share": 0.806157354618016
+    },
+    "vcs_ci_high_48pct": {
+      "p_value": 1.9667241639974205e-88,
+      "bct_share": 0.806157354618016
+    },
+    "vcs_stress_60pct": {
+      "p_value": 3.335296023206092e-39,
+      "bct_share": 0.806157354618016
+    },
+    "vcs_stress_70pct": {
+      "p_value": 5.941511649006638e-13,
+      "bct_share": 0.806157354618016
+    },
+    "vcs_stress_80pct": {
+      "p_value": 0.34215140156268475,
+      "bct_share": 0.806157354618016
+    }
+  },
+  "bct_renewable_wilson_95CI": [
+    0.7786819070131701,
+    0.8309623241403086
+  ]
+}
