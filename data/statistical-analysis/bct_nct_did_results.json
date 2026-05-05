@@ -1,0 +1,55 @@
+{
+  "method": "Difference-in-Differences: BCT vs NCT quality trajectories",
+  "date": "2026-05-05",
+  "panel_size": 1895,
+  "n_bct_deposits": 1187,
+  "n_nct_deposits": 708,
+  "n_bct_tokens": 345,
+  "n_nct_tokens": 35,
+  "did_continuous_time": {
+    "beta_intercept": 42.865,
+    "beta_bct": -12.3109,
+    "beta_time": 1.0504,
+    "beta_interaction": -2.5666,
+    "se_interaction": 2.172,
+    "t_interaction": -1.1817,
+    "p_interaction": 0.238142,
+    "r_squared": 0.4665,
+    "n_clusters": 349
+  },
+  "did_tonnage_weighted": {
+    "beta_interaction": -5.0693,
+    "se_bootstrap": 4.3091,
+    "ci_95": [
+      -15.9959,
+      1.7682
+    ],
+    "p_bootstrap": 0.153
+  },
+  "did_event_study_terra": {
+    "beta_intercept": 39.8146,
+    "beta_bct": -7.7052,
+    "beta_post_terra": 4.2611,
+    "beta_interaction": -7.3287,
+    "se_interaction": 2.4971,
+    "t_interaction": -2.9349,
+    "p_interaction": 0.003558,
+    "r_squared": 0.4715
+  },
+  "permutation_test": {
+    "observed_beta3": -2.5666,
+    "p_two_sided": 0.0,
+    "p_one_sided_bct_worse": 0.0,
+    "n_permutations": 10000
+  },
+  "bayesian_bootstrap": {
+    "posterior_mean": -2.5687,
+    "posterior_sd": 0.7399,
+    "ci_95_credible": [
+      -4.0194,
+      -1.099
+    ],
+    "prob_bct_declines_faster": 0.9998,
+    "n_draws": 10000
+  }
+}
