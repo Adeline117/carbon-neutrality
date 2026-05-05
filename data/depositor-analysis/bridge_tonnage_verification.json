@@ -1,0 +1,135 @@
+{
+  "method": "totalSupply() RPC query on 24 non-BCT bridged TCO2 tokens",
+  "date": "2026-05-05",
+  "bct_deposited_tonnes": 21984481.5,
+  "bct_unique_tokens": 345,
+  "bct_deposit_events": 1187,
+  "non_bct_token_count": 24,
+  "non_bct_current_supply_tonnes": 86683.1,
+  "total_bridged_estimate_tonnes": 22071164.6,
+  "passthrough_by_tonnage_pct": 99.61,
+  "passthrough_by_token_count_pct": 93.5,
+  "note": "Non-BCT supply is totalSupply() (current, after retirements) = lower bound on bridged amount. So tonnage pass-through is an upper bound.",
+  "non_bct_token_details": [
+    {
+      "address": "0x004090eef602e024b2a6cb7f0c1edda992382994",
+      "name": "Toucan Protocol: TCO2-VCS-725-20071231",
+      "total_supply_tonnes": 32928.0
+    },
+    {
+      "address": "0xc42cb8538e0dea6459c5965876131120ba96122e",
+      "name": "Toucan Protocol: TCO2-VCS-1715-2013",
+      "total_supply_tonnes": 31560.8
+    },
+    {
+      "address": "0xf0b3aed0232b3c51693323e45878c9173b6c43fe",
+      "name": "Toucan Protocol: TCO2-VCS-934-2015",
+      "total_supply_tonnes": 17843.63
+    },
+    {
+      "address": "0xfbc5d9620b6bb729be2f72fca157054bd3da3d1a",
+      "name": "Toucan Protocol: TCO2-VCS-1764-20200615",
+      "total_supply_tonnes": 4132.72
+    },
+    {
+      "address": "0xf29aac9817fa56fc321d50a0940bd06df6e98791",
+      "name": "Toucan Protocol: TCO2-VCS-1935-2017",
+      "total_supply_tonnes": 200.0
+    },
+    {
+      "address": "0x1192e0f8fdee17023752848c8a3be8f9aa49ca44",
+      "name": "Toucan Protocol: TCO2-VCS-1768-2017",
+      "total_supply_tonnes": 10.0
+    },
+    {
+      "address": "0xfbd5528ed9ef545f3b0ad387c23a10c8741759c2",
+      "name": "Toucan Protocol: TCO2-VCS-960-20120101",
+      "total_supply_tonnes": 4.1
+    },
+    {
+      "address": "0xde8a51be4a6b9c46879c233f3ea69d1eba7f153d",
+      "name": "Toucan Protocol: TCO2-VCS-832-20070719",
+      "total_supply_tonnes": 1.89
+    },
+    {
+      "address": "0xb4519637d5a4d4c0418f664911e0ce0720157816",
+      "name": "Toucan Protocol: TCO2-VCS-45-20060825",
+      "total_supply_tonnes": 1.0
+    },
+    {
+      "address": "0xd6b0b0770cf516df1b07feabfd2bcb897426c3b2",
+      "name": "Toucan Protocol: TCO2-VCS-1686-2019",
+      "total_supply_tonnes": 1.0
+    },
+    {
+      "address": "0x8f5064ad9f91c8193694d9e8e7e9850fc1a2cc1f",
+      "name": "Toucan Protocol: TCO2-VCU-92-",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0xb9989e30d99e1f4b8daf79751327e520378f0f23",
+      "name": "Toucan Protocol: TCO2-VCS-525-20070323",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0xc2f4dc92abd6734581f401297b887424ebe30ffd",
+      "name": "Toucan Protocol: TCO2-VCS-1477-2017",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0x144a85216977355e088c1bbdd60155d48aec68ed",
+      "name": "Toucan Protocol: TCO2-VCU-1764-",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0xfbb712143ee6ed62cf3a2d63e487c4ac0bd29305",
+      "name": "Toucan Protocol: TCO2-VCS-1364-2020",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0x199e336c4b4b87da57e30cd4be6896360f42eecd",
+      "name": "Toucan Protocol: TCO2-VCS-674-20190101",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0x70ae8940c038b1d3fe80459f9c534636a85564c5",
+      "name": "Toucan Protocol: TCO2-VCS-1094-2012",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0x848b3e1731be61f23cf342512b14c92258d34a6f",
+      "name": "Toucan Protocol: TCO2-VCS-265-2014",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0xbd896d201841ce8be7d7ceb81e2222a8b6196295",
+      "name": "Toucan Protocol: TCO2-VCS-868-20150101",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0xb159f846eebf248db81ad6790c6623ab8dcd4f66",
+      "name": "Toucan Protocol: TCO2-VCS-1882-2020",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0xf48f79b11f07f2192d14ff9c43232eaadb02c991",
+      "name": "Toucan Protocol: TCO2-VCS-1055-20030601",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0xb2e26fdd231e3b741711aa31f4e1f4b9caf0abc9",
+      "name": "Toucan Protocol: TCO2-VCS-1686-2018",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0xbd69f10278d937f08dfc63bc24ee3d2b5ec37b23",
+      "name": "Toucan Protocol: TCO2-VCS-1522-2020",
+      "total_supply_tonnes": 0.0
+    },
+    {
+      "address": "0x28ad571c901fb15f2a1eb4ac945fb05671a439e1",
+      "name": "Toucan Protocol: TCO2-VCS-10-2012",
+      "total_supply_tonnes": 0.0
+    }
+  ]
+}
