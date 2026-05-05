@@ -1327,7 +1327,7 @@
       "experiment_id": "tonnage_v1"
     },
     "passthrough_by_tonnage_pct": {
-      "value": 99.6,
+      "value": 99.61,
       "unit": "%",
       "source": "data/depositor-analysis/bridge_tonnage_verification.json",
       "experiment_id": "tonnage_v1"
@@ -1452,67 +1452,67 @@
     "n_vaults_tested": {
       "value": 4,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "n_vaults_net_outflow": {
       "value": 3,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "total_events": {
       "value": 182903,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "cryptopunks_mints": {
       "value": 277,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "cryptopunks_redeems": {
       "value": 327,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "bayc_mints": {
       "value": 599,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "bayc_redeems": {
       "value": 637,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "sandbox_mints": {
       "value": 3227,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "sandbox_redeems": {
       "value": 4143,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "hashmasks_mints": {
       "value": 1839,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     },
     "hashmasks_redeems": {
       "value": 1566,
       "unit": "count",
-      "source": "Dune Analytics",
+      "source": "data/nftx_validation_results.json",
       "experiment_id": "nftx_v1"
     }
   },
@@ -1616,7 +1616,7 @@
       "experiment_id": "did_v1"
     },
     "event_study_r2": {
-      "value": 0.472,
+      "value": 0.471,
       "unit": "R²",
       "source": "data/statistical-analysis/bct_nct_did_results.json",
       "experiment_id": "did_v1"
