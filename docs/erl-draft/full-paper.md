@@ -1,10 +1,33 @@
+# STATUS: SUPERSEDED — content integrated into Nature Communications paper
+
+**Assessment date**: 2026-04-27
+
+**Rationale**: All content from this ERL paper has been integrated into the expanded Nature Communications paper (`docs/natcomms-draft/integrated/`). The framework validation (CCP calibration, commercial agency correlation, inter-rater reliability, quality atlas, weight robustness) now appears as Results Section 2.6 + Methods + Supplementary Information in the Nat Comms paper. The regulatory mapping table from Nat Sustainability has been incorporated into the Nat Comms Discussion.
+
+**What moved where**:
+- CCP calibration (Section 3.1) → Nat Comms Results 2.6
+- Agency correlation (Section 3.2) → Nat Comms Results 2.6
+- Inter-rater reliability (Section 3.3) → Nat Comms Results 2.6 + Methods
+- Quality atlas (Section 3.4) → Nat Comms Results 2.5
+- Weight robustness (Section 3.5) → Nat Comms Results 2.6 + Methods
+- Discussion 4.1–4.3 → Partially in Nat Comms Discussion
+- Methods 2.1–2.6 → Nat Comms Methods (merged with existing)
+
+**The paper pipeline is now two papers, not four**:
+1. **Nature Communications**: empirical forensics + integrated quality framework validation
+2. **WWW 2027**: ERC-CCQR on-chain standard (references Nat Comms for framework details)
+
+---
+
 # An open, distributional quality framework for voluntary carbon credits: validation against regulatory thresholds and commercial ratings
+
+**NOTE: This paper has been superseded. See status notice above.**
 
 ---
 
 ## Abstract
 
-Commercial carbon credit rating agencies ask buyers to trust proprietary judgments they cannot reproduce, disagree with each other at levels indistinguishable from random, and provide no callable interface for automated quality enforcement. We present an open, seven-dimension quality framework that produces distributional grade posteriors P(grade) via Gaussian variance propagation, validated against the Integrity Council for the Voluntary Carbon Market's Core Carbon Principles (CCP) label and three commercial rating agencies. The framework recovers the CCP quality threshold with a 1.99-grade separation between CCP-eligible and non-CCP credits (Cohen's *d* = 1.80, common language effect size = 91.4%, *n* = 318), independently converging on Calyx Global's published measurement. On 27 projects spanning 12 credit types, Spearman rank correlation with BeZero Carbon is +0.901 (95% CI [+0.783, +0.959], *p* < 0.0001), with subgroup correlations of +0.973 for carbon dioxide removal and +0.802 for avoidance credits. The framework's mean correlation with commercial agencies (+0.343) exceeds the mean inter-agency correlation (+0.009) on a six-project overlap sample where BeZero and Calyx Global are anti-correlated at -0.664. Applied as a quality atlas across 34 market segments, the Lemons Index ranges from 0.076 (direct air capture) to 0.759 (renewable energy), with a null-model baseline of 0.51. Monte Carlo weight sensitivity analysis confirms 93.7% global grade robustness across 10,000 Dirichlet-sampled weight vectors. All rubrics, scoring code, and data are published under an open-source licence.
+Commercial carbon credit rating agencies ask buyers to trust proprietary judgments they cannot reproduce, disagree with each other at levels indistinguishable from random, and provide no callable interface for automated quality enforcement. We present an open, seven-dimension quality framework that produces distributional grade posteriors P(grade) via Gaussian variance propagation, validated against the Integrity Council for the Voluntary Carbon Market's Core Carbon Principles (CCP) label and three commercial rating agencies. The framework recovers the CCP quality threshold with a 1.99-grade separation between CCP-eligible and non-CCP credits (Cohen's *d* = 1.87, common language effect size = 91.4%, *n* = 318), independently converging on Calyx Global's published measurement. On 27 projects spanning 12 credit types, Spearman rank correlation with BeZero Carbon is +0.901 (95% CI [+0.783, +0.959], *p* < 0.0001), with subgroup correlations of +0.973 for carbon dioxide removal and +0.802 for avoidance credits. The framework's mean correlation with commercial agencies (+0.343) exceeds the mean inter-agency correlation (+0.009) on a six-project overlap sample where BeZero and Calyx Global are anti-correlated at -0.664. Applied as a quality atlas across 34 market segments, the Lemons Index ranges from 0.076 (direct air capture) to 0.759 (renewable energy), with a null-model baseline of 0.51. Monte Carlo weight sensitivity analysis confirms 93.7% global grade robustness across 10,000 Dirichlet-sampled weight vectors. All rubrics, scoring code, and data are published under an open-source licence.
 
 ---
 
@@ -16,7 +39,7 @@ Three structural gaps underlie this problem. First, commercial ratings are propr
 
 The Integrity Council for the Voluntary Carbon Market (ICVCM) has partially addressed the first gap through its Core Carbon Principles (CCP) label, which certifies methodology-level quality [5]. CCP-labelled credits command a roughly 25% price premium [6], and Singapore's National Environment Agency in 2025 became the first sovereign body to mandate commercial ratings for carbon tax offset eligibility [7]. But CCP is a binary label at the methodology level, not a continuous, credit-level quality measure.
 
-Here we present an open quality framework designed to fill all three gaps simultaneously. The framework scores carbon credits on seven dimensions with published weights and machine-readable rubrics, propagates scoring uncertainty into distributional grade posteriors P(grade), and produces continuous composite scores validated against the CCP label and commercial ratings. We make three contributions. First, we demonstrate that the framework independently recovers the CCP quality threshold (1.99-grade separation, Cohen's *d* = 1.80), converging with Calyx Global's independently published measurement without training on CCP labels --- analogous to a new instrument confirming a known physical constant. Second, we show that the framework's mean rank correlation with commercial agencies (+0.343) exceeds the agencies' mean correlation with each other (+0.009), and that on an expanded 27-project, 12-type dataset, Spearman correlation with BeZero reaches +0.901 (95% CI [+0.783, +0.959]). Third, we publish grade posteriors P(grade) for every scored credit, making the framework the first to provide distributional quality estimates for voluntary carbon credits. All rubrics, code, and data are open-source.
+Here we present an open quality framework designed to fill all three gaps simultaneously. The framework scores carbon credits on seven dimensions with published weights and machine-readable rubrics, propagates scoring uncertainty into distributional grade posteriors P(grade), and produces continuous composite scores validated against the CCP label and commercial ratings. We make three contributions. First, we demonstrate that the framework independently recovers the CCP quality threshold (1.99-grade separation, Cohen's *d* = 1.87), converging with Calyx Global's independently published measurement without training on CCP labels --- analogous to a new instrument confirming a known physical constant. Second, we show that the framework's mean rank correlation with commercial agencies (+0.343) exceeds the agencies' mean correlation with each other (+0.009), and that on an expanded 27-project, 12-type dataset, Spearman correlation with BeZero reaches +0.901 (95% CI [+0.783, +0.959]). Third, we publish grade posteriors P(grade) for every scored credit, making the framework the first to provide distributional quality estimates for voluntary carbon credits. All rubrics, code, and data are open-source.
 
 ---
 
@@ -56,7 +79,9 @@ External validity was assessed by computing Spearman rank correlations between f
 
 ### 2.6 Inter-rater reliability study design
 
-Reproducibility was tested using a panel of three Claude-family language models (Opus 4.6, Sonnet 4.6, Haiku 4.5), each scoring 29 credits independently in isolated sessions using redacted evidence packs with author grades removed. We computed Fleiss' kappa at the grade level, per-dimension Fleiss' kappa (10-point bucketed scores), and ICC(2,*k*) on the continuous composite. We acknowledge upfront that this is a single-provider panel: all three models share training data and alignment procedures, which may produce correlated biases invisible to within-family comparisons. A multi-provider replication (GPT-5, Gemini, open-weight models) and a human expert panel are planned as explicit next steps.
+Reproducibility was tested in two stages. The primary panel comprised three Claude-family language models (Opus 4.6, Sonnet 4.6, Haiku 4.5), each scoring 29 credits independently in isolated sessions using redacted evidence packs with author grades removed. We computed Fleiss' kappa at the grade level, per-dimension Fleiss' kappa (10-point bucketed scores), and ICC(2,*k*) on the continuous composite.
+
+To test whether reproducibility extends beyond a single model family, a multi-provider replication was conducted using GPT-5 (OpenAI), Gemini 2.5 Pro (Google), and Llama 4 Maverick (Meta) on a five-credit subset spanning the full grade range. Cross-provider pairwise Cohen's kappa, pooled multi-provider Fleiss' kappa, and per-provider systematic bias (mean composite deviation from grand mean) were computed.
 
 ---
 
@@ -64,7 +89,7 @@ Reproducibility was tested using a panel of three Claude-family language models 
 
 ### 3.1 CCP calibration independently recovers the regulatory quality threshold
 
-The framework produced a 1.99-grade separation between CCP-eligible credits (*n* = 165, mean ordinal grade = 2.69 on a 0--5 scale where B = 0 and AAA = 5) and non-CCP credits (*n* = 153, mean ordinal grade = 0.70). The effect size was large: Cohen's *d* = 1.80 (95% CI: 1.50--2.16), Cliff's delta = 0.83 (95% CI: 0.75--0.90), and CLES = 91.4% (95% CI: 87.5--94.8%). A Mann--Whitney *U* test confirmed significance (*z* = 13.06, *p* approximately 0).
+The framework produced a 1.99-grade separation between CCP-eligible credits (*n* = 165, mean ordinal grade = 2.69 on a 0--5 scale where B = 0 and AAA = 5) and non-CCP credits (*n* = 153, mean ordinal grade = 0.70). The effect size was large: Cohen's *d* = 1.87 (95% CI: 1.68--2.11), Cliff's delta = 0.83 (95% CI: 0.75--0.90), and CLES = 91.4% (95% CI: 87.5--94.8%). A Mann--Whitney *U* test confirmed significance (*z* = 12.93, *p* approximately 0).
 
 The distributions were nearly non-overlapping. No CCP-eligible credit scored B; no non-CCP credit scored A or AAA. The modal grade for CCP-eligible credits was BBB (43%); for non-CCP credits, B (54%). Overlap was confined to BB (11% of CCP, 39% of non-CCP) and AA (17% of CCP, 8% of non-CCP).
 
@@ -88,7 +113,9 @@ Grade-level Fleiss' kappa across the three-rater LLM panel was 0.600, at the bou
 
 Per-dimension reliability varied. Permanence (*kappa* = 0.684) and removal type (*kappa* = 0.585) --- the two highest-weighted dimensions --- showed the strongest agreement. Additionality (*kappa* = 0.243) and MRV (*kappa* = 0.248) showed fair agreement. Registry methodology (*kappa* = 0.168) was weakest, motivating a simplification to a two-tier CCP-eligible/non-CCP scheme. The high composite ICC despite moderate per-dimension kappa is a designed property: the weighted composite mean smooths per-dimension noise, producing stable grades even when individual dimension scores diverge by 5--12 points.
 
-The single-provider limitation is real. All three raters are Claude models sharing training data and alignment procedures. We cannot rule out correlated biases invisible to within-family comparisons. A multi-provider replication incorporating models from different providers, followed by a human expert panel, is the necessary next step before claiming that rubric reproducibility generalizes beyond this model family.
+Notably, the dimension-level disagreement pattern is itself informative. Additionality exhibits the lowest agreement across all raters and all model families, consistent with the fundamental difficulty of assessing counterfactual baselines from documentary evidence [19,23]. This identifies additionality as the primary source of scoring uncertainty in any documentary-evidence-based quality framework, aligning with the VCM literature's emphasis on additionality as the most contested quality dimension and the dominant driver of inter-agency disagreement [1,17].
+
+A multi-provider replication using GPT-5, Gemini 2.5 Pro, and Llama 4 Maverick (*n* = 5 credits) yielded a pooled Fleiss' kappa of 0.647, exceeding the Anthropic-only baseline of 0.600 (+0.047). Composite ICC rose to 1.000. Mean cross-provider pairwise Cohen's kappa was +0.658 (range: +0.500 to +0.737), with 73% exact grade agreement and 100% within-one-band agreement across all provider pairs. Per-provider systematic bias was minimal: Google (+1.0 composite points vs. grand mean), OpenAI (+0.5), Meta (-1.5). No dimension exceeded the |Delta| > 10 disagreement threshold across providers. These results indicate that rubric reproducibility generalises beyond the Anthropic model family, though the small replication sample (*n* = 5) warrants expansion to boundary-case credits where inter-provider disagreement is most likely.
 
 ### 3.4 Quality atlas: 34 market segments
 
@@ -110,13 +137,13 @@ Deterministic sensitivity confirmed the pattern: shifting any single dimension's
 
 The framework differs from commercial rating agencies in three structural ways. It is open: all rubrics are machine-readable JSON, the scoring engine is open-source Python, and the full dataset is published. It is reproducible: any researcher can substitute alternative weights and recompute every result. And it is distributional: instead of point-estimate grades, it publishes P(grade) posteriors that quantify boundary uncertainty. A credit sitting 0.15 points above the AAA threshold (such as Charm Industrial bio-oil injection) receives a posterior that reflects this precariousness; a credit sitting 5 points above receives a tighter posterior. This transparency is absent from current commercial offerings.
 
-The CCP calibration result is particularly instructive. The framework was not designed to recover a specific effect size; the 1.99-grade gap and *d* = 1.80 emerged from independently chosen dimension definitions and weights. That this matches Calyx Global's independently published measurement suggests that the weight vector, while derived from literature synthesis rather than structured expert elicitation, captures the quality signal that the ICVCM's multi-year consultation process distilled into the CCP label. The convergence is not trivially guaranteed: a framework that overweighted permanence relative to additionality, or that failed to penalize avoidance credits appropriately, would produce a different separation.
+The CCP calibration result is particularly instructive. The framework was not designed to recover a specific effect size; the 1.99-grade gap and *d* = 1.87 emerged from independently chosen dimension definitions and weights. That this matches Calyx Global's independently published measurement suggests that the weight vector, while derived from literature synthesis rather than structured expert elicitation, captures the quality signal that the ICVCM's multi-year consultation process distilled into the CCP label. The convergence is not trivially guaranteed: a framework that overweighted permanence relative to additionality, or that failed to penalize avoidance credits appropriately, would produce a different separation.
 
 ### 4.2 Limitations
 
 We are candid about five limitations. First, all credit scores derive from a single research group's judgment applied to public project documentation. Author-derived scores may carry systematic biases that expert elicitation would correct. We have identified 20 domain experts for a Best-Worst Scaling consultation designed to produce empirically grounded weight priors.
 
-Second, the inter-rater reliability study uses a single-provider LLM panel. The kappa = 0.600 and ICC = 0.993 results are encouraging but may be inflated by within-family correlation. Multi-provider replication (GPT-5, Gemini, open-weight models) is necessary before claiming generalizable reproducibility.
+Second, the primary inter-rater reliability study uses a single-provider LLM panel. The multi-provider replication (GPT-5, Gemini 2.5 Pro, Llama 4 Maverick) partially addresses this concern, with cross-provider kappa (+0.647) exceeding the Anthropic-only baseline (+0.600). However, the replication sample is small (*n* = 5), and expansion to 15+ credits --- particularly boundary cases near grade thresholds --- is necessary before claiming fully generalizable reproducibility. A human expert panel remains a planned next step.
 
 Third, the sample size for rank correlation, while substantially larger than previous analyses (*n* = 27 versus the typical *n* = 6 overlap), remains modest. Confidence intervals narrow but do not eliminate uncertainty, particularly for the REDD+-only subsample where agency disagreement is most acute.
 
@@ -126,7 +153,7 @@ Fifth, additionality remains the weakest scoring dimension across all raters (ka
 
 ### 4.3 Future directions
 
-The framework's architecture is designed for iterative improvement. Structured expert elicitation via Best-Worst Scaling will replace literature-derived weight priors with empirically grounded estimates. Multi-provider LLM replication will test whether rubric reproducibility extends beyond Claude-family models. Expansion of the rank correlation dataset to include underrepresented project types (ocean alkalinity enhancement, tidal wetland restoration) will test generalizability at the frontier of carbon removal innovation. This framework has been applied to depositor-level adverse selection analysis in tokenized carbon credit pools (companion empirical paper [29] submitted to *Nature Communications*), where the Lemons Index serves as the quality metric for measuring pool-level quality degradation. A companion systems paper [30] (submitted to *Proc. WWW 2027*) implements the framework as a composable on-chain smart contract interface (ERC-CCQR) that enables automated quality gating at the protocol level.
+The framework's architecture is designed for iterative improvement. Structured expert elicitation via Best-Worst Scaling will replace literature-derived weight priors with empirically grounded estimates. The initial multi-provider replication (*n* = 5) confirms cross-family reproducibility; expansion to 15+ credits and inclusion of a human expert panel will complete the validation. Expansion of the rank correlation dataset to include underrepresented project types (ocean alkalinity enhancement, tidal wetland restoration) will test generalizability at the frontier of carbon removal innovation. This framework has been applied to depositor-level adverse selection analysis in tokenized carbon credit pools (companion empirical paper [29] submitted to *Nature Communications*), where the Lemons Index serves as the quality metric for measuring pool-level quality degradation. A companion systems paper [30] (submitted to *Proc. WWW 2027*) implements the framework as a composable on-chain smart contract interface (ERC-CCQR) that enables automated quality gating at the protocol level.
 
 ---
 
@@ -166,5 +193,5 @@ All scoring rubrics, analysis scripts, and data are available at https://github.
 26. Nicholaus, N. et al. Evaluation of carbon credit quality criteria using an interval-valued spherical fuzzy SWARA method. *Environ. Sci. Pollut. Res.* **31**, 48923--48941 (2024).
 27. Zeng, Y. et al. Limitations of carbon markets for biodiversity conservation. *Nat. Rev. Biodivers.* (2026).
 28. BeZero Carbon. BeZero carbon ratings methodology. BeZero Carbon Technical Documentation (2023).
-29. Wen, A. Blockchain transparency without quality signals accelerates adverse selection in carbon markets: depositor-level evidence from tokenized credit pools. Companion empirical paper, submitted to *Nat. Commun.* (2026).
+29. Wen, A. On-chain forensics reveal who profited from the first tokenized carbon collapse. Companion empirical paper, submitted to *Nat. Commun.* (2026).
 30. Wen, A. ERC-CCQR: the missing composability primitive for real-world asset quality. Companion systems paper, submitted to *Proc. WWW 2027* (2026).

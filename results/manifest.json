@@ -1,0 +1,1571 @@
+{
+  "_meta": {
+    "version": "0.1.0",
+    "last_updated": "2026-04-20T00:00:00Z",
+    "last_updated_by": "initial_extraction",
+    "paper": "natcomms-draft",
+    "description": "Single source of truth for all numeric claims in the paper. Every number in the manuscript MUST trace back to a key here."
+  },
+  "composition": {
+    "renewable_pct_tonnes": {
+      "value": 69.1,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "redd_pct_tonnes": {
+      "value": 4.2,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "fossil_switch_pct": {
+      "value": 10.4,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "waste_methane_pct": {
+      "value": 5.5,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "arr_pct": {
+      "value": 3.9,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "industrial_gas_pct": {
+      "value": 3.1,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "ifm_pct": {
+      "value": 2.0,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "n_deposits": {
+      "value": 1187,
+      "unit": "count",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "n_projects": {
+      "value": 168,
+      "unit": "count",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "total_tonnes": {
+      "value": 21984482,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "renewable_pct_count": {
+      "value": 78.5,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "total_tonnes_approx_millions": {
+      "value": 22,
+      "unit": "million tCO2",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    }
+  },
+  "selection": {
+    "selection_coefficient": {
+      "value": 1.87,
+      "unit": "\u00d7",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "vcs_base_rate_renewable": {
+      "value": 37,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "vcs_base_rate_sensitivity_lo": {
+      "value": 26,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "vcs_base_rate_sensitivity_hi": {
+      "value": 55,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "wallet_permutation_p": {
+      "value": "<0.0001",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "wallet_majority_renewable_pct": {
+      "value": 89.0,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "bootstrap_ci_lo": {
+      "value": 0.496,
+      "unit": "excess share",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "bootstrap_ci_hi": {
+      "value": 0.547,
+      "unit": "excess share",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "bootstrap_point": {
+      "value": 0.522,
+      "unit": "excess share",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "conservative_selection_coeff": {
+      "value": 1.43,
+      "unit": "\u00d7",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "conservative_p": {
+      "value": "<10^-64",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "redd_underrepresentation": {
+      "value": 0.2,
+      "unit": "\u00d7",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "n_wallets": {
+      "value": 509,
+      "unit": "count",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "gini": {
+      "value": 0.94,
+      "unit": "coefficient",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "effective_n_hhi": {
+      "value": 83.5,
+      "unit": "count",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    }
+  },
+  "quality": {
+    "bct_pqd": {
+      "value": 0.679,
+      "unit": "PQD",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "nct_pqd": {
+      "value": 0.601,
+      "unit": "PQD",
+      "source": "data/depositor-analysis/nct_comparison_results.json",
+      "experiment_id": "nct_v1"
+    },
+    "char_pqd": {
+      "value": 0.221,
+      "unit": "PQD",
+      "source": "data/depositor-analysis/nct_comparison_results.json",
+      "experiment_id": "nct_v1"
+    },
+    "pqd_below_bbb_pct": {
+      "value": 89.8,
+      "unit": "%",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "pqd_at_grade_b_pct": {
+      "value": 60.7,
+      "unit": "%",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "n_tokens_scored": {
+      "value": 345,
+      "unit": "count",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "ccp_cohens_d": {
+      "value": 1.8,
+      "unit": "d",
+      "source": "data/statistical-analysis/ccp_effect_size.py",
+      "experiment_id": "ccp_v1"
+    },
+    "bezero_rho": {
+      "value": 0.901,
+      "unit": "\u03c1",
+      "source": "data/depositor-analysis/bezero_validation.py",
+      "experiment_id": "bezero_v1"
+    },
+    "bezero_n": {
+      "value": 27,
+      "unit": "count",
+      "source": "data/depositor-analysis/bezero_validation.py",
+      "experiment_id": "bezero_v1"
+    },
+    "llm_panel_kappa": {
+      "value": 0.6,
+      "unit": "\u03ba",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "quality_atlas_pqd_min": {
+      "value": 0.076,
+      "unit": "PQD",
+      "source": "data/methodology-ratings/batch_summary.json",
+      "experiment_id": "atlas_v1"
+    },
+    "quality_atlas_pqd_max": {
+      "value": 0.759,
+      "unit": "PQD",
+      "source": "data/methodology-ratings/batch_summary.json",
+      "experiment_id": "atlas_v1"
+    },
+    "quality_atlas_n_segments": {
+      "value": 34,
+      "unit": "count",
+      "source": "data/methodology-ratings/batch_summary.json",
+      "experiment_id": "atlas_v1"
+    },
+    "bbb_gate_projects_admitted": {
+      "value": 2,
+      "unit": "count",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "bbb_gate_pqd": {
+      "value": 0.405,
+      "unit": "PQD",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "bbb_gate_improvement_pct": {
+      "value": 40.5,
+      "unit": "%",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "bb_gate_pqd": {
+      "value": 0.547,
+      "unit": "PQD",
+      "source": "data/statistical-analysis/counterfactual_simulation_results.json",
+      "experiment_id": "counterfactual_v1"
+    },
+    "kvcm_pqd": {
+      "value": 0.519,
+      "unit": "PQD",
+      "source": "data/lemons-index/results.json",
+      "experiment_id": "counterfactual_v1"
+    },
+    "bbb_gate_pct_admitted": {
+      "value": 1.2,
+      "unit": "%",
+      "source": "data/statistical-analysis/counterfactual_simulation_results.json",
+      "experiment_id": "counterfactual_v1"
+    },
+    "bezero_bct_n": {
+      "value": 7,
+      "unit": "count",
+      "source": "data/depositor-analysis/bezero_validation_results.json",
+      "experiment_id": "bezero_v1"
+    },
+    "bezero_bct_p": {
+      "value": 0.073,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/bezero_validation_results.json",
+      "experiment_id": "bezero_v1"
+    }
+  },
+  "price_quality": {
+    "pearson_r": {
+      "value": 0.774,
+      "unit": "r",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "pearson_p": {
+      "value": "<10^-66",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "ols_beta_renewable": {
+      "value": -1.8,
+      "unit": "$/pp",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "ols_beta_renewable_abs": {
+      "value": 1.8,
+      "unit": "$/pp",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "ols_beta_p": {
+      "value": "<0.001",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "granger_quality_to_price_f": {
+      "value": 6.32,
+      "unit": "F",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "granger_quality_to_price_p": {
+      "value": 0.004,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "granger_price_to_quality_f": {
+      "value": 16.08,
+      "unit": "F",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "granger_price_to_quality_p": {
+      "value": "<10^-5",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "n_daily_obs": {
+      "value": 828,
+      "unit": "days",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "n_overlap_days": {
+      "value": 331,
+      "unit": "days",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "n_weekly_obs": {
+      "value": 55,
+      "unit": "weeks",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "granger_pqd_to_price_f": {
+      "value": 3.4,
+      "unit": "F",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "granger_pqd_to_price_p": {
+      "value": 0.042,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "granger_price_to_pqd_f": {
+      "value": 8.4,
+      "unit": "F",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "granger_price_to_pqd_p": {
+      "value": "<10^-4",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    },
+    "ols_beta_se": {
+      "value": 0.197,
+      "unit": "SE",
+      "source": "data/depositor-analysis/price_quality_results.json",
+      "experiment_id": "price_quality_v1"
+    }
+  },
+  "redemption": {
+    "n_transfer_events": {
+      "value": 35432,
+      "unit": "count",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "industrial_gas_redeemed_pct": {
+      "value": 100,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "redd_redeemed_pct": {
+      "value": 99.8,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "ifm_redeemed_pct": {
+      "value": 93.0,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "arr_redeemed_pct": {
+      "value": 91.3,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "renewable_redeemed_pct": {
+      "value": 3.6,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "mean_quality_redeemed_weighted": {
+      "value": 38.7,
+      "unit": "score",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "mean_quality_deposited_weighted": {
+      "value": 31.7,
+      "unit": "score",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "quality_gap_weighted": {
+      "value": 7.0,
+      "unit": "points",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "net_renewable_share_post_redemption": {
+      "value": 78.2,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "temporal_quality_rho": {
+      "value": -0.095,
+      "unit": "\u03c1",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "temporal_quality_p": {
+      "value": "2.6e-71",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "preterra_weighted_quality": {
+      "value": 42.02,
+      "unit": "score",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "postterra_weighted_quality": {
+      "value": 32.35,
+      "unit": "score",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "preterra_tonnes": {
+      "value": 1692408,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "depositor_redeemer_overlap_pct": {
+      "value": 1.4,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "n_unique_redeemers": {
+      "value": 28897,
+      "unit": "count",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "redeemer_top10_share": {
+      "value": 85.0,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "redeemer_gini": {
+      "value": 0.999,
+      "unit": "coefficient",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "burst_cv": {
+      "value": 17.1,
+      "unit": "CV",
+      "source": "data/depositor-analysis/redemption_price_timing_results.json",
+      "experiment_id": "redemption_timing_v1"
+    },
+    "net_renewable_share_early": {
+      "value": 71,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "net_renewable_share_late": {
+      "value": 76,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    }
+  },
+  "temporal": {
+    "spearman_rho_full": {
+      "value": -0.24,
+      "unit": "\u03c1",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "spearman_rho_preterra": {
+      "value": -0.13,
+      "unit": "\u03c1",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "spearman_p_preterra": {
+      "value": 0.0001,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "n_preterra": {
+      "value": 792,
+      "unit": "count",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "vintage_free_rho": {
+      "value": 0.24,
+      "unit": "\u03c1",
+      "source": "data/depositor-analysis/vintage_tautology_check.json",
+      "experiment_id": "vintage_check_v1"
+    },
+    "cluster_robust_ci_lo": {
+      "value": -0.32,
+      "unit": "\u03c1",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "cluster_robust_ci_hi": {
+      "value": 0.02,
+      "unit": "\u03c1",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "renewable_share_q1": {
+      "value": 67,
+      "unit": "%",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "renewable_share_q4": {
+      "value": 99.5,
+      "unit": "%",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "renewable_segment_n": {
+      "value": 932,
+      "unit": "count",
+      "source": "data/depositor-analysis/vintage_tautology_check.json",
+      "experiment_id": "vintage_check_v1"
+    }
+  },
+  "cross_pool": {
+    "bct_nct_token_overlap": {
+      "value": 88.6,
+      "unit": "%",
+      "source": "data/depositor-analysis/valid_did_analysis.json",
+      "experiment_id": "did_v1"
+    },
+    "bct_nct_shared_wallets": {
+      "value": 19,
+      "unit": "count",
+      "source": "data/depositor-analysis/valid_did_analysis.json",
+      "experiment_id": "did_v1"
+    },
+    "cluster_robust_p": {
+      "value": 0.24,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/valid_did_analysis.json",
+      "experiment_id": "did_v1"
+    }
+  },
+  "depositor": {
+    "mann_whitney_p": {
+      "value": "8.6e-5",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "mann_whitney_fdr_p": {
+      "value": "1.7e-4",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/statistical_robustness_results.json",
+      "experiment_id": "robustness_v1"
+    },
+    "rank_biserial_r": {
+      "value": -0.17,
+      "unit": "r",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "volume_weighted_gap": {
+      "value": 5.0,
+      "unit": "points",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "volume_weighted_gap_p": {
+      "value": 0.082,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "top10_share_tonnage": {
+      "value": 50,
+      "unit": "%",
+      "source": "data/depositor-analysis/event_study_results.json",
+      "experiment_id": "event_study_v1"
+    },
+    "top20_volume_pct": {
+      "value": 71.9,
+      "unit": "%",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "adverse_selection_v1"
+    },
+    "remaining_wallets": {
+      "value": 459,
+      "unit": "count",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "adverse_selection_v1"
+    },
+    "top20_mean_quality": {
+      "value": 30.3,
+      "unit": "score",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "adverse_selection_v1"
+    },
+    "rest_mean_quality": {
+      "value": 35.3,
+      "unit": "score",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "adverse_selection_v1"
+    }
+  },
+  "within_pool": {
+    "permutation_z": {
+      "value": -0.64,
+      "unit": "z",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "permutation_z_abs": {
+      "value": 0.64,
+      "unit": "z",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "permutation_p": {
+      "value": 0.27,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "mean_quality": {
+      "value": 32.3,
+      "unit": "score",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "quality_range_lo": {
+      "value": 27.3,
+      "unit": "score",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    },
+    "quality_range_hi": {
+      "value": 52.0,
+      "unit": "score",
+      "source": "data/depositor-analysis/tco2_scores_complete.json",
+      "experiment_id": "scoring_v1"
+    }
+  },
+  "scoring_coverage": {
+    "original_scored_tokens": {
+      "value": 161,
+      "unit": "count",
+      "source": "data/depositor-analysis/scoring_coverage_report.json",
+      "experiment_id": "scoring_v1"
+    },
+    "imputed_scored_tokens": {
+      "value": 184,
+      "unit": "count",
+      "source": "data/depositor-analysis/scoring_coverage_report.json",
+      "experiment_id": "scoring_v1"
+    },
+    "total_tokens": {
+      "value": 345,
+      "unit": "count",
+      "source": "data/depositor-analysis/scoring_coverage_report.json",
+      "experiment_id": "scoring_v1"
+    },
+    "ccp_dataset_n": {
+      "value": 318,
+      "unit": "count",
+      "source": "data/statistical-analysis/ccp_effect_size.py",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_eligible_n": {
+      "value": 165,
+      "unit": "count",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_non_eligible_n": {
+      "value": 153,
+      "unit": "count",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_methodology_types": {
+      "value": 17,
+      "unit": "count",
+      "source": "data/methodology-ratings/batch_summary.json",
+      "experiment_id": "atlas_v1"
+    }
+  },
+  "nct": {
+    "deposit_events": {
+      "value": 708,
+      "unit": "count",
+      "source": "data/depositor-analysis/nct_comparison_results.json",
+      "experiment_id": "nct_v1"
+    },
+    "scored_original": {
+      "value": 264,
+      "unit": "count",
+      "source": "data/depositor-analysis/nct_comparison_results.json",
+      "experiment_id": "nct_v1"
+    },
+    "scored_original_pct": {
+      "value": 37.3,
+      "unit": "%",
+      "source": "data/depositor-analysis/nct_comparison_results.json",
+      "experiment_id": "nct_v1"
+    }
+  },
+  "irr": {
+    "n_credits": {
+      "value": 29,
+      "unit": "count",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "real_credits": {
+      "value": 25,
+      "unit": "count",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "synthetic_credits": {
+      "value": 4,
+      "unit": "count",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "kappa_permanence": {
+      "value": 0.684,
+      "unit": "\u03ba",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "kappa_removal_type": {
+      "value": 0.585,
+      "unit": "\u03ba",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "kappa_vintage": {
+      "value": 0.324,
+      "unit": "\u03ba",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "kappa_mrv": {
+      "value": 0.248,
+      "unit": "\u03ba",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "kappa_additionality": {
+      "value": 0.243,
+      "unit": "\u03ba",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "kappa_cobenefits": {
+      "value": 0.182,
+      "unit": "\u03ba",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "kappa_registry": {
+      "value": 0.168,
+      "unit": "\u03ba",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "icc_value": {
+      "value": 0.993,
+      "unit": "ICC",
+      "source": "data/llm-panel-irr/irr_summary.json",
+      "experiment_id": "irr_v1"
+    },
+    "mc_robustness_50": {
+      "value": 93.7,
+      "unit": "%",
+      "source": "data/statistical-analysis/monte_carlo_sensitivity_results.json",
+      "experiment_id": "mc_v1"
+    },
+    "mc_robustness_20": {
+      "value": 90.1,
+      "unit": "%",
+      "source": "data/statistical-analysis/monte_carlo_sensitivity_results.json",
+      "experiment_id": "mc_v1"
+    },
+    "mc_robustness_100": {
+      "value": 95.4,
+      "unit": "%",
+      "source": "data/statistical-analysis/monte_carlo_sensitivity_results.json",
+      "experiment_id": "mc_v1"
+    },
+    "cross_temporal_agreement": {
+      "value": 100,
+      "unit": "%",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "temporal_stability_v1"
+    },
+    "cross_temporal_rho": {
+      "value": 0.992,
+      "unit": "\u03c1",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "temporal_stability_v1"
+    }
+  },
+  "quality_atlas": {
+    "vcm_wide_pqd": {
+      "value": 0.51,
+      "unit": "PQD",
+      "source": "data/methodology-ratings/batch_summary.json",
+      "experiment_id": "atlas_v1"
+    },
+    "ccp_filtered_pqd": {
+      "value": 0.419,
+      "unit": "PQD",
+      "source": "data/methodology-ratings/batch_summary.json",
+      "experiment_id": "atlas_v1"
+    },
+    "vintage_pre2020_pqd": {
+      "value": 0.687,
+      "unit": "PQD",
+      "source": "data/methodology-ratings/batch_summary.json",
+      "experiment_id": "atlas_v1"
+    },
+    "vintage_2024plus_pqd": {
+      "value": 0.273,
+      "unit": "PQD",
+      "source": "data/methodology-ratings/batch_summary.json",
+      "experiment_id": "atlas_v1"
+    },
+    "nature_based_total_pct": {
+      "value": 10.3,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "bct_char_pqd_gap": {
+      "value": 0.46,
+      "unit": "PQD gap",
+      "source": "data/depositor-analysis/nct_comparison_results.json",
+      "experiment_id": "nct_v1"
+    },
+    "vcs_base_rate_redd": {
+      "value": 17,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    },
+    "vcs_base_rate_sensitivity_48": {
+      "value": 48,
+      "unit": "%",
+      "source": "data/depositor-analysis/base_rate_analysis.json",
+      "experiment_id": "base_rate_v1"
+    }
+  },
+  "wallet_clustered": {
+    "naive_binomial_p": {
+      "value": "1.35e-187",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    },
+    "observed_wallet_mean_renewable": {
+      "value": 0.892,
+      "unit": "share",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    },
+    "null_mean_renewable": {
+      "value": 0.37,
+      "unit": "share",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    },
+    "null_sd_renewable": {
+      "value": 0.02,
+      "unit": "SD",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    },
+    "hhi_value": {
+      "value": 0.012,
+      "unit": "HHI",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    },
+    "hhi_binomial_p": {
+      "value": "2.9e-15",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    },
+    "deff_value": {
+      "value": 4.4,
+      "unit": "DEFF",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    },
+    "deff_neff": {
+      "value": 270,
+      "unit": "count",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    },
+    "deff_p": {
+      "value": "4.7e-44",
+      "unit": "p-value",
+      "source": "data/depositor-analysis/wallet_clustered_test.json",
+      "experiment_id": "wallet_clustered_v1"
+    }
+  },
+  "rank_correlation": {
+    "inter_agency_mean_rho": {
+      "value": 0.009,
+      "unit": "rho",
+      "source": "data/rank-correlation/results.md",
+      "experiment_id": "rank_corr_v1"
+    },
+    "framework_agency_mean_rho": {
+      "value": 0.343,
+      "unit": "rho",
+      "source": "data/rank-correlation/results.md",
+      "experiment_id": "rank_corr_v1"
+    },
+    "bezero_kendall_tau": {
+      "value": 0.821,
+      "unit": "tau",
+      "source": "data/rank-correlation/expanded_correlation.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "bezero_within_1_pct": {
+      "value": 100,
+      "unit": "%",
+      "source": "data/rank-correlation/expanded_correlation.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "bezero_exact_match_pct": {
+      "value": 52,
+      "unit": "%",
+      "source": "data/rank-correlation/expanded_correlation.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "cdr_subtype_rho": {
+      "value": 0.973,
+      "unit": "rho",
+      "source": "data/rank-correlation/bootstrap_expanded_results.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "avoidance_subtype_rho": {
+      "value": 0.802,
+      "unit": "rho",
+      "source": "data/rank-correlation/bootstrap_expanded_results.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "redd_only_bezero_rho": {
+      "value": 0.664,
+      "unit": "rho",
+      "source": "data/rank-correlation/results.md",
+      "experiment_id": "rank_corr_v1"
+    },
+    "bezero_calyx_rho": {
+      "value": -0.664,
+      "unit": "rho",
+      "source": "data/rank-correlation/results.md",
+      "experiment_id": "rank_corr_v1"
+    },
+    "bezero_calyx_n": {
+      "value": 6,
+      "unit": "count",
+      "source": "data/rank-correlation/results.md",
+      "experiment_id": "rank_corr_v1"
+    },
+    "cross_type_total_n": {
+      "value": 30,
+      "unit": "count",
+      "source": "data/rank-correlation/expanded_dataset.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "cross_type_additional_n": {
+      "value": 24,
+      "unit": "count",
+      "source": "data/rank-correlation/expanded_dataset.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "cross_type_methodology_n": {
+      "value": 12,
+      "unit": "count",
+      "source": "data/rank-correlation/expanded_dataset.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "calyx_paired_n": {
+      "value": 9,
+      "unit": "count",
+      "source": "data/rank-correlation/expanded_dataset.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "sylvera_paired_n": {
+      "value": 7,
+      "unit": "count",
+      "source": "data/rank-correlation/expanded_dataset.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "msci_paired_n": {
+      "value": 1,
+      "unit": "count",
+      "source": "data/rank-correlation/expanded_dataset.json",
+      "experiment_id": "rank_corr_v1"
+    },
+    "multi_agency_n": {
+      "value": 8,
+      "unit": "count",
+      "source": "data/rank-correlation/expanded_dataset.json",
+      "experiment_id": "rank_corr_v1"
+    }
+  },
+  "ccp": {
+    "ccp_mean_ordinal_grade": {
+      "value": 2.69,
+      "unit": "ordinal",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "non_ccp_mean_ordinal_grade": {
+      "value": 0.7,
+      "unit": "ordinal",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_grade_gap": {
+      "value": 1.99,
+      "unit": "grades",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_d_ci_lo": {
+      "value": 1.5,
+      "unit": "d",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_d_ci_hi": {
+      "value": 2.16,
+      "unit": "d",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_cles": {
+      "value": 91.4,
+      "unit": "%",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_cles_ci_lo": {
+      "value": 87.5,
+      "unit": "%",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_cles_ci_hi": {
+      "value": 94.8,
+      "unit": "%",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_cliff_delta": {
+      "value": 0.83,
+      "unit": "delta",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_cliff_ci_lo": {
+      "value": 0.75,
+      "unit": "delta",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_cliff_ci_hi": {
+      "value": 0.9,
+      "unit": "delta",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_mann_whitney_u": {
+      "value": 2175,
+      "unit": "U",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    },
+    "ccp_mann_whitney_z": {
+      "value": 13.06,
+      "unit": "z",
+      "source": "data/statistical-analysis/ccp_effect_size_results.json",
+      "experiment_id": "ccp_v1"
+    }
+  },
+  "redemption_detail": {
+    "observation_months": {
+      "value": 14,
+      "unit": "months",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "net_renewable_spearman": {
+      "value": 0.81,
+      "unit": "rho",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "chi_squared_value": {
+      "value": "4.0e6",
+      "unit": "chi2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "total_deposited_tonnes": {
+      "value": 15207729,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "total_redeemed_tonnes": {
+      "value": 2604025,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "overall_redemption_rate": {
+      "value": 17.1,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "renewable_redeemed_tonnes": {
+      "value": 373597,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "renewable_deposited_tonnes": {
+      "value": 10233697,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "redd_redeemed_tonnes": {
+      "value": 521018,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "redd_deposited_tonnes": {
+      "value": 521889,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "industrial_gas_redeemed_tonnes": {
+      "value": 672255,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "arr_redeemed_tonnes": {
+      "value": 771768,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "arr_deposited_tonnes": {
+      "value": 845104,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "ifm_redeemed_tonnes": {
+      "value": 265368,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "ifm_deposited_tonnes": {
+      "value": 285367,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "fossil_redeemed_pct": {
+      "value": 0.0,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    },
+    "waste_redeemed_pct": {
+      "value": 0.0,
+      "unit": "%",
+      "source": "data/depositor-analysis/redemption_analysis.json",
+      "experiment_id": "redemption_v1"
+    }
+  },
+  "bridge_decomposition": {
+    "total_bridged_tokens": {
+      "value": 369,
+      "unit": "count",
+      "source": "data/depositor-analysis/bridge_decomposition_results.json",
+      "experiment_id": "bridge_decomp_v1"
+    },
+    "bct_deposited_tokens": {
+      "value": 345,
+      "unit": "count",
+      "source": "data/depositor-analysis/bridge_decomposition_results.json",
+      "experiment_id": "bridge_decomp_v1"
+    },
+    "not_bct_tokens": {
+      "value": 24,
+      "unit": "count",
+      "source": "data/depositor-analysis/bridge_decomposition_results.json",
+      "experiment_id": "bridge_decomp_v1"
+    },
+    "bct_coverage_pct": {
+      "value": 93.5,
+      "unit": "%",
+      "source": "data/depositor-analysis/bridge_decomposition_results.json",
+      "experiment_id": "bridge_decomp_v1"
+    },
+    "bct_total_tonnes_dune": {
+      "value": 21984547,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/bridge_decomposition_results.json",
+      "experiment_id": "bridge_decomp_v1",
+      "note": "Dune query confirmation matches RPC-derived 21984482 within 65 tonnes"
+    }
+  },
+  "segment_pqd": {
+    "pqd_biooil": {
+      "value": 0.095,
+      "unit": "PQD",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "atlas_v1",
+      "note": "Charm Industrial bio-oil injection (C004), composite=90.525"
+    },
+    "pqd_biochar_lo": {
+      "value": 0.17,
+      "unit": "PQD",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "atlas_v1",
+      "note": "Pacific Biochar CA (C005), composite=83.275, rounded from 0.167"
+    },
+    "pqd_biochar_hi": {
+      "value": 0.2,
+      "unit": "PQD",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "atlas_v1",
+      "note": "Husk biochar Cambodia (C006), composite=80.05"
+    },
+    "pqd_ifm": {
+      "value": 0.318,
+      "unit": "PQD",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "atlas_v1",
+      "note": "Rexford IFM (C008), composite=68.225"
+    },
+    "pqd_mangrove": {
+      "value": 0.335,
+      "unit": "PQD",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "atlas_v1",
+      "note": "Mangrove blue-carbon restoration (C013), composite=66.525"
+    },
+    "pqd_cookstoves": {
+      "value": 0.537,
+      "unit": "PQD",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "atlas_v1",
+      "note": "Gold Standard cookstoves Kenya (C010), composite=46.325"
+    },
+    "redd_pqd_lo": {
+      "value": 0.69,
+      "unit": "PQD",
+      "source": "data/lemons-index/systematic_scan_results.json",
+      "experiment_id": "atlas_v1",
+      "note": "REDD+ pool lower annotation bound; pool-level PQD=0.681 rounded up"
+    },
+    "redd_pqd_hi": {
+      "value": 0.72,
+      "unit": "PQD",
+      "source": "data/methodology-ratings/batch_scores.csv",
+      "experiment_id": "atlas_v1",
+      "note": "REDD+ project archetype mean PQD from 45 batch-scored credits"
+    },
+    "pqd_industrial_gas_lo": {
+      "value": 0.65,
+      "unit": "PQD",
+      "source": "data/methodology-ratings/archetypes.json",
+      "experiment_id": "atlas_v1",
+      "note": "Industrial gas destruction lower bound; HFC-23 archetype PQD=0.713, annotation interpolation"
+    },
+    "pqd_industrial_gas_hi": {
+      "value": 0.747,
+      "unit": "PQD",
+      "source": "data/statistical-analysis/temporal_stability.json",
+      "experiment_id": "atlas_v1",
+      "note": "HFC-23 destruction pre-2013 (C023), composite=25.275"
+    }
+  },
+  "temporal_detail": {
+    "token_diversity_q1": {
+      "value": 24,
+      "unit": "count",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "event_study_v1",
+      "note": "Distinct composite scores in Q1 (n=219 original-scored deposits, blocks 20.2M-20.7M)"
+    },
+    "token_diversity_q4": {
+      "value": 2,
+      "unit": "count",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "event_study_v1",
+      "note": "Distinct composite scores in Q4 (n=220 original-scored deposits, blocks 36.8M-37.0M)"
+    },
+    "early_exit_block_range_lo": {
+      "value": "20.4M",
+      "unit": "block",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "event_study_v1",
+      "note": "Median deposit block for Waste/Methane type (20.4M); lowest median among early-exit types"
+    },
+    "early_exit_block_range_hi": {
+      "value": "21.7M",
+      "unit": "block",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "event_study_v1",
+      "note": "Median deposit block for ARR type (21.7M); highest median among early-exit types"
+    },
+    "renewable_exit_block": {
+      "value": "32.6M",
+      "unit": "block",
+      "source": "data/depositor-analysis/adverse_selection_real_results.json",
+      "experiment_id": "event_study_v1",
+      "note": "Median deposit block for Renewable type (32.6M, n=707 original-scored deposits)"
+    }
+  },
+  "nftx_validation": {
+    "n_vaults_tested": {
+      "value": 4,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "n_vaults_net_outflow": {
+      "value": 3,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "total_events": {
+      "value": 182903,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "cryptopunks_mints": {
+      "value": 277,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "cryptopunks_redeems": {
+      "value": 327,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "bayc_mints": {
+      "value": 599,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "bayc_redeems": {
+      "value": 637,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "sandbox_mints": {
+      "value": 3227,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "sandbox_redeems": {
+      "value": 4143,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "hashmasks_mints": {
+      "value": 1839,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    },
+    "hashmasks_redeems": {
+      "value": 1566,
+      "unit": "count",
+      "source": "Dune Analytics",
+      "experiment_id": "nftx_v1"
+    }
+  },
+  "predictive_stranding": {
+    "odds_ratio_bbb_vs_b": {
+      "value": 145.9,
+      "unit": "×",
+      "source": "data/statistical-analysis/predictive_stranding_results.json",
+      "experiment_id": "stranding_v1"
+    },
+    "odds_ratio_95ci_lo": {
+      "value": 145.1,
+      "unit": "×",
+      "source": "data/statistical-analysis/predictive_stranding_results.json",
+      "experiment_id": "stranding_v1"
+    },
+    "odds_ratio_95ci_hi": {
+      "value": 146.8,
+      "unit": "×",
+      "source": "data/statistical-analysis/predictive_stranding_results.json",
+      "experiment_id": "stranding_v1"
+    },
+    "b_grade_redemption_rate_pct": {
+      "value": 2.4,
+      "unit": "%",
+      "source": "data/statistical-analysis/predictive_stranding_results.json",
+      "experiment_id": "stranding_v1"
+    },
+    "bb_grade_redemption_rate_pct": {
+      "value": 31.0,
+      "unit": "%",
+      "source": "data/statistical-analysis/predictive_stranding_results.json",
+      "experiment_id": "stranding_v1"
+    },
+    "bbb_grade_redemption_rate_pct": {
+      "value": 78.0,
+      "unit": "%",
+      "source": "data/statistical-analysis/predictive_stranding_results.json",
+      "experiment_id": "stranding_v1"
+    },
+    "b_grade_stranding_rate_pct": {
+      "value": 98.8,
+      "unit": "%",
+      "source": "data/statistical-analysis/predictive_stranding_results.json",
+      "experiment_id": "stranding_v1"
+    },
+    "monotonicity": {
+      "value": true,
+      "unit": "boolean",
+      "source": "data/statistical-analysis/predictive_stranding_results.json",
+      "experiment_id": "stranding_v1"
+    }
+  },
+  "welfare": {
+    "welfare_gap_median_usd_millions": {
+      "value": 146,
+      "unit": "million USD",
+      "source": "data/statistical-analysis/welfare_quantification_results.json",
+      "experiment_id": "welfare_v1"
+    },
+    "welfare_gap_p5_usd_millions": {
+      "value": 68,
+      "unit": "million USD",
+      "source": "data/statistical-analysis/welfare_quantification_results.json",
+      "experiment_id": "welfare_v1"
+    },
+    "welfare_gap_p95_usd_millions": {
+      "value": 252,
+      "unit": "million USD",
+      "source": "data/statistical-analysis/welfare_quantification_results.json",
+      "experiment_id": "welfare_v1"
+    },
+    "foregone_real_tonnes_mean": {
+      "value": 1249613,
+      "unit": "tCO2",
+      "source": "data/statistical-analysis/welfare_quantification_results.json",
+      "experiment_id": "welfare_v1"
+    },
+    "bct_additionality_central_pct": {
+      "value": 16.6,
+      "unit": "%",
+      "source": "data/statistical-analysis/welfare_quantification_results.json",
+      "experiment_id": "welfare_v1"
+    }
+  }
+}

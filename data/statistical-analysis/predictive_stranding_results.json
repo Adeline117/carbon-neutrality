@@ -1,0 +1,143 @@
+{
+  "test": "Predictive Stranding: Quality grades predict redemption vs. stranding outcomes",
+  "method": "For each TCO2 token deposited into BCT, compute tonnes deposited and redeemed from on-chain transfer cache. Compute redemption rate by grade band. Test whether higher grades predict higher redemption probability.",
+  "n_active_tokens": 161,
+  "total_deposited_tonnes": 15207728.8,
+  "total_redeemed_tonnes": 2604025.2,
+  "grade_level_results": {
+    "B": {
+      "n_tokens": 83,
+      "deposited_tonnes": 9558068.4,
+      "redeemed_tonnes": 226136.3,
+      "redemption_rate_pct": 2.37,
+      "stranding_rate_pct": 98.8,
+      "mean_composite": 28.51
+    },
+    "BB": {
+      "n_tokens": 66,
+      "deposited_tonnes": 4319189.7,
+      "redeemed_tonnes": 1340753.2,
+      "redemption_rate_pct": 31.04,
+      "stranding_rate_pct": 83.3,
+      "mean_composite": 33.96
+    },
+    "BBB": {
+      "n_tokens": 12,
+      "deposited_tonnes": 1330470.7,
+      "redeemed_tonnes": 1037135.7,
+      "redemption_rate_pct": 77.95,
+      "stranding_rate_pct": 16.7,
+      "mean_composite": 49.33
+    }
+  },
+  "type_level_results": {
+    "Renewable": {
+      "n_tokens": 116,
+      "deposited_tonnes": 10233697.5,
+      "redeemed_tonnes": 373597.2,
+      "redemption_rate_pct": 3.65,
+      "mean_composite": 29.97,
+      "grade_distribution": {
+        "B": 72,
+        "BB": 44
+      }
+    },
+    "Fossil switch": {
+      "n_tokens": 11,
+      "deposited_tonnes": 1735878.0,
+      "redeemed_tonnes": 3.8,
+      "redemption_rate_pct": 0.0,
+      "mean_composite": 27.25,
+      "grade_distribution": {
+        "B": 11
+      }
+    },
+    "ARR": {
+      "n_tokens": 5,
+      "deposited_tonnes": 845103.9,
+      "redeemed_tonnes": 771767.9,
+      "redemption_rate_pct": 91.32,
+      "mean_composite": 50.78,
+      "grade_distribution": {
+        "BBB": 5
+      }
+    },
+    "Waste/Methane": {
+      "n_tokens": 7,
+      "deposited_tonnes": 812725.0,
+      "redeemed_tonnes": 15.1,
+      "redemption_rate_pct": 0.0,
+      "mean_composite": 42.95,
+      "grade_distribution": {
+        "BB": 6,
+        "BBB": 1
+      }
+    },
+    "Industrial gas": {
+      "n_tokens": 1,
+      "deposited_tonnes": 672255.0,
+      "redeemed_tonnes": 672255.0,
+      "redemption_rate_pct": 100.0,
+      "mean_composite": 30.88,
+      "grade_distribution": {
+        "BB": 1
+      }
+    },
+    "REDD+": {
+      "n_tokens": 8,
+      "deposited_tonnes": 521888.6,
+      "redeemed_tonnes": 521018.2,
+      "redemption_rate_pct": 99.83,
+      "mean_composite": 31.7,
+      "grade_distribution": {
+        "BB": 8
+      }
+    },
+    "IFM": {
+      "n_tokens": 6,
+      "deposited_tonnes": 285366.8,
+      "redeemed_tonnes": 265367.7,
+      "redemption_rate_pct": 92.99,
+      "mean_composite": 48.52,
+      "grade_distribution": {
+        "BBB": 6
+      }
+    },
+    "Industrial": {
+      "n_tokens": 7,
+      "deposited_tonnes": 100814.0,
+      "redeemed_tonnes": 0.2,
+      "redemption_rate_pct": 0.0,
+      "mean_composite": 41.84,
+      "grade_distribution": {
+        "BB": 7
+      }
+    }
+  },
+  "hazard_ratio_approximation": {
+    "comparison": "BBB+ vs B grade (tonnage-weighted odds ratio)",
+    "b_grade_redemption_rate_pct": 2.37,
+    "bbb_plus_redemption_rate_pct": 77.95,
+    "odds_ratio": 145.9,
+    "odds_ratio_95ci": [
+      145.1,
+      146.8
+    ],
+    "interpretation": "BBB+ credits have 146x the odds of being redeemed vs. B-grade credits"
+  },
+  "monotonicity_test": {
+    "grades_tested": [
+      "B",
+      "BB",
+      "BBB"
+    ],
+    "redemption_rates_pct": [
+      2.37,
+      31.04,
+      77.95
+    ],
+    "is_monotonically_increasing": true,
+    "interpretation": "Redemption rate increases monotonically with quality grade"
+  },
+  "verdict": "STRONG PREDICTIVE POWER. Quality grades predict redemption outcomes with 146x odds ratio (BBB+ vs B). Redemption rate is monotonically increasing with grade. The quality framework is not just descriptive \u2014 it predicts which credits will be extracted vs. stranded."
+}

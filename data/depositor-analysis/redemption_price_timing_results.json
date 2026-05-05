@@ -1,0 +1,153 @@
+{
+  "phase_summary": {
+    "pre_terra": {
+      "n_events": 691,
+      "total_tonnes": 1692408.2,
+      "mean_quality_unweighted": 29.99,
+      "mean_quality_weighted": 42.02,
+      "composition_pct": {
+        "Renewable": 16.9,
+        "ARR": 45.2,
+        "Fossil switch": 0.0,
+        "Industrial gas": 0.0,
+        "REDD+": 27.6,
+        "IFM": 10.2,
+        "Waste/Methane": 0.0,
+        "Industrial": 0.0
+      }
+    },
+    "post_terra_pre_ftx": {
+      "n_events": 7363,
+      "total_tonnes": 785969.6,
+      "mean_quality_unweighted": 28.85,
+      "mean_quality_weighted": 32.35,
+      "composition_pct": {
+        "Renewable": 2.8,
+        "ARR": 0.6,
+        "IFM": 8.1,
+        "Industrial gas": 85.5,
+        "REDD+": 2.9,
+        "Waste/Methane": 0.0,
+        "Fossil switch": 0.0
+      }
+    },
+    "post_ftx": {
+      "n_events": 27378,
+      "total_tonnes": 125647.4,
+      "mean_quality_unweighted": 28.67,
+      "mean_quality_weighted": 33.73,
+      "composition_pct": {
+        "Renewable": 52.2,
+        "IFM": 22.3,
+        "REDD+": 24.5,
+        "ARR": 1.0,
+        "Waste/Methane": 0.0,
+        "Fossil switch": 0.0,
+        "Industrial": 0.0
+      }
+    }
+  },
+  "temporal_quality_correlation": {
+    "spearman_rho": -0.0947,
+    "spearman_p": 2.562902623680241e-71,
+    "n": 35432,
+    "interpretation": "Negative = higher quality redeemed earlier (Gresham exit timing)"
+  },
+  "burst_analysis": {
+    "median_inter_redemption_blocks": 2,
+    "mean_inter_redemption_blocks": 469,
+    "p10_blocks": 0,
+    "p90_blocks": 26,
+    "cv": 17.106,
+    "interpretation": "CV > 1 suggests clustered/bursty redemptions"
+  },
+  "per_type_timing": {
+    "Renewable": {
+      "n_events": 35148,
+      "total_tonnes": 373597.2,
+      "median_block": 36784880,
+      "first_block": 20364343,
+      "last_block": 36999866,
+      "first_date": "2021-10-11",
+      "last_date": "2022-12-28",
+      "span_days": 442.8
+    },
+    "Industrial gas": {
+      "n_events": 16,
+      "total_tonnes": 672255.0,
+      "median_block": 30963088,
+      "first_block": 22717826,
+      "last_block": 33142582,
+      "first_date": "2021-12-13",
+      "last_date": "2022-09-16",
+      "span_days": 277.5
+    },
+    "REDD+": {
+      "n_events": 73,
+      "total_tonnes": 521018.2,
+      "median_block": 35342655,
+      "first_block": 22776351,
+      "last_block": 36814061,
+      "first_date": "2021-12-14",
+      "last_date": "2022-12-23",
+      "span_days": 373.7
+    },
+    "Waste/Methane": {
+      "n_events": 12,
+      "total_tonnes": 15.1,
+      "median_block": 36788233,
+      "first_block": 26446402,
+      "last_block": 36923763,
+      "first_date": "2022-03-22",
+      "last_date": "2022-12-26",
+      "span_days": 278.9
+    },
+    "Fossil switch": {
+      "n_events": 20,
+      "total_tonnes": 3.8,
+      "median_block": 36788666,
+      "first_block": 22640506,
+      "last_block": 36940251,
+      "first_date": "2021-12-11",
+      "last_date": "2022-12-26",
+      "span_days": 380.7
+    },
+    "ARR": {
+      "n_events": 53,
+      "total_tonnes": 771767.9,
+      "median_block": 25956869,
+      "first_block": 20416668,
+      "last_block": 36429761,
+      "first_date": "2021-10-13",
+      "last_date": "2022-12-13",
+      "span_days": 426.3
+    },
+    "IFM": {
+      "n_events": 108,
+      "total_tonnes": 265367.7,
+      "median_block": 34782338,
+      "first_block": 24279111,
+      "last_block": 36429761,
+      "first_date": "2022-01-23",
+      "last_date": "2022-12-13",
+      "span_days": 323.5
+    }
+  },
+  "redeemer_concentration": {
+    "n_unique_redeemers": 28897,
+    "top10_share_pct": 85.0,
+    "gini": 0.999
+  },
+  "depositor_redeemer_overlap": {
+    "n_depositors": 509,
+    "n_redeemers": 28897,
+    "n_overlap": 399,
+    "overlap_pct_of_redeemers": 1.4,
+    "interpretation": "High overlap suggests round-trip arbitrage; low overlap suggests different actors on each side",
+    "quality_comparison": {
+      "overlap_mean_quality": 29.01,
+      "nonoverlap_mean_quality": 28.64,
+      "mann_whitney_p": 3.358101103280411e-24
+    }
+  }
+}

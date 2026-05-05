@@ -1,0 +1,76 @@
+{
+  "profit_quantification": {
+    "top_5_wallets": [
+      {
+        "wallet": "0x65a5076c...",
+        "tonnes": 651333.8,
+        "dominant_type": "Industrial gas"
+      },
+      {
+        "wallet": "0x1b8e77cd...",
+        "tonnes": 335556.3,
+        "dominant_type": "IFM"
+      },
+      {
+        "wallet": "0xee4b5fe7...",
+        "tonnes": 195051.0,
+        "dominant_type": "REDD+"
+      },
+      {
+        "wallet": "0x4b3ebae3...",
+        "tonnes": 188205.0,
+        "dominant_type": "ARR"
+      },
+      {
+        "wallet": "0x855627a0...",
+        "tonnes": 183629.0,
+        "dominant_type": "ARR"
+      }
+    ],
+    "total_tonnes": 1553775,
+    "profit_low_usd": 4837064,
+    "profit_mid_usd": 8120352,
+    "profit_high_usd": 15736305,
+    "bct_cost_mid_usd": 4661325,
+    "assumptions": {
+      "offchain_prices": {
+        "Industrial gas": {
+          "low": 3.0,
+          "mid": 6.0,
+          "high": 12.0,
+          "note": "HFC-23 destruction, compliance value"
+        },
+        "IFM": {
+          "low": 5.0,
+          "mid": 10.0,
+          "high": 18.0,
+          "note": "Improved forest management, nature-based premium"
+        },
+        "REDD+": {
+          "low": 4.0,
+          "mid": 8.0,
+          "high": 15.0,
+          "note": "Avoided deforestation, strong corporate demand 2021-22"
+        },
+        "ARR": {
+          "low": 6.0,
+          "mid": 12.0,
+          "high": 20.0,
+          "note": "Afforestation/reforestation, highest nature-based premium"
+        },
+        "Renewable": {
+          "low": 0.3,
+          "mid": 0.8,
+          "high": 1.5,
+          "note": "CDM-era, virtually unsaleable off-chain"
+        }
+      },
+      "bct_redemption_cost": {
+        "low": 1.0,
+        "mid": 3.0,
+        "high": 5.0
+      },
+      "note": "Off-chain prices from Ecosystem Marketplace and Carbon Pulse (2021-2022). BCT cost includes pool price + selective redemption fee."
+    }
+  }
+}

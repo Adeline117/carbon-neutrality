@@ -1,0 +1,49 @@
+{
+  "test": "CCP validation circularity on FULL 318-credit dataset",
+  "method": "Recompute credit-level composite with removal_type weight zeroed, remaining weights renormalized. Credits expanded from archetypes with vintage jitter (sigma=5).",
+  "n_ccp": 165,
+  "n_non_ccp": 153,
+  "n_total": 318,
+  "full_composite": {
+    "ccp_mean_composite": 59.4,
+    "non_ccp_mean_composite": 32.1,
+    "composite_gap": 27.3,
+    "ccp_mean_grade": 2.41,
+    "non_ccp_mean_grade": 0.73,
+    "grade_gap": 1.68,
+    "cohens_d": 1.87,
+    "cohens_d_95ci": [
+      1.68,
+      2.11
+    ],
+    "mann_whitney_z": 12.93,
+    "mann_whitney_p": "0.00e+00"
+  },
+  "no_removal_type_composite": {
+    "ccp_mean_composite": 59.8,
+    "non_ccp_mean_composite": 32.1,
+    "composite_gap": 27.7,
+    "ccp_mean_grade": 2.48,
+    "non_ccp_mean_grade": 0.65,
+    "grade_gap": 1.83,
+    "cohens_d": 2.44,
+    "cohens_d_95ci": [
+      2.23,
+      2.69
+    ],
+    "mann_whitney_z": 14.75,
+    "mann_whitney_p": "0.00e+00",
+    "renormalized_weights": {
+      "additionality": 0.267,
+      "mrv_grade": 0.267,
+      "permanence": 0.233,
+      "vintage_year": 0.133,
+      "co_benefits": 0.0,
+      "registry_methodology": 0.1
+    }
+  },
+  "composite_gap_retention_pct": 101.4,
+  "verdict": "NOT CIRCULAR. 101% of CCP/non-CCP composite gap survives without removal_type on the full 318-credit dataset. The separation is driven by additionality, permanence, and MRV.",
+  "seed": 42,
+  "n_bootstrap": 10000
+}

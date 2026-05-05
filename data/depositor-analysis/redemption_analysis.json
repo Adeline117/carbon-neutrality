@@ -1,120 +1,259 @@
 {
-  "n_redemptions_total": 0,
-  "n_redemptions_scored": 0,
-  "n_deposits_total": 1187,
-  "n_deposits_scored": 1187,
-  "total_redeemed_tonnes": 0,
-  "total_deposited_tonnes": 21984481.501703,
-  "note_redeemed": "No scored redemptions found -- likely the Redeemed topic did not match any events.",
-  "net_composition_timeseries_sample": [
-    {
-      "month_idx": 0,
-      "net_composition_pct": {
-        "Cookstove": 0.0032733218508112427,
-        "Renewable": 70.03170845054734,
-        "ARR": 3.7074516168115017,
-        "IFM": 2.035334069117893,
-        "Agriculture": 0.440702596276688,
-        "Industrial gas": 0.2531281609378006,
-        "Waste/Methane": 7.837676755015514,
-        "Industrial": 1.0751422018300574,
-        "REDD+": 6.970167904826116,
-        "Fossil switch": 7.645414922786266,
-        "Energy efficiency": 0.0
+  "n_redemptions_total": 35432,
+  "n_redemptions_scored": 35432,
+  "n_deposits_total": 879,
+  "n_deposits_scored": 879,
+  "total_redeemed_tonnes": 2604025.197141146,
+  "total_deposited_tonnes": 15207728.834084481,
+  "mann_whitney_unweighted": {
+    "statistic": 11668145.0,
+    "p_value_greater": 1.0,
+    "interpretation": "H1: redeemed credits have higher quality than deposited",
+    "mean_redeemed_quality": 28.729552099796795,
+    "mean_deposited_quality": 31.117804323094425,
+    "median_redeemed_quality": 28.62,
+    "median_deposited_quality": 28.62,
+    "sd_redeemed": 1.4179440960048413,
+    "sd_deposited": 6.098560088310437,
+    "n_redeemed": 35432,
+    "n_deposited": 879
+  },
+  "mann_whitney_two_sided_p": 0.0,
+  "tonnage_weighted": {
+    "mean_redeemed_quality_weighted": 38.70142025860963,
+    "mean_deposited_quality_weighted": 31.708962121924884,
+    "quality_difference_weighted": 6.992458136684746
+  },
+  "cohens_d": -0.5394305441922974,
+  "ks_test": {
+    "statistic": 0.29261690774759697,
+    "p_value": 1.4011635868237045e-65
+  },
+  "permutation_test": {
+    "observed_diff": -2.3882522232976306,
+    "n_permutations": 10000,
+    "p_value_greater": 1.0,
+    "null_mean": -0.0006634206941544768,
+    "null_sd": 0.05891587319419875
+  },
+  "redeemed_composition_tonnes": {
+    "ARR": 771767.92,
+    "Fossil switch": 3.85,
+    "IFM": 265367.73,
+    "Industrial": 0.2,
+    "Industrial gas": 672255.0,
+    "REDD+": 521018.2,
+    "Renewable": 373597.18,
+    "Waste/Methane": 15.11
+  },
+  "deposited_composition_tonnes": {
+    "ARR": 845103.9,
+    "Fossil switch": 1735878.0,
+    "IFM": 285366.84,
+    "Industrial": 100814.0,
+    "Industrial gas": 672255.0,
+    "REDD+": 521888.63,
+    "Renewable": 10233697.46,
+    "Waste/Methane": 812725.0
+  },
+  "redeemed_composition_pct": {
+    "ARR": 29.64,
+    "Fossil switch": 0.0,
+    "IFM": 10.19,
+    "Industrial": 0.0,
+    "Industrial gas": 25.82,
+    "REDD+": 20.01,
+    "Renewable": 14.35,
+    "Waste/Methane": 0.0
+  },
+  "deposited_composition_pct": {
+    "ARR": 5.56,
+    "Fossil switch": 11.41,
+    "IFM": 1.88,
+    "Industrial": 0.66,
+    "Industrial gas": 4.42,
+    "REDD+": 3.43,
+    "Renewable": 67.29,
+    "Waste/Methane": 5.34
+  },
+  "renewable_share": {
+    "redeemed_pct": 14.35,
+    "deposited_pct": 67.29,
+    "ratio": 0.213,
+    "interpretation": "Renewable credits NOT preferentially redeemed"
+  },
+  "net_composition_timeseries_endpoints": {
+    "first_3": [
+      {
+        "month_idx": 0,
+        "net_composition_pct": {
+          "ARR": 4.63,
+          "Fossil switch": 8.6,
+          "IFM": 2.01,
+          "Industrial": 1.27,
+          "Industrial gas": 0.37,
+          "REDD+": 5.89,
+          "Renewable": 69.51,
+          "Waste/Methane": 7.72
+        },
+        "net_renewable_pct": 69.51,
+        "cum_deposited_renewable_tonnes": 5517448.0,
+        "cum_redeemed_renewable_tonnes": 2000.0,
+        "cum_net_renewable_tonnes": 5515448.0
       },
-      "net_renewable_pct": 70.03170845054734
-    },
-    {
-      "month_idx": 1,
-      "net_composition_pct": {
-        "Cookstove": 0.0023816303460406675,
-        "Renewable": 67.94926018756254,
-        "ARR": 4.883050586182147,
-        "IFM": 1.81452287905572,
-        "Agriculture": 0.32065000776240327,
-        "Industrial gas": 4.269501088740184,
-        "Waste/Methane": 6.456930120857568,
-        "Industrial": 0.7822607769391335,
-        "REDD+": 5.364117448823244,
-        "Fossil switch": 6.88712242250933,
-        "Energy efficiency": 1.2702028512216894
+      {
+        "month_idx": 1,
+        "net_composition_pct": {
+          "ARR": 6.5,
+          "Fossil switch": 8.67,
+          "IFM": 1.65,
+          "Industrial": 0.98,
+          "Industrial gas": 6.55,
+          "REDD+": 4.55,
+          "Renewable": 65.13,
+          "Waste/Methane": 5.97
+        },
+        "net_renewable_pct": 65.13,
+        "cum_deposited_renewable_tonnes": 6691808.0,
+        "cum_redeemed_renewable_tonnes": 2000.0,
+        "cum_net_renewable_tonnes": 6689808.0
       },
-      "net_renewable_pct": 67.94926018756254
-    },
-    {
-      "month_idx": 2,
-      "net_composition_pct": {
-        "Cookstove": 0.0020560145098731898,
-        "Renewable": 68.80110436476187,
-        "ARR": 4.652042003952131,
-        "IFM": 1.5664418174875454,
-        "Agriculture": 0.276810828198607,
-        "Industrial gas": 3.68577609155947,
-        "Waste/Methane": 6.670681508877288,
-        "Industrial": 0.6753103018549084,
-        "REDD+": 4.6811557669007176,
-        "Fossil switch": 7.892080229965234,
-        "Energy efficiency": 1.0965410719323678
+      {
+        "month_idx": 2,
+        "net_composition_pct": {
+          "ARR": 5.74,
+          "Fossil switch": 9.68,
+          "IFM": 1.43,
+          "Industrial": 0.85,
+          "Industrial gas": 5.68,
+          "REDD+": 3.69,
+          "Renewable": 66.07,
+          "Waste/Methane": 6.86
+        },
+        "net_renewable_pct": 66.07,
+        "cum_deposited_renewable_tonnes": 7827069.0,
+        "cum_redeemed_renewable_tonnes": 2000.8,
+        "cum_net_renewable_tonnes": 7825068.2
+      }
+    ],
+    "last_3": [
+      {
+        "month_idx": 11,
+        "net_composition_pct": {
+          "ARR": 0.58,
+          "Fossil switch": 13.68,
+          "IFM": 0.26,
+          "Industrial": 0.79,
+          "Industrial gas": 0.0,
+          "REDD+": 0.07,
+          "Renewable": 78.21,
+          "Waste/Methane": 6.4
+        },
+        "net_renewable_pct": 78.21,
+        "cum_deposited_renewable_tonnes": 10233250.65,
+        "cum_redeemed_renewable_tonnes": 308574.47,
+        "cum_net_renewable_tonnes": 9924676.18
       },
-      "net_renewable_pct": 68.80110436476187
-    },
-    {
-      "month_idx": 11,
-      "net_composition_pct": {
-        "Cookstove": 0.003411566919695747,
-        "Renewable": 69.10638096275636,
-        "ARR": 3.889663473065467,
-        "IFM": 2.0468640723604032,
-        "Agriculture": 0.2296604991398401,
-        "Industrial gas": 3.057923892800086,
-        "Waste/Methane": 5.534375543613542,
-        "Industrial": 0.5602748120877932,
-        "REDD+": 4.228949391798857,
-        "Fossil switch": 10.432744606872424,
-        "Energy efficiency": 0.9097511785855326
+      {
+        "month_idx": 12,
+        "net_composition_pct": {
+          "ARR": 0.58,
+          "Fossil switch": 13.77,
+          "IFM": 0.16,
+          "Industrial": 0.8,
+          "Industrial gas": 0.0,
+          "REDD+": 0.01,
+          "Renewable": 78.23,
+          "Waste/Methane": 6.45
+        },
+        "net_renewable_pct": 78.23,
+        "cum_deposited_renewable_tonnes": 10233573.92,
+        "cum_redeemed_renewable_tonnes": 372904.22,
+        "cum_net_renewable_tonnes": 9860669.7
       },
-      "net_renewable_pct": 69.10638096275636
-    },
-    {
-      "month_idx": 12,
-      "net_composition_pct": {
-        "Cookstove": 0.0034115165034904315,
-        "Renewable": 69.1068301703369,
-        "ARR": 3.889605991539563,
-        "IFM": 2.0468338237615176,
-        "Agriculture": 0.22965710521231356,
-        "Industrial gas": 3.0578787027386136,
-        "Waste/Methane": 5.534293756499213,
-        "Industrial": 0.5602665323352266,
-        "REDD+": 4.228894235248572,
-        "Fossil switch": 10.432590431560467,
-        "Energy efficiency": 0.9097377342641152
-      },
-      "net_renewable_pct": 69.1068301703369
-    },
-    {
-      "month_idx": 13,
-      "net_composition_pct": {
-        "Cookstove": 0.003411497332524773,
-        "Renewable": 69.10700377403992,
-        "ARR": 3.8895841339572206,
-        "IFM": 2.046822321609644,
-        "Agriculture": 0.22965581465766646,
-        "Industrial gas": 3.057861519035255,
-        "Waste/Methane": 5.534262656618723,
-        "Industrial": 0.5602633839258785,
-        "REDD+": 4.228870471041049,
-        "Fossil switch": 10.432531805775515,
-        "Energy efficiency": 0.9097326220066062
-      },
-      "net_renewable_pct": 69.10700377403992
-    }
-  ],
+      {
+        "month_idx": 13,
+        "net_composition_pct": {
+          "ARR": 0.58,
+          "Fossil switch": 13.77,
+          "IFM": 0.16,
+          "Industrial": 0.8,
+          "Industrial gas": 0.0,
+          "REDD+": 0.01,
+          "Renewable": 78.23,
+          "Waste/Methane": 6.45
+        },
+        "net_renewable_pct": 78.23,
+        "cum_deposited_renewable_tonnes": 10233697.46,
+        "cum_redeemed_renewable_tonnes": 373597.18,
+        "cum_net_renewable_tonnes": 9860100.28
+      }
+    ],
+    "n_months": 14
+  },
   "net_renewable_drift": {
-    "first_half_mean_renewable_pct": 69.18623524241802,
-    "second_half_mean_renewable_pct": 69.10985876667753,
-    "drift_pp": -0.07637647574048856,
-    "spearman_rho": -0.01098901098901099,
-    "spearman_p": 0.970258390096969
+    "first_half_mean_net_renewable_pct": 71.18,
+    "second_half_mean_net_renewable_pct": 76.26,
+    "drift_pp": 5.08,
+    "spearman_rho": 0.8097,
+    "spearman_p": 0.0004491025578661143
+  },
+  "redemption_rate_by_type": {
+    "ARR": {
+      "deposited_tonnes": 845103.9,
+      "redeemed_tonnes": 771767.92,
+      "redemption_rate_pct": 91.32
+    },
+    "Fossil switch": {
+      "deposited_tonnes": 1735878.0,
+      "redeemed_tonnes": 3.85,
+      "redemption_rate_pct": 0.0
+    },
+    "IFM": {
+      "deposited_tonnes": 285366.84,
+      "redeemed_tonnes": 265367.73,
+      "redemption_rate_pct": 92.99
+    },
+    "Industrial": {
+      "deposited_tonnes": 100814.0,
+      "redeemed_tonnes": 0.2,
+      "redemption_rate_pct": 0.0
+    },
+    "Industrial gas": {
+      "deposited_tonnes": 672255.0,
+      "redeemed_tonnes": 672255.0,
+      "redemption_rate_pct": 100.0
+    },
+    "REDD+": {
+      "deposited_tonnes": 521888.63,
+      "redeemed_tonnes": 521018.2,
+      "redemption_rate_pct": 99.83
+    },
+    "Renewable": {
+      "deposited_tonnes": 10233697.46,
+      "redeemed_tonnes": 373597.18,
+      "redemption_rate_pct": 3.65
+    },
+    "Waste/Methane": {
+      "deposited_tonnes": 812725.0,
+      "redeemed_tonnes": 15.11,
+      "redemption_rate_pct": 0.0
+    }
+  },
+  "chi2_renewable_redemption": {
+    "chi2": 4001862.638117046,
+    "p_value": 0.0,
+    "dof": 1,
+    "contingency_table": [
+      [
+        373597.18107532605,
+        9860100.277509997
+      ],
+      [
+        2230428.016065827,
+        2743603.3594333264
+      ]
+    ],
+    "interpretation": "Renewable credits redeemed at different rate than non-renewable"
   }
 }

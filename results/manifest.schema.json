@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Living Paper Results Manifest",
+  "description": "Schema for the single source of truth for all numeric claims. Every entry traces back to a specific experiment output.",
+  "type": "object",
+  "properties": {
+    "_meta": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string", "description": "Semver of the manifest format" },
+        "last_updated": { "type": "string", "format": "date-time" },
+        "last_updated_by": { "type": "string", "description": "Agent or script that last wrote" },
+        "paper": { "type": "string", "description": "Target paper identifier" }
+      },
+      "required": ["version", "last_updated", "last_updated_by", "paper"]
+    }
+  },
+  "additionalProperties": {
+    "type": "object",
+    "description": "A category of results (e.g., composition, selection, quality)",
+    "additionalProperties": {
+      "type": "object",
+      "properties": {
+        "value": { "description": "The numeric value or formatted string (e.g., '<0.001')" },
+        "unit": { "type": "string", "description": "Unit or type: %, count, ρ, p-value, F, d, ×, etc." },
+        "source": { "type": "string", "description": "Relative path to the JSON/script that produced this value" },
+        "experiment_id": { "type": "string", "description": "Unique experiment run ID for provenance" },
+        "note": { "type": "string", "description": "Optional clarification" }
+      },
+      "required": ["value", "unit", "source", "experiment_id"]
+    }
+  },
+
+  "_naming_convention": {
+    "description": "Naming rules for manifest keys",
+    "rules": [
+      "Category = top-level key (snake_case): composition, selection, quality, price_quality, redemption, temporal, cross_pool, depositor",
+      "Metric = second-level key (snake_case): e.g., renewable_pct_tonnes, selection_coefficient",
+      "Markdown placeholder format: {{category.metric}} e.g., {{composition.renewable_pct_tonnes}}",
+      "When a metric has sub-variants, use suffixes: _lo, _hi, _preterra, _full, _weighted",
+      "P-values that are bounds use string format: '<0.001', '<10^-5'"
+    ]
+  }
+}

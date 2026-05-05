@@ -1,0 +1,121 @@
+# On-chain forensics reveal adverse selection in the first tokenized carbon market
+
+## 1. Introduction
+
+The collapse of Toucan Protocol's Base Carbon Tonne (BCT) pool --- from approximately $7 per token in late 2021 to below $0.50 by mid-2023 --- has been widely attributed to low-quality REDD+ credits flooding the pool. This narrative pervades industry post-mortems, Toucan's own pool redesign decisions (creating NCT specifically for nature-based credits), and informal commentary across the tokenized carbon ecosystem^16,17,18^. The broader academic literature on VCM quality^2,3,4^ has reinforced concern about REDD+ crediting problems, providing a plausible frame that commentators applied to BCT without examining what the pool actually contained. The on-chain composition --- the specific credits deposited by specific addresses via specific transactions on the Polygon blockchain --- is public, immutable, and trivially queryable. Yet the academic literature on BCT's collapse has relied exclusively on aggregate market data rather than on the credit-level composition data that the blockchain was designed to make transparent^5,6,16^.
+
+Here we analyse every deposit, every redemption, and every wallet address across BCT's entire operating history: 1,187 deposits, 35,432 redemptions, 161 unique credit tokens, 509 depositor wallets, 28,897 redeemer wallets. To assess credit quality, we developed an open, seven-dimension quality framework that produces distributional grade posteriors P(grade) via Gaussian variance propagation, validated against the ICVCM Core Carbon Principles (CCP) label (1.99-grade separation, Cohen's $d$ = 1.87, $n$ = 318), three commercial rating agencies (Spearman $\rho$ = +0.901 with BeZero across 27 projects spanning 12 credit types), and a multi-model inter-rater reliability panel (Fleiss' $\kappa$ = 0.600, ICC = 0.993; see Methods for full validation). All rubrics, code, and data are open-source.
+
+**The prevailing narrative is wrong.** BCT was 69.1% renewable energy credits --- CDM-era Chinese wind farms and Indian solar projects with near-zero additionality --- and just 4.2% REDD+. **Five wallets extracted 1.55 million tonnes of high-demand credits while 9.6 million tonnes of low-quality renewables remain stranded on-chain** --- the world's largest on-chain carbon graveyard. **The pool's design enabled this outcome without any strategic misconduct**: uniform pricing of quality-heterogeneous assets under voluntary participation was sufficient, even though quality metadata was publicly observable throughout.
+
+Four findings are new: (i) BCT's actual composition, which directly falsifies the REDD+ narrative; (ii) the complete value chain --- who extracted, how much they profited (\$4--8 million), and where the credits went (39% to cross-pool arbitrage, 35% to immediate retirement); (iii) a within-token cross-pool comparison showing that the same credits were 100% redeemed from BCT but only 28.5% redeemed from NCT --- demonstrating that pool design, not credit quality, determines asset fate; and (iv) a 34-segment quality atlas revealing a 10-fold quality range across the VCM (PQD 0.076--0.759), quantifying the quality infrastructure gap that future pool designs must address. For the \$10 billion tokenized real-world asset sector, the implication is direct: transparency is necessary but not sufficient for market function.
+
+
+## 2. Results
+
+### 2.1 BCT's real composition contradicts the REDD+ narrative
+
+We queried the Polygon blockchain for all 1,187 deposit transactions to the BCT pool contract, covering 168 unique Verra VCS projects and approximately 22 million tonnes of tokenized carbon credits (see Methods for data collection).
+
+The composition was overwhelmingly dominated by renewable energy credits (Fig. 1): 69.1% of total deposited tonnage consisted of grid-connected wind, hydro, and solar projects from China and India, registered between 2008 and 2013. These are precisely the CDM-era project categories that the ICVCM has declined to approve for its Core Carbon Principles label, and that Cames et al.^24^ and Schneider et al.^25^ have documented as having near-zero additionality --- the projects would have been built regardless of carbon revenue.
+
+REDD+ credits --- widely blamed for BCT's collapse --- constituted just 4.2% of the pool, more than 16 times smaller than the renewable share. Even combining all nature-based categories (REDD+, ARR, IFM), the total is 10.3% versus 69.1% for renewables alone.
+
+
+### 2.2 Base-rate selection: BCT over-selected renewables at 1.87$\times$ the registry rate
+
+BCT's renewable dominance could, in principle, reflect the shape of the VCS-eligible universe. We obtained Verra VCS issuance data from MSCI (2023) and Ecosystem Marketplace (2023) indicating that renewable energy credits constitute approximately 37% of total VCS issuance by volume (sensitivity range 26--48% depending on vintage window).
+
+BCT's renewable share (69.1% by tonnage; 78.5% by deposit count) yields a selection coefficient of 1.87$\times$ the VCS base rate. Because deposits are clustered by wallet (509 wallets, Gini = 0.94, effective $N$ = 83.5 by HHI), we use wallet-clustered inference rather than a naive binomial test. A wallet-level permutation test (10,000 iterations, resampling wallets with their full deposit portfolios under the null $P(\text{renewable})$ = 0.37) produces $p$ <0.0001; 89% of wallets have majority-renewable portfolios. The selection coefficient with wallet-level bootstrap 95% CI is 0.522 [0.496, 0.547] (excess renewable share above the 37% null). Under conservative base-rate assumptions (post-2008 VCS at 55%), the selection coefficient remains 1.43$\times$ ($p$ <10^-64). Over-selection becomes non-significant only at base rates exceeding 78.5% --- an implausible assumption.
+
+Conversely, REDD+ is under-represented at 0.2$\times$ the VCS base rate (BCT 4.2% vs. VCS $\sim$17%), directly contradicting the narrative that REDD+ credits overwhelmed the pool.
+
+**Bridge-level decomposition.** Enumerating all TCO2 tokens created by Toucan's factory contract reveals 369 unique tokens bridged before 2023, of which 345 (93.5%) were deposited into BCT. Only 24 bridged tokens never entered the pool. This near-complete pass-through indicates that the 1.87$\times$ over-selection relative to the VCS base rate is primarily a bridge-level phenomenon --- Toucan's permissionless bridge disproportionately attracted renewable energy credits from Verra --- rather than depositors selectively choosing renewables from a diverse bridged universe.
+
+
+### 2.3 Price-quality feedback loop: composition predicts price collapse
+
+The preceding sections establish *what* BCT contained and that its composition reflects selection. The critical question --- flagged by all three reviewers of an earlier draft --- is whether quality composition is connected to BCT's price trajectory.
+
+We obtained daily BCT-USDC prices from DeFi Llama (828 daily observations, October 2021 -- July 2024) and merged with daily cumulative quality metrics computed from the deposit stream ($n$ = 331 overlapping days).
+
+**Correlation.** BCT's price and cumulative PQD are strongly correlated (Pearson $r$ = 0.774, $p$ <10^-66): as the pool's quality declined, its price declined proportionally. In a first-differenced OLS regression (the credible specification for non-stationary series), changes in renewable share predict price changes ($\beta$ = $-$1.8, $p$ <0.001): each percentage-point increase in the renewable share of deposits is associated with a \$1.80 decrease in BCT's price.
+
+**Granger causality.** At weekly frequency ($n$ = 55), we find asymmetric bidirectional Granger causality (Fig. 3). The dominant channel is price-to-quality: price changes precede quality changes ($F$ = 16.08, $p$ <10^-5 at lag 1--2), confirming that lower prices attracted lower-quality deposits. The reverse channel --- quality composition changes preceding price movements --- is significant but 2.5$\times$ weaker ($F$ = 6.32, $p$ = 0.004). This asymmetry is consistent with the design-enabled framing: the pool's architecture established the initial quality composition (Section 2.2), which set a price level that then became the dominant driver of further quality deterioration. The architecture initiated the collapse; the market's price discovery amplified it. We note the small sample ($n$ = 55 weeks) limits statistical power for Granger tests, and the first-differenced daily regression ($n$ = 330, $\beta$ = $-$1.8, $p$ <0.001) provides a more powerful confirmation that quality and price co-move at the expected sign.
+
+**Redemption-side evidence.** Analysis of 35,432 Transfer events from the BCT pool contract reveals that the selection dynamic operated on both sides. Non-renewable credits were preferentially redeemed out of the pool: industrial gas 100% redeemed, REDD+ 99.8%, IFM 93%, ARR 91.3% --- compared with just 3.6% of renewable credits. The tonnage-weighted mean quality of redeemed credits (38.7) exceeded that of deposited credits (31.7) by 7 points. As a result, BCT's net renewable share increased from 71% to 76% over the pool's lifetime.
+
+The exit followed a type-level Gresham sequence (Fig. 2b): the most valuable credit types were extracted first. ARR credits exited earliest (median March 2022), followed by industrial gas (July), IFM (October), REDD+ (November), and renewable energy last (December) --- perfectly ordered by off-chain market demand ($\rho$ = $-$0.74, $n$ = 7 types). Before the Terra/LUNA crash (May 2022), redemptions were dominated by high-value credits (tonnage-weighted quality 42.0); afterwards, quality dropped to 32.4 --- a 10-point gap reflecting selective exit while BCT's price still exceeded the off-chain value of premium credits.
+
+Depositors and redeemers are almost entirely distinct populations: only 1.4% of the 28,897 redeemer addresses also appear among the 509 depositor wallets. The top 10 redeemers account for 85% of extracted tonnage, and their transactions occurred in rapid automated bursts (median gap 4.6 seconds between events), consistent with programmatic rather than manual execution.
+
+This dual-margin structure --- passive, architecture-driven entry on one side; active, strategic extraction on the other --- is not predicted by standard adverse selection models, which typically assume a single population. The 93.5% bridge pass-through shows that entry was indiscriminate; the type-specialist extraction shows that exit was deliberate. Two independent populations exploited different margins of the same mechanism.
+
+
+### 2.4 Wallet forensics: who extracted and what they took
+
+The 28,897 unique redeemer wallets are not a uniform population. Wallet-level analysis of the 161 scored tokens' complete transfer histories reveals a forensic pattern: the largest redeemers are type-specialist extractors who never participated in the deposit side.
+
+**Table 2. Top 5 redeemers by tonnage.**
+
+| Wallet | Tonnes redeemed | Dominant type | Mean quality | Also depositor? |
+|--------|----------------:|---------------|-------------:|:---------------:|
+| 0x65a5... | 651,334 | Industrial gas | 30.9 | No |
+| 0x1b8e... | 335,556 | IFM | 40.0 | Yes |
+| 0xee4b... | 195,051 | REDD+ | 31.4 | No |
+| 0x4b3e... | 188,205 | ARR | 50.4 | No |
+| 0x8556... | 183,629 | ARR | 46.0 | No |
+
+These five wallets extracted 1.55 million tonnes --- representing virtually all of the industrial gas (100%), the majority of REDD+ (37%), and a substantial fraction of ARR (45%) that had been deposited into BCT. At contemporaneous off-chain credit prices, the extracted credits were worth approximately \$8--13 million while the BCT redemption cost was approximately \$4--5 million, yielding an estimated profit of \$4--8 million across the five wallets (see Methods for price assumptions). Fifteen of the twenty largest redeemers never deposited anything; each targeted a single credit type. This is not random redemption but type-targeted extraction by actors who entered the pool solely to capture the price differential between BCT's uniform pool price and the higher off-chain value of specific credit types.
+
+**Where did the extracted credits go?** Tracing the immediate on-chain destination of each redeemed token across all 20 top wallets (2.57 million tonnes), three pathways emerged:
+
+- **Cross-pool arbitrage (39.2%)**: deposited into Toucan's NCT pool, exploiting the price differential between BCT's uniform pricing and NCT's nature-based premium.
+- **Immediate retirement (34.6%)**: burned on-chain within seconds of extraction, indicating pre-arranged retirement pipelines. The largest extractor (0x65a5..., 651,334 tonnes of industrial gas) burned 100% of its credits in the same transaction as the redemption.
+- **Secondary market (17.0%)**: transferred to other addresses, with 6.9% re-deposited into BCT and 2.3% still held.
+
+The BCT-to-NCT arbitrage was not opportunistic --- it was a systematic pipeline. Of 31 tokens deposited into both BCT and NCT, 14 were redeemed from BCT, and all 14 satisfy the temporal sequence: BCT deposit $\rightarrow$ BCT redemption $\rightarrow$ NCT deposit (median: 103 days in BCT, then 14 days to NCT). Not a single token violated this ordering.
+
+Among the 399 wallets that both deposited and redeemed (the 1.4% overlap population), quality swap analysis reveals no systematic quality arbitrage: the mean quality differential is $-$0.08 (effectively zero; tonnage-weighted: +3.4, driven by a few large wallets). The dual-margin mechanism operates through two distinct wallet populations --- depositors who feed the pool with what the bridge produces, and extractors who take out what the off-chain market demands --- connected only by the pool's uniform pricing. We note that wallet-level separation does not establish entity-level independence: a single entity could operate separate deposit and redemption wallets.
+
+
+### 2.5 What the market actually valued
+
+A direct test of which asset characteristics drove selective redemption does not require the quality scoring framework at all. Of the 161 BCT tokens, only 21 were majority-redeemed (redemption rate $>$50%), making a naive null model (predict "stranded" for all tokens) accurate at 87.0%. A type-only prediction rule --- classify credits in high-demand categories (REDD+, IFM, ARR, industrial gas) as redeemed and all others as stranded --- achieves 96.9% accuracy (9.9 percentage points above null). The quality-grade rule (BBB$+$ predicted as redeemed) achieves 91.9% (4.9pp above null). **Credit type captures the dominant axis of selective redemption, and the quality framework does not add predictive power beyond type classification.** We note that the type categories were identified ex post from observed redemption rates; the 96.9% figure characterises which variable drives redemption rather than demonstrating prospective prediction.
+
+**Table 3. Redemption outcome by quality grade.**
+
+| Grade | Tokens | Deposited (tonnes) | Redeemed (tonnes) | Redemption rate | Stranding rate |
+|-------|--------|-------------------:|-------------------:|----------------:|---------------:|
+| B     | 83     | 9,558,068          | 226,136            | 2.4%            | 98.8%          |
+| BB    | 66     | 4,319,190          | 1,340,753          | 31.0%           | 83.3%          |
+| BBB   | 12     | 1,330,471          | 1,037,136          | 78.0%           | 16.7%          |
+
+The monotonic grade-redemption pattern (B 2.4% $<$ BB 31.0% $<$ BBB 78.0%) is a real market outcome: the market extracted higher-grade credits and left lower-grade credits behind. However, this pattern is driven by credit type --- all BBB tokens are nature-based credits with strong off-chain demand, while B-grade tokens are CDM-era renewables with none. Within the 116 renewable energy tokens, neither vintage ($\rho$ = 0.112, $p$ = 0.23) nor quality grade (BB 6.1% vs. B 2.9%, token-level $p$ = 0.20) significantly predicts redemption.
+
+The bottom line: 9.6 million tonnes of B-grade credits --- 63% of everything deposited into BCT --- remain unredeemed. They are the world's largest on-chain carbon graveyard: too low-quality to attract a buyer at any price, yet immutably recorded as "carbon offsets."
+
+
+### 2.6 Same credit, different pool, different fate
+
+Fourteen tokens (1.50 million tonnes) were deposited into *both* BCT and NCT, providing a within-token comparison that holds credit quality constant. The results are striking: in BCT (no quality gate), these nature-based tokens were **100% redeemed**. In NCT (nature-based quality gate), the same tokens were only **28.5% redeemed** (Fig. 6). The contrast is starkest for ARR credits: 100% redeemed from BCT versus 0.0% from NCT. An ARR credit that was a rare, undervalued asset in BCT's renewable-dominated pool became an ordinary constituent of NCT's nature-based pool --- correctly priced and no longer worth selectively extracting. Pool design, not credit quality, determined whether these assets were extracted.
+
+
+### 2.7 Temporal dynamics and robustness
+
+**Temporal quality decline is a vintage-composition effect.** Deposit quality declines over BCT's operating life (Spearman $\rho$ = -0.24, $n$ = 1187, permutation $p$ < 0.0001). However, this apparent decline is entirely driven by the vintage-year component of the composite score. When the vintage dimension is excluded, the temporal trend reverses sign ($\rho$ = +0.24 for renewables; $\rho$ = $-$0.01 for all types). Late deposits drew from progressively older vintages, not intrinsically worse credits within vintage.
+
+**Terra crash as exogenous shock.** The Terra/LUNA collapse (May 2022) provides deposit-side causal evidence. Pre-Terra deposits ($n$ = 491, mean quality 32.9) versus Terra-to-FTX deposits ($n$ = 87, mean quality 29.5) show a 3.4-point quality drop (Cohen's $d$ = 0.58) accompanied by a 98% volume collapse (14.9M to 281k tonnes). The temporal quality degradation tripled in slope ($\rho$ = $-$0.12 pre-Terra versus $\rho$ = $-$0.36 Terra-to-FTX). The exogenous price shock simultaneously accelerated quality deterioration and drove volume toward zero --- consistent with the price-to-quality feedback channel identified in Section 2.3.
+
+**Compositional shift.** Renewable share rises from 67% (Q1) to 99.5% (Q4). Token diversity collapses from 24 distinct scores to 2. Higher-quality types (IFM, Waste/Methane, ARR) ceased depositing earlier (median blocks 20.4M--21.7M) than renewables (32.6M).
+
+**Depositor concentration.** Deposits were highly concentrated: 509 wallets participated, with the top 10 accounting for 50% of tonnage (Gini = 0.94). Large and small depositors deposited similar-quality credits (rank-biserial $r$ = $-$0.17; the volume-weighted gap of 5 quality points does not survive permutation, $p$ = 0.082).
+
+
+### 2.8 Quality atlas and quality gating
+
+To contextualise BCT's quality profile within the broader VCM, we applied the scoring framework across 34 market segments defined by project type, vintage era, and CCP eligibility (Fig. 4). The VCM exhibits a 10-fold quality range: PQD from 0.076 (DACCS) to 0.759 (grid-connected renewables). BCT's PQD of 0.679 sits near the bottom. A Monte Carlo null model (10,000 random pools of matched size) yields PQD = 0.51 (SD = 0.036), placing BCT at 6.2 standard deviations above the random baseline.
+
+CCP eligibility acts as a meaningful but incomplete quality filter: CCP-eligible credits (PQD = 0.419, $n$ = 201) score 0.248 points better than non-CCP credits (PQD = 0.667, $n$ = 117), a 37% reduction in adverse selection severity. Vintage is a secondary predictor: pre-2020 credits (PQD = 0.687) score markedly worse than 2024+ credits (PQD = 0.273). Project type is the strongest quality lever: a DACCS-only or biochar-only pool achieves PQD < 0.22 regardless of vintage or registry.
+
+A within-pool permutation test ($z$ = $-$0.64, $p$ = 0.27) finds no evidence that depositors selected the worst tokens *within* the eligible universe --- the universe itself was uniformly low-quality (mean 32.3), so no within-pool selection was needed. A BBB quality gate would have reduced BCT's PQD from 0.679 to 0.405; the Toucan CHAR pool (biochar allowlist, PQD 0.221) demonstrates that category restriction prevents quality collapse^9^. Counterfactual gate simulations for all six grade thresholds are reported in Extended Data Fig. 3.

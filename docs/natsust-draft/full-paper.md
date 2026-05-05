@@ -1,8 +1,28 @@
+# STATUS: SUPERSEDED by Nat Comms (BCT forensics) + ERL (quality framework) + WWW (ERC-CCQR) papers. Retained for reference only.
+
+**Assessment date**: 2026-04-26
+
+**Rationale**: Systematic overlap analysis found >85% of this paper's content is covered by the three companion papers:
+- Quality framework, CCP calibration, rank correlation, inter-rater reliability, quality atlas → ERL paper (near-identical, ~95% overlap)
+- BCT case study, Lemons Index application, counterfactual gating → Nat Comms paper (~70-85% overlap)
+- On-chain meetsGrade() implementation, ERC-CCQR interface → WWW paper (~90% overlap)
+
+**Unique content worth salvaging** (for incorporation into ERL or WWW papers):
+1. **Six-framework regulatory mapping table** (CCP, Singapore ICC, CORSIA, Article 6, EU CRCF, VCMI) — see Discussion section "Regulatory convergence across governance frameworks." This is the only systematic cross-framework dimension mapping in the pipeline and should be added to the ERL Discussion or WWW Related Work.
+2. **Singapore ICC principle-by-principle alignment** — detailed mapping of seven ICC principles to framework dimensions. Candidate for ERL Discussion section on policy implications.
+3. **Economic magnitude estimates** — $64-122M BCT mispricing, $76-278M/year price discovery value, 100:1 benefit-cost ratio for on-chain gating infrastructure. Candidate for WWW Discussion.
+
+**Self-plagiarism risk if submitted**: SEVERE. The quality framework sections are near-verbatim with ERL. Submitting to Nature Sustainability alongside an ERL submission would violate dual-publication norms.
+
+---
+
 # Transparent Quality Infrastructure Prevents Adverse Selection in Voluntary Carbon Markets
 
 *Adeline Wen*
 
 *Target: Nature Sustainability, Full Article*
+
+**NOTE: This paper has been superseded. See status notice above.**
 
 ---
 

@@ -1,0 +1,484 @@
+{
+  "quality_swap_analysis": {
+    "n_overlap_wallets": 394,
+    "n_with_both_activity": 394,
+    "overlap_pct_of_redeemers": 1.36,
+    "positive_swaps": 4,
+    "negative_swaps": 10,
+    "zero_swaps": 380,
+    "mean_quality_swap": -0.08,
+    "tonnage_weighted_swap": 3.42,
+    "interpretation": "REVERSE PATTERN. Overlap wallets deposited higher quality than they redeemed (mean swap: -0.1 points). This contradicts quality extraction hypothesis.",
+    "top_10_swaps": [
+      {
+        "wallet": "0xac5f1da7...",
+        "deposited_tonnes": 243952.0,
+        "redeemed_tonnes": 46000.0,
+        "deposited_quality": 28.62,
+        "redeemed_quality": 50.77,
+        "quality_swap": 22.15,
+        "deposited_types": {
+          "Renewable": 243952.0
+        },
+        "redeemed_types": {
+          "ARR": 46000.0
+        }
+      },
+      {
+        "wallet": "0xe68d8e2d...",
+        "deposited_tonnes": 0.0,
+        "redeemed_tonnes": 1.2,
+        "deposited_quality": 50.38,
+        "redeemed_quality": 28.62,
+        "quality_swap": -21.76,
+        "deposited_types": {
+          "ARR": 0.0
+        },
+        "redeemed_types": {
+          "Renewable": 1.2
+        }
+      },
+      {
+        "wallet": "0x4058f2d1...",
+        "deposited_tonnes": 37573.9,
+        "redeemed_tonnes": 73.9,
+        "deposited_quality": 43.32,
+        "redeemed_quality": 28.62,
+        "quality_swap": -14.7,
+        "deposited_types": {
+          "Waste/Methane": 37500.0,
+          "Renewable": 73.9
+        },
+        "redeemed_types": {
+          "Renewable": 73.9
+        }
+      },
+      {
+        "wallet": "0x1b8e77cd...",
+        "deposited_tonnes": 20000.0,
+        "redeemed_tonnes": 335556.3,
+        "deposited_quality": 48.12,
+        "redeemed_quality": 40.01,
+        "quality_swap": -8.11,
+        "deposited_types": {
+          "IFM": 20000.0
+        },
+        "redeemed_types": {
+          "IFM": 169750.0,
+          "REDD+": 165806.3
+        }
+      },
+      {
+        "wallet": "0xc3b6b7bc...",
+        "deposited_tonnes": 1.0,
+        "redeemed_tonnes": 1.0,
+        "deposited_quality": 33.55,
+        "redeemed_quality": 28.62,
+        "quality_swap": -4.93,
+        "deposited_types": {
+          "REDD+": 1.0
+        },
+        "redeemed_types": {
+          "Renewable": 1.0
+        }
+      },
+      {
+        "wallet": "0xf8624aee...",
+        "deposited_tonnes": 0.1,
+        "redeemed_tonnes": 13.1,
+        "deposited_quality": 28.62,
+        "redeemed_quality": 33.4,
+        "quality_swap": 4.78,
+        "deposited_types": {
+          "Renewable": 0.1
+        },
+        "redeemed_types": {
+          "REDD+": 10.0,
+          "Renewable": 1.1,
+          "IFM": 1.0,
+          "ARR": 1.0
+        }
+      },
+      {
+        "wallet": "0x50510a8f...",
+        "deposited_tonnes": 1.4,
+        "redeemed_tonnes": 1.1,
+        "deposited_quality": 33.19,
+        "redeemed_quality": 28.62,
+        "quality_swap": -4.57,
+        "deposited_types": {
+          "Renewable": 1.4
+        },
+        "redeemed_types": {
+          "Renewable": 1.1
+        }
+      },
+      {
+        "wallet": "0xcb53a818...",
+        "deposited_tonnes": 0.0,
+        "redeemed_tonnes": 0.1,
+        "deposited_quality": 30.75,
+        "redeemed_quality": 28.62,
+        "quality_swap": -2.13,
+        "deposited_types": {
+          "REDD+": 0.0
+        },
+        "redeemed_types": {
+          "Renewable": 0.1
+        }
+      },
+      {
+        "wallet": "0x638240d1...",
+        "deposited_tonnes": 0.0,
+        "redeemed_tonnes": 12.2,
+        "deposited_quality": 32.35,
+        "redeemed_quality": 31.45,
+        "quality_swap": -0.9,
+        "deposited_types": {
+          "REDD+": 0.0
+        },
+        "redeemed_types": {
+          "REDD+": 10.0,
+          "Fossil switch": 2.0,
+          "Renewable": 0.2
+        }
+      },
+      {
+        "wallet": "0xfe538003...",
+        "deposited_tonnes": 1.7,
+        "redeemed_tonnes": 1.7,
+        "deposited_quality": 29.43,
+        "redeemed_quality": 28.62,
+        "quality_swap": -0.81,
+        "deposited_types": {
+          "Renewable": 1.0,
+          "REDD+": 0.6
+        },
+        "redeemed_types": {
+          "Renewable": 1.7
+        }
+      }
+    ]
+  },
+  "redeemer_profiles": {
+    "n_unique_redeemers": 28897,
+    "top_20": [
+      {
+        "wallet": "0x65a5076c...",
+        "wallet_full": "0x65a5076c0ba74e5f3e069995dc3dab9d197d995c",
+        "redeemed_tonnes": 651333.8,
+        "mean_quality_redeemed": 30.88,
+        "n_redemption_events": 2,
+        "block_span": 1196,
+        "types_redeemed": {
+          "Industrial gas": 651333.8
+        },
+        "dominant_type": "Industrial gas",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x1b8e77cd...",
+        "wallet_full": "0x1b8e77cd56d41ff886866fab4d14de7973a55d64",
+        "redeemed_tonnes": 335556.3,
+        "mean_quality_redeemed": 40.01,
+        "n_redemption_events": 9,
+        "block_span": 31832,
+        "types_redeemed": {
+          "IFM": 169750.0,
+          "REDD+": 165806.3
+        },
+        "dominant_type": "IFM",
+        "is_also_depositor": true,
+        "deposited_quality": 48.12,
+        "quality_swap": -8.11
+      },
+      {
+        "wallet": "0xee4b5fe7...",
+        "wallet_full": "0xee4b5fe730a8ff4dfb9041421eea48d2ae79e3e9",
+        "redeemed_tonnes": 195051.0,
+        "mean_quality_redeemed": 31.44,
+        "n_redemption_events": 3,
+        "block_span": 123,
+        "types_redeemed": {
+          "REDD+": 188223.0,
+          "ARR": 6828.0
+        },
+        "dominant_type": "REDD+",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x4b3ebae3...",
+        "wallet_full": "0x4b3ebae392e8b90a9b13068e90b27d9c41abc3c8",
+        "redeemed_tonnes": 188205.0,
+        "mean_quality_redeemed": 50.38,
+        "n_redemption_events": 1,
+        "block_span": 0,
+        "types_redeemed": {
+          "ARR": 188205.0
+        },
+        "dominant_type": "ARR",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x855627a0...",
+        "wallet_full": "0x855627a0d999f2912327de000c1e92faa8e683bc",
+        "redeemed_tonnes": 183629.0,
+        "mean_quality_redeemed": 45.96,
+        "n_redemption_events": 4,
+        "block_span": 611077,
+        "types_redeemed": {
+          "ARR": 133628.0,
+          "REDD+": 50001.0
+        },
+        "dominant_type": "ARR",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0xcefb61af...",
+        "wallet_full": "0xcefb61af5325c0c100cbd77eb4c9f51d17b189ca",
+        "redeemed_tonnes": 162959.6,
+        "mean_quality_redeemed": 29.49,
+        "n_redemption_events": 1470,
+        "block_span": 10878381,
+        "types_redeemed": {
+          "Renewable": 156601.6,
+          "ARR": 6320.0,
+          "Industrial gas": 25.0,
+          "Waste/Methane": 13.0
+        },
+        "dominant_type": "Renewable",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x362627a6...",
+        "wallet_full": "0x362627a677a0a82261bfc3cc6c2df30f032c29c0",
+        "redeemed_tonnes": 143046.1,
+        "mean_quality_redeemed": 49.65,
+        "n_redemption_events": 9,
+        "block_span": 8428195,
+        "types_redeemed": {
+          "ARR": 111600.4,
+          "IFM": 19823.8,
+          "Renewable": 11622.0
+        },
+        "dominant_type": "ARR",
+        "is_also_depositor": true,
+        "deposited_quality": 49.85,
+        "quality_swap": -0.2
+      },
+      {
+        "wallet": "0x7de53c9c...",
+        "wallet_full": "0x7de53c9cc4f044046418a316645ef4bdecb11596",
+        "redeemed_tonnes": 135100.0,
+        "mean_quality_redeemed": 36.23,
+        "n_redemption_events": 4,
+        "block_span": 587868,
+        "types_redeemed": {
+          "Renewable": 135100.0
+        },
+        "dominant_type": "Renewable",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x92ac19a9...",
+        "wallet_full": "0x92ac19a9519897beaa7aae88f4e9ad19ab0bddf2",
+        "redeemed_tonnes": 116000.0,
+        "mean_quality_redeemed": 50.77,
+        "n_redemption_events": 1,
+        "block_span": 0,
+        "types_redeemed": {
+          "ARR": 116000.0
+        },
+        "dominant_type": "ARR",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0xc4fe1707...",
+        "wallet_full": "0xc4fe1707d0867de63a9b5d99dec15653b14cc437",
+        "redeemed_tonnes": 103785.0,
+        "mean_quality_redeemed": 50.4,
+        "n_redemption_events": 2,
+        "block_span": 1690,
+        "types_redeemed": {
+          "ARR": 103785.0
+        },
+        "dominant_type": "ARR",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x20080003...",
+        "wallet_full": "0x200800030b0920400c0100b30bb0fd6bab300050",
+        "redeemed_tonnes": 67703.0,
+        "mean_quality_redeemed": 39.75,
+        "n_redemption_events": 87,
+        "block_span": 1352883,
+        "types_redeemed": {
+          "IFM": 35086.5,
+          "REDD+": 32616.5
+        },
+        "dominant_type": "IFM",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x222aadfa...",
+        "wallet_full": "0x222aadfaf8ffa6cc7d89f7e99cf94963b121adbf",
+        "redeemed_tonnes": 56194.0,
+        "mean_quality_redeemed": 28.62,
+        "n_redemption_events": 2,
+        "block_span": 1942,
+        "types_redeemed": {
+          "Renewable": 56194.0
+        },
+        "dominant_type": "Renewable",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x16330890...",
+        "wallet_full": "0x163308903db8466eeae7ea2cb17f6e61ff2fd429",
+        "redeemed_tonnes": 51767.2,
+        "mean_quality_redeemed": 31.15,
+        "n_redemption_events": 2,
+        "block_span": 1554,
+        "types_redeemed": {
+          "REDD+": 51767.2
+        },
+        "dominant_type": "REDD+",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0xac5f1da7...",
+        "wallet_full": "0xac5f1da716b466aedbfe24bb8496ce4b956af05f",
+        "redeemed_tonnes": 46000.0,
+        "mean_quality_redeemed": 50.77,
+        "n_redemption_events": 1,
+        "block_span": 0,
+        "types_redeemed": {
+          "ARR": 46000.0
+        },
+        "dominant_type": "ARR",
+        "is_also_depositor": true,
+        "deposited_quality": 28.62,
+        "quality_swap": 22.15
+      },
+      {
+        "wallet": "0x0c69b275...",
+        "wallet_full": "0x0c69b2751a28719e267b377e97572f359fe14473",
+        "redeemed_tonnes": 40707.7,
+        "mean_quality_redeemed": 48.12,
+        "n_redemption_events": 53,
+        "block_span": 2957546,
+        "types_redeemed": {
+          "IFM": 40706.5,
+          "REDD+": 1.2,
+          "ARR": 0.0
+        },
+        "dominant_type": "IFM",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0xb0ee473b...",
+        "wallet_full": "0xb0ee473b1e6ddecd7a86e4c00d9b0a2d158e01cf",
+        "redeemed_tonnes": 30000.0,
+        "mean_quality_redeemed": 50.38,
+        "n_redemption_events": 1,
+        "block_span": 0,
+        "types_redeemed": {
+          "ARR": 30000.0
+        },
+        "dominant_type": "ARR",
+        "is_also_depositor": true,
+        "deposited_quality": 50.38,
+        "quality_swap": 0.0
+      },
+      {
+        "wallet": "0x8a30d3bb...",
+        "wallet_full": "0x8a30d3bb32291dbbb5f88f905433e499638387b7",
+        "redeemed_tonnes": 21056.8,
+        "mean_quality_redeemed": 30.75,
+        "n_redemption_events": 5,
+        "block_span": 1402944,
+        "types_redeemed": {
+          "REDD+": 21056.8
+        },
+        "dominant_type": "REDD+",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x84f5590f...",
+        "wallet_full": "0x84f5590ffe54e0f684b845807d036d8c1d18e684",
+        "redeemed_tonnes": 20889.2,
+        "mean_quality_redeemed": 30.88,
+        "n_redemption_events": 4,
+        "block_span": 7596,
+        "types_redeemed": {
+          "Industrial gas": 20889.2
+        },
+        "dominant_type": "Industrial gas",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      },
+      {
+        "wallet": "0x17303b4e...",
+        "wallet_full": "0x17303b4e90ea4f0a60407ff6c5471ba689e1ef34",
+        "redeemed_tonnes": 15477.3,
+        "mean_quality_redeemed": 50.38,
+        "n_redemption_events": 3,
+        "block_span": 498,
+        "types_redeemed": {
+          "ARR": 15477.3
+        },
+        "dominant_type": "ARR",
+        "is_also_depositor": true,
+        "deposited_quality": 50.38,
+        "quality_swap": 0.0
+      },
+      {
+        "wallet": "0xe0679852...",
+        "wallet_full": "0xe0679852a2ccfc0b89b4c66af5b3cb540612029b",
+        "redeemed_tonnes": 9288.1,
+        "mean_quality_redeemed": 31.15,
+        "n_redemption_events": 1,
+        "block_span": 0,
+        "types_redeemed": {
+          "REDD+": 9288.1
+        },
+        "dominant_type": "REDD+",
+        "is_also_depositor": false,
+        "deposited_quality": null,
+        "quality_swap": null
+      }
+    ]
+  },
+  "depositor_summary": {
+    "n_unique_depositors": 481,
+    "total_deposited_tonnes": 15207728.8,
+    "total_redeemed_tonnes": 2604025.2
+  }
+}

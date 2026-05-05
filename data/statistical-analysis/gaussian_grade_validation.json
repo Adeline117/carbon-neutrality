@@ -1,0 +1,243 @@
+{
+  "test": "Gaussian approximation validation for grade posteriors",
+  "method": "Monte Carlo (10,000 samples per credit) vs Gaussian CDF on 10 boundary credits",
+  "composite_sigma": 3.25,
+  "n_credits": 10,
+  "max_absolute_error_across_all": 0.0369,
+  "mean_max_error": 0.011,
+  "credits": [
+    {
+      "credit": "Near-AAA (composite ~89)",
+      "composite_mu": 88.3,
+      "point_grade": "AA",
+      "mc_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.0,
+        "A": 0.0,
+        "AA": 0.7332,
+        "AAA": 0.2668
+      },
+      "gaussian_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.0,
+        "A": 0.0,
+        "AA": 0.6995,
+        "AAA": 0.3005
+      },
+      "max_abs_error": 0.0337,
+      "max_error_grade": "AA"
+    },
+    {
+      "credit": "Near-AA/AAA boundary (composite ~90)",
+      "composite_mu": 89.7,
+      "point_grade": "AA",
+      "mc_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.0,
+        "A": 0.0,
+        "AA": 0.5767,
+        "AAA": 0.4233
+      },
+      "gaussian_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.0,
+        "A": 0.0,
+        "AA": 0.5398,
+        "AAA": 0.4602
+      },
+      "max_abs_error": 0.0369,
+      "max_error_grade": "AA"
+    },
+    {
+      "credit": "Near-AA (composite ~76)",
+      "composite_mu": 75.3,
+      "point_grade": "AA",
+      "mc_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.0,
+        "A": 0.4676,
+        "AA": 0.5324,
+        "AAA": 0.0
+      },
+      "gaussian_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.0,
+        "A": 0.4632,
+        "AA": 0.5368,
+        "AAA": 0.0
+      },
+      "max_abs_error": 0.0044,
+      "max_error_grade": "A"
+    },
+    {
+      "credit": "Near-A/AA boundary (composite ~75)",
+      "composite_mu": 73.8,
+      "point_grade": "A",
+      "mc_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.0,
+        "A": 0.6464,
+        "AA": 0.3536,
+        "AAA": 0.0
+      },
+      "gaussian_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.0,
+        "A": 0.644,
+        "AA": 0.356,
+        "AAA": 0.0
+      },
+      "max_abs_error": 0.0024,
+      "max_error_grade": "A"
+    },
+    {
+      "credit": "Near-A (composite ~61)",
+      "composite_mu": 60.3,
+      "point_grade": "A",
+      "mc_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.471,
+        "A": 0.529,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "gaussian_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.4663,
+        "A": 0.5337,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "max_abs_error": 0.0047,
+      "max_error_grade": "BBB"
+    },
+    {
+      "credit": "Near-BBB/A boundary (composite ~60)",
+      "composite_mu": 58.8,
+      "point_grade": "BBB",
+      "mc_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.6375,
+        "A": 0.3625,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "gaussian_probs": {
+        "B": 0.0,
+        "BB": 0.0,
+        "BBB": 0.6411,
+        "A": 0.3589,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "max_abs_error": 0.0036,
+      "max_error_grade": "A"
+    },
+    {
+      "credit": "Near-BBB (composite ~46)",
+      "composite_mu": 45.6,
+      "point_grade": "BBB",
+      "mc_probs": {
+        "B": 0.0,
+        "BB": 0.4346,
+        "BBB": 0.5654,
+        "A": 0.0,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "gaussian_probs": {
+        "B": 0.0,
+        "BB": 0.4268,
+        "BBB": 0.5732,
+        "A": 0.0,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "max_abs_error": 0.0078,
+      "max_error_grade": "BB"
+    },
+    {
+      "credit": "Near-BB/BBB boundary (composite ~45)",
+      "composite_mu": 44.1,
+      "point_grade": "BB",
+      "mc_probs": {
+        "B": 0.0,
+        "BB": 0.5945,
+        "BBB": 0.4055,
+        "A": 0.0,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "gaussian_probs": {
+        "B": 0.0,
+        "BB": 0.6032,
+        "BBB": 0.3968,
+        "A": 0.0,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "max_abs_error": 0.0087,
+      "max_error_grade": "BBB"
+    },
+    {
+      "credit": "Near-BB (composite ~31)",
+      "composite_mu": 30.9,
+      "point_grade": "BB",
+      "mc_probs": {
+        "B": 0.39,
+        "BB": 0.61,
+        "BBB": 0.0,
+        "A": 0.0,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "gaussian_probs": {
+        "B": 0.3909,
+        "BB": 0.6091,
+        "BBB": 0.0,
+        "A": 0.0,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "max_abs_error": 0.0009,
+      "max_error_grade": "BB"
+    },
+    {
+      "credit": "Near-B/BB boundary (composite ~30)",
+      "composite_mu": 29.2,
+      "point_grade": "B",
+      "mc_probs": {
+        "B": 0.5984,
+        "BB": 0.4016,
+        "BBB": 0.0,
+        "A": 0.0,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "gaussian_probs": {
+        "B": 0.5913,
+        "BB": 0.4087,
+        "BBB": 0.0,
+        "A": 0.0,
+        "AA": 0.0,
+        "AAA": 0.0
+      },
+      "max_abs_error": 0.0071,
+      "max_error_grade": "B"
+    }
+  ],
+  "verdict": "EXCELLENT. Max absolute error = 0.0369 (< 5%). Gaussian CDF is an accurate approximation for grade posteriors, even at grade boundaries.",
+  "seed": 42,
+  "n_samples": 10000
+}

@@ -1,0 +1,111 @@
+{
+  "quality_volume_frontier": [
+    {
+      "threshold": 0,
+      "n_tokens": 161,
+      "admitted_tonnes": 15207729,
+      "volume_pct": 100.0,
+      "pqd": 0.683,
+      "pqd_improvement_pct": 0.0
+    },
+    {
+      "threshold": 25,
+      "n_tokens": 161,
+      "admitted_tonnes": 15207729,
+      "volume_pct": 100.0,
+      "pqd": 0.683,
+      "pqd_improvement_pct": 0.0
+    },
+    {
+      "threshold": 28,
+      "n_tokens": 150,
+      "admitted_tonnes": 13471851,
+      "volume_pct": 88.6,
+      "pqd": 0.677,
+      "pqd_improvement_pct": 0.8
+    },
+    {
+      "threshold": 29,
+      "n_tokens": 93,
+      "admitted_tonnes": 7072687,
+      "volume_pct": 46.5,
+      "pqd": 0.644,
+      "pqd_improvement_pct": 5.7
+    },
+    {
+      "threshold": 30,
+      "n_tokens": 78,
+      "admitted_tonnes": 5649660,
+      "volume_pct": 37.1,
+      "pqd": 0.627,
+      "pqd_improvement_pct": 8.1
+    },
+    {
+      "threshold": 32,
+      "n_tokens": 46,
+      "admitted_tonnes": 3018616,
+      "volume_pct": 19.8,
+      "pqd": 0.571,
+      "pqd_improvement_pct": 16.4
+    },
+    {
+      "threshold": 35,
+      "n_tokens": 31,
+      "admitted_tonnes": 2364706,
+      "volume_pct": 15.5,
+      "pqd": 0.543,
+      "pqd_improvement_pct": 20.5
+    },
+    {
+      "threshold": 38,
+      "n_tokens": 25,
+      "admitted_tonnes": 2044010,
+      "volume_pct": 13.4,
+      "pqd": 0.528,
+      "pqd_improvement_pct": 22.7
+    },
+    {
+      "threshold": 40,
+      "n_tokens": 25,
+      "admitted_tonnes": 2044010,
+      "volume_pct": 13.4,
+      "pqd": 0.528,
+      "pqd_improvement_pct": 22.7
+    },
+    {
+      "threshold": 42,
+      "n_tokens": 17,
+      "admitted_tonnes": 1736520,
+      "volume_pct": 11.4,
+      "pqd": 0.518,
+      "pqd_improvement_pct": 24.2
+    },
+    {
+      "threshold": 45,
+      "n_tokens": 12,
+      "admitted_tonnes": 1330471,
+      "volume_pct": 8.7,
+      "pqd": 0.503,
+      "pqd_improvement_pct": 26.3
+    },
+    {
+      "threshold": 48,
+      "n_tokens": 11,
+      "admitted_tonnes": 1130471,
+      "volume_pct": 7.4,
+      "pqd": 0.498,
+      "pqd_improvement_pct": 27.1
+    },
+    {
+      "threshold": 50,
+      "n_tokens": 5,
+      "admitted_tonnes": 845104,
+      "volume_pct": 5.6,
+      "pqd": 0.492,
+      "pqd_improvement_pct": 27.9
+    }
+  ],
+  "total_tokens": 161,
+  "total_tonnes": 15207729,
+  "ungated_pqd": 0.683
+}

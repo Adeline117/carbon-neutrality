@@ -1,0 +1,104 @@
+{
+  "source": "Dune Analytics, ethereum.traces",
+  "pool_address": "0xdc24316b9ae028f1497c275eb9192a3ea0f67022",
+  "pool_name": "Curve stETH/ETH pool",
+  "query_date": "2026-04-22",
+  "description": "Net ETH flow through Curve stETH/ETH pool during the May-June 2022 stETH depeg. Positive = ETH flowing into pool, Negative = ETH being drained (high-quality asset extracted).",
+
+  "dune_queries": {
+    "q1_transaction_volume": {
+      "sql": "SELECT DATE_TRUNC('month', block_time) AS month, COUNT(*) AS txns FROM ethereum.transactions WHERE \"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 AND block_time >= CAST('2022-03-01' AS timestamp) AND block_time < CAST('2022-09-01' AS timestamp) AND success = true GROUP BY 1 ORDER BY 1",
+      "results": [
+        {"month": "2022-03", "txns": 2484},
+        {"month": "2022-04", "txns": 2428},
+        {"month": "2022-05", "txns": 3885},
+        {"month": "2022-06", "txns": 3644},
+        {"month": "2022-07", "txns": 1734},
+        {"month": "2022-08", "txns": 1846}
+      ]
+    },
+    "q2_eth_inflow_weekly": {
+      "sql": "SELECT DATE_TRUNC('week', block_time) AS week, SUM(CASE WHEN \"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN CAST(value AS double)/1e18 ELSE 0 END) AS eth_in, COUNT(*) AS n_txns FROM ethereum.traces WHERE \"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 AND block_time >= CAST('2022-04-01' AS timestamp) AND block_time < CAST('2022-08-01' AS timestamp) AND CAST(value AS double) > 0 GROUP BY 1 ORDER BY 1",
+      "note": "Inflow only. Shows 10x spike during Terra crash (May 9: 548,696 ETH vs normal ~50-138k)"
+    },
+    "q3_net_eth_flow": {
+      "sql": "SELECT DATE_TRUNC('week', block_time) AS week, SUM(CASE WHEN \"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN CAST(value AS double)/1e18 ELSE 0 END) AS eth_in, SUM(CASE WHEN \"from\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN CAST(value AS double)/1e18 ELSE 0 END) AS eth_out, SUM(CASE WHEN \"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN CAST(value AS double)/1e18 WHEN \"from\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN -CAST(value AS double)/1e18 ELSE 0 END) AS net_eth FROM ethereum.traces WHERE (\"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 OR \"from\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022) AND block_time >= CAST('2022-04-01' AS timestamp) AND block_time < CAST('2022-08-01' AS timestamp) AND CAST(value AS double) > 0 GROUP BY 1 ORDER BY 1",
+      "results": [
+        {"week": "2022-03-28", "eth_in": 14846, "eth_out": 10835, "net_eth": 4011},
+        {"week": "2022-04-04", "eth_in": 54616, "eth_out": 49874, "net_eth": 4742},
+        {"week": "2022-04-11", "eth_in": 137854, "eth_out": 147174, "net_eth": -9320},
+        {"week": "2022-04-18", "eth_in": 77116, "eth_out": 59231, "net_eth": 17884},
+        {"week": "2022-04-25", "eth_in": 95183, "eth_out": 105479, "net_eth": -10296},
+        {"week": "2022-05-02", "eth_in": 85582, "eth_out": 178852, "net_eth": -93270},
+        {"week": "2022-05-09", "eth_in": 548696, "eth_out": 939289, "net_eth": -390593},
+        {"week": "2022-05-16", "eth_in": 148455, "eth_out": 142777, "net_eth": 5678},
+        {"week": "2022-05-23", "eth_in": 78372, "eth_out": 86887, "net_eth": -8514},
+        {"week": "2022-05-30", "eth_in": 60388, "eth_out": 51046, "net_eth": 9343},
+        {"week": "2022-06-06", "eth_in": 280592, "eth_out": 421899, "net_eth": -141307},
+        {"week": "2022-06-13", "eth_in": 430376, "eth_out": 494884, "net_eth": -64508},
+        {"week": "2022-06-20", "eth_in": 153909, "eth_out": 114614, "net_eth": 39295},
+        {"week": "2022-06-27", "eth_in": 49879, "eth_out": 48350, "net_eth": 1529},
+        {"week": "2022-07-04", "eth_in": 41326, "eth_out": 27602, "net_eth": 13724},
+        {"week": "2022-07-11", "eth_in": 92984, "eth_out": 73120, "net_eth": 19865},
+        {"week": "2022-07-18", "eth_in": 107078, "eth_out": 53036, "net_eth": 54042},
+        {"week": "2022-07-25", "eth_in": 47517, "eth_out": 56056, "net_eth": -8539}
+      ]
+    }
+  },
+
+  "q4_net_steth_flow": {
+    "sql": "SELECT DATE_TRUNC('week', evt_block_time) AS week, SUM(CASE WHEN \"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN CAST(value AS double)/1e18 ELSE 0 END) AS steth_in, SUM(CASE WHEN \"from\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN CAST(value AS double)/1e18 ELSE 0 END) AS steth_out, SUM(CASE WHEN \"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN CAST(value AS double)/1e18 WHEN \"from\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 THEN -CAST(value AS double)/1e18 ELSE 0 END) AS net_steth FROM erc20_ethereum.evt_Transfer WHERE contract_address = 0xae7ab96520de3a18e5e111b5eaab095312d7fe84 AND (\"to\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022 OR \"from\" = 0xdc24316b9ae028f1497c275eb9192a3ea0f67022) AND evt_block_time >= CAST('2022-04-01' AS timestamp) AND evt_block_time < CAST('2022-08-01' AS timestamp) GROUP BY 1 ORDER BY 1",
+    "results": [
+      {"week": "2022-03-28", "steth_in": 19671, "steth_out": 2984, "net_steth": 16687},
+      {"week": "2022-04-04", "steth_in": 50517, "steth_out": 34723, "net_steth": 15795},
+      {"week": "2022-04-11", "steth_in": 115768, "steth_out": 115362, "net_steth": 406},
+      {"week": "2022-04-18", "steth_in": 31262, "steth_out": 29043, "net_steth": 2220},
+      {"week": "2022-04-25", "steth_in": 67357, "steth_out": 66875, "net_steth": 482},
+      {"week": "2022-05-02", "steth_in": 153008, "steth_out": 88069, "net_steth": 64939},
+      {"week": "2022-05-09", "steth_in": 614001, "steth_out": 930507, "net_steth": -316506},
+      {"week": "2022-05-16", "steth_in": 258087, "steth_out": 103836, "net_steth": 154251},
+      {"week": "2022-05-23", "steth_in": 72775, "steth_out": 110187, "net_steth": -37412},
+      {"week": "2022-05-30", "steth_in": 47936, "steth_out": 45341, "net_steth": 2596},
+      {"week": "2022-06-06", "steth_in": 361908, "steth_out": 538107, "net_steth": -176199},
+      {"week": "2022-06-13", "steth_in": 466700, "steth_out": 467556, "net_steth": -856},
+      {"week": "2022-06-20", "steth_in": 122437, "steth_out": 165752, "net_steth": -43315},
+      {"week": "2022-06-27", "steth_in": 53275, "steth_out": 53460, "net_steth": -185},
+      {"week": "2022-07-04", "steth_in": 53244, "steth_out": 54123, "net_steth": -879},
+      {"week": "2022-07-11", "steth_in": 93751, "steth_out": 77535, "net_steth": 16216},
+      {"week": "2022-07-18", "steth_in": 129435, "steth_out": 80471, "net_steth": 48964},
+      {"week": "2022-07-25", "steth_in": 88783, "steth_out": 31310, "net_steth": 57473}
+    ]
+  },
+
+  "analysis": {
+    "pre_depeg_baseline": {
+      "period": "2022-03-28 to 2022-04-25",
+      "mean_weekly_net_eth": 1409,
+      "interpretation": "Net ETH flow oscillates around zero (±10k ETH/week). Pool balanced."
+    },
+    "depeg_phase": {
+      "period": "2022-05-02 to 2022-06-13",
+      "weeks_with_net_outflow": 5,
+      "weeks_with_net_inflow": 2,
+      "total_net_eth_drained": -692514,
+      "peak_weekly_drain": -390593,
+      "peak_week": "2022-05-09 (Terra/LUNA crash)",
+      "interpretation": "692,514 ETH net drained from pool during depeg. Peak drain of 390,593 ETH in a single week (May 9, Terra crash). ETH (high-quality asset) selectively extracted while stETH (low-quality) remained."
+    },
+    "recovery_phase": {
+      "period": "2022-06-20 to 2022-07-18",
+      "total_net_eth_inflow": 128455,
+      "interpretation": "ETH flows back into pool as stETH discount narrows. Partial recovery."
+    },
+    "transparency_trap_evidence": {
+      "mechanism": "Curve stableswap treats stETH ≈ ETH (uniform pricing). When quality diverges (stETH depeg), high-quality asset (ETH) is selectively drained. Pool composition shifts from balanced to stETH-heavy.",
+      "natural_experiment": "Terra/LUNA collapse (May 7-12, 2022) is an exogenous shock to stETH quality — not endogenous to the Curve pool.",
+      "effect_magnitude": "692k ETH drained in 6 weeks. At ~$2,000/ETH (May 2022), this represents ~$1.4B of high-quality asset extraction.",
+      "structural_analogy_to_bct": {
+        "bct": "Low-quality carbon credits (renewables) deposited; high-quality (REDD+, IFM) selectively redeemed",
+        "curve": "stETH (risky) remains; ETH (safe) selectively withdrawn",
+        "shared_mechanism": "Uniform pricing of heterogeneous assets → quality shock → selective extraction of high-quality component"
+      }
+    }
+  }
+}

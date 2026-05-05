@@ -1,0 +1,53 @@
+{
+  "framework_free_prediction": {
+    "n_tokens": 161,
+    "type_only_accuracy": 0.9689,
+    "grade_rule_accuracy": 0.9193,
+    "accuracy_difference_pp": -5.0,
+    "within_renewable_vintage_rho": 0.112,
+    "within_renewable_vintage_p": 0.2296,
+    "type_level_redemption_rates": {
+      "Renewable": {
+        "n_tokens": 116,
+        "tonnage_redemption_pct": 3.7,
+        "mean_token_rate_pct": 2.9
+      },
+      "IFM": {
+        "n_tokens": 6,
+        "tonnage_redemption_pct": 93.0,
+        "mean_token_rate_pct": 91.7
+      },
+      "Fossil switch": {
+        "n_tokens": 11,
+        "tonnage_redemption_pct": 0.0,
+        "mean_token_rate_pct": 0.0
+      },
+      "ARR": {
+        "n_tokens": 5,
+        "tonnage_redemption_pct": 91.3,
+        "mean_token_rate_pct": 81.6
+      },
+      "Waste/Methane": {
+        "n_tokens": 7,
+        "tonnage_redemption_pct": 0.0,
+        "mean_token_rate_pct": 0.0
+      },
+      "REDD+": {
+        "n_tokens": 8,
+        "tonnage_redemption_pct": 99.8,
+        "mean_token_rate_pct": 87.8
+      },
+      "Industrial gas": {
+        "n_tokens": 1,
+        "tonnage_redemption_pct": 100.0,
+        "mean_token_rate_pct": 100.0
+      },
+      "Industrial": {
+        "n_tokens": 7,
+        "tonnage_redemption_pct": 0.0,
+        "mean_token_rate_pct": 0.0
+      }
+    },
+    "interpretation": "Quality grades predict at 91.9% vs type-only 96.9%, a -5.0pp difference."
+  }
+}

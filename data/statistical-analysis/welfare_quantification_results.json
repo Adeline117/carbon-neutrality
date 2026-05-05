@@ -1,0 +1,56 @@
+{
+  "test": "Welfare cost of BCT's design-determined adverse selection",
+  "method": "Compare real emission reductions under BCT's actual composition vs. counterfactual market-average composition. Additionality rates from Calel et al. 2024, West et al. 2023, Cames et al. 2016. SCC from US EPA 2024.",
+  "total_bct_tonnes": 15207729,
+  "point_estimates": {
+    "low": {
+      "bct_real_tonnes": 1336344,
+      "cf_real_tonnes": 2097146,
+      "foregone_tonnes": 760802,
+      "bct_additionality_pct": 8.8,
+      "cf_additionality_pct": 13.8,
+      "welfare_gap_low_scc_usd": 38800909,
+      "welfare_gap_central_scc_usd": 91296257,
+      "welfare_gap_high_scc_usd": 144552406
+    },
+    "central": {
+      "bct_real_tonnes": 2520232,
+      "cf_real_tonnes": 3870367,
+      "foregone_tonnes": 1350135,
+      "bct_additionality_pct": 16.6,
+      "cf_additionality_pct": 25.4,
+      "welfare_gap_low_scc_usd": 68856889,
+      "welfare_gap_central_scc_usd": 162016210,
+      "welfare_gap_high_scc_usd": 256525665
+    },
+    "high": {
+      "bct_real_tonnes": 4391907,
+      "cf_real_tonnes": 6029865,
+      "foregone_tonnes": 1637958,
+      "bct_additionality_pct": 28.9,
+      "cf_additionality_pct": 39.6,
+      "welfare_gap_low_scc_usd": 83535838,
+      "welfare_gap_central_scc_usd": 196554912,
+      "welfare_gap_high_scc_usd": 311211944
+    }
+  },
+  "monte_carlo": {
+    "n_iterations": 10000,
+    "foregone_tonnes": {
+      "mean": 1249613,
+      "median": 1252927,
+      "p5": 879113,
+      "p95": 1612924
+    },
+    "welfare_gap_usd": {
+      "mean": 150746704,
+      "median": 146094039,
+      "p5": 67592719,
+      "p95": 251793735,
+      "p25": 103183169,
+      "p75": 192811434
+    }
+  },
+  "verdict": "BCT's design-determined adverse selection resulted in an estimated $146M in foregone genuine emission reductions (90% CI: $68M -- $252M), relative to a counterfactual pool with market-average quality composition.",
+  "seed": 42
+}

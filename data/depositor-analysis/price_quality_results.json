@@ -342,7 +342,7 @@
   },
   "metadata": {
     "n_deposits": 1187,
-    "n_price_observations": 828,
+    "n_price_observations": 1491,
     "n_merged_observations": 331,
     "overlap_start": "2021-10-21",
     "overlap_end": "2022-11-11",

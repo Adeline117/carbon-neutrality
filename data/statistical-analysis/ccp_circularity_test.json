@@ -1,0 +1,26 @@
+{
+  "test": "CCP validation circularity: does removal_type dimension drive the CCP/non-CCP separation?",
+  "method": "Recompute archetype-level composite with removal_type weight zeroed, remaining weights renormalized",
+  "n_ccp_archetypes": 12,
+  "n_non_ccp_archetypes": 3,
+  "full_composite": {
+    "ccp_mean": 59.6,
+    "non_ccp_mean": 30.5,
+    "gap": 29.1
+  },
+  "no_removal_type_composite": {
+    "ccp_mean": 59.7,
+    "non_ccp_mean": 30.1,
+    "gap": 29.6,
+    "renormalized_weights": {
+      "additionality": 0.267,
+      "permanence": 0.233,
+      "mrv_grade": 0.267,
+      "vintage_year": 0.133,
+      "registry_methodology": 0.100
+    }
+  },
+  "gap_retention_pct": 102,
+  "verdict": "NOT CIRCULAR. 102% of CCP/non-CCP separation survives without removal_type. The gap is driven by additionality, permanence, and MRV — not by the removal_type dimension alone.",
+  "caveat": "Test uses n=15 archetypes (12 CCP, 3 non-CCP), not the full 318-credit dataset. Archetype-level analysis may mask within-archetype variation."
+}

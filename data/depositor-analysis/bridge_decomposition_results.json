@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "source": "Dune Analytics",
+    "query_date": "2026-04-20",
+    "window": "evt_block_time <= 2023-01-01",
+    "factory": "toucan_protocol_polygon.ToucanCarbonOffsetsFactory_evt_TokenCreated",
+    "bct_deposits": "toucan_protocol_polygon.basecarbontonne_evt_deposited"
+  },
+
+  "summary": {
+    "total_bridged_tokens": 369,
+    "bct_deposited_tokens": 345,
+    "not_bct_tokens": 24,
+    "bct_coverage_pct": 93.5,
+    "interpretation": "BCT absorbed 93.5% of all Toucan-bridged TCO2 tokens. Pool-level selection space is minimal (24 tokens). Selection is primarily at bridge level."
+  },
+
+  "non_bct_tokens": [
+    {"address": "0x8f5064ad9f91c8193694d9e8e7e9850fc1a2cc1f", "name": null, "symbol": null},
+    {"address": "0xb4519637d5a4d4c0418f664911e0ce0720157816", "name": "TCO2-VCS-45-20060825", "vcs_id": "45"},
+    {"address": "0xb9989e30d99e1f4b8daf79751327e520378f0f23", "name": null, "symbol": null},
+    {"address": "0xc2f4dc92abd6734581f401297b887424ebe30ffd", "name": null, "symbol": null},
+    {"address": "0xf29aac9817fa56fc321d50a0940bd06df6e98791", "name": "TCO2-VCS-1935-2017", "vcs_id": "1935"},
+    {"address": "0xfbc5d9620b6bb729be2f72fca157054bd3da3d1a", "name": "TCO2-VCS-1764-20200615", "vcs_id": "1764"},
+    {"address": "0x144a85216977355e088c1bbdd60155d48aec68ed", "name": null, "symbol": null},
+    {"address": "0x1192e0f8fdee17023752848c8a3be8f9aa49ca44", "name": "TCO2-VCS-1768-2017", "vcs_id": "1768"},
+    {"address": "0xfbb712143ee6ed62cf3a2d63e487c4ac0bd29305", "name": null, "symbol": null},
+    {"address": "0x199e336c4b4b87da57e30cd4be6896360f42eecd", "name": null, "symbol": null},
+    {"address": "0x70ae8940c038b1d3fe80459f9c534636a85564c5", "name": null, "symbol": null},
+    {"address": "0x004090eef602e024b2a6cb7f0c1edda992382994", "name": "TCO2-VCS-725-20071231", "vcs_id": "725"},
+    {"address": "0xfbd5528ed9ef545f3b0ad387c23a10c8741759c2", "name": "TCO2-VCS-960-20120101", "vcs_id": "960"},
+    {"address": "0x848b3e1731be61f23cf342512b14c92258d34a6f", "name": null, "symbol": null},
+    {"address": "0xbd896d201841ce8be7d7ceb81e2222a8b6196295", "name": null, "symbol": null},
+    {"address": "0xf0b3aed0232b3c51693323e45878c9173b6c43fe", "name": "TCO2-VCS-934-2015", "vcs_id": "934"},
+    {"address": "0xb159f846eebf248db81ad6790c6623ab8dcd4f66", "name": null, "symbol": null},
+    {"address": "0xf48f79b11f07f2192d14ff9c43232eaadb02c991", "name": null, "symbol": null},
+    {"address": "0xb2e26fdd231e3b741711aa31f4e1f4b9caf0abc9", "name": null, "symbol": null},
+    {"address": "0xd6b0b0770cf516df1b07feabfd2bcb897426c3b2", "name": "TCO2-VCS-1686-2019", "vcs_id": "1686"},
+    {"address": "0xbd69f10278d937f08dfc63bc24ee3d2b5ec37b23", "name": null, "symbol": null},
+    {"address": "0xde8a51be4a6b9c46879c233f3ea69d1eba7f153d", "name": "TCO2-VCS-832-20070719", "vcs_id": "832"},
+    {"address": "0xc42cb8538e0dea6459c5965876131120ba96122e", "name": "TCO2-VCS-1715-2013", "vcs_id": "1715"},
+    {"address": "0x28ad571c901fb15f2a1eb4ac945fb05671a439e1", "name": null, "symbol": null}
+  ],
+
+  "non_bct_identified_projects": {
+    "VCS-45": "Pacajai REDD+ (Brazil) - vintage 2006",
+    "VCS-725": "vintage 2007",
+    "VCS-832": "vintage 2007",
+    "VCS-934": "vintage 2015",
+    "VCS-960": "vintage 2012",
+    "VCS-1686": "vintage 2019",
+    "VCS-1715": "vintage 2013",
+    "VCS-1764": "vintage 2020",
+    "VCS-1768": "vintage 2017",
+    "VCS-1935": "vintage 2017"
+  }
+}

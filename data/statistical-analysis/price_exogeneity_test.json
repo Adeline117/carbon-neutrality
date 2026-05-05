@@ -1,0 +1,21 @@
+{
+  "test": "Price exogeneity: is BCT's price decline explained by broad crypto market (ETH)?",
+  "benchmark": "ETH (coingecko:ethereum via DeFi Llama)",
+  "period": "2021-10-22 to 2022-12-30",
+  "frequency": "weekly",
+  "n_observations": 56,
+  "levels_correlation": {
+    "pearson_r": 0.915,
+    "p_value": 6.35e-23,
+    "r_squared": 0.837,
+    "note": "Spurious — both are non-stationary trending series. Not interpretable."
+  },
+  "returns_correlation": {
+    "pearson_r": 0.200,
+    "p_value": 0.142,
+    "r_squared": 0.040,
+    "note": "The correct specification. Weekly log returns are stationary."
+  },
+  "verdict": "NOT CONFOUNDED. Only 4% of BCT's weekly return variance co-moves with ETH (p=0.14, not significant). BCT's price decline is BCT-specific, not crypto-market-driven. The Granger causality result (quality→price) is not confounded by an omitted crypto-market variable.",
+  "implication_for_paper": "The price-quality feedback loop claim is STRENGTHENED. BCT's collapse cannot be attributed to crypto winter contagion; quality composition has independent explanatory power."
+}

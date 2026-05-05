@@ -1,0 +1,32 @@
+{
+  "cross_pool_comparison": {
+    "n_both_pools": 14,
+    "n_bct_only": 147,
+    "n_nct_only": 0,
+    "aggregate": {
+      "bct_deposit": 1501800,
+      "bct_redeemed": 1501799,
+      "bct_rate_pct": 100.0,
+      "nct_deposit": 1526117,
+      "nct_redeemed": 434743,
+      "nct_rate_pct": 28.5
+    },
+    "by_type": {
+      "IFM": {
+        "n": 5,
+        "bct_rate_pct": 100.0,
+        "nct_rate_pct": 30.9
+      },
+      "ARR": {
+        "n": 4,
+        "bct_rate_pct": 100.0,
+        "nct_rate_pct": 0.0
+      },
+      "REDD+": {
+        "n": 5,
+        "bct_rate_pct": 100.0,
+        "nct_rate_pct": 69.0
+      }
+    }
+  }
+}

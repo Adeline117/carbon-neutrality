@@ -1,0 +1,201 @@
+{
+  "post_extraction_tracing": {
+    "n_wallets_traced": 20,
+    "total_redeemed_tonnes": 2573749,
+    "total_traced_tonnes": 2573749,
+    "destination_breakdown": {
+      "NCT Pool (cross-pool deposit)": 1009294,
+      "BURN (retirement)": 891377,
+      "Transferred to other address": 436685,
+      "BCT Pool (re-deposit)": 176758,
+      "Still held in wallet": 59636
+    },
+    "wallet_summaries": [
+      {
+        "wallet": "0x65a5076c...",
+        "dominant_type": "Industrial gas",
+        "redeemed_tonnes": 651334,
+        "destinations": {
+          "BURN (retirement)": 651334
+        },
+        "median_hold_blocks": 0
+      },
+      {
+        "wallet": "0x1b8e77cd...",
+        "dominant_type": "IFM",
+        "redeemed_tonnes": 335556,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 315556,
+          "BCT Pool (re-deposit)": 20000
+        },
+        "median_hold_blocks": 437710
+      },
+      {
+        "wallet": "0xee4b5fe7...",
+        "dominant_type": "REDD+",
+        "redeemed_tonnes": 195051,
+        "destinations": {
+          "Transferred to other address": 195051
+        },
+        "median_hold_blocks": 1498
+      },
+      {
+        "wallet": "0x4b3ebae3...",
+        "dominant_type": "ARR",
+        "redeemed_tonnes": 188205,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 188205
+        },
+        "median_hold_blocks": 3988063
+      },
+      {
+        "wallet": "0x855627a0...",
+        "dominant_type": "ARR",
+        "redeemed_tonnes": 183629,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 99777,
+          "Still held in wallet": 53851,
+          "Transferred to other address": 30001
+        },
+        "median_hold_blocks": 3059009
+      },
+      {
+        "wallet": "0xcefb61af...",
+        "dominant_type": "Renewable",
+        "redeemed_tonnes": 162960,
+        "destinations": {
+          "BURN (retirement)": 162960
+        },
+        "median_hold_blocks": 0
+      },
+      {
+        "wallet": "0x362627a6...",
+        "dominant_type": "ARR",
+        "redeemed_tonnes": 143046,
+        "destinations": {
+          "BCT Pool (re-deposit)": 126758,
+          "NCT Pool (cross-pool deposit)": 16288
+        },
+        "median_hold_blocks": 247719
+      },
+      {
+        "wallet": "0x7de53c9c...",
+        "dominant_type": "Renewable",
+        "redeemed_tonnes": 135100,
+        "destinations": {
+          "Transferred to other address": 135100
+        },
+        "median_hold_blocks": 30657
+      },
+      {
+        "wallet": "0x92ac19a9...",
+        "dominant_type": "ARR",
+        "redeemed_tonnes": 116000,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 116000
+        },
+        "median_hold_blocks": 3987113
+      },
+      {
+        "wallet": "0xc4fe1707...",
+        "dominant_type": "ARR",
+        "redeemed_tonnes": 103785,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 98000,
+          "Still held in wallet": 5785
+        },
+        "median_hold_blocks": 3599809
+      },
+      {
+        "wallet": "0x20080003...",
+        "dominant_type": "IFM",
+        "redeemed_tonnes": 67703,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 67703
+        },
+        "median_hold_blocks": 0
+      },
+      {
+        "wallet": "0x222aadfa...",
+        "dominant_type": "Renewable",
+        "redeemed_tonnes": 56194,
+        "destinations": {
+          "BURN (retirement)": 56194
+        },
+        "median_hold_blocks": 43863
+      },
+      {
+        "wallet": "0x16330890...",
+        "dominant_type": "REDD+",
+        "redeemed_tonnes": 51767,
+        "destinations": {
+          "Transferred to other address": 51767
+        },
+        "median_hold_blocks": 75819
+      },
+      {
+        "wallet": "0xac5f1da7...",
+        "dominant_type": "ARR",
+        "redeemed_tonnes": 46000,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 46000
+        },
+        "median_hold_blocks": 2029168
+      },
+      {
+        "wallet": "0x0c69b275...",
+        "dominant_type": "IFM",
+        "redeemed_tonnes": 40708,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 40708
+        },
+        "median_hold_blocks": 0
+      },
+      {
+        "wallet": "0xb0ee473b...",
+        "dominant_type": "ARR",
+        "redeemed_tonnes": 30000,
+        "destinations": {
+          "BCT Pool (re-deposit)": 30000
+        },
+        "median_hold_blocks": 24448
+      },
+      {
+        "wallet": "0x8a30d3bb...",
+        "dominant_type": "REDD+",
+        "redeemed_tonnes": 21057,
+        "destinations": {
+          "NCT Pool (cross-pool deposit)": 21057
+        },
+        "median_hold_blocks": 53
+      },
+      {
+        "wallet": "0x84f5590f...",
+        "dominant_type": "Industrial gas",
+        "redeemed_tonnes": 20889,
+        "destinations": {
+          "BURN (retirement)": 20889
+        },
+        "median_hold_blocks": 0
+      },
+      {
+        "wallet": "0x17303b4e...",
+        "dominant_type": "ARR",
+        "redeemed_tonnes": 15477,
+        "destinations": {
+          "Transferred to other address": 15477
+        },
+        "median_hold_blocks": 205
+      },
+      {
+        "wallet": "0xe0679852...",
+        "dominant_type": "REDD+",
+        "redeemed_tonnes": 9288,
+        "destinations": {
+          "Transferred to other address": 9288
+        },
+        "median_hold_blocks": 52556
+      }
+    ]
+  }
+}
