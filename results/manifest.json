@@ -1,8 +1,8 @@
 {
   "_meta": {
     "version": "0.1.0",
-    "last_updated": "2026-04-20T00:00:00Z",
-    "last_updated_by": "initial_extraction",
+    "last_updated": "2026-05-05T00:00:00Z",
+    "last_updated_by": "agent_b_did_tonnage",
     "paper": "natcomms-draft",
     "description": "Single source of truth for all numeric claims in the paper. Every number in the manuscript MUST trace back to a key here."
   },
@@ -1307,6 +1307,36 @@
       "source": "data/depositor-analysis/bridge_decomposition_results.json",
       "experiment_id": "bridge_decomp_v1",
       "note": "Dune query confirmation matches RPC-derived 21984482 within 65 tonnes"
+    },
+    "bct_deposited_tonnes": {
+      "value": 21984481.5,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/bridge_tonnage_verification.json",
+      "experiment_id": "tonnage_v1"
+    },
+    "non_bct_current_supply_tonnes": {
+      "value": 86683.1,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/bridge_tonnage_verification.json",
+      "experiment_id": "tonnage_v1"
+    },
+    "total_bridged_tonnes": {
+      "value": 22071164.6,
+      "unit": "tCO2",
+      "source": "data/depositor-analysis/bridge_tonnage_verification.json",
+      "experiment_id": "tonnage_v1"
+    },
+    "passthrough_by_tonnage_pct": {
+      "value": 99.6,
+      "unit": "%",
+      "source": "data/depositor-analysis/bridge_tonnage_verification.json",
+      "experiment_id": "tonnage_v1"
+    },
+    "non_bct_share_pct": {
+      "value": 0.4,
+      "unit": "%",
+      "source": "data/depositor-analysis/bridge_tonnage_verification.json",
+      "experiment_id": "tonnage_v1"
     }
   },
   "segment_pqd": {
@@ -1534,6 +1564,128 @@
       "unit": "boolean",
       "source": "data/statistical-analysis/predictive_stranding_results.json",
       "experiment_id": "stranding_v1"
+    }
+  },
+  "did": {
+    "panel_size": {
+      "value": 1895,
+      "unit": "deposits",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "n_bct_deposits": {
+      "value": 1187,
+      "unit": "count",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "n_nct_deposits": {
+      "value": 708,
+      "unit": "count",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "n_clusters": {
+      "value": 349,
+      "unit": "tokens",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "event_study_beta_interaction": {
+      "value": -7.33,
+      "unit": "quality points",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "event_study_se": {
+      "value": 2.50,
+      "unit": "SE",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "event_study_t": {
+      "value": -2.93,
+      "unit": "t",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "event_study_p": {
+      "value": 0.004,
+      "unit": "p-value",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "event_study_r2": {
+      "value": 0.472,
+      "unit": "R²",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "continuous_beta_interaction": {
+      "value": -2.57,
+      "unit": "quality points per SD",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "continuous_p": {
+      "value": 0.238,
+      "unit": "p-value",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "permutation_p_two_sided": {
+      "value": "<0.0001",
+      "unit": "p-value",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "bayesian_posterior_mean": {
+      "value": -2.57,
+      "unit": "quality points per SD",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "bayesian_ci_lo": {
+      "value": -4.02,
+      "unit": "quality points per SD",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "bayesian_ci_hi": {
+      "value": -1.10,
+      "unit": "quality points per SD",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "bayesian_prob_bct_worse": {
+      "value": 99.98,
+      "unit": "%",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "bct_pre_terra_mean_quality": {
+      "value": 32.1,
+      "unit": "score",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "bct_post_terra_mean_quality": {
+      "value": 29.0,
+      "unit": "score",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "nct_pre_terra_mean_quality": {
+      "value": 39.8,
+      "unit": "score",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
+    },
+    "nct_post_terra_mean_quality": {
+      "value": 44.1,
+      "unit": "score",
+      "source": "data/statistical-analysis/bct_nct_did_results.json",
+      "experiment_id": "did_v1"
     }
   },
   "welfare": {
