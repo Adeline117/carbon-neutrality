@@ -31,7 +31,10 @@ warnings.filterwarnings('ignore')
 BASE = Path('/Users/adelinewen/carbon-neutrality')
 DEPOSITS_PATH = BASE / 'data/depositor-analysis/bct_deposits_enriched.json'
 SCORES_PATH   = BASE / 'data/depositor-analysis/tco2_scores_complete.json'
-PRICES_PATH   = Path('/tmp/bct_prices_merged.json')
+PRICES_PATH   = BASE / 'data/depositor-analysis/bct_prices_daily.json'
+if not PRICES_PATH.exists():
+    # Fallback to /tmp for backwards compatibility
+    PRICES_PATH = Path('/tmp/bct_prices_merged.json')
 OUT_JSON      = BASE / 'data/depositor-analysis/price_quality_results.json'
 OUT_FIG_PNG   = BASE / 'figures/fig_price_quality.png'
 OUT_FIG_PDF   = BASE / 'figures/fig_price_quality.pdf'

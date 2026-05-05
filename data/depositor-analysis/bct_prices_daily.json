@@ -1,0 +1,31 @@
+{
+  "_meta": {
+    "description": "BCT daily prices from DeFi Llama. Full 1491-observation dataset was used to generate fig_price_quality and price_quality_results.json. DeFi Llama free API now returns sparse historical data for BCT. All computed statistics are preserved in price_quality_results.json.",
+    "original_n": 1491,
+    "overlap_n": 331,
+    "overlap_start": "2021-10-21",
+    "overlap_end": "2022-11-11",
+    "api_endpoint": "https://coins.llama.fi/prices/historical/{timestamp}/polygon:0x2f800db0fdb5223b3c3f354886d907a671414a7f",
+    "fetch_date_original": "2026-04-20",
+    "refetch_date": "2026-05-05",
+    "refetch_note": "Only 4 of 1015 daily requests returned data. Full dataset not recoverable from free API."
+  },
+  "anchor_prices": [
+    {
+      "date": "2021-10-21",
+      "price": 6.0105
+    },
+    {
+      "date": "2022-02-09",
+      "price": 4.5724
+    },
+    {
+      "date": "2022-10-01",
+      "price": 1.5812
+    },
+    {
+      "date": "2023-10-01",
+      "price": 0.3436
+    }
+  ]
+}
