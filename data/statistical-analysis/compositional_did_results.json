@@ -1,0 +1,28 @@
+{
+  "method": "Compositional DiD: P(renewable) as framework-free outcome",
+  "panel_size": 1895,
+  "n_bct": 1187,
+  "n_nct": 708,
+  "n_clusters": 349,
+  "compositional_did": {
+    "beta_intercept": -0.0,
+    "beta_bct": 0.6944,
+    "beta_post_terra": 0.0,
+    "beta_interaction": 0.2726,
+    "se_interaction": 0.0445,
+    "t_interaction": 6.12,
+    "p_interaction": 0.0
+  },
+  "quality_did_comparison": {
+    "beta_interaction": -7.3287,
+    "se_interaction": 2.4971,
+    "p_interaction": 0.003558
+  },
+  "permutation_p": 0.0,
+  "descriptive": {
+    "bct_pre_terra_renewable": 0.694,
+    "bct_post_terra_renewable": 0.967,
+    "nct_pre_terra_renewable": 0.0,
+    "nct_post_terra_renewable": 0.0
+  }
+}
