@@ -35,7 +35,7 @@ Conversely, REDD+ is under-represented at {{selection.redd_underrepresentation}}
 
 ### 2.3 Price-quality feedback loop: composition predicts price collapse
 
-The preceding sections establish *what* BCT contained and that its composition reflects selection. The critical question --- flagged by all three reviewers of an earlier draft --- is whether quality composition is connected to BCT's price trajectory.
+The preceding sections establish *what* BCT contained and that its composition reflects selection. The critical question is whether quality composition is connected to BCT's price trajectory.
 
 We obtained daily BCT-USDC prices from DeFi Llama (828 daily observations, October 2021 -- July 2024) and merged with daily cumulative quality metrics computed from the deposit stream ($n$ = 331 overlapping days).
 
@@ -80,7 +80,7 @@ Among the 399 wallets that both deposited and redeemed (the 1.4% overlap populat
 
 ### 2.5 Quality atlas and quality gating
 
-The VCM exhibits a 10-fold quality range (Fig. 4): PQD from {{quality.quality_atlas_pqd_min}} (DACCS) to {{quality.quality_atlas_pqd_max}} (grid-connected renewables). BCT's PQD of {{quality.bct_pqd}} sits at the bottom. A within-pool permutation test ($z$ = $-$0.64, $p$ = 0.27) finds no evidence that depositors selected the worst tokens *within* the eligible universe --- the universe itself was uniformly low-quality (mean {{within_pool.mean_quality}}), so no within-pool selection was needed. A vintage gradient (pre-2020 PQD 0.687, 2024+ PQD 0.273) confirms the quality problem is concentrated in legacy credits. A BBB quality gate would have reduced BCT's PQD from {{quality.bct_pqd}} to {{quality.bbb_gate_pqd}}; the Toucan CHAR pool (biochar allowlist, PQD {{quality.char_pqd}}) demonstrates that category restriction prevents quality collapse^9^.
+The VCM exhibits a 10-fold quality range (Fig. 4): PQD from {{quality.quality_atlas_pqd_min}} (DACCS) to {{quality.quality_atlas_pqd_max}} (grid-connected renewables). BCT's PQD of {{quality.bct_pqd}} sits at the bottom. A within-pool permutation test ($z$ = $-$0.64, $p$ = 0.27) finds no evidence that depositors selected the worst tokens *within* the eligible universe --- the universe itself was uniformly low-quality (mean {{within_pool.mean_quality}}), so no within-pool selection was needed. A vintage gradient (pre-2020 PQD 0.687, 2024+ PQD 0.273) confirms the quality problem is concentrated in legacy credits. A BBB quality gate would have reduced BCT's PQD from {{quality.bct_pqd}} to {{quality.bbb_gate_pqd}}; the Toucan CHAR pool (biochar allowlist, PQD {{quality.char_pqd}}) exhibits substantially better quality outcomes under category restriction^9^.
 
 
 ### 2.6 Temporal dynamics and robustness
@@ -116,4 +116,4 @@ The monotonic grade-redemption pattern (B {{predictive_stranding.b_grade_redempt
 
 **Framework independence.** The paper's core findings --- BCT's actual composition (Section 2.1), base-rate over-selection (Section 2.2), the redemption-side extraction pattern (Section 2.3), the within-token cross-pool comparison (Section 2.6), and the compositional DiD (Section 2.6) --- are all based on on-chain transaction data and Verra registry credit-type classifications. None of these results depend on the quality scoring framework. The framework provides an additional continuous measure that enables quality-volume tradeoff analysis and PQD comparisons across pools (Sections 2.5, 2.8), but removing it entirely would not alter the paper's main conclusions.
 
-The bottom line: 9.6 million tonnes of B-grade credits --- 63% of everything deposited into BCT --- remain unredeemed. They are the world's largest on-chain carbon graveyard: too low-quality to attract a buyer at any price, yet immutably recorded as "carbon offsets."
+The bottom line: 9.6 million tonnes of B-grade credits --- 63% of everything deposited into BCT --- remain unredeemed. They constitute one of the largest on-chain carbon graveyards: too low-quality to attract a buyer at any price, yet immutably recorded as "carbon offsets."

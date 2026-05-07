@@ -120,11 +120,11 @@ Tonnage deposited, tonnage redeemed, redemption rate (%), and net remaining tonn
 
 25. Schneider, L., Lazarus, M. & Kollmuss, A. Industrial N2O projects under the CDM: adipic acid --- a case of carbon leakage? Stockholm Environment Institute Working Paper 2010-01 (2010).
 
-24. Fleiss, J. L. Measuring nominal scale agreement among many raters. *Psychol. Bull.* **76**, 378--382 (1971).
-
-25. Shrout, P. E. & Fleiss, J. L. Intraclass correlations: uses in assessing rater reliability. *Psychol. Bull.* **86**, 420--428 (1979).
-
 26. West, T. A. P. et al. Demystifying the romanticized narratives about carbon credits from voluntary forest conservation. *Glob. Change Biol.* **31**, e70527 (2025).
+
+27. Fleiss, J. L. Measuring nominal scale agreement among many raters. *Psychol. Bull.* **76**, 378--382 (1971).
+
+28. Shrout, P. E. & Fleiss, J. L. Intraclass correlations: uses in assessing rater reliability. *Psychol. Bull.* **86**, 420--428 (1979).
 
 27. Haya, B. K. et al. Quality assessment of REDD+ carbon credit projects. Berkeley Carbon Trading Project, University of California, Berkeley (2023).
 
