@@ -1,12 +1,12 @@
-# On-chain forensics reveal who profited from the first tokenized carbon collapse
+# Adverse selection in tokenized carbon markets: who profited from the first pool collapse
 
 ## 1. Introduction
 
-The collapse of Toucan Protocol's Base Carbon Tonne (BCT) pool --- from approximately $7 per token in late 2021 to below $0.50 by mid-2023 --- has been widely attributed to low-quality REDD+ credits flooding the pool. This narrative pervades industry post-mortems, Toucan's own pool redesign decisions (creating NCT specifically for nature-based credits), and informal commentary across the tokenized carbon ecosystem^16,17,18^. The broader academic literature on VCM quality^2,3,4^ has reinforced concern about REDD+ crediting problems, providing a plausible frame that commentators applied to BCT without examining what the pool actually contained. The on-chain composition --- the specific credits deposited by specific addresses via specific transactions on the Polygon blockchain --- is public, immutable, and trivially queryable. Yet the academic literature on BCT's collapse has relied exclusively on aggregate market data rather than on the credit-level composition data that the blockchain was designed to make transparent^5,6,16^.
+The collapse of Toucan Protocol's Base Carbon Tonne (BCT) pool --- from approximately $7 per token in late 2021 to below $0.50 by mid-2023 --- has been widely attributed to low-quality REDD+ credits flooding the pool. This narrative pervades industry post-mortems, Toucan's own pool redesign decisions (creating NCT specifically for nature-based credits), and informal commentary across the tokenized carbon ecosystem^16,17,18^. The broader academic literature on VCM quality^2,3,4^ has reinforced concern about REDD+ crediting problems, providing a plausible frame that commentators applied to BCT without examining what the pool actually contained. The credit-level composition --- which specific credits were deposited, by whom, and in what sequence --- is recorded in a public transaction ledger and is trivially queryable (see Methods). Yet the academic literature on BCT's collapse has relied exclusively on aggregate market data rather than on this granular composition data^5,6,16^.
 
-Here we analyse every deposit, every redemption, and every wallet address across BCT's entire operating history: {{composition.n_deposits}} deposits, {{redemption.n_transfer_events}} redemptions, 161 unique credit tokens, {{selection.n_wallets}} depositor wallets, {{redemption.n_unique_redeemers}} redeemer wallets.
+Here we analyse every deposit, every redemption, and every market participant across BCT's entire operating history: {{composition.n_deposits}} deposits, {{redemption.n_transfer_events}} redemptions, 161 unique credit tokens, {{selection.n_wallets}} depositor accounts, {{redemption.n_unique_redeemers}} redeemer accounts.
 
-**The prevailing narrative is wrong.** BCT was {{composition.renewable_pct_tonnes}}% renewable energy credits --- CDM-era Chinese wind farms and Indian solar projects with near-zero additionality --- and just 4.2% REDD+. **Five wallets extracted 1.55 million tonnes of high-demand credits while 9.6 million tonnes of low-quality renewables remain stranded on-chain** --- the world's largest on-chain carbon graveyard. **The pool's design enabled this outcome without any strategic misconduct**: uniform pricing of quality-heterogeneous assets under voluntary participation was sufficient, even though quality metadata was publicly observable throughout.
+**The prevailing narrative is wrong.** BCT was {{composition.renewable_pct_tonnes}}% renewable energy credits --- CDM-era Chinese wind farms and Indian solar projects with near-zero additionality --- and just 4.2% REDD+. **Five accounts extracted 1.55 million tonnes of high-demand credits while 9.6 million tonnes of low-quality renewables remain permanently stranded in the pool** --- the largest documented carbon credit graveyard. **The pool's design enabled this outcome without any strategic misconduct**: uniform pricing of quality-heterogeneous assets under voluntary participation was sufficient, even though quality metadata was publicly observable throughout.
 
 Three findings are new: (i) BCT's actual composition, which directly falsifies the REDD+ narrative; (ii) the complete value chain --- who extracted, how much they profited (\$4--8 million), and where the credits went (39% to cross-pool arbitrage, 35% to immediate retirement); and (iii) a within-token cross-pool comparison showing that the same credits were 100% redeemed from BCT but only 28.5% redeemed from NCT --- demonstrating that pool design, not credit quality, determines asset fate. For the \$10 billion tokenized real-world asset sector, the implication is direct: transparency is necessary but not sufficient for market function.
 
@@ -15,7 +15,7 @@ Three findings are new: (i) BCT's actual composition, which directly falsifies t
 
 ### 2.1 BCT's real composition contradicts the REDD+ narrative
 
-We queried the Polygon blockchain for all {{composition.n_deposits}} deposit transactions to the BCT pool contract, covering {{composition.n_projects}} unique Verra VCS projects and approximately 22 million tonnes of tokenized carbon credits (see Methods for data collection).
+We extracted all {{composition.n_deposits}} deposit records from BCT's public transaction ledger, covering {{composition.n_projects}} unique Verra VCS projects and approximately 22 million tonnes of tokenized carbon credits (see Methods for data collection).
 
 The composition was overwhelmingly dominated by renewable energy credits (Fig. 1): {{composition.renewable_pct_tonnes}}% of total deposited tonnage consisted of grid-connected wind, hydro, and solar projects from China and India, registered between 2008 and 2013. These are precisely the CDM-era project categories that the ICVCM has declined to approve for its Core Carbon Principles label, and that Cames et al.^24^ and Schneider et al.^25^ have documented as having near-zero additionality --- the projects would have been built regardless of carbon revenue.
 
@@ -37,7 +37,7 @@ Conversely, REDD+ is under-represented at {{selection.redd_underrepresentation}}
 
 The preceding sections establish *what* BCT contained and that its composition reflects selection. The critical question is whether quality composition is connected to BCT's price trajectory.
 
-We obtained daily BCT-USDC prices from DeFi Llama (828 daily observations, October 2021 -- July 2024) and merged with daily cumulative quality metrics computed from the deposit stream ($n$ = 331 overlapping days).
+We obtained daily BCT prices in US-dollar terms (828 daily observations, October 2021 -- July 2024; see Methods for data sources) and merged with daily cumulative quality metrics computed from the deposit stream ($n$ = 331 overlapping days).
 
 **Correlation.** BCT's price and cumulative PQD are strongly correlated (Pearson $r$ = {{price_quality.pearson_r}}, $p$ <10^-66): as the pool's quality declined, its price declined proportionally. In a first-differenced OLS regression (the credible specification for non-stationary series), changes in renewable share predict price changes ($\beta$ = $-$1.8, $p$ <0.001): each percentage-point increase in the renewable share of deposits is associated with a \$1.80 decrease in BCT's price.
 
@@ -47,14 +47,14 @@ We obtained daily BCT-USDC prices from DeFi Llama (828 daily observations, Octob
 
 The exit followed a type-level Gresham sequence (Fig. 7b): the most valuable credit types were extracted first. ARR credits exited earliest (median March 2022), followed by industrial gas (July), IFM (October), REDD+ (November), and renewable energy last (December) --- perfectly ordered by off-chain market demand ($\rho$ = $-$0.74, $n$ = 7 types). Before the Terra/LUNA crash (May 2022), redemptions were dominated by high-value credits (tonnage-weighted quality 42.0); afterwards, quality dropped to 32.4 --- a 10-point gap reflecting selective exit while BCT's price still exceeded the off-chain value of premium credits.
 
-Depositors and redeemers are almost entirely distinct populations: only 1.4% of the {{redemption.n_unique_redeemers}} redeemer addresses also appear among the {{selection.n_wallets}} depositor wallets. The top 10 redeemers account for {{redemption.redeemer_top10_share}}% of extracted tonnage, and their transactions occurred in rapid automated bursts (median gap 4.6 seconds between events), consistent with programmatic rather than manual execution.
+Depositors and redeemers are almost entirely distinct populations: only 1.4% of the {{redemption.n_unique_redeemers}} redeemer accounts also appear among the {{selection.n_wallets}} depositor accounts. The top 10 redeemers account for {{redemption.redeemer_top10_share}}% of extracted tonnage, and their transactions occurred in rapid automated bursts (median gap 4.6 seconds between events), consistent with programmatic rather than manual execution.
 
 This dual-margin structure --- passive, architecture-driven entry on one side; active, strategic extraction on the other --- is not predicted by standard adverse selection models, which typically assume a single population. The 99.6% tonnage pass-through shows that entry was indiscriminate; the type-specialist extraction shows that exit was deliberate. Two independent populations exploited different margins of the same mechanism.
 
 
 ### 2.4 Wallet forensics: who extracted and what they took
 
-The {{redemption.n_unique_redeemers}} unique redeemer wallets are not a uniform population. Wallet-level analysis of the 161 scored tokens' complete transfer histories reveals a forensic pattern: the largest redeemers are type-specialist extractors who never participated in the deposit side.
+The {{redemption.n_unique_redeemers}} unique redeemer accounts are not a uniform population. Account-level analysis of the 161 scored tokens' complete transfer histories reveals a forensic pattern: the largest redeemers are type-specialist extractors who never participated in the deposit side.
 
 **Table 2. Top 5 redeemers by tonnage.**
 
@@ -68,15 +68,15 @@ The {{redemption.n_unique_redeemers}} unique redeemer wallets are not a uniform 
 
 These five wallets extracted 1.55 million tonnes --- representing virtually all of the industrial gas (100%), the majority of REDD+ (37%), and a substantial fraction of ARR (45%) that had been deposited into BCT. At contemporaneous off-chain credit prices, the extracted credits were worth approximately \$8--13 million while the BCT redemption cost was approximately \$4--5 million, yielding an estimated profit of \$4--8 million across the five wallets (see Methods for price assumptions). Fifteen of the twenty largest redeemers never deposited anything; each targeted a single credit type. This is not random redemption but type-targeted extraction by actors who entered the pool solely to capture the price differential between BCT's uniform pool price and the higher off-chain value of specific credit types.
 
-**Where did the extracted credits go?** Tracing the immediate on-chain destination of each redeemed token across all 20 top wallets (2.57 million tonnes), three pathways emerged:
+**Where did the extracted credits go?** Tracing the immediate destination of each redeemed credit across the 20 largest extractors (2.57 million tonnes), three pathways emerged:
 
 - **Cross-pool arbitrage (39.2%)**: deposited into Toucan's NCT pool, exploiting the price differential between BCT's uniform pricing and NCT's nature-based premium.
-- **Immediate retirement (34.6%)**: burned on-chain within seconds of extraction, indicating pre-arranged retirement pipelines. The largest extractor (0x65a5..., 651,334 tonnes of industrial gas) burned 100% of its credits in the same transaction as the redemption.
+- **Immediate retirement (34.6%)**: permanently retired within seconds of extraction, indicating pre-arranged retirement pipelines. The largest extractor (0x65a5..., 651,334 tonnes of industrial gas) retired 100% of its credits in the same transaction as the redemption.
 - **Secondary market (17.0%)**: transferred to other addresses, with 6.9% re-deposited into BCT and 2.3% still held.
 
 The BCT-to-NCT arbitrage was not opportunistic --- it was a systematic pipeline. Of 31 tokens deposited into both BCT and NCT, 14 were redeemed from BCT, and all 14 satisfy the temporal sequence: BCT deposit $\rightarrow$ BCT redemption $\rightarrow$ NCT deposit (median: 103 days in BCT, then 14 days to NCT). Not a single token violated this ordering.
 
-Among the 399 wallets that both deposited and redeemed (the 1.4% overlap population), quality swap analysis reveals no systematic quality arbitrage: the mean quality differential is $-$0.08 (effectively zero; tonnage-weighted: +3.4, driven by a few large wallets). The dual-margin mechanism operates through two distinct wallet populations --- depositors who feed the pool with what the bridge produces, and extractors who take out what the off-chain market demands --- connected only by the pool's uniform pricing. We note that wallet-level separation does not establish entity-level independence: a single entity could operate separate deposit and redemption wallets.
+Among the 399 wallets that both deposited and redeemed (the 1.4% overlap population), quality swap analysis reveals no systematic quality arbitrage: the mean quality differential is $-$0.08 (effectively zero; tonnage-weighted: +3.4, driven by a few large wallets). The dual-margin mechanism operates through two distinct wallet populations --- depositors who feed the pool with what the bridge produces, and extractors who take out what the off-chain market demands --- connected only by the pool's uniform pricing. We note that wallet-level separation does not establish entity-level independence: a single entity could operate separate deposit and redemption accounts.
 
 ### 2.5 Quality atlas and quality gating
 
