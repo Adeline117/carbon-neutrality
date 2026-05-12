@@ -30,3 +30,11 @@ data/satellite-analysis/west2023_data/shapefiles/
 
 # Hansen pixel matching cache (~72 MB; re-downloads from public COGs).
 data/satellite-analysis/cache/hansen/*.npz
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
