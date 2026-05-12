@@ -1,0 +1,220 @@
+\documentclass{nature}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{Adverse selection in tokenized carbon markets: who profited from the first pool collapse}
+
+\author{Adeline Wen$^{1}$}
+
+\begin{document}
+
+\maketitle
+
+\begin{affiliations}
+\item Affiliation, City, Country
+\end{affiliations}
+
+\begin{abstract}
+Carbon markets are central to global climate policy, yet the quality of carbon credits varies widely and mechanisms for preventing low-quality credits from dominating trade remain poorly understood. When credits of different quality are sold at a single price, economic theory predicts that low-quality assets will drive out high-quality ones, but empirical evidence for this dynamic in carbon markets has been lacking. Here, we show that the collapse of the largest pooled carbon credit market (22 million tonnes) was driven by renewable energy credits with near-zero climate benefit (69.1\% of pool content), not forest-based credits (4.2\%) as widely claimed. Analysing all 1187 deposits, 35432 withdrawals, and 28,897 participant accounts, we find that two nearly separate populations (1.4\% overlap) operated on opposite sides of the market: sellers deposited credits indiscriminately, while a small group of informed buyers selectively extracted the credits that retained value elsewhere. Five accounts extracted 1.55 million tonnes; 9.6 million tonnes of low-quality credits remain permanently stranded. Comparison with a quality-screened pool confirms that market design, not credit type, determined asset fate, demonstrating that uniform pricing of heterogeneous carbon credits produces systematic quality collapse even when quality differences are publicly observable.
+\end{abstract}
+
+\section*{Introduction}
+
+Carbon markets are central to global climate policy, channelling billions of dollars toward emission reduction projects worldwide. Yet these markets function only if participants can distinguish high-quality credits (those representing real, additional emission reductions) from low-quality ones. When they cannot, or when market design fails to price quality differences, the resulting adverse selection can undermine an entire market segment\textsuperscript{5,29}. The voluntary carbon market (VCM), valued at over \$2 billion annually, faces exactly this challenge: credits vary enormously in environmental integrity, and recent empirical work estimates that fewer than 16\% of credits from investigated projects represent genuine emission reductions\textsuperscript{2}, with at least 52\% of Indian wind offsets allocated to non-additional projects\textsuperscript{46}.
+
+Blockchain-based tokenization promised to solve this problem through radical transparency. By recording every transaction on a public ledger, tokenized carbon pools would, in theory, allow any participant to verify credit quality before trading. The first and largest such experiment was Toucan Protocol's Base Carbon Tonne (BCT) pool, a smart contract on the Polygon blockchain that accepted verified carbon credits from the Verra registry and issued fungible tokens at a uniform price regardless of underlying credit quality. BCT's price collapsed from approximately \$7 per token in late 2021 to below \$0.50 by mid-2023. Industry commentary and academic analyses attributed this collapse to low-quality forestry credits (specifically REDD+, Reducing Emissions from Deforestation and Forest Degradation) flooding the pool\textsuperscript{5,6,16,17,18}. This narrative drew support from the broader literature documenting REDD+ crediting problems\textsuperscript{2,3,4} but was never tested against the pool's actual credit-level composition data, which are publicly recorded and trivially queryable.
+
+Here, we analyse every deposit (1187), every redemption (35432), every credit token (161), and every market participant (509 depositors, 28897 redeemers) across BCT's entire operating history. The data contradict the prevailing narrative. BCT was 69.1\% renewable energy credits (wind and solar projects with near-zero additionality) and just 4.2\% REDD+. Five accounts extracted 1.55 million tonnes of high-demand credits at an estimated profit of \$4--8 million, while 9.6 million tonnes of low-quality renewables remain permanently stranded, to our knowledge the largest documented carbon credit graveyard. A within-token cross-pool comparison reveals that identical credits were 100\% redeemed from BCT but only 28.5\% redeemed from a quality-gated pool, suggesting that pool design rather than credit quality is the primary determinant of asset fate. We term this outcome \textit{design-enabled adverse selection}: a variant of Akerlof's (1970) lemons problem in which quality information is publicly observable but not priced, so that uniform pricing of heterogeneous assets under voluntary participation is sufficient to produce market failure. For the \$10 billion tokenized real-world asset sector, the implication is direct: transparency without price differentiation is not sufficient for market function.
+
+\section*{Results}
+
+\#\#\# BCT's real composition contradicts the REDD+ narrative
+
+We extracted all 1187 deposit records from BCT's public transaction ledger, covering 168 unique Verra VCS projects and approximately 22 million tonnes of tokenized carbon credits (see Methods for data collection).
+
+The composition was overwhelmingly dominated by renewable energy credits (Fig. 1): 69.1\% of total deposited tonnage consisted of grid-connected wind, hydro, and solar projects from China and India, registered between 2008 and 2013. These are precisely the CDM-era project categories that the ICVCM has declined to approve for its Core Carbon Principles label, and that multiple independent studies have documented as having near-zero additionality: Cames et al.\textsuperscript{24} and Schneider et al.\textsuperscript{25} in programme-level assessments, Probst et al.\textsuperscript{2} in a meta-analysis finding no statistically significant emission reductions from wind power CDM projects, and Calel et al.\textsuperscript{46} in a project-level study estimating 52\% non-additionality among Indian wind offsets. The projects would have been built regardless of carbon revenue. An independent satellite-based verification of 28 Indian CDM renewable energy projects in the BCT pool confirms this assessment: comparing CDM-claimed emission factors against Ember's observed grid emission factors for the same vintage years reveals a mean overclaim of 26.5\% (range 23.6--28.8\%), with aggregate claimed emissions of 3.39 million tCO$_2$ versus 2.70 million tCO$_2$ consistent with observed grid data (see Supplementary Methods). Additionally, Sentinel-5P TROPOMI methane column analysis of 9 BCT waste/methane projects found 5 of 9 (56\%) inconsistent with claimed emission reductions, with no project showing satellite-confirmed methane reduction at the claimed magnitude.
+
+REDD+ credits, widely blamed for BCT's collapse, constituted just 4.2\% of the pool, more than 16 times smaller than the renewable share. Even combining all nature-based categories (REDD+, ARR, IFM), the total is approximately 10\% versus 69.1\% for renewables alone.
+
+
+\#\#\# Base-rate selection: BCT over-selected renewables at 1.87$\times$ the registry rate
+
+BCT's renewable dominance could, in principle, reflect the shape of the VCS-eligible universe. We obtained Verra VCS issuance data from MSCI (2023) and Ecosystem Marketplace (2023) indicating that renewable energy credits constitute approximately 37\% of total VCS issuance by volume (sensitivity range 26--48\% depending on vintage window).
+
+BCT's renewable share (69.1\% by tonnage; 78.5\% by deposit count) yields a selection coefficient of 1.87$\times$ the VCS base rate. Because deposits are clustered by account (509 accounts, Gini = 0.94, effective $N$ = 83.5 by HHI), we use account-clustered inference rather than a naive binomial test. An account-level permutation test (10,000 iterations, resampling accounts with their full deposit portfolios under the null $P(\text{renewable})$ = 0.37) produces $p$ <0.0001; 89.0\% of accounts have majority-renewable portfolios. The selection coefficient with account-level bootstrap 95\% CI is 0.522 [0.496, 0.547] (excess renewable share above the 37\% null). Under conservative base-rate assumptions (post-2008 VCS at 55\%), the selection coefficient remains 1.43$\times$ ($p$ <10^-64). Over-selection becomes non-significant only at base rates exceeding 78.5\%, an implausible assumption.
+
+Conversely, REDD+ is under-represented at 0.2$\times$ the VCS base rate (BCT 4.2\% vs. VCS $\sim$17\%), directly contradicting the narrative that REDD+ credits overwhelmed the pool.
+
+\textbf{Bridge-level decomposition.} Enumerating all TCO2 tokens created by Toucan's factory contract reveals 369 unique tokens bridged before 2023, of which 345 (93.5\%) were deposited into BCT. Only 24 bridged tokens never entered the pool. By tonnage, the pass-through is even more extreme: BCT absorbed 21.98 million of 22.07 million bridged tonnes (99.6\%), with the 24 non-BCT tokens holding a combined 86,683 tonnes (0.4\%). This near-complete pass-through indicates that the 1.87$\times$ over-selection relative to the VCS base rate is primarily a bridge-level phenomenon (Toucan's permissionless bridge disproportionately attracted renewable energy credits from Verra) rather than depositors selectively choosing renewables from a diverse bridged universe. Pool-level selection space was essentially zero.
+
+
+\#\#\# Price-quality feedback loop: composition predicts price collapse
+
+The preceding sections establish \textit{what} BCT contained and that its composition reflects selection. The critical question is whether quality composition is connected to BCT's price trajectory.
+
+We obtained daily BCT prices in US-dollar terms (828 daily observations, October 2021 -- July 2024; see Methods for data sources) and merged with daily cumulative quality metrics computed from the deposit stream ($n$ = 331 overlapping days).
+
+\textbf{Correlation.} BCT's price and cumulative PQD are strongly correlated (Pearson $r$ = 0.774, $p$ <10^-66): as the pool's quality declined, its price declined proportionally. In a first-differenced OLS regression (the credible specification for non-stationary series), changes in renewable share predict price changes ($\beta$ = $-$1.8, $p$ <0.001): each percentage-point increase in the renewable share of deposits is associated with a \$1.80 decrease in BCT's price.
+
+\textbf{Granger causality.} At weekly frequency ($n$ = 55), we find asymmetric bidirectional Granger causality (Fig. 5). The dominant channel is price-to-quality: price changes precede quality changes ($F$ = 16.08, $p$ <10^-5 at lag 1--2), consistent with the hypothesis that lower prices attracted lower-quality deposits. The reverse channel (quality composition changes preceding price movements) is significant but 2.5$\times$ weaker ($F$ = 6.32, $p$ = 0.004). This asymmetry is consistent with the design-enabled framing: the pool's architecture established the initial quality composition (Section 2.2), which set a price level that then became the dominant driver of further quality deterioration. The architecture initiated the collapse; the market's price discovery amplified it. We note the small sample ($n$ = 55 weeks) limits statistical power for Granger tests, and the first-differenced daily regression ($n$ = 330, $\beta$ = $-$1.8, $p$ <0.001) provides a more powerful confirmation that quality and price co-move at the expected sign.
+
+\textbf{Redemption-side evidence.} Analysis of 35432 Transfer events from the BCT pool contract reveals that the selection dynamic operated on both sides. Non-renewable credits were preferentially redeemed out of the pool (Table 4): industrial gas 100\% redeemed, REDD+ 99.8\%, IFM 93.0\%, ARR 91.3\%, compared with just 3.6\% of renewable credits. The tonnage-weighted mean quality of redeemed credits (38.7) exceeded that of deposited credits (31.7) by 7 points. The type-level redemption differentials (3.6\% vs. 91--100\%) are self-evidently large and do not require a formal significance test. As a result, BCT's net renewable share increased from 71\% to 76\% over the pool's lifetime.
+
+The exit followed a type-level Gresham sequence (Fig. 5b): the most valuable credit types were extracted first. ARR credits exited earliest (median March 2022), followed by industrial gas (July), IFM (October), REDD+ (November), and renewable energy last (December), perfectly ordered by off-chain market demand ($\rho$ = $-$0.74, $n$ = 7 types). Before the May 2022 market crash, redemptions were dominated by high-value credits (tonnage-weighted quality 42.0); afterwards, quality dropped to 32.4, a 10-point gap reflecting selective exit while BCT's price still exceeded the off-chain value of premium credits.
+
+Depositors and redeemers are almost entirely distinct populations: only 1.4\% of the 28897 redeemer accounts also appear among the 509 depositor accounts. The top 10 redeemers account for 85.0\% of extracted tonnage, and their transactions occurred in rapid automated bursts (median gap 4.6 seconds between events), consistent with programmatic rather than manual execution.
+
+This dual-margin structure (passive, architecture-driven entry on one side; active, strategic extraction on the other) is not predicted by standard adverse selection models, which typically assume a single population. The 99.6\% tonnage pass-through shows that entry was indiscriminate; the type-specialist extraction shows that exit was deliberate. Two independent populations exploited different margins of the same mechanism.
+
+
+\#\#\# Account forensics: who extracted and what they took
+
+The 28897 unique redeemer accounts are not a uniform population. Account-level analysis of the 161 scored tokens' complete transfer histories reveals a forensic pattern: the largest redeemers are type-specialist extractors who never participated in the deposit side.
+
+\textbf{Table 2. Top 5 redeemers by tonnage.}
+
+\begin{tabular}{lllll}
+\hline
+Account & Tonnes redeemed & Dominant type & Mean quality & Also depositor? \\
+\hline
+0x65a5... & 651,334 & Industrial gas & 30.9 & No \\
+0x1b8e... & 335,556 & IFM & 40.0 & Yes \\
+0xee4b... & 195,051 & REDD+ & 31.4 & No \\
+0x4b3e... & 188,205 & ARR & 50.4 & No \\
+0x8556... & 183,629 & ARR & 46.0 & No \\
+\hline
+\end{tabular}
+These five accounts extracted 1.55 million tonnes, representing the vast majority of redeemed industrial gas, the majority of REDD+ (37\%), and a substantial fraction of ARR (45\%) that had been deposited into BCT. At contemporaneous off-chain credit prices, the extracted credits were worth approximately \$8--13 million at contemporaneous off-chain prices while the BCT redemption cost was approximately \$4--5 million, yielding an estimated profit of \$3--9 million across the five accounts (central estimate \$4--8 million) (see Methods for price assumptions). Fifteen of the twenty largest redeemers never deposited anything; each targeted a single credit type. This is not random redemption but type-targeted extraction by actors who entered the pool solely to capture the price differential between BCT's uniform pool price and the higher off-chain value of specific credit types.
+
+\textbf{Where did the extracted credits go?} Tracing the immediate destination of each redeemed credit across the 20 largest extractors (2.57 million tonnes), three pathways emerged:
+
+\begin{itemize}
+\item \textbf{Cross-pool arbitrage (39.2\%)}: deposited into Toucan's NCT pool, exploiting the price differential between BCT's uniform pricing and NCT's nature-based premium.
+\item \textbf{Immediate retirement (34.6\%)}: permanently retired within seconds of extraction, indicating pre-arranged retirement pipelines. The largest extractor (0x65a5..., 651,334 tonnes of industrial gas) retired 100\% of its credits in the same transaction as the redemption.
+\item \textbf{Secondary market (17.0\%)}: transferred to other addresses, with 6.9\% re-deposited into BCT and 2.3\% still held.
+\end{itemize}
+
+The BCT-to-NCT arbitrage was not opportunistic; it was a systematic pipeline. Of 31 tokens deposited into both BCT and NCT, 14 were redeemed from BCT, and all 14 satisfy the temporal sequence: BCT deposit $\rightarrow$ BCT redemption $\rightarrow$ NCT deposit (median: 103 days in BCT, then 14 days to NCT). Not a single token violated this ordering.
+
+Among the 399 accounts that both deposited and redeemed (the 1.4\% overlap population), quality swap analysis reveals no systematic quality arbitrage: the mean quality differential is $-$0.08 (effectively zero; tonnage-weighted: +3.4, driven by a few large accounts). The dual-margin mechanism operates through two distinct account populations (depositors who feed the pool with what the bridge produces, and extractors who take out what the off-chain market demands) connected only by the pool's uniform pricing. We note that account-level separation does not establish entity-level independence: a single entity could operate separate deposit and redemption accounts.
+
+\#\#\# Quality atlas and quality gating
+
+BCT's PQD of 0.679 places it at the bottom of the VCM quality spectrum, which spans a 10-fold range from 0.076 (DACCS) to 0.759 (grid-connected renewables) (Fig. 3). A within-pool permutation test ($z$ = $-$0.64, $p$ = 0.27) finds no evidence of within-pool selection bias; the eligible universe was uniformly low-quality. A BBB quality gate would have reduced BCT's PQD to 0.405 (Fig. 6); the Toucan CHAR pool (biochar allowlist, PQD 0.221) demonstrates that category restriction prevents quality collapse (Supplementary Fig. 2).
+
+
+\#\#\# Temporal dynamics and robustness
+
+\textbf{Temporal quality decline is a vintage-composition effect.} Deposit quality declines over BCT's operating life (Spearman $\rho$ = -0.24, $n$ = 1187, permutation $p$ < 0.0001). However, this apparent decline is entirely driven by the vintage-year component of the composite score. When the vintage dimension is excluded, the temporal trend reverses sign ($\rho$ = +0.24 for renewables; $\rho$ = $-$0.01 for all types; Supplementary Table 2). Late deposits drew from progressively older vintages, not intrinsically worse credits within vintage. This is consistent with the design-enabled framing: the architecture attracted credit categories (CDM-era renewables) that inherently carried older vintages, but within those categories, later deposits were not of lower quality than earlier ones.
+
+\textbf{Exogenous market shock.} The May 2022 cryptocurrency market crash (see Methods) provides deposit-side evidence consistent with a causal channel. Pre-shock deposits ($n$ = 491, mean quality 32.9) versus post-shock deposits ($n$ = 87, mean quality 29.5) show a 3.4-point quality drop (Cohen's $d$ = 0.58) accompanied by a 98\% volume collapse (14.9M to 281k tonnes). The temporal quality degradation tripled in slope ($\rho$ = $-$0.12 pre-shock versus $\rho$ = $-$0.36 post-shock). The exogenous price shock simultaneously accelerated quality deterioration and drove volume toward zero, consistent with the price-to-quality feedback channel identified in Section 2.3.
+
+\textbf{Compositional shift.} Renewable share rises from 67\% (Q1) to 99.5\% (Q4). Token diversity collapses from 24 distinct scores to 2. Higher-quality types (IFM, Waste/Methane, ARR) ceased depositing earlier (median blocks 20.4M--21.7M) than renewables (32.6M).
+
+\textbf{Depositor concentration.} Deposits were highly concentrated: 509 accounts participated, with the top 10 accounting for 50\% of tonnage (Gini = 0.94). Large and small depositors deposited similar-quality credits (rank-biserial $r$ = $-$0.17; the volume-weighted gap of 5 quality points does not survive permutation, $p$ = 0.082).
+
+\textbf{Same credit, different pool, different fate.} Fourteen tokens (1.50 million tonnes) were deposited into \textit{both} BCT and NCT, providing a within-token comparison that holds credit quality constant. The results are striking: in BCT (no quality gate), these nature-based tokens were \textbf{100\% redeemed}. In NCT (nature-based quality gate), the same tokens were only \textbf{28.5\% redeemed} (Fig. 4). The contrast is starkest for ARR credits: 100\% redeemed from BCT versus 0.0\% from NCT. An ARR credit that was a rare, undervalued asset in BCT's renewable-dominated pool became an ordinary constituent of NCT's nature-based pool, correctly priced and no longer worth selectively extracting. This pattern is consistent with pool design, rather than credit quality, being the primary determinant of whether these assets were extracted.
+
+\textbf{Difference-in-differences: BCT's composition diverges from NCT.} A deposit-level difference-in-differences (DiD) panel pooling all 1,895 deposit events (1,187 BCT + 708 NCT) tests whether BCT's trajectory diverged from NCT's after the May 2022 market crash. We report two specifications: a compositional DiD using binary credit type (renewable = 1) as the outcome, requiring no quality scoring at all, and a quality-score DiD using the composite quality score.
+
+The compositional DiD is the stronger result: BCT's renewable share rose from 69.4\% to 96.7\% after the shock, while NCT's remained at 0\% ($\hat{\beta}_3$ = +0.273, cluster-robust SE = 0.045, $t$ = +6.12, $p$ < 0.0001; permutation $p$ < 0.0001). We note that NCT mechanically cannot accept renewable credits, so the compositional divergence partly reflects eligibility rules rather than a pure treatment effect. The quality-score DiD, which uses a continuous outcome not mechanically constrained by eligibility, tells a consistent story: BCT quality fell 7.3 points more than NCT after the shock ($\hat{\beta}_3$ = $-$7.33, cluster-robust SE = 2.50, $t$ = $-$2.93, $p$ = 0.004; permutation $p$ < 0.0001; Bayesian $P$($\beta_3$ < 0) = 99.98\%). We interpret these results as suggestive rather than causally identified: BCT and NCT differ in eligibility rules, participant populations, and liquidity as well as quality-gate design, and the parallel trends assumption required for causal DiD interpretation cannot be formally tested. The quality-score result provides the more informative test because it is not mechanically determined by eligibility constraints.
+
+
+\#\#\# Market-revealed quality hierarchy
+
+A type-only prediction rule (classify credits in high-demand categories as redeemed and all others as stranded) achieves 96.9\% accuracy, 9.9 percentage points above a naive null model. The quality-grade rule (BBB+ as redeemed) achieves 91.9\%. Credit type captures the dominant axis of selective redemption; the quality framework does not add predictive power beyond type classification (Supplementary Table 1). The monotonic grade-redemption pattern (B 2.4\% $<$ BB 31.0.0\% $<$ BBB 78.0.0\%) reflects this: all BBB tokens are nature-based credits with strong off-chain demand, while B-grade tokens are CDM-era renewables with none. Within the 116 renewable tokens, neither vintage ($\rho$ = 0.112, $p$ = 0.23) nor quality grade ($p$ = 0.20) significantly predicts redemption.
+
+The paper's core findings (composition, base-rate over-selection, redemption-side extraction, within-token cross-pool comparison, and compositional DiD) are all based on transaction data and Verra credit-type classifications. None depend on the quality scoring framework, which provides an additional continuous measure for quality-volume tradeoff analysis but could be removed without altering the main conclusions.
+
+The bottom line: 9.6 million tonnes of B-grade credits (63\% of the 15.2 million tonnes covered by the 161-token scored analysis) remain unredeemed, constituting one of the largest carbon credit graveyards.
+
+\section*{Discussion}
+
+Uniform pricing of quality-heterogeneous carbon credits produces a Gresham dynamic that does not require private information. This is the central implication of BCT's collapse: classical adverse selection theory assumes buyers cannot observe quality, yet BCT's credit-level data were publicly available on both the Verra registry and the blockchain. Transparency alone did not prevent quality collapse. The mechanism we term design-enabled adverse selection operates through architecture rather than asymmetric information: wherever heterogeneous assets are pooled at a single price, low-quality units accumulate and high-quality units are selectively extracted, regardless of whether participants can observe the difference. This finding extends Akerlof's (1970) framework and provides the first credit-level empirical test of the lemons dynamics that Manshadi et al.\textsuperscript{5} model theoretically for the voluntary carbon market.
+
+The misattribution of BCT's collapse to REDD+ credits\textsuperscript{16,17,18}, plausible given evidence of REDD+ overcrediting\textsuperscript{2,4} but never verified against BCT's actual composition, illustrates how structural quality failures can hide in plain sight. CDM-era renewable energy credits, which constituted 69.1\% of BCT's tonnage, suffered from near-zero additionality because the underlying projects (predominantly grid-connected wind in China) were already economically competitive. Unlike REDD+ failures, which generate visible controversy over baselines and deforestation, the additionality failure of renewable energy credits is structurally invisible: the wind farms exist, the electricity is real. This distinction matters for policy: quality assurance frameworks that focus on high-profile failure modes may miss the categories that dominate pool composition.
+
+The welfare consequences are substantial. Nearly 10 million tonnes of nominally valid offsets remain permanently stranded at a 98.8\% illiquidity rate, representing a welfare gap of \$100--250 million (Monte Carlo median \$146M, 90\% CI \$68M--\$252M). Meanwhile, a small number of type-specialist accounts extracted \$4--8 million in realised profits by selectively redeeming the credits that off-chain markets still valued. Where Probst et al.\textsuperscript{2} and Calel et al.\textsuperscript{46} quantify overcrediting at the project level, we show how that overcrediting translates into participant-level extraction once credits enter a pooled market. Paradoxically, BCT's failure as a market functioned as an inadvertent quality filter, removing 9.6 million tonnes of low-quality credits from active circulation, a permanent illiquidity event no registry-level intervention has achieved.
+
+The mechanism generalizes beyond carbon and beyond blockchain. The underlying logic (Gresham's Law under uniform pricing) applies wherever heterogeneous assets are pooled, including registry-based VCM transactions where fungible credits of varying quality clear against undifferentiated compliance obligations\textsuperscript{29,43}. Cross-domain evidence supports this claim. Curve Finance's staked-ETH/ETH liquidity pool shifted by approximately \$762M toward the lower-quality asset during the May 2022 crash, with composition shifts 40 times baseline. Across 20 NFTX vaults (uniform-price pools of non-fungible tokens, an entirely different asset class), 12 of 20 show net redemption outflow (selective extraction of higher-value items), and the largest vault exhibits a minter-redeemer overlap rate of 1.3\%, near-identical to BCT's 1.4\%. Carbon credits, staking derivatives, and NFTs all exhibit the same dual-margin pattern under uniform pricing: chronic quality degradation, acute shock-driven compositional shifts, and steady-state cherry-picking, respectively. All three cases operate on blockchain infrastructure, and further evidence from traditional markets would strengthen the generalizability claim.
+
+These findings carry direct implications for emerging carbon market architecture. The Article 6.4 mechanism under the Paris Agreement is designing pooled crediting systems at sovereign scale; BCT provides a fully observable test case of what happens when quality differentiation is absent\textsuperscript{42,43}. Recovery from a low-type equilibrium requires discontinuous intervention: even a minimal quality floor (composite score $\geq$29) would have excluded the worst half of BCT's tonnage. Critically, gating must operate on both margins: exit-side extraction proved at least as damaging as entry-side quality loading. The same 14 nature-based tokens were 100\% redeemed from BCT but only 28.5\% from quality-gated NCT, confirming that pool design, not credit quality alone, determines asset fate. This cross-pool natural experiment is particularly informative because it holds the underlying asset constant: the same credits met radically different fates depending solely on whether the pool imposed quality screening. Our findings provide direct empirical support for the ICVCM's Core Carbon Principles framework\textsuperscript{8}, and the emerging ecosystem of quality-differentiation mechanisms (Singapore's carbon credit ratings mandate\textsuperscript{15}, blockchain-based credibility indices\textsuperscript{20}, and quality-gating protocols\textsuperscript{10}) must incorporate dual-margin design to be effective.
+
+Several limitations warrant acknowledgment. Our quality scores are author-derived, but the core findings (composition, base-rate selection, type-level redemption differentials, cross-pool comparison, and compositional DiD) rely on transaction data and Verra credit-type classifications rather than on our scoring framework. The framework is validated against CCP labels ($d$ = 1.8), commercial ratings ($\rho$ = +0.901, $n$ = 27; Supplementary Fig. 1), and an LLM panel ($\kappa$ = 0.6; Table 3), with removal-type sensitivity checks (see Supplementary Methods). The cross-pool comparison is observational; causal identification of pool-mechanism effects remains open. The bridge decomposition (93.5\% pass-through; 99.6\% by tonnage) establishes that entry-side selection was primarily architectural rather than strategic, consistent with the design-enabled framing.
+
+The tokenized real-world asset sector now exceeds \$10 billion and is replicating pool-based architecture across commodities, bonds, and receivables. BCT is the first pool to complete a full quality-collapse cycle with auditable transaction data. Its lesson is straightforward: quality-differentiated mechanism design is not an optional refinement for pooled carbon markets; it is a structural prerequisite for market integrity. As Article 6.4 negotiations move toward implementation and voluntary market infrastructure scales, the choice between uniform and quality-differentiated pricing will determine whether pooled crediting accelerates decarbonization or systematically allocates low-quality residuals to passive participants.
+
+\section*{Methods}
+
+\#\#\# Data collection
+
+We collected all deposit transactions to the Toucan Protocol BCT pool contract on the Polygon blockchain using a Polygon RPC endpoint. We identified 1187 deposit transactions spanning the period from BCT's launch in October 2021 to the effective cessation of new deposits in late 2022, mapping to 168 unique VCS project identifiers (345 unique TCO2 token addresses) and approximately 22 million tonnes of tokenized carbon credits. For each deposit, we recorded: transaction hash, block number and timestamp, depositor address, TCO2 token contract address, Verra VCS project identifier, vintage year, and tonnage. Project identifiers were cross-referenced against the Verra registry to obtain methodology category, country of origin, and CCP eligibility status.
+
+\textbf{Project classification.} Each project was classified into one of eleven methodology categories based on the Verra registry entry: renewable energy (grid-connected wind, hydro, solar; CDM methodologies AMS-I.D, ACM0002), fossil fuel switching, waste management and methane capture, REDD+ (VM0007, VM0009, VM0015), afforestation/reforestation (ARR), industrial gas destruction, improved forest management (IFM), energy efficiency, industrial processes, agriculture, and cookstoves. Pool-level composition statistics were computed with tonnage weighting.
+
+\textbf{NCT data.} We collected all 708 deposit events from the Toucan NCT pool on the same Polygon blockchain over the same block range. NCT restricts deposits to AFOLU credits with vintage $\geq$2012, functioning as a minimal quality gate on project type. NCT and BCT share identical protocol infrastructure and blockchain substrate.
+
+\textbf{Price data.} Daily BCT-USDC prices were obtained from the DeFi Llama API for the Polygon SushiSwap BCT-USDC pair (828 observations, October 2021 -- July 2024).
+
+\#\#\# Quality scoring framework
+
+We developed a composite quality scoring framework evaluating six active dimensions on a 0--100 scale: removal type hierarchy (weight 0.250), additionality (0.200), MRV grade (0.200), permanence (0.175), vintage year (0.100), and registry and methodology quality (0.075). Initial weights were derived from the Oxford Offsetting Principles\textsuperscript{11} and the ICVCM CCP Assessment Framework\textsuperscript{8}. A pilot Best-Worst Scaling expert panel ($n$ = 5) confirmed consistency with our weights (Spearman $\rho$ = +0.814). Monte Carlo perturbation (10,000 Dirichlet-sampled weight vectors) confirms 93.7\% grade stability. The composite was computed as $C = \sum_{i} w_i \times s_i$ and mapped to letter grades: AAA ($\geq$90), AA ($\geq$75), A ($\geq$60), BBB ($\geq$45), BB ($\geq$30), B (<30). Seven disqualifier conditions cap maximum grades regardless of composite score. Co-benefits was assigned zero weight to avoid amplifying adverse selection through co-benefit narratives\textsuperscript{6}. The Pool Quality Deficit (PQD = $1 - \bar{C}/100$) quantifies tonnage-weighted quality degradation per pool. Full scoring details, distributional scoring model, extended scoring procedures, and sensitivity analyses are provided in Supplementary Methods.
+
+\#\#\# Base-rate comparison
+
+BCT's renewable energy share was compared against the Verra VCS base rate (central estimate 37\%, sensitivity range 26--48\%, from MSCI\textsuperscript{7} and Ecosystem Marketplace reports). The selection coefficient $S = f_{\text{BCT,renewable}} / f_{\text{VCS,renewable}}$ was tested via exact binomial test, with account-clustered robustness (permutation, HHI-adjusted, and bootstrap tests; see Supplementary Methods).
+
+\#\#\# Difference-in-differences
+
+A deposit-level DiD panel pooling all 1,895 events (1,187 BCT + 708 NCT) tested whether BCT's quality trajectory diverged from NCT's:
+
+$$\text{quality}_i = \beta_0 + \beta_1 \cdot \text{BCT}_i + \beta_2 \cdot \text{PostShock}_i + \beta_3 \cdot (\text{BCT} \times \text{PostShock})_i + \varepsilon_i$$
+
+where $\text{PostShock}_i$ indicates deposits after the May 2022 cryptocurrency market crash. Standard errors were cluster-robust at the TCO2 token level (349 clusters) with small-sample correction. Robustness: permutation test (10,000 iterations), Bayesian bootstrap, and continuous-time specification. A compositional DiD (binary renewable outcome) provided a framework-free test; we note that NCT mechanically cannot accept renewable credits, so the compositional result partially reflects eligibility constraints rather than a pure treatment effect.
+
+\#\#\# Redemption analysis
+
+Redemptions were identified from ERC-20 Transfer events where the BCT pool contract appears as the sender, yielding 35432 events across the 161 originally scored tokens (15.2M of 22M total tonnes). Redemption rates were computed per credit type as redeemed/deposited tonnage. The within-token cross-pool comparison exploited 14 tokens deposited into both BCT and NCT to test whether the same credits experienced different fates under different pool designs. Account forensics, destination tracing, and profit quantification methods are detailed in Supplementary Methods.
+
+\#\#\# Price-quality dynamics
+
+Cumulative PQD and renewable share were merged with daily BCT prices ($n$ = 331 overlapping days). A first-differenced OLS with Newey--West HAC standard errors (10 lags) tested contemporaneous co-movement. Bidirectional Granger causality was tested at weekly frequency ($n$ = 55) using VAR(2) selected by AIC. We acknowledge the small sample limits power; the daily regression ($n$ = 330) provides the more robust test.
+
+\#\#\# Cross-domain comparison
+
+To test whether the adverse selection pattern generalises beyond carbon markets, we analysed composition shifts in the Curve Finance stETH/ETH liquidity pool on Ethereum during the May 2022 market crash. Curve's stableswap treats stETH (a liquid staking derivative) and ETH as near-equivalent, a uniform-pricing mechanism analogous to BCT's 1:1 tokenization. We computed weekly net flows for each asset and defined the composition shift as the absolute difference in net flows (ETH outflow minus stETH outflow). The pre-crisis baseline was the mean weekly absolute composition shift over the 8 weeks preceding 7 May 2022. This analysis is presented as supporting evidence; the Curve comparison is observational and also consistent with a classical bank-run interpretation.
+
+\#\#\# Welfare gap estimation
+
+We estimated the welfare cost of BCT's quality degradation using a Monte Carlo simulation (10,000 iterations). Each iteration sampled: (i) additionality rates per credit type from literature-derived distributions\textsuperscript{2,24} (renewable energy: 0--20\%; REDD+: 25--75\%; IFM: 30--70\%; ARR: 40--80\%); (ii) the social cost of carbon from a uniform distribution (\$50--200/tCO$_2$); and (iii) a counterfactual pool composition matching VCS registry base rates. The welfare gap was computed as the difference in expected climate value between the counterfactual pool and BCT's actual composition. This estimate is illustrative and conditional on both the additionality assumptions and the counterfactual specification.
+
+\#\#\# Statistical inference
+
+All $p$-values were corrected using the Benjamini--Hochberg FDR procedure at $\alpha$ = 0.05 across the following 10 primary tests: (1) base-rate selection coefficient (binomial), (2) full-sample temporal correlation, (3) pre-shock temporal correlation, (4) DiD quality-score $\beta_3$, (5) DiD compositional $\beta_3$, (6) Granger quality$\rightarrow$price, (7) Granger price$\rightarrow$quality, (8) within-pool permutation, (9) depositor concentration Mann--Whitney, (10) redemption differential chi-squared. Headline claims were supplemented with 10,000-permutation $p$-values. Cluster-robust bootstrap (clustered by depositor account, 10,000 iterations) was used for deposit-level statistics. Additional inference details (account-clustered tests, CCP calibration, inter-rater reliability, rank correlations with commercial agencies) are provided in Supplementary Methods.
+
+\#\#\# Data availability
+
+All data, scoring rubrics, analysis scripts, and smart contract source code are available at https://github.com/Adeline117/carbon-neutrality under an MIT licence. Machine-readable rubrics are in JSON format (`data/scoring-rubrics/`). The 318-credit methodology batch dataset with per-dimension scores is included. All 345/345 BCT tokens are scored (161 original + 184 imputed), with complete scores in `data/depositor-analysis/tco2_scores_complete.json`. On-chain deposit data for both BCT (1,187 transactions) and NCT (708 transactions) are provided with transaction hashes enabling independent verification. LLM panel outputs for all models across 29 credits are provided at `data/llm-panel-irr/raw/`. Analysis scripts are pure Python with NumPy/SciPy as sole dependencies.
+
+\begin{thebibliography}{51}
+
+\bibitem{1} Akerlof, G. A. The market for ``lemons'': quality uncertainty and the market mechanism. \textit{Q. J. Econ.} \textbf{84}, 488--500 (1970).
+
+\bibitem{2} Probst, B. et al. Systematic assessment of the achieved emission reductions of carbon crediting projects. \textit{Nat. Commun.} \textbf{15}, 9698 (2024).
+
+\bibitem{3} Trencher, G. et al. Demand for low-quality offsets by major companies undermines climate integrity of the voluntary carbon market. \textit{Nat. Commun.} \textbf{15}, 10890 (2024).
+
+\bibitem{4} West, T. A. P. et al. Overstated carbon emission reductions from voluntary REDD+ projects in the Brazilian Amazon. \textit{Science} \textbf{381}, 873--877 (2023).
+
+\bibitem{5} Manshadi, V. H. et al. Offsetting carbon with lemons: adverse selection and certification in the voluntary carbon market. SSRN Working Paper (2025).
+
+\bibitem{46} Calel, R. et al. Do carbon offsets offset carbon? \textit{Am. Econ. J. Appl. Econ.} \textbf{17}, 1--41 (2025).
+
+\end{thebibliography}
+
+\end{document}
