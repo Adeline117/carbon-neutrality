@@ -1,4 +1,4 @@
-# Figure Legends, Table Legends, and Reference List --- Nature Communications Draft
+# Figure Legends, Table Legends, and Reference List
 
 **Paper**: "Adverse selection in tokenized carbon markets: who profited from the first pool collapse"
 
@@ -8,7 +8,7 @@
 
 ### Figure 1. BCT pool composition by methodology category, weighted by deposited tonnage.
 
-Pie chart showing the tonnage-weighted composition of {{composition.n_deposits}} deposit transactions to the Toucan BCT pool on the Polygon blockchain ({{composition.n_projects}} unique VCS projects, approximately 22 million tonnes). Renewable energy credits (grid-connected wind, hydro, and solar, predominantly from China and India, CDM methodologies AMS-I.D and ACM0002) constitute {{composition.renewable_pct_tonnes}}% of total deposited tonnage. The remaining composition: fossil fuel switching ({{composition.fossil_switch_pct}}%), waste management and methane capture ({{composition.waste_methane_pct}}%), REDD+ ({{composition.redd_pct_tonnes}}%), afforestation/reforestation (3.9%), industrial gas destruction ({{composition.industrial_gas_pct}}%), improved forest management (2%), and smaller categories below 1%. The REDD+ share --- widely cited in academic and industry commentary as the primary driver of BCT's quality collapse --- is more than 16 times smaller than the renewable energy share. This finding contradicts the prevailing narrative that BCT failed because of low-quality avoided-deforestation credits with contested baselines. The actual driver was CDM-era renewable energy credits with near-zero additionality: grid-connected projects in countries where renewables were already economically competitive during the 2008--2013 crediting period. Data source: BCT deposit records from Toucan Protocol's public transaction ledger, cross-referenced against Verra VCS registry methodology classifications. See Methods for data collection protocol.
+Pie chart showing the tonnage-weighted composition of {{composition.n_deposits}} deposit transactions to the Toucan BCT pool on the Polygon blockchain ({{composition.n_projects}} unique VCS projects, approximately 22 million tonnes). Renewable energy credits (grid-connected wind, hydro, and solar, predominantly from China and India, CDM methodologies AMS-I.D and ACM0002) constitute {{composition.renewable_pct_tonnes}}% of total deposited tonnage. The remaining composition: fossil fuel switching ({{composition.fossil_switch_pct}}%), waste management and methane capture ({{composition.waste_methane_pct}}%), REDD+ ({{composition.redd_pct_tonnes}}%), afforestation/reforestation (3.9%), industrial gas destruction ({{composition.industrial_gas_pct}}%), improved forest management (2%), and smaller categories below 1%. The REDD+ share, widely cited in academic and industry commentary as the primary driver of BCT's quality collapse, is more than 16 times smaller than the renewable energy share. This finding contradicts the prevailing narrative that BCT failed because of low-quality avoided-deforestation credits with contested baselines. The actual driver was CDM-era renewable energy credits with near-zero additionality: grid-connected projects in countries where renewables were already economically competitive during the 2008--2013 crediting period. Data source: BCT deposit records from Toucan Protocol's public transaction ledger, cross-referenced against Verra VCS registry methodology classifications. See Methods for data collection protocol.
 
 ### Figure 2. CCP calibration: quality score distributions for CCP-eligible versus non-CCP credits.
 
@@ -102,7 +102,7 @@ Tonnage deposited, tonnage redeemed, redemption rate (%), and net remaining tonn
 
 24. Cames, M. et al. How additional is the Clean Development Mechanism? Analysis of the application of current tools and proposed alternatives. Oko-Institut Report CLlMA.B.3/SERl2013/0026r (2016).
 
-25. Schneider, L., Lazarus, M. & Kollmuss, A. Industrial N2O projects under the CDM: adipic acid --- a case of carbon leakage? Stockholm Environment Institute Working Paper 2010-01 (2010).
+25. Schneider, L., Lazarus, M. & Kollmuss, A. Industrial N2O projects under the CDM: adipic acid: a case of carbon leakage? Stockholm Environment Institute Working Paper 2010-01 (2010).
 
 26. West, T. A. P. et al. Demystifying the romanticized narratives about carbon credits from voluntary forest conservation. *Glob. Change Biol.* **31**, e70527 (2025).
 

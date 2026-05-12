@@ -42,7 +42,7 @@ Cumulative PQD and renewable share were merged with daily BCT prices ($n$ = 331 
 
 ### Cross-domain comparison
 
-To test whether the adverse selection pattern generalises beyond carbon markets, we analysed composition shifts in the Curve Finance stETH/ETH liquidity pool on Ethereum during the May 2022 market crash. Curve's stableswap treats stETH (a liquid staking derivative) and ETH as near-equivalent --- a uniform-pricing mechanism analogous to BCT's 1:1 tokenization. We computed weekly net flows for each asset and defined the composition shift as the absolute difference in net flows (ETH outflow minus stETH outflow). The pre-crisis baseline was the mean weekly absolute composition shift over the 8 weeks preceding 7 May 2022. This analysis is presented as supporting evidence; the Curve comparison is observational and also consistent with a classical bank-run interpretation.
+To test whether the adverse selection pattern generalises beyond carbon markets, we analysed composition shifts in the Curve Finance stETH/ETH liquidity pool on Ethereum during the May 2022 market crash. Curve's stableswap treats stETH (a liquid staking derivative) and ETH as near-equivalent, a uniform-pricing mechanism analogous to BCT's 1:1 tokenization. We computed weekly net flows for each asset and defined the composition shift as the absolute difference in net flows (ETH outflow minus stETH outflow). The pre-crisis baseline was the mean weekly absolute composition shift over the 8 weeks preceding 7 May 2022. This analysis is presented as supporting evidence; the Curve comparison is observational and also consistent with a classical bank-run interpretation.
 
 ### Welfare gap estimation
 
