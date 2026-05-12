@@ -163,3 +163,13 @@ Tonnage deposited, tonnage redeemed, redemption rate (%), and net remaining tonn
 44. Science-Based Targets Initiative. SBTi Corporate Net-Zero Standard v2.0. Science-Based Targets Initiative (2024).
 
 45. Fernandez Salguero, R. A. Effectiveness of carbon pricing and compensation instruments: an umbrella review. Preprint at https://arxiv.org/abs/2512.06887 (2025).
+
+46. Probst, B. et al. Systematic assessment of the achieved emission reductions of carbon crediting projects. *Nat. Commun.* **15**, 9698 (2024).
+
+47. Calel, R., Colmer, J., Dechezlepretre, A. & Glachant, M. Do carbon offsets offset carbon? *Am. Econ. J. Appl. Econ.* **17**, 1--41 (2025).
+
+48. Gupta, A. et al. Learning lessons from over-crediting to ensure additionality in forest carbon credits. *Nat. Commun.* **17**, 71552 (2026).
+
+49. Michaelowa, A. et al. Restoring credibility in carbon offsets through systematic ex post evaluation. *Nat. Sustain.* **8**, 1589 (2025).
+
+50. ICVCM. Core Carbon Principles Impact Report 2025. Integrity Council for the Voluntary Carbon Market (2025). https://icvcm.org/engagement-impact/ccp-impact-report-2025
