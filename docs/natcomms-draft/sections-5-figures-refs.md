@@ -72,7 +72,7 @@ Tonnage deposited, tonnage redeemed, redemption rate (%), and net remaining tonn
 
 1. Akerlof, G. A. The market for "lemons": quality uncertainty and the market mechanism. *Q. J. Econ.* **84**, 488--500 (1970).
 
-2. Calel, R., Colmer, J., Dechezlepretre, A. & Glachant, M. Systematic assessment of the achieved emission reductions of carbon crediting projects. *Nat. Commun.* **15**, 5535 (2024).
+2. Probst, B., Toetzke, M., Kontoleon, A., Diaz Anadon, L. & Hoffmann, V. H. Systematic assessment of the achieved emission reductions of carbon crediting projects. *Nat. Commun.* **15**, 9698 (2024).
 
 3. Trencher, G. et al. Demand for low-quality offsets by major companies undermines climate integrity of the voluntary carbon market. *Nat. Commun.* **15**, 10890 (2024).
 
@@ -164,12 +164,10 @@ Tonnage deposited, tonnage redeemed, redemption rate (%), and net remaining tonn
 
 45. Fernandez Salguero, R. A. Effectiveness of carbon pricing and compensation instruments: an umbrella review. Preprint at https://arxiv.org/abs/2512.06887 (2025).
 
-46. Probst, B. et al. Systematic assessment of the achieved emission reductions of carbon crediting projects. *Nat. Commun.* **15**, 9698 (2024).
+46. Calel, R., Colmer, J., Dechezlepretre, A. & Glachant, M. Do carbon offsets offset carbon? *Am. Econ. J. Appl. Econ.* **17**, 1--41 (2025).
 
-47. Calel, R., Colmer, J., Dechezlepretre, A. & Glachant, M. Do carbon offsets offset carbon? *Am. Econ. J. Appl. Econ.* **17**, 1--41 (2025).
+47. Gupta, A. et al. Learning lessons from over-crediting to ensure additionality in forest carbon credits. *Nat. Commun.* **17**, 71552 (2026).
 
-48. Gupta, A. et al. Learning lessons from over-crediting to ensure additionality in forest carbon credits. *Nat. Commun.* **17**, 71552 (2026).
+48. Michaelowa, A. et al. Restoring credibility in carbon offsets through systematic ex post evaluation. *Nat. Sustain.* **8**, 1589 (2025).
 
-49. Michaelowa, A. et al. Restoring credibility in carbon offsets through systematic ex post evaluation. *Nat. Sustain.* **8**, 1589 (2025).
-
-50. ICVCM. Core Carbon Principles Impact Report 2025. Integrity Council for the Voluntary Carbon Market (2025). https://icvcm.org/engagement-impact/ccp-impact-report-2025
+49. ICVCM. Core Carbon Principles Impact Report 2025. Integrity Council for the Voluntary Carbon Market (2025). https://icvcm.org/engagement-impact/ccp-impact-report-2025
