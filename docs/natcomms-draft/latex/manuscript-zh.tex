@@ -11,7 +11,7 @@
 \onehalfspacing
 
 \title{代币化碳市场中的逆向选择：谁从首次碳池崩盘中获利}
-\author{温雅琪\textsuperscript{1}，蔡威\textsuperscript{1,*}}
+\author{Adeline Wen\textsuperscript{1}, Wei Cai\textsuperscript{1,*}}
 \date{}
 
 \begin{document}
@@ -151,106 +151,92 @@ BCT崩盘被错误归因于REDD+碳信用\textsuperscript{16,17,18}（鉴于REDD
 代币化真实世界资产行业现已超过100亿美元，并正在跨商品、债券和应收账款复制基于池的架构。BCT是第一个完成完整质量崩溃周期并拥有可审计交易数据的池。其教训很直接：对于汇集碳市场而言，质量差异化的机制设计不是可选的改进；它是市场完整性的结构性前提。随着第6.4条谈判走向实施、自愿市场基础设施扩大规模，统一定价与质量差异化定价之间的选择将决定汇集信用体系是加速去碳化，还是系统性地将低质量残余分配给被动参与者。
 
 \section*{方法}
-We collected all deposit transactions to the Toucan Protocol BCT pool contract on the Polygon blockchain using a Polygon RPC endpoint. We identified 1,187 deposit transactions spanning the period from BCT's launch in October 2021 to the effective cessation of new deposits in late 2022, mapping to 168 unique VCS project identifiers (345 unique TCO2 token addresses) and approximately 22 million tonnes of tokenized carbon credits. For each deposit, we recorded: transaction hash, block number and timestamp, depositor address, TCO2 token contract address, Verra VCS project identifier, vintage year, and tonnage. Project identifiers were cross-referenced against the Verra registry to obtain methodology category, country of origin, and CCP eligibility status.
+我们通过Polygon RPC端点从Polygon区块链上的Toucan协议BCT池合约中采集了所有存入交易。我们识别出1,187笔存入交易，时间跨度为BCT自2021年10月启动至2022年底新存入实际停止，映射至168个独立的VCS项目标识符（345个独立的TCO2代币地址），约2200万吨代币化碳信用。对于每笔存入，我们记录了：交易哈希、区块号和时间戳、存入者地址、TCO2代币合约地址、Verra VCS项目标识符、年份和吨数。项目标识符与Verra注册处进行了交叉验证，以获取方法学类别、来源国家和CCP资格状态。
 
-\textbf{Project classification.} Each project was classified into one of eleven methodology categories based on the Verra registry entry: renewable energy (grid-connected wind, hydro, solar; CDM methodologies AMS-I.D, ACM0002), fossil fuel switching, waste management and methane capture, REDD+ (VM0007, VM0009, VM0015), afforestation/reforestation (ARR), industrial gas destruction, improved forest management (IFM), energy efficiency, industrial processes, agriculture, and cookstoves. Pool-level composition statistics were computed with tonnage weighting.
+\textbf{项目分类.}每个项目根据Verra注册处条目被归入十一个方法学类别之一：可再生能源（并网风电、水电、太阳能；CDM方法学AMS-I.D、ACM0002）、化石燃料替代、废物管理和甲烷捕获、REDD+（VM0007、VM0009、VM0015）、造林/再造林（ARR）、工业气体销毁、改良森林管理（IFM）、能效提升、工业过程、农业和清洁炉灶。池级组成统计按吨数加权计算。
 
-\textbf{NCT data.} We collected all 708 deposit events from the Toucan NCT pool on the same Polygon blockchain over the same block range. NCT restricts deposits to AFOLU (agriculture, forestry, and other land use) credits with vintage $\geq$2012, functioning as a minimal quality gate on project type. NCT and BCT share identical protocol infrastructure and blockchain substrate.
+\textbf{NCT数据.}我们在相同的Polygon区块链上、相同的区块范围内采集了Toucan NCT池的全部708个存入事件。NCT将存入限制为AFOLU（农业、林业和其他土地利用）碳信用且年份$\geq$2012，作为对项目类型的最低质量门槛。NCT与BCT共享相同的协议基础设施和区块链底层。
 
-\textbf{Price data.} Daily BCT-USDC prices were obtained from the DeFi Llama API for the Polygon SushiSwap BCT-USDC pair (828 observations, October 2021 -- July 2024).
+\textbf{价格数据.}每日BCT-USDC价格通过DeFi Llama API获取，数据来源为Polygon SushiSwap BCT-USDC交易对（828个观测值，2021年10月至2024年7月）。
 
 \subsection*{质量评分框架}
 
-We developed a composite quality scoring framework evaluating six active dimensions on a 0--100 scale: removal type hierarchy (weight 0.250), additionality (0.200), MRV (monitoring, reporting, and verification) grade (0.200), permanence (0.175), vintage year (0.100), and registry and methodology quality (0.075). Initial weights were derived from the Oxford Offsetting Principles\textsuperscript{11} and the ICVCM CCP Assessment Framework\textsuperscript{8}. A pilot Best-Worst Scaling expert panel ($n$ = 5) confirmed consistency with our weights (Spearman $\rho$ = +0.814). Monte Carlo perturbation (10,000 Dirichlet-sampled weight vectors) confirms 93.7\% grade stability. The composite was computed as $C = \sum_{i} w_i \times s_i$ and mapped to letter grades: AAA ($\geq$90), AA ($\geq$75), A ($\geq$60), BBB ($\geq$45), BB ($\geq$30), B (<30). Seven disqualifier conditions cap maximum grades regardless of composite score. Co-benefits was assigned zero weight to avoid amplifying adverse selection through co-benefit narratives\textsuperscript{6}. The Pool Quality Deficit (PQD = $1 - \bar{C}/100$) quantifies tonnage-weighted quality degradation per pool. Full scoring details, distributional scoring model, extended scoring procedures, and sensitivity analyses are provided in Supplementary Methods.
+我们开发了一个复合质量评分框架，在0--100分的量表上评估六个活跃维度：移除类型层级（权重0.250）、额外性（0.200）、MRV（监测、报告和核查）等级（0.200）、持久性（0.175）、年份（0.100）以及注册处与方法学质量（0.075）。初始权重来源于牛津抵消原则\textsuperscript{11}和ICVCM CCP评估框架\textsuperscript{8}。一个试点最优-最差量表法专家小组（$n$ = 5）确认了与我们权重的一致性（Spearman $\rho$ = +0.814）。蒙特卡洛扰动（10,000个Dirichlet抽样权重向量）确认了93.7\%的等级稳定性。复合评分计算为$C = \sum_{i} w_i \times s_i$，并映射至字母等级：AAA（$\geq$90）、AA（$\geq$75）、A（$\geq$60）、BBB（$\geq$45）、BB（$\geq$30）、B（<30）。七个否决条件无论复合评分如何均设定最高等级上限。共同效益被赋予零权重，以避免通过共同效益叙事放大逆向选择\textsuperscript{6}。池质量缺陷（PQD = $1 - \bar{C}/100$）量化了每个池的吨数加权质量退化程度。完整的评分细节、分布式评分模型、扩展评分程序和敏感性分析见补充方法。
 
 \subsection*{基准率比较}
 
-BCT's renewable energy share was compared against the Verra VCS base rate (central estimate 37\%, sensitivity range 26--48\%, from MSCI\textsuperscript{7} and Ecosystem Marketplace reports). The selection coefficient $S = f_{\text{BCT,renewable}} / f_{\text{VCS,renewable}}$ was tested via exact binomial test, with account-clustered robustness (permutation, HHI-adjusted, and bootstrap tests; see Supplementary Methods).
+BCT的可再生能源份额与Verra VCS基准率（中心估计37\%，敏感性范围26--48\%，来源为MSCI\textsuperscript{7}和Ecosystem Marketplace报告）进行了比较。选择系数$S = f_{\text{BCT,renewable}} / f_{\text{VCS,renewable}}$通过精确二项检验进行检验，并辅以账户聚类稳健性检验（置换检验、HHI调整检验和Bootstrap检验；见补充方法）。
 
 \subsection*{双重差分法}
 
-A deposit-level DiD panel pooling all 1,895 events (1,187 BCT + 708 NCT) tested whether BCT's quality trajectory diverged from NCT's:
+一个存入级别的DiD面板汇集了所有1,895个事件（1,187个BCT + 708个NCT），检验BCT的质量轨迹是否偏离了NCT的轨迹：
 
 $$\text{quality}_i = \beta_0 + \beta_1 \cdot \text{BCT}_i + \beta_2 \cdot \text{PostShock}_i + \beta_3 \cdot (\text{BCT} \times \text{PostShock})_i + \varepsilon_i$$
 
-where $\text{PostShock}_i$ indicates deposits after the May 2022 cryptocurrency market crash. Standard errors were cluster-robust at the TCO2 token level (349 clusters) with small-sample correction. Robustness: permutation test (10,000 iterations), Bayesian bootstrap, and continuous-time specification. A compositional DiD (binary renewable outcome) provided a framework-free test; we note that NCT mechanically cannot accept renewable credits, so the compositional result partially reflects eligibility constraints rather than a pure treatment effect.
+其中$\text{PostShock}_i$表示2022年5月加密货币市场崩盘之后的存入。标准误在TCO2代币层面进行聚类稳健估计（349个聚类），并采用小样本修正。稳健性检验包括：置换检验（10,000次迭代）、贝叶斯Bootstrap和连续时间设定。组成DiD（二元可再生能源结果）提供了一个无框架检验；我们注意到NCT机械性地不能接受可再生能源碳信用，因此组成结果部分反映了准入约束而非纯粹的处理效应。
 
 \subsection*{赎回分析}
 
-Redemptions were identified from ERC-20 Transfer events where the BCT pool contract appears as the sender, yielding 35,432 events across the 161 originally scored tokens (15.2M of 22M total tonnes). Redemption rates were computed per credit type as redeemed/deposited tonnage. The within-token cross-pool comparison exploited 14 tokens deposited into both BCT and NCT to test whether the same credits experienced different fates under different pool designs. Account forensics, destination tracing, and profit quantification methods are detailed in Supplementary Methods.
+赎回通过BCT池合约作为发送方的ERC-20 Transfer事件识别，共产生35,432个事件，覆盖最初评分的161个代币（2200万总吨数中的1520万吨）。赎回率按碳信用类型计算，为赎回吨数/存入吨数。代币内跨池比较利用了同时存入BCT和NCT的14个代币，以检验相同的碳信用在不同池设计下是否经历了不同的命运。账户取证、去向追踪和利润量化方法详见补充方法。
 
 \subsection*{价格-质量动态}
 
-Cumulative PQD and renewable share were merged with daily BCT prices ($n$ = 331 overlapping days). A first-differenced OLS with Newey--West HAC standard errors (10 lags) tested contemporaneous co-movement. Bidirectional Granger causality was tested at weekly frequency ($n$ = 55) using VAR(2) selected by AIC. We acknowledge the small sample limits power; the daily regression ($n$ = 330) provides the more robust test.
+累积PQD和可再生能源份额与每日BCT价格合并（$n$ = 331个重叠天数）。采用带有Newey--West HAC标准误（10个滞后期）的一阶差分OLS检验同期共变动。在周频率（$n$ = 55）下使用AIC选择的VAR(2)模型进行双向格兰杰因果检验。我们承认小样本限制了统计效力；每日回归（$n$ = 330）提供了更稳健的检验。
 
 \subsection*{跨域比较}
 
-To test whether the adverse selection pattern generalises beyond carbon markets, we analysed composition shifts in the Curve Finance stETH/ETH liquidity pool on Ethereum during the May 2022 market crash. Curve's stableswap treats stETH (a liquid staking derivative) and ETH as near-equivalent, a uniform-pricing mechanism analogous to BCT's 1:1 tokenization. We computed weekly net flows for each asset and defined the composition shift as the absolute difference in net flows (ETH outflow minus stETH outflow). The pre-crisis baseline was the mean weekly absolute composition shift over the 8 weeks preceding 7 May 2022. This analysis is presented as supporting evidence; the Curve comparison is observational and also consistent with a classical bank-run interpretation.
+为检验逆向选择模式是否可推广至碳市场之外，我们分析了2022年5月市场崩盘期间以太坊上Curve Finance stETH/ETH流动性池的组成变化。Curve的稳定交换机制将stETH（一种流动性质押衍生品）和ETH视为近等价资产，这是一种类似于BCT的1:1代币化的统一定价机制。我们计算了每种资产的周净流量，并将组成变化定义为净流量的绝对差值（ETH流出减去stETH流出）。危机前基线为2022年5月7日之前8周的平均每周绝对组成变化。该分析作为支持性证据呈现；Curve比较为观察性的，且同样与经典银行挤兑解释兼容。
 
 \subsection*{福利缺口估计}
 
-We estimated the welfare cost of BCT's quality degradation using a Monte Carlo simulation (10,000 iterations). Each iteration sampled: (i) additionality rates per credit type from literature-derived distributions\textsuperscript{2,24} (renewable energy: 0--20\%; REDD+: 25--75\%; IFM: 30--70\%; ARR: 40--80\%); (ii) the social cost of carbon from a uniform distribution (\$50--200/tCO$_2$); and (iii) a counterfactual pool composition matching VCS registry base rates. The welfare gap was computed as the difference in expected climate value between the counterfactual pool and BCT's actual composition. This estimate is illustrative and conditional on both the additionality assumptions and the counterfactual specification.
+我们使用蒙特卡洛模拟（10,000次迭代）估计了BCT质量退化的福利成本。每次迭代抽样：（i）基于文献分布的各碳信用类型额外性比率\textsuperscript{2,24}（可再生能源：0--20\%；REDD+：25--75\%；IFM：30--70\%；ARR：40--80\%）；（ii）碳的社会成本，来自均匀分布（\$50--200/tCO$_2$）；（iii）匹配VCS注册处基准率的反事实池组成。福利缺口计算为反事实池与BCT实际组成之间预期气候价值的差异。该估计为说明性的，取决于额外性假设和反事实设定。
 
 \subsection*{统计推断}
 
-All $p$-values were corrected using the Benjamini--Hochberg FDR procedure at $\alpha$ = 0.05 across the following 10 primary tests: (1) base-rate selection coefficient (binomial), (2) full-sample temporal correlation, (3) pre-shock temporal correlation, (4) DiD quality-score $\beta_3$, (5) DiD compositional $\beta_3$, (6) Granger quality$\rightarrow$price, (7) Granger price$\rightarrow$quality, (8) within-pool permutation, (9) depositor concentration Mann--Whitney, (10) redemption differential chi-squared. Headline claims were supplemented with 10,000-permutation $p$-values. Cluster-robust bootstrap (clustered by depositor account, 10,000 iterations) was used for deposit-level statistics. Additional inference details (account-clustered tests, CCP calibration, inter-rater reliability, rank correlations with commercial agencies) are provided in Supplementary Methods.
+所有$p$值均使用Benjamini--Hochberg FDR程序在$\alpha$ = 0.05水平上对以下10项主要检验进行了校正：（1）基准率选择系数（二项检验）、（2）全样本时间相关性、（3）冲击前时间相关性、（4）DiD质量评分$\beta_3$、（5）DiD组成$\beta_3$、（6）格兰杰因果关系（质量$\rightarrow$价格）、（7）格兰杰因果关系（价格$\rightarrow$质量）、（8）池内置换检验、（9）存入者集中度Mann--Whitney检验、（10）赎回差异卡方检验。主要结论辅以10,000次置换检验$p$值。存入级别统计使用聚类稳健Bootstrap（按存入者账户聚类，10,000次迭代）。额外的推断细节（账户聚类检验、CCP校准、评判者间信度、与商业机构的秩相关）见补充方法。
 
 \subsection*{数据可用性}
 
-All data, scoring rubrics, analysis scripts, and smart contract source code are available at https://github.com/Adeline117/carbon-neutrality under an MIT licence. Machine-readable rubrics are in JSON format (`data/scoring-rubrics/'). The 318-credit methodology batch dataset with per-dimension scores is included. All 345/345 BCT tokens are scored (161 original + 184 imputed), with complete scores in `data/depositor-analysis/tco2\_scores\_complete.json'. On-chain deposit data for both BCT (1,187 transactions) and NCT (708 transactions) are provided with transaction hashes enabling independent verification. LLM panel outputs for all models across 29 credits are provided at `data/llm-panel-irr/raw/'. Analysis scripts are pure Python with NumPy/SciPy as sole dependencies.
+所有数据、评分标准、分析脚本和智能合约源代码均可在 https://github.com/Adeline117/carbon-neutrality 获取，采用MIT许可证。机器可读的评分标准为JSON格式（`data/scoring-rubrics/'）。包含逐维度评分的318个碳信用方法学批量数据集已纳入。所有345/345个BCT代币均已评分（161个原始评分 + 184个推算评分），完整评分见`data/depositor-analysis/tco2\_scores\_complete.json'。BCT（1,187笔交易）和NCT（708笔交易）的链上存入数据均附有交易哈希以支持独立验证。所有模型对29个碳信用的LLM评审团输出见`data/llm-panel-irr/raw/'。分析脚本为纯Python，仅依赖NumPy/SciPy。
 
-\begin{thebibliography}{51}
+\subsection*{代码可用性}
+
+所有分析代码均在上述数据可用性声明中提及的GitHub仓库中公开发布。
+
+\subsection*{作者贡献}
+
+A.W.设计了研究方案，采集并分析了数据，开发了质量评分框架，并撰写了手稿。W.C.监督了研究，提供了方法学指导，并修订了手稿。两位作者均审阅并批准了最终版本。
+
+\subsection*{利益冲突声明}
+
+作者声明不存在利益冲突。
+
+\subsection*{致谢}
+
+作者感谢华盛顿大学塔科马分校去中心化计算实验室的同事们在研究过程中提供的讨论和反馈。
+
+\begin{thebibliography}{21}
 \bibitem{1} Akerlof, G. A. The market for ``lemons'': quality uncertainty and the market mechanism. \textit{Q. J. Econ.} \textbf{84}, 488--500 (1970).
-\bibitem{2} Probst, B. et al. Systematic assessment of the achieved emission reductions of carbon crediting projects. \textit{Nat. Commun.} \textbf{15}, 9698 (2024).
-\bibitem{3} Trencher, G. et al. Demand for low-quality offsets by major companies undermines climate integrity of the voluntary carbon market. \textit{Nat. Commun.} \textbf{15}, 10890 (2024).
-\bibitem{4} West, T. A. P. et al. Overstated carbon emission reductions from voluntary REDD+ projects in the Brazilian Amazon. \textit{Science} \textbf{381}, 873--877 (2023).
-\bibitem{5} Manshadi, V. H. et al. Offsetting carbon with lemons: adverse selection and certification in the voluntary carbon market. SSRN Working Paper (2025).
+\bibitem{2} Manshadi, V. H. et al. Offsetting carbon with lemons: adverse selection and certification in the voluntary carbon market. SSRN Working Paper (2025).
+\bibitem{3} Battocletti, V. et al. The voluntary carbon market: market failures and policy implications. \textit{Colo. Law Rev.} \textbf{95}, 519--572 (2024).
+\bibitem{4} Probst, B. et al. Systematic assessment of the achieved emission reductions of carbon crediting projects. \textit{Nat. Commun.} \textbf{15}, 9562 (2024).
+\bibitem{5} Calel, R. et al. Do carbon offsets offset carbon? \textit{Am. Econ. J. Appl. Econ.} \textbf{17}, 1--40 (2025).
 \bibitem{6} Berg, F. et al. The market for voluntary carbon offsets. SSRN Working Paper (2025).
-\bibitem{7} MSCI. State of integrity in the global carbon-credit market. MSCI ESG Research (2025).
-\bibitem{8} Integrity Council for the Voluntary Carbon Market. Core Carbon Principles, Assessment Framework, and Assessment Procedure. ICVCM (2023).
-\bibitem{9} Carbon Market Watch \& Perspectives Climate Group. Assessing and comparing carbon credit rating agencies. Carbon Market Watch Policy Brief (2023).
-\bibitem{10} [Companion paper] ERC-CCQR: A composable quality rating standard for tokenized carbon credits. Manuscript in preparation.
-\bibitem{11} Allen, M. et al. The Oxford Principles for Net Zero Aligned Carbon Offsetting. University of Oxford (2020).
-\bibitem{12} Calyx Global. Are carbon credit quality indicators delivering? Calyx Global Research Report (2025).
-\bibitem{13} Coglianese, C. \& Giles, C. Auditors can't save carbon offsets. \textit{Science} \textbf{389}, 6733 (2025).
-\bibitem{14} Huber, R. et al. A systematic review of quality criteria and their assessment in carbon crediting. \textit{J. Environ. Manage.} \textbf{370}, 122693 (2024).
-\bibitem{15} Singapore National Environment Agency. Carbon rating panel: appointment of BeZero, Calyx Global, and Sylvera. NEA Regulatory Notice (2025).
-\bibitem{16} Bosshard, C. et al. Blockchain-based voluntary carbon market: strategic insights into network structure. \textit{Front. Blockchain} \textbf{8}, 1603695 (2025).
-\bibitem{17} Frontiers in Blockchain. Tokenized carbon credits in voluntary carbon markets: the case of KlimaDAO. \textit{Front. Blockchain} \textbf{7}, 1360918 (2024).
-\bibitem{18} Jirasek, M. KlimaDAO: a crypto answer to carbon markets. In \textit{Blockchain Driven Supply Chains and Enterprise Information Systems} Ch. 12 (Springer, 2023).
-\bibitem{19} Zhou, C. et al. Harnessing Web3 on carbon offset market for sustainability. \textit{IEEE Wirel. Commun.} \textbf{30}, 104--111 (2023).
-\bibitem{20} Gao, Y. \& Liu, Z. CATchain-R: a blockchain-based carbon registry platform with credibility index. \textit{npj Clim. Action} \textbf{5}, 12 (2026).
-\bibitem{21} Zeng, Y. et al. Limitations of carbon markets for biodiversity conservation. \textit{Nat. Rev. Biodivers.} (2026).
-\bibitem{22} Cabiyo, B. \& Field, C. B. Embracing imperfection: carbon offset markets must learn to mitigate the risk of overcrediting. \textit{PNAS Nexus} \textbf{4}, pgaf091 (2025).
-\bibitem{23} Landis, J. R. \& Koch, G. G. The measurement of observer agreement for categorical data. \textit{Biometrics} \textbf{33}, 159--174 (1977).
-\bibitem{24} Cames, M. et al. How additional is the Clean Development Mechanism? Oko-Institut Report (2016).
-\bibitem{25} Schneider, L. et al. Industrial N2O projects under the CDM: adipic acid -- a case of carbon leakage? SEI Working Paper 2010-01 (2010).
-\bibitem{26} West, T. A. P. et al. Demystifying the romanticized narratives about carbon credits from voluntary forest conservation. \textit{Glob. Change Biol.} \textbf{31}, e70527 (2025).
-\bibitem{27} Fleiss, J. L. Measuring nominal scale agreement among many raters. \textit{Psychol. Bull.} \textbf{76}, 378--382 (1971).
-\bibitem{28} Shrout, P. E. \& Fleiss, J. L. Intraclass correlations: uses in assessing rater reliability. \textit{Psychol. Bull.} \textbf{86}, 420--428 (1979).
-\bibitem{29} Battocletti, V. et al. The voluntary carbon market: market failures and policy implications. \textit{Colo. Law Rev.} \textbf{95}, 889--960 (2024).
-\bibitem{30} Sylvera. State of Carbon Credits 2025. Sylvera Research Report (2025).
-\bibitem{31} BeZero Carbon. BeZero carbon ratings methodology. BeZero Carbon Technical Documentation (2023).
-\bibitem{32} Calyx Global. CCP correlation analysis and AAA-D rating scale. Calyx Global Methodology Update (2026).
-\bibitem{33} Cheong, B. C. The paradox and fallacy of global carbon credits. \textit{Anthropocene Sci.} \textbf{4}, 72--83 (2025).
-\bibitem{34} Gold Standard \& ATEC Global. First fully digital cookstove carbon credits issued on Hedera Guardian. Gold Standard Impact Report (2025).
-\bibitem{35} Verra. First credits approved under digital MRV pilot for high-frequency issuance. Verra Registry Announcement (2026).
-\bibitem{36} CarbonPlan. OffsetsDB: a comprehensive database of carbon offset projects. CarbonPlan (2024).
-\bibitem{37} Cohen, J. \textit{Statistical Power Analysis for the Behavioral Sciences} 2nd edn (Lawrence Erlbaum Associates, 1988).
-\bibitem{38} Efron, B. \& Tibshirani, R. J. \textit{An Introduction to the Bootstrap} (Chapman \& Hall, 1993).
-\bibitem{39} Carbon Credit Quality Initiative. CCQI scoring methodology v3.0. EDF, WWF \& Oeko-Institut (2024).
-\bibitem{40} ICVCM. CCP-approved methodologies. Integrity Council for the Voluntary Carbon Market (2025--2026).
-\bibitem{41} Microsoft \& Carbon Direct. Criteria for high-quality carbon dioxide removal, 5th edn. Carbon Direct (2025).
-\bibitem{42} Garcia, A. \& Sanford, L. On the potential for strategic behaviour in jurisdictional REDD+. \textit{Proc. Natl Acad. Sci. USA} \textbf{123}, e2531612123 (2026).
-\bibitem{43} World Bank. State and Trends of Carbon Pricing 2025. World Bank Group (2025).
-\bibitem{44} Science-Based Targets Initiative. SBTi Corporate Net-Zero Standard v2.0. SBTi (2024).
-\bibitem{45} Fernandez Salguero, R. A. Effectiveness of carbon pricing and compensation instruments: an umbrella review. Preprint arXiv:2512.06887 (2025).
-\bibitem{46} Calel, R. et al. Do carbon offsets offset carbon? \textit{Am. Econ. J. Appl. Econ.} \textbf{17}, 1--41 (2025).
-\bibitem{47} Gupta, A. et al. Learning lessons from over-crediting to ensure additionality in forest carbon credits. \textit{Nat. Commun.} \textbf{17}, 71552 (2026).
-\bibitem{48} Michaelowa, A. et al. Restoring credibility in carbon offsets through systematic ex post evaluation. \textit{Nat. Sustain.} \textbf{8}, 1589 (2025).
-\bibitem{49} ICVCM. Core Carbon Principles Impact Report 2025. ICVCM (2025).
-\bibitem{50} Haya, B. K. et al. Quality assessment of REDD+ carbon credit projects. Berkeley Carbon Trading Project (2023).
-\bibitem{51} Haya, B. K. et al. Comprehensive assessment of REDD+ carbon crediting with updated VM0048 methodology. Berkeley Carbon Trading Project Working Paper (2024).
+\bibitem{7} Bosshard, C. et al. Blockchain-based voluntary carbon market: strategic insights into network structure. \textit{Front. Blockchain} \textbf{8}, 1603695 (2025).
+\bibitem{8} Ballesteros-Rodriguez, D., De-Lucio, J. \& Sicilia, G. Tokenized carbon credits in voluntary carbon markets: the case of KlimaDAO. \textit{Front. Blockchain} \textbf{7}, 1474540 (2024).
+\bibitem{9} Jirasek, M. KlimaDAO: a crypto answer to carbon markets. \textit{J. Organ. Des.} \textbf{12}, 271--283 (2023).
+\bibitem{10} Trencher, G. et al. Demand for low-quality offsets by major companies undermines climate integrity of the voluntary carbon market. \textit{Nat. Commun.} \textbf{15}, 6863 (2024).
+\bibitem{11} West, T. A. P. et al. Action needed to make carbon offsets from forest conservation work for climate change mitigation. \textit{Science} \textbf{381}, 873--877 (2023).
+\bibitem{12} Cames, M. et al. How additional is the Clean Development Mechanism? Oko-Institut Report (2016).
+\bibitem{13} Schneider, L. Assessing the additionality of CDM projects: practical experiences and lessons learned. \textit{Clim. Policy} \textbf{9}, 242--254 (2009).
+\bibitem{14} World Bank. State and Trends of Carbon Pricing 2025. World Bank Group (2025).
+\bibitem{15} Garcia, A. \& Sanford, L. On the potential for strategic behaviour in jurisdictional REDD+. \textit{Proc. Natl Acad. Sci. USA} \textbf{123}, e2531612123 (2026).
+\bibitem{16} Integrity Council for the Voluntary Carbon Market. Core Carbon Principles, Assessment Framework, and Assessment Procedure. ICVCM (2023).
+\bibitem{17} Singapore National Environment Agency. Carbon rating panel: appointment of BeZero, Calyx Global, and Sylvera. NEA Regulatory Notice (2025).
+\bibitem{18} Gao, H. O. \& Liu, X. A blockchain-based carbon registry platform for credible climate action in transportation. \textit{npj Clim. Action} \textbf{5}, 23 (2026).
+\bibitem{19} [Companion paper] ERC-CCQR: A composable quality rating standard for tokenized carbon credits. Manuscript in preparation.
+\bibitem{20} Allen, M. et al. The Oxford Principles for Net Zero Aligned Carbon Offsetting. University of Oxford (2020).
+\bibitem{21} MSCI. State of integrity in the global carbon-credit market. MSCI ESG Research (2024).
 \end{thebibliography}
 
 \end{document}
