@@ -1,0 +1,294 @@
+{
+  "design": "within-token matched-pair (same credit, BCT vs NCT pool)",
+  "n_shared_tokens": 14,
+  "data_provenance": {
+    "nct_rates": "raw",
+    "bct_rates": "raw",
+    "source": "transfer_cache/<token>.json ERC20 Transfer logs",
+    "bct_pool": "0x2f800db0fdb5223b3c3f354886d907a671414a7f",
+    "nct_pool": "0xd838290e877e0188a4a44700463419ed96c16107",
+    "reconstructed_aggregate": {
+      "n_shared": 14,
+      "bct_deposit": 1501800.3,
+      "bct_redeemed": 1501798.6,
+      "bct_rate_pct": 100.0,
+      "nct_deposit": 1526116.8,
+      "nct_redeemed": 434742.7,
+      "nct_rate_pct": 28.49
+    },
+    "published_truth": {
+      "bct_deposit": 1501800,
+      "bct_redeemed": 1501799,
+      "bct_rate_pct": 100.0,
+      "nct_deposit": 1526117,
+      "nct_redeemed": 434743,
+      "nct_rate_pct": 28.5
+    },
+    "reconciliation": {
+      "n_match": true,
+      "nct_rate_abs_diff_pp": 0.01,
+      "bct_rate_abs_diff_pp": 0.0,
+      "nct_deposit_abs_diff_t": 0.2
+    },
+    "notes": "Per-token deposits = Transfer(wallet->pool); redemptions = Transfer(pool->wallet), summed from raw chain logs. Reconstructed aggregate reproduces the published BCT 100.0% / NCT 28.5% and the IFM 30.9% / ARR 0.0% / REDD+ 69.0% type rates EXACTLY, so NCT per-token rates are RAW (not type-imputed). One REDD+ token (0x463de2a5) shows BCT 99.99999% from ~1t of dust out of 1.5M tonnes; treated as an effective tie (|diff|<=1e-4) and dropped from the sign/Wilcoxon tests."
+  },
+  "mean_diff_pp": 73.932,
+  "median_diff_pp": 99.957,
+  "sign_test_p": 0.000244140625,
+  "sign_test_detail": {
+    "n_effective": 13,
+    "n_positive": 13,
+    "n_negative": 0,
+    "n_ties_dropped": 1,
+    "p_value": 0.000244140625
+  },
+  "permutation_p": 0.000244140625,
+  "permutation_detail": {
+    "n_enumerations": 16384,
+    "observed_mean_abs": 0.7393206562686793,
+    "p_value": 0.000244140625
+  },
+  "wilcoxon_p": 0.000244140625,
+  "wilcoxon_detail": {
+    "statistic": 0.0,
+    "p_value": 0.000244140625,
+    "n_effective": 13
+  },
+  "bayes_gap_mean_pp": 73.829,
+  "bayes_gap_ci_lo_pp": 72.235,
+  "bayes_gap_ci_hi_pp": 75.294,
+  "bayes_p_gap_gt0": 1.0,
+  "bayes_detail": {
+    "gap_mean_pp": 73.829,
+    "ci_lo_pp": 72.235,
+    "ci_hi_pp": 75.294,
+    "p_gap_gt0": 1.0,
+    "n_draws": 200000
+  },
+  "bayes_per_token": {
+    "0x05a28540": {
+      "post_mean_gap_pp": 99.95,
+      "ci_lo_pp": 99.94,
+      "ci_hi_pp": 99.96
+    },
+    "0x0bccab36": {
+      "post_mean_gap_pp": 99.96,
+      "ci_lo_pp": 99.95,
+      "ci_hi_pp": 99.97
+    },
+    "0x0f310489": {
+      "post_mean_gap_pp": 99.99,
+      "ci_lo_pp": 99.99,
+      "ci_hi_pp": 100.0
+    },
+    "0x354e2edc": {
+      "post_mean_gap_pp": 99.99,
+      "ci_lo_pp": 99.97,
+      "ci_hi_pp": 100.0
+    },
+    "0x463de2a5": {
+      "post_mean_gap_pp": -0.0,
+      "ci_lo_pp": -0.0,
+      "ci_hi_pp": 0.0
+    },
+    "0x54a34c14": {
+      "post_mean_gap_pp": -1.21,
+      "ci_lo_pp": -23.53,
+      "ci_hi_pp": 19.29
+    },
+    "0x5a75fa23": {
+      "post_mean_gap_pp": 100.0,
+      "ci_lo_pp": 99.99,
+      "ci_hi_pp": 100.0
+    },
+    "0x62896f42": {
+      "post_mean_gap_pp": 0.93,
+      "ci_lo_pp": 0.89,
+      "ci_hi_pp": 0.97
+    },
+    "0x6362364a": {
+      "post_mean_gap_pp": 45.14,
+      "ci_lo_pp": 44.91,
+      "ci_hi_pp": 45.38
+    },
+    "0x65e21728": {
+      "post_mean_gap_pp": 100.0,
+      "ci_lo_pp": 100.0,
+      "ci_hi_pp": 100.0
+    },
+    "0x7b6c20ab": {
+      "post_mean_gap_pp": 99.88,
+      "ci_lo_pp": 99.84,
+      "ci_hi_pp": 99.91
+    },
+    "0x88da4c6b": {
+      "post_mean_gap_pp": 100.0,
+      "ci_lo_pp": 99.99,
+      "ci_hi_pp": 100.0
+    },
+    "0xb00110cc": {
+      "post_mean_gap_pp": 88.98,
+      "ci_lo_pp": 88.56,
+      "ci_hi_pp": 89.4
+    },
+    "0xc84403a3": {
+      "post_mean_gap_pp": 99.99,
+      "ci_lo_pp": 99.98,
+      "ci_hi_pp": 100.0
+    }
+  },
+  "by_type": {
+    "IFM": {
+      "n": 5,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct_unweighted": 10.99,
+      "nct_rate_pct_tonnage_weighted": 30.93,
+      "mean_diff_pp": 89.01,
+      "n_positive": 5,
+      "n_negative": 0,
+      "sign_test_p": 0.0625
+    },
+    "ARR": {
+      "n": 4,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct_unweighted": 0.02,
+      "nct_rate_pct_tonnage_weighted": 0.03,
+      "mean_diff_pp": 99.98,
+      "n_positive": 4,
+      "n_negative": 0,
+      "sign_test_p": 0.125
+    },
+    "REDD+": {
+      "n": 5,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct_unweighted": 61.98,
+      "nct_rate_pct_tonnage_weighted": 69.01,
+      "mean_diff_pp": 38.02,
+      "n_positive": 4,
+      "n_negative": 0,
+      "sign_test_p": 0.125
+    }
+  },
+  "sensitivity_gamma": 3.048,
+  "sensitivity_note": "All 13 effective pairs favour BCT. An unobserved per-pair confounder would need to bias the BCT-vs-NCT redemption odds by a factor of Gamma>3.05 (i.e. make a credit >3.0x more likely to be redeemed in BCT than NCT for reasons unrelated to pool design) before the matched-pair sign test would lose significance at alpha=0.05. Because quality is held fixed within each pair by construction, such a confounder is hard to motivate.",
+  "mixed_logit": {
+    "method": "BinomialBayesMixedGLM (variational), token random intercept",
+    "bct_log_odds": 131.887,
+    "glm_bct_log_odds": 14.044,
+    "note": "BCT redemption is ~100% (quasi-complete separation), so the BCT coefficient is large and positive; the point estimate is less informative than the exact/permutation tests. Direction and significance agree with the sign test."
+  },
+  "per_token_table": [
+    {
+      "short": "0x65e21728",
+      "type": "ARR",
+      "composite": 50.77,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.0,
+      "diff_pp": 100.0
+    },
+    {
+      "short": "0x5a75fa23",
+      "type": "ARR",
+      "composite": 50.38,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.0,
+      "diff_pp": 100.0
+    },
+    {
+      "short": "0x0bccab36",
+      "type": "ARR",
+      "composite": 51.98,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.03,
+      "diff_pp": 99.97
+    },
+    {
+      "short": "0x05a28540",
+      "type": "ARR",
+      "composite": 50.38,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.05,
+      "diff_pp": 99.95
+    },
+    {
+      "short": "0xc84403a3",
+      "type": "IFM",
+      "composite": 48.52,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.0,
+      "diff_pp": 100.0
+    },
+    {
+      "short": "0x0f310489",
+      "type": "IFM",
+      "composite": 48.52,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.0,
+      "diff_pp": 100.0
+    },
+    {
+      "short": "0x354e2edc",
+      "type": "IFM",
+      "composite": 48.12,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.0,
+      "diff_pp": 100.0
+    },
+    {
+      "short": "0x7b6c20ab",
+      "type": "IFM",
+      "composite": 49.73,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.12,
+      "diff_pp": 99.88
+    },
+    {
+      "short": "0x6362364a",
+      "type": "IFM",
+      "composite": 48.12,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 54.85,
+      "diff_pp": 45.15
+    },
+    {
+      "short": "0x88da4c6b",
+      "type": "REDD+",
+      "composite": 30.75,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 0.0,
+      "diff_pp": 100.0
+    },
+    {
+      "short": "0xb00110cc",
+      "type": "REDD+",
+      "composite": 30.75,
+      "bct_rate_pct": 99.99,
+      "nct_rate_pct": 11.0,
+      "diff_pp": 88.99
+    },
+    {
+      "short": "0x62896f42",
+      "type": "REDD+",
+      "composite": 31.15,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 99.07,
+      "diff_pp": 0.93
+    },
+    {
+      "short": "0x54a34c14",
+      "type": "REDD+",
+      "composite": 32.35,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 99.81,
+      "diff_pp": 0.19
+    },
+    {
+      "short": "0x463de2a5",
+      "type": "REDD+",
+      "composite": 30.75,
+      "bct_rate_pct": 100.0,
+      "nct_rate_pct": 100.0,
+      "diff_pp": -0.0
+    }
+  ]
+}
