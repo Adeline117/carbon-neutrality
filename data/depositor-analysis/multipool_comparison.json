@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "generated_by": "multipool_comparison.py",
+    "purpose": "4-pool generalization to address the n=1 / single-pool objection",
+    "pools_compared": [
+      "BCT",
+      "NCT",
+      "C3",
+      "MCO2"
+    ],
+    "rubric": "identical BCT/NCT scoring rubric (scoring-rubrics v0.4)"
+  },
+  "pools": {
+    "BCT": {
+      "pool": "BCT (Toucan permissionless)",
+      "mechanism": "permissionless deposit pool",
+      "n_deposits": 1187,
+      "n_deposits_scored": 877,
+      "total_tonnes": 15205728.74,
+      "mean_quality": 31.12,
+      "volume_weighted_mean_quality": 31.71,
+      "temporal_rho": -0.4387,
+      "temporal_p": 1.5125374723493518e-42,
+      "q1_q4_decline": 3.7782,
+      "q1_mean": 32.41,
+      "q4_mean": 28.63,
+      "composition": {
+        "ARR": 5.56,
+        "Fossil switch": 11.41,
+        "IFM": 1.88,
+        "Industrial": 0.66,
+        "Industrial gas": 4.42,
+        "REDD+": 3.43,
+        "Renewable": 67.29,
+        "Waste/Methane": 5.34
+      },
+      "top_type": "Renewable",
+      "redemption_selectivity": null,
+      "price_quality": null,
+      "source": "nct_comparison_results.json",
+      "temporal_identified": true
+    },
+    "NCT": {
+      "pool": "NCT (Toucan AFOLU-filtered)",
+      "mechanism": "filtered deposit pool (AFOLU only, vintage >= 2012)",
+      "n_deposits": 708,
+      "n_deposits_scored": 264,
+      "total_tonnes": 1526116.78,
+      "mean_quality": 39.98,
+      "volume_weighted_mean_quality": 43.89,
+      "temporal_rho": -0.1051,
+      "temporal_p": 0.08821227378680836,
+      "q1_q4_decline": 0.842,
+      "q1_mean": 40.19,
+      "q4_mean": 39.35,
+      "composition": {
+        "AFOLU (nature-based)": 100.0
+      },
+      "top_type": "AFOLU (nature-based)",
+      "redemption_selectivity": null,
+      "price_quality": null,
+      "source": "nct_comparison_results.json",
+      "temporal_identified": true
+    },
+    "C3": {
+      "pool": "C3 UBO (Universal Basic Offset)",
+      "mechanism": "permissionless deposit pool (UBO) + filtered (NBO)",
+      "n_deposits": 92,
+      "n_deposits_scored": 92,
+      "total_tonnes": 608829.14,
+      "mean_quality": 34.0038,
+      "volume_weighted_mean_quality": 34.0038,
+      "temporal_rho": null,
+      "temporal_p": null,
+      "q1_q4_decline": null,
+      "q1_mean": null,
+      "q4_mean": null,
+      "composition": {
+        "REDD+": 50.21,
+        "Renewable": 26.1,
+        "ARR": 13.91,
+        "Cookstove": 4.57,
+        "IFM": 5.21
+      },
+      "top_type": "REDD+",
+      "redemption_selectivity": null,
+      "price_quality": null,
+      "source": "computed (score_alt_pools.py)",
+      "temporal_identified": false,
+      "aux_deposit_size_trend": {
+        "spearman_rho_size_vs_order": 0.2852,
+        "spearman_p": 0.005864702094994705,
+        "n": 92
+      }
+    },
+    "MCO2": {
+      "pool": "Moss MCO2 (PoS Bridge Token)",
+      "mechanism": "centrally-issued bridge token (NOT a deposit pool)",
+      "n_deposits": 608,
+      "n_deposits_scored": 608,
+      "total_tonnes": 769327.62,
+      "mean_quality": 26.65,
+      "volume_weighted_mean_quality": 26.65,
+      "temporal_rho": null,
+      "temporal_p": null,
+      "q1_q4_decline": null,
+      "q1_mean": null,
+      "q4_mean": null,
+      "composition": {
+        "REDD+ (Amazon)": 80.0,
+        "REDD+ (other)": 20.0
+      },
+      "top_type": "REDD+ (Amazon)",
+      "redemption_selectivity": null,
+      "price_quality": null,
+      "source": "computed (score_alt_pools.py)",
+      "temporal_identified": false,
+      "aux_deposit_size_trend": {
+        "spearman_rho_size_vs_order": -0.1504,
+        "spearman_p": 0.00019763331850958392,
+        "n": 608
+      }
+    }
+  },
+  "direction_consistency": {
+    "pools_with_identified_temporal_quality": [
+      "BCT",
+      "NCT"
+    ],
+    "bct_rho": -0.4387,
+    "nct_rho": -0.1051,
+    "degradation_direction_consistent": true,
+    "permissionless_degrades_filtered_does_not": true,
+    "note": "C3 and MCO2 cannot contribute a temporal-rho (see data_gaps); they contribute composition/volume context only."
+  },
+  "headline": "Temporal quality degradation is identified only where per-token quality is observable: BCT (permissionless) shows a strong, significant decline (rho=-0.439, p=1.5e-42), while NCT (AFOLU-filtered, same operator/chain/period) does NOT (rho=-0.105, p=0.088). The contrast holds the depositor population, chain, and time window fixed and varies only the pool's quality filter, so the n=1 objection is answered by a within-operator permissionless-vs-filtered comparison rather than by a single pool. C3 (UBO/NBO) and MCO2 are included for composition/volume context but cannot supply an independent temporal-rho: C3 lacks per-token quality metadata and MCO2 has no adverse-selection deposit mechanism at all (centrally-issued fixed-supply token). Among pools where quality is observed, the direction is CONSISTENT: the permissionless pool degrades, the filtered pool does not.",
+  "data_gaps": [
+    "C3 (UBO+NBO): no per-token project type, methodology, name, or vintage in the event records or anywhere in the repo. Per-deposit quality is unobserved, so a temporal Spearman of quality vs deposit order is NOT identifiable. temporal_rho/temporal_p/q1_q4_decline set to null. Composition (REDD+/Renewable/ARR/...) is a documented quality-filter prior, not a measured per-token mix.",
+    "C3 statistical power is ~8% of BCT (92 vs 1,187 deposits) even if metadata existed; insufficient for an independent temporal DiD (per independent_control_search.json).",
+    "MCO2: NOT a permissionless deposit pool. 'mints' are Polygon PoS-bridge deposits of a fixed-supply, centrally-issued token (Moss Amazon REDD+). There is no race-to-the-bottom deposit mechanism, so adverse selection is structurally absent and a temporal quality-rho is not meaningful. temporal_rho set to null.",
+    "No redemption events for C3 or MCO2 exist in the repo (BCT's redemption_analysis.json has no counterpart). Selective-redemption rates by type are NOT computable for C3/MCO2; redemption_selectivity = null.",
+    "No price series for C3 (UBO/NBO) or MCO2 in the repo (cf. BCT bct_prices_daily.json). price_quality = null for both.",
+    "BCT and NCT temporal statistics are reused verbatim from nct_comparison_results.json and were NOT recomputed here."
+  ]
+}

@@ -544,6 +544,122 @@ def natcomms_fig5_quality_gating():
     print("  -> natcomms_fig5_quality_gating.png/pdf")
 
 
+def natcomms_fig_within_token():
+    """NatComms-Fig (within-token): Matched-pair slope plot of redemption rate
+    for the 14 credits deposited into BOTH the unscreened BCT pool and the
+    screened NCT pool. Same credit, two pools, two fates -> within-token causal
+    contrast. Colour-coded by project type (IFM / ARR / REDD+)."""
+    wt = load_json(DATA / "depositor-analysis" / "within_token_did.json")
+
+    rows = wt["per_token_table"]
+    by_type = wt["by_type"]
+
+    # Project-type colours (colorblind-safe)
+    type_color = {"IFM": C_BLUE, "ARR": C_GREEN, "REDD+": C_ORANGE}
+    type_order = ["IFM", "ARR", "REDD+"]
+
+    fig, (ax, axb) = plt.subplots(
+        1, 2, figsize=(6.8, 3.1), gridspec_kw={"width_ratios": [2.3, 1.0]}
+    )
+
+    # --- Panel A: per-token slope plot (BCT -> NCT) ---
+    x_bct, x_nct = 0.0, 1.0
+    for r in rows:
+        c = type_color.get(r["type"], C_GREY)
+        ax.plot(
+            [x_bct, x_nct],
+            [r["bct_rate_pct"], r["nct_rate_pct"]],
+            color=c, alpha=0.55, linewidth=0.9, zorder=2,
+            marker="o", markersize=3.2, markeredgecolor="black",
+            markeredgewidth=0.25,
+        )
+
+    # Mean line (bold) using aggregate published truth
+    agg = wt["data_provenance"]["published_truth"]
+    ax.plot(
+        [x_bct, x_nct],
+        [agg["bct_rate_pct"], agg["nct_rate_pct"]],
+        color="black", linewidth=2.2, zorder=4,
+        marker="D", markersize=5, label="Pool mean",
+    )
+    ax.annotate(
+        f"{agg['bct_rate_pct']:.0f}%", (x_bct, agg["bct_rate_pct"]),
+        xytext=(-6, 6), textcoords="offset points", fontsize=7,
+        fontweight="bold", ha="right",
+    )
+    ax.annotate(
+        f"{agg['nct_rate_pct']:.1f}%", (x_nct, agg["nct_rate_pct"]),
+        xytext=(6, -2), textcoords="offset points", fontsize=7,
+        fontweight="bold", ha="left",
+    )
+
+    ax.set_xlim(-0.45, 1.55)
+    ax.set_ylim(-5, 108)
+    ax.set_xticks([x_bct, x_nct])
+    ax.set_xticklabels(["BCT\n(unscreened)", "NCT\n(screened)"])
+    ax.set_ylabel("Redemption (retirement) rate (%)")
+    ax.set_title("Same credit, two pools, two fates", fontsize=8.5)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+
+    # Type legend
+    handles = [
+        mpatches.Patch(color=type_color[t], label=f"{t} (n={by_type[t]['n']})")
+        for t in type_order
+    ]
+    handles.append(plt.Line2D([0], [0], color="black", linewidth=2.2,
+                              marker="D", markersize=5, label="Pool mean"))
+    ax.legend(handles=handles, loc="center left", frameon=False, fontsize=6,
+              bbox_to_anchor=(0.30, 0.55))
+
+    # Headline annotation
+    ax.text(
+        -0.40, 50,
+        (f"Within-token gap\n+{wt['mean_diff_pp']:.1f} pp\n"
+         f"95% CI [{wt['token_level_bootstrap']['ci_lo_pp']:.0f}, {wt['token_level_bootstrap']['ci_hi_pp']:.0f}]\n"
+         f"sign/perm/Wilcoxon\np = 2.4x10$^{{-4}}$\n"
+         f"$\\Gamma$ = {wt['sensitivity_gamma']:.2f}"),
+        fontsize=6, va="center", ha="left",
+        bbox=dict(boxstyle="round,pad=0.35", fc="#f2f2f2", ec="#bbbbbb", lw=0.5),
+    )
+
+    # --- Panel B: grouped bars by project type ---
+    n = len(type_order)
+    idx = np.arange(n)
+    bw = 0.38
+    bct_rates = [by_type[t]["bct_rate_pct"] for t in type_order]
+    nct_rates = [by_type[t]["nct_rate_pct_tonnage_weighted"] for t in type_order]
+
+    axb.bar(idx - bw / 2, bct_rates, bw, color=C_RED, label="BCT",
+            edgecolor="black", linewidth=0.3)
+    axb.bar(idx + bw / 2, nct_rates, bw, color=C_TEAL, label="NCT",
+            edgecolor="black", linewidth=0.3)
+
+    for i, t in enumerate(type_order):
+        d = by_type[t]["mean_diff_pp"]
+        # Place gap label just above the shorter (NCT) bar to avoid the legend
+        ylab = min(bct_rates[i], nct_rates[i])
+        axb.annotate(f"+{d:.0f} pp", (i + bw / 2, ylab), xytext=(0, 4),
+                     textcoords="offset points", ha="center", fontsize=5.5,
+                     fontweight="bold", color="#444444")
+
+    axb.set_xticks(idx)
+    axb.set_xticklabels(type_order, fontsize=6.5)
+    axb.set_ylim(0, 120)
+    axb.set_ylabel("Redemption rate (%)", fontsize=7)
+    axb.set_title("By project type", fontsize=8.5)
+    axb.legend(loc="upper center", frameon=False, fontsize=6, ncol=2,
+               bbox_to_anchor=(0.5, 1.0))
+    axb.spines["top"].set_visible(False)
+    axb.spines["right"].set_visible(False)
+
+    fig.tight_layout()
+    fig.savefig(OUT / "natcomms_fig_within_token.png")
+    fig.savefig(OUT / "natcomms_fig_within_token.pdf")
+    plt.close(fig)
+    print("  -> natcomms_fig_within_token.png/pdf")
+
+
 def natsust_fig2_ccp_li_comparison():
     """NatSust-Fig-2: CCP vs non-CCP Lemons Index comparison."""
     scan = load_json(DATA / "lemons-index" / "systematic_scan_results.json")
@@ -769,6 +885,7 @@ FIGURE_REGISTRY = {
     # Nat Comms
     "natcomms_fig3b": ("NatComms-Fig-3b: Null model histogram", natcomms_fig3b_null_model, "natcomms"),
     "natcomms_fig5": ("NatComms-Fig-5: Counterfactual quality gating", natcomms_fig5_quality_gating, "natcomms"),
+    "natcomms_fig_within_token": ("NatComms-Fig (within-token): Matched-pair redemption", natcomms_fig_within_token, "natcomms"),
     # Nat Sust
     "natsust_fig2": ("NatSust-Fig-2: CCP vs non-CCP LI", natsust_fig2_ccp_li_comparison, "natsust"),
     # WWW 2027
