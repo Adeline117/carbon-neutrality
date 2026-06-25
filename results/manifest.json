@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "0.1.0",
-    "last_updated": "2026-06-25T07:30:36.288561+00:00",
+    "last_updated": "2026-06-25T23:34:34.761808+00:00",
     "last_updated_by": "elevate_flagship_manifest",
     "paper": "natcomms-draft",
     "description": "Single source of truth for all numeric claims in the paper. Every number in the manuscript MUST trace back to a key here."
@@ -1908,6 +1908,32 @@
       "unit": "count",
       "source": "data/depositor-analysis/multipool_comparison.json",
       "experiment_id": "multipool_v1"
+    }
+  },
+  "early_warning": {
+    "danger_threshold_li": {
+      "value": 0.5,
+      "unit": "lemons index",
+      "source": "data/depositor-analysis/early_warning_results.json",
+      "experiment_id": "early_warning_v1"
+    },
+    "li_at_trigger": {
+      "value": 0.71,
+      "unit": "lemons index",
+      "source": "data/depositor-analysis/early_warning_results.json",
+      "experiment_id": "early_warning_v1"
+    },
+    "price_at_trigger_usd": {
+      "value": 5.91,
+      "unit": "USD",
+      "source": "data/depositor-analysis/early_warning_results.json",
+      "experiment_id": "early_warning_v1"
+    },
+    "lead_time_months": {
+      "value": 8.8,
+      "unit": "months",
+      "source": "data/depositor-analysis/early_warning_results.json",
+      "experiment_id": "early_warning_v1"
     }
   }
 }
