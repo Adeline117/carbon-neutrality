@@ -185,18 +185,27 @@ diagnostic review.
 - **α:** 0.05 (two-sided).
 - **Power (1 − β):** 0.80.
 
-### Calculation
+### Calculation (simulation-validated)
 
-Standard two-sample t, equal allocation:
-$n_{per arm} = 2 \cdot (z_{1-\alpha/2} + z_{1-\beta})^2 \cdot (\sigma / \Delta)^2$
-$n_{per arm} = 2 \cdot (1.96 + 0.84)^2 \cdot (1400 / 1000)^2$
-$n_{per arm} = 2 \cdot 7.84 \cdot 1.96 = 30.7$
+The closed-form two-sample-t approximation,
+$n_{per arm} = 2 (z_{1-\alpha/2} + z_{1-\beta})^2 (\sigma/\Delta)^2
+= 2 (1.96 + 0.84)^2 (1400/1000)^2 \approx 31$,
+is replaced by a Monte-Carlo power study (`data/field-experiment/power_analysis.py`,
+4,000 replications per cell, two-sided Welch t). The simulation gives the
+defensible figure:
 
-So ~31 retirements per arm for the marginal mean test. With the 0.1 effect
-*on the 0–100 unit scale* (SI units) the requested task specifies — i.e.
-Δ = 10 bps, σ = 14 bps — the required sample is
-$n_{per arm} = 2 \cdot 7.84 \cdot (14/10)^2 = 30.7$ as well. (The ratio
-σ/Δ=1.4 is invariant to scale.)
+- **80% power at the pre-registered MDE (Δ = 1000 bps, σ = 1400 bps) requires
+  35 retired credits per arm** (closed form slightly understates it at 31).
+- At the planned **500 committed per arm**, the smallest 80%-detectable effect is
+  **≈250 bps** — far below the MDE.
+- A full-mechanism simulation (gate refuses below-cutoff credits, reducing the
+  treatment-arm retired-N) gives **H1 power ≈ 0.999 at N = 1000 even under no
+  behavioural self-sorting**. Caveat surfaced by the simulation: with no
+  self-sorting the gate refuses ~98% of the treatment arm, so only ~12 treatment
+  retirements clear the gate; H1 still has power because the effect is large, but
+  the *informative* behavioural channels (H2, H3) depend on partial self-sorting,
+  for which N = 1000 yields ~90–280 treatment retirements under moderate-to-strong
+  sorting. Results are written to `_mock_out/power_analysis_results.json`.
 
 ### Design inflation
 
@@ -285,6 +294,7 @@ one-sentence rationale.
 - **Tests:** `contracts/experiment/test/RandomizedGate.t.sol`
 - **Analysis pipeline:** `data/field-experiment/analysis_pipeline.py`
 - **Synthetic validation:** `data/field-experiment/mock_data_validation.py`
+- **Power analysis:** `data/field-experiment/power_analysis.py` (Monte-Carlo; validates Section 6)
 - **Event schema:** see top of `analysis_pipeline.py`.
 - **Deployment script:** `script/DeployRandomizedGate.s.sol` (to be added
   at partner signature).

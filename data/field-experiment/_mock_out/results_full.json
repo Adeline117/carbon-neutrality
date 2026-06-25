@@ -1,0 +1,115 @@
+{
+  "balance": {
+    "n_treatment": 3074,
+    "n_control": 3092,
+    "share_treatment": 0.49854038274408047,
+    "chi_square": 0.05254622121310412,
+    "p_value": 0.8186904477126578,
+    "passes_at_alpha_05": true
+  },
+  "attrition": {
+    "commit_to_settle_treatment": 0.988939492517892,
+    "commit_to_settle_control": 0.9886804657179818,
+    "diff": 0.0002590267999101892,
+    "p_value": 0.9229807264191188
+  },
+  "primary_itt": {
+    "outcome": "composite_bps_weighted_by_tonnes",
+    "n": 3474,
+    "mean_treatment": 6669.554443004254,
+    "mean_control": 3314.2134932738754,
+    "effect": 3355.3409497303783,
+    "se": 40.54350190423276,
+    "ci_low": 3275.875685998082,
+    "ci_high": 3434.8062134626744,
+    "p_value": 0.0
+  },
+  "secondary_itt": [
+    {
+      "outcome": "share_retired_grade_at_least_A",
+      "n": 6097,
+      "mean_treatment": 0.13717105263157894,
+      "mean_control": 0.1452404317958783,
+      "effect": -0.008069379164299367,
+      "se": 0.008918682874794706,
+      "ci_low": -0.025549997598896992,
+      "ci_high": 0.009411239270298258,
+      "p_value": 0.36565001073150366
+    },
+    {
+      "outcome": "mean_grade_ordinal",
+      "n": 6097,
+      "mean_treatment": 1.2289473684210526,
+      "mean_control": 1.2580961727183513,
+      "effect": -0.029148804297298714,
+      "se": 0.027173602141992423,
+      "ci_low": -0.08240906449560387,
+      "ci_high": 0.024111455901006433,
+      "p_value": 0.28345347412649025
+    },
+    {
+      "outcome": "share_of_commits_that_retire",
+      "n": 6166,
+      "mean_treatment": 0.13565387117761873,
+      "mean_control": 0.9886804657179818,
+      "effect": -0.8530265945403631,
+      "se": 0.006462396870758678,
+      "ci_low": -0.8656928924070502,
+      "ci_high": -0.8403602966736761,
+      "p_value": 0.0
+    }
+  ],
+  "tot": {
+    "outcome": "composite_bps_weighted_by_tonnes",
+    "n": 3474,
+    "effect_itt": 3355.3409497303783,
+    "compliance_rate": 0.8530265945403631,
+    "effect_tot": 3933.4540929973455,
+    "se_tot": 56.09813231935658,
+    "ci_low": 3823.5017536514065,
+    "ci_high": 4043.4064323432845
+  },
+  "rd": {
+    "cutoff_bps": 6000,
+    "bandwidth_bps": 500,
+    "n_left": 264,
+    "n_right": 205,
+    "jump": 1.0,
+    "se": 0.0,
+    "p_value": NaN
+  },
+  "heterogeneity": [
+    {
+      "subgroup": "wallet_tercile=small",
+      "effect": -83.69242602566828,
+      "se": 60.578114440047756,
+      "ci_low": -202.42553032816187,
+      "ci_high": 35.04067827682532
+    },
+    {
+      "subgroup": "wallet_tercile=medium",
+      "effect": -30.65188131580453,
+      "se": 66.59112293235205,
+      "ci_low": -161.17048226321455,
+      "ci_high": 99.86671963160549
+    },
+    {
+      "subgroup": "wallet_tercile=large",
+      "effect": -64.45950928574894,
+      "se": 62.40915535082081,
+      "ci_low": -186.78145377335773,
+      "ci_high": 57.86243520185985
+    }
+  ],
+  "price_premium": {
+    "outcome": "usd_per_tonne",
+    "n": 3474,
+    "mean_treatment": 38.19077854085024,
+    "mean_control": 24.99630912294174,
+    "effect": 13.1944694179085,
+    "se": 0.21813607162464752,
+    "ci_low": 12.766922717524192,
+    "ci_high": 13.622016118292809,
+    "p_value": 0.0
+  }
+}

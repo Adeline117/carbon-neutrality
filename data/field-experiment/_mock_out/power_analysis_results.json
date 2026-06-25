@@ -1,0 +1,101 @@
+{
+  "design": "quality-gated retirement RCT; primary Y1 = mean composite of retired credits, treatment (gate) vs control (no gate)",
+  "q1_primary_mde": {
+    "mde_bps": 1000.0,
+    "sigma_bps": 1400.0,
+    "power_by_n_per_arm": {
+      "15": 0.4635,
+      "20": 0.59825,
+      "25": 0.69475,
+      "28": 0.73575,
+      "31": 0.78275,
+      "35": 0.8345,
+      "40": 0.88425,
+      "50": 0.93625,
+      "75": 0.99075,
+      "100": 0.99925
+    },
+    "n_per_arm_for_80pct": 35
+  },
+  "q2_mde_frontier": {
+    "power_surface_delta_by_n": {
+      "250": {
+        "25": 0.086,
+        "50": 0.139,
+        "100": 0.248,
+        "250": 0.522,
+        "500": 0.806
+      },
+      "500": {
+        "25": 0.232,
+        "50": 0.433,
+        "100": 0.707,
+        "250": 0.978,
+        "500": 1.0
+      },
+      "750": {
+        "25": 0.465,
+        "50": 0.751,
+        "100": 0.966,
+        "250": 1.0,
+        "500": 1.0
+      },
+      "1000": {
+        "25": 0.696,
+        "50": 0.939,
+        "100": 0.998,
+        "250": 1.0,
+        "500": 1.0
+      },
+      "1500": {
+        "25": 0.96,
+        "50": 0.999,
+        "100": 1.0,
+        "250": 1.0,
+        "500": 1.0
+      },
+      "2000": {
+        "25": 0.999,
+        "50": 1.0,
+        "100": 1.0,
+        "250": 1.0,
+        "500": 1.0
+      },
+      "3000": {
+        "25": 1.0,
+        "50": 1.0,
+        "100": 1.0,
+        "250": 1.0,
+        "500": 1.0
+      }
+    },
+    "mde_at_500_per_arm_bps": 250
+  },
+  "q3_planned_design_N1000": {
+    "pessimistic_no_sorting": {
+      "treatment_sort_shift_bps": 0.0,
+      "H1_power": 0.999,
+      "mean_retired_N_treatment": 11.6,
+      "retired_N_control": 500
+    },
+    "moderate_sorting": {
+      "treatment_sort_shift_bps": 1500.0,
+      "H1_power": 1.0,
+      "mean_retired_N_treatment": 89.2,
+      "retired_N_control": 500
+    },
+    "strong_sorting": {
+      "treatment_sort_shift_bps": 3000.0,
+      "H1_power": 1.0,
+      "mean_retired_N_treatment": 279.6,
+      "retired_N_control": 500
+    },
+    "robustness_cells": {
+      "heterogeneity_need_per_cell": 50,
+      "heterogeneity_have_per_arm_tercile_approx": 167,
+      "rd_need_within_bandwidth": 100,
+      "note": "N=1000 satisfies the >=50/cell heterogeneity and >=100/bandwidth RD requirements; these robustness cells, not the primary H1 test, are the binding sample-size constraint."
+    }
+  },
+  "headline": "At the pre-registered MDE (1000 bps, sigma 1400), 35 retired credits per arm reach 80% power (two-sided Welch t); the planned N=1000 (500/arm) is therefore strongly over-powered for H1 even under no behavioural self-sorting (H1 power = 0.999). The binding constraint is the heterogeneity/RD robustness cells, which N=1000 meets."
+}
