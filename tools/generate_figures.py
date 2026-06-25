@@ -609,15 +609,15 @@ def natcomms_fig_within_token():
     ]
     handles.append(plt.Line2D([0], [0], color="black", linewidth=2.2,
                               marker="D", markersize=5, label="Pool mean"))
-    ax.legend(handles=handles, loc="center left", frameon=False, fontsize=6,
-              bbox_to_anchor=(0.30, 0.55))
+    ax.legend(handles=handles, loc="upper right", frameon=False, fontsize=6,
+              bbox_to_anchor=(1.04, 1.03))
 
-    # Headline annotation
+    # Headline annotation (lower-left, clear of the descending slope lines)
     ax.text(
-        -0.40, 50,
+        -0.40, 30,
         (f"Within-token gap\n+{wt['mean_diff_pp']:.1f} pp\n"
          f"95% CI [{wt['token_level_bootstrap']['ci_lo_pp']:.0f}, {wt['token_level_bootstrap']['ci_hi_pp']:.0f}]\n"
-         f"sign/perm/Wilcoxon\np = 2.4x10$^{{-4}}$\n"
+         f"exact $p$ = 2.4$\\times$10$^{{-4}}$\n"
          f"$\\Gamma$ = {wt['sensitivity_gamma']:.2f}"),
         fontsize=6, va="center", ha="left",
         bbox=dict(boxstyle="round,pad=0.35", fc="#f2f2f2", ec="#bbbbbb", lw=0.5),
@@ -637,19 +637,19 @@ def natcomms_fig_within_token():
 
     for i, t in enumerate(type_order):
         d = by_type[t]["mean_diff_pp"]
-        # Place gap label just above the shorter (NCT) bar to avoid the legend
-        ylab = min(bct_rates[i], nct_rates[i])
-        axb.annotate(f"+{d:.0f} pp", (i + bw / 2, ylab), xytext=(0, 4),
+        # Gap label centered above the pair (BCT bar is ~100 for every type)
+        ytop = max(bct_rates[i], nct_rates[i])
+        axb.annotate(f"+{d:.0f} pp", (i, ytop), xytext=(0, 3),
                      textcoords="offset points", ha="center", fontsize=5.5,
                      fontweight="bold", color="#444444")
 
     axb.set_xticks(idx)
     axb.set_xticklabels(type_order, fontsize=6.5)
-    axb.set_ylim(0, 120)
+    axb.set_ylim(0, 122)
     axb.set_ylabel("Redemption rate (%)", fontsize=7)
     axb.set_title("By project type", fontsize=8.5)
     axb.legend(loc="upper center", frameon=False, fontsize=6, ncol=2,
-               bbox_to_anchor=(0.5, 1.0))
+               bbox_to_anchor=(0.5, 1.16))
     axb.spines["top"].set_visible(False)
     axb.spines["right"].set_visible(False)
 
