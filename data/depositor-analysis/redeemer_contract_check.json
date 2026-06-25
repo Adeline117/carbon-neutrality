@@ -1,0 +1,33 @@
+{
+  "method": "eth_getCode @ latest via polygon-bor-rpc.publicnode.com",
+  "chain": "polygon",
+  "note": "EOA = empty code (0x); CONTRACT = non-empty bytecode",
+  "results": {
+    "0x65a5076c0ba74e5f3e069995dc3dab9d197d995c": {
+      "desc": "Industrial gas; 651,334 t; retire-in-same-tx",
+      "is_contract": true,
+      "code_len": 344
+    },
+    "0x1b8e77cd56d41ff886866fab4d14de7973a55d64": {
+      "desc": "IFM; 335,556 t",
+      "is_contract": false,
+      "code_len": 2
+    },
+    "0xee4b5fe730a8ff4dfb9041421eea48d2ae79e3e9": {
+      "desc": "REDD+; 195,051 t",
+      "is_contract": false,
+      "code_len": 2
+    },
+    "0x4b3ebae392e8b90a9b13068e90b27d9c41abc3c8": {
+      "desc": "ARR; 188,205 t",
+      "is_contract": false,
+      "code_len": 2
+    },
+    "0x855627a0d999f2912327de000c1e92faa8e683bc": {
+      "desc": "ARR; 183,629 t",
+      "is_contract": false,
+      "code_len": 2
+    }
+  },
+  "summary": "Top extractor by tonnage (0x65a5, 42% of headline 1.55M t) is a CONTRACT consistent with a retirement aggregator/router; the other four top accounts are EOAs consistent with cross-pool arbitrage."
+}
