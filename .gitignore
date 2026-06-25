@@ -38,3 +38,6 @@ data/satellite-analysis/cache/hansen/*.npz
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+
+# living-paper audit artifacts
+review/
