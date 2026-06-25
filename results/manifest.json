@@ -1834,6 +1834,24 @@
       "unit": "percentage points",
       "source": "data/depositor-analysis/within_token_did.json",
       "experiment_id": "within_token_v1"
+    },
+    "boot_gap_mean_pp": {
+      "value": 73.9,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "boot_gap_ci_lo_pp": {
+      "value": 51.0,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "boot_gap_ci_hi_pp": {
+      "value": 92.9,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
     }
   },
   "multipool": {

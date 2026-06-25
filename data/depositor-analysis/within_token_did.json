@@ -63,7 +63,8 @@
     "ci_lo_pp": 72.235,
     "ci_hi_pp": 75.294,
     "p_gap_gt0": 1.0,
-    "n_draws": 200000
+    "n_draws": 200000,
+    "caveat": "tonne-level independence overstates precision; see token_level_bootstrap for inferential CI"
   },
   "bayes_per_token": {
     "0x05a28540": {
@@ -290,5 +291,13 @@
       "nct_rate_pct": 100.0,
       "diff_pp": -0.0
     }
-  ]
+  ],
+  "token_level_bootstrap": {
+    "unit": "token (n=14)",
+    "method": "percentile bootstrap of the cross-token mean gap, 20000 resamples, seed=42",
+    "mean_gap_pp": 73.9,
+    "ci_lo_pp": 51.0,
+    "ci_hi_pp": 92.9,
+    "note": "This is the honest uncertainty: the 14 tokens are the independent units. The Beta-Binomial CI below treats deposited tonnes as independent Bernoulli trials and therefore understates uncertainty (redemptions are lumpy batch transactions); it is retained only as a tonne-level descriptive and is NOT used for inference."
+  }
 }

@@ -616,10 +616,9 @@ def natcomms_fig_within_token():
     ax.text(
         -0.40, 50,
         (f"Within-token gap\n+{wt['mean_diff_pp']:.1f} pp\n"
+         f"95% CI [{wt['token_level_bootstrap']['ci_lo_pp']:.0f}, {wt['token_level_bootstrap']['ci_hi_pp']:.0f}]\n"
          f"sign/perm/Wilcoxon\np = 2.4x10$^{{-4}}$\n"
-         f"Bayes gap {wt['bayes_gap_mean_pp']:.1f} pp\n"
-         f"[{wt['bayes_gap_ci_lo_pp']:.1f}, {wt['bayes_gap_ci_hi_pp']:.1f}]\n"
-         f"$\\Gamma$ > {wt['sensitivity_gamma']:.2f}"),
+         f"$\\Gamma$ = {wt['sensitivity_gamma']:.2f}"),
         fontsize=6, va="center", ha="left",
         bbox=dict(boxstyle="round,pad=0.35", fc="#f2f2f2", ec="#bbbbbb", lw=0.5),
     )
