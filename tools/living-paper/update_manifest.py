@@ -36,6 +36,11 @@ def extract_value_from_source(source_data: dict, category: str, metric: str) -> 
     Attempt to extract a value from source data.
     This is a heuristic mapper — extend as needed for new experiment formats.
     """
+    # Source files may be JSON lists (raw event logs) rather than keyed dicts;
+    # those carry no addressable metric, so skip them gracefully.
+    if not isinstance(source_data, dict):
+        return None
+
     # Direct key lookup strategies
     key_attempts = [
         metric,

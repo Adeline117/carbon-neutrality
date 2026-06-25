@@ -1,8 +1,8 @@
 {
   "_meta": {
     "version": "0.1.0",
-    "last_updated": "2026-05-05T00:00:00Z",
-    "last_updated_by": "agent_b_did_tonnage",
+    "last_updated": "2026-06-25T07:30:36.288561+00:00",
+    "last_updated_by": "elevate_flagship_manifest",
     "paper": "natcomms-draft",
     "description": "Single source of truth for all numeric claims in the paper. Every number in the manuscript MUST trace back to a key here."
   },
@@ -616,6 +616,30 @@
     "cluster_robust_p": {
       "value": 0.24,
       "unit": "p-value",
+      "source": "data/depositor-analysis/valid_did_analysis.json",
+      "experiment_id": "did_v1"
+    },
+    "pool_did_rho_difference": {
+      "value": -0.334,
+      "unit": "spearman rho diff",
+      "source": "data/depositor-analysis/valid_did_analysis.json",
+      "experiment_id": "did_v1"
+    },
+    "pool_did_naive_fisher_p": {
+      "value": 2.28e-07,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/valid_did_analysis.json",
+      "experiment_id": "did_v1"
+    },
+    "pool_did_cluster_robust_p": {
+      "value": 0.24,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/valid_did_analysis.json",
+      "experiment_id": "did_v1"
+    },
+    "pool_did_se_inflation": {
+      "value": 4.02,
+      "unit": "factor",
       "source": "data/depositor-analysis/valid_did_analysis.json",
       "experiment_id": "did_v1"
     }
@@ -1519,19 +1543,19 @@
   "predictive_stranding": {
     "odds_ratio_bbb_vs_b": {
       "value": 145.9,
-      "unit": "×",
+      "unit": "\u00d7",
       "source": "data/statistical-analysis/predictive_stranding_results.json",
       "experiment_id": "stranding_v1"
     },
     "odds_ratio_95ci_lo": {
       "value": 145.1,
-      "unit": "×",
+      "unit": "\u00d7",
       "source": "data/statistical-analysis/predictive_stranding_results.json",
       "experiment_id": "stranding_v1"
     },
     "odds_ratio_95ci_hi": {
       "value": 146.8,
-      "unit": "×",
+      "unit": "\u00d7",
       "source": "data/statistical-analysis/predictive_stranding_results.json",
       "experiment_id": "stranding_v1"
     },
@@ -1598,7 +1622,7 @@
       "experiment_id": "did_v1"
     },
     "event_study_se": {
-      "value": 2.50,
+      "value": 2.5,
       "unit": "SE",
       "source": "data/statistical-analysis/bct_nct_did_results.json",
       "experiment_id": "did_v1"
@@ -1617,7 +1641,7 @@
     },
     "event_study_r2": {
       "value": 0.471,
-      "unit": "R²",
+      "unit": "R\u00b2",
       "source": "data/statistical-analysis/bct_nct_did_results.json",
       "experiment_id": "did_v1"
     },
@@ -1652,7 +1676,7 @@
       "experiment_id": "did_v1"
     },
     "bayesian_ci_hi": {
-      "value": -1.10,
+      "value": -1.1,
       "unit": "quality points per SD",
       "source": "data/statistical-analysis/bct_nct_did_results.json",
       "experiment_id": "did_v1"
@@ -1718,6 +1742,154 @@
       "unit": "%",
       "source": "data/statistical-analysis/welfare_quantification_results.json",
       "experiment_id": "welfare_v1"
+    }
+  },
+  "within_token": {
+    "n_shared_tokens": {
+      "value": 14,
+      "unit": "tokens",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "mean_diff_pp": {
+      "value": 73.9,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "median_diff_pp": {
+      "value": 100.0,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "sign_test_p": {
+      "value": 0.000244,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "permutation_p": {
+      "value": 0.000244,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "wilcoxon_p": {
+      "value": 0.000244,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "n_effective_pairs": {
+      "value": 13,
+      "unit": "pairs",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "bayes_gap_mean_pp": {
+      "value": 73.8,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "bayes_gap_ci_lo_pp": {
+      "value": 72.2,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "bayes_gap_ci_hi_pp": {
+      "value": 75.3,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "bayes_p_gap_gt0": {
+      "value": 1.0,
+      "unit": "probability",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "sensitivity_gamma": {
+      "value": 3.05,
+      "unit": "odds ratio",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "ifm_diff_pp": {
+      "value": 89.0,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "arr_diff_pp": {
+      "value": 100.0,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    },
+    "redd_diff_pp": {
+      "value": 38.0,
+      "unit": "percentage points",
+      "source": "data/depositor-analysis/within_token_did.json",
+      "experiment_id": "within_token_v1"
+    }
+  },
+  "multipool": {
+    "bct_temporal_rho": {
+      "value": -0.439,
+      "unit": "spearman rho",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
+    },
+    "bct_temporal_p": {
+      "value": 1.5e-42,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
+    },
+    "nct_temporal_rho": {
+      "value": -0.105,
+      "unit": "spearman rho",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
+    },
+    "nct_temporal_p": {
+      "value": 0.088,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
+    },
+    "c3_mean_quality": {
+      "value": 34.0,
+      "unit": "composite",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
+    },
+    "c3_n_deposits": {
+      "value": 92,
+      "unit": "count",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
+    },
+    "mco2_mean_quality": {
+      "value": 26.7,
+      "unit": "composite",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
+    },
+    "mco2_n_deposits": {
+      "value": 608,
+      "unit": "count",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
+    },
+    "n_data_gaps": {
+      "value": 6,
+      "unit": "count",
+      "source": "data/depositor-analysis/multipool_comparison.json",
+      "experiment_id": "multipool_v1"
     }
   }
 }
