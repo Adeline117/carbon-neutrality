@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "0.1.0",
-    "last_updated": "2026-06-26T00:26:43.022214+00:00",
+    "last_updated": "2026-06-26T00:59:43.700611+00:00",
     "last_updated_by": "elevate_flagship_manifest",
     "paper": "natcomms-draft",
     "description": "Single source of truth for all numeric claims in the paper. Every number in the manuscript MUST trace back to a key here."
@@ -1946,6 +1946,44 @@
       "unit": "months",
       "source": "data/depositor-analysis/early_warning_results.json",
       "experiment_id": "early_warning_v1"
+    }
+  },
+  "nct_launch": {
+    "rdit_pts": {
+      "value": -2.17,
+      "unit": "composite points",
+      "source": "data/depositor-analysis/nct_launch_did_results.json",
+      "experiment_id": "nct_launch_v1"
+    },
+    "rdit_p": {
+      "value": 0.02,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/nct_launch_did_results.json",
+      "experiment_id": "nct_launch_v1"
+    },
+    "did_pts": {
+      "value": -4.74,
+      "unit": "composite points",
+      "source": "data/depositor-analysis/nct_launch_did_results.json",
+      "experiment_id": "nct_launch_v1"
+    },
+    "did_p_clustered": {
+      "value": 0.14,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/nct_launch_did_results.json",
+      "experiment_id": "nct_launch_v1"
+    },
+    "nature_share_pre": {
+      "value": 15.8,
+      "unit": "%",
+      "source": "data/depositor-analysis/nct_launch_did_results.json",
+      "experiment_id": "nct_launch_v1"
+    },
+    "nature_share_post": {
+      "value": 4.0,
+      "unit": "%",
+      "source": "data/depositor-analysis/nct_launch_did_results.json",
+      "experiment_id": "nct_launch_v1"
     }
   }
 }

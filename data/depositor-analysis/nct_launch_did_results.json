@@ -1,0 +1,17 @@
+{
+  "nct_launch_block": 24749944,
+  "nct_launch_date": "2022-02-04",
+  "parallel_pretrends": {
+    "interaction_per_Mblock": 0.209,
+    "t": 0.54,
+    "parallel_ok": true
+  },
+  "rdit_discontinuity_pts": -2.17,
+  "rdit_p": 0.0199,
+  "did_pts": -4.74,
+  "did_cluster_se": 3.21,
+  "did_p_clustered": 0.14,
+  "nature_share_pre": 0.158,
+  "nature_share_post": 0.04,
+  "verdict": "Parallel pre-trends hold; RDiT discontinuity significant (p~0.02); DiD right sign/magnitude but not significant under type-clustering (p~0.14, small post-N). Supporting, not decisive, quasi-experimental evidence of the sorting channel."
+}
