@@ -70,9 +70,9 @@
    "total_tonnes": 608829.14,
    "mean_quality": 34.0038,
    "volume_weighted_mean_quality": 34.0038,
-   "temporal_rho": -0.277,
-   "temporal_p": 0.0466,
-   "q1_q4_decline": 0.74,
+   "temporal_rho": -0.329,
+   "temporal_p": 0.004,
+   "q1_q4_decline": 0.73,
    "q1_mean": null,
    "q4_mean": null,
    "composition": {
@@ -92,7 +92,7 @@
     "spearman_p": 0.005864702094994705,
     "n": 92
    },
-   "metadata_recovery": "C3T symbols encode VCS project+vintage via eth_call; 22/26 tokens, 12/18 projects typed, 52/92 deposits scored"
+   "metadata_recovery": "C3T symbols encode VCS project+vintage (eth_call); 5 untyped projects classified via Carbonmark web lookup; 17/18 projects typed, 75/92 deposits scored, 4 spam tokens excluded"
   },
   "MCO2": {
    "pool": "Moss MCO2 (PoS Bridge Token)",
@@ -134,7 +134,7 @@
   "permissionless_degrades_filtered_does_not": true,
   "note": "C3 and MCO2 cannot contribute a temporal-rho (see data_gaps); they contribute composition/volume context only."
  },
- "headline": "Temporal quality degradation now observed in TWO independent operators: Toucan BCT (rho=-0.439) and C3 (rho=-0.277, p=0.047, partial coverage). NCT (screened) shows none (rho=-0.105, n.s.). MCO2 is a single fungible basket token (no per-token metadata).",
+ "headline": "Temporal quality degradation now observed in TWO independent operators: Toucan BCT (rho=-0.439, p<1e-40) and C3 (rho=-0.329, p=0.004, 75/92 deposits). NCT (screened) shows none (rho=-0.105, n.s.). MCO2 is a single fungible basket token (no per-token identity).",
  "data_gaps": [
   "C3 (UBO+NBO): no per-token project type, methodology, name, or vintage in the event records or anywhere in the repo. Per-deposit quality is unobserved, so a temporal Spearman of quality vs deposit order is NOT identifiable. temporal_rho/temporal_p/q1_q4_decline set to null. Composition (REDD+/Renewable/ARR/...) is a documented quality-filter prior, not a measured per-token mix.",
   "C3 statistical power is ~8% of BCT (92 vs 1,187 deposits) even if metadata existed; insufficient for an independent temporal DiD (per independent_control_search.json).",

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "0.1.0",
-    "last_updated": "2026-06-26T00:08:12.168254+00:00",
+    "last_updated": "2026-06-26T00:26:43.022214+00:00",
     "last_updated_by": "elevate_flagship_manifest",
     "paper": "natcomms-draft",
     "description": "Single source of truth for all numeric claims in the paper. Every number in the manuscript MUST trace back to a key here."
@@ -1910,16 +1910,16 @@
       "experiment_id": "multipool_v2"
     },
     "c3_temporal_rho": {
-      "value": -0.277,
+      "value": -0.329,
       "unit": "spearman rho",
       "source": "data/depositor-analysis/c3_temporal_recovered.json",
-      "experiment_id": "multipool_v2"
+      "experiment_id": "multipool_v3"
     },
     "c3_temporal_p": {
-      "value": 0.047,
+      "value": 0.004,
       "unit": "p-value",
       "source": "data/depositor-analysis/c3_temporal_recovered.json",
-      "experiment_id": "multipool_v2"
+      "experiment_id": "multipool_v3"
     }
   },
   "early_warning": {
