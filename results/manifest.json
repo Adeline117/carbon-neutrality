@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "0.1.0",
-    "last_updated": "2026-06-25T23:34:34.761808+00:00",
+    "last_updated": "2026-06-26T00:08:12.168254+00:00",
     "last_updated_by": "elevate_flagship_manifest",
     "paper": "natcomms-draft",
     "description": "Single source of truth for all numeric claims in the paper. Every number in the manuscript MUST trace back to a key here."
@@ -1904,10 +1904,22 @@
       "experiment_id": "multipool_v1"
     },
     "n_data_gaps": {
-      "value": 6,
+      "value": 4,
       "unit": "count",
       "source": "data/depositor-analysis/multipool_comparison.json",
-      "experiment_id": "multipool_v1"
+      "experiment_id": "multipool_v2"
+    },
+    "c3_temporal_rho": {
+      "value": -0.277,
+      "unit": "spearman rho",
+      "source": "data/depositor-analysis/c3_temporal_recovered.json",
+      "experiment_id": "multipool_v2"
+    },
+    "c3_temporal_p": {
+      "value": 0.047,
+      "unit": "p-value",
+      "source": "data/depositor-analysis/c3_temporal_recovered.json",
+      "experiment_id": "multipool_v2"
     }
   },
   "early_warning": {

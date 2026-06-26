@@ -1,0 +1,9 @@
+{
+ "n_scored_deposits": 52,
+ "temporal_rho": -0.2772,
+ "temporal_p": 0.04664898381032186,
+ "q1_q4_decline": 0.74,
+ "mean_composite": 31.27,
+ "method": "on-chain-recovered C3T project+vintage; typed via BCT classification overlap (12/18 projects); type-mean composite scoring",
+ "coverage": "22/26 tokens have vintage; 12/18 projects typed; 52/92 deposits scored"
+}
