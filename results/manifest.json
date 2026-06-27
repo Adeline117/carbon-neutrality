@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": "0.1.0",
-    "last_updated": "2026-06-26T00:59:43.700611+00:00",
+    "last_updated": "2026-06-27T00:00:38.504446+00:00",
     "last_updated_by": "elevate_flagship_manifest",
     "paper": "natcomms-draft",
     "description": "Single source of truth for all numeric claims in the paper. Every number in the manuscript MUST trace back to a key here."
@@ -1984,6 +1984,50 @@
       "unit": "%",
       "source": "data/depositor-analysis/nct_launch_did_results.json",
       "experiment_id": "nct_launch_v1"
+    }
+  },
+  "crosspool": {
+    "bct_mc": {
+      "value": 31.1,
+      "unit": "composite",
+      "source": "data/depositor-analysis/crosspool_design_outcome.json",
+      "experiment_id": "crosspool_v1"
+    },
+    "ubo_mc": {
+      "value": 28.9,
+      "unit": "composite",
+      "source": "data/depositor-analysis/crosspool_design_outcome.json",
+      "experiment_id": "crosspool_v1"
+    },
+    "nct_mc": {
+      "value": 40.0,
+      "unit": "composite",
+      "source": "data/depositor-analysis/crosspool_design_outcome.json",
+      "experiment_id": "crosspool_v1"
+    },
+    "nbo_mc": {
+      "value": 39.0,
+      "unit": "composite",
+      "source": "data/depositor-analysis/crosspool_design_outcome.json",
+      "experiment_id": "crosspool_v1"
+    },
+    "char_mc": {
+      "value": 77.9,
+      "unit": "composite",
+      "source": "data/depositor-analysis/crosspool_design_outcome.json",
+      "experiment_id": "crosspool_v1"
+    },
+    "n_pools": {
+      "value": 5,
+      "unit": "pools",
+      "source": "data/depositor-analysis/crosspool_design_outcome.json",
+      "experiment_id": "crosspool_v1"
+    },
+    "n_operators": {
+      "value": 2,
+      "unit": "operators",
+      "source": "data/depositor-analysis/crosspool_design_outcome.json",
+      "experiment_id": "crosspool_v1"
     }
   }
 }

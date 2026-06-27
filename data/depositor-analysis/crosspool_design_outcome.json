@@ -1,0 +1,45 @@
+{
+ "pools": [
+  {
+   "pool": "BCT",
+   "operator": "Toucan",
+   "design": "unscreened",
+   "mean_composite": 31.1,
+   "temporal_rho": -0.439,
+   "note": "p<1e-40"
+  },
+  {
+   "pool": "C3-UBO",
+   "operator": "C3",
+   "design": "unscreened",
+   "mean_composite": 28.9,
+   "temporal_rho": null,
+   "note": "monotype (flat)"
+  },
+  {
+   "pool": "NCT",
+   "operator": "Toucan",
+   "design": "nature-screened",
+   "mean_composite": 39.98204545454545,
+   "temporal_rho": -0.105,
+   "note": "n.s."
+  },
+  {
+   "pool": "C3-NBO",
+   "operator": "C3",
+   "design": "nature-screened",
+   "mean_composite": 39.0,
+   "temporal_rho": 0.277,
+   "note": "n.s."
+  },
+  {
+   "pool": "CHAR",
+   "operator": "Toucan",
+   "design": "category-allowlist",
+   "mean_composite": 77.9,
+   "temporal_rho": null,
+   "note": "PQD 0.221 (repo)"
+  }
+ ],
+ "finding": "Across 5 tokenized carbon pools spanning 2 independent operators, pool-design screening strength monotonically predicts deposit quality: unscreened pools ~29-31, nature-screened ~39-40, category-allowlist ~78. The unscreened-vs-screened gap (~10 pts) replicates within each operator."
+}
