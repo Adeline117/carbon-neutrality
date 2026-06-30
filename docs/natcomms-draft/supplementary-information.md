@@ -135,6 +135,22 @@ For BCT and five additional pools, we simulated the application of quality gates
 
 We defined 34 quality segments by the intersection of project type (17 methodology categories from the ICVCM taxonomy), geographic region (where sufficient data existed), and vintage band (pre-2015, 2015--2019, 2020--2023, 2024+). Each segment was scored using the median archetype score from the 318-credit methodology dataset. PQD was computed per segment. The vintage gradient was computed as the tonnage-weighted mean PQD across all segments within each vintage band.
 
+### Account-forensics destination tracing (relocated from Results)
+
+Tracing the immediate destination of each redeemed credit across the 20 largest extractors (2.57 million tonnes) reveals three pathways. **Cross-pool transfer (39.2%):** re-deposited into the quality-screened NCT pool, a counterpart sharing identical protocol infrastructure, capturing the price differential between the unscreened pool's uniform price and the screened pool's nature-based premium. **Immediate retirement (34.6%):** permanently retired (formally cancelled, never reusable as emission offsets) within seconds of extraction, indicating pre-arranged retirement pipelines; the largest extractor (0x65a5..., 651,334 tonnes of industrial gas) retired 100% of its credits in the same transaction as the redemption, and an on-chain code check confirms this address is a smart contract, consistent with a retirement aggregator rather than an individual extractor. **Secondary market (17.0%):** transferred to other addresses, with 6.9% re-deposited into BCT and 2.3% still held (the remaining ~9% of extracted tonnage is uncategorised). The cross-pool movement was systematic, not opportunistic: of 31 credits deposited into both pools, 14 were redeemed from the unscreened pool, and all 14 follow the same temporal sequence — unscreened-pool deposit → unscreened-pool redemption → screened-pool deposit (median 103 days, then 14 days). Not a single credit violated this ordering.
+
+### Granger causality (price–quality, weekly; relocated from Results)
+
+At weekly frequency (n = 55), Granger tests are asymmetric and bidirectional: the dominant channel runs from price to pool quality (F = 8.40, p < 10^-4 at lag 4), with the reverse channel 2.5× weaker (F = 3.40, p = 0.04 at lag 2), consistent with the architecture setting the initial composition and price then driving further deterioration. This small-sample analysis is presented as exploratory; the first-differenced daily regression (n = 330, β = −1.8, p < 0.001) is the more powerful confirmation.
+
+### Base-rate over-selection: extended sensitivity (relocated from Results)
+
+BCT's renewable share is 78.5% by deposit count (versus 69.1% by tonnage). Deposits cluster by account (509 accounts, Gini = 0.94, effective N = 83.5 by HHI), motivating account-clustered inference. An excess-share coefficient (the renewable share above the 37% null, rather than the ratio) is 0.522 with an account-level bootstrap 95% CI of [0.496, 0.547]. Under conservative assumptions (post-2008 VCS at 55%), the selection coefficient remains 1.43× (p < 10^-64). Over-selection becomes non-significant only at base rates exceeding 78.5%, an implausible assumption.
+
+### Type-level Gresham exit ordering (relocated from Results)
+
+The most valuable credit types were extracted first: ARR credits exited earliest (median March 2022), followed by industrial gas (July), IFM (October), REDD+ (November), and renewable energy last (December) — perfectly ordered by off-chain market demand (ρ = −0.74, n = 7 types).
+
 ---
 
 ## Supplementary Figures
@@ -176,3 +192,21 @@ The dual-margin population structure replicates BCT's pattern: in MILADY, only 1
 ### Supplementary Table 2. Vintage-free robustness check: temporal correlation with and without vintage dimension.
 
 Robustness analysis comparing the temporal quality correlation under two composite specifications: the full composite (all dimensions including vintage) and a vintage-free composite (vintage dimension removed, remaining weights renormalized). Full composite: Spearman $\rho$ = -0.24 ($p$ < 10$^{-16}$); vintage-free composite: $\rho$ = +0.24, sign reversal. The reversal demonstrates that the observed temporal decline is entirely attributable to the vintage dimension: later deposits carried systematically older vintages, which score lower. This is reported as a transparency and robustness result: the temporal decline is real in the composite but is mechanistically a vintage-selection effect rather than evidence of causal quality degradation over calendar time; the table reports both specifications side by side to allow readers to assess the sensitivity of the temporal finding to the inclusion of vintage scoring.
+
+### Supplementary Table 3. Framework-free prediction accuracy.
+
+A type-only prediction rule (credits in high-demand categories predicted redeemed, all others stranded) achieves 96.9% accuracy, 9.9 percentage points above a naive null model; the quality-grade rule (BBB+ predicted redeemed) achieves 91.9%. Credit type captures the dominant axis of selective redemption, and the quality framework adds no predictive power beyond type classification. The monotonic grade–redemption pattern (B 2.4% < BB 31.0% < BBB 78.0%) reflects this: all BBB tokens are nature-based credits with strong off-chain demand, while B-grade tokens are CDM-era renewables with none. Within the 116 renewable tokens, neither vintage (ρ = 0.112, p = 0.23) nor quality grade (p = 0.20) significantly predicts redemption. The type-only rule's category selection is ex post, so the 96.9% accuracy should be read as a characterisation of which variable drives redemption rather than as a prospective prediction.
+
+### Supplementary Table 4. Mean deposit composite by pool and screening design.
+
+Cross-sectional comparison of five tokenized pools across two independent operators, each classified by screening design. Mean deposit quality rises monotonically with screening strength (UBO = C3's unscreened pool; NBO = C3's nature-screened pool).
+
+| Pool | Operator | Screening design | Mean composite |
+|------|----------|------------------|---------------:|
+| BCT  | Toucan   | unscreened       | 31.1 |
+| UBO  | C3       | unscreened       | 28.9 |
+| NCT  | Toucan   | nature-screened  | 40.0 |
+| NBO  | C3       | nature-screened  | 39.0 |
+| CHAR | Toucan   | category-allowlist | 77.9 |
+
+The ~10-point unscreened-to-screened gap appears within each operator separately, isolating it from operator-specific factors. Both unscreened pools degrade over their operating life (BCT ρ = −0.439; C3 ρ = −0.329, p = 0.004) while the screened pools do not. Moss MCO2, a single fungible basket token with no per-token credit identity, is structurally outside this comparison.
