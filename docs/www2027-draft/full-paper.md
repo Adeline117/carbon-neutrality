@@ -38,7 +38,7 @@ This paper makes five contributions:
 
 3. **Distributional on-chain scoring with uncertainty quantification.** The first real-world asset token standard to store both a composite score and its variance on-chain (`compositeVarianceBps2`), enabling downstream consumers to compute P(grade >= threshold) via Gaussian CDF without additional oracle calls.
 
-4. **The Lemons Index for DeFi pool health.** A quantitative adverse-selection metric, L(pool) = 1 - (mean composite / 100), applied to five real carbon credit pools and counterfactual quality-gated scenarios, establishing a measurable link between Akerlof's theory [9] and on-chain market outcomes.
+4. **The Lemons Index for DeFi pool health, with cross-operator validation and real-time early warning.** A quantitative adverse-selection metric, L(pool) = 1 - (mean composite / 100), applied to five real carbon credit pools spanning two independent operators via an on-chain metadata-recovery method that needs no operator cooperation. Mean quality rises monotonically with screening strictness within each operator, isolating pool design from protocol idiosyncrasy. Computed prospectively, the same index flagged BCT as high-risk on its first day of operation -- roughly nine months before its price more than halved -- establishing the standard as an early-warning instrument, not only a gate.
 
 5. **Empirical validation on the hardest RWA domain, plus cross-domain generalization.** CCP calibration against 318 credits (1.99-grade gap, Cohen's d = 1.87), commercial agency rank correlation (Spearman +0.901 vs. BeZero, n = 27, 12 project types), LLM panel inter-rater reliability (Fleiss' kappa = 0.600, ICC = 0.993), adversarial testing with 100% disqualifier recall, and zero-modification interface reuse demonstrated across biodiversity credits and renewable energy certificates (seven passing generalization tests).
 
@@ -330,6 +330,8 @@ Three Claude-family LLM raters (Opus 4.6, Sonnet 4.6, Haiku 4.5) independently s
 
 We define the Lemons Index as L(pool) = 1 - (mean composite / 100), ranging from 0 (perfect quality) to 1 (zero quality) [9]. The key comparison: BCT's LI = 0.679 (n = 161 scored tokens, mean composite = 32.1, 0% at grade A or above) versus CHAR's LI = 0.221 (n = 12, mean composite = 77.9, 100% at A or above). The 3.1x gap quantifies the adverse selection that quality-blind pooling permits. Intermediate pools confirm the monotonic relationship: MCO2 (0.713), NCT (0.601), kVCM (0.519). A full 34-segment systematic scan across pool configurations is reported in Extended Data.
 
+**Cross-operator validation via on-chain metadata recovery.** A natural objection is that this gradient is an artefact of one operator's pools. We refute it by recovering per-token credit identity directly from chain data and re-scoring five pools spanning two independent bridge operators. The recovery method is general and requires no operator cooperation: tokenized credits encode their registry, project, and vintage in the ERC-20 token symbol (e.g., `C3T-VCS-1140-2015` is Verra project 1140, vintage 2015), so a single `eth_call` to `symbol()` followed by a registry lookup reconstructs the metadata needed to score any pool. Applying the framework's common scoring to all five pools, mean deposit quality rises monotonically with screening strictness, and the gradient replicates within each operator separately: the two *unscreened* pools score ~29-31 (Toucan BCT 31.1; C3 UBO 28.9), the two *nature-screened* pools ~39-40 (Toucan NCT 40.0; C3 NBO 39.0), and the strictest *category-allowlist* pool reaches 77.9 (Toucan CHAR). Both unscreened pools also degrade over their operating life (Spearman rho = -0.439 and -0.329, p = 0.004) while screened pools do not. Because the ~10-point unscreened-to-screened gap appears within each operator, it isolates pool design from operator-specific factors -- direct evidence that the standard's scoring discriminates the real design->quality relationship, not one protocol's idiosyncrasy. The recovery script (`c3_metadata_recovery.py`) and the cross-pool results are released for replication.
+
 [Figure 6: Lemons Index comparison across pool types. BCT (0.679), MCO2 (0.713), NCT (0.601), kVCM (0.519), CHAR (0.221), AAA-only (0.100).]
 
 ### 6.7 Counterfactual Quality Gating
@@ -344,11 +346,15 @@ We validated these counterfactual projections through an on-chain simulation usi
 
 The core value proposition of ERC-CCQR is that `meetsGrade()` can replicate CHAR's quality profile for pools that accept diverse project types. A pool operator who sets `minGrade = Grade.A` would achieve adverse selection prevention comparable to CHAR's biochar-only allowlist while remaining open to high-quality CDR, biochar, methane destruction, and improved forest management credits.
 
-### 6.8 Monte Carlo Weight Sensitivity
+### 6.8 Real-Time Early Warning
+
+The same primitive that gates deposits also serves as a prospective monitor. We compute a cumulative Lemons Index over a pool's deposit stream, where each day uses only deposits observed up to that day -- an entirely out-of-sample, real-time signal that needs no price history. Applied retrospectively to BCT, the cumulative Lemons Index crossed a 0.50 danger threshold on the pool's first day of operation (reaching 0.71 while the token still traded near its launch value), roughly nine months before the price more than halved. Because the signal is a standing *level* (the composition was diagnostic from inception) rather than a trend, a one-time composition audit on day one would have flagged the pool. This demonstrates that an on-chain quality oracle is not only a gate but an early-warning instrument: a protocol that exposes `compositeOf()` and a pool-level aggregate enables any monitor to raise an alarm before market repricing. The early-warning computation (`early_warning.py`) is released for replication.
+
+### 6.9 Monte Carlo Weight Sensitivity
 
 We assessed grade robustness to weight perturbation via Monte Carlo analysis (10,000 iterations), sampling weight vectors from a Dirichlet distribution with the co-benefits weight forced to zero. At moderate perturbation (concentration = 50), global robustness is 93.7%: the average credit retains its grade in 93.7% of samples. Five of 29 credits are fragile (stability below 90%), all located on grade boundaries (e.g., Plan Vivo agroforestry at 51.5% stability on the A/BBB boundary). Interior credits are stable; boundary credits are not. Per-credit stability data across three concentration levels (20, 50, 100) are reported in Extended Data Table ED5. Crucially, Climeworks Orca and Heirloom DAC achieve 100% stability at all concentration levels, confirming that the framework's headline finding -- engineered CDR dominates the top of the quality scale -- is robust to weight uncertainty.
 
-### 6.9 Adversarial Testing
+### 6.10 Adversarial Testing
 
 Five adversarial credits were designed to exploit specific attack vectors:
 
@@ -364,7 +370,7 @@ Five adversarial credits were designed to exploit specific attack vectors:
 
 All five adversarial credits were correctly caught by both the automated framework and the independent LLM panel (5/5 detection rate).
 
-### 6.10 Interface Generalization: Zero-Modification Reuse Across Three RWA Domains
+### 6.11 Interface Generalization: Zero-Modification Reuse Across Three RWA Domains
 
 The carbon-specific evaluation above demonstrates that the *scoring implementation* works. This subsection demonstrates that the *interface* generalizes: the same `meetsGrade()`, `isStale()`, and `ratingOf()` functions, with zero modification, gate quality for entirely different asset classes.
 
