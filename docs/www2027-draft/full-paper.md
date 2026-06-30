@@ -338,7 +338,7 @@ We define the Lemons Index as L(pool) = 1 - (mean composite / 100), ranging from
 
 To quantify the value of on-chain quality gating, we simulate what would have happened if historical pools had applied a `meetsGrade()` check at various thresholds.
 
-Under a BBB quality gate (`meetsGrade(_, _, Grade.BBB)`), BCT's Lemons Index would drop from 0.679 to 0.405 -- a modelled reduction of 0.274. Only 12 of 161 scored tokens (7.5%) would have been admitted. The result is dramatic but also illustrates a tradeoff: strict quality gating severely limits pool liquidity. NCT's Lemons Index would drop from 0.601 to 0.390, admitting 10 of 28 credits (36%). Klima kVCM would drop from 0.519 to 0.273, admitting 8 of 20 credits (40%).
+Under a BBB quality gate (`meetsGrade(_, _, Grade.BBB)`), BCT's Lemons Index would drop in the gating simulation from a baseline of 0.724 to 0.405 -- a modelled reduction of 0.319 (we report the gating simulation's own baseline rather than stitching it to the 161-token headline index of 0.679, which is computed on a different token subset). Only 12 of 161 scored tokens (7.5%) would have been admitted. The result is dramatic but also illustrates a tradeoff: strict quality gating severely limits pool liquidity. NCT's Lemons Index would drop from 0.601 to 0.390, admitting 10 of 28 credits (36%). Klima kVCM would drop from 0.519 to 0.273, admitting 8 of 20 credits (40%).
 
 CHAR's Lemons Index is unchanged under any gate up to AA (0.221), because all 12 of its constituent biochar credits already score at grade A or above. This confirms that CHAR's project-type allowlist achieves naturally what a quality gate would enforce.
 
