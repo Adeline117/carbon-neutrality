@@ -49,6 +49,23 @@ versioned source file, and key claims (composition, account-vs-contract status o
 top extractors, early-warning lead time) are verifiable directly against public
 chain data.
 
+**Justification for urgent publication / global relevance.** The voluntary
+carbon market (~\$2 billion annually) and the \$10-billion-and-growing tokenized
+real-world asset sector are both being built, right now, on exactly the pooled,
+uniform-priced architecture whose failure we document. Policymakers — the ICVCM,
+the Article 6.4 Supervisory Body under the Paris Agreement, and national
+regulators standing up carbon-disclosure and credit-rating mandates — are
+actively deciding whether transparency alone is sufficient to safeguard market
+integrity. Our credit-level forensic evidence that it is not — and that the
+failure is detectable from a pool's first day and preventable with a simple
+quality gate — bears directly on standards being finalized this year. Publishing
+now, while those rules remain in draft, is what converts the finding from a
+post-mortem into an actionable, globally relevant policy input for the carbon and
+tokenized-asset markets alike.
+
+**One-line summary (≤100 characters):** Transparency did not prevent quality
+collapse in the largest tokenized carbon market
+
 We confirm the manuscript is not under consideration elsewhere and that the
 authors have no competing financial interests. We thank you for your
 consideration.
