@@ -13,6 +13,29 @@
     "deposits_resolved": 1187,
     "deposits_total": 1187
   },
+  "threshold_crossings_after_trigger": [
+    {
+      "date": "2021-10-06",
+      "direction": "above->below",
+      "cum_mt": 0.31
+    },
+    {
+      "date": "2021-10-08",
+      "direction": "below->above",
+      "cum_mt": 0.41
+    },
+    {
+      "date": "2021-10-08",
+      "direction": "above->below",
+      "cum_mt": 0.51
+    },
+    {
+      "date": "2021-10-10",
+      "direction": "below->above",
+      "cum_mt": 4.27
+    }
+  ],
+  "stable_above_threshold_from": "2021-10-10",
   "comparison": "Lemons Index trigger: 2021-10-06 at LI 0.711 (early_warning_results.json)",
   "series_samples": [
     {

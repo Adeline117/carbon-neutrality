@@ -52,6 +52,7 @@ def main():
 
     ff = json.loads((ROOT / "data/depositor-analysis/early_warning_framework_free_results.json").read_text())
     check("framework-free trigger same day as LI", ff["trigger"]["date"], ew["li_trigger_date"])
+    check("framework-free stable above threshold from first week", ff["stable_above_threshold_from"], "2021-10-10")
     check("framework-free final share (69.11%)", round(100 * ff["final_share"], 2), 69.11, 0.01)
 
     ent = json.loads((ROOT / "data/depositor-analysis/entity_funding_analysis.json").read_text())

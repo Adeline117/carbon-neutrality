@@ -94,6 +94,26 @@ def main():
                        "cum_tonnes_at_trigger": round(cum_total)}
     final_share = cum_renew / cum_total
 
+    # threshold-crossing analysis after trigger (whipsaw honesty check)
+    ct2 = cr2 = 0.0
+    crossings = []
+    state = None
+    for blk, tonnes, is_ren in rows:
+        ct2 += tonnes
+        if is_ren:
+            cr2 += tonnes
+        if ct2 < 100_000:
+            continue
+        cur = (cr2 / ct2) >= DANGER_R
+        if state is None:
+            state = cur
+        elif cur != state:
+            crossings.append({"date": str(block_to_date(blk)),
+                              "direction": "above->below" if state else "below->above",
+                              "cum_mt": round(ct2 / 1e6, 2)})
+            state = cur
+    stable_from = crossings[-1]["date"] if crossings and crossings[-1]["direction"] == "below->above" else (trigger or {}).get("date")
+
     out = {
         "signal": "cumulative renewable share of deposited tonnage (ledger + Verra type labels only)",
         "danger_threshold": DANGER_R,
@@ -101,6 +121,8 @@ def main():
         "trigger": trigger,
         "final_share": round(final_share, 4),
         "coverage": {"deposits_resolved": len(rows), "deposits_total": len(deposits)},
+        "threshold_crossings_after_trigger": crossings,
+        "stable_above_threshold_from": stable_from,
         "comparison": "Lemons Index trigger: 2021-10-06 at LI 0.711 (early_warning_results.json)",
         "series_samples": series_samples[:15],
     }
