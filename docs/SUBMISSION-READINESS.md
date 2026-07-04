@@ -15,6 +15,8 @@ Recommended venue: **Environmental Research Letters (ERL)**, the honest best fit
 - Living-paper audit: **CLEAR**; all `{{placeholders}}` resolve.
 - One-command verification: `python3 tools/verify_headline_numbers.py` (exit 0, 15 checks); reproduction guide at `REPRODUCING.md` + pinned `requirements.txt`.
 - Framework-free early-warning variant (cumulative renewable share) triggers the SAME DAY as the Lemons Index (Supplementary Methods); robustness summary at Supplementary Table 6.
+- Cross-asset replication upgraded to quantitative: entry-margin lemons selection replicates in 6/6 NFTX vaults (each p<0.05; sign test p=0.016); exit-margin extraction absent, completing the margin decomposition. Old unreproducible NFTX aggregates (1.3%, 2-31x) superseded by a fully scripted pipeline.
+- Remedy folded in from Paper #2 (sacrificed): open-source reference implementation (94 passing Foundry tests, measured gas) in Supplementary; main-text release sentence + ref 19 repointed.
 - CarbonPlan-cluster citations added (Badgley 2022 GCB, Haya 2023 FFGC, refs 22-23); suggested-reviewer list at `docs/erl-suggested-reviewers.md`.
 
 ## What the paper is (set expectations)

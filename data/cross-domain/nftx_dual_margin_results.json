@@ -1,0 +1,303 @@
+{
+  "window_blocks": 200000,
+  "router_share_threshold": 0.05,
+  "vaults": {
+    "BGAN": {
+      "heterogeneity": {
+        "n_sales": 15036,
+        "p10_eth": 0.11,
+        "median_eth": 0.342,
+        "p90_eth": 1.1875,
+        "p90_p10_ratio": 10.8
+      },
+      "value_selectivity": {
+        "redeemed_n": 1515,
+        "minted_n": 1763,
+        "minted_below_collection_median_p": 4.18e-74,
+        "redeemed_median_pctile": 0.332,
+        "minted_median_pctile": 0.327,
+        "gap_pp": 0.5,
+        "mannwhitney_p_greater": 0.262,
+        "coverage_redeemed": 0.799,
+        "coverage_minted": 0.789
+      },
+      "dual_margin": {
+        "minter_wallets": 101,
+        "redeemer_wallets": 145,
+        "overlap_raw": 46,
+        "overlap_raw_pct_of_redeemers": 31.7,
+        "likely_routers_flagged": [
+          "0x0fc584529a2aefa997697fafacba5831fac0c22d",
+          "0x83c8f28c26bf6aaca652df1dbbe0e1b56f8baba2",
+          "0x941a6d105802cccaa06de58a13a6f49ebdcd481c"
+        ],
+        "minter_wallets_ex_routers": 99,
+        "redeemer_wallets_ex_routers": 142,
+        "overlap_ex_routers": 44,
+        "overlap_ex_pct_of_redeemers": 31.0,
+        "redeemer_to_minter_ratio": 1.43
+      },
+      "fees": {
+        "mint_pct": 5.0,
+        "random_redeem_pct": 2.0,
+        "target_redeem_pct": 3.0,
+        "exit_selection_priced": true,
+        "source": "on-chain view calls (mintFee/randomRedeemFee/targetRedeemFee), 2026-07-03"
+      }
+    },
+    "MANA": {
+      "heterogeneity": {
+        "n_sales": 2427,
+        "p10_eth": 0.12,
+        "median_eth": 0.3316,
+        "p90_eth": 0.836,
+        "p90_p10_ratio": 6.97
+      },
+      "value_selectivity": {
+        "redeemed_n": 436,
+        "minted_n": 529,
+        "minted_below_collection_median_p": 1.64e-19,
+        "redeemed_median_pctile": 0.303,
+        "minted_median_pctile": 0.337,
+        "gap_pp": -3.4,
+        "mannwhitney_p_greater": 0.723,
+        "coverage_redeemed": 0.15,
+        "coverage_minted": 0.144
+      },
+      "dual_margin": {
+        "minter_wallets": 23,
+        "redeemer_wallets": 31,
+        "overlap_raw": 10,
+        "overlap_raw_pct_of_redeemers": 32.3,
+        "likely_routers_flagged": [
+          "0x0fc584529a2aefa997697fafacba5831fac0c22d",
+          "0x28e9162fc10bb3a7f98f44e90fa7273698fce360",
+          "0x3693aba8f2d90b40ba5c975967a665ac30f67746",
+          "0x5542abc7dc05fa2c8142804bdbcc0da8a0dc98ad"
+        ],
+        "minter_wallets_ex_routers": 19,
+        "redeemer_wallets_ex_routers": 28,
+        "overlap_ex_routers": 7,
+        "overlap_ex_pct_of_redeemers": 25.0,
+        "redeemer_to_minter_ratio": 1.47
+      },
+      "fees": {
+        "mint_pct": 15.0,
+        "random_redeem_pct": 2.0,
+        "target_redeem_pct": 8.0,
+        "exit_selection_priced": true,
+        "source": "on-chain view calls (mintFee/randomRedeemFee/targetRedeemFee), 2026-07-03"
+      }
+    },
+    "MEEB": {
+      "heterogeneity": {
+        "n_sales": 43464,
+        "p10_eth": 1.4625,
+        "median_eth": 4.6312,
+        "p90_eth": 160.195,
+        "p90_p10_ratio": 109.54
+      },
+      "value_selectivity": {
+        "redeemed_n": 1009,
+        "minted_n": 1266,
+        "minted_below_collection_median_p": 6.04e-66,
+        "redeemed_median_pctile": 0.376,
+        "minted_median_pctile": 0.362,
+        "gap_pp": 1.4,
+        "mannwhitney_p_greater": 0.216,
+        "coverage_redeemed": 0.862,
+        "coverage_minted": 0.846
+      },
+      "dual_margin": {
+        "minter_wallets": 85,
+        "redeemer_wallets": 71,
+        "overlap_raw": 31,
+        "overlap_raw_pct_of_redeemers": 43.7,
+        "likely_routers_flagged": [
+          "0x0fc584529a2aefa997697fafacba5831fac0c22d",
+          "0x83c8f28c26bf6aaca652df1dbbe0e1b56f8baba2",
+          "0x941a6d105802cccaa06de58a13a6f49ebdcd481c",
+          "0xe339c1d0a744053cbceb0d2dc2d13967c8a69586"
+        ],
+        "minter_wallets_ex_routers": 82,
+        "redeemer_wallets_ex_routers": 68,
+        "overlap_ex_routers": 29,
+        "overlap_ex_pct_of_redeemers": 42.6,
+        "redeemer_to_minter_ratio": 0.83
+      },
+      "fees": {
+        "mint_pct": 5.0,
+        "random_redeem_pct": 2.0,
+        "target_redeem_pct": 3.0,
+        "exit_selection_priced": true,
+        "source": "on-chain view calls (mintFee/randomRedeemFee/targetRedeemFee), 2026-07-03"
+      }
+    },
+    "MILADY": {
+      "heterogeneity": {
+        "n_sales": 28838,
+        "p10_eth": 0.173,
+        "median_eth": 0.925,
+        "p90_eth": 3.8499,
+        "p90_p10_ratio": 22.26
+      },
+      "value_selectivity": {
+        "redeemed_n": 7099,
+        "minted_n": 7133,
+        "minted_below_collection_median_p": 0.000527,
+        "redeemed_median_pctile": 0.475,
+        "minted_median_pctile": 0.485,
+        "gap_pp": -1.0,
+        "mannwhitney_p_greater": 0.691,
+        "coverage_redeemed": 0.891,
+        "coverage_minted": 0.892
+      },
+      "dual_margin": {
+        "minter_wallets": 62,
+        "redeemer_wallets": 205,
+        "overlap_raw": 23,
+        "overlap_raw_pct_of_redeemers": 11.2,
+        "likely_routers_flagged": [
+          "0x0fc584529a2aefa997697fafacba5831fac0c22d",
+          "0x15a8e38942f9e353bec8812763fb3c104c89ecf4",
+          "0x5d1c5dee420004767d3e2fb7aa7c75aa92c33117",
+          "0x83c8f28c26bf6aaca652df1dbbe0e1b56f8baba2",
+          "0x941a6d105802cccaa06de58a13a6f49ebdcd481c",
+          "0xf2458bd228d8a39b64bd3b9f84890e957cac3bbc"
+        ],
+        "minter_wallets_ex_routers": 58,
+        "redeemer_wallets_ex_routers": 201,
+        "overlap_ex_routers": 21,
+        "overlap_ex_pct_of_redeemers": 10.4,
+        "redeemer_to_minter_ratio": 3.47
+      },
+      "fees": {
+        "mint_pct": 1.0,
+        "random_redeem_pct": 1.0,
+        "target_redeem_pct": 2.0,
+        "exit_selection_priced": true,
+        "source": "on-chain view calls (mintFee/randomRedeemFee/targetRedeemFee), 2026-07-03"
+      }
+    },
+    "PHUNK": {
+      "heterogeneity": {
+        "n_sales": 12221,
+        "p10_eth": 0.0475,
+        "median_eth": 0.25,
+        "p90_eth": 0.6769,
+        "p90_p10_ratio": 14.25
+      },
+      "value_selectivity": {
+        "redeemed_n": 2289,
+        "minted_n": 2473,
+        "minted_below_collection_median_p": 1.8e-12,
+        "redeemed_median_pctile": 0.444,
+        "minted_median_pctile": 0.439,
+        "gap_pp": 0.5,
+        "mannwhitney_p_greater": 0.463,
+        "coverage_redeemed": 0.678,
+        "coverage_minted": 0.68
+      },
+      "dual_margin": {
+        "minter_wallets": 177,
+        "redeemer_wallets": 285,
+        "overlap_raw": 72,
+        "overlap_raw_pct_of_redeemers": 25.3,
+        "likely_routers_flagged": [
+          "0x0fc584529a2aefa997697fafacba5831fac0c22d",
+          "0x5542abc7dc05fa2c8142804bdbcc0da8a0dc98ad",
+          "0x941a6d105802cccaa06de58a13a6f49ebdcd481c"
+        ],
+        "minter_wallets_ex_routers": 174,
+        "redeemer_wallets_ex_routers": 282,
+        "overlap_ex_routers": 69,
+        "overlap_ex_pct_of_redeemers": 24.5,
+        "redeemer_to_minter_ratio": 1.62
+      },
+      "fees": {
+        "mint_pct": 5.0,
+        "random_redeem_pct": 2.0,
+        "target_redeem_pct": 3.0,
+        "exit_selection_priced": true,
+        "source": "on-chain view calls (mintFee/randomRedeemFee/targetRedeemFee), 2026-07-03"
+      }
+    },
+    "WIZARD": {
+      "heterogeneity": {
+        "n_sales": 18441,
+        "p10_eth": 0.076,
+        "median_eth": 0.5225,
+        "p90_eth": 2.375,
+        "p90_p10_ratio": 31.25
+      },
+      "value_selectivity": {
+        "redeemed_n": 2104,
+        "minted_n": 2327,
+        "minted_below_collection_median_p": 1.33e-16,
+        "redeemed_median_pctile": 0.422,
+        "minted_median_pctile": 0.43,
+        "gap_pp": -0.8,
+        "mannwhitney_p_greater": 0.807,
+        "coverage_redeemed": 0.834,
+        "coverage_minted": 0.819
+      },
+      "dual_margin": {
+        "minter_wallets": 126,
+        "redeemer_wallets": 143,
+        "overlap_raw": 51,
+        "overlap_raw_pct_of_redeemers": 35.7,
+        "likely_routers_flagged": [
+          "0x0a2f9b5360b5c7b6d3ce826971425b3b8b766519",
+          "0x0fc584529a2aefa997697fafacba5831fac0c22d",
+          "0x941a6d105802cccaa06de58a13a6f49ebdcd481c"
+        ],
+        "minter_wallets_ex_routers": 123,
+        "redeemer_wallets_ex_routers": 141,
+        "overlap_ex_routers": 49,
+        "overlap_ex_pct_of_redeemers": 34.8,
+        "redeemer_to_minter_ratio": 1.15
+      },
+      "fees": {
+        "mint_pct": 5.0,
+        "random_redeem_pct": 2.0,
+        "target_redeem_pct": 3.0,
+        "exit_selection_priced": true,
+        "source": "on-chain view calls (mintFee/randomRedeemFee/targetRedeemFee), 2026-07-03"
+      }
+    }
+  },
+  "summary": {
+    "vaults_analysed": 6,
+    "vaults_with_value_panel": 6,
+    "entry_side_selection": {
+      "vaults_minted_below_collection_median": [
+        "BGAN",
+        "MANA",
+        "MEEB",
+        "MILADY",
+        "PHUNK",
+        "WIZARD"
+      ],
+      "unanimous": true,
+      "cross_vault_sign_test_p_one_sided": 0.0156,
+      "per_vault_wilcoxon_sig": [
+        "BGAN",
+        "MANA",
+        "MEEB",
+        "MILADY",
+        "PHUNK",
+        "WIZARD"
+      ]
+    },
+    "exit_side_extraction": {
+      "positive_direction": [
+        "BGAN",
+        "MEEB",
+        "PHUNK"
+      ],
+      "significant_at_5pct": [],
+      "present": false
+    },
+    "verdict": "entry-margin lemons selection replicates in all vaults; exit-margin extraction absent (consistent with NFTX pricing targeted redemption above random redemption in all six vaults)"
+  }
+}

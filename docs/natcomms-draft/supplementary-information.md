@@ -173,6 +173,18 @@ The most valuable credit types were extracted first: ARR credits exited earliest
 
 ---
 
+## From diagnosis to remedy: an open-source quality-gating implementation
+
+The three design principles in the Discussion (quality-differentiated pricing, dual-margin gating, dynamic floors) are implemented as an open-source reference implementation (Solidity/Foundry; MIT licence; `contracts/` in the code repository). It is a prototype for standards discussion, not production code, and has not been deployed to any network; all figures below are from the local Foundry test suite (94 passing tests, re-measured for this paper).
+
+**Components.** (i) A rating registry (`CarbonCreditRating.sol`, implementing the `ICarbonCreditRating` interface): stores per-credit dimension scores, computes the composite in basis points, maps it to the six-tier grade scheme used in this paper, applies the seven disqualifier caps, and tracks staleness. (ii) A single-call composability primitive, `meetsGrade(token, minGrade)`, the quality analogue of `balanceOf`: any pool, exchange, or retirement contract can gate on it without understanding the scoring internals. (iii) A gated pool (`QualityGatedPool.sol`) that accepts a deposit only if the credit meets a minimum grade and its rating is fresh, the deposit-side half of dual-margin gating. (iv) A real-time monitor implementing the cumulative Lemons Index and the framework-free renewable-share variant of this paper's early-warning section.
+
+**Oracle trust.** Ratings enter the registry under a staged trust model: a single authorised rater (stage 1, the prototype default); k-of-n attestations relayed from the Ethereum Attestation Service (stage 2, implemented in `CarbonCreditRatingEASAdapter.sol`); staked raters with slashing (stage 3, design only). Known limitations are documented in the repository (no dispute mechanism, ERC-20 credits only, no proof-of-retirement linkage).
+
+**Measured gas (Foundry `forge test --gas-report`, solc 0.8.24).** Rating write (`setRating`): 167,720 gas cold, 30,308 warm update. Gate check (`meetsGrade`): 19,244 gas. Rating read (`ratingOf`): 20,823. Staleness check: 7,097 (early exit) to 19,097. EAS attestation relay: 96,592 to 250,086. Registry deployment: ~2.36M gas. At these costs a full deposit-plus-gate flow adds roughly 20k gas to a pool deposit, a negligible overhead relative to typical pool interactions.
+
+**Cross-domain generalization.** The same registry and gate contracts, with zero code modification, gate biodiversity credits and renewable energy certificates in the test suite (`Generalization.t.sol`; example gates for Klima retirement, Toucan CHAR fee tiers, biodiversity, and RECs in `contracts/examples/`). The failure mode this paper documents, and the remedy, are not carbon-specific.
+
 ## Supplementary Figures
 
 ### Supplementary Figure 1. Rank correlation between the framework and commercial carbon credit rating agencies.
@@ -201,13 +213,26 @@ Causal diagram for the {{within_token.n_shared_tokens}}-token within-pool compar
 
 **Sentinel-5P TROPOMI methane verification.** For 9 waste management and methane capture projects in the BCT pool, we analysed Sentinel-5P TROPOMI Level 3 methane column data (COPERNICUS/S5P/OFFL/L3\_CH4, CH4\_column\_volume\_mixing\_ratio\_dry\_air band) over the period 2019--2023. For each project, we defined a site radius of 10 km around the project coordinates and a background annulus of 50--100 km. The methane plume signal was computed as the difference between site-level and background methane concentrations, converted to tCO$_2$-equivalent using GWP100 = 28. Of 9 projects analysed, 5 (56%) showed methane concentrations inconsistent with claimed reductions (site-level concentrations not significantly below background), 1 was inconclusive, and 3 were not applicable (project type incompatible with satellite methane detection). No project showed satellite-confirmed methane reduction at the magnitude claimed in its VCS documentation. Because TROPOMI's ~5.5 km resolution limits project-level attribution, we treat this analysis as illustrative and resolution-limited rather than as a definitive integrity finding.
 
-### NFTX cross-domain validation
+### NFTX cross-asset replication (quantitative)
 
-To test whether the dual-margin adverse selection pattern generalises beyond carbon and fungible-token markets, we analysed NFTX V1 vaults on Ethereum mainnet, uniform-price pools where non-fungible tokens (NFTs) are deposited and redeemed at a single floor price per vault, analogous to BCT's uniform pricing of heterogeneous carbon credits. Data were collected from Dune Analytics decoded event tables (`nftx_v2_ethereum.nftxvaultupgradeable_v1_evt_minted` and `_redeemed`) as of 22 April 2026.
+To test whether uniform-pricing selection generalises beyond carbon, we ran a BCT-isomorphic pipeline on six NFTX v2 vaults on Ethereum (MILADY, PHUNK, WIZARD, MEEB, BGAN, MANA): pools where non-fungible tokens deposit and redeem at one vault-token price regardless of which item is involved. All mint/redeem events (9,866 mint and 11,017 redeem events moving 21,871 and 19,843 items) and wallet-level vault-token transfers were reconstructed from on-chain logs via the Etherscan API; the per-item value panel (120,680 ETH-denominated marketplace sales across the six collections) via the Alchemy NFT API. Each deposited or redeemed item was assigned the price percentile of its nearest-in-block sale within a +/-200,000-block rolling window of the collection's sales, so percentiles are drift-controlled. Items with no observable sale are excluded; coverage is reported per vault (68-89%, except MANA at ~15%). Reproduction: `data/cross-domain/fetch_nftx_events.py`, `fetch_nft_sales.py`, `nftx_dual_margin.py`; results in `nftx_dual_margin_results.json`.
 
-We selected the 20 largest vaults by mint count ($\geq$50 mints), covering 20,238 mints and 20,781 redemptions across vaults spanning collectibles (MILADY, PHUNK), gaming items (WIZARD, WARRIOR), and art (MOONCAT, AVASTR). For each vault, we computed the redeem/mint ratio and net outflow. 12 of 20 vaults (60%) exhibited net redemption outflow, consistent with selective extraction of higher-value items. The three largest vaults by activity (MILADY, REMIO, PHUNK) all showed net exit, with MANA exhibiting the strongest cherry-picking effect (redeem/mint ratio = 1.43).
+**Entry-margin selection replicates in all six vaults.** Collections are strongly value-heterogeneous under uniform pricing (sale P90/P10 of 7x to 110x), and deposited items sit below the contemporaneous collection median in every vault (median deposited-item percentile 0.33-0.49; per-vault Wilcoxon p < 0.05 in all six; cross-vault sign test p = 0.016). Owners deposit their low-value items and keep their high-value ones: the entry margin, which NFTX leaves open (any collection item mints one vault token), exhibits exactly the lemons selection this paper documents for BCT.
 
-The dual-margin population structure replicates BCT's pattern: in MILADY, only 1.3% of redeemers also appear as minters, compared to BCT's 1.4% depositor--redeemer overlap. Redeemer populations are 2--31$\times$ larger than minter populations across the top vaults, confirming that, as in BCT, largely distinct account populations (an account-level observation, as in the main text) exploit the entry and exit margins of the same uniform-pricing mechanism.
+**Exit-margin extraction is absent** (redeemed-vs-deposited percentile gaps of -3.4 to +1.4 pp, none significant). Two design facts are consistent with this: NFTX prices targeted redemption above random redemption in all six vaults (on-chain fees, random 1-2% vs targeted 2-8%), and entry-side selection leaves little within-vault value dispersion to extract. The contrast completes the margin decomposition: BCT's permissionless bridge closed the entry margin (99.6% pass-through, no depositor selection possible) and selection expressed at exit; NFTX leaves entry open and selection expresses there.
+
+**Account structure (corrected).** Minter/redeemer wallet overlap, net of router contracts (addresses handling >5% of a side's events), ranges from 10.4% (MILADY) to 42.6% (MEEB) of redeemers, with redeemer-to-minter ratios of 0.8x to 3.5x. These figures supersede the aggregate overlap statistics previously reported for NFTX (1.3% overlap, 2-31x ratios), which derived from an unsaved query whose wallet attribution was confounded by router contracts; the corrected pipeline is fully reproducible from the committed scripts. NFT vault account separation is accordingly weaker than BCT's (1.4% overlap), an honest difference between the markets.
+
+| Vault | Sale P90/P10 | Deposited median pctile | Wilcoxon p (<0.5) | Exit gap (pp) | MW p | Coverage (dep/red) | Acct overlap | Fees rand/target |
+|---|---|---|---|---|---|---|---|---|
+| MILADY | 22.26 | 0.48 | 0.000527 | -1.0 | 0.691 | 89%/89% | 10.4% | 1%/2% |
+| PHUNK | 14.25 | 0.44 | 1.8e-12 | +0.5 | 0.463 | 68%/68% | 24.5% | 2%/3% |
+| WIZARD | 31.25 | 0.43 | 1.33e-16 | -0.8 | 0.807 | 82%/83% | 34.8% | 2%/3% |
+| MEEB | 109.54 | 0.36 | 6.04e-66 | +1.4 | 0.216 | 85%/86% | 42.6% | 2%/3% |
+| BGAN | 10.8 | 0.33 | 4.18e-74 | +0.5 | 0.262 | 79%/80% | 31.0% | 2%/3% |
+| MANA | 6.97 | 0.34 | 1.64e-19 | -3.4 | 0.723 | 14%/15% | 25.0% | 2%/8% |
+
+Deposited median pctile: tonnage here is item count; pctile below 0.50 means deposits come from the cheaper half of contemporaneous collection sales. Exit gap: redeemed minus deposited median percentile. Fees verified by on-chain view calls (2026-07-03).
 
 ### Supplementary Table 2. Vintage-free robustness check: temporal correlation with and without vintage dimension.
 
@@ -287,6 +312,7 @@ Margins: side(s) of the pool on which the account is a top-20 participant. First
 | Dual-margin account structure (account-level) | On-chain transfers + first-funder audit | No | `entity_funding_analysis.json` |
 | $146M welfare gap (illustrative) | Type-level additionality distributions from independent literature + SCC Monte Carlo | No (framework-adjacent: uses literature additionality rates, not composite scores) | `welfare_quantification_results.json` |
 | Early-warning trigger (~9-month lead) | Lemons Index (composite-based); framework-free variant permanently above threshold from the pool's first week | Partially (framework-free variant confirms) | `early_warning_results.json`, `early_warning_framework_free_results.json` |
+| NFT-vault cross-asset replication (entry-margin selection, 6/6 vaults) | On-chain events + marketplace sale percentiles | No | `nftx_dual_margin_results.json` (data/cross-domain/) |
 | CCP calibration and cross-pool gradient | Composite scores vs CCP labels / pool means | Yes (gradient measured as definitional: within-type cross-pool differences <=0.32 points) | `ccp_effect_size_results.json`, `multipool_comparison.json` |
 
 File paths are relative to `data/depositor-analysis/` or `data/statistical-analysis/`. The first five rows carry the paper's core findings; the framework-dependent rows are validation and corroboration, not load-bearing claims.

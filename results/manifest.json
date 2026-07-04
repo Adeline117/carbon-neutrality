@@ -1473,71 +1473,18 @@
     }
   },
   "nftx_validation": {
-    "n_vaults_tested": {
-      "value": 4,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
+    "note": "superseded aggregate entry; quantitative replication in data/cross-domain/nftx_dual_margin_results.json",
+    "entry_margin_unanimous": {
+      "value": true,
+      "unit": "6/6 vaults",
+      "source": "data/cross-domain/nftx_dual_margin_results.json",
+      "experiment_id": "nftx_dual_margin_v1"
     },
-    "n_vaults_net_outflow": {
-      "value": 3,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "total_events": {
-      "value": 182903,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "cryptopunks_mints": {
-      "value": 277,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "cryptopunks_redeems": {
-      "value": 327,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "bayc_mints": {
-      "value": 599,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "bayc_redeems": {
-      "value": 637,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "sandbox_mints": {
-      "value": 3227,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "sandbox_redeems": {
-      "value": 4143,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "hashmasks_mints": {
-      "value": 1839,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
-    },
-    "hashmasks_redeems": {
-      "value": 1566,
-      "unit": "count",
-      "source": "data/nftx_validation_results.json",
-      "experiment_id": "nftx_v1"
+    "cross_vault_sign_test_p": {
+      "value": 0.0156,
+      "unit": "one-sided",
+      "source": "data/cross-domain/nftx_dual_margin_results.json",
+      "experiment_id": "nftx_dual_margin_v1"
     }
   },
   "predictive_stranding": {

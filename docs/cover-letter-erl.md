@@ -32,8 +32,10 @@ real-world assets on the same pooled design:
    audit (a cumulative Lemons Index) crossed its danger threshold at the pool's
    launch, roughly nine months before the price repriced, and a simple quality
    gate would have cut the pool's quality deficit by about a third (from 0.724
-   to 0.405) in a counterfactual simulation. We provide the open-source rating,
-   early-warning, and gating tooling.
+   to 0.405) in a counterfactual simulation. The paper ships the remedy with
+   the diagnosis: an open-source reference implementation of the rating
+   registry, quality gate, and real-time monitor (94 passing tests, measured
+   gas overhead of roughly 19k per gate check).
 
 **Honest scope.** This is a forensic case study of a single, now-defunct pool. We
 are explicit that the striking same-credit/different-pool contrast is *strongly

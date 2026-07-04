@@ -64,6 +64,12 @@ def main():
     check("entity audit: cross-side common funders (1)", len(v["non_exchange_common_funders"]), 1)
     check("entity audit: direct cross-side transfers (7)", v["direct_cross_side_transfers"], 7)
 
+    nx = json.loads((ROOT / "data/cross-domain/nftx_dual_margin_results.json").read_text())
+    es = nx["summary"]["entry_side_selection"]
+    check("NFTX entry-margin selection unanimous (6/6)", es["unanimous"] and len(es["vaults_minted_below_collection_median"]), 6)
+    check("NFTX per-vault Wilcoxon significant (6/6)", len(es["per_vault_wilcoxon_sig"]), 6)
+    check("NFTX exit-margin extraction absent", nx["summary"]["exit_side_extraction"]["present"], False)
+
     print(f"\n{'ALL CONSISTENT (exit 0)' if not FAIL else 'INCONSISTENT: ' + ', '.join(FAIL)}")
     sys.exit(1 if FAIL else 0)
 

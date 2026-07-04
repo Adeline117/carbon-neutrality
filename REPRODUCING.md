@@ -33,6 +33,15 @@ python3 tools/generate_figures.py
 Figures are written to `figures/`. The manuscript build
 (`docs/natcomms-draft/latex/manuscript.tex`, pdflatex x2) consumes them directly.
 
+## Smart-contract reference implementation
+
+```bash
+git submodule update --init lib/forge-std
+forge test --gas-report
+```
+
+94 tests across 7 suites (rating registry, gated pool, EAS adapter, cross-domain generalization, gas benchmarks).
+
 ## Where each headline number lives
 
 | Claim | Analysis output |
@@ -46,6 +55,8 @@ Figures are written to `figures/`. The manuscript build
 | Quality-gate counterfactual (0.724 -> 0.405) | `data/statistical-analysis/counterfactual_simulation_results.json` |
 | Early warning (Lemons Index, ~9-month lead) | `data/depositor-analysis/early_warning_results.json` |
 | Framework-free early-warning variant | `data/depositor-analysis/early_warning_framework_free_results.json` |
+| Within-type cross-pool check | `data/depositor-analysis/within_type_crosspool_results.json` |
+| NFTX cross-asset replication | `data/cross-domain/nftx_dual_margin_results.json` (raw events/sales in `nftx_raw/`) |
 
 Each `*_results.json` is produced by the same-named `*.py` script beside it;
 scripts are pure Python with NumPy/SciPy as the only dependencies. On-chain

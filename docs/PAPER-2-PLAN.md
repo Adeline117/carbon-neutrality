@@ -1,3 +1,5 @@
+> **状态(2026-07-03):已牺牲/折叠。** 应作者决策,本计划的贡献 1(ERC-CCQR 标准与 meetsGrade 原语)、4(实时早期预警)、5(跨域零修改泛化)已折叠进 ERL 论文补充材料("From diagnosis to remedy" 节);贡献 2(链上审计方法)与 3(跨池证据)此前已在 ERL 正文。Paper #2 作为独立投稿的计划终止;本文件仅存档。
+
 # Paper #2 plan: the method/standard paper (sidesteps the n=1 / causal ceiling)
 
 *Purpose: the empirical paper (#1) is capped at descriptive/cross-sectional. Paper #2 changes the contribution type to **method + standard**, which is judged on usefulness and reproducibility, not causal identification or n. It reuses artifacts that already exist.*
