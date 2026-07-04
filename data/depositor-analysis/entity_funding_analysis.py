@@ -165,9 +165,9 @@ def stage_direct(state):
 
 # -------------------------------------------------------------- stage: funders
 
-def etherscan_txlist(addr, key):
+def etherscan_txlist(addr, key, action="txlist"):
     q = urllib.parse.urlencode({
-        "chainid": 137, "module": "account", "action": "txlist", "address": addr,
+        "chainid": 137, "module": "account", "action": action, "address": addr,
         "startblock": 0, "endblock": 99999999, "page": 1, "offset": 50,
         "sort": "asc", "apikey": key})
     with urllib.request.urlopen(f"{ETHERSCAN_V2}?{q}", timeout=30) as r:
@@ -182,7 +182,7 @@ def stage_funders(state):
     if not key:
         sys.exit("[funders] ETHERSCAN_API_KEY not set -- aborting (stage requires explorer API)")
     eoas = [a for a, r in state["accounts"].items()
-            if not r.get("is_contract") and "first_funder" not in r]
+            if not r.get("is_contract") and r.get("first_funder") is None]
     print(f"[funders] first incoming native tx for {len(eoas)} EOAs")
     for addr in eoas:
         txs = etherscan_txlist(addr, key)
@@ -192,14 +192,22 @@ def stage_funders(state):
                          and t.get("isError", "0") == "0"), None)
         if first_in is None:
             # funded via internal tx (contract-mediated, e.g. exchange withdrawal
-            # routers or bridges) -- record the earliest counterparty regardless
-            first_any = txs[0] if txs else None
-            rec["first_funder"] = None
-            rec["first_funder_note"] = ("no plain native incoming tx in first 50; "
-                                        "likely internal-tx funded (bridge/exchange router)")
-            if first_any:
-                rec["earliest_counterparty"] = first_any.get("from", "").lower()
-                rec["earliest_ts"] = first_any.get("timeStamp")
+            # routers or bridges) -- resolve through txlistinternal instead
+            time.sleep(0.25)
+            itxs = etherscan_txlist(addr, key, action="txlistinternal")
+            first_int = next((t for t in itxs
+                              if t.get("to", "").lower() == addr and int(t.get("value", "0")) > 0
+                              and t.get("isError", "0") == "0"), None)
+            rec.pop("earliest_counterparty", None)
+            rec.pop("earliest_ts", None)
+            if first_int is not None:
+                rec["first_funder"] = first_int["from"].lower()
+                rec["first_funder_ts"] = first_int["timeStamp"]
+                rec["first_funder_matic"] = round(int(first_int["value"]) / 1e18, 4)
+                rec["first_funder_via"] = "internal-tx (contract-mediated)"
+            else:
+                rec["first_funder"] = None
+                rec["first_funder_note"] = "no native incoming tx found in plain or internal lists"
         else:
             rec["first_funder"] = first_in["from"].lower()
             rec["first_funder_ts"] = first_in["timeStamp"]

@@ -1,9 +1,9 @@
-# Paper #2 plan — the method/standard paper (sidesteps the n=1 / causal ceiling)
+# Paper #2 plan: the method/standard paper (sidesteps the n=1 / causal ceiling)
 
-*Purpose: the empirical paper (#1) is capped at descriptive/cross-sectional. Paper #2 changes the contribution type to **method + standard**, which is judged on usefulness and reproducibility — not causal identification or n. It reuses artifacts that already exist.*
+*Purpose: the empirical paper (#1) is capped at descriptive/cross-sectional. Paper #2 changes the contribution type to **method + standard**, which is judged on usefulness and reproducibility, not causal identification or n. It reuses artifacts that already exist.*
 
 ## Key fact: a draft already exists
-`docs/www2027-draft/full-paper.md` — **"ERC-CCQR: The Missing Composability Primitive for Real-World Asset Quality"** (target WWW 2027). It already frames the contribution as a composable on-chain quality standard (`meetsGrade()`), validates on carbon credits, generalizes to biodiversity + RECs, and cites the empirical paper as companion `[52]`. **Paper #2 is ~70% written.** The task is to fold in the new audit-method work and tighten — not to start over.
+`docs/www2027-draft/full-paper.md`, **"ERC-CCQR: The Missing Composability Primitive for Real-World Asset Quality"** (target WWW 2027). It already frames the contribution as a composable on-chain quality standard (`meetsGrade()`), validates on carbon credits, generalizes to biodiversity + RECs, and cites the empirical paper as companion `[52]`. **Paper #2 is ~70% written.** The task is to fold in the new audit-method work and tighten, not to start over.
 
 ## The gap to fill: a coherent "on-chain RWA quality audit method"
 My recent work added three method pieces that are NOT yet in the ERC-CCQR draft and are its strongest novel methods content:
@@ -26,11 +26,11 @@ Together these are a **measurement/method contribution**: *how to audit the qual
 | EAS attestation adapter | `CarbonCreditRatingEASAdapter.sol` |
 
 ## Recommended contribution structure (5 contributions, all evidenced)
-1. **ERC-CCQR standard** — the `meetsGrade()` composability primitive (existing draft §3–4).
-2. **On-chain audit method** — metadata recovery + common-framework scoring → audit any RWA pool from public data (NEW; fold in piece 1–2).
-3. **Cross-pool evidence it matters** — monotone design→quality across 5 pools/2 operators (NEW; piece 2).
-4. **Real-time early warning** — prospective Lemons Index, ~9-month lead (NEW; piece 3).
-5. **Generalization** — zero-modification reuse across carbon / biodiversity / RECs (existing, 7 passing tests).
+1. **ERC-CCQR standard**, the `meetsGrade()` composability primitive (existing draft §3–4).
+2. **On-chain audit method**, metadata recovery + common-framework scoring → audit any RWA pool from public data (NEW; fold in piece 1–2).
+3. **Cross-pool evidence it matters**, monotone design→quality across 5 pools/2 operators (NEW; piece 2).
+4. **Real-time early warning**, prospective Lemons Index, ~9-month lead (NEW; piece 3).
+5. **Generalization**, zero-modification reuse across carbon / biodiversity / RECs (existing, 7 passing tests).
 
 ## Concrete next actions
 1. Decide venue: **WWW 2027** (web/systems, the existing target) or a measurement/data venue (e.g., a fintech/▷data-systems track) if you want the audit-method framing to lead.
@@ -40,7 +40,7 @@ Together these are a **measurement/method contribution**: *how to audit the qual
 5. Run the 7 Foundry tests + the three method scripts; pin results.
 
 ## What NOT to do
-- Do not re-litigate causal identification here — a method/standard paper is not judged on it.
+- Do not re-litigate causal identification here, a method/standard paper is not judged on it.
 - Do not duplicate Paper #1's forensics; cite it as companion and keep Paper #2 about the *method and standard*.
 
-**Bottom line: Paper #2 is mostly drafted and all its artifacts exist. The remaining work is folding in three method pieces and one cross-pool table, then tightening — a far better use of effort than further increments on Paper #1.**
+**Bottom line: Paper #2 is mostly drafted and all its artifacts exist. The remaining work is folding in three method pieces and one cross-pool table, then tightening, a far better use of effort than further increments on Paper #1.**

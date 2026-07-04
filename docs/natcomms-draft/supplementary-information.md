@@ -67,9 +67,11 @@ To identify the actors responsible for selective extraction, we reconstructed th
 
 The dual-margin claim rests on the separation between deposit-side and redemption-side accounts. Because a single entity can operate multiple addresses, we tested for entity-level links between the top 20 deposit accounts (by tonnage, from the deposit ledger) and the top 20 redemption accounts (by tonnage, aggregated from pool-to-wallet Transfer events across all 161 scored token caches). Two accounts appeared in both top-20 lists, leaving 38 unique accounts, of which 5 are smart contracts (including the single largest extractor, a retirement aggregator) and 33 are externally owned accounts (EOAs).
 
-**First-funder resolution.** For each of the 33 EOAs we retrieved the earliest incoming native-MATIC transaction (Etherscan API, chainid 137, ascending order) and recorded the funding address; all 33 resolved. A funding address that funds three or more analysed wallets was to be tagged a likely exchange or disperser address, since shared exchange funding is evidence neither of common control nor of independence; no funder met this threshold, so no exchange discounting was applied.
+**First-funder resolution.** For each of the 33 EOAs we retrieved the earliest incoming native-MATIC transaction (Etherscan API, chainid 137, ascending order; falling back to the internal-transaction list for wallets funded through contracts) and recorded the funding address; 32 of 33 resolved (9 via internal transactions; one wallet has no native incoming transaction in either list). A funding address that funds three or more analysed wallets is tagged a likely exchange or disperser address, since shared exchange funding is evidence neither of common control nor of independence; one funder met this threshold (it funds three redemption-side wallets, a same-side pattern that contributes no cross-side evidence) and was discounted accordingly.
 
 **Findings.** (i) One cross-side common funder: address `0xaeb6...cc7a` (1,458 lifetime transactions, not exchange-like) funded both the third-largest depositor (1.33 Mt) and one top-20 redeemer (20,889 t) within a 77-hour window in October 2021. (ii) Seven direct TCO2 transfers link two top-20 depositors and one top-20 redeemer (roughly 0.29 Mt moved between the sides, in both directions); direct transfers indicate interaction (same entity or bilateral trading), not necessarily common control. (iii) Two accounts are active on both margins (depositing 344 kt and 317 kt; redeeming 46 kt and 30 kt). Together the linked accounts hold 26% of top-20 deposit tonnage and 9% of top-20 redemption tonnage. Three wallets' first funders were manually re-verified against independent explorer queries.
+
+Per-wallet results are listed in Supplementary Table 5.
 
 **Interpretation.** The two margins are largely, but not fully, separated at the entity level. We therefore state the dual-margin separation as an account-level observation in the main text and do not claim that quality loading and extraction were performed by disjoint entities. The mechanism itself is unaffected: it is the pool's uniform pricing, not the identity of the participants, that connects entry-side quality loading to exit-side extraction. Reproduction: `data/depositor-analysis/entity_funding_analysis.py`, results in `entity_funding_analysis.json`.
 
@@ -220,3 +222,48 @@ Cross-sectional comparison of five tokenized pools across two independent operat
 | CHAR | Toucan   | category-allowlist | 77.9 |
 
 The ~10-point unscreened-to-screened gap appears within each operator separately, isolating it from operator-specific factors. Both unscreened pools degrade over their operating life (BCT ρ = −0.439; C3 ρ = −0.329, p = 0.004) while the screened pools do not. Moss MCO2, a single fungible basket token with no per-token credit identity, is structurally outside this comparison.
+
+### Supplementary Table 5. Entity-level independence audit: top-20 accounts per margin, with first-funder resolution.
+
+| Account | Margin | Deposited (t) | Redeemed (t) | Type | First funder | Notes |
+|---|---|---|---|---|---|---|
+| 0xaf52…81b0 | deposit | 1,967,489 | 0 | EOA | 0xe806…a5ed | via internal tx |
+| 0xf367…2156 | deposit | 1,526,175 | 0 | EOA | 0x1fdc…f661 | via internal tx |
+| 0xee99…0b83 | deposit | 1,328,930 | 0 | EOA | 0xaeb6…cc7a | shared cross-side funder |
+| 0xe519…688f | deposit | 1,284,435 | 0 | EOA | 0x8c5a…ae7e |  |
+| 0xc465…1a8c | deposit | 1,273,817 | 0 | EOA | 0x4c76…94d7 |  |
+| 0xdab7…e900 | deposit | 1,192,245 | 0 | EOA | 0xdb6f…f498 | via internal tx |
+| 0x5298…26e2 | deposit | 942,657 | 0 | EOA | 0x02a8…eb9b |  |
+| 0x2845…8b20 | deposit | 921,023 | 0 | EOA | 0x5216…b8d6 |  |
+| 0xd85c…001f | deposit | 822,698 | 0 | EOA | 0xc9d1…7e7a |  |
+| 0xe8d7…91ff | deposit | 763,977 | 0 | EOA | 0x886b…eb82 |  |
+| 0x0000…826f | deposit | 681,776 | 0 | EOA | 0x8670…46b1 |  |
+| 0x65a5…995c | redeem | 0 | 651,334 | contract | n/a |  |
+| 0xa3fb…c075 | deposit | 477,970 | 0 | EOA | 0x0000…1010 | via internal tx |
+| 0xc450…eaf5 | deposit | 464,905 | 0 | EOA | 0x1b02…7506 | via internal tx |
+| 0x79c8…52d7 | deposit | 450,186 | 0 | EOA | 0xfa0b…81b9 |  |
+| 0xac5f…f05f | both | 343,952 | 46,000 | EOA | 0xe2e4…c8af | dual-margin |
+| 0x0bf9…d496 | deposit | 385,347 | 0 | EOA | 0x1b02…7506 | via internal tx |
+| 0x51d3…36be | deposit | 383,674 | 0 | EOA | 0xb192…3771 |  |
+| 0xcf23…6e5a | deposit | 365,157 | 0 | EOA | 0x0824…08da |  |
+| 0xb0ee…01cf | both | 317,391 | 30,000 | EOA | 0x1730…ef34 | dual-margin |
+| 0x1b8e…5d64 | redeem | 0 | 335,556 | EOA | 0x0ff1…6ff5 |  |
+| 0xb208…fa93 | deposit | 307,424 | 0 | EOA | unresolved |  |
+| 0xee4b…e3e9 | redeem | 0 | 195,051 | EOA | 0xeec0…8205 |  |
+| 0x4b3e…c3c8 | redeem | 0 | 188,205 | EOA | 0x7837…53f7 | likely exchange/disperser; via internal tx |
+| 0x8556…83bc | redeem | 0 | 183,629 | EOA | 0x51e3…75e0 |  |
+| 0xcefb…89ca | redeem | 0 | 162,960 | contract | n/a |  |
+| 0x3626…29c0 | redeem | 0 | 143,046 | EOA | 0x7cea…092e |  |
+| 0x7de5…1596 | redeem | 0 | 135,100 | EOA | 0xc465…1a8c |  |
+| 0x92ac…ddf2 | redeem | 0 | 116,000 | EOA | 0x7837…53f7 | likely exchange/disperser; via internal tx |
+| 0xc4fe…c437 | redeem | 0 | 103,785 | EOA | 0x7837…53f7 | likely exchange/disperser; via internal tx |
+| 0x2008…0050 | redeem | 0 | 67,703 | contract | n/a |  |
+| 0x222a…adbf | redeem | 0 | 56,194 | contract | n/a |  |
+| 0x1633…d429 | redeem | 0 | 51,767 | EOA | 0xe780…e245 |  |
+| 0x0c69…4473 | redeem | 0 | 40,708 | contract | n/a |  |
+| 0x8a30…87b7 | redeem | 0 | 21,057 | EOA | 0x375c…61d5 |  |
+| 0x84f5…e684 | redeem | 0 | 20,889 | EOA | 0xaeb6…cc7a | shared cross-side funder |
+| 0x1730…ef34 | redeem | 0 | 15,477 | EOA | 0x842e…4e0e |  |
+| 0xe067…029b | redeem | 0 | 9,288 | EOA | 0xe780…e245 |  |
+
+Margins: side(s) of the pool on which the account is a top-20 participant. First funder: source of the wallet's earliest incoming native-MATIC transfer (plain or internal transaction). The shared cross-side funder `0xaeb6…cc7a` funded one deposit-side and one redemption-side wallet within 77 hours in October 2021. Full addresses and transaction identifiers are in `data/depositor-analysis/entity_funding_analysis.json`.

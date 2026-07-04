@@ -1,4 +1,4 @@
-# Cover letter — Environmental Research Letters
+# Cover letter: Environmental Research Letters
 
 Dear Editors,
 
@@ -8,8 +8,8 @@ collapse in the first tokenized carbon pool"* for consideration as a Letter.
 **What we do.** Using the complete public transaction ledger of the largest
 tokenized carbon-credit pool (Toucan's Base Carbon Tonne, 22 million tonnes), we
 reconstruct every deposit (1,187), every withdrawal (35,432), and every
-participant account (509 depositors, 28,897 redeemers) over the pool's full life
-— to our knowledge the first credit-level forensic census of a tokenized carbon
+participant account (509 depositors, 28,897 redeemers) over the pool's full life:
+to our knowledge the first credit-level forensic census of a tokenized carbon
 market from formation to collapse.
 
 **Why it matters.** Three findings have direct policy relevance for the voluntary
@@ -30,9 +30,10 @@ real-world assets on the same pooled design:
 
 3. *The failure was foreseeable and is preventable.* A real-time composition
    audit (a cumulative Lemons Index) crossed its danger threshold at the pool's
-   launch — roughly nine months before the price repriced — and a simple quality
-   gate would have more than halved the pool's quality deficit. We provide the
-   open-source rating, early-warning, and gating tooling.
+   launch, roughly nine months before the price repriced, and a simple quality
+   gate would have cut the pool's quality deficit by about a third (from 0.724
+   to 0.405) in a counterfactual simulation. We provide the open-source rating,
+   early-warning, and gating tooling.
 
 **Honest scope.** This is a forensic case study of a single, now-defunct pool. We
 are explicit that the striking same-credit/different-pool contrast is *strongly
@@ -41,7 +42,7 @@ on a two-pool comparison and is structurally limited to nature-based credits),
 and we report the within-operator and cross-domain comparisons as descriptive,
 not confirmatory. We believe the value lies in the completeness and
 reproducibility of the forensic account and its concrete, deployable policy
-remedies — not in an over-claimed universal law.
+remedies, not in an over-claimed universal law.
 
 **Reproducibility.** All on-chain data, scoring rubrics, analysis scripts, smart
 contracts, and figures are openly available; every numeric claim traces to a
@@ -52,13 +53,13 @@ chain data.
 **Justification for urgent publication / global relevance.** The voluntary
 carbon market (~\$2 billion annually) and the \$10-billion-and-growing tokenized
 real-world asset sector are both being built, right now, on exactly the pooled,
-uniform-priced architecture whose failure we document. Policymakers — the ICVCM,
+uniform-priced architecture whose failure we document. Policymakers (the ICVCM,
 the Article 6.4 Supervisory Body under the Paris Agreement, and national
-regulators standing up carbon-disclosure and credit-rating mandates — are
+regulators standing up carbon-disclosure and credit-rating mandates) are
 actively deciding whether transparency alone is sufficient to safeguard market
-integrity. Our credit-level forensic evidence that it is not — and that the
+integrity. Our credit-level forensic evidence that it is not, and that the
 failure is detectable from a pool's first day and preventable with a simple
-quality gate — bears directly on standards being finalized this year. Publishing
+quality gate, bears directly on standards being finalized this year. Publishing
 now, while those rules remain in draft, is what converts the finding from a
 post-mortem into an actionable, globally relevant policy input for the carbon and
 tokenized-asset markets alike.
