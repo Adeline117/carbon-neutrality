@@ -85,6 +85,6 @@ Deposit quality declines over BCT's operating life (Spearman $\rho$ = $-$0.24, $
 
 ### Market-revealed quality hierarchy
 
-Credit type alone, not the quality framework, captures the dominant axis of selective redemption: a framework-free type-only prediction rule out-predicts the quality-grade rule, and within the 116 renewable tokens neither vintage nor grade predicts redemption (Supplementary Table 3). The paper's core findings (composition, base-rate over-selection, redemption-side extraction, and the within-token cross-pool comparison) accordingly rest on transaction data and Verra credit-type classifications, not on the quality scoring framework.
+Credit type alone, not the quality framework, captures the dominant axis of selective redemption: a framework-free type-only prediction rule out-predicts the quality-grade rule, and within the 116 renewable tokens neither vintage nor grade predicts redemption (Supplementary Table 3). The paper's core findings (composition, base-rate over-selection, redemption-side extraction, and the within-token cross-pool comparison) accordingly rest on transaction data and Verra credit-type classifications, not on the quality scoring framework (Supplementary Table 6).
 
 The bottom line: 9.6 million tonnes of B-grade credits (63% of the 15.2 million tonnes covered by the 161-token scored analysis) remain unredeemed, constituting one of the largest carbon credit graveyards.

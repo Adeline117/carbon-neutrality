@@ -1,0 +1,79 @@
+{
+  "signal": "cumulative renewable share of deposited tonnage (ledger + Verra type labels only)",
+  "danger_threshold": 0.5,
+  "burn_in_tonnes": 100000,
+  "trigger": {
+    "date": "2021-10-06",
+    "block": 20211977,
+    "share_at_trigger": 0.7736,
+    "cum_tonnes_at_trigger": 101876
+  },
+  "final_share": 0.6911,
+  "coverage": {
+    "deposits_resolved": 1187,
+    "deposits_total": 1187
+  },
+  "comparison": "Lemons Index trigger: 2021-10-06 at LI 0.711 (early_warning_results.json)",
+  "series_samples": [
+    {
+      "block": 20116490,
+      "date": "2021-10-04",
+      "cum_renewable_share": 1.0
+    },
+    {
+      "block": 20358874,
+      "date": "2021-10-10",
+      "cum_renewable_share": 0.4489
+    },
+    {
+      "block": 20411612,
+      "date": "2021-10-12",
+      "cum_renewable_share": 0.5827
+    },
+    {
+      "block": 20690197,
+      "date": "2021-10-19",
+      "cum_renewable_share": 0.6481
+    },
+    {
+      "block": 21137657,
+      "date": "2021-10-31",
+      "cum_renewable_share": 0.6854
+    },
+    {
+      "block": 21826007,
+      "date": "2021-11-18",
+      "cum_renewable_share": 0.7149
+    },
+    {
+      "block": 23065428,
+      "date": "2021-12-21",
+      "cum_renewable_share": 0.6826
+    },
+    {
+      "block": 24616345,
+      "date": "2022-02-01",
+      "cum_renewable_share": 0.7033
+    },
+    {
+      "block": 30615156,
+      "date": "2022-07-10",
+      "cum_renewable_share": 0.6928
+    },
+    {
+      "block": 36783590,
+      "date": "2022-12-22",
+      "cum_renewable_share": 0.6911
+    },
+    {
+      "block": 36797476,
+      "date": "2022-12-22",
+      "cum_renewable_share": 0.6911
+    },
+    {
+      "block": 36828350,
+      "date": "2022-12-23",
+      "cum_renewable_share": 0.6911
+    }
+  ]
+}

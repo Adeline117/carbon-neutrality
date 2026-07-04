@@ -1,6 +1,6 @@
 # Supplementary Information
 
-**Paper**: "Adverse selection in tokenized carbon markets: who profited from the first pool collapse"
+**Paper**: "Transparency without pricing: a credit-level forensic account of collapse in the first tokenized carbon pool"
 
 ---
 
@@ -155,6 +155,10 @@ Tracing the immediate destination of each redeemed credit across the 20 largest 
 
 At weekly frequency (n = 55), Granger tests are asymmetric and bidirectional: the dominant channel runs from price to pool quality (F = 8.40, p < 10^-4 at lag 4), with the reverse channel 2.5× weaker (F = 3.40, p = 0.04 at lag 2), consistent with the architecture setting the initial composition and price then driving further deterioration. This small-sample analysis is presented as exploratory; the first-differenced daily regression (n = 330, β = −1.8, p < 0.001) is the more powerful confirmation.
 
+### Framework-free early-warning variant
+
+The Lemons Index depends on the composite quality score. To test whether the early warning survives without the scoring framework, we recomputed the trigger using only ledger data and Verra credit-type labels: the cumulative renewable share of deposited tonnage, R(t) = renewable tonnes deposited up to t / total tonnes up to t, with a 0.50 danger threshold (majority of pool tonnage in the credit category with independently documented near-zero additionality) and a 100,000-tonne burn-in. The framework-free signal crossed its threshold on 2021-10-06, the same day as the Lemons Index trigger, with the renewable share already at 77.4% of the first ~102,000 tonnes; the share ends at 69.11%, matching the headline composition. All 1,187 deposits are type-resolved. Reproduction: `data/depositor-analysis/early_warning_framework_free.py`, results in `early_warning_framework_free_results.json`.
+
 ### Base-rate over-selection: extended sensitivity (relocated from Results)
 
 BCT's renewable share is 78.5% by deposit count (versus 69.1% by tonnage). Deposits cluster by account (509 accounts, Gini = 0.94, effective N = 83.5 by HHI), motivating account-clustered inference. An excess-share coefficient (the renewable share above the 37% null, rather than the ratio) is 0.522 with an account-level bootstrap 95% CI of [0.496, 0.547]. Under conservative assumptions (post-2008 VCS at 55%), the selection coefficient remains 1.43× (p < 10^-64). Over-selection becomes non-significant only at base rates exceeding 78.5%, an implausible assumption.
@@ -267,3 +271,18 @@ The ~10-point unscreened-to-screened gap appears within each operator separately
 | 0xe067…029b | redeem | 0 | 9,288 | EOA | 0xe780…e245 |  |
 
 Margins: side(s) of the pool on which the account is a top-20 participant. First funder: source of the wallet's earliest incoming native-MATIC transfer (plain or internal transaction). The shared cross-side funder `0xaeb6…cc7a` funded one deposit-side and one redemption-side wallet within 77 hours in October 2021. Full addresses and transaction identifiers are in `data/depositor-analysis/entity_funding_analysis.json`.
+
+### Supplementary Table 6. Robustness summary: what each headline claim rests on.
+
+| Claim | Evidence base | Depends on author framework? | Reproduction file |
+|---|---|---|---|
+| 69.1% renewable / 4.2% REDD+ composition | Ledger tonnage + Verra type labels | No | `bct_composition_complete.json` |
+| 1.87x base-rate over-selection | Type shares vs VCS registry base rates | No | `base_rate_analysis.json` |
+| Redemption asymmetry (industrial gas 100% vs renewables 3.7%) | Pool Transfer events + Verra type labels | No | `redemption_analysis.json` |
+| Within-token +73.9 pp cross-pool gap | Identical tokens in both pools; type/vintage/registry held fixed | No | `within_token_did.json` |
+| Dual-margin account structure (account-level) | On-chain transfers + first-funder audit | No | `entity_funding_analysis.json` |
+| $146M welfare gap (illustrative) | Type-level additionality distributions from independent literature + SCC Monte Carlo | No (framework-adjacent: uses literature additionality rates, not composite scores) | `welfare_quantification_results.json` |
+| Early-warning trigger (~9-month lead) | Lemons Index (composite-based); framework-free variant triggers the same day | Partially (framework-free variant confirms) | `early_warning_results.json`, `early_warning_framework_free_results.json` |
+| CCP calibration and cross-pool gradient | Composite scores vs CCP labels / pool means | Yes (reported as corroborative and largely definitional) | `ccp_effect_size_results.json`, `multipool_comparison.json` |
+
+File paths are relative to `data/depositor-analysis/` or `data/statistical-analysis/`. The first five rows carry the paper's core findings; the framework-dependent rows are validation and corroboration, not load-bearing claims.

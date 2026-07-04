@@ -13,6 +13,9 @@ Recommended venue: **Environmental Research Letters (ERL)**, the honest best fit
 - No leftover TODO / placeholder / FLUID markers in the LaTeX.
 - Abstract **195 words** (within ERL limits); main text ~3,993 words (ERL Letter limit 4,000).
 - Living-paper audit: **CLEAR**; all `{{placeholders}}` resolve.
+- One-command verification: `python3 tools/verify_headline_numbers.py` (exit 0, 15 checks); reproduction guide at `REPRODUCING.md` + pinned `requirements.txt`.
+- Framework-free early-warning variant (cumulative renewable share) triggers the SAME DAY as the Lemons Index (Supplementary Methods); robustness summary at Supplementary Table 6.
+- CarbonPlan-cluster citations added (Badgley 2022 GCB, Haya 2023 FFGC, refs 22-23); suggested-reviewer list at `docs/erl-suggested-reviewers.md`.
 
 ## What the paper is (set expectations)
 An honest, reproducible credit-level forensic account of the first tokenized carbon-pool collapse:
@@ -27,7 +30,7 @@ An honest, reproducible credit-level forensic account of the first tokenized car
 
 ## Human-only steps before clicking submit
 1. **Read the PDF once end to end**: final author eyes (esp. pp. 3–8: composition, forensics, cross-pool, within-token).
-2. **Fill author/affiliation/ORCID/funding** placeholders in the ERL submission form.
+2. **Fill author/affiliation/ORCID/funding** placeholders in the ERL submission form; paste suggested reviewers from `docs/erl-suggested-reviewers.md` (verify emails first).
 3. **(Optional, ~10 min) classify VCS-849** in the Verra registry to push C3 coverage 17/18 → 18/18 (does not change conclusions).
 4. Confirm the GitHub repo is public (and optionally mint a Zenodo DOI for the release) (data/code availability links resolve).
 

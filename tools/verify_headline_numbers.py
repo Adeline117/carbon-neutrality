@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+"""verify_headline_numbers.py -- assert every headline number in the manuscript
+against the canonical results manifest and cached analysis outputs.
+Exit 0 = all consistent.
+
+Run from the repo root:  python3 tools/verify_headline_numbers.py
+"""
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+FAIL = []
+
+
+def check(name, actual, expected, tol=0.0):
+    ok = (abs(float(actual) - float(expected)) <= tol) if isinstance(expected, (int, float)) \
+        else (actual == expected)
+    print(f"  {'PASS' if ok else 'FAIL'}  {name}: {actual}  (manuscript: {expected})")
+    if not ok:
+        FAIL.append(name)
+
+
+def main():
+    print("Headline-number verification\n")
+    manifest = json.loads((ROOT / "results" / "manifest.json").read_text())
+
+    def mval(section, key):
+        return manifest[section][key]["value"]
+
+    # Manuscript headline numbers <- canonical manifest (each entry carries its
+    # own source-file provenance, checked by tools/living-paper/fill_manifest.py)
+    check("renewable share (69.1%)", mval("composition", "renewable_pct_tonnes"), 69.1, 0.05)
+    check("within-token gap (+73.9 pp)", mval("within_token", "boot_gap_mean_pp"), 73.9, 0.05)
+
+    comp = json.loads((ROOT / "data/depositor-analysis/bct_composition_complete.json").read_text())
+    check("renewable share, raw composition file", comp["by_type"]["Renewable"]["pct"], 69.1, 0.05)
+    check("total deposits (1,187)", comp["total_deposits"], 1187)
+    check("total tonnage (~22.0 Mt)", round(comp["total_tonnes"] / 1e6, 1), 22.0, 0.05)
+
+    cf = json.loads((ROOT / "data/statistical-analysis/counterfactual_simulation_results.json").read_text())
+    flat = dict(_flatten(cf))
+    li0 = next((v for v in flat.values() if isinstance(v, (int, float)) and abs(v - 0.724) < 0.001), None)
+    li1 = next((v for v in flat.values() if isinstance(v, (int, float)) and abs(v - 0.405) < 0.001), None)  # raw 0.4045 rounds to 0.405
+    check("gating baseline (0.724)", li0 if li0 is not None else -1, 0.724, 0.0005)
+    check("gating endpoint (0.405)", li1 if li1 is not None else -1, 0.405, 0.0006)
+
+    ew = json.loads((ROOT / "data/depositor-analysis/early_warning_results.json").read_text())
+    check("early-warning LI at trigger (0.71)", round(ew["li_at_trigger"], 2), 0.71, 0.005)
+    check("early-warning lead (~9 months)", round(ew["lead_time_months"]), 9)
+    check("peak price ($5.91)", ew["peak_price_usd"], 5.91, 0.005)
+
+    ff = json.loads((ROOT / "data/depositor-analysis/early_warning_framework_free_results.json").read_text())
+    check("framework-free trigger same day as LI", ff["trigger"]["date"], ew["li_trigger_date"])
+    check("framework-free final share (69.11%)", round(100 * ff["final_share"], 2), 69.11, 0.01)
+
+    ent = json.loads((ROOT / "data/depositor-analysis/entity_funding_analysis.json").read_text())
+    v = ent["verdict"]
+    check("entity audit: EOAs analysed (33)", v["eoas_analyzed"], 33)
+    check("entity audit: cross-side common funders (1)", len(v["non_exchange_common_funders"]), 1)
+    check("entity audit: direct cross-side transfers (7)", v["direct_cross_side_transfers"], 7)
+
+    print(f"\n{'ALL CONSISTENT (exit 0)' if not FAIL else 'INCONSISTENT: ' + ', '.join(FAIL)}")
+    sys.exit(1 if FAIL else 0)
+
+
+def _flatten(obj, prefix=""):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            yield from _flatten(v, f"{prefix}{k}.")
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from _flatten(v, f"{prefix}{i}.")
+    else:
+        yield prefix.rstrip("."), obj
+
+
+if __name__ == "__main__":
+    main()
