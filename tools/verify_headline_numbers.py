@@ -55,6 +55,9 @@ def main():
     check("framework-free stable above threshold from first week", ff["stable_above_threshold_from"], "2021-10-10")
     check("framework-free final share (69.11%)", round(100 * ff["final_share"], 2), 69.11, 0.01)
 
+    wt2 = json.loads((ROOT / "data/depositor-analysis/within_type_crosspool_results.json").read_text())
+    check("within-type cross-pool max delta (<=0.32)", wt2["max_abs_within_type_delta"], 0.32, 0.005)
+
     ent = json.loads((ROOT / "data/depositor-analysis/entity_funding_analysis.json").read_text())
     v = ent["verdict"]
     check("entity audit: EOAs analysed (33)", v["eoas_analyzed"], 33)

@@ -1,0 +1,47 @@
+{
+  "question": "does the nature screen select higher-quality credits WITHIN type?",
+  "method": "tonnage-weighted mean composite of deposits, per type, BCT vs NCT",
+  "by_type": {
+    "ARR": {
+      "bct": {
+        "wmean": 50.79,
+        "tonnes": 855105,
+        "n_tokens": 7
+      },
+      "nct": {
+        "wmean": 50.94,
+        "tonnes": 771616,
+        "n_tokens": 6
+      },
+      "delta_nct_minus_bct": 0.15
+    },
+    "IFM": {
+      "bct": {
+        "wmean": 48.43,
+        "tonnes": 449983,
+        "n_tokens": 15
+      },
+      "nct": {
+        "wmean": 48.17,
+        "tonnes": 527106,
+        "n_tokens": 12
+      },
+      "delta_nct_minus_bct": -0.26
+    },
+    "REDD+": {
+      "bct": {
+        "wmean": 31.75,
+        "tonnes": 929695,
+        "n_tokens": 16
+      },
+      "nct": {
+        "wmean": 31.43,
+        "tonnes": 823280,
+        "n_tokens": 13
+      },
+      "delta_nct_minus_bct": -0.32
+    }
+  },
+  "max_abs_within_type_delta": 0.32,
+  "conclusion": "screen acts on type composition only; within-type quality is near-identical across pools"
+}
