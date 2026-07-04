@@ -1,0 +1,41 @@
+{
+  "note": "fees in percent of one vault token; current values (owner-settable), read at run time via eth_call",
+  "vaults": {
+    "MILADY": {
+      "mintFee": 1.0,
+      "randomRedeemFee": 1.0,
+      "targetRedeemFee": 2.0,
+      "exit_selection_priced": true
+    },
+    "PHUNK": {
+      "mintFee": 5.0,
+      "randomRedeemFee": 2.0,
+      "targetRedeemFee": 3.0,
+      "exit_selection_priced": true
+    },
+    "WIZARD": {
+      "mintFee": 5.0,
+      "randomRedeemFee": 2.0,
+      "targetRedeemFee": 3.0,
+      "exit_selection_priced": true
+    },
+    "MEEB": {
+      "mintFee": 5.0,
+      "randomRedeemFee": 2.0,
+      "targetRedeemFee": 3.0,
+      "exit_selection_priced": true
+    },
+    "MANA": {
+      "mintFee": 15.0,
+      "randomRedeemFee": 2.0,
+      "targetRedeemFee": 8.0,
+      "exit_selection_priced": true
+    },
+    "BGAN": {
+      "mintFee": 5.0,
+      "randomRedeemFee": 2.0,
+      "targetRedeemFee": 3.0,
+      "exit_selection_priced": true
+    }
+  }
+}

@@ -14,6 +14,12 @@
         "redeemed_n": 1515,
         "minted_n": 1763,
         "minted_below_collection_median_p": 4.18e-74,
+        "deposited_pctile_iqr": 0.355,
+        "strict_matching_robustness": {
+          "n": 464,
+          "median_pctile": 0.267,
+          "wilcoxon_p": 1.06e-48
+        },
         "redeemed_median_pctile": 0.332,
         "minted_median_pctile": 0.327,
         "gap_pp": 0.5,
@@ -57,6 +63,12 @@
         "redeemed_n": 436,
         "minted_n": 529,
         "minted_below_collection_median_p": 1.64e-19,
+        "deposited_pctile_iqr": 0.477,
+        "strict_matching_robustness": {
+          "n": 368,
+          "median_pctile": 0.252,
+          "wilcoxon_p": 2.4e-27
+        },
         "redeemed_median_pctile": 0.303,
         "minted_median_pctile": 0.337,
         "gap_pp": -3.4,
@@ -101,6 +113,12 @@
         "redeemed_n": 1009,
         "minted_n": 1266,
         "minted_below_collection_median_p": 6.04e-66,
+        "deposited_pctile_iqr": 0.354,
+        "strict_matching_robustness": {
+          "n": 368,
+          "median_pctile": 0.247,
+          "wilcoxon_p": 3.67e-42
+        },
         "redeemed_median_pctile": 0.376,
         "minted_median_pctile": 0.362,
         "gap_pp": 1.4,
@@ -145,6 +163,12 @@
         "redeemed_n": 7099,
         "minted_n": 7133,
         "minted_below_collection_median_p": 0.000527,
+        "deposited_pctile_iqr": 0.4,
+        "strict_matching_robustness": {
+          "n": 3385,
+          "median_pctile": 0.495,
+          "wilcoxon_p": 0.785
+        },
         "redeemed_median_pctile": 0.475,
         "minted_median_pctile": 0.485,
         "gap_pp": -1.0,
@@ -191,6 +215,12 @@
         "redeemed_n": 2289,
         "minted_n": 2473,
         "minted_below_collection_median_p": 1.8e-12,
+        "deposited_pctile_iqr": 0.5,
+        "strict_matching_robustness": {
+          "n": 752,
+          "median_pctile": 0.396,
+          "wilcoxon_p": 3e-11
+        },
         "redeemed_median_pctile": 0.444,
         "minted_median_pctile": 0.439,
         "gap_pp": 0.5,
@@ -234,6 +264,12 @@
         "redeemed_n": 2104,
         "minted_n": 2327,
         "minted_below_collection_median_p": 1.33e-16,
+        "deposited_pctile_iqr": 0.381,
+        "strict_matching_robustness": {
+          "n": 674,
+          "median_pctile": 0.379,
+          "wilcoxon_p": 1.3e-15
+        },
         "redeemed_median_pctile": 0.422,
         "minted_median_pctile": 0.43,
         "gap_pp": -0.8,

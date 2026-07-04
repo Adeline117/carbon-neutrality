@@ -81,13 +81,39 @@ def analyse_vault(sym):
 
     red_vals, red_cov, red_tot = event_percentiles(ev["redeemed_events"])
     min_vals, min_cov, min_tot = event_percentiles(ev["minted_events"])
+
+    # robustness: strict matching (sale within WINDOW blocks of the event)
+    def strict_minted_stats():
+        vals = []
+        for e in ev["minted_events"]:
+            for tid in e["nft_ids"]:
+                cand = [t for t in by_token.get(str(tid), []) if abs(t[0] - e["block"]) <= WINDOW]
+                if not cand:
+                    continue
+                sb, sp = min(cand, key=lambda t: abs(t[0] - e["block"]))
+                lo = bisect_left(blocks, sb - WINDOW)
+                hi = bisect_right(blocks, sb + WINDOW)
+                w = prices[lo:hi]
+                if len(w) >= 20:
+                    vals.append(sum(1 for pr in w if pr <= sp) / len(w))
+        if len(vals) < 20:
+            return None
+        vals.sort()
+        _, wp = wilcoxon([v - 0.5 for v in vals], alternative="less")
+        return {"n": len(vals), "median_pctile": round(vals[len(vals) // 2], 3),
+                "wilcoxon_p": float(f"{wp:.3g}")}
+    strict = strict_minted_stats()
     if red_vals and min_vals:
         u, p = mannwhitneyu(red_vals, min_vals, alternative="greater")
         med_r = sorted(red_vals)[len(red_vals) // 2]
         med_m = sorted(min_vals)[len(min_vals) // 2]
         w_stat, w_p = wilcoxon([v - 0.5 for v in min_vals], alternative="less")
+        mv = sorted(min_vals)
+        dep_iqr = mv[(3 * len(mv)) // 4] - mv[len(mv) // 4]
         selectivity = {"redeemed_n": len(red_vals), "minted_n": len(min_vals),
                        "minted_below_collection_median_p": float(f"{w_p:.3g}"),
+                       "deposited_pctile_iqr": round(dep_iqr, 3),
+                       "strict_matching_robustness": strict,
                        "redeemed_median_pctile": round(med_r, 3),
                        "minted_median_pctile": round(med_m, 3),
                        "gap_pp": round(100 * (med_r - med_m), 1),
