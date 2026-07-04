@@ -199,7 +199,7 @@ To test whether the dual-margin adverse selection pattern generalises beyond car
 
 We selected the 20 largest vaults by mint count ($\geq$50 mints), covering 20,238 mints and 20,781 redemptions across vaults spanning collectibles (MILADY, PHUNK), gaming items (WIZARD, WARRIOR), and art (MOONCAT, AVASTR). For each vault, we computed the redeem/mint ratio and net outflow. 12 of 20 vaults (60%) exhibited net redemption outflow, consistent with selective extraction of higher-value items. The three largest vaults by activity (MILADY, REMIO, PHUNK) all showed net exit, with MANA exhibiting the strongest cherry-picking effect (redeem/mint ratio = 1.43).
 
-The dual-margin population structure replicates BCT's pattern: in MILADY, only 1.3% of redeemers also appear as minters, compared to BCT's 1.4% depositor--redeemer overlap. Redeemer populations are 2--31$\times$ larger than minter populations across the top vaults, confirming that, as in BCT, distinct populations exploit the entry and exit margins of the same uniform-pricing mechanism.
+The dual-margin population structure replicates BCT's pattern: in MILADY, only 1.3% of redeemers also appear as minters, compared to BCT's 1.4% depositor--redeemer overlap. Redeemer populations are 2--31$\times$ larger than minter populations across the top vaults, confirming that, as in BCT, largely distinct account populations (an account-level observation, as in the main text) exploit the entry and exit margins of the same uniform-pricing mechanism.
 
 ### Supplementary Table 2. Vintage-free robustness check: temporal correlation with and without vintage dimension.
 
