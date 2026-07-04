@@ -1,0 +1,426 @@
+{
+  "method": {
+    "nodes": "top-20 depositors (klima_overlap_results.json) + top-20 redeemers aggregated from transfer_cache pool->wallet TCO2 logs",
+    "code_check": "eth_getCode @ https://polygon-bor-rpc.publicnode.com",
+    "direct_transfers": "TCO2 ERC-20 transfers between the two account sets, from transfer_cache",
+    "first_funder": "earliest incoming native-MATIC tx per EOA, Etherscan v2 (chainid=137)",
+    "exchange_rule": "funder of >= 3 analyzed wallets tagged likely-exchange/disperser; common exchange funding treated as inconclusive, not as same-entity evidence"
+  },
+  "accounts": {
+    "0xaf529400ff068afbdc907c699b9184a4381481b0": {
+      "side": "deposit",
+      "deposit_tonnes": 1967489.0,
+      "deposit_count": 46,
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0xaf529400ff068afbdc907c699b9184a4381481b0",
+      "earliest_ts": "1634136875"
+    },
+    "0xf36729fbfcde9a65386eb236460d8a8cfced2156": {
+      "side": "deposit",
+      "deposit_tonnes": 1526175.0,
+      "deposit_count": 28,
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0xf36729fbfcde9a65386eb236460d8a8cfced2156",
+      "earliest_ts": "1634530621"
+    },
+    "0xee9930a62fbf85fb443ad3d7410da665ebc90b83": {
+      "side": "deposit",
+      "deposit_tonnes": 1328930.0,
+      "deposit_count": 49,
+      "is_contract": false,
+      "first_funder": "0xaeb6eda99c37589667e4ded9e1081a93307ecc7a",
+      "first_funder_ts": "1634284491",
+      "first_funder_matic": 1.5
+    },
+    "0xe519b28e8f96e229498f15bb2da4ec0e942f688f": {
+      "side": "deposit",
+      "deposit_tonnes": 1284435.0,
+      "deposit_count": 47,
+      "is_contract": false,
+      "first_funder": "0x8c5a6c767ee7084a8c656acd457da9561163ae7e",
+      "first_funder_ts": "1633532095",
+      "first_funder_matic": 0.0005
+    },
+    "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c": {
+      "side": "deposit",
+      "deposit_tonnes": 1273817.0,
+      "deposit_count": 27,
+      "is_contract": false,
+      "first_funder": "0x4c76996ed86efeba6bf33edcc39c06f4298994d7",
+      "first_funder_ts": "1641051919",
+      "first_funder_matic": 10.0
+    },
+    "0xdab7f2bc9aa986d9759718203c9a76534894e900": {
+      "side": "deposit",
+      "deposit_tonnes": 1192245.0,
+      "deposit_count": 20,
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0xdab7f2bc9aa986d9759718203c9a76534894e900",
+      "earliest_ts": "1636476223"
+    },
+    "0x5298ee22d6b4ec1a8c62944ba63a8a197ee726e2": {
+      "side": "deposit",
+      "deposit_tonnes": 942657.0,
+      "deposit_count": 22,
+      "is_contract": false,
+      "first_funder": "0x02a890c81b7a63be63755607ca00c4407833eb9b",
+      "first_funder_ts": "1635137702",
+      "first_funder_matic": 0.0015
+    },
+    "0x2845ec77192ad7ba2faf67e63b49be6c8d4f8b20": {
+      "side": "deposit",
+      "deposit_tonnes": 921023.0,
+      "deposit_count": 17,
+      "is_contract": false,
+      "first_funder": "0x5216d8d7278f8978fdb0d66f4fe8f0c2f516b8d6",
+      "first_funder_ts": "1636913182",
+      "first_funder_matic": 10.0
+    },
+    "0xd85cf713c480a6dfac34121ee362a5e0ef74001f": {
+      "side": "deposit",
+      "deposit_tonnes": 822698.0,
+      "deposit_count": 29,
+      "is_contract": false,
+      "first_funder": "0xc9d1dfec566ae6bdaa71bdd746f8378b8a7e7e7a",
+      "first_funder_ts": "1633990552",
+      "first_funder_matic": 1.0
+    },
+    "0xe8d7763b7c6f969cf1b2ee8a88281bb172aa91ff": {
+      "side": "deposit",
+      "deposit_tonnes": 763977.0,
+      "deposit_count": 40,
+      "is_contract": false,
+      "first_funder": "0x886b4f80a48b9516bbaa9fe092afd7565777eb82",
+      "first_funder_ts": "1634606661",
+      "first_funder_matic": 92.5866
+    },
+    "0x00000016f127c94a667ae3c9fdf0c31c9c79826f": {
+      "side": "deposit",
+      "deposit_tonnes": 681776.0,
+      "deposit_count": 22,
+      "is_contract": false,
+      "first_funder": "0x8670addde1ca40e87371610c281bd23c383a46b1",
+      "first_funder_ts": "1634554258",
+      "first_funder_matic": 5.0
+    },
+    "0xa3fbf3282b227edfced3488ac8b71af4d38fc075": {
+      "side": "deposit",
+      "deposit_tonnes": 477970.0,
+      "deposit_count": 23,
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0xa3fbf3282b227edfced3488ac8b71af4d38fc075",
+      "earliest_ts": "1634573351"
+    },
+    "0xc450febeca0a1a4f802c74b5a15cfc90b799eaf5": {
+      "side": "deposit",
+      "deposit_tonnes": 464905.0,
+      "deposit_count": 5,
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0xc450febeca0a1a4f802c74b5a15cfc90b799eaf5",
+      "earliest_ts": "1634567456"
+    },
+    "0x79c8d248de2ffa98fa1cf1793c79bb86615a52d7": {
+      "side": "deposit",
+      "deposit_tonnes": 450186.0,
+      "deposit_count": 9,
+      "is_contract": false,
+      "first_funder": "0xfa0b641678f5115ad8a8de5752016bd1359681b9",
+      "first_funder_ts": "1637675356",
+      "first_funder_matic": 5.92
+    },
+    "0x0bf92dee04456e3851d7418ed890d5522d7bd496": {
+      "side": "deposit",
+      "deposit_tonnes": 385347.0,
+      "deposit_count": 14,
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0x0bf92dee04456e3851d7418ed890d5522d7bd496",
+      "earliest_ts": "1634458673"
+    },
+    "0x51d3a285bdb30fbdec337cb2f5d7a863d78a36be": {
+      "side": "deposit",
+      "deposit_tonnes": 383674.0,
+      "deposit_count": 19,
+      "is_contract": false,
+      "first_funder": "0xb192539845402ac3a0d4ad37adba2d9bf8c93771",
+      "first_funder_ts": "1636036084",
+      "first_funder_matic": 1.0
+    },
+    "0xcf237f7e640e32470587ff8e5918ead1840c6e5a": {
+      "side": "deposit",
+      "deposit_tonnes": 365157.0,
+      "deposit_count": 7,
+      "is_contract": false,
+      "first_funder": "0x082489a616ab4d46d1947ee3f912e080815b08da",
+      "first_funder_ts": "1648476550",
+      "first_funder_matic": 9.9
+    },
+    "0xac5f1da716b466aedbfe24bb8496ce4b956af05f": {
+      "side": "both",
+      "deposit_tonnes": 343952.0,
+      "deposit_count": 2,
+      "redeem_tonnes": 46000.0,
+      "is_contract": false,
+      "first_funder": "0xe2e43e624090912f1d5284f5f6329d2f2474c8af",
+      "first_funder_ts": "1635101049",
+      "first_funder_matic": 5.0
+    },
+    "0xb0ee473b1e6ddecd7a86e4c00d9b0a2d158e01cf": {
+      "side": "both",
+      "deposit_tonnes": 317391.0,
+      "deposit_count": 19,
+      "redeem_tonnes": 30000.0,
+      "is_contract": false,
+      "first_funder": "0x17303b4e90ea4f0a60407ff6c5471ba689e1ef34",
+      "first_funder_ts": "1634774308",
+      "first_funder_matic": 0.9471
+    },
+    "0xb208e3dcc8e2b091fa4b9aa65d528fdfdc8bfa93": {
+      "side": "deposit",
+      "deposit_tonnes": 307424.0,
+      "deposit_count": 17,
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0xb208e3dcc8e2b091fa4b9aa65d528fdfdc8bfa93",
+      "earliest_ts": "1634578343"
+    },
+    "0x65a5076c0ba74e5f3e069995dc3dab9d197d995c": {
+      "redeem_tonnes": 651333.8,
+      "side": "redeem",
+      "is_contract": true,
+      "desc": "Industrial gas; 651,334 t; retire-in-same-tx"
+    },
+    "0x1b8e77cd56d41ff886866fab4d14de7973a55d64": {
+      "redeem_tonnes": 335556.3,
+      "side": "redeem",
+      "is_contract": false,
+      "desc": "IFM; 335,556 t",
+      "first_funder": "0x0ff19eef5baa01b363492e37fbc2d2b905ea6ff5",
+      "first_funder_ts": "1643488201",
+      "first_funder_matic": 1.0
+    },
+    "0xee4b5fe730a8ff4dfb9041421eea48d2ae79e3e9": {
+      "redeem_tonnes": 195051.0,
+      "side": "redeem",
+      "is_contract": false,
+      "desc": "REDD+; 195,051 t",
+      "first_funder": "0xeec006312552d15b5198449488d044e526ef8205",
+      "first_funder_ts": "1635327604",
+      "first_funder_matic": 50.0
+    },
+    "0x4b3ebae392e8b90a9b13068e90b27d9c41abc3c8": {
+      "redeem_tonnes": 188205.0,
+      "side": "redeem",
+      "is_contract": false,
+      "desc": "ARR; 188,205 t",
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0x4b3ebae392e8b90a9b13068e90b27d9c41abc3c8",
+      "earliest_ts": "1643387715"
+    },
+    "0x855627a0d999f2912327de000c1e92faa8e683bc": {
+      "redeem_tonnes": 183629.0,
+      "side": "redeem",
+      "is_contract": false,
+      "desc": "ARR; 183,629 t",
+      "first_funder": "0x51e3d44172868acc60d68ca99591ce4230bc75e0",
+      "first_funder_ts": "1641934228",
+      "first_funder_matic": 5.0
+    },
+    "0xcefb61af5325c0c100cbd77eb4c9f51d17b189ca": {
+      "redeem_tonnes": 162959.6,
+      "side": "redeem",
+      "is_contract": true
+    },
+    "0x362627a677a0a82261bfc3cc6c2df30f032c29c0": {
+      "redeem_tonnes": 143046.1,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": "0x7cea675598da73f859696b483c05a4f135b2092e",
+      "first_funder_ts": "1618505108",
+      "first_funder_matic": 0.01
+    },
+    "0x7de53c9cc4f044046418a316645ef4bdecb11596": {
+      "redeem_tonnes": 135100.0,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+      "first_funder_ts": "1643654189",
+      "first_funder_matic": 10.0
+    },
+    "0x92ac19a9519897beaa7aae88f4e9ad19ab0bddf2": {
+      "redeem_tonnes": 116000.0,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0x92ac19a9519897beaa7aae88f4e9ad19ab0bddf2",
+      "earliest_ts": "1643390011"
+    },
+    "0xc4fe1707d0867de63a9b5d99dec15653b14cc437": {
+      "redeem_tonnes": 103785.0,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": null,
+      "first_funder_note": "no plain native incoming tx in first 50; likely internal-tx funded (bridge/exchange router)",
+      "earliest_counterparty": "0xc4fe1707d0867de63a9b5d99dec15653b14cc437",
+      "earliest_ts": "1643408683"
+    },
+    "0x200800030b0920400c0100b30bb0fd6bab300050": {
+      "redeem_tonnes": 67703.0,
+      "side": "redeem",
+      "is_contract": true
+    },
+    "0x222aadfaf8ffa6cc7d89f7e99cf94963b121adbf": {
+      "redeem_tonnes": 56194.0,
+      "side": "redeem",
+      "is_contract": true
+    },
+    "0x163308903db8466eeae7ea2cb17f6e61ff2fd429": {
+      "redeem_tonnes": 51767.2,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": "0xe7804c37c13166ff0b37f5ae0bb07a3aebb6e245",
+      "first_funder_ts": "1643500448",
+      "first_funder_matic": 28.871
+    },
+    "0x0c69b2751a28719e267b377e97572f359fe14473": {
+      "redeem_tonnes": 40707.7,
+      "side": "redeem",
+      "is_contract": true
+    },
+    "0x8a30d3bb32291dbbb5f88f905433e499638387b7": {
+      "redeem_tonnes": 21056.8,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": "0x375c1dc69f05ff526498c8aca48805eec52861d5",
+      "first_funder_ts": "1635722400",
+      "first_funder_matic": 125.0
+    },
+    "0x84f5590ffe54e0f684b845807d036d8c1d18e684": {
+      "redeem_tonnes": 20889.2,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": "0xaeb6eda99c37589667e4ded9e1081a93307ecc7a",
+      "first_funder_ts": "1634560381",
+      "first_funder_matic": 1.0
+    },
+    "0x17303b4e90ea4f0a60407ff6c5471ba689e1ef34": {
+      "redeem_tonnes": 15477.3,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": "0x842e7ebbf391358da57cd9fe647a4bae415b4e0e",
+      "first_funder_ts": "1634650310",
+      "first_funder_matic": 3.0
+    },
+    "0xe0679852a2ccfc0b89b4c66af5b3cb540612029b": {
+      "redeem_tonnes": 9288.1,
+      "side": "redeem",
+      "is_contract": false,
+      "first_funder": "0xe7804c37c13166ff0b37f5ae0bb07a3aebb6e245",
+      "first_funder_ts": "1643556358",
+      "first_funder_matic": 61.6497
+    }
+  },
+  "direct_transfers": {
+    "n": 7,
+    "transfers": [
+      {
+        "tco2": "0x463de2a5c6e8bb0c87f4aa80a02689e6680f72c7",
+        "from": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+        "to": "0x7de53c9cc4f044046418a316645ef4bdecb11596",
+        "tonnes": 55532.0,
+        "tx_hash": "0xa6c241bc3624db4c57f079571d071a222ac0ec3d14a62a968d4921ff95677f63"
+      },
+      {
+        "tco2": "0x5a75fa233a06cfcf708549785598b428340b9261",
+        "from": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+        "to": "0x7de53c9cc4f044046418a316645ef4bdecb11596",
+        "tonnes": 6828.0,
+        "tx_hash": "0x7de10c2d5eb57a4a871789dbc7293b32355bd46db40fa58a2a9bd150bb689fea"
+      },
+      {
+        "tco2": "0x88da4c6bffdaedf6b64bdb6060973f86a77830ec",
+        "from": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+        "to": "0x7de53c9cc4f044046418a316645ef4bdecb11596",
+        "tonnes": 60000.0,
+        "tx_hash": "0x5ae70c38dd64ce8b97bf681e3d21f693b3276a5b938581d16aa4100ef039423b"
+      },
+      {
+        "tco2": "0x88da4c6bffdaedf6b64bdb6060973f86a77830ec",
+        "from": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+        "to": "0x7de53c9cc4f044046418a316645ef4bdecb11596",
+        "tonnes": 40000.0,
+        "tx_hash": "0x43bf35d4f97b1bbf573f076b056fc853c13896332108d4ea98a4df97a0fa0b52"
+      },
+      {
+        "tco2": "0x88da4c6bffdaedf6b64bdb6060973f86a77830ec",
+        "from": "0x2845ec77192ad7ba2faf67e63b49be6c8d4f8b20",
+        "to": "0x7de53c9cc4f044046418a316645ef4bdecb11596",
+        "tonnes": 31935.0,
+        "tx_hash": "0x28e33cfcc4be44feb53bc913542441ab806f99fd3f7875c3802f62a652c4d85c"
+      },
+      {
+        "tco2": "0xcced78964f1dbbf0b1c65b2068dbda2f103a8d79",
+        "from": "0x7de53c9cc4f044046418a316645ef4bdecb11596",
+        "to": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+        "tonnes": 3.3,
+        "tx_hash": "0xc6f0b85fc3d562256b7687c570c8aa2a96af702722fa46ae1e936afcdddcadbe"
+      },
+      {
+        "tco2": "0xcced78964f1dbbf0b1c65b2068dbda2f103a8d79",
+        "from": "0x7de53c9cc4f044046418a316645ef4bdecb11596",
+        "to": "0xc4652c97ae04a8cf6541c76cb96d9a7684ea1a8c",
+        "tonnes": 99996.7,
+        "tx_hash": "0x5c2bd009cd6e3b098f7aeededbd205d7b8aea5a5a5fc922014bfbdba7be62dda"
+      }
+    ]
+  },
+  "verdict": {
+    "eoas_analyzed": 33,
+    "eoas_with_resolved_funder": 33,
+    "cross_side_common_funders": [
+      {
+        "funder": "0xaeb6eda99c37589667e4ded9e1081a93307ecc7a",
+        "wallets": [
+          "0xee9930a62fbf85fb443ad3d7410da665ebc90b83",
+          "0x84f5590ffe54e0f684b845807d036d8c1d18e684"
+        ],
+        "sides": [
+          "deposit",
+          "redeem"
+        ],
+        "likely_exchange": false
+      }
+    ],
+    "non_exchange_common_funders": [
+      {
+        "funder": "0xaeb6eda99c37589667e4ded9e1081a93307ecc7a",
+        "wallets": [
+          "0xee9930a62fbf85fb443ad3d7410da665ebc90b83",
+          "0x84f5590ffe54e0f684b845807d036d8c1d18e684"
+        ],
+        "sides": [
+          "deposit",
+          "redeem"
+        ],
+        "likely_exchange": false
+      }
+    ],
+    "direct_cross_side_transfers": 7,
+    "likely_exchange_funders": [],
+    "outcome": "overlap-found"
+  }
+}
