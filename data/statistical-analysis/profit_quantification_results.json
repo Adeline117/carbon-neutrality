@@ -1,0 +1,80 @@
+{
+  "method": "top-5 redeemer tonnage by type (transfer_cache) x documented price assumption ranges minus BCT redemption cost; scenario bounds",
+  "assumptions": {
+    "offchain_price_usd_per_t": {
+      "Industrial gas": [
+        3,
+        12
+      ],
+      "REDD+": [
+        4,
+        15
+      ],
+      "IFM": [
+        5,
+        18
+      ],
+      "ARR": [
+        6,
+        20
+      ],
+      "Renewable": [
+        0.3,
+        1.5
+      ]
+    },
+    "bct_cost_usd_per_t": [
+      1,
+      5
+    ]
+  },
+  "top_5_wallets": [
+    {
+      "wallet": "0x65a5076c...",
+      "tonnes": 651333.8,
+      "dominant_type": "Industrial gas",
+      "profit_low_usd": 0,
+      "profit_mid_usd": 2931002,
+      "profit_high_usd": 7164671
+    },
+    {
+      "wallet": "0x1b8e77cd...",
+      "tonnes": 335556.3,
+      "dominant_type": "IFM",
+      "profit_low_usd": 0,
+      "profit_mid_usd": 2520616,
+      "profit_high_usd": 5207038
+    },
+    {
+      "wallet": "0xee4b5fe7...",
+      "tonnes": 195051.0,
+      "dominant_type": "REDD+",
+      "profit_low_usd": 6828,
+      "profit_mid_usd": 1291730,
+      "profit_high_usd": 2764854
+    },
+    {
+      "wallet": "0x4b3ebae3...",
+      "tonnes": 188205.0,
+      "dominant_type": "ARR",
+      "profit_low_usd": 188205,
+      "profit_mid_usd": 1882050,
+      "profit_high_usd": 3575895
+    },
+    {
+      "wallet": "0x855627a0...",
+      "tonnes": 183629.0,
+      "dominant_type": "ARR",
+      "profit_low_usd": 133628,
+      "profit_mid_usd": 1661286,
+      "profit_high_usd": 3238946
+    }
+  ],
+  "aggregate": {
+    "profit_low_usd": 328661,
+    "profit_mid_usd": 10286684,
+    "profit_high_usd": 21951405
+  },
+  "note": "Upper bound: includes retirement-routed volume (the largest wallet is a retirement contract). Gas and slippage excluded.",
+  "supersedes": "hand-recorded profit_quantification.json"
+}

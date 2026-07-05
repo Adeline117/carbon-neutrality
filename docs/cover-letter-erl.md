@@ -31,8 +31,9 @@ real-world assets on the same pooled design:
 3. *The failure was foreseeable and is preventable.* A real-time composition
    audit (a cumulative Lemons Index) crossed its danger threshold at the pool's
    launch, roughly nine months before the price repriced, and a simple quality
-   gate would have cut the pool's quality deficit by about a third (from 0.724
-   to 0.405) in a counterfactual simulation. The paper ships the remedy with
+   gate applied to the actual deposit stream would have cut the deposit-weighted
+   quality deficit from 0.689 to 0.506, while admitting only 7.2% of deposited
+   tonnage (the eligible universe could not support a high-quality pool at scale). The paper ships the remedy with
    the diagnosis: an open-source reference implementation of the rating
    registry, quality gate, and real-time monitor (94 passing tests, measured
    gas overhead of roughly 19k per gate check).

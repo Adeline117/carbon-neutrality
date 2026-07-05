@@ -11,7 +11,7 @@ project+vintage, type each project by overlap with our existing classification,
 score by type-mean composite, and compute the Spearman slope of quality vs
 deposit block order.
 
-Coverage (honest): 22/26 C3T tokens resolve a symbol; 12/18 projects type via
+Coverage (honest): 22/26 C3T tokens resolve a symbol; 12/18 projects type via (the paper's 17/18 adds 5 projects typed manually via public-registry lookup, recorded in c3_manual_types.json)
 classification overlap; 52/92 deposits scored. Result: rho = -0.277 (p = 0.047),
 same direction and low band as BCT — a second, independent operator.
 

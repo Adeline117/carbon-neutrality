@@ -1,3 +1,5 @@
+> **TEMPLATE DEMO — NOT A MEASUREMENT.** Generated from `sample_multi_provider.json` placeholder scores to demonstrate the cross-provider pipeline. The paper's LLM-panel statistic (Fleiss' kappa = 0.60) comes from the real 3-model Claude panel with raw outputs in `raw/`; nothing in this file is used in any paper claim.
+
 # Multi-Provider LLM Panel IRR Results
 
 *3 providers, 3 total raters, 5 credits.*

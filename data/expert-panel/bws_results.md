@@ -1,3 +1,5 @@
+> **TEMPLATE DATA — NOT A MEASUREMENT.** These results are computed from `sample_responses.csv`, a fictional respondent template (generic names and affiliations) bundled so the pipeline runs end-to-end. No real expert panel has been run. Not cited by, and not to be cited in, any paper claim. The pipeline (`process_bws.py`) is ready for real responses via `--input`.
+
 # Expert BWS Weight Calibration Results
 
 *N = 5 respondents, 500 bootstrap resamples.*

@@ -38,12 +38,10 @@ def main():
     check("total deposits (1,187)", comp["total_deposits"], 1187)
     check("total tonnage (~22.0 Mt)", round(comp["total_tonnes"] / 1e6, 1), 22.0, 0.05)
 
-    cf = json.loads((ROOT / "data/statistical-analysis/counterfactual_simulation_results.json").read_text())
-    flat = dict(_flatten(cf))
-    li0 = next((v for v in flat.values() if isinstance(v, (int, float)) and abs(v - 0.724) < 0.001), None)
-    li1 = next((v for v in flat.values() if isinstance(v, (int, float)) and abs(v - 0.405) < 0.001), None)  # raw 0.4045 rounds to 0.405
-    check("gating baseline (0.724)", li0 if li0 is not None else -1, 0.724, 0.0005)
-    check("gating endpoint (0.405)", li1 if li1 is not None else -1, 0.405, 0.0006)
+    gr = json.loads((ROOT / "data/statistical-analysis/quality_gate_real_results.json").read_text())
+    check("gating baseline, real deposit stream (0.689)", gr["baseline_lemons_index"], 0.689, 0.0005)
+    check("BBB gate endpoint (0.506)", gr["floors"]["BBB"]["gated_lemons_index"], 0.506, 0.0005)
+    check("BBB gate admitted tonnage (7.2%)", gr["floors"]["BBB"]["admitted_tonnage_share_pct"], 7.2, 0.05)
 
     ew = json.loads((ROOT / "data/depositor-analysis/early_warning_results.json").read_text())
     check("early-warning LI at trigger (0.71)", round(ew["li_at_trigger"], 2), 0.71, 0.005)

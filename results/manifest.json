@@ -258,10 +258,10 @@
       "experiment_id": "scoring_v1"
     },
     "bbb_gate_pqd": {
-      "value": 0.405,
-      "unit": "PQD",
-      "source": "data/depositor-analysis/tco2_scores_complete.json",
-      "experiment_id": "scoring_v1"
+      "value": 0.506,
+      "unit": "Lemons Index",
+      "source": "data/statistical-analysis/quality_gate_real_results.json",
+      "experiment_id": "quality_gate_real_v1"
     },
     "bbb_gate_improvement_pct": {
       "value": 40.5,
@@ -298,6 +298,18 @@
       "unit": "p-value",
       "source": "data/depositor-analysis/bezero_validation_results.json",
       "experiment_id": "bezero_v1"
+    },
+    "bbb_gate_baseline": {
+      "value": 0.689,
+      "unit": "Lemons Index (deposit-weighted)",
+      "source": "data/statistical-analysis/quality_gate_real_results.json",
+      "experiment_id": "quality_gate_real_v1"
+    },
+    "bbb_gate_admitted_pct": {
+      "value": 7.2,
+      "unit": "%",
+      "source": "data/statistical-analysis/quality_gate_real_results.json",
+      "experiment_id": "quality_gate_real_v1"
     }
   },
   "price_quality": {
@@ -436,7 +448,7 @@
       "experiment_id": "redemption_v1"
     },
     "renewable_redeemed_pct": {
-      "value": 3.6,
+      "value": 3.7,
       "unit": "%",
       "source": "data/depositor-analysis/redemption_analysis.json",
       "experiment_id": "redemption_v1"

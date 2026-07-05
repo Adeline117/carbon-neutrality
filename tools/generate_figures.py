@@ -475,74 +475,46 @@ def natcomms_fig3b_null_model():
 
 
 def natcomms_fig5_quality_gating():
-    """NatComms-Fig-5: Counterfactual quality gating line plot."""
-    cf = load_json(DATA / "statistical-analysis" / "counterfactual_simulation_results.json")
+    """NatComms-Fig-5: quality gating on the REAL BCT deposit stream.
+
+    Reads quality_gate_real_results.json (grade floors applied to the actual
+    tonnage-weighted deposit stream). Supersedes the earlier stylized-pool
+    version, which drew on counterfactual_simulation_results.json.
+    """
+    gr = load_json(DATA / "statistical-analysis" / "quality_gate_real_results.json")
 
     fig, ax = plt.subplots(figsize=(3.5, 2.8))
 
-    thresholds = ["B", "BB", "BBB", "A", "AA", "AAA"]
+    order = ["B (no gate)", "BB", "BBB"]
+    labels = ["B\n(no gate)", "BB", "BBB"]
+    lis = [gr["floors"][k]["gated_lemons_index"] for k in order]
+    shares = [gr["floors"][k]["admitted_tonnage_share_pct"] for k in order]
 
-    pools_to_plot = [
-        ("Toucan BCT (historical peak, 2022)", C_RED, "BCT", "-", "o"),
-        ("Klima 2.0 kVCM inventory (Base, 2026)", C_BLUE, "kVCM", "-", "s"),
-        ("Toucan NCT (2023)", C_ORANGE, "NCT", "-", "^"),
-    ]
+    x = list(range(len(order)))
+    ax.plot(x, lis, color=C_RED, marker="o", markersize=5, linewidth=1.2,
+            markeredgecolor="black", markeredgewidth=0.3, label="Gated Lemons Index")
+    for xi, li_val, sh in zip(x, lis, shares):
+        ax.annotate(f"{li_val:.3f}", (xi, li_val), xytext=(0, 7),
+                    textcoords="offset points", fontsize=6, ha="center")
+        ax.annotate(f"admits {sh:.0f}% of tonnage", (xi, li_val), xytext=(0, -12),
+                    textcoords="offset points", fontsize=5, ha="center", color="0.35")
 
-    for pool_name, color, label, ls, marker in pools_to_plot:
-        pool = next(p for p in cf["pools"] if p["pool_name"] == pool_name)
-        lis = []
-        ns_admitted = []
-        valid_thresholds = []
-        for t in thresholds:
-            gated = pool["gated"][t]
-            if gated["n_credits"] > 0:
-                lis.append(gated["lemons_index"])
-                ns_admitted.append(gated["n_credits"])
-                valid_thresholds.append(t)
-            else:
-                # Pool empty at this threshold -- stop plotting
-                break
-
-        x = list(range(len(valid_thresholds)))
-        ax.plot(x, lis, color=color, marker=marker, markersize=4, linewidth=1.0,
-                label=label, linestyle=ls, markeredgecolor="black", markeredgewidth=0.3)
-
-        # Annotate n admitted at each point
-        for i, (xi, li_val, n) in enumerate(zip(x, lis, ns_admitted)):
-            if i == 0 or i == len(x) - 1:
-                ax.annotate(f"n={n}", (xi, li_val), xytext=(3, 5), textcoords="offset points",
-                            fontsize=4.5, color=color)
-
-    # CHAR reference line
+    # CHAR reference line (real category-allowlist pool)
     ax.axhline(y=0.221, color=C_GREEN, linestyle=":", linewidth=0.8, alpha=0.7)
-    ax.text(len(thresholds) - 1.2, 0.235, "CHAR (0.221)", fontsize=5.5, color=C_GREEN,
+    ax.text(len(order) - 1.02, 0.235, "CHAR (0.221)", fontsize=5.5, color=C_GREEN,
             ha="right", style="italic")
 
-    # Null model
-    ax.axhline(y=0.51, color="black", linestyle="--", linewidth=0.5, alpha=0.4)
-    ax.text(0.1, 0.525, "Null model", fontsize=5, alpha=0.5)
-
-    # Highlight BBB sweet spot
-    bbb_idx = thresholds.index("BBB")
-    ax.axvspan(bbb_idx - 0.3, bbb_idx + 0.3, alpha=0.08, color=C_TEAL, zorder=0)
-    ax.text(bbb_idx, 0.02, "BBB\nsweet spot", fontsize=5, ha="center", va="bottom",
-            color=C_TEAL, style="italic")
-
-    ax.set_xticks(range(len(thresholds)))
-    ax.set_xticklabels(thresholds)
-    ax.set_xlabel("Minimum grade threshold")
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
+    ax.set_xlabel("Minimum grade floor (applied to real deposit stream)")
     ax.set_ylabel("Lemons Index")
-    ax.set_title("Counterfactual quality gating")
+    ax.set_title("Quality gating: real deposit stream")
     ax.set_ylim(0, 0.85)
-    ax.legend(loc="upper right", frameon=False, fontsize=6)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 
     fig.savefig(OUT / "natcomms_fig5_quality_gating.png")
     fig.savefig(OUT / "natcomms_fig5_quality_gating.pdf")
-    plt.close(fig)
-    print("  -> natcomms_fig5_quality_gating.png/pdf")
-
 
 def natcomms_fig_within_token():
     """NatComms-Fig (within-token): Matched-pair slope plot of redemption rate

@@ -1,0 +1,13 @@
+{
+  "method": "immediate next outbound transfer of the same TCO2 token from each top-20 redeemer wallet after each BCT redemption; tonnage-weighted",
+  "n_redemptions_traced": 1664,
+  "total_tonnes_traced": 2573749,
+  "destination_shares_pct": {
+    "nct_pool": 39.2,
+    "retirement": 34.6,
+    "other": 17.0,
+    "bct_pool": 6.9,
+    "held": 2.3
+  },
+  "supersedes": "data/statistical-analysis/post_extraction_tracing.json (hand-recorded)"
+}

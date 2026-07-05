@@ -118,7 +118,7 @@ CONTEXT_HINTS = {
     "price_quality.n_weekly_obs": ["weekly", "55"],
     "price_quality.ols_beta_renewable": ["1.8", "beta", "percentage-point", "renewable share"],
     "redemption.redd_redeemed_pct": ["REDD", "99.8", "redeemed"],
-    "redemption.renewable_redeemed_pct": ["renewable", "3.6", "redeemed"],
+    "redemption.renewable_redeemed_pct": ["renewable", "3.7", "redeemed"],
     "redemption.ifm_redeemed_pct": ["IFM", "93", "redeemed"],
     "redemption.arr_redeemed_pct": ["ARR", "91.3", "redeemed"],
     "redemption.industrial_gas_redeemed_pct": ["industrial gas", "100", "redeemed"],

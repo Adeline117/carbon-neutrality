@@ -1,0 +1,43 @@
+{
+  "method": "grade floors applied to the real tonnage-weighted BCT deposit stream (bct_deposits_enriched x tco2_scores_complete); supersedes the stylized counterfactual_simulation.py for the paper's gating claim",
+  "deposits_scored": 1187,
+  "deposits_total": 1187,
+  "baseline_lemons_index": 0.689,
+  "floors": {
+    "B (no gate)": {
+      "floor_composite": 0,
+      "gated_lemons_index": 0.689,
+      "li_reduction_absolute": 0.0,
+      "li_reduction_relative_pct": 0.0,
+      "admitted_tonnage_share_pct": 100.0
+    },
+    "BB": {
+      "floor_composite": 30,
+      "gated_lemons_index": 0.63,
+      "li_reduction_absolute": 0.059,
+      "li_reduction_relative_pct": 8.6,
+      "admitted_tonnage_share_pct": 34.3
+    },
+    "BBB": {
+      "floor_composite": 45,
+      "gated_lemons_index": 0.506,
+      "li_reduction_absolute": 0.183,
+      "li_reduction_relative_pct": 26.5,
+      "admitted_tonnage_share_pct": 7.2
+    },
+    "A": {
+      "floor_composite": 60,
+      "gated_lemons_index": null,
+      "li_reduction_absolute": null,
+      "li_reduction_relative_pct": null,
+      "admitted_tonnage_share_pct": 0.0
+    },
+    "AA": {
+      "floor_composite": 75,
+      "gated_lemons_index": null,
+      "li_reduction_absolute": null,
+      "li_reduction_relative_pct": null,
+      "admitted_tonnage_share_pct": 0.0
+    }
+  }
+}
