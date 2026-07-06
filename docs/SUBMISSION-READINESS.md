@@ -11,7 +11,7 @@ Recommended venue: **Environmental Research Letters (ERL)**, the honest best fit
 - All figures **300 DPI** (`figures/*.png`).
 - Required sections present: Data availability, Code availability, Author contributions, Competing interests.
 - No leftover TODO / placeholder / FLUID markers in the LaTeX.
-- Abstract **195 words** (within ERL limits); main text ~3,993 words (ERL Letter limit 4,000).
+- Abstract ~200 words (within ERL limits); main text **~4,000 words on ERL's counting basis** (Methods included; declarations excluded): Methods restructured to a compact summary with full detail relocated to Supplementary Methods, per ERL's explicit guidance to move detailed methods to supplementary materials.
 - Living-paper audit: **CLEAR**; all `{{placeholders}}` resolve.
 - One-command verification: `python3 tools/verify_headline_numbers.py` (exit 0, 15 checks); reproduction guide at `REPRODUCING.md` + pinned `requirements.txt`.
 - Framework-free early-warning variant (cumulative renewable share) triggers the SAME DAY as the Lemons Index (Supplementary Methods); robustness summary at Supplementary Table 6.
