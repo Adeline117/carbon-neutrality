@@ -31,6 +31,9 @@ An honest, reproducible credit-level forensic account of the first tokenized car
 
 **Ceiling (be honest in the response-to-reviewers):** it is descriptive/cross-sectional, not causally identified. The only clean causal upgrade is the pre-registered mainnet RCT (turnkey: `contracts/experiment/RandomizedGate.sol`, `data/field-experiment/`).
 
+## Known cosmetic figure items (deferred, non-blocking)
+- within-token figure lacks bold a/b panel labels (caption references them); figure environments not in strict citation order (gating cited before within-token); Figs 1/3 use a red-green colormap (colorblind); fig5 carries an in-figure '1.99-grade separation'/CLES stat not defined in the caption. All are single-regeneration fixes in tools/generate_figures.py if a referee asks.
+
 ## Human-only steps before clicking submit
 1. **Read the PDF once end to end**: final author eyes (esp. pp. 3–8: composition, forensics, cross-pool, within-token).
 2. **Fill author/affiliation/ORCID/funding** placeholders in the ERL submission form; paste suggested reviewers from `docs/erl-suggested-reviewers.md` (verify emails first).
