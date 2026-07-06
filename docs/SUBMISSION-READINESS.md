@@ -15,6 +15,7 @@ Recommended venue: **Environmental Research Letters (ERL)**, the honest best fit
 - Living-paper audit: **CLEAR**; all `{{placeholders}}` resolve.
 - One-command verification: `python3 tools/verify_headline_numbers.py` (exit 0, 15 checks); reproduction guide at `REPRODUCING.md` + pinned `requirements.txt`.
 - Framework-free early-warning variant (cumulative renewable share) triggers the SAME DAY as the Lemons Index (Supplementary Methods); robustness summary at Supplementary Table 6.
+- Loki agent-team audit (52 agents, 6 lenses + adversarial verification) complete: 43 findings dispositioned. Gating counterfactual now computed on the REAL deposit stream (0.689 -> 0.506 at BBB, 7.2% admitted; stylized-sim numbers retired); fabricated-input claims removed (BWS panel) or relabelled (BeZero non-blind); profit scripted (~\$10M midpoint); stranded corrected to 9.3M; five citation fixes.
 - Cross-asset replication upgraded to quantitative: entry-margin lemons selection replicates in 6/6 NFTX vaults (each p<0.05; sign test p=0.016); exit-margin extraction absent, completing the margin decomposition. Old unreproducible NFTX aggregates (1.3%, 2-31x) superseded by a fully scripted pipeline.
 - Remedy folded in from Paper #2 (sacrificed): open-source reference implementation (94 passing Foundry tests, measured gas) in Supplementary; main-text release sentence + ref 19 repointed.
 - CarbonPlan-cluster citations added (Badgley 2022 GCB, Haya 2023 FFGC, refs 22-23); suggested-reviewer list at `docs/erl-suggested-reviewers.md`.

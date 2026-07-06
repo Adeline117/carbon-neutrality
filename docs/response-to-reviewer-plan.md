@@ -33,7 +33,7 @@
 
 ### Copyedit(硬伤级,已处理 / handled)
 
-- **状态**: ERL 合规轮已修复六处数字不一致(峰值价 \$5.91 统一、0.724 至 0.405 的 gating 基线、n=330/331、国家清单、双系数命名、去向占比 90.8% 注明未归类项),首次出现术语全部加了白话释义。提交前再做一次全文校对(拼写、引文编号、图表交叉引用)即可。
+- **状态(2026-07-04 洛基轮后更新)**: 六个猎手 + 逐条反驳的 agent 团队审计已完成,43 条确认发现全部处置。关键更正:gating 数字改为真实存款流口径(0.689 至 0.506,放行 7.2% 吨量;旧 0.724/0.405 出自风格化模拟,已全库取代);滞留量 9.6M 改 9.3M;专家小组 ρ=0.814(虚构模板数据)已从论文删除;BeZero ρ=0.901 改标非盲一致性;利润改为脚本推导的中点约 \$10M;五条引文元数据修正。全部头条数字现由 `tools/verify_headline_numbers.py`(21 项断言)机器守护。
 - **Status (EN)**: The six numeric inconsistencies were reconciled in the ERL-conformance pass; all load-bearing terms are glossed at first use. One final proofread pass before submission.
 
 
@@ -69,4 +69,4 @@
 - **Response (EN)**: The text already treats Granger as exploratory ("consistent with", Supplementary), rests inference on the first-differenced daily regression, and uses the May 2022 crash as the exogenous check. Framing: descriptive co-movement, not identification. Pre-approved fallback: relocate all Granger material to Supplementary if requested.
 
 
-*版本 / Version: 2026-07-03(锚点已随根源修复轮与 em-dash 轮更新)。所有行号以当前 `manuscript.tex` 为准。*
+*版本 / Version: 2026-07-04(洛基轮后;行号可能再度漂移,以 grep 原句为准)。*

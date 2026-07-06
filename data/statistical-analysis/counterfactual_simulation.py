@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Counterfactual simulation: 'What if Toucan BCT had quality gating?'
+"""
+SUPERSEDED for the paper's gating claim: this script evaluates grade floors on
+STYLIZED pool compositions hardcoded in data/lemons-index/pool_analyzer.py, not on
+BCT's real deposits. Use quality_gate_real.py (same directory) for the paper's
+numbers (0.689 -> 0.506 at BBB, 7.2% admitted). Kept for the multi-pool design
+illustration only.
+Counterfactual simulation: 'What if Toucan BCT had quality gating?'
 
 Simulates the effect of applying meetsGrade() quality gates at each grade
 threshold (B, BB, BBB, A, AA, AAA) to historical pool compositions from

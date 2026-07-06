@@ -1,3 +1,5 @@
+> **SUPERSEDED** for the paper's gating claim (stylized inputs). See `quality_gate_real_results.json`.
+
 # Counterfactual Simulation: Quality Gating in Carbon Pools
 
 What if historical on-chain carbon pools had applied quality gates?

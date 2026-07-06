@@ -1,3 +1,5 @@
+> **ARCHIVED (2026-07-04).** This draft predates the Loki verification round; specific numbers (e.g. gating 0.679/0.724 to 0.405, \$4-8M profit, 9.6M stranded, rho=0.814/0.901-as-blind) have been superseded. Authoritative numbers live in the ERL manuscript and `tools/verify_headline_numbers.py`. Do not cite figures from this file.
+
 # QRX: A Quality-Revealing Exchange for Tokenized Carbon Credits
 
 *Target venue: VLDB 2026 (systems / data-management track) or CCS 2026

@@ -67,7 +67,10 @@ def grade_hhi(grades: list[str]) -> float:
     return sum((c / n) ** 2 for c in counts.values())
 
 
-# Pool compositions (from public documentation + on-chain data references)
+# STYLIZED demo pool compositions for illustration ONLY -- these are NOT the
+# paper's measured data (the real BCT composition is 69.1% renewables; see
+# data/depositor-analysis/bct_composition_complete.json). Never cite numbers
+# derived from this list.
 POOLS = [
     {
         "name": "Toucan BCT (historical peak, 2022)",
