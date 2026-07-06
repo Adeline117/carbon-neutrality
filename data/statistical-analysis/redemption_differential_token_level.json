@@ -1,0 +1,9 @@
+{
+  "test": "token-level Mann-Whitney, redemption rate non-renewable > renewable",
+  "n_renewable": 116,
+  "n_nonrenewable": 45,
+  "median_renewable": 0.0,
+  "median_nonrenewable": 0.0,
+  "U": 3940.0,
+  "p_one_sided": 1.95e-08
+}
