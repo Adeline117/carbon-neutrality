@@ -203,7 +203,7 @@ $$\text{quality}_i = \beta_0 + \beta_1 \cdot \text{BCT}_i + \beta_2 \cdot \text{
 
 \subsection*{数据可用性}
 
-所有数据、评分标准、分析脚本和智能合约源代码均可在 \url{https://github.com/Adeline117/carbon-neutrality} 获取，采用MIT许可证。机器可读的评分标准为JSON格式。包含逐维度评分的318个信用方法学批量数据集已纳入。所有345/345个BCT代币均已评分（161个原始 + 184个推算）。BCT（1,187笔交易）和NCT（708笔交易）的链上存入数据均附有交易哈希以支持独立验证。前几名赎回者的外部拥有账户与智能合约状态通过对一个公共Polygon节点使用\texttt{eth\_getCode}进行了检查；结果记录在\texttt{redeemer\_contract\_check.json}中。实体级独立性审计（两侧各前20个账户的首笔资金解析）可通过\texttt{entity\_funding\_analysis.py}复现，逐钱包结果见\texttt{entity\_funding\_analysis.json}。所有模型对29个信用的LLM评审团输出已纳入。分析脚本为纯Python，仅依赖NumPy/SciPy；单个校验脚本（\texttt{tools/verify\_headline\_numbers.py}）可对照缓存的分析输出重新断言每一个头条数字。
+所有数据、评分标准、分析脚本和智能合约源代码均可在 \url{https://github.com/Adeline117/carbon-neutrality} 获取（版本标签\texttt{v1.0-erl-submission}锁定本文所引用的状态），采用MIT许可证。机器可读的评分标准为JSON格式。包含逐维度评分的318个信用方法学批量数据集已纳入。所有345/345个BCT代币均已评分（161个原始 + 184个推算）。BCT（1,187笔交易）和NCT（708笔交易）的链上存入数据均附有交易哈希以支持独立验证。前几名赎回者的外部拥有账户与智能合约状态通过对一个公共Polygon节点使用\texttt{eth\_getCode}进行了检查；结果记录在\texttt{redeemer\_contract\_check.json}中。实体级独立性审计（两侧各前20个账户的首笔资金解析）可通过\texttt{entity\_funding\_analysis.py}复现，逐钱包结果见\texttt{entity\_funding\_analysis.json}。所有模型对29个信用的LLM评审团输出已纳入。分析脚本为纯Python，仅依赖NumPy/SciPy；单个校验脚本（\texttt{tools/verify\_headline\_numbers.py}）可对照缓存的分析输出重新断言每一个头条数字。
 
 
 \subsection*{代码可用性}
