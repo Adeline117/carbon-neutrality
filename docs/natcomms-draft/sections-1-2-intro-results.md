@@ -41,7 +41,7 @@ The exit followed a type-level Gresham sequence (bad drives out good; Fig. 5b): 
 
 Depositors and redeemers are almost entirely distinct populations: only 1.4% of the {{redemption.n_unique_redeemers}} redeemer accounts also appear among the {{selection.n_wallets}} depositor accounts. The top 10 redeemers account for {{redemption.redeemer_top10_share}}% of extracted tonnage, and their transactions occurred in rapid automated bursts (median gap 4.6 seconds between events), consistent with programmatic rather than manual execution.
 
-This dual-margin structure — indiscriminate, architecture-driven entry (99.6% tonnage pass-through) on one side; deliberate, type-specialist extraction on the other — is not predicted by standard adverse-selection models, which assume a single population.
+This dual-margin structure is not predicted by standard adverse-selection models, which assume a single population: entry was indiscriminate and architecture-driven (99.6% tonnage pass-through), while extraction was deliberate and type-specialist.
 
 
 ### Account forensics: who extracted and what they took
