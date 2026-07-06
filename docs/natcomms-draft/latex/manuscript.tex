@@ -76,7 +76,7 @@ Conversely, REDD+ is under-represented at 0.2$\times$ the VCS base rate (BCT 4.2
 
 We next ask whether quality degradation drove the price collapse. We merged daily BCT prices in US-dollar terms (1,493 daily observations, October 2021 to July 2026; Methods) with daily cumulative quality metrics from the deposit stream ($n$ = 331 overlapping days).
 
-\textbf{Correlation.} BCT's price falls as pool quality falls: price and the cumulative tonnage-weighted mean quality score are strongly correlated (Pearson $r$ = 0.77, $p < 10^{-66}$; equivalently $-$0.77 against PQD = 1 $-$ score/100; Methods; Fig.~2a). In a first-differenced OLS regression (analyzing day-to-day changes rather than levels, the credible specification for non-stationary series), each percentage-point increase in the renewable share of deposits predicts a \$0.018 decrease in BCT's price ($\beta$ = $-$1.8 on the 0--1 share, $p < 0.001$). Exploratory weekly Granger tests are asymmetric, dominant channel price to quality (Supplementary Methods).
+\textbf{Correlation.} BCT's price falls as pool quality falls: price and the cumulative tonnage-weighted mean quality score are strongly correlated (Pearson $r$ = 0.77, $p < 10^{-66}$; equivalently $-$0.77 against PQD = 1 $-$ score/100; Methods; Fig.~2a). In a first-differenced OLS regression (analyzing day-to-day changes rather than levels, the credible specification for non-stationary series), each percentage-point increase in the renewable share of deposits predicts a \$0.018 decrease in BCT's price ($\beta$ = $-$1.8 on the 0--1 share, $p < 0.001$). Exploratory weekly Granger tests are asymmetric, with the dominant channel running from price to quality (Supplementary Methods).
 
 \textbf{Redemption-side evidence.} Analysis of 35,432 Transfer events from the BCT pool contract reveals that selection operated on both sides. Non-renewable credits were preferentially redeemed: industrial gas 100\%, REDD+ 99.8\%, IFM 93.0\%, ARR 91.3\%, versus just 3.7\% of renewable credits. The tonnage-weighted mean composite quality score (0--100, higher = better) of redeemed credits (38.7) exceeded that of deposited credits (31.7) by 7 points, a 22\% premium. As a result, BCT's net renewable share increased from 71\% to 76\% over the pool's lifetime.
 
@@ -117,7 +117,7 @@ BCT's PQD of 0.679 places it at the bottom of the VCM quality spectrum, which sp
 
 \subsection*{Temporal dynamics and robustness}
 
-Deposit quality declines over BCT's operating life (Spearman $\rho$ = $-$0.24, $n$ = 1,187), but this is entirely a vintage-composition effect: late deposits drew from progressively older vintages (vintage, the credit's emission-reduction year), not from intrinsically worse credits within vintage (Supplementary Table 2). The May 2022 cryptocurrency crash provides exogenous deposit-side evidence of the causal channel: post-shock deposit quality fell 3.4 points (Cohen's $d$ = 0.49, a moderate effect) as volume collapsed by 98\% and the quality-decline slope tripled, consistent with the price-to-quality feedback above (Supplementary Methods).
+Deposit quality declines over BCT's operating life (Spearman $\rho$ = $-$0.24, $n$ = 1,187), but this is entirely a vintage-composition effect: late deposits drew from progressively older vintages (vintage, the credit's emission-reduction year), not from intrinsically worse credits within vintage (Supplementary Table 2). The May 2022 cryptocurrency crash provides exogenous deposit-side evidence of the causal channel: post-shock deposit quality fell 3.4 points (Cohen's $d$ = 0.49, a moderate effect) as volume collapsed by 98\% (Fig.~2b) and the quality-decline slope tripled, consistent with the price-to-quality feedback above (Supplementary Methods).
 
 \subsection*{Pool design and asset fate: a within-token cross-pool contrast}
 
@@ -151,7 +151,7 @@ The same public data also support a deployable early-warning. A cumulative Lemon
 
 Several limitations warrant note. Our quality scores are author-derived, but the core findings rely on transaction data and Verra credit-type classifications, not on the scoring framework. The framework itself is calibrated against CCP labels ($d$ = 1.8; Fig.~\ref{fig:ccp}), commercial ratings ($\rho$ = +0.901, $n$ = 27; non-blind, scored with agency ratings in view; Supplementary Fig. 1), and a large-language-model panel (Fleiss' $\kappa$ = 0.6, moderate agreement; Supplementary Methods). Both cross-pool comparisons are descriptive, not causal identifications. The within-token contrast (+73.9 pp gap, $\Gamma$ = 3.05 bound) and the pool-level difference-in-differences rest on only two pools; their statistics quantify per-pair variability, not the pool-level confounds (exposure timing, liquidity, eligibility) that remain collinear with the screening label (Methods). We read the contrast as strongly suggestive of a pool-design effect, noting that the dominant renewables are structurally excluded from this nature-based comparison. The bridge decomposition (99.6\% pass-through by tonnage) establishes that entry-side selection was primarily architectural rather than strategic.
 
-This result carries a falsifiable policy implication: any pooled crediting system providing quality transparency without quality-differentiated pricing will experience the same collapse. The transparency reforms by the ICVCM and the Article 6.4 Supervisory Body are necessary but not sufficient: if Article 6.4 pools heterogeneous credits at a single price, the same Gresham dynamic should emerge, and mechanisms with quality-differentiated tiers should not. This prediction is testable as Article 6.4 becomes operational.
+This result carries a falsifiable policy implication: any pooled crediting system providing quality transparency without quality-differentiated pricing will experience the same collapse. The transparency reforms by the ICVCM and the Article 6.4 Supervisory Body are necessary but not sufficient: if Article 6.4 pools heterogeneous credits at a single price, the same Gresham dynamic should emerge, and mechanisms with quality-differentiated tiers should not. This prediction is testable as Article 6.4 issuance scales.
 
 The tokenized real-world asset sector now exceeds \$25 billion and is replicating pool-based architecture across commodities, bonds, and receivables. BCT is the first pool to complete a full quality-collapse cycle with auditable transaction data. Its lesson is straightforward: quality-differentiated mechanism design is not an optional refinement for pooled carbon markets but a structural prerequisite for market integrity.
 
@@ -164,7 +164,7 @@ Full methods are provided in Supplementary Methods; this section summarizes the 
 
 \textbf{Selection tests.} The base-rate selection coefficient $S = f_{\text{BCT}} / f_{\text{VCS}}$ (central base rate 37\%, sensitivity range 26--48\%) is tested with account-clustered inference. The within-token contrast treats the 14 tokens deposited into both BCT and NCT as their own controls, tested with three exact procedures and a percentile bootstrap; the estimand is the pool-design effect on dual-eligible credits, and a Rosenbaum-style $\Gamma$ quantifies robustness to unobserved confounding. A deposit-level difference-in-differences and a five-pool, two-operator comparison are reported as descriptive corroboration only.
 
-\textbf{Price, cross-domain, and welfare.} A first-differenced OLS with Newey--West errors tests price-quality co-movement ($n$ = 330 days); weekly Granger tests ($n$ = 55) are exploratory. The NFTX cross-asset pipeline assigns each minted or redeemed item the percentile of its nearest sale within a drift-controlled window of collection sales, testing entry-margin selection per vault (Wilcoxon) and across vaults (sign test), with router accounts excluded. The welfare gap is a 10,000-iteration Monte Carlo propagating literature additionality ranges\textsuperscript{4,12,22,23}, the social cost of carbon (\$50--\$200/tCO$_2$), and a base-rate counterfactual composition.
+\textbf{Price, cross-domain, and welfare.} A first-differenced OLS with Newey--West errors tests price-quality co-movement ($n$ = 330 daily changes); weekly Granger tests ($n$ = 55) are exploratory. The NFTX cross-asset pipeline assigns each minted or redeemed item the percentile of its nearest sale within a drift-controlled window of collection sales, testing entry-margin selection per vault (Wilcoxon) and across vaults (sign test), with router accounts excluded. The welfare gap is a 10,000-iteration Monte Carlo propagating literature additionality ranges\textsuperscript{4,12,22,23}, the social cost of carbon (\$50--\$200/tCO$_2$), and a base-rate counterfactual composition.
 
 \textbf{Inference.} All $p$-values were corrected using the Benjamini--Hochberg FDR procedure at $\alpha$ = 0.05 across ten primary tests: (1) base-rate selection coefficient (account-clustered; naive binomial as reference only), (2) full-sample and (3) pre-shock temporal correlations, (4) the within-token sign test, (5) the pool-level difference (descriptive), (6--7) bidirectional Granger, (8) within-pool permutation, (9) depositor concentration, and (10) the redemption differential (token-level Mann--Whitney; $n$ = 161). Cluster-robust bootstrap (by depositor account, 10,000 iterations) was used for deposit-level statistics.
 
@@ -241,6 +241,12 @@ This research received no specific grant from any funding agency. The authors th
 
 \begin{figure}[ht]
 \centering
+\includegraphics[width=\textwidth]{../../../figures/fig6_quality_gating.pdf}
+\caption{Quality gating applied to the real BCT deposit stream: gated Lemons Index and admitted tonnage share under grade floors (B = no gate, BB, BBB). A BBB floor cuts the deposit-weighted Lemons Index (PQD) from 0.689 to 0.506 but admits only 7.2\% of deposited tonnage; the CHAR category-allowlist pool (0.221) is shown for reference.}
+\label{fig:gating}
+\end{figure}
+\begin{figure}[ht]
+\centering
 \includegraphics[width=\textwidth]{../../../figures/natcomms_fig_within_token.pdf}
 \caption{Within-token cross-pool contrast: redemption of identical credits under two pool designs (descriptive; a two-pool comparison, not a causal identification). (\textbf{a}) Per-token slope plot of redemption (retirement) rate for the 14 carbon credit tokens deposited into \textit{both} the unscreened BCT pool and the quality-screened NCT pool, coloured by project type; the bold black line traces the pool means (100.0\% redeemed from the unscreened pool versus 28.5\% from the screened pool). Across the 14 pairs (the unit of inference) the mean within-token redemption gap is +73.9 percentage points (token-level bootstrap 95\% CI [51, 93]); the direction is unanimous, so exact sign, permutation, and Wilcoxon tests all return $p$ = $2.4 \times 10^{-4}$ whether or not the one near-tied credit is included. (\textbf{b}) Redemption rate by project type (bars: tonnage-weighted rates; annotated gaps: per-token mean differences): the gap is positive within every type (IFM +89, ARR +100, REDD+ +38 pp per-token). The result is robust to unobserved confounding up to a Rosenbaum bound of $\Gamma$ = 3.05. Depositor-level temporal, base-rate, and difference-in-differences robustness analyses are reported in Supplementary Methods.}
 \label{fig:within_token}
@@ -249,16 +255,10 @@ This research received no specific grant from any funding agency. The authors th
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{../../../figures/fig5_ccp_calibration.pdf}
-\caption{CCP calibration: quality score distributions for CCP-eligible versus non-CCP credits. Cohen's $d$ = 1.8 (95\% CI [1.5, 2.16]).}
+\caption{CCP calibration: quality score distributions for CCP-eligible versus non-CCP credits. Cohen's $d$ = 1.8 (95\% CI [1.5, 2.16]). In-figure statistics: the title's 1.99 grades is the mean grade-band separation between the two groups; CLES is the common-language effect size (probability a random CCP-eligible credit outscores a random non-CCP credit, 91.4\%).}
 \label{fig:ccp}
 \end{figure}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=\textwidth]{../../../figures/fig6_quality_gating.pdf}
-\caption{Quality gating applied to the real BCT deposit stream: gated Lemons Index and admitted tonnage share under grade floors (B = no gate, BB, BBB). A BBB floor cuts the deposit-weighted Lemons Index (PQD) from 0.689 to 0.506 but admits only 7.2\% of deposited tonnage; the CHAR category-allowlist pool (0.221) is shown for reference.}
-\label{fig:gating}
-\end{figure}
 
 
 

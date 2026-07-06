@@ -626,6 +626,8 @@ def natcomms_fig_within_token():
     axb.spines["right"].set_visible(False)
 
     fig.tight_layout()
+    ax.text(0.02, 0.98, "a", transform=ax.transAxes, fontsize=13, fontweight="bold", va="top")
+    axb.text(0.02, 0.98, "b", transform=axb.transAxes, fontsize=13, fontweight="bold", va="top")
     fig.savefig(OUT / "natcomms_fig_within_token.png")
     fig.savefig(OUT / "natcomms_fig_within_token.pdf")
     plt.close(fig)

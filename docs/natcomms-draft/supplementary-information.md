@@ -79,7 +79,7 @@ Per-wallet results are listed in Supplementary Table 5.
 
 To address the concern that the naive binomial test ($p$ = 1.35e-187) overstates significance due to within-account deposit clustering, we conducted three account-level robustness tests.
 
-**Account-level permutation test. An account-level Monte Carlo test: holding each account's deposit-count structure fixed, every deposit is reassigned a token drawn under the null, and the tonnage-weighted renewable share is recomputed per iteration (run_wallet_clustered_test.py).37 (the VCS base rate). The account-mean renewable share was recomputed for each permutation. The observed account-mean renewable share (0.892) fell outside the entire permutation distribution (null mean = 0.37, SD = 0.02), yielding $p$ <0.0001.
+**Account-level permutation test.** An account-level Monte Carlo test: holding each account's deposit-count structure fixed, every deposit is reassigned renewable status under the null with probability P = 0.37 (the VCS base rate), and the account-mean renewable share is recomputed per iteration (run_wallet_clustered_test.py). The observed account-mean share (0.892) fell outside the entire permutation distribution (null mean = 0.37, SD = 0.02), yielding p < 0.0001.
 
 **HHI-adjusted binomial test.** The effective number of independent observations was computed as $n_{\text{eff}}$ = 1/HHI, where HHI is the Herfindahl--Hirschman Index of account-level deposit concentration. With HHI = 0.012 and $n_{\text{eff}}$ = 83.5, the binomial test yielded $p$ = 2.9e-15, reduced by 172 orders of magnitude from the naive test but still highly significant.
 
@@ -157,7 +157,7 @@ Tracing the immediate destination of each redeemed credit across the 20 largest 
 
 ### Granger causality (price–quality, weekly; relocated from Results)
 
-At weekly frequency (n = 55), Granger tests are asymmetric and bidirectional, with lags selected per direction by AIC: the dominant channel runs from price to pool quality (F = 8.40, p < 10^-4 at lag 4), with the reverse channel 2.5× weaker (F = 3.40, p = 0.04 at lag 2), consistent with the architecture setting the initial composition and price then driving further deterioration. This small-sample analysis is presented as exploratory; the first-differenced daily regression (n = 330, β = −1.8, p < 0.001) is the more powerful confirmation.
+At weekly frequency (n = 55), Granger tests are asymmetric and bidirectional, with the reported lag chosen per direction as the strongest of lags 1--4: the dominant channel runs from price to pool quality (F = 8.61, p < 10^-4 at lag 4), with the reverse channel 2.5× weaker (F = 3.44, p = 0.04 at lag 2), consistent with the architecture setting the initial composition and price then driving further deterioration. This small-sample analysis is presented as exploratory; the first-differenced daily regression (n = 330, β = −1.8, p < 0.001) is the more powerful confirmation.
 
 ### Framework-free early-warning variant
 
@@ -232,7 +232,7 @@ We identified redemptions from ERC-20 Transfer events where the BCT pool contrac
 
 \subsection*{Price-quality dynamics}
 
-Cumulative PQD and renewable share were merged with daily BCT prices ($n$ = 331 overlapping days). A first-differenced OLS with Newey--West HAC standard errors (10 lags) tested contemporaneous co-movement. Bidirectional Granger causality was tested at weekly frequency ($n$ = 55) using VAR(2) selected by AIC. We acknowledge that the small sample limits statistical power; the daily regression ($n$ = 330) provides the more robust test.
+Cumulative PQD and renewable share were merged with daily BCT prices ($n$ = 331 overlapping days). A first-differenced OLS with Newey--West HAC standard errors (10 lags) tested contemporaneous co-movement. Bidirectional Granger causality was tested at weekly frequency ($n$ = 55); the reported lag is chosen per direction as the strongest of lags 1--4 [editorial note: an earlier draft said VAR(2)/AIC; the committed script scans lags 1--4]. We acknowledge that the small sample limits statistical power; the daily regression ($n$ = 330) provides the more robust test.
 
 \subsection*{Cross-domain comparison}
 
@@ -244,7 +244,7 @@ We estimated the welfare cost of BCT's quality degradation using a Monte Carlo s
 
 \subsection*{Statistical inference}
 
-All $p$-values were corrected using the Benjamini--Hochberg FDR procedure at $\alpha$ = 0.05 across the following 10 primary tests: (1) base-rate selection coefficient (account-clustered permutation; a naive binomial is reported only as reference), (2) full-sample temporal correlation, (3) pre-shock temporal correlation, (4) within-token matched-pair sign test, (5) pool-level between-pool difference (descriptive, cluster-robust), (6) Granger quality$\rightarrow$price, (7) Granger price$\rightarrow$quality, (8) within-pool permutation, (9) depositor concentration Mann--Whitney, (10) redemption differential chi-squared. Headline claims were supplemented with 10,000-permutation $p$-values. Cluster-robust bootstrap (clustered by depositor account, 10,000 iterations) was used for deposit-level statistics. Additional inference details (account-clustered tests, CCP calibration, inter-rater reliability, rank correlations with commercial agencies) are provided in Supplementary Methods.
+All $p$-values were corrected using the Benjamini--Hochberg FDR procedure at $\alpha$ = 0.05 across the following 10 primary tests: (1) base-rate selection coefficient (account-clustered permutation; a naive binomial is reported only as reference), (2) full-sample temporal correlation, (3) pre-shock temporal correlation, (4) within-token matched-pair sign test, (5) pool-level between-pool difference (descriptive, cluster-robust), (6) Granger quality$\rightarrow$price, (7) Granger price$\rightarrow$quality, (8) within-pool permutation, (9) depositor concentration Mann--Whitney, (10) redemption differential chi-squared [editorial note: superseded by the token-level Mann--Whitney; see 'Token-level redemption differential' above]. Headline claims were supplemented with 10,000-permutation $p$-values. Cluster-robust bootstrap (clustered by depositor account, 10,000 iterations) was used for deposit-level statistics. Additional inference details (account-clustered tests, CCP calibration, inter-rater reliability, rank correlations with commercial agencies) are provided in Supplementary Methods.
 ```
 
 ## Supplementary Figures
