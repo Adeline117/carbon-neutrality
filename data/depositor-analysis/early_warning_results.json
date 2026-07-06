@@ -2,13 +2,13 @@
   "danger_threshold_LI": 0.5,
   "li_trigger_date": "2021-10-06",
   "li_at_trigger": 0.711,
-  "price_at_trigger_approx_usd": 5.91,
+  "price_at_trigger_approx_usd": 5.66,
   "final_lemons_index": 0.689,
-  "peak_price_usd": 5.91,
-  "peak_date": "2021-11-01",
-  "price_collapse_date_below_half_peak": "2022-07-01",
-  "bottom_price_usd": 1.71,
-  "lead_time_days": 268,
-  "lead_time_months": 8.8,
-  "interpretation": "The cumulative Lemons Index crossed the 0.50 danger threshold at 2021-10-06 (LI already ~0.69), while the price was still near its $5.91 peak. The price did not fall below half-peak until ~2022-07-01. A real-time composition audit therefore flagged the pool ~9 months before the market repriced it. This is a level-based structural signal (composition was diagnostic from inception), consistent with the Granger result that price leads quality dynamics; the signal is in the standing quality level, not in its changes."
+  "peak_price_usd": 5.66,
+  "peak_date": "2021-10-21",
+  "price_collapse_date_below_half_peak": "2022-05-11",
+  "bottom_price_usd": 2.69,
+  "lead_time_days": 217,
+  "lead_time_months": 7.1,
+  "interpretation": "The cumulative Lemons Index crossed the 0.50 danger threshold at 2021-10-06 (LI already ~0.69), while the price was still near its $5.66 peak. The price did not fall below half-peak until ~2022-05-11. A real-time composition audit therefore flagged the pool ~7 months before the market repriced it. This is a level-based structural signal (composition was diagnostic from inception), consistent with the Granger result that price leads quality dynamics; the signal is in the standing quality level, not in its changes."
 }

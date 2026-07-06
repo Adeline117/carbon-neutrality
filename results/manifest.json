@@ -1895,13 +1895,13 @@
       "experiment_id": "early_warning_v1"
     },
     "price_at_trigger_usd": {
-      "value": 5.91,
+      "value": 5.66,
       "unit": "USD",
       "source": "data/depositor-analysis/early_warning_results.json",
       "experiment_id": "early_warning_v1"
     },
     "lead_time_months": {
-      "value": 8.8,
+      "value": 7,
       "unit": "months",
       "source": "data/depositor-analysis/early_warning_results.json",
       "experiment_id": "early_warning_v1"

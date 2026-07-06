@@ -25,7 +25,7 @@ An honest, reproducible credit-level forensic account of the first tokenized car
 - composition reversal (69% renewables/hydro, not 4% REDD+);
 - account forensics with on-chain contract verification of the top extractor;
 - a cross-pool design→quality gradient across 5 pools and 2 independent operators, reported as corroborative and largely definitional (screens are defined on credit type), not as an independent test;
-- a real-time early-warning Lemons Index (~9-month lead) + a deployable quality-gating remedy;
+- a real-time early-warning Lemons Index (~7-month lead) + a deployable quality-gating remedy;
 - the within-token contrast reported honestly as *strongly suggestive, not causally identified*;
 - an on-chain entity-level independence audit of the dual-margin claim (first-funder resolution of the top 20 accounts per margin; separation reported as account-level, not entity-level).
 

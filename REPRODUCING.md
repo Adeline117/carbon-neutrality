@@ -53,7 +53,7 @@ forge test --gas-report
 | Entity-level independence audit | `data/depositor-analysis/entity_funding_analysis.json` |
 | $146M welfare gap | `data/statistical-analysis/welfare_quantification_results.json` |
 | Quality-gate counterfactual (0.689 -> 0.506, admits 7.2%) | `data/statistical-analysis/quality_gate_real_results.json` |
-| Early warning (Lemons Index, ~9-month lead) | `data/depositor-analysis/early_warning_results.json` |
+| Early warning (Lemons Index, ~7-month lead) | `data/depositor-analysis/early_warning_results.json` |
 | Framework-free early-warning variant | `data/depositor-analysis/early_warning_framework_free_results.json` |
 | Within-type cross-pool check | `data/depositor-analysis/within_type_crosspool_results.json` |
 | NFTX cross-asset replication | `data/cross-domain/nftx_dual_margin_results.json` (raw events/sales in `nftx_raw/`) |

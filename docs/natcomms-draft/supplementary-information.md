@@ -161,7 +161,7 @@ At weekly frequency (n = 55), Granger tests are asymmetric and bidirectional: th
 
 ### Framework-free early-warning variant
 
-The Lemons Index depends on the composite quality score. To test whether the early warning survives without the scoring framework, we recomputed the trigger using only ledger data and Verra credit-type labels: the cumulative renewable share of deposited tonnage, R(t) = renewable tonnes deposited up to t / total tonnes up to t, with a 0.50 danger threshold (majority of pool tonnage in the credit category with independently documented near-zero additionality) and a 100,000-tonne burn-in. We evaluate two standard trigger rules. Rule 1 (first crossing): the signal crossed the 0.50 threshold on 2021-10-06, the same day as the Lemons Index trigger, at a renewable share of 77.4% over the first ~102,000 tonnes. Rule 2 (persistence-confirmed, the rule a deployed monitor would use to suppress start-up noise): the signal is confirmed once it stays above threshold permanently, which occurs from 2021-10-10, after two transient start-up dips within the pool's first ~4.3 Mt, still roughly eight and a half months before the price halved. Both rules deliver the warning within the pool's first week. The share ends at 69.11%, matching the headline composition, so any threshold at or below ~0.69 is permanently exceeded from 2021-10-10. All 1,187 deposits are type-resolved. Reproduction: `data/depositor-analysis/early_warning_framework_free.py`, results in `early_warning_framework_free_results.json`.
+The Lemons Index depends on the composite quality score. To test whether the early warning survives without the scoring framework, we recomputed the trigger using only ledger data and Verra credit-type labels: the cumulative renewable share of deposited tonnage, R(t) = renewable tonnes deposited up to t / total tonnes up to t, with a 0.50 danger threshold (majority of pool tonnage in the credit category with independently documented near-zero additionality) and a 100,000-tonne burn-in. We evaluate two standard trigger rules. Rule 1 (first crossing): the signal crossed the 0.50 threshold on 2021-10-06, the same day as the Lemons Index trigger, at a renewable share of 77.4% over the first ~102,000 tonnes. Rule 2 (persistence-confirmed, the rule a deployed monitor would use to suppress start-up noise): the signal is confirmed once it stays above threshold permanently, which occurs from 2021-10-10, after two transient start-up dips within the pool's first ~4.3 Mt, still roughly seven months before the price fell below half its launch level. Both rules deliver the warning within the pool's first week. The share ends at 69.11%, matching the headline composition, so any threshold at or below ~0.69 is permanently exceeded from 2021-10-10. All 1,187 deposits are type-resolved. Reproduction: `data/depositor-analysis/early_warning_framework_free.py`, results in `early_warning_framework_free_results.json`.
 
 ### Within-type cross-pool quality check
 
@@ -173,7 +173,7 @@ BCT's renewable share is 78.5% by deposit count (versus 69.1% by tonnage). Depos
 
 ### Type-level Gresham exit ordering (relocated from Results)
 
-The most valuable credit types were extracted first: ARR credits exited earliest (median March 2022), followed by industrial gas (July), IFM (October), REDD+ (November), and renewable energy last (December) — perfectly ordered by off-chain market demand (ρ = −0.74, n = 7 types).
+The most valuable credit types were extracted first: ARR credits exited earliest (median March 2022), followed by industrial gas (July), IFM (October), REDD+ (November), and renewable energy last (December), ordered broadly by off-chain market demand ($\rho$ = $-$0.74, n = 7 types, p ≈ 0.06).
 
 ---
 
@@ -246,7 +246,7 @@ Robustness analysis comparing the temporal quality correlation under two composi
 
 ### Supplementary Table 3. Framework-free prediction accuracy.
 
-A type-only prediction rule (credits in high-demand categories predicted redeemed, all others stranded) achieves 96.9% accuracy, 9.9 percentage points above a naive null model; the quality-grade rule (BBB+ predicted redeemed) achieves 91.9%. Credit type captures the dominant axis of selective redemption, and the quality framework adds no predictive power beyond type classification. The monotonic grade–redemption pattern (B 2.4% < BB 31.0% < BBB 78.0%) reflects this: all BBB tokens are nature-based credits with strong off-chain demand, while B-grade tokens are CDM-era renewables with none. Within the 116 renewable tokens, neither vintage (ρ = 0.112, p = 0.23) nor quality grade (p = 0.20) significantly predicts redemption. The type-only rule's category selection is ex post, so the 96.9% accuracy should be read as a characterisation of which variable drives redemption rather than as a prospective prediction.
+A type-only prediction rule (credits in high-demand categories predicted redeemed, all others stranded) achieves 96.9% accuracy, 9.9 percentage points above a naive null model; the quality-grade rule (BBB+ predicted redeemed) achieves 91.9%. Credit type captures the dominant axis of selective redemption, and the quality framework adds no predictive power beyond type classification. The monotonic grade–redemption pattern (B 2.4% < BB 31.0% < BBB 78.0%) reflects this: all BBB tokens are nature-based credits with strong off-chain demand, while B-grade tokens are CDM-era renewables with none. Within the 116 renewable tokens, neither vintage ($\rho$ = 0.112, p = 0.23) nor quality grade (p = 0.20) significantly predicts redemption. The type-only rule's category selection is ex post, so the 96.9% accuracy should be read as a characterisation of which variable drives redemption rather than as a prospective prediction.
 
 ### Supplementary Table 4. Mean deposit composite by pool and screening design.
 
@@ -260,7 +260,7 @@ Cross-sectional comparison of five tokenized pools across two independent operat
 | NBO  | C3       | nature-screened  | 39.0 |
 | CHAR | Toucan   | category-allowlist | 77.9 |
 
-The ~10-point unscreened-to-screened gap appears within each operator separately, isolating it from operator-specific factors. Both unscreened pools degrade over their operating life (BCT ρ = −0.439; C3 ρ = −0.329, p = 0.004) while the screened pools do not. Moss MCO2, a single fungible basket token with no per-token credit identity, is structurally outside this comparison.
+The ~10-point unscreened-to-screened gap appears within each operator separately, isolating it from operator-specific factors. Both unscreened pools degrade over their operating life (BCT $\rho$ = $-$0.439; C3 $\rho$ = $-$0.329, p = 0.004) while the screened pools do not. Moss MCO2, a single fungible basket token with no per-token credit identity, is structurally outside this comparison.
 
 ### Supplementary Table 5. Entity-level independence audit: top-20 accounts per margin, with first-funder resolution.
 

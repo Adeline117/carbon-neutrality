@@ -1,252 +1,253 @@
 {
   "price_vs_cum_pqd": {
-    "pearson_r": 0.7736,
-    "pearson_p": 3.753834e-67,
-    "spearman_rho": 0.4532,
-    "spearman_p": 3.577649e-18
+    "pearson_r": 0.7749,
+    "pearson_p": 1.614477e-67,
+    "spearman_rho": 0.4533,
+    "spearman_p": 3.509375e-18
   },
+  "naming_note": "variable cum_pqd holds the cumulative tonnage-weighted MEAN QUALITY SCORE (0-100), not the deficit; correlations/coefficients are against the score. Against PQD = 1 - score/100 the correlation sign flips.",
   "price_vs_cum_renewable_share": {
-    "pearson_r": -0.0282,
-    "pearson_p": 0.6091704,
-    "spearman_rho": 0.2014,
-    "spearman_p": 0.0002264584
+    "pearson_r": -0.029,
+    "pearson_p": 0.5996104,
+    "spearman_rho": 0.2012,
+    "spearman_p": 0.000229007
   },
   "price_vs_rolling_30d_pqd": {
-    "pearson_r": -0.1805,
-    "pearson_p": 0.000968434,
-    "spearman_rho": -0.0319,
-    "spearman_p": 0.5627447,
+    "pearson_r": -0.1797,
+    "pearson_p": 0.001022183,
+    "spearman_rho": -0.0329,
+    "spearman_p": 0.5511326,
     "n": 331
   },
   "price_vs_rolling_30d_renewable": {
-    "pearson_r": -0.0201,
-    "pearson_p": 0.7156249,
-    "spearman_rho": -0.2455,
-    "spearman_p": 6.221234e-06,
+    "pearson_r": -0.0205,
+    "pearson_p": 0.7105256,
+    "spearman_rho": -0.2448,
+    "spearman_p": 6.588049e-06,
     "n": 331
   },
   "granger_causality": {
     "quality_causes_price (cum PQD \u2192 Price)": {
-      "best_lag": 2,
-      "best_f_stat": 3.4028,
-      "best_p_value": 0.041496,
+      "best_lag": 4,
+      "best_f_stat": 3.0782,
+      "best_p_value": 0.026049,
       "significant": "True",
       "lag_details": {
         "1": {
-          "f_stat": 2.4927,
-          "p_value": 0.120558
+          "f_stat": 2.3064,
+          "p_value": 0.13502
         },
         "2": {
-          "f_stat": 3.4028,
-          "p_value": 0.041496
+          "f_stat": 3.4367,
+          "p_value": 0.040281
         },
         "3": {
-          "f_stat": 1.8788,
-          "p_value": 0.146736
+          "f_stat": 1.9717,
+          "p_value": 0.131759
         },
         "4": {
-          "f_stat": 2.6486,
-          "p_value": 0.046455
+          "f_stat": 3.0782,
+          "p_value": 0.026049
         }
       },
       "n_observations": 55
     },
     "price_causes_quality (Price \u2192 cum PQD)": {
       "best_lag": 4,
-      "best_f_stat": 8.3996,
-      "best_p_value": 4.5e-05,
+      "best_f_stat": 8.6056,
+      "best_p_value": 3.6e-05,
       "significant": "True",
       "lag_details": {
         "1": {
-          "f_stat": 0.0942,
-          "p_value": 0.760207
+          "f_stat": 0.0477,
+          "p_value": 0.828031
         },
         "2": {
-          "f_stat": 4.385,
-          "p_value": 0.017821
+          "f_stat": 4.4296,
+          "p_value": 0.017162
         },
         "3": {
-          "f_stat": 4.3256,
-          "p_value": 0.009201
+          "f_stat": 4.2994,
+          "p_value": 0.009467
         },
         "4": {
-          "f_stat": 8.3996,
-          "p_value": 4.5e-05
+          "f_stat": 8.6056,
+          "p_value": 3.6e-05
         }
       },
       "n_observations": 55
     },
     "renewable_causes_price (cum Renewable \u2192 Price)": {
       "best_lag": 2,
-      "best_f_stat": 6.3189,
-      "best_p_value": 0.003664,
+      "best_f_stat": 6.4767,
+      "best_p_value": 0.003235,
       "significant": "True",
       "lag_details": {
         "1": {
-          "f_stat": 7.9873,
-          "p_value": 0.006711
+          "f_stat": 8.0394,
+          "p_value": 0.006546
         },
         "2": {
-          "f_stat": 6.3189,
-          "p_value": 0.003664
+          "f_stat": 6.4767,
+          "p_value": 0.003235
         },
         "3": {
-          "f_stat": 2.5652,
-          "p_value": 0.066342
+          "f_stat": 2.814,
+          "p_value": 0.049861
         },
         "4": {
-          "f_stat": 4.1347,
-          "p_value": 0.006499
+          "f_stat": 3.9545,
+          "p_value": 0.008201
         }
       },
       "n_observations": 55
     },
     "price_causes_renewable (Price \u2192 cum Renewable)": {
       "best_lag": 2,
-      "best_f_stat": 16.0793,
-      "best_p_value": 5e-06,
+      "best_f_stat": 16.3931,
+      "best_p_value": 4e-06,
       "significant": "True",
       "lag_details": {
         "1": {
-          "f_stat": 0.0278,
-          "p_value": 0.868217
+          "f_stat": 0.0454,
+          "p_value": 0.832039
         },
         "2": {
-          "f_stat": 16.0793,
-          "p_value": 5e-06
+          "f_stat": 16.3931,
+          "p_value": 4e-06
         },
         "3": {
-          "f_stat": 8.757,
-          "p_value": 0.00011
+          "f_stat": 8.9985,
+          "p_value": 8.8e-05
         },
         "4": {
-          "f_stat": 7.2023,
-          "p_value": 0.000164
+          "f_stat": 7.9695,
+          "p_value": 7.1e-05
         }
       },
       "n_observations": 55
     },
     "rolling_pqd_causes_price (30d PQD \u2192 Price)": {
       "best_lag": 1,
-      "best_f_stat": 0.0277,
-      "best_p_value": 0.868587,
+      "best_f_stat": 0.0369,
+      "best_p_value": 0.848419,
       "significant": "False",
       "lag_details": {
         "1": {
-          "f_stat": 0.0277,
-          "p_value": 0.868587
+          "f_stat": 0.0369,
+          "p_value": 0.848419
         },
         "2": {
-          "f_stat": 0.056,
-          "p_value": 0.945615
+          "f_stat": 0.0535,
+          "p_value": 0.947941
         },
         "3": {
-          "f_stat": 0.0731,
-          "p_value": 0.974103
+          "f_stat": 0.0724,
+          "p_value": 0.974479
         },
         "4": {
-          "f_stat": 0.058,
-          "p_value": 0.993528
+          "f_stat": 0.0576,
+          "p_value": 0.993612
         }
       },
       "n_observations": 55
     },
     "price_causes_rolling_pqd (Price \u2192 30d PQD)": {
       "best_lag": 1,
-      "best_f_stat": 0.0035,
-      "best_p_value": 0.952767,
+      "best_f_stat": 0.0024,
+      "best_p_value": 0.960748,
       "significant": "False",
       "lag_details": {
         "1": {
-          "f_stat": 0.0035,
-          "p_value": 0.952767
+          "f_stat": 0.0024,
+          "p_value": 0.960748
         },
         "2": {
-          "f_stat": 0.0205,
-          "p_value": 0.979738
+          "f_stat": 0.0218,
+          "p_value": 0.978448
         },
         "3": {
-          "f_stat": 0.0322,
-          "p_value": 0.992127
+          "f_stat": 0.0319,
+          "p_value": 0.992242
         },
         "4": {
-          "f_stat": 0.0451,
-          "p_value": 0.996013
+          "f_stat": 0.0456,
+          "p_value": 0.995925
         }
       },
       "n_observations": 55
     },
     "rolling_ren_causes_price (30d Renewable \u2192 Price)": {
       "best_lag": 1,
-      "best_f_stat": 0.3001,
-      "best_p_value": 0.586202,
+      "best_f_stat": 0.3009,
+      "best_p_value": 0.585705,
       "significant": "False",
       "lag_details": {
         "1": {
-          "f_stat": 0.3001,
-          "p_value": 0.586202
+          "f_stat": 0.3009,
+          "p_value": 0.585705
         },
         "2": {
-          "f_stat": 0.2551,
-          "p_value": 0.775892
+          "f_stat": 0.2654,
+          "p_value": 0.768016
         },
         "3": {
-          "f_stat": 0.3252,
-          "p_value": 0.80708
+          "f_stat": 0.326,
+          "p_value": 0.806505
         },
         "4": {
-          "f_stat": 0.2621,
-          "p_value": 0.900586
+          "f_stat": 0.2704,
+          "p_value": 0.895383
         }
       },
       "n_observations": 55
     },
     "price_causes_rolling_ren (Price \u2192 30d Renewable)": {
       "best_lag": 1,
-      "best_f_stat": 0.6183,
-      "best_p_value": 0.435323,
+      "best_f_stat": 0.5523,
+      "best_p_value": 0.460781,
       "significant": "False",
       "lag_details": {
         "1": {
-          "f_stat": 0.6183,
-          "p_value": 0.435323
+          "f_stat": 0.5523,
+          "p_value": 0.460781
         },
         "2": {
-          "f_stat": 0.378,
-          "p_value": 0.687263
+          "f_stat": 0.3718,
+          "p_value": 0.69144
         },
         "3": {
-          "f_stat": 0.241,
-          "p_value": 0.867265
+          "f_stat": 0.2387,
+          "p_value": 0.868917
         },
         "4": {
-          "f_stat": 0.1846,
-          "p_value": 0.945153
+          "f_stat": 0.1888,
+          "p_value": 0.942958
         }
       },
       "n_observations": 55
     },
     "I(2) quality_causes_price (cum PQD \u2192 Price)": {
       "best_lag": 4,
-      "best_f_stat": 9.2026,
-      "best_p_value": 2.1e-05,
+      "best_f_stat": 9.241,
+      "best_p_value": 2e-05,
       "significant": "True",
       "lag_details": {
         "1": {
-          "f_stat": 0.0872,
-          "p_value": 0.76896
+          "f_stat": 0.0517,
+          "p_value": 0.82111
         },
         "2": {
           "f_stat": 1.5632,
-          "p_value": 0.220168
+          "p_value": 0.220163
         },
         "3": {
-          "f_stat": 6.367,
-          "p_value": 0.001114
+          "f_stat": 7.0232,
+          "p_value": 0.000584
         },
         "4": {
-          "f_stat": 9.2026,
-          "p_value": 2.1e-05
+          "f_stat": 9.241,
+          "p_value": 2e-05
         }
       },
       "n_observations": 54,
@@ -254,24 +255,24 @@
     },
     "I(2) price_causes_quality (Price \u2192 cum PQD)": {
       "best_lag": 4,
-      "best_f_stat": 18.8252,
+      "best_f_stat": 19.3403,
       "best_p_value": 0.0,
       "significant": "True",
       "lag_details": {
         "1": {
-          "f_stat": 0.8168,
-          "p_value": 0.370461
+          "f_stat": 1.0376,
+          "p_value": 0.313294
         },
         "2": {
-          "f_stat": 4.2331,
-          "p_value": 0.0204
+          "f_stat": 4.1313,
+          "p_value": 0.022241
         },
         "3": {
-          "f_stat": 3.8644,
-          "p_value": 0.015428
+          "f_stat": 3.8265,
+          "p_value": 0.016085
         },
         "4": {
-          "f_stat": 18.8252,
+          "f_stat": 19.3403,
           "p_value": 0.0
         }
       },
@@ -280,42 +281,42 @@
     }
   },
   "ols_regression": {
-    "r_squared": 0.5984,
-    "adj_r_squared": 0.596,
+    "r_squared": 0.6005,
+    "adj_r_squared": 0.598,
     "n_obs": 331,
     "coefficients": {
-      "const": -195.9243,
-      "cum_pqd": 6.4,
-      "cum_renewable_share": -0.1728
+      "const": -196.5804,
+      "cum_pqd": 6.4222,
+      "cum_renewable_share": -0.2214
     },
     "std_errors": {
-      "const": 28.3405,
-      "cum_pqd": 0.8029,
-      "cum_renewable_share": 8.5957
+      "const": 28.3303,
+      "cum_pqd": 0.8024,
+      "cum_renewable_share": 8.5651
     },
     "p_values": {
       "const": 0.0,
       "cum_pqd": 0.0,
-      "cum_renewable_share": 0.98396
+      "cum_renewable_share": 0.979375
     },
     "note": "HAC standard errors (Newey-West, 10 lags)"
   },
   "ols_first_differenced": {
-    "r_squared": 0.0386,
+    "r_squared": 0.0372,
     "n_obs": 330,
     "coefficients": {
-      "const": -0.0116,
-      "d_pqd": 0.5847,
-      "d_ren": -1.8016
+      "const": -0.0115,
+      "d_pqd": 0.5996,
+      "d_ren": -1.8343
     },
     "std_errors": {
-      "const": 0.011,
-      "d_pqd": 0.2254,
-      "d_ren": 0.1973
+      "const": 0.0111,
+      "d_pqd": 0.2029,
+      "d_ren": 0.165
     },
     "p_values": {
-      "const": 0.293742,
-      "d_pqd": 0.009492,
+      "const": 0.29779,
+      "d_pqd": 0.00312,
       "d_ren": 0.0
     },
     "note": "First-differenced, HAC standard errors (Newey-West, 10 lags)"
@@ -323,26 +324,26 @@
   "period_summaries": {
     "Launch (Oct-Nov 2021)": {
       "n_days": 24,
-      "mean_price": 5.9116,
+      "mean_price": 5.9286,
       "final_cum_pqd": 31.33,
       "final_cum_renewable_share": 0.7177
     },
     "Crash (Nov 2021-Jun 2022)": {
       "n_days": 193,
-      "mean_price": 4.0987,
+      "mean_price": 4.0982,
       "final_cum_pqd": 30.99,
       "final_cum_renewable_share": 0.6911
     },
     "Bottom (Jul 2022-Jun 2023)": {
       "n_days": 115,
-      "mean_price": 1.7117,
+      "mean_price": 1.7113,
       "final_cum_pqd": 31.1,
       "final_cum_renewable_share": 0.6911
     }
   },
   "metadata": {
     "n_deposits": 1187,
-    "n_price_observations": 1491,
+    "n_price_observations": 1493,
     "n_merged_observations": 331,
     "overlap_start": "2021-10-21",
     "overlap_end": "2022-11-11",

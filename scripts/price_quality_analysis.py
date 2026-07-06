@@ -238,6 +238,9 @@ print(f"\n  BCT Price vs. Cumulative Renewable Share:")
 print(f"    Pearson  r = {pearson_cum_ren:.4f}  (p = {p_pearson_cum_ren:.2e})")
 print(f"    Spearman ρ = {spearman_cum_ren:.4f}  (p = {p_spearman_cum_ren:.2e})")
 
+results['naming_note'] = ("variable cum_pqd holds the cumulative tonnage-weighted MEAN QUALITY "
+    "SCORE (0-100), not the deficit; correlations/coefficients are against the score. "
+    "Against PQD = 1 - score/100 the correlation sign flips.")
 results['price_vs_cum_renewable_share'] = {
     'pearson_r': round(pearson_cum_ren, 4),
     'pearson_p': float(f'{p_pearson_cum_ren:.6e}'),
@@ -564,7 +567,7 @@ ax_top.set_xlim(df_price['date'].min(), df_price['date'].max())
 ax_top2 = ax_top.twinx()
 
 ax_top2.plot(df_merged['date'], df_merged['cum_pqd'], color=color_pqd, linewidth=1.5,
-             linestyle='--', alpha=0.85, label='Cumulative PQD', zorder=2)
+             linestyle='--', alpha=0.85, label='Cumulative mean quality score', zorder=2)
 ax_top2.plot(df_merged['date'], df_merged['cum_renewable_share'] * 100, color=color_ren,
              linewidth=1.5, linestyle='-.', alpha=0.85, label='Cumulative renewable %', zorder=2)
 
@@ -574,7 +577,7 @@ if mask_r.any():
     ax_top2.fill_between(df_merged.loc[mask_r, 'date'],
                          df_merged.loc[mask_r, 'rolling_30d_pqd'],
                          df_merged.loc[mask_r, 'cum_pqd'],
-                         color=color_pqd, alpha=0.08, label='30d PQD band')
+                         color=color_pqd, alpha=0.08, label='30d quality band')
     ax_top2.fill_between(df_merged.loc[mask_r, 'date'],
                          df_merged.loc[mask_r, 'rolling_30d_renewable'] * 100,
                          df_merged.loc[mask_r, 'cum_renewable_share'] * 100,
@@ -593,9 +596,9 @@ ax_top.legend(lines1 + lines2[:2], labels1 + labels2[:2],
 # Use the first-differenced results since they are more credible
 annotation_text = (
     f"First-differenced OLS (n = {int(model_fd.nobs)}):\n"
-    f"  d(PQD) coeff = {model_fd.params['d_pqd']:.3f} (p = {model_fd.pvalues['d_pqd']:.4f})\n"
-    f"  d(Ren%) coeff = {model_fd.params['d_ren']:.3f} (p < 0.001)\n"
-    f"Levels: Pearson r(Price, PQD) = {pearson_cum_pqd:.3f}***"
+    f"  d(quality score) coeff = {model_fd.params['d_pqd']:.3f} $/pt (p = {model_fd.pvalues['d_pqd']:.4f})\n"
+    f"  d(renew. share, 0-1) coeff = {model_fd.params['d_ren']:.3f} (p < 0.001)\n"
+    f"Levels: Pearson r(Price, quality score) = {pearson_cum_pqd:.3f}***"
 )
 ax_top.annotate(annotation_text, xy=(0.02, 0.55), xycoords='axes fraction',
                 fontsize=7.5, verticalalignment='top', family='monospace',

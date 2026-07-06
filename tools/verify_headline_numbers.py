@@ -45,8 +45,14 @@ def main():
 
     ew = json.loads((ROOT / "data/depositor-analysis/early_warning_results.json").read_text())
     check("early-warning LI at trigger (0.71)", round(ew["li_at_trigger"], 2), 0.71, 0.005)
-    check("early-warning lead (~9 months)", round(ew["lead_time_months"]), 9)
-    check("peak price ($5.91)", ew["peak_price_usd"], 5.91, 0.005)
+    check("early-warning lead (~7 months)", round(ew["lead_time_months"]), 7)
+    check("launch-window mean price ($5.66)", ew["peak_price_usd"], 5.66, 0.005)
+
+    pr = json.loads((ROOT / "data/depositor-analysis/bct_prices_daily.json").read_text())
+    check("price series committed (1,493 daily points)", len(pr), 1493)
+    pq = json.loads((ROOT / "data/depositor-analysis/price_quality_results.json").read_text())
+    check("price-score correlation (+0.77)", round(pq["price_vs_cum_pqd"]["pearson_r"], 2), 0.77, 0.005)
+    check("first-diff renewable-share beta (-1.8 on 0-1 share)", round(pq["ols_first_differenced"]["coefficients"]["d_ren"], 1), -1.8, 0.05)
 
     ff = json.loads((ROOT / "data/depositor-analysis/early_warning_framework_free_results.json").read_text())
     check("framework-free trigger same day as LI", ff["trigger"]["date"], ew["li_trigger_date"])

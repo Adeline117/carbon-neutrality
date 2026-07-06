@@ -30,7 +30,7 @@ real-world assets on the same pooled design:
 
 3. *The failure was foreseeable and is preventable.* A real-time composition
    audit (a cumulative Lemons Index) crossed its danger threshold at the pool's
-   launch, roughly nine months before the price repriced, and a simple quality
+   launch, roughly seven months before the price fell below half its launch level, and a simple quality
    gate applied to the actual deposit stream would have cut the deposit-weighted
    quality deficit from 0.689 to 0.506, while admitting only 7.2% of deposited
    tonnage (the eligible universe could not support a high-quality pool at scale). The paper ships the remedy with

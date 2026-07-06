@@ -77,11 +77,22 @@ def main():
             trigger_date = dt          # first crossing after a minimal 50k-tonne base
     final_li = series[-1][1]
 
-    # price trajectory (period summaries; full daily series via DeFi Llama, see metadata)
-    peak_price, peak_date = 5.91, date(2021, 11, 1)        # Launch mean
+    # price trajectory: computed from the committed full daily series
+    # (bct_prices_daily.json, re-fetched via fetch_bct_prices.py from DeFi Llama)
+    with open(D / "bct_prices_daily.json") as fh:
+        _prices = json.load(fh)
+    from datetime import datetime, timezone
+    _series = [(datetime.fromtimestamp(r["timestamp"], tz=timezone.utc).date(), r["price"])
+               for r in _prices]
+    launch_window = [p for _, p in _series[:14]]
+    peak_price = round(sum(launch_window) / len(launch_window), 2)  # launch-window mean
+    peak_date = _series[0][0]
     half_peak = 0.5 * peak_price
-    collapse_date = date(2022, 7, 1)                       # Bottom period onset; price ~1.71 < half-peak
-    bottom_price = 1.71
+    collapse_date, bottom_price = None, None
+    for i, (dt, pr) in enumerate(_series):
+        if pr < half_peak and all(p2 < half_peak for _, p2 in _series[i:i + 30]):
+            collapse_date, bottom_price = dt, round(pr, 2)
+            break
 
     lead_days = (collapse_date - trigger_date).days
     out = {
