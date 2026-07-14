@@ -148,7 +148,7 @@ def erl_fig1_ccp_calibration():
 
     ax.set_xlabel("Grade")
     ax.set_ylabel("Number of credits")
-    ax.set_title("CCP calibration: 1.99-grade separation")
+    ax.set_title("Core Carbon Principles (CCP) calibration")
     ax.set_xticks(x)
     ax.set_xticklabels(GRADE_ORDER)
     ax.legend(loc="upper right", frameon=False)
@@ -496,7 +496,7 @@ def natcomms_fig5_quality_gating():
     for xi, li_val, sh in zip(x, lis, shares):
         ax.annotate(f"{li_val:.3f}", (xi, li_val), xytext=(0, 7),
                     textcoords="offset points", fontsize=6, ha="center")
-        ax.annotate(f"admits {sh:.0f}% of tonnage", (xi, li_val), xytext=(0, -12),
+        ax.annotate(f"admits {sh:.1f}% of tonnage", (xi, li_val), xytext=(0, -12),
                     textcoords="offset points", fontsize=5, ha="center", color="0.35")
 
     # CHAR reference line (real category-allowlist pool)
@@ -507,7 +507,7 @@ def natcomms_fig5_quality_gating():
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.set_xlabel("Minimum grade floor (applied to real deposit stream)")
-    ax.set_ylabel("Lemons Index")
+    ax.set_ylabel("Pool Quality Deficit (PQD)")
     ax.set_title("Quality gating: real deposit stream")
     ax.set_ylim(0, 0.85)
     ax.spines["top"].set_visible(False)

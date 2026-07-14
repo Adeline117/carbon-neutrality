@@ -567,7 +567,7 @@ ax_top.set_xlim(df_price['date'].min(), df_price['date'].max())
 ax_top2 = ax_top.twinx()
 
 ax_top2.plot(df_merged['date'], df_merged['cum_pqd'], color=color_pqd, linewidth=1.5,
-             linestyle='--', alpha=0.85, label='Cumulative mean quality score', zorder=2)
+             linestyle='--', alpha=0.85, label='Cumulative PQD (%) (higher = lower quality)', zorder=2)
 ax_top2.plot(df_merged['date'], df_merged['cum_renewable_share'] * 100, color=color_ren,
              linewidth=1.5, linestyle='-.', alpha=0.85, label='Cumulative renewable %', zorder=2)
 
@@ -583,7 +583,7 @@ if mask_r.any():
                          df_merged.loc[mask_r, 'cum_renewable_share'] * 100,
                          color=color_ren, alpha=0.08, label='30d renewable band')
 
-ax_top2.set_ylabel('Quality Score / Renewable Share (%)', fontsize=11)
+ax_top2.set_ylabel('PQD (%) / Renewable Share (%)', fontsize=11)
 ax_top2.set_ylim(20, 105)
 
 # Legend
@@ -592,13 +592,14 @@ lines2, labels2 = ax_top2.get_legend_handles_labels()
 ax_top.legend(lines1 + lines2[:2], labels1 + labels2[:2],
               loc='upper right', fontsize=8.5, framealpha=0.92, edgecolor='grey')
 
-# Correlation annotation box
-# Use the first-differenced results since they are more credible
+# Association annotation. First differences reduce shared trends; neither
+# specification identifies a causal effect.
 annotation_text = (
-    f"First-differenced OLS (n = {int(model_fd.nobs)}):\n"
-    f"  d(quality score) coeff = {model_fd.params['d_pqd']:.3f} $/pt (p = {model_fd.pvalues['d_pqd']:.4f})\n"
-    f"  d(renew. share, 0-1) coeff = {model_fd.params['d_ren']:.3f} (p < 0.001)\n"
-    f"Levels: Pearson r(Price, quality score) = {pearson_cum_pqd:.3f}***"
+    f"First differences (n = {int(model_fd.nobs)}):\n"
+    f"  renewable-share coefficient = {model_fd.params['d_ren']:.3f} $\n"
+    f"  (share on 0--1 scale; p < 0.001)\n"
+    f"Level correlation r = {pearson_cum_pqd:.3f}\n"
+    f"  descriptive, not causal"
 )
 ax_top.annotate(annotation_text, xy=(0.02, 0.55), xycoords='axes fraction',
                 fontsize=7.5, verticalalignment='top', family='monospace',
@@ -611,7 +612,7 @@ ax_top.text(0.01, 0.98, 'a', transform=ax_top.transAxes, fontsize=14, fontweight
 # Remove x labels from top panel
 ax_top.set_xticklabels([])
 ax_top.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
-ax_top.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
+ax_top.xaxis.set_major_locator(mdates.MonthLocator(interval=6))
 
 # ── Panel B: Daily deposit volume bar chart ──
 # Aggregate deposits by week for readability
@@ -641,14 +642,14 @@ ax_bot.set_xlabel('Date', fontsize=11)
 ax_bot.set_xlim(df_price['date'].min(), df_price['date'].max())
 ax_bot.legend(fontsize=8, loc='upper right', framealpha=0.92, edgecolor='grey')
 ax_bot.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
-ax_bot.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
+ax_bot.xaxis.set_major_locator(mdates.MonthLocator(interval=6))
 plt.setp(ax_bot.xaxis.get_majorticklabels(), rotation=45, ha='right')
 ax_bot.axvline(deposit_end, color='grey', linewidth=0.8, linestyle=':', alpha=0.6)
 
 ax_bot.text(0.01, 0.95, 'b', transform=ax_bot.transAxes, fontsize=14, fontweight='bold',
             va='top', ha='left')
 
-fig.suptitle('BCT Price Trajectory and Pool Quality Composition', fontsize=13,
+fig.suptitle('BCT price and incoming credit composition', fontsize=13,
              fontweight='bold', y=0.98)
 
 plt.tight_layout(rect=[0, 0, 1, 0.96])
