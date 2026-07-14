@@ -259,7 +259,7 @@ def erl_fig2_rank_correlation():
 
 
 def erl_fig3_lemons_index_34():
-    """ERL-Fig-3 / NatComms-Fig-3a: Lemons Index across 34 market segments."""
+    """ERL-Fig-3 / NatComms-Fig-3a: assessed quality across 34 credit segments."""
     scan = load_json(DATA / "lemons-index" / "systematic_scan_results.json")
     pools = scan["pools"]
 
@@ -278,7 +278,7 @@ def erl_fig3_lemons_index_34():
 
     # Null model baseline
     ax.axvline(x=0.51, color="black", linestyle="--", linewidth=0.7, alpha=0.6)
-    ax.text(0.515, len(names) - 0.5, "Null model\n(LI = 0.51)",
+    ax.text(0.515, len(names) - 0.5, "Null reference\n(PQD = 0.51)",
             fontsize=5.5, va="top", ha="left", style="italic")
 
     # Highlight key pools with bold names
@@ -303,8 +303,8 @@ def erl_fig3_lemons_index_34():
     for i, (bar, li_val) in enumerate(zip(bars, lis)):
         ax.text(li_val + 0.008, i, f"{li_val:.3f}", va="center", fontsize=5, color="black")
 
-    ax.set_xlabel("Lemons Index (LI = 1 - mean composite / 100)")
-    ax.set_title("Quality atlas: Lemons Index across 34 VCM pool segments")
+    ax.set_xlabel("Pool Quality Deficit (PQD = 1 - mean composite score / 100)")
+    ax.set_title("Assessed quality across 34 credit segments")
     ax.set_xlim(0, 0.85)
     ax.invert_yaxis()
     ax.spines["top"].set_visible(False)
@@ -517,10 +517,10 @@ def natcomms_fig5_quality_gating():
     fig.savefig(OUT / "natcomms_fig5_quality_gating.pdf")
 
 def natcomms_fig_within_token():
-    """NatComms-Fig (within-token): Matched-pair slope plot of redemption rate
-    for the 14 credits deposited into BOTH the unscreened BCT pool and the
-    screened NCT pool. Same credit, two pools, two fates -> within-token causal
-    contrast. Colour-coded by project type (IFM / ARR / REDD+)."""
+    """Descriptive slope plot of withdrawal rates for 14 shared project--vintage
+    classes selected because they were fully withdrawn from broadly eligible BCT.
+    NCT is nature-restricted; this is not a causal contrast. Colours indicate
+    project type (IFM / ARR / REDD+)."""
     wt = load_json(DATA / "depositor-analysis" / "within_token_did.json")
 
     rows = wt["per_token_table"]
@@ -568,9 +568,9 @@ def natcomms_fig_within_token():
     ax.set_xlim(-0.45, 1.55)
     ax.set_ylim(-5, 108)
     ax.set_xticks([x_bct, x_nct])
-    ax.set_xticklabels(["BCT\n(unscreened)", "NCT\n(screened)"])
-    ax.set_ylabel("Redemption (retirement) rate (%)")
-    ax.set_title("Same credit, two pools, two fates", fontsize=8.5)
+    ax.set_xticklabels(["BCT\n(broad eligibility)", "NCT\n(nature-restricted)"])
+    ax.set_ylabel("Withdrawal rate (%)")
+    ax.set_title("Shared credit classes, two pools", fontsize=8.5)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
 
@@ -587,7 +587,7 @@ def natcomms_fig_within_token():
     # Headline annotation (lower-left, clear of the descending slope lines)
     ax.text(
         -0.40, 30,
-        (f"Within-token gap\n+{wt['mean_diff_pp']:.1f} pp\n"
+        (f"Within-class gap\n+{wt['mean_diff_pp']:.1f} pp\n"
          f"95% CI [{wt['token_level_bootstrap']['ci_lo_pp']:.0f}, {wt['token_level_bootstrap']['ci_hi_pp']:.0f}]\n"
          f"exact $p$ = 2.4$\\times$10$^{{-4}}$\n"
          f"$\\Gamma$ = {wt['sensitivity_gamma']:.2f}"),
@@ -618,7 +618,7 @@ def natcomms_fig_within_token():
     axb.set_xticks(idx)
     axb.set_xticklabels(type_order, fontsize=6.5)
     axb.set_ylim(0, 122)
-    axb.set_ylabel("Redemption rate (%)", fontsize=7)
+    axb.set_ylabel("Withdrawal rate (%)", fontsize=7)
     axb.set_title("By project type", fontsize=8.5)
     axb.legend(loc="upper center", frameon=False, fontsize=6, ncol=2,
                bbox_to_anchor=(0.5, 1.16))
