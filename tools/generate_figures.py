@@ -172,6 +172,56 @@ def erl_fig1_ccp_calibration():
     print("  -> erl_fig1_ccp_calibration.png/pdf")
 
 
+def erl_fig_composition():
+    """Composition of all BCT deposits, with a broad Verra issuance reference.
+
+    The figure describes a composition difference only; it does not label that
+    difference as depositor selection or infer a motive.
+    """
+    comp = load_json(DATA / "depositor-analysis" / "bct_composition_complete.json")
+    by_type = comp["by_type"]
+    order = [
+        "Renewable", "Fossil switch", "Waste/Methane", "REDD+", "ARR",
+        "Industrial gas", "IFM", "Energy efficiency", "Industrial",
+        "Agriculture", "Cookstove",
+    ]
+    labels = ["Renewable energy" if name == "Renewable" else name for name in order]
+    shares = [by_type[name]["pct"] for name in order]
+    colors = [C_ORANGE if name == "Renewable" else C_GREY for name in order]
+
+    fig, ax = plt.subplots(figsize=(5.4, 3.7))
+    y = np.arange(len(order))
+    bars = ax.barh(y, shares, color=colors, edgecolor="white", linewidth=0.5)
+    ax.set_yticks(y)
+    ax.set_yticklabels(labels)
+    ax.invert_yaxis()
+    ax.set_xlim(0, 78)
+    ax.set_xlabel("Share of BCT deposited tonnage (%)")
+    ax.set_title("Composition of BCT deposits by credit type")
+    ax.axvline(37, color="0.35", linestyle="--", linewidth=0.9, zorder=0)
+    ax.text(37.8, -0.65, "Verra issuance reference for renewables: 37%",
+            fontsize=6.5, color="0.3", va="bottom")
+
+    for bar, share, name in zip(bars, shares, order):
+        x = bar.get_width()
+        if name == "Renewable":
+            label = f"{share:.1f}%  (1.87× reference)"
+            weight = "bold"
+        else:
+            label = f"{share:.1f}%"
+            weight = "normal"
+        ax.text(x + 0.7, bar.get_y() + bar.get_height() / 2, label,
+                va="center", fontsize=7, fontweight=weight)
+
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    fig.tight_layout()
+    fig.savefig(OUT / "erl_fig_composition.png")
+    fig.savefig(OUT / "erl_fig_composition.pdf")
+    plt.close(fig)
+    print("  -> erl_fig_composition.png/pdf")
+
+
 def erl_fig2_rank_correlation():
     """ERL-Fig-2: Rank correlation scatter (Framework vs BeZero, n=27)."""
     corr = load_json(DATA / "rank-correlation" / "expanded_correlation.json")
@@ -852,6 +902,7 @@ def www_fig6_pool_li_comparison():
 FIGURE_REGISTRY = {
     # ERL
     "erl_fig1": ("ERL-Fig-1: CCP calibration bar chart", erl_fig1_ccp_calibration, "erl"),
+    "erl_fig_composition": ("ERL-Fig: BCT deposit composition", erl_fig_composition, "erl"),
     "erl_fig2": ("ERL-Fig-2: Rank correlation scatter", erl_fig2_rank_correlation, "erl"),
     "erl_fig3": ("ERL-Fig-3: Lemons Index 34 segments", erl_fig3_lemons_index_34, "erl"),
     "erl_fig4": ("ERL-Fig-4: Weight sensitivity", erl_fig4_weight_sensitivity, "erl"),
